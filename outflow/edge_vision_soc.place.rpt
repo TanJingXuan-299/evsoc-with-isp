@@ -1,0 +1,58 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2026.1.132.1.15 
+Date: Thu Aug 27 13:24:40 2026
+
+Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+ 
+Family: Titanium 
+Device: Ti60F225
+Top-level Entity Name: edge_vision_soc
+
+---------- IO Interface Summary (begin) ----------
+
++------------------------+--------------+
+| Missing Interface Pins | Input/Output |
++------------------------+--------------+
+|    jtag_inst1_DRCK     |    Input     |
+|     jtag_inst1_TMS     |    Input     |
+|   jtag_inst1_RUNTEST   |    Input     |
+|  i_mipi_tx_pll_locked  |    Input     |
+|          sw7           |    Input     |
+|          sw6           |    Input     |
++------------------------+--------------+
+
+----------- IO Interface Summary (end) ----------
+
+
+---------- Module Resource Usage Distribution Estimates (begin) ----------
+
+'Module Resource Usage Distribution Estimates' table printed in: C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow\edge_vision_soc.hier_util.rpt
+
+----------- Module Resource Usage Distribution Estimates (end) ----------
+
+Elapsed time for packing: 0 hours 0 minutes 10 seconds
+---------- Resource Summary (begin) ----------
+Inputs: 93 / 1703 (5.46%)
+Outputs: 229 / 2267 (10.10%)
+Global Clocks (GBUF): 14 / 32 (43.75%)
+Regional Clocks (RBUF): 0 / 32 (0.00%)
+	RBUF: Core: 0 / 16 (0.00%)
+	RBUF: Periphery: 0 / 8 (0.00%)
+	RBUF: Multi-Region: 0 / 8 (0.00%)
+XLRs: 33993 / 60800 (55.91%)
+	XLRs needed for LUT4: 12687 / 60800 (20.87%)
+	XLRs needed for LUT4 + FF: 8149 / 60800 (13.40%)
+	XLRs needed for COMB4: 0 / 60800 (0.00%)
+	XLRs needed for COMB4 + FF: 0 / 60800 (0.00%)
+	XLRs needed for Adder: 2195 / 60800 (3.61%)
+	XLRs needed for Adder + FF: 1657 / 60800 (2.73%)
+	XLRs needed for SRL8: 10 / 14720 (0.07%)
+	XLRs needed for SRL8 + FF: 0 / 14720 (0.00%)
+	XLRs needed for FF: 9295 / 60800 (15.29%)
+	XLRs needed for Routing: 0 / 60800 (0.00%)
+Memory Blocks: 254 / 256 (99.22%)
+DSP Blocks: 9 / 160 (5.62%)
+---------- Resource Summary (end) ----------
+
+Elapsed time for placement: 0 hours 3 minutes 14 seconds

@@ -1,0 +1,343 @@
+
+# Efinity Interface Configuration
+# Version: 2026.1.132.1.15
+# Date: 2026-08-27 13:24
+
+# Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
+
+# [required | optional] (input|output|clkout), x, y, z, __bypass__|[~|!]<clock>, [[~|!]<pin_name>] | __vcc__ | __gnd__
+clkout, 219, 24, -1, i_cam_ck_CLKOUT_0
+clkout, 219, 34, -1, i_cam_ck_CLKOUT_0
+clkout, 0, 304, -1, i_fb_clk
+clkout, 18, 0, -1, i_fb_clk
+clkout, 202, 0, -1, i_fb_clk
+clkout, 27, 323, -1, i_hbramClk
+clkout, 83, 323, -1, i_hbramClk
+clkout, 84, 323, -1, i_hbramClk
+clkout, 131, 323, -1, i_hbramClk
+clkout, 32, 323, -1, i_hbramClk_cal
+clkout, 33, 323, -1, i_hbramClk_cal
+clkout, 48, 323, -1, i_hbramClk_cal
+clkout, 49, 323, -1, i_hbramClk_cal
+clkout, 56, 323, -1, i_hbramClk_cal
+clkout, 57, 323, -1, i_hbramClk_cal
+clkout, 64, 323, -1, i_hbramClk_cal
+clkout, 65, 323, -1, i_hbramClk_cal
+clkout, 81, 323, -1, i_hbramClk_cal
+clkout, 129, 323, -1, i_hbramClk_cal
+clkout, 140, 323, -1, i_hbramClk_cal
+clkout, 141, 323, -1, i_hbramClk_cal
+clkout, 148, 323, -1, i_hbramClk_cal
+clkout, 149, 323, -1, i_hbramClk_cal
+clkout, 156, 323, -1, i_hbramClk_cal
+clkout, 157, 323, -1, i_hbramClk_cal
+clkout, 164, 323, -1, i_hbramClk_cal
+clkout, 165, 323, -1, i_hbramClk_cal
+clkout, 19, 0, -1, i_hbramClk_fb
+clkout, 203, 0, -1, i_mipi_clk
+clkout, 0, 30, -1, i_mipi_rx_pclk
+clkout, 0, 31, -1, i_mipi_rx_pclk
+clkout, 0, 59, -1, i_mipi_rx_pclk
+clkout, 0, 60, -1, i_mipi_rx_pclk
+clkout, 0, 61, -1, i_mipi_rx_pclk
+clkout, 0, 62, -1, i_mipi_rx_pclk
+clkout, 219, 251, -1, i_mipi_tx_pclk
+clkout, 219, 261, -1, i_mipi_tx_pclk
+clkout, 219, 286, -1, i_mipi_tx_pclk
+clkout, 219, 300, -1, i_mipi_tx_pclk
+clkout, 219, 270, -1, i_mipi_txc_sclk
+clkout, 219, 247, -1, i_mipi_txd_sclk
+clkout, 219, 257, -1, i_mipi_txd_sclk
+clkout, 219, 274, -1, i_mipi_txd_sclk
+clkout, 219, 280, -1, i_mipi_txd_sclk
+clkout, 219, 296, -1, i_mipi_txd_sclk
+clkout, 74, 323, -1, ~i_hbramClk90
+clkout, 75, 323, -1, ~i_hbramClk90
+clkout, 34, 323, -1, ~i_hbramClk
+clkout, 35, 323, -1, ~i_hbramClk
+clkout, 50, 323, -1, ~i_hbramClk
+clkout, 51, 323, -1, ~i_hbramClk
+clkout, 58, 323, -1, ~i_hbramClk
+clkout, 59, 323, -1, ~i_hbramClk
+clkout, 66, 323, -1, ~i_hbramClk
+clkout, 67, 323, -1, ~i_hbramClk
+clkout, 142, 323, -1, ~i_hbramClk
+clkout, 143, 323, -1, ~i_hbramClk
+clkout, 150, 323, -1, ~i_hbramClk
+clkout, 151, 323, -1, ~i_hbramClk
+clkout, 158, 323, -1, ~i_hbramClk
+clkout, 159, 323, -1, ~i_hbramClk
+clkout, 166, 323, -1, ~i_hbramClk
+clkout, 167, 323, -1, ~i_hbramClk
+output, 0, 71, 0, __bypass__, __gnd__
+output, 0, 73, 2, __bypass__, __gnd__
+output, 219, 125, 0, __bypass__, __gnd__
+output, 219, 137, 0, __bypass__, __gnd__
+output, 219, 148, 2, __bypass__, __gnd__
+output, 219, 151, 0, __bypass__, __gnd__
+output, 219, 139, 2, __bypass__, hbc_cal_pass
+output, 73, 323, 2, __bypass__, hbc_ck_n_HI
+output, 72, 323, 2, __bypass__, hbc_ck_n_LO
+output, 71, 323, 0, __bypass__, hbc_ck_p_HI
+output, 70, 323, 2, __bypass__, hbc_ck_p_LO
+output, 84, 323, 2, __bypass__, hbc_cs_n
+input, 19, 323, 1, __bypass__, hbc_dq_IN_HI[0]
+input, 19, 323, 3, __bypass__, hbc_dq_IN_HI[1]
+input, 42, 323, 1, __bypass__, hbc_dq_IN_HI[2]
+input, 42, 323, 3, __bypass__, hbc_dq_IN_HI[3]
+input, 53, 323, 1, __bypass__, hbc_dq_IN_HI[4]
+input, 53, 323, 3, __bypass__, hbc_dq_IN_HI[5]
+input, 64, 323, 1, __bypass__, hbc_dq_IN_HI[6]
+input, 64, 323, 3, __bypass__, hbc_dq_IN_HI[7]
+input, 146, 323, 1, __bypass__, hbc_dq_IN_HI[8]
+input, 146, 323, 3, __bypass__, hbc_dq_IN_HI[9]
+input, 157, 323, 1, __bypass__, hbc_dq_IN_HI[10]
+input, 157, 323, 3, __bypass__, hbc_dq_IN_HI[11]
+input, 168, 323, 1, __bypass__, hbc_dq_IN_HI[12]
+input, 168, 323, 3, __bypass__, hbc_dq_IN_HI[13]
+input, 179, 323, 1, __bypass__, hbc_dq_IN_HI[14]
+input, 179, 323, 3, __bypass__, hbc_dq_IN_HI[15]
+input, 18, 323, 1, __bypass__, hbc_dq_IN_LO[0]
+input, 18, 323, 3, __bypass__, hbc_dq_IN_LO[1]
+input, 41, 323, 1, __bypass__, hbc_dq_IN_LO[2]
+input, 41, 323, 3, __bypass__, hbc_dq_IN_LO[3]
+input, 52, 323, 1, __bypass__, hbc_dq_IN_LO[4]
+input, 52, 323, 3, __bypass__, hbc_dq_IN_LO[5]
+input, 63, 323, 1, __bypass__, hbc_dq_IN_LO[6]
+input, 63, 323, 3, __bypass__, hbc_dq_IN_LO[7]
+input, 145, 323, 1, __bypass__, hbc_dq_IN_LO[8]
+input, 145, 323, 3, __bypass__, hbc_dq_IN_LO[9]
+input, 156, 323, 1, __bypass__, hbc_dq_IN_LO[10]
+input, 156, 323, 3, __bypass__, hbc_dq_IN_LO[11]
+input, 167, 323, 1, __bypass__, hbc_dq_IN_LO[12]
+input, 167, 323, 3, __bypass__, hbc_dq_IN_LO[13]
+input, 178, 323, 1, __bypass__, hbc_dq_IN_LO[14]
+input, 178, 323, 3, __bypass__, hbc_dq_IN_LO[15]
+output, 18, 323, 0, __bypass__, hbc_dq_OE[0]
+output, 18, 323, 2, __bypass__, hbc_dq_OE[1]
+output, 41, 323, 0, __bypass__, hbc_dq_OE[2]
+output, 41, 323, 2, __bypass__, hbc_dq_OE[3]
+output, 52, 323, 0, __bypass__, hbc_dq_OE[4]
+output, 52, 323, 2, __bypass__, hbc_dq_OE[5]
+output, 63, 323, 0, __bypass__, hbc_dq_OE[6]
+output, 63, 323, 2, __bypass__, hbc_dq_OE[7]
+output, 145, 323, 0, __bypass__, hbc_dq_OE[8]
+output, 145, 323, 2, __bypass__, hbc_dq_OE[9]
+output, 156, 323, 0, __bypass__, hbc_dq_OE[10]
+output, 156, 323, 2, __bypass__, hbc_dq_OE[11]
+output, 167, 323, 0, __bypass__, hbc_dq_OE[12]
+output, 167, 323, 2, __bypass__, hbc_dq_OE[13]
+output, 178, 323, 0, __bypass__, hbc_dq_OE[14]
+output, 178, 323, 2, __bypass__, hbc_dq_OE[15]
+output, 15, 323, 0, __bypass__, hbc_dq_OUT_HI[0]
+output, 17, 323, 2, __bypass__, hbc_dq_OUT_HI[1]
+output, 38, 323, 0, __bypass__, hbc_dq_OUT_HI[2]
+output, 40, 323, 2, __bypass__, hbc_dq_OUT_HI[3]
+output, 49, 323, 0, __bypass__, hbc_dq_OUT_HI[4]
+output, 51, 323, 2, __bypass__, hbc_dq_OUT_HI[5]
+output, 60, 323, 0, __bypass__, hbc_dq_OUT_HI[6]
+output, 62, 323, 2, __bypass__, hbc_dq_OUT_HI[7]
+output, 142, 323, 0, __bypass__, hbc_dq_OUT_HI[8]
+output, 144, 323, 2, __bypass__, hbc_dq_OUT_HI[9]
+output, 153, 323, 0, __bypass__, hbc_dq_OUT_HI[10]
+output, 155, 323, 2, __bypass__, hbc_dq_OUT_HI[11]
+output, 164, 323, 0, __bypass__, hbc_dq_OUT_HI[12]
+output, 166, 323, 2, __bypass__, hbc_dq_OUT_HI[13]
+output, 175, 323, 0, __bypass__, hbc_dq_OUT_HI[14]
+output, 177, 323, 2, __bypass__, hbc_dq_OUT_HI[15]
+output, 14, 323, 2, __bypass__, hbc_dq_OUT_LO[0]
+output, 16, 323, 2, __bypass__, hbc_dq_OUT_LO[1]
+output, 37, 323, 2, __bypass__, hbc_dq_OUT_LO[2]
+output, 39, 323, 2, __bypass__, hbc_dq_OUT_LO[3]
+output, 48, 323, 2, __bypass__, hbc_dq_OUT_LO[4]
+output, 50, 323, 2, __bypass__, hbc_dq_OUT_LO[5]
+output, 59, 323, 2, __bypass__, hbc_dq_OUT_LO[6]
+output, 61, 323, 2, __bypass__, hbc_dq_OUT_LO[7]
+output, 141, 323, 2, __bypass__, hbc_dq_OUT_LO[8]
+output, 143, 323, 2, __bypass__, hbc_dq_OUT_LO[9]
+output, 152, 323, 2, __bypass__, hbc_dq_OUT_LO[10]
+output, 154, 323, 2, __bypass__, hbc_dq_OUT_LO[11]
+output, 163, 323, 2, __bypass__, hbc_dq_OUT_LO[12]
+output, 165, 323, 2, __bypass__, hbc_dq_OUT_LO[13]
+output, 174, 323, 2, __bypass__, hbc_dq_OUT_LO[14]
+output, 176, 323, 2, __bypass__, hbc_dq_OUT_LO[15]
+output, 6, 323, 2, __bypass__, hbc_rst_n
+input, 86, 323, 1, __bypass__, hbc_rwds_IN_HI[0]
+input, 135, 323, 1, __bypass__, hbc_rwds_IN_HI[1]
+input, 85, 323, 1, __bypass__, hbc_rwds_IN_LO[0]
+input, 134, 323, 1, __bypass__, hbc_rwds_IN_LO[1]
+output, 85, 323, 0, __bypass__, hbc_rwds_OE[0]
+output, 134, 323, 2, __bypass__, hbc_rwds_OE[1]
+output, 82, 323, 0, __bypass__, hbc_rwds_OUT_HI[0]
+output, 131, 323, 2, __bypass__, hbc_rwds_OUT_HI[1]
+output, 81, 323, 2, __bypass__, hbc_rwds_OUT_LO[0]
+output, 131, 323, 0, __bypass__, hbc_rwds_OUT_LO[1]
+input, 0, 313, 3, __bypass__, i_arstn
+input, 219, 163, 1, __bypass__, i_cam_ck_CLKOUT_0
+input, 219, 52, 1, __bypass__, i_cam_ck_LP_N_IN
+input, 219, 51, 3, __bypass__, i_cam_ck_LP_P_IN
+input, 219, 28, 3, __bypass__, i_cam_d0_FIFO_EMPTY
+input, 219, 22, 3, __bypass__, i_cam_d0_HS_IN_0[0]
+input, 219, 23, 1, __bypass__, i_cam_d0_HS_IN_0[1]
+input, 219, 23, 3, __bypass__, i_cam_d0_HS_IN_0[2]
+input, 219, 24, 1, __bypass__, i_cam_d0_HS_IN_0[3]
+input, 219, 24, 3, __bypass__, i_cam_d0_HS_IN_0[4]
+input, 219, 25, 1, __bypass__, i_cam_d0_HS_IN_0[5]
+input, 219, 25, 3, __bypass__, i_cam_d0_HS_IN_0[6]
+input, 219, 26, 1, __bypass__, i_cam_d0_HS_IN_0[7]
+input, 219, 28, 1, __bypass__, i_cam_d0_LP_N_IN
+input, 219, 27, 3, __bypass__, i_cam_d0_LP_P_IN
+input, 219, 39, 3, __bypass__, i_cam_d1_FIFO_EMPTY
+input, 219, 33, 3, __bypass__, i_cam_d1_HS_IN_0[0]
+input, 219, 34, 1, __bypass__, i_cam_d1_HS_IN_0[1]
+input, 219, 34, 3, __bypass__, i_cam_d1_HS_IN_0[2]
+input, 219, 35, 1, __bypass__, i_cam_d1_HS_IN_0[3]
+input, 219, 35, 3, __bypass__, i_cam_d1_HS_IN_0[4]
+input, 219, 36, 1, __bypass__, i_cam_d1_HS_IN_0[5]
+input, 219, 36, 3, __bypass__, i_cam_d1_HS_IN_0[6]
+input, 219, 37, 1, __bypass__, i_cam_d1_HS_IN_0[7]
+input, 219, 39, 1, __bypass__, i_cam_d1_LP_N_IN
+input, 219, 38, 3, __bypass__, i_cam_d1_LP_P_IN
+input, 0, 5, 1, __bypass__, i_hbramClk_pll_locked
+input, 219, 11, 1, __bypass__, i_mipi_tx_pll_locked
+input, 0, 312, 1, __bypass__, i_pll_locked
+input, 0, 24, 3, __bypass__, jtag_inst1_CAPTURE
+input, 0, 20, 3, __bypass__, jtag_inst1_DRCK
+input, 0, 22, 3, __bypass__, jtag_inst1_RESET
+input, 0, 23, 1, __bypass__, jtag_inst1_RUNTEST
+input, 0, 20, 1, __bypass__, jtag_inst1_SEL
+input, 0, 23, 3, __bypass__, jtag_inst1_SHIFT
+input, 0, 22, 1, __bypass__, jtag_inst1_TCK
+required input, 0, 21, 1, __bypass__, jtag_inst1_TDI
+required output, 0, 23, 0, __bypass__, jtag_inst1_TDO
+input, 0, 21, 3, __bypass__, jtag_inst1_TMS
+input, 0, 24, 1, __bypass__, jtag_inst1_UPDATE
+output, 219, 272, 0, __bypass__, mipi_dp_clk_HS_OE
+output, 219, 265, 2, __bypass__, mipi_dp_clk_HS_OUT[0]
+output, 219, 268, 0, __bypass__, mipi_dp_clk_HS_OUT[1]
+output, 219, 266, 0, __bypass__, mipi_dp_clk_HS_OUT[2]
+output, 219, 268, 2, __bypass__, mipi_dp_clk_HS_OUT[3]
+output, 219, 266, 2, __bypass__, mipi_dp_clk_HS_OUT[4]
+output, 219, 269, 0, __bypass__, mipi_dp_clk_HS_OUT[5]
+output, 219, 267, 0, __bypass__, mipi_dp_clk_HS_OUT[6]
+output, 219, 269, 2, __bypass__, mipi_dp_clk_HS_OUT[7]
+output, 219, 271, 0, __bypass__, mipi_dp_clk_LP_N_OE
+output, 219, 270, 0, __bypass__, mipi_dp_clk_LP_N_OUT
+output, 219, 270, 2, __bypass__, mipi_dp_clk_LP_P_OE
+output, 219, 267, 2, __bypass__, mipi_dp_clk_LP_P_OUT
+required output, 219, 275, 2, __bypass__, mipi_dp_clk_RST
+output, 219, 298, 2, __bypass__, mipi_dp_data0_HS_OE
+output, 219, 292, 0, __bypass__, mipi_dp_data0_HS_OUT[0]
+output, 219, 294, 2, __bypass__, mipi_dp_data0_HS_OUT[1]
+output, 219, 292, 2, __bypass__, mipi_dp_data0_HS_OUT[2]
+output, 219, 295, 0, __bypass__, mipi_dp_data0_HS_OUT[3]
+output, 219, 293, 0, __bypass__, mipi_dp_data0_HS_OUT[4]
+output, 219, 295, 2, __bypass__, mipi_dp_data0_HS_OUT[5]
+output, 219, 293, 2, __bypass__, mipi_dp_data0_HS_OUT[6]
+output, 219, 296, 0, __bypass__, mipi_dp_data0_HS_OUT[7]
+input, 219, 298, 3, __bypass__, mipi_dp_data0_LP_N_IN
+output, 219, 297, 2, __bypass__, mipi_dp_data0_LP_N_OE
+output, 219, 296, 2, __bypass__, mipi_dp_data0_LP_N_OUT
+input, 219, 298, 1, __bypass__, mipi_dp_data0_LP_P_IN
+output, 219, 297, 0, __bypass__, mipi_dp_data0_LP_P_OE
+output, 219, 294, 0, __bypass__, mipi_dp_data0_LP_P_OUT
+required output, 219, 302, 0, __bypass__, mipi_dp_data0_RST
+output, 219, 284, 2, __bypass__, mipi_dp_data1_HS_OE
+output, 219, 276, 0, __bypass__, mipi_dp_data1_HS_OUT[0]
+output, 219, 278, 2, __bypass__, mipi_dp_data1_HS_OUT[1]
+output, 219, 276, 2, __bypass__, mipi_dp_data1_HS_OUT[2]
+output, 219, 279, 0, __bypass__, mipi_dp_data1_HS_OUT[3]
+output, 219, 277, 0, __bypass__, mipi_dp_data1_HS_OUT[4]
+output, 219, 279, 2, __bypass__, mipi_dp_data1_HS_OUT[5]
+output, 219, 277, 2, __bypass__, mipi_dp_data1_HS_OUT[6]
+output, 219, 280, 0, __bypass__, mipi_dp_data1_HS_OUT[7]
+output, 219, 283, 2, __bypass__, mipi_dp_data1_LP_N_OE
+output, 219, 280, 2, __bypass__, mipi_dp_data1_LP_N_OUT
+output, 219, 283, 0, __bypass__, mipi_dp_data1_LP_P_OE
+output, 219, 278, 0, __bypass__, mipi_dp_data1_LP_P_OUT
+required output, 219, 288, 0, __bypass__, mipi_dp_data1_RST
+output, 219, 260, 2, __bypass__, mipi_dp_data2_HS_OE
+output, 219, 254, 0, __bypass__, mipi_dp_data2_HS_OUT[0]
+output, 219, 256, 2, __bypass__, mipi_dp_data2_HS_OUT[1]
+output, 219, 254, 2, __bypass__, mipi_dp_data2_HS_OUT[2]
+output, 219, 257, 0, __bypass__, mipi_dp_data2_HS_OUT[3]
+output, 219, 255, 0, __bypass__, mipi_dp_data2_HS_OUT[4]
+output, 219, 257, 2, __bypass__, mipi_dp_data2_HS_OUT[5]
+output, 219, 255, 2, __bypass__, mipi_dp_data2_HS_OUT[6]
+output, 219, 258, 0, __bypass__, mipi_dp_data2_HS_OUT[7]
+output, 219, 259, 2, __bypass__, mipi_dp_data2_LP_N_OE
+output, 219, 258, 2, __bypass__, mipi_dp_data2_LP_N_OUT
+output, 219, 259, 0, __bypass__, mipi_dp_data2_LP_P_OE
+output, 219, 256, 0, __bypass__, mipi_dp_data2_LP_P_OUT
+required output, 219, 264, 0, __bypass__, mipi_dp_data2_RST
+output, 219, 249, 2, __bypass__, mipi_dp_data3_HS_OE
+output, 219, 243, 0, __bypass__, mipi_dp_data3_HS_OUT[0]
+output, 219, 245, 2, __bypass__, mipi_dp_data3_HS_OUT[1]
+output, 219, 243, 2, __bypass__, mipi_dp_data3_HS_OUT[2]
+output, 219, 246, 0, __bypass__, mipi_dp_data3_HS_OUT[3]
+output, 219, 244, 0, __bypass__, mipi_dp_data3_HS_OUT[4]
+output, 219, 246, 2, __bypass__, mipi_dp_data3_HS_OUT[5]
+output, 219, 244, 2, __bypass__, mipi_dp_data3_HS_OUT[6]
+output, 219, 247, 0, __bypass__, mipi_dp_data3_HS_OUT[7]
+output, 219, 248, 2, __bypass__, mipi_dp_data3_LP_N_OE
+output, 219, 247, 2, __bypass__, mipi_dp_data3_LP_N_OUT
+output, 219, 248, 0, __bypass__, mipi_dp_data3_LP_P_OE
+output, 219, 245, 0, __bypass__, mipi_dp_data3_LP_P_OUT
+required output, 219, 253, 0, __bypass__, mipi_dp_data3_RST
+input, 0, 75, 1, __bypass__, mipi_i2c_0_io_scl_read
+output, 0, 74, 0, __bypass__, mipi_i2c_0_io_scl_writeEnable
+input, 0, 75, 3, __bypass__, mipi_i2c_0_io_sda_read
+output, 0, 74, 2, __bypass__, mipi_i2c_0_io_sda_writeEnable
+output, 219, 51, 2, __bypass__, o_cam_ck_HS_ENA
+output, 219, 52, 2, __bypass__, o_cam_ck_HS_TERM
+output, 219, 31, 0, __bypass__, o_cam_d0_FIFO_RD
+output, 219, 27, 2, __bypass__, o_cam_d0_HS_ENA
+output, 219, 28, 2, __bypass__, o_cam_d0_HS_TERM
+required output, 219, 30, 2, __bypass__, o_cam_d0_RST
+output, 219, 44, 0, __bypass__, o_cam_d1_FIFO_RD
+output, 219, 38, 2, __bypass__, o_cam_d1_HS_ENA
+output, 219, 39, 2, __bypass__, o_cam_d1_HS_TERM
+required output, 219, 43, 2, __bypass__, o_cam_d1_RST
+output, 219, 4, 0, __bypass__, o_cam_rstn
+output, 0, 7, 0, __bypass__, o_hbc_cal_SHIFT[0]
+output, 0, 7, 2, __bypass__, o_hbc_cal_SHIFT[1]
+output, 0, 8, 0, __bypass__, o_hbc_cal_SHIFT[2]
+output, 0, 11, 0, __bypass__, o_hbc_cal_SHIFT_ENA
+output, 0, 8, 2, __bypass__, o_hbc_cal_SHIFT_SEL[0]
+output, 0, 9, 0, __bypass__, o_hbc_cal_SHIFT_SEL[1]
+output, 0, 9, 2, __bypass__, o_hbc_cal_SHIFT_SEL[2]
+output, 0, 10, 0, __bypass__, o_hbc_cal_SHIFT_SEL[3]
+output, 0, 10, 2, __bypass__, o_hbc_cal_SHIFT_SEL[4]
+required output, 0, 6, 2, __bypass__, o_hbramClk_pll_rstn
+output, 0, 312, 0, __bypass__, o_lcd_rstn
+output, 219, 127, 2, __bypass__, o_led
+required output, 219, 15, 2, __bypass__, o_mipi_pll_rstn
+required output, 0, 302, 2, __bypass__, o_pll_rstn
+optional input, 0, 296, 3, __bypass__, pllin
+input, 219, 2, 3, __bypass__, sw1
+input, 219, 112, 1, __bypass__, sw6
+input, 219, 111, 3, __bypass__, sw7
+input, 0, 64, 3, __bypass__, system_spi_0_io_data_0_read
+output, 0, 60, 0, __bypass__, system_spi_0_io_data_0_write
+output, 0, 63, 0, __bypass__, system_spi_0_io_data_0_writeEnable
+input, 0, 65, 1, __bypass__, system_spi_0_io_data_1_read
+output, 0, 62, 2, __bypass__, system_spi_0_io_data_1_write
+output, 0, 63, 2, __bypass__, system_spi_0_io_data_1_writeEnable
+output, 0, 32, 2, __bypass__, system_spi_0_io_sclk_write
+output, 0, 30, 0, __bypass__, system_spi_0_io_ss
+input, 0, 3, 3, __bypass__, system_uart_0_io_rxd
+output, 0, 5, 2, __bypass__, system_uart_0_io_txd
+input, 0, 227, 1, __bypass__, user_dip0
+input, 0, 227, 3, __bypass__, user_dip1
+input, 0, 162, 1, __bypass__, ~i_fb_clk
+input, 112, 0, 1, __bypass__, ~i_hbramClk90
+input, 107, 0, 1, __bypass__, ~i_hbramClk
+input, 108, 0, 1, __bypass__, ~i_hbramClk_cal
+input, 109, 0, 1, __bypass__, ~i_hbramClk_fb
+input, 110, 0, 1, __bypass__, ~i_mipi_clk
+input, 0, 164, 1, __bypass__, ~i_mipi_rx_pclk
+input, 219, 159, 1, __bypass__, ~i_mipi_tx_pclk
+input, 219, 164, 1, __bypass__, ~i_mipi_txc_sclk
+input, 219, 160, 1, __bypass__, ~i_mipi_txd_sclk
+input, 0, 163, 1, __bypass__, ~i_sysclk_div_2
+input, 0, 159, 1, __bypass__, ~i_systemClk

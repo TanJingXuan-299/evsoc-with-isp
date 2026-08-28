@@ -1,0 +1,220 @@
+
+Efinity Interface Designer Timing Report
+Version: 2026.1.132.1.15
+Date: 2026-08-27 13:24
+
+Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
+
+Device: Ti60F225
+Project: edge_vision_soc
+Timing Model: C4 (final)
+
+---------- 1. PLL Timing Report (begin) ----------
+
++--------------+----------+-----------------+--------------------------+---------+---------------------------+---------------------------------+---------------------------------+
+| PLL Instance | Resource | Reference Clock | Core Clock Reference Pin | FB Mode |     Core Feedback Pin     | PLL Compensation Delay Max (ns) | PLL Compensation Delay Min (ns) |
++--------------+----------+-----------------+--------------------------+---------+---------------------------+---------------------------------+---------------------------------+
+|  pll_inst3   | PLL_BL0  |       core      |   i_fb_clk~CLKOUT~18~1   |   core  | i_hbramClk_fb~CLKOUT~19~1 |              1.885              |              1.220              |
+|  pll_inst2   | PLL_BR0  |       core      |  i_fb_clk~CLKOUT~202~1   |   core  |  i_mipi_clk~CLKOUT~203~1  |              1.835              |              1.187              |
+|  pll_inst1   | PLL_TL0  |     external    |                          |   core  |   i_fb_clk~CLKOUT~1~304   |              1.881              |              1.217              |
++--------------+----------+-----------------+--------------------------+---------+---------------------------+---------------------------------+---------------------------------+
+
++-----------------+-------------+----------------------------+-----------------------+----------+
+|      Clock      | Period (ns) | Enable Dynamic Phase Shift | Phase Shift (degrees) | Inverted |
++-----------------+-------------+----------------------------+-----------------------+----------+
+|  i_hbramClk_fb  |    10.000   |           false            |         0.000         |  false   |
+|   i_hbramClk90  |    5.000    |           false            |         90.000        |  false   |
+|  i_hbramClk_cal |    5.000    |            true            |         0.000         |  false   |
+|    i_hbramClk   |    5.000    |           false            |         0.000         |  false   |
+|    i_mipi_clk   |    10.000   |           false            |         0.000         |  false   |
+| i_mipi_txc_sclk |    2.000    |           false            |        180.000        |  false   |
+| i_mipi_txd_sclk |    2.000    |           false            |         90.000        |  false   |
+|  i_mipi_tx_pclk |    8.000    |           false            |         0.000         |  false   |
+|     i_fb_clk    |    40.000   |           false            |         0.000         |  false   |
+|   i_systemClk   |    3.333    |           false            |         0.000         |  false   |
+|  i_sysclk_div_2 |    16.000   |           false            |         0.000         |  false   |
+|  i_mipi_rx_pclk |    10.000   |           false            |         0.000         |  false   |
++-----------------+-------------+----------------------------+-----------------------+----------+
+
+---------- PLL Timing Report (end) ----------
+
+---------- 2. GPIO Timing Report (begin) ----------
+
+Non-registered GPIO Configuration:
+===================================
+
++----------------------+----------------------+-----------+----------+----------+
+|    Instance Name     |       Pin Name       | Parameter | Max (ns) | Min (ns) |
++----------------------+----------------------+-----------+----------+----------+
+|       i_arstn        |       i_arstn        |  GPIO_IN  |  1.177   |  0.785   |
+|         sw1          |         sw1          |  GPIO_IN  |  1.177   |  0.785   |
+| system_uart_0_io_rxd | system_uart_0_io_rxd |  GPIO_IN  |  1.907   |  1.271   |
+|      o_cam_rstn      |      o_cam_rstn      |  GPIO_OUT |  3.114   |  2.076   |
+|      o_lcd_rstn      |      o_lcd_rstn      |  GPIO_OUT |  3.114   |  2.076   |
+| system_uart_0_io_txd | system_uart_0_io_txd |  GPIO_OUT |  5.740   |  2.493   |
++----------------------+----------------------+-----------+----------+----------+
+
+---------- GPIO Timing Report (end) ----------
+
+---------- 3. JTAG Timing Report (begin) ----------
+
++---------------+----------------+-----------+----------+----------+
+| Instance Name |    Pin Name    | Parameter | Max (ns) | Min (ns) |
++---------------+----------------+-----------+----------+----------+
+|   jtag_inst1  | jtag_inst1_TDI |  JTAG_IN  |  2.454   |  1.505   |
+|   jtag_inst1  | jtag_inst1_TMS |  JTAG_IN  |  1.773   |  0.990   |
++---------------+----------------+-----------+----------+----------+
+
+---------- JTAG Timing Report (end) ----------
+
+---------- 4.1 HSIO GPIO Timing Report (begin) ----------
+
+Non-registered HSIO GPIO Configuration:
+========================================
+
++---------------+-------------------------------+-----------+----------+----------+
+| Instance Name |            Pin Name           | Parameter | Max (ns) | Min (ns) |
++---------------+-------------------------------+-----------+----------+----------+
+|     pllin     |             pllin             |  GPIO_IN  |  0.828   |  0.552   |
+|      sw6      |              sw6              |  GPIO_IN  |  0.889   |  0.593   |
+|      sw7      |              sw7              |  GPIO_IN  |  0.889   |  0.593   |
+|   user_dip0   |           user_dip0           |  GPIO_IN  |  0.828   |  0.552   |
+|   user_dip1   |           user_dip1           |  GPIO_IN  |  0.828   |  0.552   |
+|  hbc_cal_pass |          hbc_cal_pass         |  GPIO_OUT |  3.077   |  2.051   |
+|     LED0_B    |             LED0_B            |  GPIO_OUT |  3.077   |  2.051   |
+|     LED0_G    |             LED0_G            |  GPIO_OUT |  3.077   |  2.051   |
+|     LED0_R    |             LED0_R            |  GPIO_OUT |  3.077   |  2.051   |
+|     LED1_R    |             LED1_R            |  GPIO_OUT |  3.077   |  2.051   |
+|     o_led     |             o_led             |  GPIO_OUT |  3.077   |  2.051   |
+|   io_cam_scl  |     mipi_i2c_0_io_scl_read    |  GPIO_IN  |  0.828   |  0.552   |
+|   io_cam_scl  |    mipi_i2c_0_io_scl_write    |  GPIO_OUT |  2.205   |  1.470   |
+|   io_cam_scl  | mipi_i2c_0_io_scl_writeEnable |  GPIO_OUT |  1.953   |  1.302   |
+|   io_cam_sda  |     mipi_i2c_0_io_sda_read    |  GPIO_IN  |  0.828   |  0.552   |
+|   io_cam_sda  |    mipi_i2c_0_io_sda_write    |  GPIO_OUT |  1.922   |  1.281   |
+|   io_cam_sda  | mipi_i2c_0_io_sda_writeEnable |  GPIO_OUT |  1.691   |  1.127   |
++---------------+-------------------------------+-----------+----------+----------+
+
+Registered HSIO GPIO Configuration:
+====================================
+
++----------------------------+----------------+----------------+----------------+---------------+---------------+-----------------------+-----------------------+
+|       Instance Name        |   Clock Pin    | Max Setup (ns) | Min Setup (ns) | Max Hold (ns) | Min Hold (ns) | Max Clock To Out (ns) | Min Clock To Out (ns) |
++----------------------------+----------------+----------------+----------------+---------------+---------------+-----------------------+-----------------------+
+|          hbc_ck_n          | ~i_hbramClk90  |                |                |               |               |         2.226         |         1.484         |
+|          hbc_ck_p          | ~i_hbramClk90  |                |                |               |               |         2.226         |         1.484         |
+|          hbc_cs_n          |   i_hbramClk   |                |                |               |               |         2.226         |         1.484         |
+|         hbc_rst_n          |   i_hbramClk   |                |                |               |               |         2.226         |         1.484         |
+| system_spi_0_io_sclk_write | i_mipi_rx_pclk |                |                |               |               |         2.226         |         1.484         |
+|     system_spi_0_io_ss     | i_mipi_rx_pclk |                |                |               |               |         2.226         |         1.484         |
+|         hbc_dq[0]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[0]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[1]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[1]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[2]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[2]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[3]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[3]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[4]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[4]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[5]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[5]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[6]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[6]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[7]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[7]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[8]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[8]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[9]          | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[9]          |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[10]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[10]         |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[11]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[11]         |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[12]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[12]         |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[13]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[13]         |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[14]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[14]         |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|         hbc_dq[15]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|         hbc_dq[15]         |  ~i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|        hbc_rwds[0]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|        hbc_rwds[0]         |   i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|        hbc_rwds[1]         | i_hbramClk_cal |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|        hbc_rwds[1]         |   i_hbramClk   |                |                |               |               |         2.226         |         1.302         |
+|   system_spi_0_io_data_0   | i_mipi_rx_pclk |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|   system_spi_0_io_data_0   | i_mipi_rx_pclk |                |                |               |               |         2.226         |         1.302         |
+|   system_spi_0_io_data_1   | i_mipi_rx_pclk |     0.618      |     0.412      |     -0.408    |     -0.272    |                       |                       |
+|   system_spi_0_io_data_1   | i_mipi_rx_pclk |                |                |               |               |         2.226         |         1.302         |
++----------------------------+----------------+----------------+----------------+---------------+---------------+-----------------------+-----------------------+
+
+---------- HSIO GPIO Timing Report (end) ----------
+
+---------- 4.2.1 MIPI RX Lane Timing Report (begin) ----------
+
++---------------+------------------+-----------------+----------+----------+
+| Instance Name |     Pin Name     |    Parameter    | Max (ns) | Min (ns) |
++---------------+------------------+-----------------+----------+----------+
+|     cam_ck    | i_cam_ck_LP_P_IN | MIPI_RX_LANE_IN |  2.226   |  1.484   |
+|     cam_ck    | i_cam_ck_LP_N_IN | MIPI_RX_LANE_IN |  2.226   |  1.484   |
+|     cam_d0    | i_cam_d0_LP_P_IN | MIPI_RX_LANE_IN |  2.342   |  1.561   |
+|     cam_d0    | i_cam_d0_LP_N_IN | MIPI_RX_LANE_IN |  2.342   |  1.561   |
+|     cam_d1    | i_cam_d1_LP_P_IN | MIPI_RX_LANE_IN |  2.342   |  1.561   |
+|     cam_d1    | i_cam_d1_LP_N_IN | MIPI_RX_LANE_IN |  2.342   |  1.561   |
++---------------+------------------+-----------------+----------+----------+
+
+---------- MIPI RX Lane Timing Report (end) ----------
+
+---------- 4.2.2 MIPI TX Lane Timing Report (begin) ----------
+
++---------------+------------------------+------------------+----------+----------+
+| Instance Name |        Pin Name        |    Parameter     | Max (ns) | Min (ns) |
++---------------+------------------------+------------------+----------+----------+
+|  mipi_dp_clk  |   mipi_dp_clk_HS_OE    | MIPI_TX_LANE_OUT |  1.575   |  1.050   |
+|  mipi_dp_clk  |  mipi_dp_clk_LP_N_OE   | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+|  mipi_dp_clk  |  mipi_dp_clk_LP_P_OE   | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+|  mipi_dp_clk  |  mipi_dp_clk_LP_N_OUT  | MIPI_TX_LANE_OUT |  2.289   |  1.526   |
+|  mipi_dp_clk  |  mipi_dp_clk_LP_P_OUT  | MIPI_TX_LANE_OUT |  2.289   |  1.526   |
+| mipi_dp_data0 |  mipi_dp_data0_HS_OE   | MIPI_TX_LANE_OUT |  1.575   |  1.050   |
+| mipi_dp_data0 | mipi_dp_data0_LP_N_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data0 | mipi_dp_data0_LP_P_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data0 | mipi_dp_data0_LP_N_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
+| mipi_dp_data0 | mipi_dp_data0_LP_P_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
+| mipi_dp_data1 |  mipi_dp_data1_HS_OE   | MIPI_TX_LANE_OUT |  1.575   |  1.050   |
+| mipi_dp_data1 | mipi_dp_data1_LP_N_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data1 | mipi_dp_data1_LP_P_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data1 | mipi_dp_data1_LP_N_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
+| mipi_dp_data1 | mipi_dp_data1_LP_P_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
+| mipi_dp_data2 |  mipi_dp_data2_HS_OE   | MIPI_TX_LANE_OUT |  1.575   |  1.050   |
+| mipi_dp_data2 | mipi_dp_data2_LP_N_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data2 | mipi_dp_data2_LP_P_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data2 | mipi_dp_data2_LP_N_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
+| mipi_dp_data2 | mipi_dp_data2_LP_P_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
+| mipi_dp_data3 |  mipi_dp_data3_HS_OE   | MIPI_TX_LANE_OUT |  1.575   |  1.050   |
+| mipi_dp_data3 | mipi_dp_data3_LP_N_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data3 | mipi_dp_data3_LP_P_OE  | MIPI_TX_LANE_OUT |  2.100   |  1.400   |
+| mipi_dp_data3 | mipi_dp_data3_LP_N_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
+| mipi_dp_data3 | mipi_dp_data3_LP_P_OUT | MIPI_TX_LANE_OUT |  2.058   |  1.372   |
++---------------+------------------------+------------------+----------+----------+
+
+---------- MIPI TX Lane Timing Report (end) ----------
+
+---------- 5. Clock Network Delay Report (begin) ----------
+
++-------------------+----------+----------+
+|     Clock Pin     | Max (ns) | Min (ns) |
++-------------------+----------+----------+
+| i_cam_ck_CLKOUT_0 |  1.828   |  1.183   |
+|      i_fb_clk     |  1.881   |  1.183   |
+|     i_hbramClk    |  1.905   |  1.233   |
+|    i_hbramClk90   |  1.834   |  1.187   |
+|   i_hbramClk_cal  |  1.874   |  1.213   |
+|   i_hbramClk_fb   |  1.885   |  1.220   |
+|     i_mipi_clk    |  1.835   |  1.187   |
+|   i_mipi_rx_pclk  |  1.847   |  1.195   |
+|   i_mipi_tx_pclk  |  1.909   |  1.236   |
+|  i_mipi_txc_sclk  |  1.831   |  1.185   |
+|  i_mipi_txd_sclk  |  1.941   |  1.256   |
++-------------------+----------+----------+
+
+---------- Clock Network Delay Report (end) ----------

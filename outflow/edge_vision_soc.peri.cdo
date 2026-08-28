@@ -1,0 +1,93 @@
+CellDelayOverride {
+  Cell: "pll_inst1~PLL"
+  DelayOverride {
+    from: "CLKIN[0]"
+    to: "CLKOUT0"
+    Type: "CLK_TO_Q"
+    value_min: -1217
+    value_max: -1881
+  }
+  DelayOverride {
+    from: "CLKIN[0]"
+    to: "CLKOUT1"
+    Type: "CLK_TO_Q"
+    value_min: -1217
+    value_max: -1881
+  }
+  DelayOverride {
+    from: "CLKIN[0]"
+    to: "CLKOUT2"
+    Type: "CLK_TO_Q"
+    value_min: -1217
+    value_max: -1881
+  }
+  DelayOverride {
+    from: "CLKIN[0]"
+    to: "CLKOUT3"
+    Type: "CLK_TO_Q"
+    value_min: -1217
+    value_max: -1881
+  }
+}
+CellDelayOverride {
+  Cell: "pll_inst2~PLL"
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT0"
+    Type: "CLK_TO_Q"
+    value_min: -1187
+    value_max: -1835
+  }
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT1"
+    Type: "CLK_TO_Q"
+    value_min: -1187
+    value_max: -1835
+  }
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT2"
+    Type: "CLK_TO_Q"
+    value_min: -1187
+    value_max: -1835
+  }
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT3"
+    Type: "CLK_TO_Q"
+    value_min: -1187
+    value_max: -1835
+  }
+}
+CellDelayOverride {
+  Cell: "pll_inst3~PLL"
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT0"
+    Type: "CLK_TO_Q"
+    value_min: -1220
+    value_max: -1885
+  }
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT1"
+    Type: "CLK_TO_Q"
+    value_min: -1220
+    value_max: -1885
+  }
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT2"
+    Type: "CLK_TO_Q"
+    value_min: -1220
+    value_max: -1885
+  }
+  DelayOverride {
+    from: "CLKIN[3]"
+    to: "CLKOUT3"
+    Type: "CLK_TO_Q"
+    value_min: -1220
+    value_max: -1885
+  }
+}

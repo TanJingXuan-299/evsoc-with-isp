@@ -1,0 +1,305 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Jul 21, 2026 10:53:23
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Jul 21, 2026 14:04:25
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Jul 30, 2026 13:31:01
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 10, 2026 15:00:16
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 12, 2026 11:17:16
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 16:58:29
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] overwriting previous definition of module 'dma' (VERI-1206) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:135)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:931)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_StreamFifoCC_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:1143)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BmbToAxi4WriteOnlyBridge_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:1367)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BmbWriteRetainer_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:1573)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BmbSourceRemover_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:1626)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BufferCC_4_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:1645)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_Apb3CC_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:1840)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_Core_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:3257)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BufferCC_3_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:3281)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BufferCC_2_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:3305)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BmbContextRemover_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:3519)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_StreamFifo_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:3733)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_FlowCCUnsafeByToggle_1_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:3809)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_FlowCCUnsafeByToggle_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:3880)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_Aggregator_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:7255)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_DmaMemoryCore_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:7697)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_StreamFifo_1_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:7879)
+[EFX-0010 VERI-ERROR] module 'EfxDMA_BufferCC_1_6b5523d6bc5b4975a220f4910a8322f6' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:7903)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 16:59:21
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot find port 'read_arvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1449)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1450)
+[EFX-0010 VERI-ERROR] cannot find port 'read_araddr' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1451)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arregion' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1452)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arlen' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1453)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arsize' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1454)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arburst' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1455)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arlock' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1456)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arcache' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1457)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arqos' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1458)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arprot' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1459)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1460)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1461)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rdata' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1462)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rresp' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1463)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rlast' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1464)
+[EFX-0010 VERI-ERROR] cannot find port 'dat1_o_clk' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1495)
+[EFX-0010 VERI-ERROR] cannot find port 'dat1_o_reset' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1496)
+[EFX-0010 VERI-ERROR] cannot find port 'dat1_o_tvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1497)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 17:00:42
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot find port 'read_arvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1449)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1450)
+[EFX-0010 VERI-ERROR] cannot find port 'read_araddr' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1451)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arregion' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1452)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arlen' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1453)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arsize' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1454)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arburst' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1455)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arlock' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1456)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arcache' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1457)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arqos' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1458)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arprot' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1459)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1460)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1461)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rdata' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1462)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rresp' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1463)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rlast' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1464)
+[EFX-0010 VERI-ERROR] cannot find port 'dat2_o_clk' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1497)
+[EFX-0010 VERI-ERROR] cannot find port 'dat2_o_reset' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1498)
+[EFX-0010 VERI-ERROR] cannot find port 'dat2_o_tvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1499)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 17:06:00
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot find port 'read_arvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1449)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1450)
+[EFX-0010 VERI-ERROR] cannot find port 'read_araddr' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1451)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arregion' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1452)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arlen' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1453)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arsize' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1454)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arburst' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1455)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arlock' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1456)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arcache' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1457)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arqos' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1458)
+[EFX-0010 VERI-ERROR] cannot find port 'read_arprot' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1459)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1460)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1461)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rdata' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1462)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rresp' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1463)
+[EFX-0010 VERI-ERROR] cannot find port 'read_rlast' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1464)
+[EFX-0010 VERI-ERROR] cannot find port 'dat2_o_clk' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1497)
+[EFX-0010 VERI-ERROR] cannot find port 'dat2_o_reset' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1498)
+[EFX-0010 VERI-ERROR] cannot find port 'dat2_o_tvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1499)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 17:08:52
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 17:18:48
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_clk' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1506)
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_reset' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1507)
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_tvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1508)
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_tready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1509)
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_tdata' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1510)
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_tkeep' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1511)
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_tdest' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1512)
+[EFX-0010 VERI-ERROR] cannot find port 'dat3_i_tlast' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1513)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_clk' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1515)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_reset' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1516)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_tvalid' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1517)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_tready' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1518)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_tdata' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1519)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_tkeep' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1520)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_tdest' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1521)
+[EFX-0010 VERI-ERROR] cannot find port 'dat4_o_tlast' on instantiated module 'dma' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1522)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 17:19:40
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near 'assign' (VERI-1137) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1531)
+[EFX-0010 VERI-ERROR] SystemVerilog 2009 keyword 'assign' used in incorrect context (VERI-2344) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1531)
+[EFX-0010 VERI-ERROR] module 'edge_vision_soc' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1732)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 20, 2026 17:20:20
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 24, 2026 14:39:44
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 26, 2026 14:34:35
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'i_sobel_thresh_val' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:110)
+[EFX-0010 VERI-ERROR] 'i_hw_accel_dma_init_done' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:112)
+[EFX-0010 VERI-ERROR] module 'hw_accel_wrapper' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:221)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 26, 2026 14:36:33
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'i_sobel_thresh_val' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:110)
+[EFX-0010 VERI-ERROR] 'i_hw_accel_dma_init_done' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:112)
+[EFX-0010 VERI-ERROR] module 'hw_accel_wrapper' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:221)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 26, 2026 14:39:42
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'i_sobel_thresh_val' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:110)
+[EFX-0010 VERI-ERROR] 'i_hw_accel_dma_init_done' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:112)
+[EFX-0010 VERI-ERROR] module 'hw_accel_wrapper' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/hw_accel/hw_accel_wrapper.v:221)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 26, 2026 14:46:14
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VERI-1137) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1255)
+[EFX-0010 VERI-ERROR] module 'edge_vision_soc' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1625)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 26, 2026 14:46:51
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot find port 'rst' on instantiated module 'hw_accel_apb3' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1281)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 26, 2026 14:49:04
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot find port 'rsetn' on instantiated module 'hw_accel_apb3' (VERI-1010) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v:1281)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 26, 2026 14:49:40
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 09:21:04
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] overwriting previous definition of module 'cam_picam_v2' (VERI-1206) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:643)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 09:25:02
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] instantiating unknown module 'isp_top' (VERI-1063) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:344)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 09:37:50
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/bitlog.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/bitsqrt.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/decompanding_flut_12_bit.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/decompanding_flut_short.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/decompanding_flut.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/decompanding_xlut_short.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/decompanding_xlut.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/decompanding_ylut_12_bit.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/filelist.txt' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma_gain.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma_offset.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/lut.mem' is not registered (SORT-1001) 
+[EFX-0010 VERI-ERROR] cannot determine type/mode; file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/simple_dual_ported_rom.mem' is not registered (SORT-1001) 
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 09:40:43
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 10:09:35
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 10:28:31
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 11:25:45
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Aug 27, 2026 13:21:43
+///////////////////////////////////
+

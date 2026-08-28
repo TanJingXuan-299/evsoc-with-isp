@@ -1,0 +1,10821 @@
+cell {
+  name: "cam_ck_RXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "cam_ck_RXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "cam_d0_RXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "cam_d0_RXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "cam_d1_RXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "cam_d1_RXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_cal_pass"
+  type: "pkg_output"
+}
+cell {
+  name: "hbc_cal_pass~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_ck_n_HI"
+  type: "pkg_output"
+}
+cell {
+  name: "hbc_ck_n_HI~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_ck_n_LO~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_ck_p_HI"
+  type: "pkg_output"
+}
+cell {
+  name: "hbc_ck_p_HI~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_ck_p_LO~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_cs_n"
+  type: "pkg_output"
+}
+cell {
+  name: "hbc_cs_n~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq[0]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[10]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[11]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[12]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[13]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[14]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[15]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[1]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[2]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[3]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[4]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[5]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[6]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[7]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[8]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq[9]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_dq_IN_HI[0]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[10]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[11]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[12]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[13]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[14]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[15]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[1]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[2]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[3]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[4]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[5]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[6]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[7]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[8]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_HI[9]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[0]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[10]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[11]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[12]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[13]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[14]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[15]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[1]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[2]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[3]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[4]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[5]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[6]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[7]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[8]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_IN_LO[9]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_dq_OE[0]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[10]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[11]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[12]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[13]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[14]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[15]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[1]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[2]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[3]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[4]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[5]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[6]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[7]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[8]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OE[9]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[0]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[10]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[11]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[12]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[13]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[14]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[15]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[1]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[2]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[3]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[4]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[5]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[6]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[7]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[8]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_HI[9]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[0]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[10]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[11]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[12]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[13]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[14]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[15]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[1]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[2]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[3]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[4]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[5]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[6]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[7]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[8]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_dq_OUT_LO[9]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_rst_n"
+  type: "pkg_output"
+}
+cell {
+  name: "hbc_rst_n~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_rwds[0]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_rwds[1]"
+  type: "pkg_inout"
+}
+cell {
+  name: "hbc_rwds_IN_HI[0]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_rwds_IN_HI[1]~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_rwds_IN_LO[0]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_rwds_IN_LO[1]~GPIO~I[1]"
+  type: "pt_output"
+}
+cell {
+  name: "hbc_rwds_OE[0]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_rwds_OE[1]~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_rwds_OUT_HI[0]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_rwds_OUT_HI[1]~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_rwds_OUT_LO[0]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "hbc_rwds_OUT_LO[1]~GPIO~O[1]"
+  type: "pt_input"
+}
+cell {
+  name: "i_arstn"
+  type: "pkg_input"
+}
+cell {
+  name: "i_arstn~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_ck_CLKOUT_0~CLKOUT~218~24"
+  type: "pt_input"
+}
+cell {
+  name: "i_cam_ck_CLKOUT_0~CLKOUT~218~34"
+  type: "pt_input"
+}
+cell {
+  name: "i_cam_ck_CLKOUT_0~MIPI~SLOWCLKOUT"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_ck_LP_N_IN~MIPI~LP_N_IN"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_ck_LP_P_IN~MIPI~LP_P_IN"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_FIFO_EMPTY~MIPI~FIFO_EMPTY"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[0]~MIPI~HS_IN[0]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[1]~MIPI~HS_IN[1]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[2]~MIPI~HS_IN[2]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[3]~MIPI~HS_IN[3]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[4]~MIPI~HS_IN[4]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[5]~MIPI~HS_IN[5]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[6]~MIPI~HS_IN[6]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_HS_IN_0[7]~MIPI~HS_IN[7]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_LP_N_IN~MIPI~LP_N_IN"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d0_LP_P_IN~MIPI~LP_P_IN"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_FIFO_EMPTY~MIPI~FIFO_EMPTY"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[0]~MIPI~HS_IN[0]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[1]~MIPI~HS_IN[1]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[2]~MIPI~HS_IN[2]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[3]~MIPI~HS_IN[3]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[4]~MIPI~HS_IN[4]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[5]~MIPI~HS_IN[5]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[6]~MIPI~HS_IN[6]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_HS_IN_0[7]~MIPI~HS_IN[7]"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_LP_N_IN~MIPI~LP_N_IN"
+  type: "pt_output"
+}
+cell {
+  name: "i_cam_d1_LP_P_IN~MIPI~LP_P_IN"
+  type: "pt_output"
+}
+cell {
+  name: "i_fb_clk~CLKOUT~18~1"
+  type: "pt_input"
+}
+cell {
+  name: "i_fb_clk~CLKOUT~1~304"
+  type: "pt_input"
+}
+cell {
+  name: "i_fb_clk~CLKOUT~202~1"
+  type: "pt_input"
+}
+cell {
+  name: "i_fb_clk~PLL~CLKOUT0"
+  type: "pt_output"
+}
+cell {
+  name: "i_hbramClk90~CLKOUT~74~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk90~CLKOUT~75~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk90~PLL~CLKOUT1"
+  type: "pt_output"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~129~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~140~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~141~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~148~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~149~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~156~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~157~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~164~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~165~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~32~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~33~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~48~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~49~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~56~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~57~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~64~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~65~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~CLKOUT~81~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_cal~PLL~CLKOUT2"
+  type: "pt_output"
+}
+cell {
+  name: "i_hbramClk_fb~CLKOUT~19~1"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk_fb~PLL~CLKOUT0"
+  type: "pt_output"
+}
+cell {
+  name: "i_hbramClk_pll_locked~PLL~LOCKED"
+  type: "pt_output"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~131~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~142~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~143~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~150~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~151~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~158~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~159~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~166~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~167~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~27~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~34~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~35~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~50~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~51~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~58~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~59~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~66~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~67~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~83~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~CLKOUT~84~322"
+  type: "pt_input"
+}
+cell {
+  name: "i_hbramClk~PLL~CLKOUT3"
+  type: "pt_output"
+}
+cell {
+  name: "i_mipi_clk~CLKOUT~203~1"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_clk~PLL~CLKOUT0"
+  type: "pt_output"
+}
+cell {
+  name: "i_mipi_rx_pclk~CLKOUT~1~30"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_rx_pclk~CLKOUT~1~31"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_rx_pclk~CLKOUT~1~59"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_rx_pclk~CLKOUT~1~60"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_rx_pclk~CLKOUT~1~61"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_rx_pclk~CLKOUT~1~62"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_rx_pclk~PLL~CLKOUT3"
+  type: "pt_output"
+}
+cell {
+  name: "i_mipi_tx_pclk~CLKOUT~218~251"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_tx_pclk~CLKOUT~218~261"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_tx_pclk~CLKOUT~218~286"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_tx_pclk~CLKOUT~218~300"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_tx_pclk~PLL~CLKOUT3"
+  type: "pt_output"
+}
+cell {
+  name: "i_mipi_tx_pll_locked~PLL~LOCKED"
+  type: "pt_output"
+}
+cell {
+  name: "i_mipi_txc_sclk~CLKOUT~218~270"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_txc_sclk~PLL~CLKOUT1"
+  type: "pt_output"
+}
+cell {
+  name: "i_mipi_txd_sclk~CLKOUT~218~247"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_txd_sclk~CLKOUT~218~257"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_txd_sclk~CLKOUT~218~274"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_txd_sclk~CLKOUT~218~280"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_txd_sclk~CLKOUT~218~296"
+  type: "pt_input"
+}
+cell {
+  name: "i_mipi_txd_sclk~PLL~CLKOUT2"
+  type: "pt_output"
+}
+cell {
+  name: "i_pll_locked~PLL~LOCKED"
+  type: "pt_output"
+}
+cell {
+  name: "i_sysclk_div_2~PLL~CLKOUT2"
+  type: "pt_output"
+}
+cell {
+  name: "i_systemClk~PLL~CLKOUT1"
+  type: "pt_output"
+}
+cell {
+  name: "io_cam_scl"
+  type: "pkg_inout"
+}
+cell {
+  name: "io_cam_sda"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_clk_HS_OE~MIPI~HS_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_LP_N_OE~MIPI~LP_N_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_LP_N_OUT~MIPI~LP_N_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_LP_P_OE~MIPI~LP_P_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_LP_P_OUT~MIPI~LP_P_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_RST~MIPI~RST"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_clk_TXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_clk_TXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data0_HS_OE~MIPI~HS_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_LP_N_IN~MIPI~LP_N_IN"
+  type: "pt_output"
+}
+cell {
+  name: "mipi_dp_data0_LP_N_OE~MIPI~LP_N_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_LP_N_OUT~MIPI~LP_N_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_LP_P_IN~MIPI~LP_P_IN"
+  type: "pt_output"
+}
+cell {
+  name: "mipi_dp_data0_LP_P_OE~MIPI~LP_P_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_LP_P_OUT~MIPI~LP_P_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_RST~MIPI~RST"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data0_TXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data0_TXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data1_HS_OE~MIPI~HS_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_LP_N_OE~MIPI~LP_N_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_LP_N_OUT~MIPI~LP_N_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_LP_P_OE~MIPI~LP_P_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_LP_P_OUT~MIPI~LP_P_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_RST~MIPI~RST"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data1_TXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data1_TXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data2_HS_OE~MIPI~HS_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_LP_N_OE~MIPI~LP_N_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_LP_N_OUT~MIPI~LP_N_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_LP_P_OE~MIPI~LP_P_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_LP_P_OUT~MIPI~LP_P_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_RST~MIPI~RST"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data2_TXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data2_TXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data3_HS_OE~MIPI~HS_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_LP_N_OE~MIPI~LP_N_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_LP_N_OUT~MIPI~LP_N_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_LP_P_OE~MIPI~LP_P_OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_LP_P_OUT~MIPI~LP_P_OUT"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_RST~MIPI~RST"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_dp_data3_TXN"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_dp_data3_TXP"
+  type: "pkg_inout"
+}
+cell {
+  name: "mipi_i2c_0_io_scl_read~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "mipi_i2c_0_io_scl_writeEnable~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_i2c_0_io_scl_write~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_i2c_0_io_sda_read~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "mipi_i2c_0_io_sda_writeEnable~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "mipi_i2c_0_io_sda_write~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_ck_HS_ENA~MIPI~HS_ENA"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_ck_HS_TERM~MIPI~HS_TERM"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d0_FIFO_RD~MIPI~FIFO_RD"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d0_HS_ENA~MIPI~HS_ENA"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d0_HS_TERM~MIPI~HS_TERM"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d0_RST~MIPI~RST"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d1_FIFO_RD~MIPI~FIFO_RD"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d1_HS_ENA~MIPI~HS_ENA"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d1_HS_TERM~MIPI~HS_TERM"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_d1_RST~MIPI~RST"
+  type: "pt_input"
+}
+cell {
+  name: "o_cam_rstn"
+  type: "pkg_output"
+}
+cell {
+  name: "o_cam_rstn~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "o_hbramClk_pll_rstn~PLL~RSTN"
+  type: "pt_input"
+}
+cell {
+  name: "o_lcd_rstn"
+  type: "pkg_output"
+}
+cell {
+  name: "o_lcd_rstn~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "o_led"
+  type: "pkg_output"
+}
+cell {
+  name: "o_led~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "o_mipi_pll_rstn~PLL~RSTN"
+  type: "pt_input"
+}
+cell {
+  name: "o_pll_rstn~PLL~RSTN"
+  type: "pt_input"
+}
+cell {
+  name: "pllin"
+  type: "pkg_input"
+}
+cell {
+  name: "sw1"
+  type: "pkg_input"
+}
+cell {
+  name: "sw1~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "sw6"
+  type: "pkg_input"
+}
+cell {
+  name: "sw6~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "sw7"
+  type: "pkg_input"
+}
+cell {
+  name: "sw7~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "system_spi_0_io_data_0"
+  type: "pkg_inout"
+}
+cell {
+  name: "system_spi_0_io_data_0_read~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "system_spi_0_io_data_0_writeEnable~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "system_spi_0_io_data_0_write~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "system_spi_0_io_data_1"
+  type: "pkg_inout"
+}
+cell {
+  name: "system_spi_0_io_data_1_read~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "system_spi_0_io_data_1_writeEnable~GPIO~OE"
+  type: "pt_input"
+}
+cell {
+  name: "system_spi_0_io_data_1_write~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "system_spi_0_io_sclk_write"
+  type: "pkg_output"
+}
+cell {
+  name: "system_spi_0_io_sclk_write~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "system_spi_0_io_ss"
+  type: "pkg_output"
+}
+cell {
+  name: "system_spi_0_io_ss~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "system_uart_0_io_rxd"
+  type: "pkg_input"
+}
+cell {
+  name: "system_uart_0_io_rxd~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "system_uart_0_io_txd"
+  type: "pkg_output"
+}
+cell {
+  name: "system_uart_0_io_txd~GPIO~O[0]"
+  type: "pt_input"
+}
+cell {
+  name: "user_dip0"
+  type: "pkg_input"
+}
+cell {
+  name: "user_dip0~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "user_dip1"
+  type: "pkg_input"
+}
+cell {
+  name: "user_dip1~GPIO~I[0]"
+  type: "pt_output"
+}
+cell {
+  name: "cam_ck~MIPI"
+  type: "EFX_MIPI_RX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "CLOCK"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY_MODE"
+    enum_value: "STATIC"
+  }
+  parameters {
+    name: "FIFO_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "GCLK"
+  }
+}
+cell {
+  name: "cam_d0~MIPI"
+  type: "EFX_MIPI_RX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "DATA"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY_MODE"
+    enum_value: "STATIC"
+  }
+  parameters {
+    name: "FIFO_EN"
+    bool_value: true
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "5"
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "GCLK"
+  }
+}
+cell {
+  name: "cam_d1~MIPI"
+  type: "EFX_MIPI_RX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "DATA"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY_MODE"
+    enum_value: "STATIC"
+  }
+  parameters {
+    name: "FIFO_EN"
+    bool_value: true
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "5"
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "GCLK"
+  }
+}
+cell {
+  name: "hbc_cal_pass~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "2"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.2_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_ck_n~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_ck_p~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_cs_n~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[0]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[10]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[11]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[12]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[13]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[14]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[15]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[1]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[2]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[3]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[4]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[5]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[6]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[7]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[8]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_dq[9]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: true
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_rst_n~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_rwds[0]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "hbc_rwds[1]~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "DDIO"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "DDIO_RESYNC"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLDOWN"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "i_arstn~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "io_cam_scl~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "io_cam_sda~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "8"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "mipi_dp_clk~MIPI"
+  type: "EFX_MIPI_TX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "CLOCK"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "10"
+  }
+}
+cell {
+  name: "mipi_dp_data0~MIPI"
+  type: "EFX_MIPI_TX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "DATA"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: true
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "0"
+  }
+}
+cell {
+  name: "mipi_dp_data1~MIPI"
+  type: "EFX_MIPI_TX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "DATA"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "0"
+  }
+}
+cell {
+  name: "mipi_dp_data2~MIPI"
+  type: "EFX_MIPI_TX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "DATA"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "0"
+  }
+}
+cell {
+  name: "mipi_dp_data3~MIPI"
+  type: "EFX_MIPI_TX_LN_V1"
+  parameters {
+    name: "MODE"
+    enum_value: "DATA"
+  }
+  parameters {
+    name: "REVERSIBLE"
+    bool_value: false
+  }
+  parameters {
+    name: "DELAY"
+    enum_value: "0"
+  }
+}
+cell {
+  name: "o_cam_rstn~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "8"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "o_lcd_rstn~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "o_led~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "2"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.2_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "pll_inst1~PLL"
+  type: "EFX_PLL_V3"
+  parameters {
+    name: "N"
+    mask_value: "1"
+  }
+  parameters {
+    name: "M"
+    mask_value: "1"
+  }
+  parameters {
+    name: "O"
+    mask_value: "2"
+  }
+  parameters {
+    name: "CLKOUT0_DIV"
+    mask_value: "60"
+  }
+  parameters {
+    name: "CLKOUT1_DIV"
+    mask_value: "5"
+  }
+  parameters {
+    name: "CLKOUT2_DIV"
+    mask_value: "24"
+  }
+  parameters {
+    name: "CLKOUT3_DIV"
+    mask_value: "15"
+  }
+  parameters {
+    name: "CLKOUT4_DIV"
+    mask_value: "1"
+  }
+  parameters {
+    name: "CLKOUT0_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT1_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT2_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT3_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT4_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "FEEDBACK_CLK"
+    enum_value: "CLK0"
+  }
+  parameters {
+    name: "FEEDBACK_MODE"
+    enum_value: "CORE"
+  }
+  parameters {
+    name: "REFCLK_FREQ"
+    mask_value: "25"
+  }
+  parameters {
+    name: "IS_CLKOUT0_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT1_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT2_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT3_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT4_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT3_CONN_TYPE"
+    enum_value: "GCLK"
+  }
+  parameters {
+    name: "CLKOUT4_CONN_TYPE"
+    enum_value: "GCLK"
+  }
+  parameters {
+    name: "CLKOUT0_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT1_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT2_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT3_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT4_DYNPHASE_EN"
+    bool_value: false
+  }
+}
+cell {
+  name: "pll_inst2~PLL"
+  type: "EFX_PLL_V3"
+  parameters {
+    name: "N"
+    mask_value: "1"
+  }
+  parameters {
+    name: "M"
+    mask_value: "4"
+  }
+  parameters {
+    name: "O"
+    mask_value: "2"
+  }
+  parameters {
+    name: "CLKOUT0_DIV"
+    mask_value: "20"
+  }
+  parameters {
+    name: "CLKOUT1_DIV"
+    mask_value: "4"
+  }
+  parameters {
+    name: "CLKOUT2_DIV"
+    mask_value: "4"
+  }
+  parameters {
+    name: "CLKOUT3_DIV"
+    mask_value: "16"
+  }
+  parameters {
+    name: "CLKOUT4_DIV"
+    mask_value: "1"
+  }
+  parameters {
+    name: "CLKOUT0_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT1_PHASE_STEP"
+    mask_value: "4"
+  }
+  parameters {
+    name: "CLKOUT2_PHASE_STEP"
+    mask_value: "2"
+  }
+  parameters {
+    name: "CLKOUT3_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT4_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "FEEDBACK_CLK"
+    enum_value: "CLK0"
+  }
+  parameters {
+    name: "FEEDBACK_MODE"
+    enum_value: "CORE"
+  }
+  parameters {
+    name: "REFCLK_FREQ"
+    mask_value: "25"
+  }
+  parameters {
+    name: "IS_CLKOUT0_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT1_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT2_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT3_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT4_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT3_CONN_TYPE"
+    enum_value: "GCLK"
+  }
+  parameters {
+    name: "CLKOUT4_CONN_TYPE"
+    enum_value: "GCLK"
+  }
+  parameters {
+    name: "CLKOUT0_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT1_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT2_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT3_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT4_DYNPHASE_EN"
+    bool_value: false
+  }
+}
+cell {
+  name: "pll_inst3~PLL"
+  type: "EFX_PLL_V3"
+  parameters {
+    name: "N"
+    mask_value: "1"
+  }
+  parameters {
+    name: "M"
+    mask_value: "4"
+  }
+  parameters {
+    name: "O"
+    mask_value: "2"
+  }
+  parameters {
+    name: "CLKOUT0_DIV"
+    mask_value: "24"
+  }
+  parameters {
+    name: "CLKOUT1_DIV"
+    mask_value: "12"
+  }
+  parameters {
+    name: "CLKOUT2_DIV"
+    mask_value: "12"
+  }
+  parameters {
+    name: "CLKOUT3_DIV"
+    mask_value: "12"
+  }
+  parameters {
+    name: "CLKOUT4_DIV"
+    mask_value: "1"
+  }
+  parameters {
+    name: "CLKOUT0_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT1_PHASE_STEP"
+    mask_value: "6"
+  }
+  parameters {
+    name: "CLKOUT2_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT3_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "CLKOUT4_PHASE_STEP"
+    mask_value: "0"
+  }
+  parameters {
+    name: "FEEDBACK_CLK"
+    enum_value: "CLK0"
+  }
+  parameters {
+    name: "FEEDBACK_MODE"
+    enum_value: "CORE"
+  }
+  parameters {
+    name: "REFCLK_FREQ"
+    mask_value: "25"
+  }
+  parameters {
+    name: "IS_CLKOUT0_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT1_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT2_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT3_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_CLKOUT4_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT3_CONN_TYPE"
+    enum_value: "GCLK"
+  }
+  parameters {
+    name: "CLKOUT4_CONN_TYPE"
+    enum_value: "GCLK"
+  }
+  parameters {
+    name: "CLKOUT0_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT1_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT2_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT3_DYNPHASE_EN"
+    bool_value: false
+  }
+  parameters {
+    name: "CLKOUT4_DYNPHASE_EN"
+    bool_value: false
+  }
+}
+cell {
+  name: "pllin~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "PLL_CLKIN"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "sw1~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "sw6~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: true
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.2_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "sw7~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: true
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.2_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "system_spi_0_io_data_0~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "system_spi_0_io_data_1~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INOUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "system_spi_0_io_sclk_write~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "system_spi_0_io_ss~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "REG"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "system_uart_0_io_rxd~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "3.3_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "system_uart_0_io_txd~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "OUTPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "NONE"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "3.3_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "user_dip0~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "P_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+cell {
+  name: "user_dip1~GPIO"
+  type: "EFX_GPIO_V3"
+  parameters {
+    name: "MODE"
+    enum_value: "INPUT"
+  }
+  parameters {
+    name: "OUT_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "IN_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "OE_REG"
+    enum_value: "BYPASS"
+  }
+  parameters {
+    name: "PULL_OPTION"
+    enum_value: "WEAK_PULLUP"
+  }
+  parameters {
+    name: "IS_OUTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "CONNECTION_TYPE"
+    enum_value: "NORMAL"
+  }
+  parameters {
+    name: "SCHMITT_TRIGGER"
+    bool_value: false
+  }
+  parameters {
+    name: "DRIVE_STRENGTH"
+    enum_value: "4"
+  }
+  parameters {
+    name: "SLEW_RATE"
+    bool_value: false
+  }
+  parameters {
+    name: "BUS_HOLD"
+    bool_value: false
+  }
+  parameters {
+    name: "INDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "OUTDELAY"
+    enum_value: "0"
+  }
+  parameters {
+    name: "INDELAY_DYN_MODE"
+    bool_value: false
+  }
+  parameters {
+    name: "IO_STANDARD"
+    enum_value: "1.8_V_LVCMOS"
+  }
+  parameters {
+    name: "SITE_USAGE"
+    enum_value: "N_SS"
+  }
+  parameters {
+    name: "IS_OUTFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_INFASTCLK_INVERTED"
+    bool_value: false
+  }
+  parameters {
+    name: "IS_DLYCLK_INVERTED"
+    bool_value: false
+  }
+}
+net {
+  name: "cam_ck_RXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck_RXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "cam_ck_RXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "cam_ck_RXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "cam_ck_RXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck_RXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "cam_ck_RXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "cam_ck_RXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "cam_ck~MIPI~FASTCLKOUT"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "FASTCLKOUT"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "FASTCLK"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "FASTCLK"
+  }
+}
+net {
+  name: "cam_d0_RXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0_RXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "cam_d0_RXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "cam_d0_RXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "cam_d0_RXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0_RXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "cam_d0_RXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "cam_d0_RXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "cam_d0~MIPI~FIFOCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_cam_ck_CLKOUT_0~CLKOUT~218~24"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "FIFOCLK"
+  }
+}
+net {
+  name: "cam_d1_RXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1_RXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "cam_d1_RXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "cam_d1_RXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "cam_d1_RXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1_RXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "cam_d1_RXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "cam_d1_RXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "cam_d1~MIPI~FIFOCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_cam_ck_CLKOUT_0~CLKOUT~218~34"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "FIFOCLK"
+  }
+}
+net {
+  name: "hbc_cal_pass"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_cal_pass~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_cal_pass"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_cal_pass~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_cal_pass~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_cal_pass~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_ck_n_HI"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_ck_n~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_ck_n_HI"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_ck_n_HI~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_ck_n_HI~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_ck_n~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_ck_n_LO~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_ck_n_LO~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_ck_n~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_ck_n~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk90~CLKOUT~75~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_ck_n~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_ck_p_HI"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_ck_p~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_ck_p_HI"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_ck_p_HI~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_ck_p_HI~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_ck_p~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_ck_p_LO~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_ck_p_LO~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_ck_p~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_ck_p~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk90~CLKOUT~74~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_ck_p~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_cs_n"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_cs_n~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_cs_n"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_cs_n~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~84~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_cs_n~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_cs_n~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_cs_n~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_cs_n~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq[0]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[0]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[0]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~32~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[0]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~34~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[10]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[10]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[10]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[10]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[10]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~148~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[10]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~150~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[11]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[11]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[11]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[11]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[11]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~149~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[11]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~151~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[12]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[12]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[12]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[12]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[12]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~156~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[12]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~158~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[13]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[13]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[13]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[13]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[13]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~157~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[13]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~159~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[14]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[14]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[14]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[14]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[14]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~164~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[14]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~166~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[15]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[15]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[15]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[15]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[15]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~165~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[15]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~167~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[1]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[1]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[1]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~33~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[1]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~35~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[2]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[2]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[2]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[2]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[2]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~48~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[2]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~50~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[3]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[3]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[3]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[3]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[3]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~49~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[3]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~51~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[4]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[4]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[4]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[4]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[4]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~56~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[4]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~58~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[5]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[5]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[5]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[5]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[5]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~57~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[5]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~59~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[6]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[6]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[6]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[6]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[6]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~64~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[6]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~66~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[7]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[7]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[7]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[7]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[7]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~65~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[7]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~67~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[8]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[8]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[8]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[8]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[8]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~140~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[8]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~142~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq[9]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[9]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_dq[9]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_dq[9]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq[9]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~141~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_dq[9]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~143~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[0]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[0]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[10]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[10]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[11]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[11]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[12]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[12]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[13]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[13]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[14]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[14]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[15]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[15]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[1]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[1]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[2]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[2]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[3]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[3]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[4]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[4]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[5]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[5]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[6]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[6]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[7]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[7]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[8]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[8]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_HI[9]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_HI[9]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[0]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[0]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[10]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[10]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[11]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[11]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[12]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[12]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[13]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[13]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[14]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[14]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[15]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[15]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[1]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[1]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[2]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[2]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[3]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[3]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[4]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[4]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[5]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[5]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[6]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[6]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[7]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[7]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[8]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[8]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_IN_LO[9]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_dq_IN_LO[9]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_dq_OE[0]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[0]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[10]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[10]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[11]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[11]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[12]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[12]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[13]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[13]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[14]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[14]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[15]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[15]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[1]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[1]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[2]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[2]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[3]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[3]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[4]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[4]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[5]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[5]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[6]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[6]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[7]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[7]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[8]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[8]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OE[9]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OE[9]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[0]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[0]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[10]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[10]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[11]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[11]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[12]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[12]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[13]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[13]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[14]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[14]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[15]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[15]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[1]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[1]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[2]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[2]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[3]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[3]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[4]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[4]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[5]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[5]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[6]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[6]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[7]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[7]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[8]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[8]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_HI[9]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_HI[9]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[0]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[0]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[0]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[10]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[10]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[10]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[11]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[11]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[11]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[12]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[12]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[12]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[13]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[13]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[13]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[14]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[14]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[14]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[15]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[15]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[15]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[1]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[1]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[1]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[2]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[2]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[2]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[3]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[3]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[3]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[4]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[4]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[4]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[5]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[5]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[5]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[6]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[6]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[6]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[7]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[7]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[7]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[8]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[8]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[8]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_dq_OUT_LO[9]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_dq_OUT_LO[9]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_dq[9]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_rst_n"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rst_n~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_rst_n"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_rst_n~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~27~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rst_n~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_rst_n~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rst_n~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rst_n~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_rwds[0]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_rwds[0]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_rwds[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_rwds[0]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~81~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_rwds[0]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~83~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_rwds[1]_in"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "hbc_rwds[1]_out"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "hbc_rwds[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_rwds[1]~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_cal~CLKOUT~129~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "hbc_rwds[1]~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk~CLKOUT~131~322"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "hbc_rwds_IN_HI[0]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_rwds_IN_HI[0]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_rwds_IN_HI[1]~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "hbc_rwds_IN_HI[1]~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_rwds_IN_LO[0]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_rwds_IN_LO[0]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_rwds_IN_LO[1]~GPIO~I[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "I[1]"
+  }
+  terminal {
+    cell: "hbc_rwds_IN_LO[1]~GPIO~I[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "hbc_rwds_OE[0]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds_OE[0]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_rwds_OE[1]~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds_OE[1]~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "hbc_rwds_OUT_HI[0]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds_OUT_HI[0]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_rwds_OUT_HI[1]~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds_OUT_HI[1]~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "hbc_rwds_OUT_LO[0]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds_OUT_LO[0]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[0]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "hbc_rwds_OUT_LO[1]~GPIO~O[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "hbc_rwds_OUT_LO[1]~GPIO~O[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "hbc_rwds[1]~GPIO"
+    port: "O[1]"
+  }
+}
+net {
+  name: "i_arstn"
+  type: PERIPHERY
+  terminal {
+    cell: "i_arstn"
+    port: "inpad"
+  }
+  terminal {
+    cell: "i_arstn~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "i_arstn~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "i_arstn~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "i_arstn~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_ck_CLKOUT_0~MIPI~SLOWCLKOUT"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "SLOWCLKOUT"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "SLOWCLK"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "SLOWCLK"
+  }
+  terminal {
+    cell: "i_cam_ck_CLKOUT_0~MIPI~SLOWCLKOUT"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_ck_LP_N_IN~MIPI~LP_N_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "LP_N_IN"
+  }
+  terminal {
+    cell: "i_cam_ck_LP_N_IN~MIPI~LP_N_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_ck_LP_P_IN~MIPI~LP_P_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "LP_P_IN"
+  }
+  terminal {
+    cell: "i_cam_ck_LP_P_IN~MIPI~LP_P_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_FIFO_EMPTY~MIPI~FIFO_EMPTY"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "FIFO_EMPTY"
+  }
+  terminal {
+    cell: "i_cam_d0_FIFO_EMPTY~MIPI~FIFO_EMPTY"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[0]~MIPI~HS_IN[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[0]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[0]~MIPI~HS_IN[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[1]~MIPI~HS_IN[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[1]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[1]~MIPI~HS_IN[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[2]~MIPI~HS_IN[2]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[2]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[2]~MIPI~HS_IN[2]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[3]~MIPI~HS_IN[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[3]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[3]~MIPI~HS_IN[3]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[4]~MIPI~HS_IN[4]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[4]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[4]~MIPI~HS_IN[4]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[5]~MIPI~HS_IN[5]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[5]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[5]~MIPI~HS_IN[5]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[6]~MIPI~HS_IN[6]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[6]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[6]~MIPI~HS_IN[6]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_HS_IN_0[7]~MIPI~HS_IN[7]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_IN[7]"
+  }
+  terminal {
+    cell: "i_cam_d0_HS_IN_0[7]~MIPI~HS_IN[7]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_LP_N_IN~MIPI~LP_N_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "LP_N_IN"
+  }
+  terminal {
+    cell: "i_cam_d0_LP_N_IN~MIPI~LP_N_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d0_LP_P_IN~MIPI~LP_P_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "LP_P_IN"
+  }
+  terminal {
+    cell: "i_cam_d0_LP_P_IN~MIPI~LP_P_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_FIFO_EMPTY~MIPI~FIFO_EMPTY"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "FIFO_EMPTY"
+  }
+  terminal {
+    cell: "i_cam_d1_FIFO_EMPTY~MIPI~FIFO_EMPTY"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[0]~MIPI~HS_IN[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[0]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[0]~MIPI~HS_IN[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[1]~MIPI~HS_IN[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[1]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[1]~MIPI~HS_IN[1]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[2]~MIPI~HS_IN[2]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[2]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[2]~MIPI~HS_IN[2]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[3]~MIPI~HS_IN[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[3]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[3]~MIPI~HS_IN[3]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[4]~MIPI~HS_IN[4]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[4]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[4]~MIPI~HS_IN[4]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[5]~MIPI~HS_IN[5]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[5]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[5]~MIPI~HS_IN[5]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[6]~MIPI~HS_IN[6]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[6]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[6]~MIPI~HS_IN[6]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_HS_IN_0[7]~MIPI~HS_IN[7]"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_IN[7]"
+  }
+  terminal {
+    cell: "i_cam_d1_HS_IN_0[7]~MIPI~HS_IN[7]"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_LP_N_IN~MIPI~LP_N_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "LP_N_IN"
+  }
+  terminal {
+    cell: "i_cam_d1_LP_N_IN~MIPI~LP_N_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_cam_d1_LP_P_IN~MIPI~LP_P_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "LP_P_IN"
+  }
+  terminal {
+    cell: "i_cam_d1_LP_P_IN~MIPI~LP_P_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_fb_clk~PLL~CLKOUT0"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "CLKOUT0"
+  }
+  terminal {
+    cell: "i_fb_clk~PLL~CLKOUT0"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_hbramClk90~PLL~CLKOUT1"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "CLKOUT1"
+  }
+  terminal {
+    cell: "i_hbramClk90~PLL~CLKOUT1"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_hbramClk_cal~PLL~CLKOUT2"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "CLKOUT2"
+  }
+  terminal {
+    cell: "i_hbramClk_cal~PLL~CLKOUT2"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_hbramClk_fb~PLL~CLKOUT0"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "CLKOUT0"
+  }
+  terminal {
+    cell: "i_hbramClk_fb~PLL~CLKOUT0"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_hbramClk_pll_locked~PLL~LOCKED"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "LOCKED"
+  }
+  terminal {
+    cell: "i_hbramClk_pll_locked~PLL~LOCKED"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_hbramClk~PLL~CLKOUT3"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "CLKOUT3"
+  }
+  terminal {
+    cell: "i_hbramClk~PLL~CLKOUT3"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_mipi_clk~PLL~CLKOUT0"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "CLKOUT0"
+  }
+  terminal {
+    cell: "i_mipi_clk~PLL~CLKOUT0"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_mipi_rx_pclk~PLL~CLKOUT3"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "CLKOUT3"
+  }
+  terminal {
+    cell: "i_mipi_rx_pclk~PLL~CLKOUT3"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_mipi_tx_pclk~PLL~CLKOUT3"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "CLKOUT3"
+  }
+  terminal {
+    cell: "i_mipi_tx_pclk~PLL~CLKOUT3"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_mipi_tx_pll_locked~PLL~LOCKED"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "LOCKED"
+  }
+  terminal {
+    cell: "i_mipi_tx_pll_locked~PLL~LOCKED"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_mipi_txc_sclk~PLL~CLKOUT1"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "CLKOUT1"
+  }
+  terminal {
+    cell: "i_mipi_txc_sclk~PLL~CLKOUT1"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_mipi_txd_sclk~PLL~CLKOUT2"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "CLKOUT2"
+  }
+  terminal {
+    cell: "i_mipi_txd_sclk~PLL~CLKOUT2"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_pll_locked~PLL~LOCKED"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "LOCKED"
+  }
+  terminal {
+    cell: "i_pll_locked~PLL~LOCKED"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_sysclk_div_2~PLL~CLKOUT2"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "CLKOUT2"
+  }
+  terminal {
+    cell: "i_sysclk_div_2~PLL~CLKOUT2"
+    port: "outpad"
+  }
+}
+net {
+  name: "i_systemClk~PLL~CLKOUT1"
+  type: PERIPHERY
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "CLKOUT1"
+  }
+  terminal {
+    cell: "i_systemClk~PLL~CLKOUT1"
+    port: "outpad"
+  }
+}
+net {
+  name: "io_cam_scl_in"
+  type: PERIPHERY
+  terminal {
+    cell: "io_cam_scl"
+    port: "inpad"
+  }
+  terminal {
+    cell: "io_cam_scl~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "io_cam_scl_out"
+  type: PERIPHERY
+  terminal {
+    cell: "io_cam_scl~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "io_cam_scl"
+    port: "outpad"
+  }
+}
+net {
+  name: "io_cam_sda_in"
+  type: PERIPHERY
+  terminal {
+    cell: "io_cam_sda"
+    port: "inpad"
+  }
+  terminal {
+    cell: "io_cam_sda~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "io_cam_sda_out"
+  type: PERIPHERY
+  terminal {
+    cell: "io_cam_sda~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "io_cam_sda"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OE~MIPI~HS_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OE~MIPI~HS_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OE"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[0]~MIPI~HS_OUT[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[0]"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[1]~MIPI~HS_OUT[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[1]"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[2]~MIPI~HS_OUT[2]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[2]"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[3]~MIPI~HS_OUT[3]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[3]"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[4]~MIPI~HS_OUT[4]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[4]"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[5]~MIPI~HS_OUT[5]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[5]"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[6]~MIPI~HS_OUT[6]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[6]"
+  }
+}
+net {
+  name: "mipi_dp_clk_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_HS_OUT[7]~MIPI~HS_OUT[7]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "HS_OUT[7]"
+  }
+}
+net {
+  name: "mipi_dp_clk_LP_N_OE~MIPI~LP_N_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_LP_N_OE~MIPI~LP_N_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "LP_N_OE"
+  }
+}
+net {
+  name: "mipi_dp_clk_LP_N_OUT~MIPI~LP_N_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_LP_N_OUT~MIPI~LP_N_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "LP_N_OUT"
+  }
+}
+net {
+  name: "mipi_dp_clk_LP_P_OE~MIPI~LP_P_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_LP_P_OE~MIPI~LP_P_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "LP_P_OE"
+  }
+}
+net {
+  name: "mipi_dp_clk_LP_P_OUT~MIPI~LP_P_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_LP_P_OUT~MIPI~LP_P_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "LP_P_OUT"
+  }
+}
+net {
+  name: "mipi_dp_clk_RST~MIPI~RST"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_RST~MIPI~RST"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "RST"
+  }
+}
+net {
+  name: "mipi_dp_clk_TXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_TXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "mipi_dp_clk_TXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk_TXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_clk_TXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk_TXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "mipi_dp_clk_TXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk_TXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_clk~MIPI~FASTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_txc_sclk~CLKOUT~218~270"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "FASTCLK"
+  }
+}
+net {
+  name: "mipi_dp_clk~MIPI~SLOWCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_txd_sclk~CLKOUT~218~274"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_clk~MIPI"
+    port: "SLOWCLK"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OE~MIPI~HS_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OE~MIPI~HS_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OE"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[0]~MIPI~HS_OUT[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[0]"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[1]~MIPI~HS_OUT[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[1]"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[2]~MIPI~HS_OUT[2]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[2]"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[3]~MIPI~HS_OUT[3]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[3]"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[4]~MIPI~HS_OUT[4]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[4]"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[5]~MIPI~HS_OUT[5]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[5]"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[6]~MIPI~HS_OUT[6]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[6]"
+  }
+}
+net {
+  name: "mipi_dp_data0_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_HS_OUT[7]~MIPI~HS_OUT[7]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "HS_OUT[7]"
+  }
+}
+net {
+  name: "mipi_dp_data0_LP_N_IN~MIPI~LP_N_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "LP_N_IN"
+  }
+  terminal {
+    cell: "mipi_dp_data0_LP_N_IN~MIPI~LP_N_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data0_LP_N_OE~MIPI~LP_N_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_LP_N_OE~MIPI~LP_N_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "LP_N_OE"
+  }
+}
+net {
+  name: "mipi_dp_data0_LP_N_OUT~MIPI~LP_N_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_LP_N_OUT~MIPI~LP_N_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "LP_N_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data0_LP_P_IN~MIPI~LP_P_IN"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "LP_P_IN"
+  }
+  terminal {
+    cell: "mipi_dp_data0_LP_P_IN~MIPI~LP_P_IN"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data0_LP_P_OE~MIPI~LP_P_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_LP_P_OE~MIPI~LP_P_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "LP_P_OE"
+  }
+}
+net {
+  name: "mipi_dp_data0_LP_P_OUT~MIPI~LP_P_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_LP_P_OUT~MIPI~LP_P_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "LP_P_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data0_RST~MIPI~RST"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_RST~MIPI~RST"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "RST"
+  }
+}
+net {
+  name: "mipi_dp_data0_TXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_TXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data0_TXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0_TXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data0_TXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0_TXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data0_TXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0_TXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data0~MIPI~FASTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_txd_sclk~CLKOUT~218~296"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "FASTCLK"
+  }
+}
+net {
+  name: "mipi_dp_data0~MIPI~SLOWCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_tx_pclk~CLKOUT~218~300"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data0~MIPI"
+    port: "SLOWCLK"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OE~MIPI~HS_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OE~MIPI~HS_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OE"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[0]~MIPI~HS_OUT[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[0]"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[1]~MIPI~HS_OUT[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[1]"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[2]~MIPI~HS_OUT[2]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[2]"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[3]~MIPI~HS_OUT[3]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[3]"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[4]~MIPI~HS_OUT[4]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[4]"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[5]~MIPI~HS_OUT[5]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[5]"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[6]~MIPI~HS_OUT[6]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[6]"
+  }
+}
+net {
+  name: "mipi_dp_data1_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_HS_OUT[7]~MIPI~HS_OUT[7]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "HS_OUT[7]"
+  }
+}
+net {
+  name: "mipi_dp_data1_LP_N_OE~MIPI~LP_N_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_LP_N_OE~MIPI~LP_N_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "LP_N_OE"
+  }
+}
+net {
+  name: "mipi_dp_data1_LP_N_OUT~MIPI~LP_N_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_LP_N_OUT~MIPI~LP_N_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "LP_N_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data1_LP_P_OE~MIPI~LP_P_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_LP_P_OE~MIPI~LP_P_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "LP_P_OE"
+  }
+}
+net {
+  name: "mipi_dp_data1_LP_P_OUT~MIPI~LP_P_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_LP_P_OUT~MIPI~LP_P_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "LP_P_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data1_RST~MIPI~RST"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_RST~MIPI~RST"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "RST"
+  }
+}
+net {
+  name: "mipi_dp_data1_TXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_TXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data1_TXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1_TXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data1_TXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1_TXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data1_TXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1_TXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data1~MIPI~FASTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_txd_sclk~CLKOUT~218~280"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "FASTCLK"
+  }
+}
+net {
+  name: "mipi_dp_data1~MIPI~SLOWCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_tx_pclk~CLKOUT~218~286"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data1~MIPI"
+    port: "SLOWCLK"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OE~MIPI~HS_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OE~MIPI~HS_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OE"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[0]~MIPI~HS_OUT[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[0]"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[1]~MIPI~HS_OUT[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[1]"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[2]~MIPI~HS_OUT[2]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[2]"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[3]~MIPI~HS_OUT[3]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[3]"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[4]~MIPI~HS_OUT[4]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[4]"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[5]~MIPI~HS_OUT[5]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[5]"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[6]~MIPI~HS_OUT[6]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[6]"
+  }
+}
+net {
+  name: "mipi_dp_data2_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_HS_OUT[7]~MIPI~HS_OUT[7]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "HS_OUT[7]"
+  }
+}
+net {
+  name: "mipi_dp_data2_LP_N_OE~MIPI~LP_N_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_LP_N_OE~MIPI~LP_N_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "LP_N_OE"
+  }
+}
+net {
+  name: "mipi_dp_data2_LP_N_OUT~MIPI~LP_N_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_LP_N_OUT~MIPI~LP_N_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "LP_N_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data2_LP_P_OE~MIPI~LP_P_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_LP_P_OE~MIPI~LP_P_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "LP_P_OE"
+  }
+}
+net {
+  name: "mipi_dp_data2_LP_P_OUT~MIPI~LP_P_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_LP_P_OUT~MIPI~LP_P_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "LP_P_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data2_RST~MIPI~RST"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_RST~MIPI~RST"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "RST"
+  }
+}
+net {
+  name: "mipi_dp_data2_TXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_TXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data2_TXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2_TXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data2_TXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2_TXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data2_TXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2_TXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data2~MIPI~FASTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_txd_sclk~CLKOUT~218~257"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "FASTCLK"
+  }
+}
+net {
+  name: "mipi_dp_data2~MIPI~SLOWCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_tx_pclk~CLKOUT~218~261"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data2~MIPI"
+    port: "SLOWCLK"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OE~MIPI~HS_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OE~MIPI~HS_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OE"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[0]~MIPI~HS_OUT[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[0]~MIPI~HS_OUT[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[0]"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[1]~MIPI~HS_OUT[1]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[1]~MIPI~HS_OUT[1]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[1]"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[2]~MIPI~HS_OUT[2]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[2]~MIPI~HS_OUT[2]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[2]"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[3]~MIPI~HS_OUT[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[3]~MIPI~HS_OUT[3]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[3]"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[4]~MIPI~HS_OUT[4]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[4]~MIPI~HS_OUT[4]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[4]"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[5]~MIPI~HS_OUT[5]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[5]~MIPI~HS_OUT[5]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[5]"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[6]~MIPI~HS_OUT[6]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[6]~MIPI~HS_OUT[6]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[6]"
+  }
+}
+net {
+  name: "mipi_dp_data3_HS_OUT[7]~MIPI~HS_OUT[7]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_HS_OUT[7]~MIPI~HS_OUT[7]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "HS_OUT[7]"
+  }
+}
+net {
+  name: "mipi_dp_data3_LP_N_OE~MIPI~LP_N_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_LP_N_OE~MIPI~LP_N_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "LP_N_OE"
+  }
+}
+net {
+  name: "mipi_dp_data3_LP_N_OUT~MIPI~LP_N_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_LP_N_OUT~MIPI~LP_N_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "LP_N_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data3_LP_P_OE~MIPI~LP_P_OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_LP_P_OE~MIPI~LP_P_OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "LP_P_OE"
+  }
+}
+net {
+  name: "mipi_dp_data3_LP_P_OUT~MIPI~LP_P_OUT"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_LP_P_OUT~MIPI~LP_P_OUT"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "LP_P_OUT"
+  }
+}
+net {
+  name: "mipi_dp_data3_RST~MIPI~RST"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_RST~MIPI~RST"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "RST"
+  }
+}
+net {
+  name: "mipi_dp_data3_TXN_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_TXN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "N_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data3_TXN_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "N_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3_TXN"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data3_TXP_in"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3_TXP"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "P_inpad"
+  }
+}
+net {
+  name: "mipi_dp_data3_TXP_out"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "P_outpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3_TXP"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_dp_data3~MIPI~FASTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_txd_sclk~CLKOUT~218~247"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "FASTCLK"
+  }
+}
+net {
+  name: "mipi_dp_data3~MIPI~SLOWCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_tx_pclk~CLKOUT~218~251"
+    port: "inpad"
+  }
+  terminal {
+    cell: "mipi_dp_data3~MIPI"
+    port: "SLOWCLK"
+  }
+}
+net {
+  name: "mipi_i2c_0_io_scl_read~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "io_cam_scl~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "mipi_i2c_0_io_scl_read~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_i2c_0_io_scl_writeEnable~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_i2c_0_io_scl_writeEnable~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "io_cam_scl~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "mipi_i2c_0_io_scl_write~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_i2c_0_io_scl_write~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "io_cam_scl~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "mipi_i2c_0_io_sda_read~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "io_cam_sda~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "mipi_i2c_0_io_sda_read~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "mipi_i2c_0_io_sda_writeEnable~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_i2c_0_io_sda_writeEnable~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "io_cam_sda~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "mipi_i2c_0_io_sda_write~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "mipi_i2c_0_io_sda_write~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "io_cam_sda~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "o_cam_ck_HS_ENA~MIPI~HS_ENA"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_ck_HS_ENA~MIPI~HS_ENA"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "HS_ENA"
+  }
+}
+net {
+  name: "o_cam_ck_HS_TERM~MIPI~HS_TERM"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_ck_HS_TERM~MIPI~HS_TERM"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_ck~MIPI"
+    port: "HS_TERM"
+  }
+}
+net {
+  name: "o_cam_d0_FIFO_RD~MIPI~FIFO_RD"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d0_FIFO_RD~MIPI~FIFO_RD"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "FIFO_RD"
+  }
+}
+net {
+  name: "o_cam_d0_HS_ENA~MIPI~HS_ENA"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d0_HS_ENA~MIPI~HS_ENA"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_ENA"
+  }
+}
+net {
+  name: "o_cam_d0_HS_TERM~MIPI~HS_TERM"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d0_HS_TERM~MIPI~HS_TERM"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "HS_TERM"
+  }
+}
+net {
+  name: "o_cam_d0_RST~MIPI~RST"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d0_RST~MIPI~RST"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d0~MIPI"
+    port: "RST"
+  }
+}
+net {
+  name: "o_cam_d1_FIFO_RD~MIPI~FIFO_RD"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d1_FIFO_RD~MIPI~FIFO_RD"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "FIFO_RD"
+  }
+}
+net {
+  name: "o_cam_d1_HS_ENA~MIPI~HS_ENA"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d1_HS_ENA~MIPI~HS_ENA"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_ENA"
+  }
+}
+net {
+  name: "o_cam_d1_HS_TERM~MIPI~HS_TERM"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d1_HS_TERM~MIPI~HS_TERM"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "HS_TERM"
+  }
+}
+net {
+  name: "o_cam_d1_RST~MIPI~RST"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_d1_RST~MIPI~RST"
+    port: "inpad"
+  }
+  terminal {
+    cell: "cam_d1~MIPI"
+    port: "RST"
+  }
+}
+net {
+  name: "o_cam_rstn"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_rstn~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "o_cam_rstn"
+    port: "outpad"
+  }
+}
+net {
+  name: "o_cam_rstn~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "o_cam_rstn~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "o_cam_rstn~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "o_hbramClk_pll_rstn~PLL~RSTN"
+  type: PERIPHERY
+  terminal {
+    cell: "o_hbramClk_pll_rstn~PLL~RSTN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "RSTN"
+  }
+}
+net {
+  name: "o_lcd_rstn"
+  type: PERIPHERY
+  terminal {
+    cell: "o_lcd_rstn~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "o_lcd_rstn"
+    port: "outpad"
+  }
+}
+net {
+  name: "o_lcd_rstn~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "o_lcd_rstn~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "o_lcd_rstn~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "o_led"
+  type: PERIPHERY
+  terminal {
+    cell: "o_led~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "o_led"
+    port: "outpad"
+  }
+}
+net {
+  name: "o_led~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "o_led~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "o_led~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "o_mipi_pll_rstn~PLL~RSTN"
+  type: PERIPHERY
+  terminal {
+    cell: "o_mipi_pll_rstn~PLL~RSTN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "RSTN"
+  }
+}
+net {
+  name: "o_pll_rstn~PLL~RSTN"
+  type: PERIPHERY
+  terminal {
+    cell: "o_pll_rstn~PLL~RSTN"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "RSTN"
+  }
+}
+net {
+  name: "pll_inst1~PLL~FBK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_fb_clk~CLKOUT~1~304"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "FBK"
+  }
+}
+net {
+  name: "pll_inst2~PLL~CLKIN[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "i_fb_clk~CLKOUT~202~1"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "CLKIN[3]"
+  }
+}
+net {
+  name: "pll_inst2~PLL~FBK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_clk~CLKOUT~203~1"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst2~PLL"
+    port: "FBK"
+  }
+}
+net {
+  name: "pll_inst3~PLL~CLKIN[3]"
+  type: PERIPHERY
+  terminal {
+    cell: "i_fb_clk~CLKOUT~18~1"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "CLKIN[3]"
+  }
+}
+net {
+  name: "pll_inst3~PLL~FBK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_hbramClk_fb~CLKOUT~19~1"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pll_inst3~PLL"
+    port: "FBK"
+  }
+}
+net {
+  name: "pllin"
+  type: PERIPHERY
+  terminal {
+    cell: "pllin"
+    port: "inpad"
+  }
+  terminal {
+    cell: "pllin~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "pllin~GPIO~ALT"
+  type: PERIPHERY
+  terminal {
+    cell: "pllin~GPIO"
+    port: "ALT"
+  }
+  terminal {
+    cell: "pll_inst1~PLL"
+    port: "CLKIN[0]"
+  }
+}
+net {
+  name: "sw1"
+  type: PERIPHERY
+  terminal {
+    cell: "sw1"
+    port: "inpad"
+  }
+  terminal {
+    cell: "sw1~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "sw1~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "sw1~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "sw1~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "sw6"
+  type: PERIPHERY
+  terminal {
+    cell: "sw6"
+    port: "inpad"
+  }
+  terminal {
+    cell: "sw6~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "sw6~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "sw6~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "sw6~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "sw7"
+  type: PERIPHERY
+  terminal {
+    cell: "sw7"
+    port: "inpad"
+  }
+  terminal {
+    cell: "sw7~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "sw7~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "sw7~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "sw7~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_spi_0_io_data_0_in"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_0"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_0~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "system_spi_0_io_data_0_out"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_0~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_0"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_spi_0_io_data_0_read~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_0~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_0_read~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_spi_0_io_data_0_writeEnable~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_0_writeEnable~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_0~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "system_spi_0_io_data_0_write~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_0_write~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_0~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "system_spi_0_io_data_0~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_rx_pclk~CLKOUT~1~59"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_0~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "system_spi_0_io_data_0~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_rx_pclk~CLKOUT~1~61"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_0~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "system_spi_0_io_data_1_in"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_1"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_1~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "system_spi_0_io_data_1_out"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_1~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_1"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_spi_0_io_data_1_read~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_1~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_1_read~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_spi_0_io_data_1_writeEnable~GPIO~OE"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_1_writeEnable~GPIO~OE"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_1~GPIO"
+    port: "OE"
+  }
+}
+net {
+  name: "system_spi_0_io_data_1_write~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_data_1_write~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_1~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "system_spi_0_io_data_1~GPIO~INCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_rx_pclk~CLKOUT~1~60"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_1~GPIO"
+    port: "INCLK"
+  }
+}
+net {
+  name: "system_spi_0_io_data_1~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_rx_pclk~CLKOUT~1~62"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_data_1~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "system_spi_0_io_sclk_write"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_sclk_write~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_sclk_write"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_spi_0_io_sclk_write~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_rx_pclk~CLKOUT~1~31"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_sclk_write~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "system_spi_0_io_sclk_write~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_sclk_write~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_sclk_write~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "system_spi_0_io_ss"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_ss~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_ss"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_spi_0_io_ss~GPIO~OUTCLK"
+  type: PERIPHERY
+  terminal {
+    cell: "i_mipi_rx_pclk~CLKOUT~1~30"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_ss~GPIO"
+    port: "OUTCLK"
+  }
+}
+net {
+  name: "system_spi_0_io_ss~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_spi_0_io_ss~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_spi_0_io_ss~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "system_uart_0_io_rxd"
+  type: PERIPHERY
+  terminal {
+    cell: "system_uart_0_io_rxd"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_uart_0_io_rxd~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "system_uart_0_io_rxd~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_uart_0_io_rxd~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "system_uart_0_io_rxd~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_uart_0_io_txd"
+  type: PERIPHERY
+  terminal {
+    cell: "system_uart_0_io_txd~GPIO"
+    port: "IO_outpad"
+  }
+  terminal {
+    cell: "system_uart_0_io_txd"
+    port: "outpad"
+  }
+}
+net {
+  name: "system_uart_0_io_txd~GPIO~O[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "system_uart_0_io_txd~GPIO~O[0]"
+    port: "inpad"
+  }
+  terminal {
+    cell: "system_uart_0_io_txd~GPIO"
+    port: "O[0]"
+  }
+}
+net {
+  name: "user_dip0"
+  type: PERIPHERY
+  terminal {
+    cell: "user_dip0"
+    port: "inpad"
+  }
+  terminal {
+    cell: "user_dip0~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "user_dip0~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "user_dip0~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "user_dip0~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+net {
+  name: "user_dip1"
+  type: PERIPHERY
+  terminal {
+    cell: "user_dip1"
+    port: "inpad"
+  }
+  terminal {
+    cell: "user_dip1~GPIO"
+    port: "IO_inpad"
+  }
+}
+net {
+  name: "user_dip1~GPIO~I[0]"
+  type: PERIPHERY
+  terminal {
+    cell: "user_dip1~GPIO"
+    port: "I[0]"
+  }
+  terminal {
+    cell: "user_dip1~GPIO~I[0]"
+    port: "outpad"
+  }
+}
+cell_annotations {
+  string_annotation {
+    name: "PT.MutatedCellOrigName"
+    sparse: false
+    default_value: ""
+    ids: 7
+    ids: 9
+    ids: 10
+    ids: 12
+    ids: 13
+    ids: 15
+    ids: 32
+    ids: 33
+    ids: 34
+    ids: 35
+    ids: 36
+    ids: 37
+    ids: 38
+    ids: 39
+    ids: 40
+    ids: 41
+    ids: 42
+    ids: 43
+    ids: 44
+    ids: 45
+    ids: 46
+    ids: 47
+    ids: 48
+    ids: 49
+    ids: 50
+    ids: 51
+    ids: 52
+    ids: 53
+    ids: 54
+    ids: 55
+    ids: 56
+    ids: 57
+    ids: 58
+    ids: 59
+    ids: 60
+    ids: 61
+    ids: 62
+    ids: 63
+    ids: 64
+    ids: 65
+    ids: 66
+    ids: 67
+    ids: 68
+    ids: 69
+    ids: 70
+    ids: 71
+    ids: 72
+    ids: 73
+    ids: 74
+    ids: 75
+    ids: 76
+    ids: 77
+    ids: 78
+    ids: 79
+    ids: 80
+    ids: 81
+    ids: 82
+    ids: 83
+    ids: 84
+    ids: 85
+    ids: 86
+    ids: 87
+    ids: 88
+    ids: 89
+    ids: 90
+    ids: 91
+    ids: 92
+    ids: 93
+    ids: 94
+    ids: 95
+    ids: 96
+    ids: 97
+    ids: 98
+    ids: 99
+    ids: 100
+    ids: 101
+    ids: 102
+    ids: 103
+    ids: 104
+    ids: 105
+    ids: 106
+    ids: 107
+    ids: 108
+    ids: 109
+    ids: 110
+    ids: 111
+    ids: 113
+    ids: 116
+    ids: 117
+    ids: 118
+    ids: 119
+    ids: 120
+    ids: 121
+    ids: 122
+    ids: 123
+    ids: 124
+    ids: 125
+    ids: 127
+    ids: 130
+    ids: 131
+    ids: 132
+    ids: 133
+    ids: 134
+    ids: 135
+    ids: 136
+    ids: 137
+    ids: 138
+    ids: 139
+    ids: 140
+    ids: 141
+    ids: 142
+    ids: 143
+    ids: 144
+    ids: 145
+    ids: 146
+    ids: 147
+    ids: 148
+    ids: 149
+    ids: 150
+    ids: 151
+    ids: 152
+    ids: 153
+    ids: 154
+    ids: 158
+    ids: 161
+    ids: 180
+    ids: 182
+    ids: 183
+    ids: 204
+    ids: 206
+    ids: 213
+    ids: 218
+    ids: 219
+    ids: 221
+    ids: 227
+    ids: 228
+    ids: 229
+    ids: 230
+    ids: 233
+    ids: 234
+    ids: 235
+    ids: 236
+    ids: 237
+    ids: 238
+    ids: 239
+    ids: 240
+    ids: 241
+    ids: 242
+    ids: 243
+    ids: 244
+    ids: 245
+    ids: 246
+    ids: 249
+    ids: 250
+    ids: 251
+    ids: 252
+    ids: 253
+    ids: 254
+    ids: 255
+    ids: 256
+    ids: 257
+    ids: 258
+    ids: 259
+    ids: 260
+    ids: 261
+    ids: 262
+    ids: 263
+    ids: 264
+    ids: 267
+    ids: 268
+    ids: 269
+    ids: 270
+    ids: 271
+    ids: 272
+    ids: 273
+    ids: 274
+    ids: 275
+    ids: 276
+    ids: 277
+    ids: 278
+    ids: 279
+    ids: 280
+    ids: 283
+    ids: 284
+    ids: 285
+    ids: 286
+    ids: 287
+    ids: 288
+    ids: 289
+    ids: 290
+    ids: 291
+    ids: 292
+    ids: 293
+    ids: 294
+    ids: 295
+    ids: 296
+    ids: 299
+    ids: 300
+    ids: 301
+    ids: 302
+    ids: 303
+    ids: 304
+    ids: 305
+    ids: 306
+    ids: 307
+    ids: 308
+    ids: 309
+    ids: 310
+    ids: 311
+    ids: 312
+    ids: 315
+    ids: 316
+    ids: 317
+    ids: 318
+    ids: 319
+    ids: 320
+    ids: 321
+    ids: 322
+    ids: 323
+    ids: 324
+    ids: 325
+    ids: 326
+    ids: 327
+    ids: 328
+    ids: 329
+    ids: 330
+    ids: 332
+    ids: 333
+    ids: 335
+    ids: 337
+    ids: 338
+    ids: 339
+    ids: 342
+    ids: 344
+    ids: 346
+    ids: 348
+    ids: 349
+    ids: 350
+    ids: 352
+    ids: 353
+    ids: 354
+    ids: 356
+    ids: 358
+    ids: 360
+    ids: 362
+    ids: 364
+    ids: 366
+    values: "hbc_cal_pass"
+    values: "hbc_ck_n_HI"
+    values: "hbc_ck_n_LO"
+    values: "hbc_ck_p_HI"
+    values: "hbc_ck_p_LO"
+    values: "hbc_cs_n"
+    values: "hbc_dq_IN_HI[0]"
+    values: "hbc_dq_IN_HI[10]"
+    values: "hbc_dq_IN_HI[11]"
+    values: "hbc_dq_IN_HI[12]"
+    values: "hbc_dq_IN_HI[13]"
+    values: "hbc_dq_IN_HI[14]"
+    values: "hbc_dq_IN_HI[15]"
+    values: "hbc_dq_IN_HI[1]"
+    values: "hbc_dq_IN_HI[2]"
+    values: "hbc_dq_IN_HI[3]"
+    values: "hbc_dq_IN_HI[4]"
+    values: "hbc_dq_IN_HI[5]"
+    values: "hbc_dq_IN_HI[6]"
+    values: "hbc_dq_IN_HI[7]"
+    values: "hbc_dq_IN_HI[8]"
+    values: "hbc_dq_IN_HI[9]"
+    values: "hbc_dq_IN_LO[0]"
+    values: "hbc_dq_IN_LO[10]"
+    values: "hbc_dq_IN_LO[11]"
+    values: "hbc_dq_IN_LO[12]"
+    values: "hbc_dq_IN_LO[13]"
+    values: "hbc_dq_IN_LO[14]"
+    values: "hbc_dq_IN_LO[15]"
+    values: "hbc_dq_IN_LO[1]"
+    values: "hbc_dq_IN_LO[2]"
+    values: "hbc_dq_IN_LO[3]"
+    values: "hbc_dq_IN_LO[4]"
+    values: "hbc_dq_IN_LO[5]"
+    values: "hbc_dq_IN_LO[6]"
+    values: "hbc_dq_IN_LO[7]"
+    values: "hbc_dq_IN_LO[8]"
+    values: "hbc_dq_IN_LO[9]"
+    values: "hbc_dq_OE[0]"
+    values: "hbc_dq_OE[10]"
+    values: "hbc_dq_OE[11]"
+    values: "hbc_dq_OE[12]"
+    values: "hbc_dq_OE[13]"
+    values: "hbc_dq_OE[14]"
+    values: "hbc_dq_OE[15]"
+    values: "hbc_dq_OE[1]"
+    values: "hbc_dq_OE[2]"
+    values: "hbc_dq_OE[3]"
+    values: "hbc_dq_OE[4]"
+    values: "hbc_dq_OE[5]"
+    values: "hbc_dq_OE[6]"
+    values: "hbc_dq_OE[7]"
+    values: "hbc_dq_OE[8]"
+    values: "hbc_dq_OE[9]"
+    values: "hbc_dq_OUT_HI[0]"
+    values: "hbc_dq_OUT_HI[10]"
+    values: "hbc_dq_OUT_HI[11]"
+    values: "hbc_dq_OUT_HI[12]"
+    values: "hbc_dq_OUT_HI[13]"
+    values: "hbc_dq_OUT_HI[14]"
+    values: "hbc_dq_OUT_HI[15]"
+    values: "hbc_dq_OUT_HI[1]"
+    values: "hbc_dq_OUT_HI[2]"
+    values: "hbc_dq_OUT_HI[3]"
+    values: "hbc_dq_OUT_HI[4]"
+    values: "hbc_dq_OUT_HI[5]"
+    values: "hbc_dq_OUT_HI[6]"
+    values: "hbc_dq_OUT_HI[7]"
+    values: "hbc_dq_OUT_HI[8]"
+    values: "hbc_dq_OUT_HI[9]"
+    values: "hbc_dq_OUT_LO[0]"
+    values: "hbc_dq_OUT_LO[10]"
+    values: "hbc_dq_OUT_LO[11]"
+    values: "hbc_dq_OUT_LO[12]"
+    values: "hbc_dq_OUT_LO[13]"
+    values: "hbc_dq_OUT_LO[14]"
+    values: "hbc_dq_OUT_LO[15]"
+    values: "hbc_dq_OUT_LO[1]"
+    values: "hbc_dq_OUT_LO[2]"
+    values: "hbc_dq_OUT_LO[3]"
+    values: "hbc_dq_OUT_LO[4]"
+    values: "hbc_dq_OUT_LO[5]"
+    values: "hbc_dq_OUT_LO[6]"
+    values: "hbc_dq_OUT_LO[7]"
+    values: "hbc_dq_OUT_LO[8]"
+    values: "hbc_dq_OUT_LO[9]"
+    values: "hbc_rst_n"
+    values: "hbc_rwds_IN_HI[0]"
+    values: "hbc_rwds_IN_HI[1]"
+    values: "hbc_rwds_IN_LO[0]"
+    values: "hbc_rwds_IN_LO[1]"
+    values: "hbc_rwds_OE[0]"
+    values: "hbc_rwds_OE[1]"
+    values: "hbc_rwds_OUT_HI[0]"
+    values: "hbc_rwds_OUT_HI[1]"
+    values: "hbc_rwds_OUT_LO[0]"
+    values: "hbc_rwds_OUT_LO[1]"
+    values: "i_arstn"
+    values: "i_cam_ck_CLKOUT_0"
+    values: "i_cam_ck_LP_N_IN"
+    values: "i_cam_ck_LP_P_IN"
+    values: "i_cam_d0_FIFO_EMPTY"
+    values: "i_cam_d0_HS_IN_0[0]"
+    values: "i_cam_d0_HS_IN_0[1]"
+    values: "i_cam_d0_HS_IN_0[2]"
+    values: "i_cam_d0_HS_IN_0[3]"
+    values: "i_cam_d0_HS_IN_0[4]"
+    values: "i_cam_d0_HS_IN_0[5]"
+    values: "i_cam_d0_HS_IN_0[6]"
+    values: "i_cam_d0_HS_IN_0[7]"
+    values: "i_cam_d0_LP_N_IN"
+    values: "i_cam_d0_LP_P_IN"
+    values: "i_cam_d1_FIFO_EMPTY"
+    values: "i_cam_d1_HS_IN_0[0]"
+    values: "i_cam_d1_HS_IN_0[1]"
+    values: "i_cam_d1_HS_IN_0[2]"
+    values: "i_cam_d1_HS_IN_0[3]"
+    values: "i_cam_d1_HS_IN_0[4]"
+    values: "i_cam_d1_HS_IN_0[5]"
+    values: "i_cam_d1_HS_IN_0[6]"
+    values: "i_cam_d1_HS_IN_0[7]"
+    values: "i_cam_d1_LP_N_IN"
+    values: "i_cam_d1_LP_P_IN"
+    values: "i_fb_clk"
+    values: "i_hbramClk90"
+    values: "i_hbramClk_cal"
+    values: "i_hbramClk_fb"
+    values: "i_hbramClk_pll_locked"
+    values: "i_hbramClk"
+    values: "i_mipi_clk"
+    values: "i_mipi_rx_pclk"
+    values: "i_mipi_tx_pclk"
+    values: "i_mipi_tx_pll_locked"
+    values: "i_mipi_txc_sclk"
+    values: "i_mipi_txd_sclk"
+    values: "i_pll_locked"
+    values: "i_sysclk_div_2"
+    values: "i_systemClk"
+    values: "mipi_dp_clk_HS_OE"
+    values: "mipi_dp_clk_HS_OUT[0]"
+    values: "mipi_dp_clk_HS_OUT[1]"
+    values: "mipi_dp_clk_HS_OUT[2]"
+    values: "mipi_dp_clk_HS_OUT[3]"
+    values: "mipi_dp_clk_HS_OUT[4]"
+    values: "mipi_dp_clk_HS_OUT[5]"
+    values: "mipi_dp_clk_HS_OUT[6]"
+    values: "mipi_dp_clk_HS_OUT[7]"
+    values: "mipi_dp_clk_LP_N_OE"
+    values: "mipi_dp_clk_LP_N_OUT"
+    values: "mipi_dp_clk_LP_P_OE"
+    values: "mipi_dp_clk_LP_P_OUT"
+    values: "mipi_dp_clk_RST"
+    values: "mipi_dp_data0_HS_OE"
+    values: "mipi_dp_data0_HS_OUT[0]"
+    values: "mipi_dp_data0_HS_OUT[1]"
+    values: "mipi_dp_data0_HS_OUT[2]"
+    values: "mipi_dp_data0_HS_OUT[3]"
+    values: "mipi_dp_data0_HS_OUT[4]"
+    values: "mipi_dp_data0_HS_OUT[5]"
+    values: "mipi_dp_data0_HS_OUT[6]"
+    values: "mipi_dp_data0_HS_OUT[7]"
+    values: "mipi_dp_data0_LP_N_IN"
+    values: "mipi_dp_data0_LP_N_OE"
+    values: "mipi_dp_data0_LP_N_OUT"
+    values: "mipi_dp_data0_LP_P_IN"
+    values: "mipi_dp_data0_LP_P_OE"
+    values: "mipi_dp_data0_LP_P_OUT"
+    values: "mipi_dp_data0_RST"
+    values: "mipi_dp_data1_HS_OE"
+    values: "mipi_dp_data1_HS_OUT[0]"
+    values: "mipi_dp_data1_HS_OUT[1]"
+    values: "mipi_dp_data1_HS_OUT[2]"
+    values: "mipi_dp_data1_HS_OUT[3]"
+    values: "mipi_dp_data1_HS_OUT[4]"
+    values: "mipi_dp_data1_HS_OUT[5]"
+    values: "mipi_dp_data1_HS_OUT[6]"
+    values: "mipi_dp_data1_HS_OUT[7]"
+    values: "mipi_dp_data1_LP_N_OE"
+    values: "mipi_dp_data1_LP_N_OUT"
+    values: "mipi_dp_data1_LP_P_OE"
+    values: "mipi_dp_data1_LP_P_OUT"
+    values: "mipi_dp_data1_RST"
+    values: "mipi_dp_data2_HS_OE"
+    values: "mipi_dp_data2_HS_OUT[0]"
+    values: "mipi_dp_data2_HS_OUT[1]"
+    values: "mipi_dp_data2_HS_OUT[2]"
+    values: "mipi_dp_data2_HS_OUT[3]"
+    values: "mipi_dp_data2_HS_OUT[4]"
+    values: "mipi_dp_data2_HS_OUT[5]"
+    values: "mipi_dp_data2_HS_OUT[6]"
+    values: "mipi_dp_data2_HS_OUT[7]"
+    values: "mipi_dp_data2_LP_N_OE"
+    values: "mipi_dp_data2_LP_N_OUT"
+    values: "mipi_dp_data2_LP_P_OE"
+    values: "mipi_dp_data2_LP_P_OUT"
+    values: "mipi_dp_data2_RST"
+    values: "mipi_dp_data3_HS_OE"
+    values: "mipi_dp_data3_HS_OUT[0]"
+    values: "mipi_dp_data3_HS_OUT[1]"
+    values: "mipi_dp_data3_HS_OUT[2]"
+    values: "mipi_dp_data3_HS_OUT[3]"
+    values: "mipi_dp_data3_HS_OUT[4]"
+    values: "mipi_dp_data3_HS_OUT[5]"
+    values: "mipi_dp_data3_HS_OUT[6]"
+    values: "mipi_dp_data3_HS_OUT[7]"
+    values: "mipi_dp_data3_LP_N_OE"
+    values: "mipi_dp_data3_LP_N_OUT"
+    values: "mipi_dp_data3_LP_P_OE"
+    values: "mipi_dp_data3_LP_P_OUT"
+    values: "mipi_dp_data3_RST"
+    values: "mipi_i2c_0_io_scl_read"
+    values: "mipi_i2c_0_io_scl_writeEnable"
+    values: "mipi_i2c_0_io_scl_write"
+    values: "mipi_i2c_0_io_sda_read"
+    values: "mipi_i2c_0_io_sda_writeEnable"
+    values: "mipi_i2c_0_io_sda_write"
+    values: "o_cam_ck_HS_ENA"
+    values: "o_cam_ck_HS_TERM"
+    values: "o_cam_d0_FIFO_RD"
+    values: "o_cam_d0_HS_ENA"
+    values: "o_cam_d0_HS_TERM"
+    values: "o_cam_d0_RST"
+    values: "o_cam_d1_FIFO_RD"
+    values: "o_cam_d1_HS_ENA"
+    values: "o_cam_d1_HS_TERM"
+    values: "o_cam_d1_RST"
+    values: "o_cam_rstn"
+    values: "o_hbramClk_pll_rstn"
+    values: "o_lcd_rstn"
+    values: "o_led"
+    values: "o_mipi_pll_rstn"
+    values: "o_pll_rstn"
+    values: "sw1"
+    values: "sw6"
+    values: "sw7"
+    values: "system_spi_0_io_data_0_read"
+    values: "system_spi_0_io_data_0_writeEnable"
+    values: "system_spi_0_io_data_0_write"
+    values: "system_spi_0_io_data_1_read"
+    values: "system_spi_0_io_data_1_writeEnable"
+    values: "system_spi_0_io_data_1_write"
+    values: "system_spi_0_io_sclk_write"
+    values: "system_spi_0_io_ss"
+    values: "system_uart_0_io_rxd"
+    values: "system_uart_0_io_txd"
+    values: "user_dip0"
+    values: "user_dip1"
+  }
+}

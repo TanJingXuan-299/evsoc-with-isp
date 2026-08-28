@@ -1,0 +1,169 @@
+11:37:31 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+11:37:32 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       18592 B       124 KB     14.64%
+11:37:46 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:27:25 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:28:17 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:29:40 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+11:29:40 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       18592 B       124 KB     14.64%
+11:29:54 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:32:33 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:33:51 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:37:00 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:40:45 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:05:04 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+15:05:05 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       18592 B       124 KB     14.64%
+15:05:19 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:08:19 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+15:08:19 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       18592 B       124 KB     14.64%
+15:08:29 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:09:39 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+15:09:39 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       18592 B       124 KB     14.64%
+15:09:50 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+09:50:25 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+09:50:26 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       18592 B       124 KB     14.64%
+09:50:58 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+09:56:46 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+10:18:36 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+10:35:28 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:32:39 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+11:32:40 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       18592 B       124 KB     14.64%
+11:33:06 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:39:29 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+11:41:54 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+13:30:20 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.

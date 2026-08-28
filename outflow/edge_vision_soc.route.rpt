@@ -1,0 +1,40 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2026.1.132.1.15 
+Date: Thu Aug 27 13:28:12 2026
+
+Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+ 
+Family: Titanium 
+Device: Ti60F225
+Top-level Entity Name: edge_vision_soc
+Elapsed time for routing: 0 hours 0 minutes 59 seconds
+
+
+---------- GBUFCE Assignments (begin) ----------
+
+
++-------------------+----------+----------+
+|     Clock Net     | GBUFCE_X | GBUFCE_Y |
++-------------------+----------+----------+
+| i_cam_ck_CLKOUT_0 |   218    |   163    |
+|     i_fb_clk      |    1     |   162    |
+|    i_hbramClk     |   107    |    1     |
+|   i_hbramClk90    |   112    |    1     |
+|  i_hbramClk_cal   |   108    |    1     |
+|   i_hbramClk_fb   |   109    |    1     |
+|    i_mipi_clk     |   110    |    1     |
+|  i_mipi_rx_pclk   |    1     |   164    |
+|  i_mipi_tx_pclk   |   218    |   159    |
+|  i_mipi_txc_sclk  |   218    |   164    |
+|  i_mipi_txd_sclk  |   218    |   160    |
+|  i_sysclk_div_2   |    1     |   163    |
+|    i_systemClk    |    1     |   159    |
+|  jtag_inst1_TCK   |   106    |    1     |
++-------------------+----------+----------+
+
+
+----------- GBUFCE Assignments (end) ----------
+
+
+Elapsed time for Latest PnR Run: 0 hours 4 minutes 44 seconds
