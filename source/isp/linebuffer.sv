@@ -121,12 +121,28 @@ module linebuffer
           end
         end
 
-        if (s_axis_tuser[0] == 1'b1) begin
-          // TUSER start frame
-          // reset number of lines to ignore
-          ignore_lines  <= CONV_SIZE[$clog2(CONV_SIZE)-1:0]-1;
-          output_enable <= '0;
-        end
+        // ------------------------------------------------------------------------
+        // FIX (Bug #2 - frame cadence mismatch): the original code below threw
+        // away the first CONV_SIZE-1 (4) lines of every frame after each tuser
+        // (SOF). Combined with the demosaic EOL flush (which shortens every
+        // 960-beat input line to 958 output beats) the ISP delivered only
+        // 1076 lines x 958 beats per frame, while the downstream crop /
+        // scale_down_2x_nn / DMA path in cam_picam_v2 requires exactly
+        // 1080 lines per frame (540 cropped beats x 1080 lines = 145,800 DMA
+        // beats per frame). The 4-line deficit permanently broke the DMA
+        // framing (rolling/tearing, firmware hangs waiting for the DMA).
+        //
+        // With the suppression removed, every input line produces one output
+        // line again. The first output lines of a frame simply use the tail
+        // of the previous frame as vertical context - the same behaviour as
+        // the original (working) cam_line_buffer + cam_raw_to_rgb design.
+        // ------------------------------------------------------------------------
+        // if (s_axis_tuser[0] == 1'b1) begin
+        //   // TUSER start frame
+        //   // reset number of lines to ignore
+        //   ignore_lines  <= CONV_SIZE[$clog2(CONV_SIZE)-1:0]-1;
+        //   output_enable <= '0;
+        // end
       end
 
       // register everything else

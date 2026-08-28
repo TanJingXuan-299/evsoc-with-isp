@@ -99,9 +99,15 @@ wire [15:0]                 cam_pixel_remap_2ppc_data;
 //existing 4PPC->2PPC remap FIFO and drives the same rgb_pixel_*_out /
 //rgb_pixel_out_valid signals that cam_crop already consumes below.
 localparam ISP_PPC              = 2;   //Matches existing 2PPC downstream (crop/scale/gray)
-localparam ISP_PIXEL_BIT_WIDTH  = 8;   //RAW8 in (matches cam_data8)
+//FIX (Bug #4 - dark image): the ISP gamma LUT (lut.mem) is a 4096-entry
+//table and lut.sv addresses the ROM DIRECTLY with the input pixel value.
+//With PIXEL_BIT_WIDTH=8 only the first 256 LUT entries were ever addressed
+//(max gamma output = 0x46 = ~27% brightness). Run the ISP at its native
+//12-bit pixel width and shift the 8-bit RAW data left by 4 when packing
+//s_axis_tdata, so raw8=0xFF addresses LUT entry 0xFF0 and produces 0xFF.
+localparam ISP_PIXEL_BIT_WIDTH  = 12;  //12-bit internal pipeline (gamma LUT is 12-bit addressed)
 localparam ISP_COMPONENT_WIDTH  = 8;   //RGB8 out
-localparam ISP_S_AXIS_WIDTH     = 8*(((ISP_PPC*ISP_PIXEL_BIT_WIDTH)+7)/8);        //16
+localparam ISP_S_AXIS_WIDTH     = 8*(((ISP_PPC*ISP_PIXEL_BIT_WIDTH)+7)/8);        //24
 localparam ISP_M_AXIS_WIDTH     = 8*(((ISP_PPC*3*ISP_COMPONENT_WIDTH)+7)/8);      //48
 localparam ISP_LINE_CNT_BIT     = $clog2(MIPI_FRAME_WIDTH/ISP_PPC);
 
@@ -118,10 +124,11 @@ wire                            isp_m_axis_tuser;
 reg  [ISP_LINE_CNT_BIT-1:0]     isp_s_line_count;
 reg                             isp_sof_pending;
 
-//AXI-Lite master driven internally to push fixed "useful default" register
-//values into isp_top once after reset (unity gain, identity CCM, no black
-//level offset) since there is no spare RISC-V AXI-Lite master port on this
-//module. See u_isp_default_cfg below.
+//AXI-Lite slave of isp_top - tied off (no writes): the ISP register bank
+//keeps its safe reset defaults from axi_lite_register.sv (unity color gain
+//0x0080, identity CCM 0x1000, black level 0). The old design's manual RGB
+//gain via rgb_control is superseded by the ISP colorgain stage; rgb_control
+//remains unused (reserved for a future AXI-Lite passthrough).
 wire [4:0]                      isp_s_axi_awaddr;
 wire                            isp_s_axi_awvalid;
 wire                            isp_s_axi_awready;
@@ -271,17 +278,29 @@ end
 //------------------------------------------------------------------------
 // isp_top raw->RGB pipeline (replaces cam_line_buffer + cam_raw_to_rgb)
 //------------------------------------------------------------------------
-//s_axis framing: tlast marks the last 2PPC beat of each line, tuser marks
-//the first 2PPC beat of a new frame (SOF). ASSUMPTION: this follows the
-//common AMD/Xilinx video AXI4-Stream convention (tuser[0]=SOF at
-//start-of-frame, tlast=EOL). The actual demosaic/colorgain sources were
-//not provided, so this should be verified in simulation - if the image
-//comes out row/column-shifted, check the tlast/tuser timing here first.
+//s_axis framing: tlast marks the last 2PPC beat of each line (lines are
+//always exactly MIPI_FRAME_WIDTH/ISP_PPC = 960 beats on this side because
+//the remap FIFO delivers the MIPI pixel stream 1:1), tuser marks the first
+//2PPC beat of a new frame (SOF).
+//
+//FIX (Bug #1 - black screen): colorgain.sv / ccm.sv / blc.sv latch their
+//gain / CCM-matrix / black-level configuration ONLY when a tuser (SOF) beat
+//arrives, and their latched registers power up at ZERO. The AXI-Lite
+//register defaults (unity gain 0x0080 / identity CCM 0x1000) never reach
+//them without a SOF beat. isp_sof_pending used to reset to 0 and was only
+//armed by cam_vs_2PPC - a pulse that fires after a FULL frame has already
+//streamed through - so the first captured frame entered isp_top with no SOF
+//at all and every pixel was multiplied by gain 0 / matrix 0 (black frame).
+//Arm the SOF at reset so the very first captured frame is also framed;
+//subsequent frames keep being framed by the existing cam_vs_2PPC mechanism
+//(the pulse fires during the vertical blanking after each frame, so the
+//pending flag survives the inter-frame gap of both single-shot and
+//continuous capture).
 always @(posedge mipi_pclk)
 begin
    if (~rst_n) begin
       isp_s_line_count <= {ISP_LINE_CNT_BIT{1'b0}};
-      isp_sof_pending  <= 1'b0;
+      isp_sof_pending  <= 1'b1;   //FIX: arm SOF for the first captured frame
    end else begin
       isp_s_line_count <= (cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
                           (cam_pixel_remap_2ppc_valid)                                                     ? isp_s_line_count + 1'b1 : isp_s_line_count;
@@ -291,7 +310,12 @@ begin
 end
 
 assign isp_s_axis_tvalid = cam_pixel_remap_2ppc_valid;
-assign isp_s_axis_tdata  = cam_pixel_remap_2ppc_data;
+//FIX (Bug #4): pack the two 8-bit RAW pixels as 12-bit values ({px, 4'b0})
+//so they span the full input range of the ISP's 4096-entry gamma LUT.
+//pixel 0 (left/even pixel) occupies tdata[11:0], pixel 1 (right/odd pixel)
+//tdata[23:12] - this is the packing colorgain.sv expects (pixel_0 = LSB).
+assign isp_s_axis_tdata  = {cam_pixel_remap_2ppc_data[15:8], 4'b0000,   //pixel 1 (odd)
+                            cam_pixel_remap_2ppc_data[7:0],  4'b0000};  //pixel 0 (even)
 assign isp_s_axis_tlast  = cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
 assign isp_s_axis_tuser  = isp_sof_pending;
 //NOTE: isp_s_axis_tready is intentionally not used to gate the camera
@@ -300,7 +324,16 @@ assign isp_s_axis_tuser  = isp_sof_pending;
 //in normal operation; if it ever deasserts, that beat's pixels are lost.
 
 isp_top #(
-   .CFA_ORIENTATION    (3),              //TODO: verify against actual sensor CFA (0=BG,1=GB,2=GR,3=RG)
+   //FIX (Bug #5 - red/blue swapped vs old design): the old working pipeline
+   //(cam_line_buffer + cam_raw_to_rgb, pristine Efinix reference code)
+   //interprets the Bayer pattern DELIVERED BY THIS PLATFORM as:
+   //   even lines (line 0) = Gb B Gb B ...   ("Gb"-start line)
+   //   odd  lines (line 1) = R  Gr R  Gr ... ("R"-start line)
+   //i.e. a GBRG 2x2 tile. CFA_ORIENTATION=3 (RG) assumed an RGGB tile - a
+   //one-line/one-pixel diagonal phase shift - which swaps the red and blue
+   //sites and produces R/B swapped colours compared to the old design.
+   //CFA_GB=1 matches the old (working) interpretation exactly.
+   .CFA_ORIENTATION    (1),              //0=BG,1=GB,2=GR,3=RG - GB matches old cam_raw_to_rgb
    .MAX_RESOLUTION     (2048),           //RES_2K - covers MIPI_FRAME_WIDTH up to 1920
    .PIXEL_PER_CYCLE    (ISP_PPC),
    .PIXEL_BIT_WIDTH    (ISP_PIXEL_BIT_WIDTH),
@@ -345,15 +378,22 @@ isp_top #(
 
 //Unpack isp_top's 2PPC RGB888 output into this module's existing 16-bit
 //(2 pixel) per-channel signal format, consistent with the earlier/first
-//pixel occupying the MSB half - same convention already used for
+//pixel occupying the LSB half - same convention already used for
 //cam_data8/gray_pixel_out elsewhere in this file.
-//ASSUMPTION: tdata pixel/component packing - verify against actual
-//gamma.sv/ccm.sv output ordering; swap byte order here if the captured
-//image alternates pixels or channels incorrectly.
+//
+//Verified ISP output packing (demosaic.sv stage-4, ccm.sv stage-4 and
+//gamma.sv stage-0 - gamma preserves byte positions since all three LUT
+//instances are identical): each pixel is packed {R, B, G} with G in the
+//LSB byte, i.e. for the 48-bit 2PPC m_axis word:
+//   [47:40] = pixel1 R   [39:32] = pixel1 B   [31:24] = pixel1 G
+//   [23:16] = pixel0 R   [15:8]  = pixel0 B   [7:0]   = pixel0 G
+//
+//FIX (Bug #3 - green/blue swap): the previous unpack mapped [39:32]/[15:8]
+//to green and [31:24]/[7:0] to blue, swapping the green and blue channels.
 assign rgb_pixel_out_valid = isp_m_axis_tvalid;
 assign rgb_pixel_r_out     = {isp_m_axis_tdata[47:40], isp_m_axis_tdata[23:16]};
-assign rgb_pixel_g_out     = {isp_m_axis_tdata[39:32], isp_m_axis_tdata[15:8]};
-assign rgb_pixel_b_out     = {isp_m_axis_tdata[31:24], isp_m_axis_tdata[7:0]};
+assign rgb_pixel_g_out     = {isp_m_axis_tdata[31:24], isp_m_axis_tdata[7:0]};
+assign rgb_pixel_b_out     = {isp_m_axis_tdata[39:32], isp_m_axis_tdata[15:8]};
 
 // ISP register bank uses its safe reset defaults in axi_lite_register.sv.
 assign isp_s_axi_awaddr  = 5'd0;
@@ -369,18 +409,49 @@ reg [10:0] mipi_y_count;
 reg [10:0] crop_x_count;
 reg [10:0] crop_y_count;
 
+//FIX (Bug #2 - crop window drift / DMA framing): the AMD ISP is NOT 1:1
+//with the 2PPC pixel stream the way the old cam_line_buffer +
+//cam_raw_to_rgb pipeline was:
+//   - demosaic.sv flushes its 3-deep horizontal window pipeline at every
+//     EOL, so every 960-beat input line produces only 958 output beats
+//     (the first and last beat of each line are consumed as window
+//     context), and
+//   - (after the linebuffer.sv fix) every input line still yields exactly
+//     one output line, so a frame is 1080 lines x 958 beats.
+//The old free-running mod-(MIPI_FRAME_WIDTH/2) / mod-(MIPI_FRAME_HEIGHT)
+//counters therefore drifted: the x wrap point slid 2 beats per line and y
+//never completed a frame, so cam_crop's start-corner condition
+//(in_y == Y_START && in_x == X_START) landed at arbitrary positions - the
+//crop window slid through the image and the DMA never received exactly
+//145,800 beats per frame (frame buffer rolls/tears, firmware can hang on
+//dmasg_busy in single-shot capture).
+//Instead, lock the counters to the ISP's actual output framing:
+//   - x resets on every isp_m_axis_tlast (EOL of a 958-beat output line),
+//   - y increments on EOL and wraps at MIPI_FRAME_HEIGHT (exactly 1080
+//     EOLs occur per captured frame), so y = 0 at the first output line of
+//     every frame and the crop start corner hits precisely once per frame.
+//The 540-beat crop window (X_START=210..749) still fits inside the 958-beat
+//line, so the crop/scale/DMA path again delivers exactly 145,800 beats per
+//frame as the firmware DMA descriptor expects.
 always @(posedge mipi_pclk)
 begin
    if (~rst_n)
    begin
       mipi_x_count <= 11'd0;
       mipi_y_count <= 11'd0;
-   end else begin
-      //Incoming frame data 2PPC
-      mipi_x_count <= (rgb_pixel_out_valid && (mipi_x_count == MIPI_FRAME_WIDTH/2-1))                                          ? 11'd0 :
-                      (rgb_pixel_out_valid)                                                                                    ? mipi_x_count + 1'b1 : mipi_x_count;
-      mipi_y_count <= (rgb_pixel_out_valid && (mipi_y_count == MIPI_FRAME_HEIGHT-1) && (mipi_x_count == MIPI_FRAME_WIDTH/2-1)) ? 11'd0 :
-                      (rgb_pixel_out_valid && (mipi_x_count == MIPI_FRAME_WIDTH/2-1))                                          ? mipi_y_count + 1'b1 : mipi_y_count;
+   end
+   else if (rgb_pixel_out_valid)
+   begin
+      if (isp_m_axis_tlast)
+      begin
+         //End of an ISP output line - realign x to the line start
+         mipi_x_count <= 11'd0;
+         mipi_y_count <= (mipi_y_count == MIPI_FRAME_HEIGHT-1) ? 11'd0 : mipi_y_count + 1'b1;
+      end
+      else
+      begin
+         mipi_x_count <= mipi_x_count + 1'b1;
+      end
    end
 end
 
