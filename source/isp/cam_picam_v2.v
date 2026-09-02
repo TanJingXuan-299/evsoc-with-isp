@@ -74,10 +74,11 @@ wire [31:0]                 cam_data8;
 reg  [CAM_X_COUNT_BIT-1:0]  cam_x_count;
 reg  [CAM_Y_COUNT_BIT-1:0]  cam_y_count;
 
-//NOTE: Manual RGB gain (cam_rgb_gain) removed - color gain is now handled
-//inside isp_top (BLC + color gain + CCM stages). rgb_control[14:0] gain
-//sub-fields are therefore currently unused by this module (reserved for a
-//possible future AXI-Lite passthrough into isp_top).
+//NOTE: Manual RGB gain (cam_rgb_gain) removed - colour gain is now handled
+//inside isp_top (BLC + colour gain + CCM stages). The rgb_control[14:0] gain
+//sub-fields are re-used: a small AXI-Lite master FSM below programs the ISP
+//colourgain registers whenever rgb_control changes (see "ISP white balance
+//programming" section), replicating the old cam_rgb_gain behaviour.
 
 reg                         cam_alternate_clock; 
 wire                        cam_pixel_remap_fifo_wvalid;
@@ -124,11 +125,11 @@ wire                            isp_m_axis_tuser;
 reg  [ISP_LINE_CNT_BIT-1:0]     isp_s_line_count;
 reg                             isp_sof_pending;
 
-//AXI-Lite slave of isp_top - tied off (no writes): the ISP register bank
-//keeps its safe reset defaults from axi_lite_register.sv (unity color gain
-//0x0080, identity CCM 0x1000, black level 0). The old design's manual RGB
-//gain via rgb_control is superseded by the ISP colorgain stage; rgb_control
-//remains unused (reserved for a future AXI-Lite passthrough).
+//AXI-Lite master to the isp_top register bank: programs the ISP colour-gain
+//(white balance) registers from the rgb_control APB register - see the FSM
+//in the "ISP white balance programming" section further below. CCM matrix
+//and black level keep their safe reset defaults from axi_lite_register.sv
+//(identity CCM 0x1000, black level 0).
 wire [4:0]                      isp_s_axi_awaddr;
 wire                            isp_s_axi_awvalid;
 wire                            isp_s_axi_awready;
@@ -139,6 +140,25 @@ wire                            isp_s_axi_wready;
 wire [1:0]                      isp_s_axi_bresp;
 wire                            isp_s_axi_bvalid;
 wire                            isp_s_axi_bready;
+
+//rgb_control synchroniser + ISP AXI-Lite programming FSM state
+reg  [15:0]                     rgb_control_r1;
+reg  [15:0]                     rgb_control_synced;
+reg  [15:0]                     rgb_control_programmed;
+reg  [15:0]                     rgb_control_shadow;
+reg  [2:0]                      isp_axi_state;
+reg                             isp_axi_phase;
+reg  [4:0]                      isp_axi_addr_r;
+reg  [31:0]                     isp_axi_data_r;
+reg                             isp_s_axi_awvalid_r;
+reg                             isp_s_axi_wvalid_r;
+wire [2:0]                      wb_red_code;
+wire [2:0]                      wb_green_code;
+wire [2:0]                      wb_blue_code;
+
+localparam ISP_AXI_IDLE   = 3'd0;
+localparam ISP_AXI_ASSERT = 3'd1;
+localparam ISP_AXI_RESP   = 3'd2;
 
 wire [15:0]                 rgb_pixel_r_out;
 wire [15:0]                 rgb_pixel_g_out;
@@ -324,16 +344,21 @@ assign isp_s_axis_tuser  = isp_sof_pending;
 //in normal operation; if it ever deasserts, that beat's pixels are lost.
 
 isp_top #(
-   //FIX (Bug #5 - red/blue swapped vs old design): the old working pipeline
-   //(cam_line_buffer + cam_raw_to_rgb, pristine Efinix reference code)
-   //interprets the Bayer pattern DELIVERED BY THIS PLATFORM as:
-   //   even lines (line 0) = Gb B Gb B ...   ("Gb"-start line)
-   //   odd  lines (line 1) = R  Gr R  Gr ... ("R"-start line)
-   //i.e. a GBRG 2x2 tile. CFA_ORIENTATION=3 (RG) assumed an RGGB tile - a
-   //one-line/one-pixel diagonal phase shift - which swaps the red and blue
-   //sites and produces R/B swapped colours compared to the old design.
-   //CFA_GB=1 matches the old (working) interpretation exactly.
-   .CFA_ORIENTATION    (1),              //0=BG,1=GB,2=GR,3=RG - GB matches old cam_raw_to_rgb
+   //FIX (magenta / dull colours): the Bayer pattern DELIVERED BY THIS
+   //PLATFORM is RGGB - sensor line 0 is an "R Gr" row with the R site on
+   //EVEN x positions. This is proven twice over by the old (working)
+   //pipeline, whose two blocks agree with each other:
+   //   1) cam_rgb_gain.v applies red gain to even-x sites of line 0
+   //      (r_line_cnt=0 selects the "red row" gain formula), and
+   //   2) cam_raw_to_rgb.v demosaics sensor line 0 with its "R Gr" branch
+   //      (line_count[0]=1 while line 0 is the interpolation centre).
+   //CFA_ORIENTATION=1 (GBRG) assumed a Gb site at the frame origin - a
+   //one-line/one-pixel DIAGONAL phase shift - which made the R and B
+   //channels receive green-row data and the G channel receive R/B-row
+   //data: the classic magenta-cast + desaturated ("dull") signature.
+   //CFA_ORIENTATION=3 (RG) puts R at the frame origin and matches the old
+   //working design exactly. (0=BG, 1=GB, 2=GR, 3=RG)
+   .CFA_ORIENTATION    (3),              //RGGB - matches old cam_raw_to_rgb/cam_rgb_gain
    .MAX_RESOLUTION     (2048),           //RES_2K - covers MIPI_FRAME_WIDTH up to 1920
    .PIXEL_PER_CYCLE    (ISP_PPC),
    .PIXEL_BIT_WIDTH    (ISP_PIXEL_BIT_WIDTH),
@@ -395,12 +420,129 @@ assign rgb_pixel_r_out     = {isp_m_axis_tdata[47:40], isp_m_axis_tdata[23:16]};
 assign rgb_pixel_g_out     = {isp_m_axis_tdata[31:24], isp_m_axis_tdata[7:0]};
 assign rgb_pixel_b_out     = {isp_m_axis_tdata[39:32], isp_m_axis_tdata[15:8]};
 
-// ISP register bank uses its safe reset defaults in axi_lite_register.sv.
-assign isp_s_axi_awaddr  = 5'd0;
-assign isp_s_axi_awvalid = 1'b0;
-assign isp_s_axi_wdata   = 32'd0;
-assign isp_s_axi_wstrb   = 4'd0;
-assign isp_s_axi_wvalid  = 1'b0;
+//------------------------------------------------------------------------
+// ISP white balance programming (replaces the old cam_rgb_gain stage)
+//------------------------------------------------------------------------
+//The old pipeline applied white balance in cam_rgb_gain.v, driven by the
+//rgb_control APB register that the firmware writes through Set_RGBGain()
+//(apb3_cam.h -> EXAMPLE_APB3_SLV_REG0):
+//   rgb_control[14:12] = blue gain code, [10:8] = green gain code,
+//   [6:4] = red gain code, [0] = gain trigger
+//A 3-bit gain code maps to a multiplier of code x 0.25 (cam_rgb_gain.v):
+//   0:x0.0  1:x0.25  2:x0.5  3:x0.75  4:x1.0  5:x1.25  6:x1.5  7:x1.75
+//which in the ISP colorgain UQ9.7 coefficient format is simply (code << 5)
+//(0x0080 = x1.0). isp_top's colorgain stage performs the same per-CFA-site
+//raw gain; its coefficients live in the ISP AXI-Lite register bank
+//(axi_lite_register.sv):
+//   0x00 : [31:16] bgain, [15:0] rgain
+//   0x04 : [31:16] g1gain, [15:0] g0gain
+//   0x08+ : CCM matrix / black level (keep reset defaults: identity CCM, 0)
+//colorgain latches the register values at every start of frame (tuser), so
+//a gain update takes effect at the next frame boundary - the same model as
+//the old design's gain_trigger. With the gain trigger low, the old RTL fell
+//back to fixed gains R=6,G=5,B=6 (x1.5/x1.25/x1.5); that fallback is
+//replicated here. The demo firmware programs R=5,G=3,B=4 (x1.25/x0.75/x1.0)
+//for the PiCam v2 (IMX219) - the colour rendering the old design produced.
+
+//Gain code selection with the old design's power-up fallback (trigger low)
+assign wb_red_code   = rgb_control_synced[0] ? rgb_control_synced[6:4]   : 3'd6;
+assign wb_green_code = rgb_control_synced[0] ? rgb_control_synced[10:8]  : 3'd5;
+assign wb_blue_code  = rgb_control_synced[0] ? rgb_control_synced[14:12] : 3'd6;
+
+//rgb_control is an APB (peripheralClk) register - 2FF synchronise to
+//mipi_pclk, same as the old design's gain field synchronisers
+always @(posedge mipi_pclk)
+begin
+   rgb_control_r1     <= rgb_control;
+   rgb_control_synced <= rgb_control_r1;
+end
+
+//Program the two gain registers whenever the synchronised rgb_control
+//value differs from the last value programmed into the ISP.
+//axi_lite_register.sv expects awvalid and wvalid to be asserted together
+//and holds them ready for one cycle; the write completes when bvalid
+//pulses (bready is tied high).
+always @(posedge mipi_pclk)
+begin
+   if (~rst_n)
+   begin
+      rgb_control_programmed <= 16'hFFFF;  // != reset value of rgb_control (0) - forces initial programming
+      rgb_control_shadow     <= 16'd0;
+      isp_axi_state          <= ISP_AXI_IDLE;
+      isp_axi_phase          <= 1'b0;
+      isp_axi_addr_r         <= 5'd0;
+      isp_axi_data_r         <= 32'd0;
+      isp_s_axi_awvalid_r    <= 1'b0;
+      isp_s_axi_wvalid_r     <= 1'b0;
+   end
+   else
+   begin
+      case (isp_axi_state)
+         ISP_AXI_IDLE:
+         begin
+            if (rgb_control_synced != rgb_control_programmed)
+            begin
+               if (~isp_axi_phase)
+               begin
+                  //Register 0x00: bgain [31:16], rgain [15:0]
+                  isp_axi_addr_r     <= 5'h00;
+                  isp_axi_data_r     <= {8'd0, wb_blue_code,  5'd0,   //bgain = code << 5
+                                         8'd0, wb_red_code,   5'd0};  //rgain = code << 5
+                  rgb_control_shadow <= rgb_control_synced;
+               end
+               else
+               begin
+                  //Register 0x04: g1gain [31:16], g0gain [15:0]
+                  isp_axi_addr_r     <= 5'h04;
+                  isp_axi_data_r     <= {8'd0, wb_green_code, 5'd0,   //g1gain = code << 5
+                                         8'd0, wb_green_code, 5'd0};  //g0gain = code << 5
+               end
+               isp_s_axi_awvalid_r <= 1'b1;
+               isp_s_axi_wvalid_r  <= 1'b1;
+               isp_axi_state       <= ISP_AXI_ASSERT;
+            end
+         end
+         ISP_AXI_ASSERT:
+         begin
+            //awready/wready pulse together - address and data are held
+            //until the handshake (the slave samples them one cycle later)
+            if (isp_s_axi_awready && isp_s_axi_wready)
+            begin
+               isp_s_axi_awvalid_r <= 1'b0;
+               isp_s_axi_wvalid_r  <= 1'b0;
+               isp_axi_state       <= ISP_AXI_RESP;
+            end
+         end
+         ISP_AXI_RESP:
+         begin
+            if (isp_s_axi_bvalid)
+            begin
+               if (isp_axi_phase)
+               begin
+                  //Both gain registers written - mark this rgb_control
+                  //value as programmed (shadow: if rgb_control changed
+                  //mid-sequence a new pass is triggered automatically)
+                  rgb_control_programmed <= rgb_control_shadow;
+                  isp_axi_phase          <= 1'b0;
+               end
+               else
+               begin
+                  isp_axi_phase <= 1'b1;
+               end
+               isp_axi_state <= ISP_AXI_IDLE;
+            end
+         end
+         default: isp_axi_state <= ISP_AXI_IDLE;
+      endcase
+   end
+end
+
+//AXI-Lite master drive (read side unused - tied off)
+assign isp_s_axi_awaddr  = isp_axi_addr_r;
+assign isp_s_axi_awvalid = isp_s_axi_awvalid_r;
+assign isp_s_axi_wdata   = isp_axi_data_r;
+assign isp_s_axi_wstrb   = 4'b1111;
+assign isp_s_axi_wvalid  = isp_s_axi_wvalid_r;
 assign isp_s_axi_bready  = 1'b1;
 
 //Perform cropping and scaling 
