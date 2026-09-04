@@ -42,7 +42,19 @@ module cam_picam_v2 #(
    output wire [63:0] cam_dma_wdata,
    
    //RISC-V slave control & Debug
-   input  wire [15:0] rgb_control,
+   input  wire [15:0] black_level,
+   input  wire [15:0] rgain,
+   input  wire [15:0] ggain,
+   input  wire [15:0] bgain,
+   input  wire [15:0] ccm_r_r,
+   input  wire [15:0] ccm_r_g,
+   input  wire [15:0] ccm_r_b,
+   input  wire [15:0] ccm_g_r,
+   input  wire [15:0] ccm_g_g,
+   input  wire [15:0] ccm_g_b,
+   input  wire [15:0] ccm_b_r,
+   input  wire [15:0] ccm_b_g,
+   input  wire [15:0] ccm_b_b,
    input  wire        trigger_capture_frame,
    input  wire        continuous_capture_frame,
    input  wire        rgb_gray,
@@ -57,6 +69,10 @@ module cam_picam_v2 #(
    output reg  [31:0] debug_cam_dma_fifo_wcount,
    output wire [31:0] debug_cam_dma_status
 );
+
+reg  [223:0] gain_control;
+assign gain_control = {black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b, ccm_g_g, ccm_g_r, ccm_r_b, 
+                       ccm_r_g, ccm_r_r, bgain, ggain, ggain, rgain};
 
 localparam CAM_DMA_COUNT_BIT = $clog2(DMA_TRANSFER_LENGTH);
 localparam CAM_X_COUNT_BIT   = $clog2(MIPI_FRAME_WIDTH/4); //4PPC
@@ -73,12 +89,6 @@ wire                        cam_hs_fall_edge;
 wire [31:0]                 cam_data8;
 reg  [CAM_X_COUNT_BIT-1:0]  cam_x_count;
 reg  [CAM_Y_COUNT_BIT-1:0]  cam_y_count;
-
-//NOTE: Manual RGB gain (cam_rgb_gain) removed - colour gain is now handled
-//inside isp_top (BLC + colour gain + CCM stages). The rgb_control[14:0] gain
-//sub-fields are re-used: a small AXI-Lite master FSM below programs the ISP
-//colourgain registers whenever rgb_control changes (see "ISP white balance
-//programming" section), replicating the old cam_rgb_gain behaviour.
 
 reg                         cam_alternate_clock; 
 wire                        cam_pixel_remap_fifo_wvalid;
@@ -126,7 +136,7 @@ reg  [ISP_LINE_CNT_BIT-1:0]     isp_s_line_count;
 reg                             isp_sof_pending;
 
 //AXI-Lite master to the isp_top register bank: programs the ISP colour-gain
-//(white balance) registers from the rgb_control APB register - see the FSM
+//(white balance) registers from the APB register - see the FSM
 //in the "ISP white balance programming" section further below. CCM matrix
 //and black level keep their safe reset defaults from axi_lite_register.sv
 //(identity CCM 0x1000, black level 0).
@@ -141,20 +151,17 @@ wire [1:0]                      isp_s_axi_bresp;
 wire                            isp_s_axi_bvalid;
 wire                            isp_s_axi_bready;
 
-//rgb_control synchroniser + ISP AXI-Lite programming FSM state
-reg  [15:0]                     rgb_control_r1;
-reg  [15:0]                     rgb_control_synced;
-reg  [15:0]                     rgb_control_programmed;
-reg  [15:0]                     rgb_control_shadow;
-reg  [2:0]                      isp_axi_state;
-reg                             isp_axi_phase;
-reg  [4:0]                      isp_axi_addr_r;
-reg  [31:0]                     isp_axi_data_r;
-reg                             isp_s_axi_awvalid_r;
-reg                             isp_s_axi_wvalid_r;
-wire [2:0]                      wb_red_code;
-wire [2:0]                      wb_green_code;
-wire [2:0]                      wb_blue_code;
+//gain_control synchroniser + ISP AXI-Lite programming FSM state
+reg  [223:0]                     gain_control_r1;
+reg  [223:0]                     gain_control_synced;
+reg  [223:0]                     rgb_control_programmed;
+reg  [223:0]                     gain_control_shadow;
+reg  [  2:0]                     isp_axi_state;
+reg                              isp_axi_phase;
+reg  [  4:0]                     isp_axi_addr_r;
+reg  [ 31:0]                     isp_axi_data_r;
+reg                              isp_s_axi_awvalid_r;
+reg                              isp_s_axi_wvalid_r;
 
 localparam ISP_AXI_IDLE   = 3'd0;
 localparam ISP_AXI_ASSERT = 3'd1;
@@ -423,41 +430,16 @@ assign rgb_pixel_b_out     = {isp_m_axis_tdata[39:32], isp_m_axis_tdata[15:8]};
 //------------------------------------------------------------------------
 // ISP white balance programming (replaces the old cam_rgb_gain stage)
 //------------------------------------------------------------------------
-//The old pipeline applied white balance in cam_rgb_gain.v, driven by the
-//rgb_control APB register that the firmware writes through Set_RGBGain()
-//(apb3_cam.h -> EXAMPLE_APB3_SLV_REG0):
-//   rgb_control[14:12] = blue gain code, [10:8] = green gain code,
-//   [6:4] = red gain code, [0] = gain trigger
-//A 3-bit gain code maps to a multiplier of code x 0.25 (cam_rgb_gain.v):
-//   0:x0.0  1:x0.25  2:x0.5  3:x0.75  4:x1.0  5:x1.25  6:x1.5  7:x1.75
-//which in the ISP colorgain UQ9.7 coefficient format is simply (code << 5)
-//(0x0080 = x1.0). isp_top's colorgain stage performs the same per-CFA-site
-//raw gain; its coefficients live in the ISP AXI-Lite register bank
-//(axi_lite_register.sv):
-//   0x00 : [31:16] bgain, [15:0] rgain
-//   0x04 : [31:16] g1gain, [15:0] g0gain
-//   0x08+ : CCM matrix / black level (keep reset defaults: identity CCM, 0)
-//colorgain latches the register values at every start of frame (tuser), so
-//a gain update takes effect at the next frame boundary - the same model as
-//the old design's gain_trigger. With the gain trigger low, the old RTL fell
-//back to fixed gains R=6,G=5,B=6 (x1.5/x1.25/x1.5); that fallback is
-//replicated here. The demo firmware programs R=5,G=3,B=4 (x1.25/x0.75/x1.0)
-//for the PiCam v2 (IMX219) - the colour rendering the old design produced.
 
-//Gain code selection with the old design's power-up fallback (trigger low)
-assign wb_red_code   = rgb_control_synced[0] ? rgb_control_synced[6:4]   : 3'd6;
-assign wb_green_code = rgb_control_synced[0] ? rgb_control_synced[10:8]  : 3'd5;
-assign wb_blue_code  = rgb_control_synced[0] ? rgb_control_synced[14:12] : 3'd6;
-
-//rgb_control is an APB (peripheralClk) register - 2FF synchronise to
+//gain_control is an APB (peripheralClk) register - 2FF synchronise to
 //mipi_pclk, same as the old design's gain field synchronisers
 always @(posedge mipi_pclk)
 begin
-   rgb_control_r1     <= rgb_control;
-   rgb_control_synced <= rgb_control_r1;
+   gain_control_r1     <= gain_control;
+   gain_control_synced <= gain_control_r1;
 end
 
-//Program the two gain registers whenever the synchronised rgb_control
+//Program the two gain registers whenever the synchronised gain_control
 //value differs from the last value programmed into the ISP.
 //axi_lite_register.sv expects awvalid and wvalid to be asserted together
 //and holds them ready for one cycle; the write completes when bvalid
@@ -466,8 +448,8 @@ always @(posedge mipi_pclk)
 begin
    if (~rst_n)
    begin
-      rgb_control_programmed <= 16'hFFFF;  // != reset value of rgb_control (0) - forces initial programming
-      rgb_control_shadow     <= 16'd0;
+      gain_control_programmed<= {224{1'b1}};  // != reset value of gain_control (0) - forces initial programming
+      gain_control_shadow    <= 224'd0;
       isp_axi_state          <= ISP_AXI_IDLE;
       isp_axi_phase          <= 1'b0;
       isp_axi_addr_r         <= 5'd0;
@@ -480,27 +462,22 @@ begin
       case (isp_axi_state)
          ISP_AXI_IDLE:
          begin
-            if (rgb_control_synced != rgb_control_programmed)
-            begin
-               if (~isp_axi_phase)
+            if (gain_control_synced != gain_control_programmed)
                begin
-                  //Register 0x00: bgain [31:16], rgain [15:0]
-                  isp_axi_addr_r     <= 5'h00;
-                  isp_axi_data_r     <= {8'd0, wb_blue_code,  5'd0,   //bgain = code << 5
-                                         8'd0, wb_red_code,   5'd0};  //rgain = code << 5
-                  rgb_control_shadow <= rgb_control_synced;
+                     if (~isp_axi_phase)
+                     begin
+                        for (i=0; i<7; i=i+1)
+                        begin
+                        isp_axi_addr_r     <= 5'h00+i*4;
+                        isp_axi_data_r     <= {gain_control_synced[31+i*16:16+i*16],
+                                             gain_control_synced[15+i*16: 0+i*16]};
+                        gain_control_shadow <= gain_control_synced;
+                        end
+                     end
+                     isp_s_axi_awvalid_r <= 1'b1;
+                     isp_s_axi_wvalid_r  <= 1'b1;
+                     isp_axi_state       <= ISP_AXI_ASSERT;
                end
-               else
-               begin
-                  //Register 0x04: g1gain [31:16], g0gain [15:0]
-                  isp_axi_addr_r     <= 5'h04;
-                  isp_axi_data_r     <= {8'd0, wb_green_code, 5'd0,   //g1gain = code << 5
-                                         8'd0, wb_green_code, 5'd0};  //g0gain = code << 5
-               end
-               isp_s_axi_awvalid_r <= 1'b1;
-               isp_s_axi_wvalid_r  <= 1'b1;
-               isp_axi_state       <= ISP_AXI_ASSERT;
-            end
          end
          ISP_AXI_ASSERT:
          begin
@@ -519,10 +496,10 @@ begin
             begin
                if (isp_axi_phase)
                begin
-                  //Both gain registers written - mark this rgb_control
-                  //value as programmed (shadow: if rgb_control changed
+                  //Both gain registers written - mark this gain_control
+                  //value as programmed (shadow: if gain_control changed
                   //mid-sequence a new pass is triggered automatically)
-                  rgb_control_programmed <= rgb_control_shadow;
+                  gain_control_programmed <= gain_control_shadow;
                   isp_axi_phase          <= 1'b0;
                end
                else

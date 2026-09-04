@@ -8,7 +8,7 @@
     <efx:design_info def_veri_version="sv_09" def_vhdl_version="vhdl_2008" unified_flow="false" partition_interface_allowed_off_perimeter="true">
         <efx:top_module name="edge_vision_soc"/>
         <efx:design_file name="edge_vision_soc.v" version="default" library="default"/>
-        <efx:design_file name="source/source.f" version="default" library="default"/>
+        <efx:design_file name="source/source.f" version="na" library="default"/>
         <efx:design_file name="evsoc_defines.v" version="default" library="default"/>
         <efx:design_file name="ip/cam_dma_fifo/cam_dma_fifo.sv" version="default" library="default"/>
         <efx:design_file name="ip/cam_pixel_remap_fifo/cam_pixel_remap_fifo.sv" version="default" library="default"/>
@@ -100,14 +100,14 @@
     </efx:synthesis>
     <efx:place_and_route tool_name="efx_pnr">
         <efx:param name="work_dir" value="work_pnr" value_type="e_string"/>
-        <efx:param name="verbose" value="off" value_type="e_bool"/>
+        <efx:param name="verbose" value="off" value_type="e_string"/>
         <efx:param name="seed" value="0" value_type="e_integer"/>
-        <efx:param name="placer_effort_level" value="2" value_type="e_option"/>
+        <efx:param name="placer_effort_level" value="1" value_type="e_option"/>
         <efx:param name="max_threads" value="-1" value_type="e_integer"/>
         <efx:param name="beneficial_skew" value="on" value_type="e_option"/>
         <efx:param name="print_critical_path" value="10" value_type="e_integer"/>
-        <efx:param name="suppress_info_msgs" value="off" value_type="e_bool"/>
-        <efx:param name="suppress_warning_msgs" value="off" value_type="e_bool"/>
+        <efx:param name="suppress_info_msgs" value="off" value_type="e_string"/>
+        <efx:param name="suppress_warning_msgs" value="off" value_type="e_string"/>
     </efx:place_and_route>
     <efx:bitstream_generation tool_name="efx_pgm">
         <efx:param name="mode" value="active" value_type="e_option"/>

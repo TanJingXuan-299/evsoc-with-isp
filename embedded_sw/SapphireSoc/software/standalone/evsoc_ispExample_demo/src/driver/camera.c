@@ -17,27 +17,17 @@
 
 typedef struct
 {
-    u8 ena;
-    u8 R;
-    u8 G;
-    u8 B;
-} RGBGain;
-
-typedef struct
-{
     u8 slaveAddress;
     CameraType type;
     const char *name;
     void (*init)(u32 i2cCtrl);
     void (*start_stream)(u32 i2cCtrl);
-    void (*set_rgb_gain)(int camSlot, u8 ena, u8 R, u8 G, u8 B);
-    RGBGain gain;
 } CameraEntry;
 
 static const CameraEntry supportedCamera[] = {
-    {0x10 << 1, CAMERA_IMX219, "PiCam v2 (IMX219)", PiCam_init, NULL, Set_RGBGain, {1, 5, 3, 4}},
-    {0x1A << 1, CAMERA_IMX708, "PiCam v3 (IMX708)", PiCamV3_Init, PiCamV3_StartStreaming, Set_RGBGain, {1, 5, 3, 7}},
-    /*  { slaveAddress, CAMERA_TYPE, "CAMERA_NAME"     , CAMERA_INIT , CAMERA_START_STREAM   , CAMERA_SET_RGB_GAIN, {GAIN_ARRAY}},*/
+    {0x10 << 1, CAMERA_IMX219, "PiCam v2 (IMX219)", PiCam_init, NULL},
+    {0x1A << 1, CAMERA_IMX708, "PiCam v3 (IMX708)", PiCamV3_Init, PiCamV3_StartStreaming},
+    /*  { slaveAddress, CAMERA_TYPE, "CAMERA_NAME"     , CAMERA_INIT , CAMERA_START_STREAM  },*/
 };
 
 #define NUM_KNOWN_CAMERAS (sizeof(supportedCamera) / sizeof(supportedCamera[0]))
@@ -76,14 +66,6 @@ static void camera_init(int camSlot, u32 i2cCtrl)
 
             if (supportedCamera[i].start_stream != NULL)
                 supportedCamera[i].start_stream(i2cCtrl);
-
-            if (supportedCamera[i].set_rgb_gain != NULL)
-                supportedCamera[i].set_rgb_gain(camSlot,
-                                                supportedCamera[i].gain.ena,
-                                                supportedCamera[i].gain.R,
-                                                supportedCamera[i].gain.G,
-                                                supportedCamera[i].gain.B);
-
             return;
         }
     }

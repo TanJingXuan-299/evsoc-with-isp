@@ -280,7 +280,19 @@ module edge_vision_soc #(
   ///////////////////////////////////////////////////////////////////////////////
 
   wire [ 31:0] debug_cam_display_fifo_status;
-  wire [ 15:0] rgb_control;
+  wire [ 15:0]         black_level,
+  wire [ 15:0]         rgain,
+  wire [ 15:0]         ggain,
+  wire [ 15:0]         bgain,
+  wire [ 15:0]         ccm_r_r,
+  wire [ 15:0]         ccm_r_g,
+  wire [ 15:0]         ccm_r_b,
+  wire [ 15:0]         ccm_g_r,
+  wire [ 15:0]         ccm_g_g,
+  wire [ 15:0]         ccm_g_b,
+  wire [ 15:0]         ccm_b_r,
+  wire [ 15:0]         ccm_b_g,
+  wire [ 15:0]         ccm_b_b,
   wire         trigger_capture_frame;
   wire         continuous_capture_frame;
   wire         rgb_gray;
@@ -843,7 +855,19 @@ module edge_vision_soc #(
       .cam_dma_wvalid                      (cam_dma_wvalid),
       .cam_dma_wlast                       (cam_dma_wlast),
       .cam_dma_wdata                       (cam_dma_wdata),
-      .rgb_control                         (rgb_control),
+      .black_level                         (black_level[15:0]),
+      .rgain                               (rgain      [15:0]),
+      .ggain                               (ggain      [15:0]),
+      .bgain                               (bgain      [15:0]),
+      .ccm_r_r                             (ccm_r_r    [15:0]),
+      .ccm_r_g                             (ccm_r_g    [15:0]),
+      .ccm_r_b                             (ccm_r_b    [15:0]),
+      .ccm_g_r                             (ccm_g_r    [15:0]),
+      .ccm_g_g                             (ccm_g_g    [15:0]),
+      .ccm_g_b                             (ccm_g_b    [15:0]),
+      .ccm_b_r                             (ccm_b_r    [15:0]),
+      .ccm_b_g                             (ccm_b_g    [15:0]),
+      .ccm_b_b                             (ccm_b_b    [15:0]),
       .trigger_capture_frame               (trigger_capture_frame),
       .continuous_capture_frame            (continuous_capture_frame),
       .rgb_gray                            (rgb_gray),
@@ -1070,7 +1094,19 @@ module edge_vision_soc #(
       .select_demo_mode             ({user_dip1, user_dip0}),
       .enable_cam                   (enable_cam),
       .mipi_rstn                    (mipi_rstn),
-      .rgb_control                  (rgb_control),
+      .black_level                  (black_level[15:0]),
+      .rgain                        (rgain      [15:0]),
+      .ggain                        (ggain      [15:0]),
+      .bgain                        (bgain      [15:0]),
+      .ccm_r_r                      (ccm_r_r    [15:0]),
+      .ccm_r_g                      (ccm_r_g    [15:0]),
+      .ccm_r_b                      (ccm_r_b    [15:0]),
+      .ccm_g_r                      (ccm_g_r    [15:0]),
+      .ccm_g_g                      (ccm_g_g    [15:0]),
+      .ccm_g_b                      (ccm_g_b    [15:0]),
+      .ccm_b_r                      (ccm_b_r    [15:0]),
+      .ccm_b_g                      (ccm_b_g    [15:0]),
+      .ccm_b_b                      (ccm_b_b    [15:0]),
       .trigger_capture_frame        (trigger_capture_frame),
       .continuous_capture_frame     (continuous_capture_frame),
       .rgb_gray                     (rgb_gray),
@@ -1296,27 +1332,27 @@ module edge_vision_soc #(
   // Hardware Accelerator - Processing Wrapper
   ///////////////////////////////////////////////////////////////////////////////
 
-  hw_accel_wrapper #(
-      .FRAME_WIDTH        (FRAME_WIDTH),
-      .FRAME_HEIGHT       (FRAME_HEIGHT),
-      .DMA_TRANSFER_LENGTH(FRAME_WIDTH * FRAME_HEIGHT)  //S2MM DMA transfer
-  ) u_hw_accel_wrapper (
-      .clk                (i_systemClk),
-      .rst                (io_systemReset),
-      .apb_slave_clk      (peripheralClk),
-      .apb_slave_rst      (peripheralReset),
-      .i_sobel_thresh_var (sobel_thresh_var),
-      .i_hw_accel_mode    (hw_accel_mode),
-      .i_dma_wr_init_done (dma_wr_init_done),
-      .dma_rready         (hw_accel_dma_rready),
-      .dma_rvalid         (hw_accel_dma_rvalid),
-      .dma_rdata          (hw_accel_dma_rdata),
-      .dma_rkeep          (hw_accel_dma_rkeep),
-      .dma_wready         (hw_accel_dma_wready),
-      .dma_wvalid         (hw_accel_dma_wvalid),
-      .dma_wlast          (hw_accel_dma_wlast),
-      .dma_wdata          (hw_accel_dma_wdata)
-  );
+  // hw_accel_wrapper #(
+  //     .FRAME_WIDTH        (FRAME_WIDTH),
+  //     .FRAME_HEIGHT       (FRAME_HEIGHT),
+  //     .DMA_TRANSFER_LENGTH(FRAME_WIDTH * FRAME_HEIGHT)  //S2MM DMA transfer
+  // ) u_hw_accel_wrapper (
+  //     .clk                (i_systemClk),
+  //     .rst                (io_systemReset),
+  //     .apb_slave_clk      (peripheralClk),
+  //     .apb_slave_rst      (peripheralReset),
+  //     .i_sobel_thresh_var (sobel_thresh_var),
+  //     .i_hw_accel_mode    (hw_accel_mode),
+  //     .i_dma_wr_init_done (dma_wr_init_done),
+  //     .dma_rready         (hw_accel_dma_rready),
+  //     .dma_rvalid         (hw_accel_dma_rvalid),
+  //     .dma_rdata          (hw_accel_dma_rdata),
+  //     .dma_rkeep          (hw_accel_dma_rkeep),
+  //     .dma_wready         (hw_accel_dma_wready),
+  //     .dma_wvalid         (hw_accel_dma_wvalid),
+  //     .dma_wlast          (hw_accel_dma_wlast),
+  //     .dma_wdata          (hw_accel_dma_wdata)
+  // );
 
   ///////////////////////////////////////////////////////////////////////////////
   // DMA Controller

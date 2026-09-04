@@ -241,16 +241,29 @@ module axi_lite_register
   assign bgain       = registers[0][31:16];
   assign g0gain      = registers[1][15:0];
   assign g1gain      = registers[1][31:16];
-  assign ccm_r_r     = registers[2][15:0];
-  assign ccm_r_g     = registers[2][31:16];
-  assign ccm_r_b     = registers[3][15:0];
-  assign ccm_g_r     = registers[3][31:16];
-  assign ccm_g_g     = registers[4][15:0];
-  assign ccm_g_b     = registers[4][31:16];
-  assign ccm_b_r     = registers[5][15:0];
-  assign ccm_b_g     = registers[5][31:16];
-  assign ccm_b_b     = registers[6][15:0];
-  assign black_level = registers[6][31:16];
+  // assign ccm_r_r     = registers[2][15:0];
+  // assign ccm_r_g     = registers[2][31:16];
+  // assign ccm_r_b     = registers[3][15:0];
+  // assign ccm_g_r     = registers[3][31:16];
+  // assign ccm_g_g     = registers[4][15:0];
+  // assign ccm_g_b     = registers[4][31:16];
+  // assign ccm_b_r     = registers[5][15:0];
+  // assign ccm_b_g     = registers[5][31:16];
+  // assign ccm_b_b     = registers[6][15:0];
+  // assign black_level = registers[6][31:16];
+  assign ccm_r_r = 16'sd9519;   // +2.32392
+  assign ccm_r_g = -16'sd3622;  // -0.88421
+  assign ccm_r_b = -16'sd1801;  // -0.43971
+
+  assign ccm_g_r = -16'sd2614;  // -0.63821
+  assign ccm_g_g = 16'sd10582;  // +2.58348
+  assign ccm_g_b = -16'sd3872;  // -0.94527
+
+  assign ccm_b_r = -16'sd1169;  // -0.28541
+  assign ccm_b_g = -16'sd2216;  // -0.54112
+  assign ccm_b_b = 16'sd7481;   // +1.82653
+  assign black_level = {1'b0, 15'd16};
+
 
   // output assignments
   assign s_axi_rdata    = axi_rdata;

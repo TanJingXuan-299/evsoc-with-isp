@@ -37,20 +37,32 @@
 
 #else
 
-#define EXAMPLE_APB3_SLV_REG0_OFFSET  0	 	// rgb gain control
+#define EXAMPLE_APB3_SLV_REG0_OFFSET  0	 	// black_level
 #define EXAMPLE_APB3_SLV_REG1_OFFSET  4	 	// cam_confdone
 #define EXAMPLE_APB3_SLV_REG2_OFFSET  8	 	// trigger_capture_frame
 #define EXAMPLE_APB3_SLV_REG3_OFFSET  12	// rgb_gray
 #define EXAMPLE_APB3_SLV_REG4_OFFSET  16	// cam_dma_init_done
-#define EXAMPLE_APB3_SLV_REG5_OFFSET  20	// Expect 32'hABCD_5678 - Verify slave read operation
-#define EXAMPLE_APB3_SLV_REG6_OFFSET  24	// debug_fifo_status
-#define EXAMPLE_APB3_SLV_REG7_OFFSET  28	// debug_cam_dma_fifo_rcount
-#define EXAMPLE_APB3_SLV_REG8_OFFSET  32	// debug_cam_dma_fifo_wcount
-#define EXAMPLE_APB3_SLV_REG9_OFFSET  36	// debug_display_dma_fifo_rcount
-#define EXAMPLE_APB3_SLV_REG10_OFFSET 40 	// debug_display_dma_fifo_wcount
-#define EXAMPLE_APB3_SLV_REG11_OFFSET 44 	// debug_cam_dma_status
-#define EXAMPLE_APB3_SLV_REG12_OFFSET 48 	// frames_per_second
-#define EXAMPLE_APB3_SLV_REG13_OFFSET 52 	// select_demo_mode
+#define EXAMPLE_APB3_SLV_REG5_OFFSET  20	// rgain
+#define EXAMPLE_APB3_SLV_REG6_OFFSET  24	// ggain
+#define EXAMPLE_APB3_SLV_REG7_OFFSET  28	// bgain
+#define EXAMPLE_APB3_SLV_REG8_OFFSET  32	// ccm_r_r
+#define EXAMPLE_APB3_SLV_REG9_OFFSET  36	// ccm_r_g
+#define EXAMPLE_APB3_SLV_REG10_OFFSET 40 	// ccm_r_b
+#define EXAMPLE_APB3_SLV_REG11_OFFSET 44 	// ccm_g_r
+#define EXAMPLE_APB3_SLV_REG12_OFFSET 48 	// ccm_g_g
+#define EXAMPLE_APB3_SLV_REG13_OFFSET 52 	// ccm_g_b
+#define EXAMPLE_APB3_SLV_REG14_OFFSET 56	// ccm_b_r
+#define EXAMPLE_APB3_SLV_REG15_OFFSET 60	// ccm_b_g
+#define EXAMPLE_APB3_SLV_REG16_OFFSET 64	// ccm_b_b
+#define EXAMPLE_APB3_SLV_REG17_OFFSET 68	// Expect 32'hABCD_5678 - Verify slave read operation
+#define EXAMPLE_APB3_SLV_REG18_OFFSET 72	// debug_fifo_status
+#define EXAMPLE_APB3_SLV_REG19_OFFSET 76	// debug_cam_dma_fifo_rcount
+#define EXAMPLE_APB3_SLV_REG20_OFFSET 80	// debug_cam_dma_fifo_wcount
+#define EXAMPLE_APB3_SLV_REG21_OFFSET 84	// debug_display_dma_fifo_rcount
+#define EXAMPLE_APB3_SLV_REG22_OFFSET 88 	// debug_display_dma_fifo_wcount
+#define EXAMPLE_APB3_SLV_REG23_OFFSET 92 	// debug_cam_dma_status
+#define EXAMPLE_APB3_SLV_REG24_OFFSET 96 	// frames_per_second
+#define EXAMPLE_APB3_SLV_REG25_OFFSET 100 	// select_demo_mode
 
 #endif
 
@@ -67,16 +79,27 @@ static u32 example_register_read(u16 reg)
 	return rdata;
 }
 
-// Unified Set_RGBGain — camId selects which camera (0 = cam1, 1 = cam2)
-static inline void Set_RGBGain(int camId, u8 ena, u8 R, u8 G, u8 B)
+// Unified Set_Gain — camId selects which camera (0 = cam1, 1 = cam2)
+static inline void Set_Gain(int camId, int var, u16 setting)
 {
-	u32 data = ((B & 0x7) << 12) | ((G & 0x7) << 8) | ((R & 0x7) << 4) | (ena & 0x1);
+	u32 data = setting;
 
 #ifdef DUAL_CAM
 	u32 offset = (camId == 0) ? EXAMPLE_APB3_SLV_REG1_OFFSET
 							  : EXAMPLE_APB3_SLV_REG5_OFFSET;
 #else
-	u32 offset = EXAMPLE_APB3_SLV_REG0_OFFSET; // single cam, camId ignored
+	u32 offset = (var==0) ? EXAMPLE_APB3_SLV_REG0_OFFSET : 
+				 (var==1) ? EXAMPLE_APB3_SLV_REG5_OFFSET :
+				 (var==2) ? EXAMPLE_APB3_SLV_REG6_OFFSET :
+				 (var==3) ? EXAMPLE_APB3_SLV_REG7_OFFSET :
+				 (var==4) ? EXAMPLE_APB3_SLV_REG8_OFFSET :
+				 (var==5) ? EXAMPLE_APB3_SLV_REG9_OFFSET :
+				 (var==6) ? EXAMPLE_APB3_SLV_REG10_OFFSET:
+				 (var==7) ? EXAMPLE_APB3_SLV_REG11_OFFSET:
+				 (var==8) ? EXAMPLE_APB3_SLV_REG12_OFFSET:
+				 (var==9) ? EXAMPLE_APB3_SLV_REG13_OFFSET:
+				 (var==10)? EXAMPLE_APB3_SLV_REG14_OFFSET:
+				 (var==11)? EXAMPLE_APB3_SLV_REG15_OFFSET: EXAMPLE_APB3_SLV_REG16_OFFSET; // single cam, camId ignored
 #endif
 
 	EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);

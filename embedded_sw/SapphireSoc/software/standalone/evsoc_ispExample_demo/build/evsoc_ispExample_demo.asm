@@ -12,7 +12,7 @@ _start:
 .option norelax
 	la gp, __global_pointer$
     1000:	00004197          	auipc	gp,0x4
-    1004:	06818193          	addi	gp,gp,104 # 5068 <__global_pointer$>
+    1004:	f7818193          	addi	gp,gp,-136 # 4f78 <__global_pointer$>
 
 00001008 <init>:
 	sw a0, smp_lottery_lock, a1
@@ -21,19 +21,19 @@ _start:
 
 init:
 	la sp, _sp
-    1008:	00005117          	auipc	sp,0x5
-    100c:	89810113          	addi	sp,sp,-1896 # 58a0 <__freertos_irq_stack_top>
+    1008:	00004117          	auipc	sp,0x4
+    100c:	7a810113          	addi	sp,sp,1960 # 57b0 <__freertos_irq_stack_top>
 
 	/* Load data section */
 	la a0, _data_lma
     1010:	00003517          	auipc	a0,0x3
-    1014:	bc450513          	addi	a0,a0,-1084 # 3bd4 <_data>
+    1014:	ae450513          	addi	a0,a0,-1308 # 3af4 <_data>
 	la a1, _data
     1018:	00003597          	auipc	a1,0x3
-    101c:	bbc58593          	addi	a1,a1,-1092 # 3bd4 <_data>
+    101c:	adc58593          	addi	a1,a1,-1316 # 3af4 <_data>
 	la a2, _edata
-    1020:	00004617          	auipc	a2,0x4
-    1024:	86c60613          	addi	a2,a2,-1940 # 488c <display_mm2s_active>
+    1020:	00003617          	auipc	a2,0x3
+    1024:	77c60613          	addi	a2,a2,1916 # 479c <display_mm2s_active>
 	bgeu a1, a2, 2f
     1028:	00c5fc63          	bgeu	a1,a2,1040 <init+0x38>
 1:
@@ -51,11 +51,11 @@ init:
 
 	/* Clear bss section */
 	la a0, __bss_start
-    1040:	00004517          	auipc	a0,0x4
-    1044:	84c50513          	addi	a0,a0,-1972 # 488c <display_mm2s_active>
+    1040:	00003517          	auipc	a0,0x3
+    1044:	75c50513          	addi	a0,a0,1884 # 479c <display_mm2s_active>
 	la a1, _end
-    1048:	00004597          	auipc	a1,0x4
-    104c:	85058593          	addi	a1,a1,-1968 # 4898 <_end>
+    1048:	00003597          	auipc	a1,0x3
+    104c:	76058593          	addi	a1,a1,1888 # 47a8 <_end>
 	bgeu a0, a1, 2f
     1050:	00b57863          	bgeu	a0,a1,1060 <init+0x58>
 1:
@@ -95,9 +95,9 @@ Disassembly of section .text:
     1074:	00812423          	sw	s0,8(sp)
     1078:	01212023          	sw	s2,0(sp)
     107c:	00003797          	auipc	a5,0x3
-    1080:	b5878793          	addi	a5,a5,-1192 # 3bd4 <_data>
+    1080:	a7878793          	addi	a5,a5,-1416 # 3af4 <_data>
     1084:	00003417          	auipc	s0,0x3
-    1088:	b5040413          	addi	s0,s0,-1200 # 3bd4 <_data>
+    1088:	a7040413          	addi	s0,s0,-1424 # 3af4 <_data>
     108c:	00112623          	sw	ra,12(sp)
     1090:	00912223          	sw	s1,4(sp)
     1094:	40878933          	sub	s2,a5,s0
@@ -110,9 +110,9 @@ Disassembly of section .text:
     10b0:	000780e7          	jalr	a5
     10b4:	ff24e8e3          	bltu	s1,s2,10a4 <__libc_init_array+0x34>
     10b8:	00003797          	auipc	a5,0x3
-    10bc:	b1c78793          	addi	a5,a5,-1252 # 3bd4 <_data>
+    10bc:	a3c78793          	addi	a5,a5,-1476 # 3af4 <_data>
     10c0:	00003417          	auipc	s0,0x3
-    10c4:	b1440413          	addi	s0,s0,-1260 # 3bd4 <_data>
+    10c4:	a3440413          	addi	s0,s0,-1484 # 3af4 <_data>
     10c8:	40878933          	sub	s2,a5,s0
     10cc:	40295913          	srai	s2,s2,0x2
     10d0:	00878e63          	beq	a5,s0,10ec <__libc_init_array+0x7c>
@@ -142,7 +142,7 @@ void main()
 
     bsp_printf("\n\rHello Efinix Edge Vision SoC!!\n\n\r");
     1110:	00004537          	lui	a0,0x4
-    1114:	04050513          	addi	a0,a0,64 # 4040 <_data+0x46c>
+    1114:	f6050513          	addi	a0,a0,-160 # 3f60 <_data+0x46c>
     1118:	048010ef          	jal	2160 <bsp_printf>
 
     cam0_init(I2C_CTRL_CAM0);
@@ -151,7 +151,7 @@ void main()
 #elif defined(BOARD_Ti60F225)
     bsp_printf("Init Camera.....");
     111c:	00004537          	lui	a0,0x4
-    1120:	06450513          	addi	a0,a0,100 # 4064 <_data+0x490>
+    1120:	f8450513          	addi	a0,a0,-124 # 3f84 <_data+0x490>
     1124:	03c010ef          	jal	2160 <bsp_printf>
     static inline u32 read_u32(u32 address){
         return *((volatile u32*) address);
@@ -160,14 +160,14 @@ void main()
     static inline void write_u32(u32 data, u32 address){
         *((volatile u32*) address) = data;
     1128:	f8100437          	lui	s0,0xf8100
-    112c:	00042223          	sw	zero,4(s0) # f8100004 <__freertos_irq_stack_top+0xf80fa764>
+    112c:	00042223          	sw	zero,4(s0) # f8100004 <__freertos_irq_stack_top+0xf80fa854>
 
     // Assert camera reset
     EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, EXAMPLE_APB3_SLV_REG1_OFFSET, 0x00000000);
     bsp_uDelay(100);
     1130:	f8b00637          	lui	a2,0xf8b00
     1134:	05f5e5b7          	lui	a1,0x5f5e
-    1138:	10058593          	addi	a1,a1,256 # 5f5e100 <__freertos_irq_stack_top+0x5f58860>
+    1138:	10058593          	addi	a1,a1,256 # 5f5e100 <__freertos_irq_stack_top+0x5f58950>
     113c:	06400513          	li	a0,100
     1140:	3d1000ef          	jal	1d10 <clint_uDelay>
     1144:	00200793          	li	a5,2
@@ -176,14 +176,14 @@ void main()
     bsp_uDelay(1000 * 10);
     114c:	f8b00637          	lui	a2,0xf8b00
     1150:	05f5e5b7          	lui	a1,0x5f5e
-    1154:	10058593          	addi	a1,a1,256 # 5f5e100 <__freertos_irq_stack_top+0x5f58860>
+    1154:	10058593          	addi	a1,a1,256 # 5f5e100 <__freertos_irq_stack_top+0x5f58950>
     1158:	00002537          	lui	a0,0x2
     115c:	71050513          	addi	a0,a0,1808 # 2710 <i2c_txAckWait+0x8>
     1160:	3b1000ef          	jal	1d10 <clint_uDelay>
 
     cam0_init(I2C_CTRL_CAM0);
     1164:	f8015537          	lui	a0,0xf8015
-    1168:	230020ef          	jal	3398 <cam0_init>
+    1168:	150020ef          	jal	32b8 <cam0_init>
     116c:	00300793          	li	a5,3
     1170:	00f42223          	sw	a5,4(s0)
 
@@ -191,7 +191,7 @@ void main()
     EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, EXAMPLE_APB3_SLV_REG1_OFFSET, 0x00000003);
     bsp_printf("Done\n\r");
     1174:	00004537          	lui	a0,0x4
-    1178:	07850513          	addi	a0,a0,120 # 4078 <_data+0x4a4>
+    1178:	f9850513          	addi	a0,a0,-104 # 3f98 <_data+0x4a4>
     117c:	7e5000ef          	jal	2160 <bsp_printf>
 
 #endif
@@ -200,7 +200,7 @@ void main()
 
     bsp_printf("Init DMA.....");
     1180:	00004537          	lui	a0,0x4
-    1184:	08050513          	addi	a0,a0,128 # 4080 <_data+0x4ac>
+    1184:	fa050513          	addi	a0,a0,-96 # 3fa0 <_data+0x4ac>
     1188:	7d9000ef          	jal	2160 <bsp_printf>
 
     uart_interrupt_init();
@@ -235,18 +235,18 @@ void main()
 
     bsp_printf("Done !!\n\n\r");
     11e4:	00004537          	lui	a0,0x4
-    11e8:	09050513          	addi	a0,a0,144 # 4090 <_data+0x4bc>
+    11e8:	fb050513          	addi	a0,a0,-80 # 3fb0 <_data+0x4bc>
     11ec:	775000ef          	jal	2160 <bsp_printf>
 
     /*******************************************************Trigger Display********************************************************/
 
     select_demo_mode = 0; // Default
-    11f0:	8201a423          	sw	zero,-2008(gp) # 4890 <select_demo_mode>
+    11f0:	8201a423          	sw	zero,-2008(gp) # 47a0 <select_demo_mode>
 
     // To check display functionality
     bsp_printf("Initialize test display content..\n\r");
     11f4:	00004537          	lui	a0,0x4
-    11f8:	09c50513          	addi	a0,a0,156 # 409c <_data+0x4c8>
+    11f8:	fbc50513          	addi	a0,a0,-68 # 3fbc <_data+0x4c8>
     11fc:	765000ef          	jal	2160 <bsp_printf>
 
     // Array name to be modified to DDR location used for display
@@ -288,7 +288,7 @@ void main()
     1258:	001006b7          	lui	a3,0x100
     125c:	00e68733          	add	a4,a3,a4
     1260:	000106b7          	lui	a3,0x10
-    1264:	f0068693          	addi	a3,a3,-256 # ff00 <__freertos_irq_stack_top+0xa660>
+    1264:	f0068693          	addi	a3,a3,-256 # ff00 <__freertos_irq_stack_top+0xa750>
     1268:	00d72023          	sw	a3,0(a4)
     126c:	02c0006f          	j	1298 <main+0x194>
             }
@@ -349,7 +349,7 @@ void main()
     1308:	00d72023          	sw	a3,0(a4)
     130c:	f8dff06f          	j	1298 <main+0x194>
     for (int y = 0; y < FRAME_HEIGHT; y++)
-    1310:	00160613          	addi	a2,a2,1 # f8b00001 <__freertos_irq_stack_top+0xf8afa761>
+    1310:	00160613          	addi	a2,a2,1 # f8b00001 <__freertos_irq_stack_top+0xf8afa851>
     1314:	21b00793          	li	a5,539
     1318:	00c7c663          	blt	a5,a2,1324 <main+0x220>
         for (int x = 0; x < FRAME_WIDTH; x++)
@@ -362,7 +362,7 @@ void main()
     // Trigger display DMA once then the rest handled by DMA (Direct mode DMA)
     bsp_printf("\nTrigger display DMA..\n\r");
     1324:	00004537          	lui	a0,0x4
-    1328:	0c050513          	addi	a0,a0,192 # 40c0 <_data+0x4ec>
+    1328:	fe050513          	addi	a0,a0,-32 # 3fe0 <_data+0x4ec>
     132c:	635000ef          	jal	2160 <bsp_printf>
 
     // SELECT start address of to be displayed data accordingly - Default
@@ -389,13 +389,13 @@ void main()
     dmasg_direct_start(DMASG_BASE, DMASG_DISPLAY_MM2S_CHANNEL, (FRAME_WIDTH * FRAME_HEIGHT) * 4, 0); // Without self restart
     1370:	00000693          	li	a3,0
     1374:	0011d637          	lui	a2,0x11d
-    1378:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x1173a0>
+    1378:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x117490>
     137c:	00200593          	li	a1,2
     1380:	f8110537          	lui	a0,0xf8110
     1384:	571000ef          	jal	20f4 <dmasg_direct_start>
     display_mm2s_active = 1;                                                                         // Display always active
     1388:	00100713          	li	a4,1
-    138c:	82e1a223          	sw	a4,-2012(gp) # 488c <display_mm2s_active>
+    138c:	82e1a223          	sw	a4,-2012(gp) # 479c <display_mm2s_active>
 
     msDelay(5000); // Display test content for 5 seconds
     1390:	00001537          	lui	a0,0x1
@@ -404,7 +404,7 @@ void main()
 
     bsp_printf("Done !!\n\n\r");
     139c:	00004537          	lui	a0,0x4
-    13a0:	09050513          	addi	a0,a0,144 # 4090 <_data+0x4bc>
+    13a0:	fb050513          	addi	a0,a0,-80 # 3fb0 <_data+0x4bc>
     13a4:	5bd000ef          	jal	2160 <bsp_printf>
 
     ispExample_menu();
@@ -412,11 +412,11 @@ void main()
 
     bsp_printf("Default Demo Mode: a\n\r");
     13ac:	00004537          	lui	a0,0x4
-    13b0:	0dc50513          	addi	a0,a0,220 # 40dc <_data+0x508>
+    13b0:	ffc50513          	addi	a0,a0,-4 # 3ffc <_data+0x508>
     13b4:	5ad000ef          	jal	2160 <bsp_printf>
     13b8:	1040006f          	j	14bc <main+0x3b8>
     13bc:	f81007b7          	lui	a5,0xf8100
-    13c0:	0007a623          	sw	zero,12(a5) # f810000c <__freertos_irq_stack_top+0xf80fa76c>
+    13c0:	0007a623          	sw	zero,12(a5) # f810000c <__freertos_irq_stack_top+0xf80fa85c>
     }
     13c4:	1100006f          	j	14d4 <main+0x3d0>
 
@@ -433,7 +433,7 @@ void main()
     13dc:	17c0006f          	j	1558 <main+0x454>
         *((volatile u32*) address) = data;
     13e0:	f81207b7          	lui	a5,0xf8120
-    13e4:	0007a223          	sw	zero,4(a5) # f8120004 <__freertos_irq_stack_top+0xf811a764>
+    13e4:	0007a223          	sw	zero,4(a5) # f8120004 <__freertos_irq_stack_top+0xf811a854>
                 write_u32(0x00000002, EXAMPLE_APB3_SLV_HW + EXAMPLE_APB3_SLV_HW_REG1_OFFSET); // 2'd2: Sobel+Erosion
             }
 
@@ -458,7 +458,7 @@ void main()
             // SELECT dma transfer length - Make sure match with HW accelerator mode selection
             // Additonal data is required to be fed for line buffer(s) data flushing
             if (select_demo_mode == 2 || select_demo_mode == 4)
-    1418:	8281a783          	lw	a5,-2008(gp) # 4890 <select_demo_mode>
+    1418:	8281a783          	lw	a5,-2008(gp) # 47a0 <select_demo_mode>
     141c:	00200713          	li	a4,2
     1420:	00e78663          	beq	a5,a4,142c <main+0x328>
     1424:	00400713          	li	a4,4
@@ -467,7 +467,7 @@ void main()
                 dmasg_direct_start(DMASG_BASE, DMASG_HW_ACCEL_MM2S_1_CHANNEL, ((FRAME_WIDTH * FRAME_HEIGHT) + (FRAME_WIDTH + 1)) * 4, 0); // Sobel only
     142c:	00000693          	li	a3,0
     1430:	0011d637          	lui	a2,0x11d
-    1434:	4b460613          	addi	a2,a2,1204 # 11d4b4 <__freertos_irq_stack_top+0x117c14>
+    1434:	4b460613          	addi	a2,a2,1204 # 11d4b4 <__freertos_irq_stack_top+0x117d04>
     1438:	00400593          	li	a1,4
     143c:	f8110537          	lui	a0,0xf8110
     1440:	4b5000ef          	jal	20f4 <dmasg_direct_start>
@@ -492,13 +492,13 @@ void main()
             dmasg_direct_start(DMASG_BASE, DMASG_HW_ACCEL_S2MM_CHANNEL, (FRAME_WIDTH * FRAME_HEIGHT) * 4, 0);
     1470:	00000693          	li	a3,0
     1474:	0011d637          	lui	a2,0x11d
-    1478:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x1173a0>
+    1478:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x117490>
     147c:	00300593          	li	a1,3
     1480:	f8110537          	lui	a0,0xf8110
     1484:	471000ef          	jal	20f4 <dmasg_direct_start>
     1488:	f81207b7          	lui	a5,0xf8120
     148c:	00100713          	li	a4,1
-    1490:	00e7a423          	sw	a4,8(a5) # f8120008 <__freertos_irq_stack_top+0xf811a768>
+    1490:	00e7a423          	sw	a4,8(a5) # f8120008 <__freertos_irq_stack_top+0xf811a858>
     1494:	0007a423          	sw	zero,8(a5)
             // Indicate start of S2MM DMA to HW accel building block via APB3 slave
             write_u32(0x00000001, EXAMPLE_APB3_SLV_HW + EXAMPLE_APB3_SLV_HW_REG2_OFFSET);
@@ -516,12 +516,12 @@ void main()
     14b4:	fe0512e3          	bnez	a0,1498 <main+0x394>
     14b8:	0000500f          	.word	0x0000500f
         if (select_demo_mode > 2)
-    14bc:	8281a703          	lw	a4,-2008(gp) # 4890 <select_demo_mode>
+    14bc:	8281a703          	lw	a4,-2008(gp) # 47a0 <select_demo_mode>
     14c0:	00200793          	li	a5,2
     14c4:	eee7fce3          	bgeu	a5,a4,13bc <main+0x2b8>
     14c8:	f81007b7          	lui	a5,0xf8100
     14cc:	00100713          	li	a4,1
-    14d0:	00e7a623          	sw	a4,12(a5) # f810000c <__freertos_irq_stack_top+0xf80fa76c>
+    14d0:	00e7a623          	sw	a4,12(a5) # f810000c <__freertos_irq_stack_top+0xf80fa85c>
         dmasg_input_stream(DMASG_BASE, DMASG_CAM1_S2MM_CHANNEL, DMASG_CAM1_S2MM_PORT, 1, 0);
     14d4:	00000713          	li	a4,0
     14d8:	00100693          	li	a3,1
@@ -538,16 +538,16 @@ void main()
         dmasg_direct_start(DMASG_BASE, DMASG_CAM1_S2MM_CHANNEL, (FRAME_WIDTH * FRAME_HEIGHT) * 4, 0);
     1500:	00000693          	li	a3,0
     1504:	0011d637          	lui	a2,0x11d
-    1508:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x1173a0>
+    1508:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x117490>
     150c:	00000593          	li	a1,0
     1510:	f8110537          	lui	a0,0xf8110
     1514:	3e1000ef          	jal	20f4 <dmasg_direct_start>
     1518:	f81007b7          	lui	a5,0xf8100
     151c:	00100713          	li	a4,1
-    1520:	00e7a823          	sw	a4,16(a5) # f8100010 <__freertos_irq_stack_top+0xf80fa770>
+    1520:	00e7a823          	sw	a4,16(a5) # f8100010 <__freertos_irq_stack_top+0xf80fa860>
     1524:	0007a823          	sw	zero,16(a5)
     1528:	f81007b7          	lui	a5,0xf8100
-    152c:	00e7a423          	sw	a4,8(a5) # f8100008 <__freertos_irq_stack_top+0xf80fa768>
+    152c:	00e7a423          	sw	a4,8(a5) # f8100008 <__freertos_irq_stack_top+0xf80fa858>
     1530:	0007a423          	sw	zero,8(a5)
         while (dmasg_busy(DMASG_BASE, DMASG_CAM1_S2MM_CHANNEL))
     1534:	00000593          	li	a1,0
@@ -556,21 +556,21 @@ void main()
     1540:	fe051ae3          	bnez	a0,1534 <main+0x430>
     1544:	0000500f          	.word	0x0000500f
         if (select_demo_mode == 1 || select_demo_mode == 2)
-    1548:	8281a783          	lw	a5,-2008(gp) # 4890 <select_demo_mode>
+    1548:	8281a783          	lw	a5,-2008(gp) # 47a0 <select_demo_mode>
     154c:	fff78793          	addi	a5,a5,-1
     1550:	00100713          	li	a4,1
     1554:	e6f77ae3          	bgeu	a4,a5,13c8 <main+0x2c4>
         if (select_demo_mode == 2 || select_demo_mode > 3)
-    1558:	8281a783          	lw	a5,-2008(gp) # 4890 <select_demo_mode>
+    1558:	8281a783          	lw	a5,-2008(gp) # 47a0 <select_demo_mode>
     155c:	00200713          	li	a4,2
     1560:	00e78663          	beq	a5,a4,156c <main+0x468>
     1564:	00300713          	li	a4,3
     1568:	f4f77ae3          	bgeu	a4,a5,14bc <main+0x3b8>
     156c:	f81207b7          	lui	a5,0xf8120
     1570:	00500713          	li	a4,5
-    1574:	00e7a023          	sw	a4,0(a5) # f8120000 <__freertos_irq_stack_top+0xf811a760>
+    1574:	00e7a023          	sw	a4,0(a5) # f8120000 <__freertos_irq_stack_top+0xf811a850>
             if (select_demo_mode == 2 || select_demo_mode == 4)
-    1578:	8281a783          	lw	a5,-2008(gp) # 4890 <select_demo_mode>
+    1578:	8281a783          	lw	a5,-2008(gp) # 47a0 <select_demo_mode>
     157c:	00200713          	li	a4,2
     1580:	e6e780e3          	beq	a5,a4,13e0 <main+0x2dc>
     1584:	00400713          	li	a4,4
@@ -580,19 +580,19 @@ void main()
     1590:	00e78a63          	beq	a5,a4,15a4 <main+0x4a0>
     1594:	f81207b7          	lui	a5,0xf8120
     1598:	00200713          	li	a4,2
-    159c:	00e7a223          	sw	a4,4(a5) # f8120004 <__freertos_irq_stack_top+0xf811a764>
+    159c:	00e7a223          	sw	a4,4(a5) # f8120004 <__freertos_irq_stack_top+0xf811a854>
     }
     15a0:	e49ff06f          	j	13e8 <main+0x2e4>
         *((volatile u32*) address) = data;
     15a4:	f81207b7          	lui	a5,0xf8120
     15a8:	00100713          	li	a4,1
-    15ac:	00e7a223          	sw	a4,4(a5) # f8120004 <__freertos_irq_stack_top+0xf811a764>
+    15ac:	00e7a223          	sw	a4,4(a5) # f8120004 <__freertos_irq_stack_top+0xf811a854>
     }
     15b0:	e39ff06f          	j	13e8 <main+0x2e4>
                 dmasg_direct_start(DMASG_BASE, DMASG_HW_ACCEL_MM2S_1_CHANNEL, ((FRAME_WIDTH * FRAME_HEIGHT) + (2 * FRAME_WIDTH + 2)) * 4, 0); // Sobel + Dilation/Erosion
     15b4:	00000693          	li	a3,0
     15b8:	0011e637          	lui	a2,0x11e
-    15bc:	d2860613          	addi	a2,a2,-728 # 11dd28 <__freertos_irq_stack_top+0x118488>
+    15bc:	d2860613          	addi	a2,a2,-728 # 11dd28 <__freertos_irq_stack_top+0x118578>
     15c0:	00400593          	li	a1,4
     15c4:	f8110537          	lui	a0,0xf8110
     15c8:	32d000ef          	jal	20f4 <dmasg_direct_start>
@@ -608,7 +608,7 @@ void main()
     15d0:	00259593          	slli	a1,a1,0x2
     15d4:	00a585b3          	add	a1,a1,a0
         *((volatile u32*) address) = data;
-    15d8:	00c5a023          	sw	a2,0(a1) # 500000 <__freertos_irq_stack_top+0x4fa760>
+    15d8:	00c5a023          	sw	a2,0(a1) # 500000 <__freertos_irq_stack_top+0x4fa850>
     }
     15dc:	00008067          	ret
 
@@ -667,7 +667,7 @@ void main()
 
 00001644 <uart_writeAvailability>:
         return *((volatile u32*) address);
-    1644:	00452503          	lw	a0,4(a0) # f8110004 <__freertos_irq_stack_top+0xf810a764>
+    1644:	00452503          	lw	a0,4(a0) # f8110004 <__freertos_irq_stack_top+0xf810a854>
 *          of available spaces for writing data from bits 23 to 16. It then
 *          returns this value after masking with 0xFF.
 *
@@ -773,7 +773,7 @@ void main()
     1700:	0084d733          	srl	a4,s1,s0
     1704:	00f77713          	andi	a4,a4,15
     1708:	000047b7          	lui	a5,0x4
-    170c:	bd478793          	addi	a5,a5,-1068 # 3bd4 <_data>
+    170c:	af478793          	addi	a5,a5,-1292 # 3af4 <_data>
     1710:	00e787b3          	add	a5,a5,a4
     1714:	0007c503          	lbu	a0,0(a5)
     1718:	f79ff0ef          	jal	1690 <_putchar>
@@ -807,7 +807,7 @@ void main()
     1754:	0084d733          	srl	a4,s1,s0
     1758:	00f77713          	andi	a4,a4,15
     175c:	000047b7          	lui	a5,0x4
-    1760:	be878793          	addi	a5,a5,-1048 # 3be8 <_data+0x14>
+    1760:	b0878793          	addi	a5,a5,-1272 # 3b08 <_data+0x14>
     1764:	00e787b3          	add	a5,a5,a4
     1768:	0007c503          	lbu	a0,0(a5)
     176c:	f25ff0ef          	jal	1690 <_putchar>
@@ -1074,7 +1074,7 @@ void main()
     1990:	f85ff06f          	j	1914 <bsp_printf+0x54>
                         bsp_printf_s("<Floating point printing not enable. Please Enable it at bsp.h first...>");
     1994:	00004537          	lui	a0,0x4
-    1998:	bfc50513          	addi	a0,a0,-1028 # 3bfc <_data+0x28>
+    1998:	b1c50513          	addi	a0,a0,-1252 # 3b1c <_data+0x28>
     199c:	e0dff0ef          	jal	17a8 <bsp_printf_s>
                         break;
     19a0:	f75ff06f          	j	1914 <bsp_printf+0x54>
@@ -1090,7 +1090,7 @@ void main()
     19c0:	fed762e3          	bltu	a4,a3,19a4 <bsp_printf+0xe4>
     19c4:	00269793          	slli	a5,a3,0x2
     19c8:	00004737          	lui	a4,0x4
-    19cc:	17070713          	addi	a4,a4,368 # 4170 <_data+0x59c>
+    19cc:	09070713          	addi	a4,a4,144 # 4090 <_data+0x59c>
     19d0:	00e787b3          	add	a5,a5,a4
     19d4:	0007a783          	lw	a5,0(a5)
     19d8:	00078067          	jr	a5
@@ -1114,7 +1114,7 @@ void crash()
     19f4:	00112623          	sw	ra,12(sp)
     bsp_printf("\n*** CRASH ***\n");
     19f8:	00004537          	lui	a0,0x4
-    19fc:	c4850513          	addi	a0,a0,-952 # 3c48 <_data+0x74>
+    19fc:	b6850513          	addi	a0,a0,-1176 # 3b68 <_data+0x74>
     1a00:	ec1ff0ef          	jal	18c0 <bsp_printf>
     while (1)
     1a04:	0000006f          	j	1a04 <crash+0x14>
@@ -1145,7 +1145,7 @@ void dma_init()
     1a40:	b91ff0ef          	jal	15d0 <plic_set_priority>
     csr_write(mtvec, trap_entry);
     1a44:	000047b7          	lui	a5,0x4
-    1a48:	b4478793          	addi	a5,a5,-1212 # 3b44 <trap_entry>
+    1a48:	a6478793          	addi	a5,a5,-1436 # 3a64 <trap_entry>
     1a4c:	30579073          	csrw	mtvec,a5
     csr_set(mie, MIE_MEIE);
     1a50:	000017b7          	lui	a5,0x1
@@ -1201,7 +1201,7 @@ void trap()
 
 00001ab0 <uart_writeAvailability>:
         return *((volatile u32*) address);
-    1ab0:	00452503          	lw	a0,4(a0) # f8c00004 <__freertos_irq_stack_top+0xf8bfa764>
+    1ab0:	00452503          	lw	a0,4(a0) # f8c00004 <__freertos_irq_stack_top+0xf8bfa854>
         return (read_u32(reg + UART_STATUS) >> 16) & 0xFF;
     1ab4:	01055513          	srli	a0,a0,0x10
     }
@@ -1264,11 +1264,11 @@ void trap()
     static void clint_uDelay(u32 usec, u32 hz, u32 reg){
         u32 mTimePerUsec = hz/1000000;
     1b40:	000f47b7          	lui	a5,0xf4
-    1b44:	24078793          	addi	a5,a5,576 # f4240 <__freertos_irq_stack_top+0xee9a0>
+    1b44:	24078793          	addi	a5,a5,576 # f4240 <__freertos_irq_stack_top+0xeea90>
     1b48:	02f5d5b3          	divu	a1,a1,a5
     readReg_u32 (clint_getTimeLow , CLINT_TIME_ADDR)
     1b4c:	0000c7b7          	lui	a5,0xc
-    1b50:	ff878793          	addi	a5,a5,-8 # bff8 <__freertos_irq_stack_top+0x6758>
+    1b50:	ff878793          	addi	a5,a5,-8 # bff8 <__freertos_irq_stack_top+0x6848>
     1b54:	00f60633          	add	a2,a2,a5
         return *((volatile u32*) address);
     1b58:	00062783          	lw	a5,0(a2)
@@ -1324,7 +1324,7 @@ void assert(int cond)
 	{
 		uart_writeStr(BSP_UART_TERMINAL, "Assert failure\n");
     1bb8:	000045b7          	lui	a1,0x4
-    1bbc:	c5858593          	addi	a1,a1,-936 # 3c58 <_data+0x84>
+    1bbc:	b7858593          	addi	a1,a1,-1160 # 3b78 <_data+0x84>
     1bc0:	f8010537          	lui	a0,0xf8010
     1bc4:	f39ff0ef          	jal	1afc <uart_writeStr>
 		while (1)
@@ -1342,7 +1342,7 @@ void msDelay(u32 ms)
 	bsp_uDelay(ms * 1000);
     1bd4:	f8b00637          	lui	a2,0xf8b00
     1bd8:	05f5e5b7          	lui	a1,0x5f5e
-    1bdc:	10058593          	addi	a1,a1,256 # 5f5e100 <__freertos_irq_stack_top+0x5f58860>
+    1bdc:	10058593          	addi	a1,a1,256 # 5f5e100 <__freertos_irq_stack_top+0x5f58950>
     1be0:	3e800793          	li	a5,1000
     1be4:	02f50533          	mul	a0,a0,a5
     1be8:	f59ff0ef          	jal	1b40 <clint_uDelay>
@@ -1367,7 +1367,7 @@ void mipi_i2c_init(u32 i2cCtrl)
     1c04:	00f12423          	sw	a5,8(sp)
 	i2c_mipi.timeout = I2C_CTRL_HZ / 1000;
     1c08:	000187b7          	lui	a5,0x18
-    1c0c:	6a078793          	addi	a5,a5,1696 # 186a0 <__freertos_irq_stack_top+0x12e00>
+    1c0c:	6a078793          	addi	a5,a5,1696 # 186a0 <__freertos_irq_stack_top+0x12ef0>
     1c10:	00f12623          	sw	a5,12(sp)
 	i2c_mipi.tsuDat = I2C_CTRL_HZ / 2000000;
     1c14:	03200793          	li	a5,50
@@ -1392,7 +1392,7 @@ void mipi_i2c_init(u32 i2cCtrl)
 
 00001c44 <uart_writeAvailability>:
         return *((volatile u32*) address);
-    1c44:	00452503          	lw	a0,4(a0) # f8010004 <__freertos_irq_stack_top+0xf800a764>
+    1c44:	00452503          	lw	a0,4(a0) # f8010004 <__freertos_irq_stack_top+0xf800a854>
         return (read_u32(reg + UART_STATUS) >> 16) & 0xFF;
     1c48:	01055513          	srli	a0,a0,0x10
     }
@@ -1499,14 +1499,14 @@ void mipi_i2c_init(u32 i2cCtrl)
 00001d10 <clint_uDelay>:
         u32 mTimePerUsec = hz/1000000;
     1d10:	000f47b7          	lui	a5,0xf4
-    1d14:	24078793          	addi	a5,a5,576 # f4240 <__freertos_irq_stack_top+0xee9a0>
+    1d14:	24078793          	addi	a5,a5,576 # f4240 <__freertos_irq_stack_top+0xeea90>
     1d18:	02f5d5b3          	divu	a1,a1,a5
     readReg_u32 (clint_getTimeLow , CLINT_TIME_ADDR)
     1d1c:	0000c7b7          	lui	a5,0xc
-    1d20:	ff878793          	addi	a5,a5,-8 # bff8 <__freertos_irq_stack_top+0x6758>
+    1d20:	ff878793          	addi	a5,a5,-8 # bff8 <__freertos_irq_stack_top+0x6848>
     1d24:	00f60633          	add	a2,a2,a5
         return *((volatile u32*) address);
-    1d28:	00062783          	lw	a5,0(a2) # f8b00000 <__freertos_irq_stack_top+0xf8afa760>
+    1d28:	00062783          	lw	a5,0(a2) # f8b00000 <__freertos_irq_stack_top+0xf8afa850>
         u32 limit = clint_getTimeLow(reg) + usec*mTimePerUsec;
     1d2c:	02a585b3          	mul	a1,a1,a0
     1d30:	00f58733          	add	a4,a1,a5
@@ -1563,7 +1563,7 @@ void mipi_i2c_init(u32 i2cCtrl)
     1db4:	0084d733          	srl	a4,s1,s0
     1db8:	00f77713          	andi	a4,a4,15
     1dbc:	000047b7          	lui	a5,0x4
-    1dc0:	bd478793          	addi	a5,a5,-1068 # 3bd4 <_data>
+    1dc0:	af478793          	addi	a5,a5,-1292 # 3af4 <_data>
     1dc4:	00e787b3          	add	a5,a5,a4
     1dc8:	0007c503          	lbu	a0,0(a5)
     1dcc:	f79ff0ef          	jal	1d44 <_putchar>
@@ -1591,7 +1591,7 @@ void mipi_i2c_init(u32 i2cCtrl)
     1e08:	0084d733          	srl	a4,s1,s0
     1e0c:	00f77713          	andi	a4,a4,15
     1e10:	000047b7          	lui	a5,0x4
-    1e14:	be878793          	addi	a5,a5,-1048 # 3be8 <_data+0x14>
+    1e14:	b0878793          	addi	a5,a5,-1272 # 3b08 <_data+0x14>
     1e18:	00e787b3          	add	a5,a5,a4
     1e1c:	0007c503          	lbu	a0,0(a5)
     1e20:	f25ff0ef          	jal	1d44 <_putchar>
@@ -1802,7 +1802,7 @@ void mipi_i2c_init(u32 i2cCtrl)
     2008:	00c59593          	slli	a1,a1,0xc
     200c:	00a585b3          	add	a1,a1,a0
     2010:	002007b7          	lui	a5,0x200
-    2014:	00478793          	addi	a5,a5,4 # 200004 <__freertos_irq_stack_top+0x1fa764>
+    2014:	00478793          	addi	a5,a5,4 # 200004 <__freertos_irq_stack_top+0x1fa854>
     2018:	00f585b3          	add	a1,a1,a5
         return *((volatile u32*) address);
     201c:	0005a503          	lw	a0,0(a1)
@@ -1819,7 +1819,7 @@ void mipi_i2c_init(u32 i2cCtrl)
     2024:	00c59593          	slli	a1,a1,0xc
     2028:	00a585b3          	add	a1,a1,a0
     202c:	002007b7          	lui	a5,0x200
-    2030:	00478793          	addi	a5,a5,4 # 200004 <__freertos_irq_stack_top+0x1fa764>
+    2030:	00478793          	addi	a5,a5,4 # 200004 <__freertos_irq_stack_top+0x1fa854>
     2034:	00f585b3          	add	a1,a1,a5
         *((volatile u32*) address) = data;
     2038:	00c5a023          	sw	a2,0(a1)
@@ -1835,10 +1835,10 @@ void mipi_i2c_init(u32 i2cCtrl)
         u32 ca = dmasg_ca(base, channel);
     2040:	00759593          	slli	a1,a1,0x7
     2044:	00a58533          	add	a0,a1,a0
-    2048:	00c52023          	sw	a2,0(a0) # f8010000 <__freertos_irq_stack_top+0xf800a760>
+    2048:	00c52023          	sw	a2,0(a0) # f8010000 <__freertos_irq_stack_top+0xf800a850>
         write_u32(address, ca + DMASG_CHANNEL_INPUT_ADDRESS);
         write_u32(DMASG_CHANNEL_INPUT_CONFIG_MEMORY | (byte_per_burst-1 & 0xFFF), ca + DMASG_CHANNEL_INPUT_CONFIG);
-    204c:	fff68693          	addi	a3,a3,-1 # feffff <__freertos_irq_stack_top+0xfea75f>
+    204c:	fff68693          	addi	a3,a3,-1 # feffff <__freertos_irq_stack_top+0xfea84f>
     2050:	000017b7          	lui	a5,0x1
     2054:	fff78713          	addi	a4,a5,-1 # fff <CUSTOM2+0xfa4>
     2058:	00e6f6b3          	and	a3,a3,a4
@@ -2059,7 +2059,7 @@ void mipi_i2c_init(u32 i2cCtrl)
     2230:	f85ff06f          	j	21b4 <bsp_printf+0x54>
                         bsp_printf_s("<Floating point printing not enable. Please Enable it at bsp.h first...>");
     2234:	00004537          	lui	a0,0x4
-    2238:	bfc50513          	addi	a0,a0,-1028 # 3bfc <_data+0x28>
+    2238:	b1c50513          	addi	a0,a0,-1252 # 3b1c <_data+0x28>
     223c:	c21ff0ef          	jal	1e5c <bsp_printf_s>
                         break;
     2240:	f75ff06f          	j	21b4 <bsp_printf+0x54>
@@ -2075,7 +2075,7 @@ void mipi_i2c_init(u32 i2cCtrl)
     2260:	fed762e3          	bltu	a4,a3,2244 <bsp_printf+0xe4>
     2264:	00269793          	slli	a5,a3,0x2
     2268:	00004737          	lui	a4,0x4
-    226c:	1f470713          	addi	a4,a4,500 # 41f4 <_data+0x620>
+    226c:	11470713          	addi	a4,a4,276 # 4114 <_data+0x620>
     2270:	00e787b3          	add	a5,a5,a4
     2274:	0007a783          	lw	a5,0(a5)
     2278:	00078067          	jr	a5
@@ -2178,7 +2178,7 @@ void rgb2grayscale(volatile uint32_t in_array[], volatile uint32_t out_array[], 
     237c:	ff010113          	addi	sp,sp,-16
     2380:	00112623          	sw	ra,12(sp)
     if (select_demo_mode == 0 || select_demo_mode == 3)
-    2384:	8281a783          	lw	a5,-2008(gp) # 4890 <select_demo_mode>
+    2384:	8281a783          	lw	a5,-2008(gp) # 47a0 <select_demo_mode>
     2388:	02078663          	beqz	a5,23b4 <trigger_next_display_dma+0x38>
     238c:	00300713          	li	a4,3
     2390:	02e78263          	beq	a5,a4,23b4 <trigger_next_display_dma+0x38>
@@ -2214,7 +2214,7 @@ void rgb2grayscale(volatile uint32_t in_array[], volatile uint32_t out_array[], 
     dmasg_direct_start(DMASG_BASE, DMASG_DISPLAY_MM2S_CHANNEL, (FRAME_WIDTH * FRAME_HEIGHT) * 4, 0); // Without self restar
     23f4:	00000693          	li	a3,0
     23f8:	0011d637          	lui	a2,0x11d
-    23fc:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x1173a0>
+    23fc:	c4060613          	addi	a2,a2,-960 # 11cc40 <__freertos_irq_stack_top+0x117490>
     2400:	00200593          	li	a1,2
     2404:	f8110537          	lui	a0,0xf8110
     2408:	cedff0ef          	jal	20f4 <dmasg_direct_start>
@@ -2268,69 +2268,69 @@ void rgb2grayscale(volatile uint32_t in_array[], volatile uint32_t out_array[], 
     249c:	0ce7e063          	bltu	a5,a4,255c <uart_demo_mode_selection+0x12c>
     24a0:	00271513          	slli	a0,a4,0x2
     24a4:	000047b7          	lui	a5,0x4
-    24a8:	27878793          	addi	a5,a5,632 # 4278 <_data+0x6a4>
+    24a8:	19878793          	addi	a5,a5,408 # 4198 <_data+0x6a4>
     24ac:	00f50533          	add	a0,a0,a5
-    24b0:	00052783          	lw	a5,0(a0) # f8010000 <__freertos_irq_stack_top+0xf800a760>
+    24b0:	00052783          	lw	a5,0(a0) # f8010000 <__freertos_irq_stack_top+0xf800a850>
     24b4:	00078067          	jr	a5
             select_demo_mode = 0;
-    24b8:	8201a423          	sw	zero,-2008(gp) # 4890 <select_demo_mode>
+    24b8:	8201a423          	sw	zero,-2008(gp) # 47a0 <select_demo_mode>
             bsp_printf("Selected Demo Mode: a\n\r");
     24bc:	00004537          	lui	a0,0x4
-    24c0:	c6850513          	addi	a0,a0,-920 # 3c68 <_data+0x94>
+    24c0:	b8850513          	addi	a0,a0,-1144 # 3b88 <_data+0x94>
     24c4:	c9dff0ef          	jal	2160 <bsp_printf>
     24c8:	00812403          	lw	s0,8(sp)
     24cc:	f7dff06f          	j	2448 <uart_demo_mode_selection+0x18>
             select_demo_mode = 1;
     24d0:	00100713          	li	a4,1
-    24d4:	82e1a423          	sw	a4,-2008(gp) # 4890 <select_demo_mode>
+    24d4:	82e1a423          	sw	a4,-2008(gp) # 47a0 <select_demo_mode>
             bsp_printf("Selected Demo Mode: b\n\r");
     24d8:	00004537          	lui	a0,0x4
-    24dc:	c8050513          	addi	a0,a0,-896 # 3c80 <_data+0xac>
+    24dc:	ba050513          	addi	a0,a0,-1120 # 3ba0 <_data+0xac>
     24e0:	c81ff0ef          	jal	2160 <bsp_printf>
     24e4:	00812403          	lw	s0,8(sp)
     24e8:	f61ff06f          	j	2448 <uart_demo_mode_selection+0x18>
             select_demo_mode = 2;
     24ec:	00200713          	li	a4,2
-    24f0:	82e1a423          	sw	a4,-2008(gp) # 4890 <select_demo_mode>
+    24f0:	82e1a423          	sw	a4,-2008(gp) # 47a0 <select_demo_mode>
             bsp_printf("Selected Demo Mode: c\n\r");
     24f4:	00004537          	lui	a0,0x4
-    24f8:	c9850513          	addi	a0,a0,-872 # 3c98 <_data+0xc4>
+    24f8:	bb850513          	addi	a0,a0,-1096 # 3bb8 <_data+0xc4>
     24fc:	c65ff0ef          	jal	2160 <bsp_printf>
     2500:	00812403          	lw	s0,8(sp)
     2504:	f45ff06f          	j	2448 <uart_demo_mode_selection+0x18>
             select_demo_mode = 3;
     2508:	00300713          	li	a4,3
-    250c:	82e1a423          	sw	a4,-2008(gp) # 4890 <select_demo_mode>
+    250c:	82e1a423          	sw	a4,-2008(gp) # 47a0 <select_demo_mode>
             bsp_printf("Selected Demo Mode: d\n\r");
     2510:	00004537          	lui	a0,0x4
-    2514:	cb050513          	addi	a0,a0,-848 # 3cb0 <_data+0xdc>
+    2514:	bd050513          	addi	a0,a0,-1072 # 3bd0 <_data+0xdc>
     2518:	c49ff0ef          	jal	2160 <bsp_printf>
     251c:	00812403          	lw	s0,8(sp)
     2520:	f29ff06f          	j	2448 <uart_demo_mode_selection+0x18>
             select_demo_mode = 4;
     2524:	00400713          	li	a4,4
-    2528:	82e1a423          	sw	a4,-2008(gp) # 4890 <select_demo_mode>
+    2528:	82e1a423          	sw	a4,-2008(gp) # 47a0 <select_demo_mode>
             bsp_printf("Selected Demo Mode: e\n\r");
     252c:	00004537          	lui	a0,0x4
-    2530:	cc850513          	addi	a0,a0,-824 # 3cc8 <_data+0xf4>
+    2530:	be850513          	addi	a0,a0,-1048 # 3be8 <_data+0xf4>
     2534:	c2dff0ef          	jal	2160 <bsp_printf>
     2538:	00812403          	lw	s0,8(sp)
     253c:	f0dff06f          	j	2448 <uart_demo_mode_selection+0x18>
             select_demo_mode = 5;
     2540:	00500713          	li	a4,5
-    2544:	82e1a423          	sw	a4,-2008(gp) # 4890 <select_demo_mode>
+    2544:	82e1a423          	sw	a4,-2008(gp) # 47a0 <select_demo_mode>
             bsp_printf("Selected Demo Mode: f\n\r");
     2548:	00004537          	lui	a0,0x4
-    254c:	ce050513          	addi	a0,a0,-800 # 3ce0 <_data+0x10c>
+    254c:	c0050513          	addi	a0,a0,-1024 # 3c00 <_data+0x10c>
     2550:	c11ff0ef          	jal	2160 <bsp_printf>
     2554:	00812403          	lw	s0,8(sp)
     2558:	ef1ff06f          	j	2448 <uart_demo_mode_selection+0x18>
             select_demo_mode = 6;
     255c:	00600713          	li	a4,6
-    2560:	82e1a423          	sw	a4,-2008(gp) # 4890 <select_demo_mode>
+    2560:	82e1a423          	sw	a4,-2008(gp) # 47a0 <select_demo_mode>
             bsp_printf("Selected Demo Mode: g\n\r");
     2564:	00004537          	lui	a0,0x4
-    2568:	cf850513          	addi	a0,a0,-776 # 3cf8 <_data+0x124>
+    2568:	c1850513          	addi	a0,a0,-1000 # 3c18 <_data+0x124>
     256c:	bf5ff0ef          	jal	2160 <bsp_printf>
     2570:	00812403          	lw	s0,8(sp)
 }
@@ -2362,7 +2362,7 @@ void rgb2grayscale(volatile uint32_t in_array[], volatile uint32_t out_array[], 
     25b8:	00600793          	li	a5,6
     25bc:	02f41263          	bne	s0,a5,25e0 <externalInterrupt+0x68>
             if (display_mm2s_active && !(dmasg_busy(DMASG_BASE, DMASG_DISPLAY_MM2S_CHANNEL)))
-    25c0:	8241a783          	lw	a5,-2012(gp) # 488c <display_mm2s_active>
+    25c0:	8241a783          	lw	a5,-2012(gp) # 479c <display_mm2s_active>
     25c4:	fc0784e3          	beqz	a5,258c <externalInterrupt+0x14>
     25c8:	00200593          	li	a1,2
     25cc:	f8110537          	lui	a0,0xf8110
@@ -2388,46 +2388,46 @@ void rgb2grayscale(volatile uint32_t in_array[], volatile uint32_t out_array[], 
     2600:	00812423          	sw	s0,8(sp)
     bsp_printf("================================================================================\n\r");
     2604:	00004437          	lui	s0,0x4
-    2608:	d1040513          	addi	a0,s0,-752 # 3d10 <_data+0x13c>
+    2608:	c3040513          	addi	a0,s0,-976 # 3c30 <_data+0x13c>
     260c:	b55ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("                    ISP Example Design Scenario Selection\n\r");
     2610:	00004537          	lui	a0,0x4
-    2614:	d6450513          	addi	a0,a0,-668 # 3d64 <_data+0x190>
+    2614:	c8450513          	addi	a0,a0,-892 # 3c84 <_data+0x190>
     2618:	b49ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("================================================================================\n\r");
-    261c:	d1040513          	addi	a0,s0,-752
+    261c:	c3040513          	addi	a0,s0,-976
     2620:	b41ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("'a' : Camera Capture + HDMI Display                                             \n\r");
     2624:	00004537          	lui	a0,0x4
-    2628:	da050513          	addi	a0,a0,-608 # 3da0 <_data+0x1cc>
+    2628:	cc050513          	addi	a0,a0,-832 # 3cc0 <_data+0x1cc>
     262c:	b35ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("'b' : Camera Capture + RGB2Grayscale (SW) + HDMI Display                        \n\r");
     2630:	00004537          	lui	a0,0x4
-    2634:	df450513          	addi	a0,a0,-524 # 3df4 <_data+0x220>
+    2634:	d1450513          	addi	a0,a0,-748 # 3d14 <_data+0x220>
     2638:	b29ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("'c' : Camera Capture + RGB2Grayscale (SW) + Sobel (HW) + HDMI Display           \n\r");
     263c:	00004537          	lui	a0,0x4
-    2640:	e4850513          	addi	a0,a0,-440 # 3e48 <_data+0x274>
+    2640:	d6850513          	addi	a0,a0,-664 # 3d68 <_data+0x274>
     2644:	b1dff0ef          	jal	2160 <bsp_printf>
     bsp_printf("'d' : Camera Capture + RGB2Grayscale (HW) + HDMI Display                        \n\r");
     2648:	00004537          	lui	a0,0x4
-    264c:	e9c50513          	addi	a0,a0,-356 # 3e9c <_data+0x2c8>
+    264c:	dbc50513          	addi	a0,a0,-580 # 3dbc <_data+0x2c8>
     2650:	b11ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("'e' : Camera Capture + RGB2Grayscale & Sobel (HW) + HDMI Display                \n\r");
     2654:	00004537          	lui	a0,0x4
-    2658:	ef050513          	addi	a0,a0,-272 # 3ef0 <_data+0x31c>
+    2658:	e1050513          	addi	a0,a0,-496 # 3e10 <_data+0x31c>
     265c:	b05ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("'f' : Camera Capture + RGB2Grayscale & Sobel & Dilation (HW) + HDMI Display     \n\r");
     2660:	00004537          	lui	a0,0x4
-    2664:	f4450513          	addi	a0,a0,-188 # 3f44 <_data+0x370>
+    2664:	e6450513          	addi	a0,a0,-412 # 3e64 <_data+0x370>
     2668:	af9ff0ef          	jal	2160 <bsp_printf>
     bsp_printf("'g' : Camera Capture + RGB2Grayscale & Sobel & Erosion  (HW) + HDMI Display     \n\r");
     266c:	00004537          	lui	a0,0x4
-    2670:	f9850513          	addi	a0,a0,-104 # 3f98 <_data+0x3c4>
+    2670:	eb850513          	addi	a0,a0,-328 # 3eb8 <_data+0x3c4>
     2674:	aedff0ef          	jal	2160 <bsp_printf>
     bsp_printf("================================================================================\n\n\r");
     2678:	00004537          	lui	a0,0x4
-    267c:	fec50513          	addi	a0,a0,-20 # 3fec <_data+0x418>
+    267c:	f0c50513          	addi	a0,a0,-244 # 3f0c <_data+0x418>
     2680:	ae1ff0ef          	jal	2160 <bsp_printf>
 }
     2684:	00c12083          	lw	ra,12(sp)
@@ -2653,36 +2653,36 @@ void AccessCommSeq(u32 i2c_base)
    PiCam_WriteRegData(i2c_base, 0x30EB, 0x05);
     2828:	00500613          	li	a2,5
     282c:	000035b7          	lui	a1,0x3
-    2830:	0eb58593          	addi	a1,a1,235 # 30eb <mipi_i2c_probe+0x37>
+    2830:	0eb58593          	addi	a1,a1,235 # 30eb <bsp_printf+0x77>
     2834:	f15ff0ef          	jal	2748 <PiCam_WriteRegData>
    PiCam_WriteRegData(i2c_base, 0x30EB, 0x0C);
     2838:	00c00613          	li	a2,12
     283c:	000035b7          	lui	a1,0x3
-    2840:	0eb58593          	addi	a1,a1,235 # 30eb <mipi_i2c_probe+0x37>
+    2840:	0eb58593          	addi	a1,a1,235 # 30eb <bsp_printf+0x77>
     2844:	00040513          	mv	a0,s0
     2848:	f01ff0ef          	jal	2748 <PiCam_WriteRegData>
    PiCam_WriteRegData(i2c_base, 0x300A, 0xFF);
     284c:	0ff00613          	li	a2,255
     2850:	000035b7          	lui	a1,0x3
-    2854:	00a58593          	addi	a1,a1,10 # 300a <bsp_printf_x+0x32>
+    2854:	00a58593          	addi	a1,a1,10 # 300a <bsp_printf_X+0x26>
     2858:	00040513          	mv	a0,s0
     285c:	eedff0ef          	jal	2748 <PiCam_WriteRegData>
    PiCam_WriteRegData(i2c_base, 0x300B, 0xFF);
     2860:	0ff00613          	li	a2,255
     2864:	000035b7          	lui	a1,0x3
-    2868:	00b58593          	addi	a1,a1,11 # 300b <bsp_printf_x+0x33>
+    2868:	00b58593          	addi	a1,a1,11 # 300b <bsp_printf_X+0x27>
     286c:	00040513          	mv	a0,s0
     2870:	ed9ff0ef          	jal	2748 <PiCam_WriteRegData>
    PiCam_WriteRegData(i2c_base, 0x30EB, 0x05);
     2874:	00500613          	li	a2,5
     2878:	000035b7          	lui	a1,0x3
-    287c:	0eb58593          	addi	a1,a1,235 # 30eb <mipi_i2c_probe+0x37>
+    287c:	0eb58593          	addi	a1,a1,235 # 30eb <bsp_printf+0x77>
     2880:	00040513          	mv	a0,s0
     2884:	ec5ff0ef          	jal	2748 <PiCam_WriteRegData>
    PiCam_WriteRegData(i2c_base, 0x30EB, 0x09);
     2888:	00900613          	li	a2,9
     288c:	000035b7          	lui	a1,0x3
-    2890:	0eb58593          	addi	a1,a1,235 # 30eb <mipi_i2c_probe+0x37>
+    2890:	0eb58593          	addi	a1,a1,235 # 30eb <bsp_printf+0x77>
     2894:	00040513          	mv	a0,s0
     2898:	eb1ff0ef          	jal	2748 <PiCam_WriteRegData>
 }
@@ -3188,1405 +3188,1316 @@ void PiCam_init(u32 i2c_base)
     2dec:	01010113          	addi	sp,sp,16
     2df0:	00008067          	ret
 
-00002df4 <clint_uDelay>:
-        u32 mTimePerUsec = hz/1000000;
-    2df4:	000f47b7          	lui	a5,0xf4
-    2df8:	24078793          	addi	a5,a5,576 # f4240 <__freertos_irq_stack_top+0xee9a0>
-    2dfc:	02f5d5b3          	divu	a1,a1,a5
-    readReg_u32 (clint_getTimeLow , CLINT_TIME_ADDR)
-    2e00:	0000c7b7          	lui	a5,0xc
-    2e04:	ff878793          	addi	a5,a5,-8 # bff8 <__freertos_irq_stack_top+0x6758>
-    2e08:	00f60633          	add	a2,a2,a5
-        return *((volatile u32*) address);
-    2e0c:	00062783          	lw	a5,0(a2)
-        u32 limit = clint_getTimeLow(reg) + usec*mTimePerUsec;
-    2e10:	02a585b3          	mul	a1,a1,a0
-    2e14:	00f58733          	add	a4,a1,a5
-    2e18:	00062783          	lw	a5,0(a2)
-        while((int32_t)(limit-(clint_getTimeLow(reg))) >= 0);
-    2e1c:	40f707b3          	sub	a5,a4,a5
-    2e20:	fe07dce3          	bgez	a5,2e18 <clint_uDelay+0x24>
-    2e24:	00008067          	ret
-
-00002e28 <_putchar>:
+00002df4 <_putchar>:
     static void _putchar(char character){
-    2e28:	ff010113          	addi	sp,sp,-16
-    2e2c:	00112623          	sw	ra,12(sp)
-    2e30:	00050593          	mv	a1,a0
+    2df4:	ff010113          	addi	sp,sp,-16
+    2df8:	00112623          	sw	ra,12(sp)
+    2dfc:	00050593          	mv	a1,a0
             bsp_putChar(character);
-    2e34:	f8010537          	lui	a0,0xf8010
-    2e38:	f81ff0ef          	jal	2db8 <uart_write>
+    2e00:	f8010537          	lui	a0,0xf8010
+    2e04:	fb5ff0ef          	jal	2db8 <uart_write>
     }
-    2e3c:	00c12083          	lw	ra,12(sp)
+    2e08:	00c12083          	lw	ra,12(sp)
+    2e0c:	01010113          	addi	sp,sp,16
+    2e10:	00008067          	ret
+
+00002e14 <_putchar_s>:
+    {
+    2e14:	ff010113          	addi	sp,sp,-16
+    2e18:	00112623          	sw	ra,12(sp)
+    2e1c:	00812423          	sw	s0,8(sp)
+    2e20:	00050413          	mv	s0,a0
+        while (*p)
+    2e24:	00c0006f          	j	2e30 <_putchar_s+0x1c>
+            _putchar(*(p++));
+    2e28:	00140413          	addi	s0,s0,1
+    2e2c:	fc9ff0ef          	jal	2df4 <_putchar>
+        while (*p)
+    2e30:	00044503          	lbu	a0,0(s0)
+    2e34:	fe051ae3          	bnez	a0,2e28 <_putchar_s+0x14>
+    }
+    2e38:	00c12083          	lw	ra,12(sp)
+    2e3c:	00812403          	lw	s0,8(sp)
     2e40:	01010113          	addi	sp,sp,16
     2e44:	00008067          	ret
 
-00002e48 <_putchar_s>:
+00002e48 <bsp_printHex>:
     {
     2e48:	ff010113          	addi	sp,sp,-16
     2e4c:	00112623          	sw	ra,12(sp)
     2e50:	00812423          	sw	s0,8(sp)
-    2e54:	00050413          	mv	s0,a0
-        while (*p)
-    2e58:	00c0006f          	j	2e64 <_putchar_s+0x1c>
-            _putchar(*(p++));
-    2e5c:	00140413          	addi	s0,s0,1
-    2e60:	fc9ff0ef          	jal	2e28 <_putchar>
-        while (*p)
-    2e64:	00044503          	lbu	a0,0(s0)
-    2e68:	fe051ae3          	bnez	a0,2e5c <_putchar_s+0x14>
-    }
-    2e6c:	00c12083          	lw	ra,12(sp)
-    2e70:	00812403          	lw	s0,8(sp)
-    2e74:	01010113          	addi	sp,sp,16
-    2e78:	00008067          	ret
-
-00002e7c <bsp_printHex>:
-    {
-    2e7c:	ff010113          	addi	sp,sp,-16
-    2e80:	00112623          	sw	ra,12(sp)
-    2e84:	00812423          	sw	s0,8(sp)
-    2e88:	00912223          	sw	s1,4(sp)
-    2e8c:	00050493          	mv	s1,a0
+    2e54:	00912223          	sw	s1,4(sp)
+    2e58:	00050493          	mv	s1,a0
         for (int i = (4*digits)-4; i >= 0; i -= 4) {
-    2e90:	01c00413          	li	s0,28
-    2e94:	0240006f          	j	2eb8 <bsp_printHex+0x3c>
+    2e5c:	01c00413          	li	s0,28
+    2e60:	0240006f          	j	2e84 <bsp_printHex+0x3c>
             _putchar("0123456789ABCDEF"[(val >> i) % 16]);
-    2e98:	0084d733          	srl	a4,s1,s0
-    2e9c:	00f77713          	andi	a4,a4,15
-    2ea0:	000047b7          	lui	a5,0x4
-    2ea4:	bd478793          	addi	a5,a5,-1068 # 3bd4 <_data>
-    2ea8:	00e787b3          	add	a5,a5,a4
-    2eac:	0007c503          	lbu	a0,0(a5)
-    2eb0:	f79ff0ef          	jal	2e28 <_putchar>
+    2e64:	0084d733          	srl	a4,s1,s0
+    2e68:	00f77713          	andi	a4,a4,15
+    2e6c:	000047b7          	lui	a5,0x4
+    2e70:	af478793          	addi	a5,a5,-1292 # 3af4 <_data>
+    2e74:	00e787b3          	add	a5,a5,a4
+    2e78:	0007c503          	lbu	a0,0(a5)
+    2e7c:	f79ff0ef          	jal	2df4 <_putchar>
         for (int i = (4*digits)-4; i >= 0; i -= 4) {
-    2eb4:	ffc40413          	addi	s0,s0,-4
-    2eb8:	fe0450e3          	bgez	s0,2e98 <bsp_printHex+0x1c>
+    2e80:	ffc40413          	addi	s0,s0,-4
+    2e84:	fe0450e3          	bgez	s0,2e64 <bsp_printHex+0x1c>
     }
-    2ebc:	00c12083          	lw	ra,12(sp)
-    2ec0:	00812403          	lw	s0,8(sp)
-    2ec4:	00412483          	lw	s1,4(sp)
-    2ec8:	01010113          	addi	sp,sp,16
-    2ecc:	00008067          	ret
+    2e88:	00c12083          	lw	ra,12(sp)
+    2e8c:	00812403          	lw	s0,8(sp)
+    2e90:	00412483          	lw	s1,4(sp)
+    2e94:	01010113          	addi	sp,sp,16
+    2e98:	00008067          	ret
 
-00002ed0 <bsp_printHex_lower>:
+00002e9c <bsp_printHex_lower>:
     {
-    2ed0:	ff010113          	addi	sp,sp,-16
-    2ed4:	00112623          	sw	ra,12(sp)
-    2ed8:	00812423          	sw	s0,8(sp)
-    2edc:	00912223          	sw	s1,4(sp)
-    2ee0:	00050493          	mv	s1,a0
+    2e9c:	ff010113          	addi	sp,sp,-16
+    2ea0:	00112623          	sw	ra,12(sp)
+    2ea4:	00812423          	sw	s0,8(sp)
+    2ea8:	00912223          	sw	s1,4(sp)
+    2eac:	00050493          	mv	s1,a0
         for (int i = (4*digits)-4; i >= 0; i -= 4) {
-    2ee4:	01c00413          	li	s0,28
-    2ee8:	0240006f          	j	2f0c <bsp_printHex_lower+0x3c>
+    2eb0:	01c00413          	li	s0,28
+    2eb4:	0240006f          	j	2ed8 <bsp_printHex_lower+0x3c>
             _putchar("0123456789abcdef"[(val >> i) % 16]);
-    2eec:	0084d733          	srl	a4,s1,s0
-    2ef0:	00f77713          	andi	a4,a4,15
-    2ef4:	000047b7          	lui	a5,0x4
-    2ef8:	be878793          	addi	a5,a5,-1048 # 3be8 <_data+0x14>
-    2efc:	00e787b3          	add	a5,a5,a4
-    2f00:	0007c503          	lbu	a0,0(a5)
-    2f04:	f25ff0ef          	jal	2e28 <_putchar>
+    2eb8:	0084d733          	srl	a4,s1,s0
+    2ebc:	00f77713          	andi	a4,a4,15
+    2ec0:	000047b7          	lui	a5,0x4
+    2ec4:	b0878793          	addi	a5,a5,-1272 # 3b08 <_data+0x14>
+    2ec8:	00e787b3          	add	a5,a5,a4
+    2ecc:	0007c503          	lbu	a0,0(a5)
+    2ed0:	f25ff0ef          	jal	2df4 <_putchar>
         for (int i = (4*digits)-4; i >= 0; i -= 4) {
-    2f08:	ffc40413          	addi	s0,s0,-4
-    2f0c:	fe0450e3          	bgez	s0,2eec <bsp_printHex_lower+0x1c>
+    2ed4:	ffc40413          	addi	s0,s0,-4
+    2ed8:	fe0450e3          	bgez	s0,2eb8 <bsp_printHex_lower+0x1c>
     }
-    2f10:	00c12083          	lw	ra,12(sp)
-    2f14:	00812403          	lw	s0,8(sp)
-    2f18:	00412483          	lw	s1,4(sp)
+    2edc:	00c12083          	lw	ra,12(sp)
+    2ee0:	00812403          	lw	s0,8(sp)
+    2ee4:	00412483          	lw	s1,4(sp)
+    2ee8:	01010113          	addi	sp,sp,16
+    2eec:	00008067          	ret
+
+00002ef0 <bsp_printf_c>:
+    {
+    2ef0:	ff010113          	addi	sp,sp,-16
+    2ef4:	00112623          	sw	ra,12(sp)
+        _putchar(c);
+    2ef8:	0ff57513          	zext.b	a0,a0
+    2efc:	ef9ff0ef          	jal	2df4 <_putchar>
+    }
+    2f00:	00c12083          	lw	ra,12(sp)
+    2f04:	01010113          	addi	sp,sp,16
+    2f08:	00008067          	ret
+
+00002f0c <bsp_printf_s>:
+    {
+    2f0c:	ff010113          	addi	sp,sp,-16
+    2f10:	00112623          	sw	ra,12(sp)
+        _putchar_s(p);
+    2f14:	f01ff0ef          	jal	2e14 <_putchar_s>
+    }
+    2f18:	00c12083          	lw	ra,12(sp)
     2f1c:	01010113          	addi	sp,sp,16
     2f20:	00008067          	ret
 
-00002f24 <bsp_printf_c>:
+00002f24 <bsp_printf_d>:
     {
-    2f24:	ff010113          	addi	sp,sp,-16
-    2f28:	00112623          	sw	ra,12(sp)
-        _putchar(c);
-    2f2c:	0ff57513          	zext.b	a0,a0
-    2f30:	ef9ff0ef          	jal	2e28 <_putchar>
-    }
-    2f34:	00c12083          	lw	ra,12(sp)
-    2f38:	01010113          	addi	sp,sp,16
-    2f3c:	00008067          	ret
-
-00002f40 <bsp_printf_s>:
-    {
-    2f40:	ff010113          	addi	sp,sp,-16
-    2f44:	00112623          	sw	ra,12(sp)
-        _putchar_s(p);
-    2f48:	f01ff0ef          	jal	2e48 <_putchar_s>
-    }
-    2f4c:	00c12083          	lw	ra,12(sp)
-    2f50:	01010113          	addi	sp,sp,16
-    2f54:	00008067          	ret
-
-00002f58 <bsp_printf_d>:
-    {
-    2f58:	fd010113          	addi	sp,sp,-48
-    2f5c:	02112623          	sw	ra,44(sp)
-    2f60:	02812423          	sw	s0,40(sp)
-    2f64:	02912223          	sw	s1,36(sp)
-    2f68:	00050493          	mv	s1,a0
+    2f24:	fd010113          	addi	sp,sp,-48
+    2f28:	02112623          	sw	ra,44(sp)
+    2f2c:	02812423          	sw	s0,40(sp)
+    2f30:	02912223          	sw	s1,36(sp)
+    2f34:	00050493          	mv	s1,a0
         if (val < 0) {
-    2f6c:	00054663          	bltz	a0,2f78 <bsp_printf_d+0x20>
+    2f38:	00054663          	bltz	a0,2f44 <bsp_printf_d+0x20>
     {
-    2f70:	00010413          	mv	s0,sp
-    2f74:	02c0006f          	j	2fa0 <bsp_printf_d+0x48>
+    2f3c:	00010413          	mv	s0,sp
+    2f40:	02c0006f          	j	2f6c <bsp_printf_d+0x48>
             bsp_printf_c('-');
-    2f78:	02d00513          	li	a0,45
-    2f7c:	fa9ff0ef          	jal	2f24 <bsp_printf_c>
+    2f44:	02d00513          	li	a0,45
+    2f48:	fa9ff0ef          	jal	2ef0 <bsp_printf_c>
             val = -val;
-    2f80:	409004b3          	neg	s1,s1
-    2f84:	fedff06f          	j	2f70 <bsp_printf_d+0x18>
+    2f4c:	409004b3          	neg	s1,s1
+    2f50:	fedff06f          	j	2f3c <bsp_printf_d+0x18>
             *(p++) = '0' + val % 10;
-    2f88:	00a00713          	li	a4,10
-    2f8c:	02e4e7b3          	rem	a5,s1,a4
-    2f90:	03078793          	addi	a5,a5,48
-    2f94:	00f40023          	sb	a5,0(s0)
+    2f54:	00a00713          	li	a4,10
+    2f58:	02e4e7b3          	rem	a5,s1,a4
+    2f5c:	03078793          	addi	a5,a5,48
+    2f60:	00f40023          	sb	a5,0(s0)
             val = val / 10;
-    2f98:	02e4c4b3          	div	s1,s1,a4
+    2f64:	02e4c4b3          	div	s1,s1,a4
             *(p++) = '0' + val % 10;
-    2f9c:	00140413          	addi	s0,s0,1
+    2f68:	00140413          	addi	s0,s0,1
         while (val || p == buffer) {
-    2fa0:	fe0494e3          	bnez	s1,2f88 <bsp_printf_d+0x30>
-    2fa4:	00010793          	mv	a5,sp
-    2fa8:	fef400e3          	beq	s0,a5,2f88 <bsp_printf_d+0x30>
+    2f6c:	fe0494e3          	bnez	s1,2f54 <bsp_printf_d+0x30>
+    2f70:	00010793          	mv	a5,sp
+    2f74:	fef400e3          	beq	s0,a5,2f54 <bsp_printf_d+0x30>
         while (p != buffer)
-    2fac:	00010793          	mv	a5,sp
-    2fb0:	00f40a63          	beq	s0,a5,2fc4 <bsp_printf_d+0x6c>
+    2f78:	00010793          	mv	a5,sp
+    2f7c:	00f40a63          	beq	s0,a5,2f90 <bsp_printf_d+0x6c>
             bsp_printf_c(*(--p));
-    2fb4:	fff40413          	addi	s0,s0,-1
-    2fb8:	00044503          	lbu	a0,0(s0)
-    2fbc:	f69ff0ef          	jal	2f24 <bsp_printf_c>
-    2fc0:	fedff06f          	j	2fac <bsp_printf_d+0x54>
+    2f80:	fff40413          	addi	s0,s0,-1
+    2f84:	00044503          	lbu	a0,0(s0)
+    2f88:	f69ff0ef          	jal	2ef0 <bsp_printf_c>
+    2f8c:	fedff06f          	j	2f78 <bsp_printf_d+0x54>
     }
-    2fc4:	02c12083          	lw	ra,44(sp)
-    2fc8:	02812403          	lw	s0,40(sp)
-    2fcc:	02412483          	lw	s1,36(sp)
-    2fd0:	03010113          	addi	sp,sp,48
-    2fd4:	00008067          	ret
+    2f90:	02c12083          	lw	ra,44(sp)
+    2f94:	02812403          	lw	s0,40(sp)
+    2f98:	02412483          	lw	s1,36(sp)
+    2f9c:	03010113          	addi	sp,sp,48
+    2fa0:	00008067          	ret
 
-00002fd8 <bsp_printf_x>:
+00002fa4 <bsp_printf_x>:
     {
-    2fd8:	ff010113          	addi	sp,sp,-16
-    2fdc:	00112623          	sw	ra,12(sp)
+    2fa4:	ff010113          	addi	sp,sp,-16
+    2fa8:	00112623          	sw	ra,12(sp)
         for(i=0;i<8;i++)
-    2fe0:	00000713          	li	a4,0
-    2fe4:	00700793          	li	a5,7
-    2fe8:	02e7c063          	blt	a5,a4,3008 <bsp_printf_x+0x30>
+    2fac:	00000713          	li	a4,0
+    2fb0:	00700793          	li	a5,7
+    2fb4:	02e7c063          	blt	a5,a4,2fd4 <bsp_printf_x+0x30>
             if((val & (0xFFFFFFF0 <<(4*i))) == 0)
-    2fec:	00271693          	slli	a3,a4,0x2
-    2ff0:	ff000793          	li	a5,-16
-    2ff4:	00d797b3          	sll	a5,a5,a3
-    2ff8:	00f577b3          	and	a5,a0,a5
-    2ffc:	00078663          	beqz	a5,3008 <bsp_printf_x+0x30>
+    2fb8:	00271693          	slli	a3,a4,0x2
+    2fbc:	ff000793          	li	a5,-16
+    2fc0:	00d797b3          	sll	a5,a5,a3
+    2fc4:	00f577b3          	and	a5,a0,a5
+    2fc8:	00078663          	beqz	a5,2fd4 <bsp_printf_x+0x30>
         for(i=0;i<8;i++)
-    3000:	00170713          	addi	a4,a4,1
-    3004:	fe1ff06f          	j	2fe4 <bsp_printf_x+0xc>
+    2fcc:	00170713          	addi	a4,a4,1
+    2fd0:	fe1ff06f          	j	2fb0 <bsp_printf_x+0xc>
         bsp_printHex_lower(val);
-    3008:	ec9ff0ef          	jal	2ed0 <bsp_printHex_lower>
+    2fd4:	ec9ff0ef          	jal	2e9c <bsp_printHex_lower>
     }
-    300c:	00c12083          	lw	ra,12(sp)
-    3010:	01010113          	addi	sp,sp,16
-    3014:	00008067          	ret
+    2fd8:	00c12083          	lw	ra,12(sp)
+    2fdc:	01010113          	addi	sp,sp,16
+    2fe0:	00008067          	ret
 
-00003018 <bsp_printf_X>:
+00002fe4 <bsp_printf_X>:
         {
-    3018:	ff010113          	addi	sp,sp,-16
-    301c:	00112623          	sw	ra,12(sp)
+    2fe4:	ff010113          	addi	sp,sp,-16
+    2fe8:	00112623          	sw	ra,12(sp)
             for(i=0;i<8;i++)
-    3020:	00000713          	li	a4,0
-    3024:	00700793          	li	a5,7
-    3028:	02e7c063          	blt	a5,a4,3048 <bsp_printf_X+0x30>
+    2fec:	00000713          	li	a4,0
+    2ff0:	00700793          	li	a5,7
+    2ff4:	02e7c063          	blt	a5,a4,3014 <bsp_printf_X+0x30>
                 if((val & (0xFFFFFFF0 <<(4*i))) == 0)
-    302c:	00271693          	slli	a3,a4,0x2
-    3030:	ff000793          	li	a5,-16
-    3034:	00d797b3          	sll	a5,a5,a3
-    3038:	00f577b3          	and	a5,a0,a5
-    303c:	00078663          	beqz	a5,3048 <bsp_printf_X+0x30>
+    2ff8:	00271693          	slli	a3,a4,0x2
+    2ffc:	ff000793          	li	a5,-16
+    3000:	00d797b3          	sll	a5,a5,a3
+    3004:	00f577b3          	and	a5,a0,a5
+    3008:	00078663          	beqz	a5,3014 <bsp_printf_X+0x30>
             for(i=0;i<8;i++)
-    3040:	00170713          	addi	a4,a4,1
-    3044:	fe1ff06f          	j	3024 <bsp_printf_X+0xc>
+    300c:	00170713          	addi	a4,a4,1
+    3010:	fe1ff06f          	j	2ff0 <bsp_printf_X+0xc>
             bsp_printHex(val);
-    3048:	e35ff0ef          	jal	2e7c <bsp_printHex>
+    3014:	e35ff0ef          	jal	2e48 <bsp_printHex>
         }
-    304c:	00c12083          	lw	ra,12(sp)
-    3050:	01010113          	addi	sp,sp,16
-    3054:	00008067          	ret
+    3018:	00c12083          	lw	ra,12(sp)
+    301c:	01010113          	addi	sp,sp,16
+    3020:	00008067          	ret
 
-00003058 <Set_RGBGain>:
-	return rdata;
-}
-
-// Unified Set_RGBGain — camId selects which camera (0 = cam1, 1 = cam2)
-static inline void Set_RGBGain(int camId, u8 ena, u8 R, u8 G, u8 B)
-{
-    3058:	ff010113          	addi	sp,sp,-16
-    305c:	00112623          	sw	ra,12(sp)
-	u32 data = ((B & 0x7) << 12) | ((G & 0x7) << 8) | ((R & 0x7) << 4) | (ena & 0x1);
-    3060:	00c71713          	slli	a4,a4,0xc
-    3064:	000077b7          	lui	a5,0x7
-    3068:	00f77733          	and	a4,a4,a5
-    306c:	00869693          	slli	a3,a3,0x8
-    3070:	7006f693          	andi	a3,a3,1792
-    3074:	00d76733          	or	a4,a4,a3
-    3078:	00461613          	slli	a2,a2,0x4
-    307c:	07067613          	andi	a2,a2,112
-    3080:	00c76733          	or	a4,a4,a2
-    3084:	0015f593          	andi	a1,a1,1
-    3088:	00b76733          	or	a4,a4,a1
-        *((volatile u32*) address) = data;
-    308c:	f81007b7          	lui	a5,0xf8100
-    3090:	00e7a023          	sw	a4,0(a5) # f8100000 <__freertos_irq_stack_top+0xf80fa760>
-#else
-	u32 offset = EXAMPLE_APB3_SLV_REG0_OFFSET; // single cam, camId ignored
-#endif
-
-	EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);
-	bsp_uDelay(DELAY_BUSY);
-    3094:	f8b00637          	lui	a2,0xf8b00
-    3098:	05f5e5b7          	lui	a1,0x5f5e
-    309c:	10058593          	addi	a1,a1,256 # 5f5e100 <__freertos_irq_stack_top+0x5f58860>
-    30a0:	00500513          	li	a0,5
-    30a4:	d51ff0ef          	jal	2df4 <clint_uDelay>
-}
-    30a8:	00c12083          	lw	ra,12(sp)
-    30ac:	01010113          	addi	sp,sp,16
-    30b0:	00008067          	ret
-
-000030b4 <mipi_i2c_probe>:
+00003024 <mipi_i2c_probe>:
 // -------------------------------------------------------
 // I2C
 // -------------------------------------------------------
 
 static int mipi_i2c_probe(u32 i2cCtrl, u8 slaveAddress)
 {
-    30b4:	ff010113          	addi	sp,sp,-16
-    30b8:	00112623          	sw	ra,12(sp)
-    30bc:	00812423          	sw	s0,8(sp)
-    30c0:	00912223          	sw	s1,4(sp)
-    30c4:	00050413          	mv	s0,a0
-    30c8:	00058493          	mv	s1,a1
+    3024:	ff010113          	addi	sp,sp,-16
+    3028:	00112623          	sw	ra,12(sp)
+    302c:	00812423          	sw	s0,8(sp)
+    3030:	00912223          	sw	s1,4(sp)
+    3034:	00050413          	mv	s0,a0
+    3038:	00058493          	mv	s1,a1
     i2c_masterStartBlocking(i2cCtrl);
-    30cc:	c81ff0ef          	jal	2d4c <i2c_masterStartBlocking>
+    303c:	d11ff0ef          	jal	2d4c <i2c_masterStartBlocking>
         write_u32(byte | I2C_TX_VALID | I2C_TX_ENABLE | I2C_TX_DISABLE_ON_DATA_CONFLICT, reg + I2C_TX_DATA);
-    30d0:	000017b7          	lui	a5,0x1
-    30d4:	b0078793          	addi	a5,a5,-1280 # b00 <CUSTOM2+0xaa5>
-    30d8:	00f4e4b3          	or	s1,s1,a5
-    30dc:	00942023          	sw	s1,0(s0)
+    3040:	000017b7          	lui	a5,0x1
+    3044:	b0078793          	addi	a5,a5,-1280 # b00 <CUSTOM2+0xaa5>
+    3048:	00f4e4b3          	or	s1,s1,a5
+    304c:	00942023          	sw	s1,0(s0)
     i2c_txByte(i2cCtrl, slaveAddress);
     i2c_txNackBlocking(i2cCtrl);
-    30e0:	00040513          	mv	a0,s0
-    30e4:	c95ff0ef          	jal	2d78 <i2c_txNackBlocking>
+    3050:	00040513          	mv	a0,s0
+    3054:	d25ff0ef          	jal	2d78 <i2c_txNackBlocking>
     return i2c_rxAck(i2cCtrl);
-    30e8:	00040513          	mv	a0,s0
-    30ec:	cadff0ef          	jal	2d98 <i2c_rxAck>
+    3058:	00040513          	mv	a0,s0
+    305c:	d3dff0ef          	jal	2d98 <i2c_rxAck>
 }
-    30f0:	00c12083          	lw	ra,12(sp)
-    30f4:	00812403          	lw	s0,8(sp)
-    30f8:	00412483          	lw	s1,4(sp)
-    30fc:	01010113          	addi	sp,sp,16
-    3100:	00008067          	ret
+    3060:	00c12083          	lw	ra,12(sp)
+    3064:	00812403          	lw	s0,8(sp)
+    3068:	00412483          	lw	s1,4(sp)
+    306c:	01010113          	addi	sp,sp,16
+    3070:	00008067          	ret
 
-00003104 <bsp_printf>:
+00003074 <bsp_printf>:
     {
-    3104:	fc010113          	addi	sp,sp,-64
-    3108:	00112e23          	sw	ra,28(sp)
-    310c:	00812c23          	sw	s0,24(sp)
-    3110:	00912a23          	sw	s1,20(sp)
-    3114:	00050493          	mv	s1,a0
-    3118:	02b12223          	sw	a1,36(sp)
-    311c:	02c12423          	sw	a2,40(sp)
-    3120:	02d12623          	sw	a3,44(sp)
-    3124:	02e12823          	sw	a4,48(sp)
-    3128:	02f12a23          	sw	a5,52(sp)
-    312c:	03012c23          	sw	a6,56(sp)
-    3130:	03112e23          	sw	a7,60(sp)
+    3074:	fc010113          	addi	sp,sp,-64
+    3078:	00112e23          	sw	ra,28(sp)
+    307c:	00812c23          	sw	s0,24(sp)
+    3080:	00912a23          	sw	s1,20(sp)
+    3084:	00050493          	mv	s1,a0
+    3088:	02b12223          	sw	a1,36(sp)
+    308c:	02c12423          	sw	a2,40(sp)
+    3090:	02d12623          	sw	a3,44(sp)
+    3094:	02e12823          	sw	a4,48(sp)
+    3098:	02f12a23          	sw	a5,52(sp)
+    309c:	03012c23          	sw	a6,56(sp)
+    30a0:	03112e23          	sw	a7,60(sp)
         va_start(ap, format);
-    3134:	02410793          	addi	a5,sp,36
-    3138:	00f12623          	sw	a5,12(sp)
+    30a4:	02410793          	addi	a5,sp,36
+    30a8:	00f12623          	sw	a5,12(sp)
         for (i = 0; format[i]; i++)
-    313c:	00000413          	li	s0,0
-    3140:	01c0006f          	j	315c <bsp_printf+0x58>
+    30ac:	00000413          	li	s0,0
+    30b0:	01c0006f          	j	30cc <bsp_printf+0x58>
                         bsp_printf_c(va_arg(ap,int));
-    3144:	00c12783          	lw	a5,12(sp)
-    3148:	00478713          	addi	a4,a5,4
-    314c:	00e12623          	sw	a4,12(sp)
-    3150:	0007a503          	lw	a0,0(a5)
-    3154:	dd1ff0ef          	jal	2f24 <bsp_printf_c>
+    30b4:	00c12783          	lw	a5,12(sp)
+    30b8:	00478713          	addi	a4,a5,4
+    30bc:	00e12623          	sw	a4,12(sp)
+    30c0:	0007a503          	lw	a0,0(a5)
+    30c4:	e2dff0ef          	jal	2ef0 <bsp_printf_c>
         for (i = 0; format[i]; i++)
+    30c8:	00140413          	addi	s0,s0,1
+    30cc:	008487b3          	add	a5,s1,s0
+    30d0:	0007c503          	lbu	a0,0(a5)
+    30d4:	0a050e63          	beqz	a0,3190 <bsp_printf+0x11c>
+            if (format[i] == '%') {
+    30d8:	02500793          	li	a5,37
+    30dc:	06f50e63          	beq	a0,a5,3158 <bsp_printf+0xe4>
+                bsp_printf_c(format[i]);
+    30e0:	e11ff0ef          	jal	2ef0 <bsp_printf_c>
+    30e4:	fe5ff06f          	j	30c8 <bsp_printf+0x54>
+                        bsp_printf_s(va_arg(ap,char*));
+    30e8:	00c12783          	lw	a5,12(sp)
+    30ec:	00478713          	addi	a4,a5,4
+    30f0:	00e12623          	sw	a4,12(sp)
+    30f4:	0007a503          	lw	a0,0(a5)
+    30f8:	e15ff0ef          	jal	2f0c <bsp_printf_s>
+                        break;
+    30fc:	fcdff06f          	j	30c8 <bsp_printf+0x54>
+                        bsp_printf_d(va_arg(ap,int));
+    3100:	00c12783          	lw	a5,12(sp)
+    3104:	00478713          	addi	a4,a5,4
+    3108:	00e12623          	sw	a4,12(sp)
+    310c:	0007a503          	lw	a0,0(a5)
+    3110:	e15ff0ef          	jal	2f24 <bsp_printf_d>
+                        break;
+    3114:	fb5ff06f          	j	30c8 <bsp_printf+0x54>
+                        bsp_printf_X(va_arg(ap,int));
+    3118:	00c12783          	lw	a5,12(sp)
+    311c:	00478713          	addi	a4,a5,4
+    3120:	00e12623          	sw	a4,12(sp)
+    3124:	0007a503          	lw	a0,0(a5)
+    3128:	ebdff0ef          	jal	2fe4 <bsp_printf_X>
+                        break;
+    312c:	f9dff06f          	j	30c8 <bsp_printf+0x54>
+                        bsp_printf_x(va_arg(ap,int));
+    3130:	00c12783          	lw	a5,12(sp)
+    3134:	00478713          	addi	a4,a5,4
+    3138:	00e12623          	sw	a4,12(sp)
+    313c:	0007a503          	lw	a0,0(a5)
+    3140:	e65ff0ef          	jal	2fa4 <bsp_printf_x>
+                        break;
+    3144:	f85ff06f          	j	30c8 <bsp_printf+0x54>
+                        bsp_printf_s("<Floating point printing not enable. Please Enable it at bsp.h first...>");
+    3148:	00004537          	lui	a0,0x4
+    314c:	b1c50513          	addi	a0,a0,-1252 # 3b1c <_data+0x28>
+    3150:	dbdff0ef          	jal	2f0c <bsp_printf_s>
+                        break;
+    3154:	f75ff06f          	j	30c8 <bsp_printf+0x54>
+                while (format[++i]) {
     3158:	00140413          	addi	s0,s0,1
     315c:	008487b3          	add	a5,s1,s0
-    3160:	0007c503          	lbu	a0,0(a5)
-    3164:	0a050e63          	beqz	a0,3220 <bsp_printf+0x11c>
-            if (format[i] == '%') {
-    3168:	02500793          	li	a5,37
-    316c:	06f50e63          	beq	a0,a5,31e8 <bsp_printf+0xe4>
-                bsp_printf_c(format[i]);
-    3170:	db5ff0ef          	jal	2f24 <bsp_printf_c>
-    3174:	fe5ff06f          	j	3158 <bsp_printf+0x54>
-                        bsp_printf_s(va_arg(ap,char*));
-    3178:	00c12783          	lw	a5,12(sp)
-    317c:	00478713          	addi	a4,a5,4
-    3180:	00e12623          	sw	a4,12(sp)
-    3184:	0007a503          	lw	a0,0(a5)
-    3188:	db9ff0ef          	jal	2f40 <bsp_printf_s>
-                        break;
-    318c:	fcdff06f          	j	3158 <bsp_printf+0x54>
-                        bsp_printf_d(va_arg(ap,int));
-    3190:	00c12783          	lw	a5,12(sp)
-    3194:	00478713          	addi	a4,a5,4
-    3198:	00e12623          	sw	a4,12(sp)
-    319c:	0007a503          	lw	a0,0(a5)
-    31a0:	db9ff0ef          	jal	2f58 <bsp_printf_d>
-                        break;
-    31a4:	fb5ff06f          	j	3158 <bsp_printf+0x54>
-                        bsp_printf_X(va_arg(ap,int));
-    31a8:	00c12783          	lw	a5,12(sp)
-    31ac:	00478713          	addi	a4,a5,4
-    31b0:	00e12623          	sw	a4,12(sp)
-    31b4:	0007a503          	lw	a0,0(a5)
-    31b8:	e61ff0ef          	jal	3018 <bsp_printf_X>
-                        break;
-    31bc:	f9dff06f          	j	3158 <bsp_printf+0x54>
-                        bsp_printf_x(va_arg(ap,int));
-    31c0:	00c12783          	lw	a5,12(sp)
-    31c4:	00478713          	addi	a4,a5,4
-    31c8:	00e12623          	sw	a4,12(sp)
-    31cc:	0007a503          	lw	a0,0(a5)
-    31d0:	e09ff0ef          	jal	2fd8 <bsp_printf_x>
-                        break;
-    31d4:	f85ff06f          	j	3158 <bsp_printf+0x54>
-                        bsp_printf_s("<Floating point printing not enable. Please Enable it at bsp.h first...>");
-    31d8:	00004537          	lui	a0,0x4
-    31dc:	bfc50513          	addi	a0,a0,-1028 # 3bfc <_data+0x28>
-    31e0:	d61ff0ef          	jal	2f40 <bsp_printf_s>
-                        break;
-    31e4:	f75ff06f          	j	3158 <bsp_printf+0x54>
-                while (format[++i]) {
-    31e8:	00140413          	addi	s0,s0,1
-    31ec:	008487b3          	add	a5,s1,s0
-    31f0:	0007c783          	lbu	a5,0(a5)
-    31f4:	f60782e3          	beqz	a5,3158 <bsp_printf+0x54>
+    3160:	0007c783          	lbu	a5,0(a5)
+    3164:	f60782e3          	beqz	a5,30c8 <bsp_printf+0x54>
                     if (format[i] == 'c') {
-    31f8:	fa878793          	addi	a5,a5,-88
-    31fc:	0ff7f693          	zext.b	a3,a5
-    3200:	02000713          	li	a4,32
-    3204:	fed762e3          	bltu	a4,a3,31e8 <bsp_printf+0xe4>
-    3208:	00269793          	slli	a5,a3,0x2
-    320c:	00004737          	lui	a4,0x4
-    3210:	29070713          	addi	a4,a4,656 # 4290 <_data+0x6bc>
-    3214:	00e787b3          	add	a5,a5,a4
-    3218:	0007a783          	lw	a5,0(a5)
-    321c:	00078067          	jr	a5
+    3168:	fa878793          	addi	a5,a5,-88
+    316c:	0ff7f693          	zext.b	a3,a5
+    3170:	02000713          	li	a4,32
+    3174:	fed762e3          	bltu	a4,a3,3158 <bsp_printf+0xe4>
+    3178:	00269793          	slli	a5,a3,0x2
+    317c:	00004737          	lui	a4,0x4
+    3180:	1b070713          	addi	a4,a4,432 # 41b0 <_data+0x6bc>
+    3184:	00e787b3          	add	a5,a5,a4
+    3188:	0007a783          	lw	a5,0(a5)
+    318c:	00078067          	jr	a5
     }
-    3220:	01c12083          	lw	ra,28(sp)
-    3224:	01812403          	lw	s0,24(sp)
-    3228:	01412483          	lw	s1,20(sp)
-    322c:	04010113          	addi	sp,sp,64
-    3230:	00008067          	ret
+    3190:	01c12083          	lw	ra,28(sp)
+    3194:	01812403          	lw	s0,24(sp)
+    3198:	01412483          	lw	s1,20(sp)
+    319c:	04010113          	addi	sp,sp,64
+    31a0:	00008067          	ret
 
-00003234 <camera_init>:
+000031a4 <camera_init>:
 // -------------------------------------------------------
 // Core: probe all known i2c addresses, runs init + stream + set_rgb_gain
 // -------------------------------------------------------
 
 static void camera_init(int camSlot, u32 i2cCtrl)
 {
-    3234:	fe010113          	addi	sp,sp,-32
-    3238:	00112e23          	sw	ra,28(sp)
-    323c:	00812c23          	sw	s0,24(sp)
-    3240:	00912a23          	sw	s1,20(sp)
-    3244:	01212823          	sw	s2,16(sp)
-    3248:	01312623          	sw	s3,12(sp)
-    324c:	00050913          	mv	s2,a0
-    3250:	00058493          	mv	s1,a1
+    31a4:	fe010113          	addi	sp,sp,-32
+    31a8:	00112e23          	sw	ra,28(sp)
+    31ac:	00812c23          	sw	s0,24(sp)
+    31b0:	00912a23          	sw	s1,20(sp)
+    31b4:	01212823          	sw	s2,16(sp)
+    31b8:	01312623          	sw	s3,12(sp)
+    31bc:	00050913          	mv	s2,a0
+    31c0:	00058493          	mv	s1,a1
     mipi_i2c_init(i2cCtrl);
-    3254:	00058513          	mv	a0,a1
-    3258:	9a1fe0ef          	jal	1bf8 <mipi_i2c_init>
+    31c4:	00058513          	mv	a0,a1
+    31c8:	a31fe0ef          	jal	1bf8 <mipi_i2c_init>
 
     for (int i = 0; i < NUM_KNOWN_CAMERAS; i++)
-    325c:	00000413          	li	s0,0
-    3260:	00100793          	li	a5,1
-    3264:	1087e063          	bltu	a5,s0,3364 <camera_init+0x130>
+    31cc:	00000413          	li	s0,0
+    31d0:	00100793          	li	a5,1
+    31d4:	0a87e863          	bltu	a5,s0,3284 <camera_init+0xe0>
     {
         if (mipi_i2c_probe(i2cCtrl, supportedCamera[i].slaveAddress) == 1)
-    3268:	000047b7          	lui	a5,0x4
-    326c:	00341713          	slli	a4,s0,0x3
-    3270:	40870733          	sub	a4,a4,s0
-    3274:	00271713          	slli	a4,a4,0x2
-    3278:	31478793          	addi	a5,a5,788 # 4314 <supportedCamera>
-    327c:	00e787b3          	add	a5,a5,a4
-    3280:	0007c983          	lbu	s3,0(a5)
-    3284:	00098593          	mv	a1,s3
-    3288:	00048513          	mv	a0,s1
-    328c:	e29ff0ef          	jal	30b4 <mipi_i2c_probe>
-    3290:	00100793          	li	a5,1
-    3294:	00f50663          	beq	a0,a5,32a0 <camera_init+0x6c>
+    31d8:	000047b7          	lui	a5,0x4
+    31dc:	00241713          	slli	a4,s0,0x2
+    31e0:	00870733          	add	a4,a4,s0
+    31e4:	00271713          	slli	a4,a4,0x2
+    31e8:	23478793          	addi	a5,a5,564 # 4234 <supportedCamera>
+    31ec:	00e787b3          	add	a5,a5,a4
+    31f0:	0007c983          	lbu	s3,0(a5)
+    31f4:	00098593          	mv	a1,s3
+    31f8:	00048513          	mv	a0,s1
+    31fc:	e29ff0ef          	jal	3024 <mipi_i2c_probe>
+    3200:	00100793          	li	a5,1
+    3204:	00f50663          	beq	a0,a5,3210 <camera_init+0x6c>
     for (int i = 0; i < NUM_KNOWN_CAMERAS; i++)
-    3298:	00140413          	addi	s0,s0,1
-    329c:	fc5ff06f          	j	3260 <camera_init+0x2c>
-    32a0:	01412423          	sw	s4,8(sp)
+    3208:	00140413          	addi	s0,s0,1
+    320c:	fc5ff06f          	j	31d0 <camera_init+0x2c>
+    3210:	01412423          	sw	s4,8(sp)
         {
             bsp_printf("Camera%d detected: %s (addr: 0x%02X)\r\n",
                        camSlot,
                        supportedCamera[i].name,
-    32a4:	00004a37          	lui	s4,0x4
-    32a8:	00341793          	slli	a5,s0,0x3
-    32ac:	408787b3          	sub	a5,a5,s0
-    32b0:	00279793          	slli	a5,a5,0x2
-    32b4:	314a0a13          	addi	s4,s4,788 # 4314 <supportedCamera>
-    32b8:	00fa0a33          	add	s4,s4,a5
+    3214:	00004a37          	lui	s4,0x4
+    3218:	00241793          	slli	a5,s0,0x2
+    321c:	008787b3          	add	a5,a5,s0
+    3220:	00279793          	slli	a5,a5,0x2
+    3224:	234a0a13          	addi	s4,s4,564 # 4234 <supportedCamera>
+    3228:	00fa0a33          	add	s4,s4,a5
             bsp_printf("Camera%d detected: %s (addr: 0x%02X)\r\n",
-    32bc:	0019d693          	srli	a3,s3,0x1
-    32c0:	008a2603          	lw	a2,8(s4)
-    32c4:	00090593          	mv	a1,s2
-    32c8:	00004537          	lui	a0,0x4
-    32cc:	0f450513          	addi	a0,a0,244 # 40f4 <_data+0x520>
-    32d0:	e35ff0ef          	jal	3104 <bsp_printf>
+    322c:	0019d693          	srli	a3,s3,0x1
+    3230:	008a2603          	lw	a2,8(s4)
+    3234:	00090593          	mv	a1,s2
+    3238:	00004537          	lui	a0,0x4
+    323c:	01450513          	addi	a0,a0,20 # 4014 <_data+0x520>
+    3240:	e35ff0ef          	jal	3074 <bsp_printf>
                        supportedCamera[i].slaveAddress >> 1);
 
             if (supportedCamera[i].init != NULL)
-    32d4:	00ca2783          	lw	a5,12(s4)
-    32d8:	00078663          	beqz	a5,32e4 <camera_init+0xb0>
+    3244:	00ca2783          	lw	a5,12(s4)
+    3248:	00078663          	beqz	a5,3254 <camera_init+0xb0>
                 supportedCamera[i].init(i2cCtrl);
-    32dc:	00048513          	mv	a0,s1
-    32e0:	000780e7          	jalr	a5
+    324c:	00048513          	mv	a0,s1
+    3250:	000780e7          	jalr	a5
 
             if (supportedCamera[i].start_stream != NULL)
-    32e4:	000047b7          	lui	a5,0x4
-    32e8:	00341713          	slli	a4,s0,0x3
-    32ec:	40870733          	sub	a4,a4,s0
-    32f0:	00271713          	slli	a4,a4,0x2
-    32f4:	31478793          	addi	a5,a5,788 # 4314 <supportedCamera>
-    32f8:	00e787b3          	add	a5,a5,a4
-    32fc:	0107a783          	lw	a5,16(a5)
-    3300:	00078663          	beqz	a5,330c <camera_init+0xd8>
+    3254:	000047b7          	lui	a5,0x4
+    3258:	00241713          	slli	a4,s0,0x2
+    325c:	00870733          	add	a4,a4,s0
+    3260:	00271713          	slli	a4,a4,0x2
+    3264:	23478793          	addi	a5,a5,564 # 4234 <supportedCamera>
+    3268:	00e787b3          	add	a5,a5,a4
+    326c:	0107a783          	lw	a5,16(a5)
+    3270:	04078063          	beqz	a5,32b0 <camera_init+0x10c>
                 supportedCamera[i].start_stream(i2cCtrl);
-    3304:	00048513          	mv	a0,s1
-    3308:	000780e7          	jalr	a5
-
-            if (supportedCamera[i].set_rgb_gain != NULL)
-    330c:	000047b7          	lui	a5,0x4
-    3310:	00341713          	slli	a4,s0,0x3
-    3314:	40870733          	sub	a4,a4,s0
-    3318:	00271713          	slli	a4,a4,0x2
-    331c:	31478793          	addi	a5,a5,788 # 4314 <supportedCamera>
-    3320:	00e787b3          	add	a5,a5,a4
-    3324:	0147a803          	lw	a6,20(a5)
-    3328:	06080463          	beqz	a6,3390 <camera_init+0x15c>
-                supportedCamera[i].set_rgb_gain(camSlot,
-                                                supportedCamera[i].gain.ena,
-    332c:	00004737          	lui	a4,0x4
-    3330:	31470713          	addi	a4,a4,788 # 4314 <supportedCamera>
-    3334:	00341693          	slli	a3,s0,0x3
-    3338:	408687b3          	sub	a5,a3,s0
-    333c:	00279793          	slli	a5,a5,0x2
-    3340:	00f707b3          	add	a5,a4,a5
-                supportedCamera[i].set_rgb_gain(camSlot,
-    3344:	01b7c703          	lbu	a4,27(a5)
-    3348:	01a7c683          	lbu	a3,26(a5)
-    334c:	0197c603          	lbu	a2,25(a5)
-    3350:	0187c583          	lbu	a1,24(a5)
-    3354:	00090513          	mv	a0,s2
-    3358:	000800e7          	jalr	a6
-                                                supportedCamera[i].gain.R,
-                                                supportedCamera[i].gain.G,
-                                                supportedCamera[i].gain.B);
-
+    3274:	00048513          	mv	a0,s1
+    3278:	000780e7          	jalr	a5
             return;
-    335c:	00812a03          	lw	s4,8(sp)
-    3360:	0140006f          	j	3374 <camera_init+0x140>
+    327c:	00812a03          	lw	s4,8(sp)
+    3280:	0140006f          	j	3294 <camera_init+0xf0>
         }
     }
 
     bsp_printf("cam%d detected: None\n", camSlot);
-    3364:	00090593          	mv	a1,s2
-    3368:	00004537          	lui	a0,0x4
-    336c:	11c50513          	addi	a0,a0,284 # 411c <_data+0x548>
-    3370:	d95ff0ef          	jal	3104 <bsp_printf>
+    3284:	00090593          	mv	a1,s2
+    3288:	00004537          	lui	a0,0x4
+    328c:	03c50513          	addi	a0,a0,60 # 403c <_data+0x548>
+    3290:	de5ff0ef          	jal	3074 <bsp_printf>
 }
-    3374:	01c12083          	lw	ra,28(sp)
-    3378:	01812403          	lw	s0,24(sp)
-    337c:	01412483          	lw	s1,20(sp)
-    3380:	01012903          	lw	s2,16(sp)
-    3384:	00c12983          	lw	s3,12(sp)
-    3388:	02010113          	addi	sp,sp,32
-    338c:	00008067          	ret
-    3390:	00812a03          	lw	s4,8(sp)
-    3394:	fe1ff06f          	j	3374 <camera_init+0x140>
+    3294:	01c12083          	lw	ra,28(sp)
+    3298:	01812403          	lw	s0,24(sp)
+    329c:	01412483          	lw	s1,20(sp)
+    32a0:	01012903          	lw	s2,16(sp)
+    32a4:	00c12983          	lw	s3,12(sp)
+    32a8:	02010113          	addi	sp,sp,32
+    32ac:	00008067          	ret
+    32b0:	00812a03          	lw	s4,8(sp)
+    32b4:	fe1ff06f          	j	3294 <camera_init+0xf0>
 
-00003398 <cam0_init>:
+000032b8 <cam0_init>:
 
 // -------------------------------------------------------
 // API - 1 call per camera
 // -------------------------------------------------------
 
 void cam0_init(u32 i2cCtrl) { camera_init(0, i2cCtrl); }
-    3398:	ff010113          	addi	sp,sp,-16
-    339c:	00112623          	sw	ra,12(sp)
-    33a0:	00050593          	mv	a1,a0
-    33a4:	00000513          	li	a0,0
-    33a8:	e8dff0ef          	jal	3234 <camera_init>
-    33ac:	00c12083          	lw	ra,12(sp)
-    33b0:	01010113          	addi	sp,sp,16
-    33b4:	00008067          	ret
+    32b8:	ff010113          	addi	sp,sp,-16
+    32bc:	00112623          	sw	ra,12(sp)
+    32c0:	00050593          	mv	a1,a0
+    32c4:	00000513          	li	a0,0
+    32c8:	eddff0ef          	jal	31a4 <camera_init>
+    32cc:	00c12083          	lw	ra,12(sp)
+    32d0:	01010113          	addi	sp,sp,16
+    32d4:	00008067          	ret
 
-000033b8 <uart_writeAvailability>:
+000032d8 <uart_writeAvailability>:
         return *((volatile u32*) address);
-    33b8:	00452503          	lw	a0,4(a0)
+    32d8:	00452503          	lw	a0,4(a0)
         return (read_u32(reg + UART_STATUS) >> 16) & 0xFF;
-    33bc:	01055513          	srli	a0,a0,0x10
+    32dc:	01055513          	srli	a0,a0,0x10
     }
-    33c0:	0ff57513          	zext.b	a0,a0
-    33c4:	00008067          	ret
+    32e0:	0ff57513          	zext.b	a0,a0
+    32e4:	00008067          	ret
 
-000033c8 <uart_write>:
+000032e8 <uart_write>:
     static void uart_write(u32 reg, char data){
-    33c8:	ff010113          	addi	sp,sp,-16
-    33cc:	00112623          	sw	ra,12(sp)
-    33d0:	00812423          	sw	s0,8(sp)
-    33d4:	00912223          	sw	s1,4(sp)
-    33d8:	00050413          	mv	s0,a0
-    33dc:	00058493          	mv	s1,a1
+    32e8:	ff010113          	addi	sp,sp,-16
+    32ec:	00112623          	sw	ra,12(sp)
+    32f0:	00812423          	sw	s0,8(sp)
+    32f4:	00912223          	sw	s1,4(sp)
+    32f8:	00050413          	mv	s0,a0
+    32fc:	00058493          	mv	s1,a1
         while(uart_writeAvailability(reg) == 0);
-    33e0:	00040513          	mv	a0,s0
-    33e4:	fd5ff0ef          	jal	33b8 <uart_writeAvailability>
-    33e8:	fe050ce3          	beqz	a0,33e0 <uart_write+0x18>
+    3300:	00040513          	mv	a0,s0
+    3304:	fd5ff0ef          	jal	32d8 <uart_writeAvailability>
+    3308:	fe050ce3          	beqz	a0,3300 <uart_write+0x18>
         *((volatile u32*) address) = data;
-    33ec:	00942023          	sw	s1,0(s0)
+    330c:	00942023          	sw	s1,0(s0)
     }
-    33f0:	00c12083          	lw	ra,12(sp)
-    33f4:	00812403          	lw	s0,8(sp)
-    33f8:	00412483          	lw	s1,4(sp)
-    33fc:	01010113          	addi	sp,sp,16
-    3400:	00008067          	ret
+    3310:	00c12083          	lw	ra,12(sp)
+    3314:	00812403          	lw	s0,8(sp)
+    3318:	00412483          	lw	s1,4(sp)
+    331c:	01010113          	addi	sp,sp,16
+    3320:	00008067          	ret
 
-00003404 <uart_writeStr>:
+00003324 <uart_writeStr>:
     static void uart_writeStr(u32 reg, const char* str){
-    3404:	ff010113          	addi	sp,sp,-16
-    3408:	00112623          	sw	ra,12(sp)
-    340c:	00812423          	sw	s0,8(sp)
-    3410:	00912223          	sw	s1,4(sp)
-    3414:	00050493          	mv	s1,a0
-    3418:	00058413          	mv	s0,a1
+    3324:	ff010113          	addi	sp,sp,-16
+    3328:	00112623          	sw	ra,12(sp)
+    332c:	00812423          	sw	s0,8(sp)
+    3330:	00912223          	sw	s1,4(sp)
+    3334:	00050493          	mv	s1,a0
+    3338:	00058413          	mv	s0,a1
         while(*str) uart_write(reg, *str++);
-    341c:	0100006f          	j	342c <uart_writeStr+0x28>
-    3420:	00140413          	addi	s0,s0,1
-    3424:	00048513          	mv	a0,s1
-    3428:	fa1ff0ef          	jal	33c8 <uart_write>
-    342c:	00044583          	lbu	a1,0(s0)
-    3430:	fe0598e3          	bnez	a1,3420 <uart_writeStr+0x1c>
+    333c:	0100006f          	j	334c <uart_writeStr+0x28>
+    3340:	00140413          	addi	s0,s0,1
+    3344:	00048513          	mv	a0,s1
+    3348:	fa1ff0ef          	jal	32e8 <uart_write>
+    334c:	00044583          	lbu	a1,0(s0)
+    3350:	fe0598e3          	bnez	a1,3340 <uart_writeStr+0x1c>
     }
-    3434:	00c12083          	lw	ra,12(sp)
-    3438:	00812403          	lw	s0,8(sp)
-    343c:	00412483          	lw	s1,4(sp)
-    3440:	01010113          	addi	sp,sp,16
-    3444:	00008067          	ret
+    3354:	00c12083          	lw	ra,12(sp)
+    3358:	00812403          	lw	s0,8(sp)
+    335c:	00412483          	lw	s1,4(sp)
+    3360:	01010113          	addi	sp,sp,16
+    3364:	00008067          	ret
 
-00003448 <i2c_masterBusy>:
+00003368 <i2c_masterBusy>:
         return *((volatile u32*) address);
-    3448:	04052503          	lw	a0,64(a0)
+    3368:	04052503          	lw	a0,64(a0)
     }
-    344c:	00157513          	andi	a0,a0,1
-    3450:	00008067          	ret
+    336c:	00157513          	andi	a0,a0,1
+    3370:	00008067          	ret
 
-00003454 <i2c_masterStartBlocking>:
+00003374 <i2c_masterStartBlocking>:
         write_u32(I2C_MASTER_START | I2C_MASTER_START_DROPPED, reg + I2C_MASTER_STATUS);
-    3454:	04050713          	addi	a4,a0,64
+    3374:	04050713          	addi	a4,a0,64
         *((volatile u32*) address) = data;
-    3458:	21000793          	li	a5,528
-    345c:	04f52023          	sw	a5,64(a0)
+    3378:	21000793          	li	a5,528
+    337c:	04f52023          	sw	a5,64(a0)
         return *((volatile u32*) address);
-    3460:	00072783          	lw	a5,0(a4)
+    3380:	00072783          	lw	a5,0(a4)
         while(i2c_getMasterStatus(reg) & I2C_MASTER_START);
-    3464:	0107f793          	andi	a5,a5,16
-    3468:	fe079ce3          	bnez	a5,3460 <i2c_masterStartBlocking+0xc>
+    3384:	0107f793          	andi	a5,a5,16
+    3388:	fe079ce3          	bnez	a5,3380 <i2c_masterStartBlocking+0xc>
     }
-    346c:	00008067          	ret
+    338c:	00008067          	ret
 
-00003470 <i2c_masterStopWait>:
+00003390 <i2c_masterStopWait>:
     static void i2c_masterStopWait(u32 reg){
-    3470:	ff010113          	addi	sp,sp,-16
-    3474:	00112623          	sw	ra,12(sp)
-    3478:	00812423          	sw	s0,8(sp)
-    347c:	00050413          	mv	s0,a0
+    3390:	ff010113          	addi	sp,sp,-16
+    3394:	00112623          	sw	ra,12(sp)
+    3398:	00812423          	sw	s0,8(sp)
+    339c:	00050413          	mv	s0,a0
         while(i2c_masterBusy(reg));
-    3480:	00040513          	mv	a0,s0
-    3484:	fc5ff0ef          	jal	3448 <i2c_masterBusy>
-    3488:	fe051ce3          	bnez	a0,3480 <i2c_masterStopWait+0x10>
+    33a0:	00040513          	mv	a0,s0
+    33a4:	fc5ff0ef          	jal	3368 <i2c_masterBusy>
+    33a8:	fe051ce3          	bnez	a0,33a0 <i2c_masterStopWait+0x10>
     }
-    348c:	00c12083          	lw	ra,12(sp)
-    3490:	00812403          	lw	s0,8(sp)
-    3494:	01010113          	addi	sp,sp,16
-    3498:	00008067          	ret
+    33ac:	00c12083          	lw	ra,12(sp)
+    33b0:	00812403          	lw	s0,8(sp)
+    33b4:	01010113          	addi	sp,sp,16
+    33b8:	00008067          	ret
 
-0000349c <i2c_masterStopBlocking>:
+000033bc <i2c_masterStopBlocking>:
     static void i2c_masterStopBlocking(u32 reg){
-    349c:	ff010113          	addi	sp,sp,-16
-    34a0:	00112623          	sw	ra,12(sp)
+    33bc:	ff010113          	addi	sp,sp,-16
+    33c0:	00112623          	sw	ra,12(sp)
         *((volatile u32*) address) = data;
-    34a4:	42000713          	li	a4,1056
-    34a8:	04e52023          	sw	a4,64(a0)
+    33c4:	42000713          	li	a4,1056
+    33c8:	04e52023          	sw	a4,64(a0)
         i2c_masterStopWait(reg);
-    34ac:	fc5ff0ef          	jal	3470 <i2c_masterStopWait>
+    33cc:	fc5ff0ef          	jal	3390 <i2c_masterStopWait>
     }
-    34b0:	00c12083          	lw	ra,12(sp)
-    34b4:	01010113          	addi	sp,sp,16
-    34b8:	00008067          	ret
+    33d0:	00c12083          	lw	ra,12(sp)
+    33d4:	01010113          	addi	sp,sp,16
+    33d8:	00008067          	ret
 
-000034bc <i2c_txAckWait>:
+000033dc <i2c_txAckWait>:
         return *((volatile u32*) address);
-    34bc:	00452783          	lw	a5,4(a0)
+    33dc:	00452783          	lw	a5,4(a0)
         while(read_u32(reg + I2C_TX_ACK) & I2C_TX_VALID);
-    34c0:	1007f793          	andi	a5,a5,256
-    34c4:	fe079ce3          	bnez	a5,34bc <i2c_txAckWait>
+    33e0:	1007f793          	andi	a5,a5,256
+    33e4:	fe079ce3          	bnez	a5,33dc <i2c_txAckWait>
     }
-    34c8:	00008067          	ret
+    33e8:	00008067          	ret
 
-000034cc <i2c_txNackBlocking>:
+000033ec <i2c_txNackBlocking>:
     static void i2c_txNackBlocking(u32 reg){
-    34cc:	ff010113          	addi	sp,sp,-16
-    34d0:	00112623          	sw	ra,12(sp)
+    33ec:	ff010113          	addi	sp,sp,-16
+    33f0:	00112623          	sw	ra,12(sp)
         *((volatile u32*) address) = data;
-    34d4:	30100713          	li	a4,769
-    34d8:	00e52223          	sw	a4,4(a0)
+    33f4:	30100713          	li	a4,769
+    33f8:	00e52223          	sw	a4,4(a0)
         i2c_txAckWait(reg);
-    34dc:	fe1ff0ef          	jal	34bc <i2c_txAckWait>
+    33fc:	fe1ff0ef          	jal	33dc <i2c_txAckWait>
     }
-    34e0:	00c12083          	lw	ra,12(sp)
-    34e4:	01010113          	addi	sp,sp,16
-    34e8:	00008067          	ret
+    3400:	00c12083          	lw	ra,12(sp)
+    3404:	01010113          	addi	sp,sp,16
+    3408:	00008067          	ret
 
-000034ec <i2c_rxAck>:
+0000340c <i2c_rxAck>:
         return *((volatile u32*) address);
-    34ec:	00c52503          	lw	a0,12(a0)
+    340c:	00c52503          	lw	a0,12(a0)
         return (read_u32(reg + I2C_RX_ACK) & I2C_RX_VALUE) == 0;
-    34f0:	0ff57513          	zext.b	a0,a0
+    3410:	0ff57513          	zext.b	a0,a0
     }
-    34f4:	00153513          	seqz	a0,a0
-    34f8:	00008067          	ret
+    3414:	00153513          	seqz	a0,a0
+    3418:	00008067          	ret
 
-000034fc <PiCamV3_WriteRegData>:
+0000341c <PiCamV3_WriteRegData>:
 #include "riscv.h"
 #include "PiCamV3Driver.h"
 #include "common.h"
 
 void PiCamV3_WriteRegData(u32 i2c_addr, u16 reg, u8 data)
 {
-    34fc:	fe010113          	addi	sp,sp,-32
-    3500:	00112e23          	sw	ra,28(sp)
-    3504:	00812c23          	sw	s0,24(sp)
-    3508:	00912a23          	sw	s1,20(sp)
-    350c:	01212823          	sw	s2,16(sp)
-    3510:	01312623          	sw	s3,12(sp)
-    3514:	00050413          	mv	s0,a0
-    3518:	00058493          	mv	s1,a1
-    351c:	00060913          	mv	s2,a2
+    341c:	fe010113          	addi	sp,sp,-32
+    3420:	00112e23          	sw	ra,28(sp)
+    3424:	00812c23          	sw	s0,24(sp)
+    3428:	00912a23          	sw	s1,20(sp)
+    342c:	01212823          	sw	s2,16(sp)
+    3430:	01312623          	sw	s3,12(sp)
+    3434:	00050413          	mv	s0,a0
+    3438:	00058493          	mv	s1,a1
+    343c:	00060913          	mv	s2,a2
 	u8 outdata;
 
 	i2c_masterStartBlocking(i2c_addr);
-    3520:	f35ff0ef          	jal	3454 <i2c_masterStartBlocking>
+    3440:	f35ff0ef          	jal	3374 <i2c_masterStartBlocking>
         *((volatile u32*) address) = data;
-    3524:	000017b7          	lui	a5,0x1
-    3528:	b3478793          	addi	a5,a5,-1228 # b34 <CUSTOM2+0xad9>
-    352c:	00f42023          	sw	a5,0(s0)
+    3444:	000017b7          	lui	a5,0x1
+    3448:	b3478793          	addi	a5,a5,-1228 # b34 <CUSTOM2+0xad9>
+    344c:	00f42023          	sw	a5,0(s0)
 
 	i2c_txByte(i2c_addr, IMX708_I2C_ADDRESS << 1);
 	i2c_txNackBlocking(i2c_addr);
-    3530:	00040513          	mv	a0,s0
-    3534:	f99ff0ef          	jal	34cc <i2c_txNackBlocking>
+    3450:	00040513          	mv	a0,s0
+    3454:	f99ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr)); // Optional check
-    3538:	00040513          	mv	a0,s0
-    353c:	fb1ff0ef          	jal	34ec <i2c_rxAck>
-    3540:	e68fe0ef          	jal	1ba8 <assert>
+    3458:	00040513          	mv	a0,s0
+    345c:	fb1ff0ef          	jal	340c <i2c_rxAck>
+    3460:	f48fe0ef          	jal	1ba8 <assert>
 
 	i2c_txByte(i2c_addr, (reg >> 8) & 0xFF);
-    3544:	0084d793          	srli	a5,s1,0x8
+    3464:	0084d793          	srli	a5,s1,0x8
         write_u32(byte | I2C_TX_VALID | I2C_TX_ENABLE | I2C_TX_DISABLE_ON_DATA_CONFLICT, reg + I2C_TX_DATA);
-    3548:	000019b7          	lui	s3,0x1
-    354c:	b0098993          	addi	s3,s3,-1280 # b00 <CUSTOM2+0xaa5>
-    3550:	0137e7b3          	or	a5,a5,s3
-    3554:	00f42023          	sw	a5,0(s0)
+    3468:	000019b7          	lui	s3,0x1
+    346c:	b0098993          	addi	s3,s3,-1280 # b00 <CUSTOM2+0xaa5>
+    3470:	0137e7b3          	or	a5,a5,s3
+    3474:	00f42023          	sw	a5,0(s0)
 	i2c_txNackBlocking(i2c_addr);
-    3558:	00040513          	mv	a0,s0
-    355c:	f71ff0ef          	jal	34cc <i2c_txNackBlocking>
+    3478:	00040513          	mv	a0,s0
+    347c:	f71ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr)); // Optional check
-    3560:	00040513          	mv	a0,s0
-    3564:	f89ff0ef          	jal	34ec <i2c_rxAck>
-    3568:	e40fe0ef          	jal	1ba8 <assert>
+    3480:	00040513          	mv	a0,s0
+    3484:	f89ff0ef          	jal	340c <i2c_rxAck>
+    3488:	f20fe0ef          	jal	1ba8 <assert>
 
 	i2c_txByte(i2c_addr, (reg) & 0xFF);
-    356c:	0ff4f493          	zext.b	s1,s1
-    3570:	0134e4b3          	or	s1,s1,s3
-    3574:	00942023          	sw	s1,0(s0)
+    348c:	0ff4f493          	zext.b	s1,s1
+    3490:	0134e4b3          	or	s1,s1,s3
+    3494:	00942023          	sw	s1,0(s0)
 	i2c_txNackBlocking(i2c_addr);
-    3578:	00040513          	mv	a0,s0
-    357c:	f51ff0ef          	jal	34cc <i2c_txNackBlocking>
+    3498:	00040513          	mv	a0,s0
+    349c:	f51ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr)); // Optional check
-    3580:	00040513          	mv	a0,s0
-    3584:	f69ff0ef          	jal	34ec <i2c_rxAck>
-    3588:	e20fe0ef          	jal	1ba8 <assert>
-    358c:	01396933          	or	s2,s2,s3
-    3590:	01242023          	sw	s2,0(s0)
+    34a0:	00040513          	mv	a0,s0
+    34a4:	f69ff0ef          	jal	340c <i2c_rxAck>
+    34a8:	f00fe0ef          	jal	1ba8 <assert>
+    34ac:	01396933          	or	s2,s2,s3
+    34b0:	01242023          	sw	s2,0(s0)
 
 	i2c_txByte(i2c_addr, data & 0xFF);
 	i2c_txNackBlocking(i2c_addr);
-    3594:	00040513          	mv	a0,s0
-    3598:	f35ff0ef          	jal	34cc <i2c_txNackBlocking>
+    34b4:	00040513          	mv	a0,s0
+    34b8:	f35ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr)); // Optional check
-    359c:	00040513          	mv	a0,s0
-    35a0:	f4dff0ef          	jal	34ec <i2c_rxAck>
-    35a4:	e04fe0ef          	jal	1ba8 <assert>
+    34bc:	00040513          	mv	a0,s0
+    34c0:	f4dff0ef          	jal	340c <i2c_rxAck>
+    34c4:	ee4fe0ef          	jal	1ba8 <assert>
 
 	i2c_masterStopBlocking(i2c_addr);
-    35a8:	00040513          	mv	a0,s0
-    35ac:	ef1ff0ef          	jal	349c <i2c_masterStopBlocking>
+    34c8:	00040513          	mv	a0,s0
+    34cc:	ef1ff0ef          	jal	33bc <i2c_masterStopBlocking>
 }
-    35b0:	01c12083          	lw	ra,28(sp)
-    35b4:	01812403          	lw	s0,24(sp)
-    35b8:	01412483          	lw	s1,20(sp)
-    35bc:	01012903          	lw	s2,16(sp)
-    35c0:	00c12983          	lw	s3,12(sp)
-    35c4:	02010113          	addi	sp,sp,32
-    35c8:	00008067          	ret
+    34d0:	01c12083          	lw	ra,28(sp)
+    34d4:	01812403          	lw	s0,24(sp)
+    34d8:	01412483          	lw	s1,20(sp)
+    34dc:	01012903          	lw	s2,16(sp)
+    34e0:	00c12983          	lw	s3,12(sp)
+    34e4:	02010113          	addi	sp,sp,32
+    34e8:	00008067          	ret
 
-000035cc <PiCamV3_StartStreaming>:
+000034ec <PiCamV3_StartStreaming>:
 
 	return outdata;
 }
 
 void PiCamV3_StartStreaming(u32 i2c_addr)
 {
-    35cc:	ff010113          	addi	sp,sp,-16
-    35d0:	00112623          	sw	ra,12(sp)
+    34ec:	ff010113          	addi	sp,sp,-16
+    34f0:	00112623          	sw	ra,12(sp)
 	PiCamV3_WriteRegData(i2c_addr, IMX708_MODE_SELECT, IMX708_ACTIVE);
-    35d4:	00100613          	li	a2,1
-    35d8:	10000593          	li	a1,256
-    35dc:	f21ff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    34f4:	00100613          	li	a2,1
+    34f8:	10000593          	li	a1,256
+    34fc:	f21ff0ef          	jal	341c <PiCamV3_WriteRegData>
 }
-    35e0:	00c12083          	lw	ra,12(sp)
-    35e4:	01010113          	addi	sp,sp,16
-    35e8:	00008067          	ret
+    3500:	00c12083          	lw	ra,12(sp)
+    3504:	01010113          	addi	sp,sp,16
+    3508:	00008067          	ret
 
-000035ec <PiCamV3_StopStreaming>:
+0000350c <PiCamV3_StopStreaming>:
 
 void PiCamV3_StopStreaming(u32 i2c_addr)
 {
-    35ec:	ff010113          	addi	sp,sp,-16
-    35f0:	00112623          	sw	ra,12(sp)
+    350c:	ff010113          	addi	sp,sp,-16
+    3510:	00112623          	sw	ra,12(sp)
 	PiCamV3_WriteRegData(i2c_addr, IMX708_MODE_SELECT, IMX708_SLEEP);
-    35f4:	00000613          	li	a2,0
-    35f8:	10000593          	li	a1,256
-    35fc:	f01ff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    3514:	00000613          	li	a2,0
+    3518:	10000593          	li	a1,256
+    351c:	f01ff0ef          	jal	341c <PiCamV3_WriteRegData>
 }
-    3600:	00c12083          	lw	ra,12(sp)
-    3604:	01010113          	addi	sp,sp,16
-    3608:	00008067          	ret
+    3520:	00c12083          	lw	ra,12(sp)
+    3524:	01010113          	addi	sp,sp,16
+    3528:	00008067          	ret
 
-0000360c <PiCamV3_ConfigCommon>:
+0000352c <PiCamV3_ConfigCommon>:
 
 void PiCamV3_ConfigCommon(u32 i2c_addr)
 {
-    360c:	ff010113          	addi	sp,sp,-16
-    3610:	00112623          	sw	ra,12(sp)
-    3614:	00812423          	sw	s0,8(sp)
-    3618:	00912223          	sw	s1,4(sp)
-    361c:	00050493          	mv	s1,a0
+    352c:	ff010113          	addi	sp,sp,-16
+    3530:	00112623          	sw	ra,12(sp)
+    3534:	00812423          	sw	s0,8(sp)
+    3538:	00912223          	sw	s1,4(sp)
+    353c:	00050493          	mv	s1,a0
 	for (int i = 0; i < sizeof(mode_common_regs) / sizeof(mode_common_regs[0]); i++)
-    3620:	00000413          	li	s0,0
-    3624:	0280006f          	j	364c <PiCamV3_ConfigCommon+0x40>
+    3540:	00000413          	li	s0,0
+    3544:	0280006f          	j	356c <PiCamV3_ConfigCommon+0x40>
 	{
 		PiCamV3_WriteRegData(i2c_addr, mode_common_regs[i].address, mode_common_regs[i].val);
-    3628:	000047b7          	lui	a5,0x4
-    362c:	00241713          	slli	a4,s0,0x2
-    3630:	7b478793          	addi	a5,a5,1972 # 47b4 <mode_common_regs>
-    3634:	00e787b3          	add	a5,a5,a4
-    3638:	0027c603          	lbu	a2,2(a5)
-    363c:	0007d583          	lhu	a1,0(a5)
-    3640:	00048513          	mv	a0,s1
-    3644:	eb9ff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    3548:	000047b7          	lui	a5,0x4
+    354c:	00241713          	slli	a4,s0,0x2
+    3550:	6c478793          	addi	a5,a5,1732 # 46c4 <mode_common_regs>
+    3554:	00e787b3          	add	a5,a5,a4
+    3558:	0027c603          	lbu	a2,2(a5)
+    355c:	0007d583          	lhu	a1,0(a5)
+    3560:	00048513          	mv	a0,s1
+    3564:	eb9ff0ef          	jal	341c <PiCamV3_WriteRegData>
 	for (int i = 0; i < sizeof(mode_common_regs) / sizeof(mode_common_regs[0]); i++)
-    3648:	00140413          	addi	s0,s0,1
-    364c:	02f00793          	li	a5,47
-    3650:	fc87fce3          	bgeu	a5,s0,3628 <PiCamV3_ConfigCommon+0x1c>
+    3568:	00140413          	addi	s0,s0,1
+    356c:	02f00793          	li	a5,47
+    3570:	fc87fce3          	bgeu	a5,s0,3548 <PiCamV3_ConfigCommon+0x1c>
 	}
 }
-    3654:	00c12083          	lw	ra,12(sp)
-    3658:	00812403          	lw	s0,8(sp)
-    365c:	00412483          	lw	s1,4(sp)
-    3660:	01010113          	addi	sp,sp,16
-    3664:	00008067          	ret
+    3574:	00c12083          	lw	ra,12(sp)
+    3578:	00812403          	lw	s0,8(sp)
+    357c:	00412483          	lw	s1,4(sp)
+    3580:	01010113          	addi	sp,sp,16
+    3584:	00008067          	ret
 
-00003668 <PiCamV3_ConfigFormat>:
+00003588 <PiCamV3_ConfigFormat>:
 
 void PiCamV3_ConfigFormat(u32 i2c_addr, u8 mode)
 {
-    3668:	ff010113          	addi	sp,sp,-16
-    366c:	00112623          	sw	ra,12(sp)
-    3670:	00912223          	sw	s1,4(sp)
-    3674:	00050493          	mv	s1,a0
+    3588:	ff010113          	addi	sp,sp,-16
+    358c:	00112623          	sw	ra,12(sp)
+    3590:	00912223          	sw	s1,4(sp)
+    3594:	00050493          	mv	s1,a0
 	// 	MODE
 	//  0 : 1920 x 1080 cropped, 50FPS
 	//	1 : 1920 x 1080 2x2 binned, 60 FPS
 	//  2 : 1920 x 1080 HDR, 50 FPS
 
 	if (mode == 0)
-    3678:	08058663          	beqz	a1,3704 <PiCamV3_ConfigFormat+0x9c>
+    3598:	08058663          	beqz	a1,3624 <PiCamV3_ConfigFormat+0x9c>
 		{
 			PiCamV3_WriteRegData(i2c_addr, mode_1920x1080_cropped_regs[i].address, mode_1920x1080_cropped_regs[i].val);
 		}
 	}
 
 	else if (mode == 1)
-    367c:	00100793          	li	a5,1
-    3680:	0cf58263          	beq	a1,a5,3744 <PiCamV3_ConfigFormat+0xdc>
+    359c:	00100793          	li	a5,1
+    35a0:	0cf58263          	beq	a1,a5,3664 <PiCamV3_ConfigFormat+0xdc>
 		{
 			PiCamV3_WriteRegData(i2c_addr, mode_2x2binned_1920x1080_regs[i].address, mode_2x2binned_1920x1080_regs[i].val);
 		}
 	}
 
 	else if (mode == 2)
-    3684:	00200793          	li	a5,2
-    3688:	06f59663          	bne	a1,a5,36f4 <PiCamV3_ConfigFormat+0x8c>
-    368c:	00812423          	sw	s0,8(sp)
+    35a4:	00200793          	li	a5,2
+    35a8:	06f59663          	bne	a1,a5,3614 <PiCamV3_ConfigFormat+0x8c>
+    35ac:	00812423          	sw	s0,8(sp)
 	{
 		for (int i = 0; i < sizeof(mode_hdr_1920x1080_regs) / sizeof(mode_hdr_1920x1080_regs[0]); i++)
-    3690:	00000413          	li	s0,0
-    3694:	05e00793          	li	a5,94
-    3698:	0a87ec63          	bltu	a5,s0,3750 <PiCamV3_ConfigFormat+0xe8>
+    35b0:	00000413          	li	s0,0
+    35b4:	05e00793          	li	a5,94
+    35b8:	0a87ec63          	bltu	a5,s0,3670 <PiCamV3_ConfigFormat+0xe8>
 		{
 			PiCamV3_WriteRegData(i2c_addr, mode_hdr_1920x1080_regs[i].address, mode_hdr_1920x1080_regs[i].val);
-    369c:	000047b7          	lui	a5,0x4
-    36a0:	00241713          	slli	a4,s0,0x2
-    36a4:	36078793          	addi	a5,a5,864 # 4360 <mode_hdr_1920x1080_regs>
-    36a8:	00e787b3          	add	a5,a5,a4
-    36ac:	0027c603          	lbu	a2,2(a5)
-    36b0:	0007d583          	lhu	a1,0(a5)
-    36b4:	00048513          	mv	a0,s1
-    36b8:	e45ff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    35bc:	000047b7          	lui	a5,0x4
+    35c0:	00241713          	slli	a4,s0,0x2
+    35c4:	27078793          	addi	a5,a5,624 # 4270 <mode_hdr_1920x1080_regs>
+    35c8:	00e787b3          	add	a5,a5,a4
+    35cc:	0027c603          	lbu	a2,2(a5)
+    35d0:	0007d583          	lhu	a1,0(a5)
+    35d4:	00048513          	mv	a0,s1
+    35d8:	e45ff0ef          	jal	341c <PiCamV3_WriteRegData>
 		for (int i = 0; i < sizeof(mode_hdr_1920x1080_regs) / sizeof(mode_hdr_1920x1080_regs[0]); i++)
-    36bc:	00140413          	addi	s0,s0,1
-    36c0:	fd5ff06f          	j	3694 <PiCamV3_ConfigFormat+0x2c>
+    35dc:	00140413          	addi	s0,s0,1
+    35e0:	fd5ff06f          	j	35b4 <PiCamV3_ConfigFormat+0x2c>
 			PiCamV3_WriteRegData(i2c_addr, mode_1920x1080_cropped_regs[i].address, mode_1920x1080_cropped_regs[i].val);
-    36c4:	000047b7          	lui	a5,0x4
-    36c8:	00241713          	slli	a4,s0,0x2
-    36cc:	64878793          	addi	a5,a5,1608 # 4648 <mode_1920x1080_cropped_regs>
-    36d0:	00e787b3          	add	a5,a5,a4
-    36d4:	0027c603          	lbu	a2,2(a5)
-    36d8:	0007d583          	lhu	a1,0(a5)
-    36dc:	00048513          	mv	a0,s1
-    36e0:	e1dff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    35e4:	000047b7          	lui	a5,0x4
+    35e8:	00241713          	slli	a4,s0,0x2
+    35ec:	55878793          	addi	a5,a5,1368 # 4558 <mode_1920x1080_cropped_regs>
+    35f0:	00e787b3          	add	a5,a5,a4
+    35f4:	0027c603          	lbu	a2,2(a5)
+    35f8:	0007d583          	lhu	a1,0(a5)
+    35fc:	00048513          	mv	a0,s1
+    3600:	e1dff0ef          	jal	341c <PiCamV3_WriteRegData>
 		for (int i = 0; i < sizeof(mode_1920x1080_cropped_regs) / sizeof(mode_1920x1080_cropped_regs[0]); i++)
-    36e4:	00140413          	addi	s0,s0,1
-    36e8:	05a00793          	li	a5,90
-    36ec:	fc87fce3          	bgeu	a5,s0,36c4 <PiCamV3_ConfigFormat+0x5c>
-    36f0:	00812403          	lw	s0,8(sp)
+    3604:	00140413          	addi	s0,s0,1
+    3608:	05a00793          	li	a5,90
+    360c:	fc87fce3          	bgeu	a5,s0,35e4 <PiCamV3_ConfigFormat+0x5c>
+    3610:	00812403          	lw	s0,8(sp)
 		}
 	}
 }
-    36f4:	00c12083          	lw	ra,12(sp)
-    36f8:	00412483          	lw	s1,4(sp)
-    36fc:	01010113          	addi	sp,sp,16
-    3700:	00008067          	ret
-    3704:	00812423          	sw	s0,8(sp)
+    3614:	00c12083          	lw	ra,12(sp)
+    3618:	00412483          	lw	s1,4(sp)
+    361c:	01010113          	addi	sp,sp,16
+    3620:	00008067          	ret
+    3624:	00812423          	sw	s0,8(sp)
 		for (int i = 0; i < sizeof(mode_1920x1080_cropped_regs) / sizeof(mode_1920x1080_cropped_regs[0]); i++)
-    3708:	00000413          	li	s0,0
-    370c:	fddff06f          	j	36e8 <PiCamV3_ConfigFormat+0x80>
+    3628:	00000413          	li	s0,0
+    362c:	fddff06f          	j	3608 <PiCamV3_ConfigFormat+0x80>
 			PiCamV3_WriteRegData(i2c_addr, mode_2x2binned_1920x1080_regs[i].address, mode_2x2binned_1920x1080_regs[i].val);
-    3710:	000047b7          	lui	a5,0x4
-    3714:	00241713          	slli	a4,s0,0x2
-    3718:	4dc78793          	addi	a5,a5,1244 # 44dc <mode_2x2binned_1920x1080_regs>
-    371c:	00e787b3          	add	a5,a5,a4
-    3720:	0027c603          	lbu	a2,2(a5)
-    3724:	0007d583          	lhu	a1,0(a5)
-    3728:	00048513          	mv	a0,s1
-    372c:	dd1ff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    3630:	000047b7          	lui	a5,0x4
+    3634:	00241713          	slli	a4,s0,0x2
+    3638:	3ec78793          	addi	a5,a5,1004 # 43ec <mode_2x2binned_1920x1080_regs>
+    363c:	00e787b3          	add	a5,a5,a4
+    3640:	0027c603          	lbu	a2,2(a5)
+    3644:	0007d583          	lhu	a1,0(a5)
+    3648:	00048513          	mv	a0,s1
+    364c:	dd1ff0ef          	jal	341c <PiCamV3_WriteRegData>
 		for (int i = 0; i < sizeof(mode_2x2binned_1920x1080_regs) / sizeof(mode_2x2binned_1920x1080_regs[0]); i++)
-    3730:	00140413          	addi	s0,s0,1
-    3734:	05a00793          	li	a5,90
-    3738:	fc87fce3          	bgeu	a5,s0,3710 <PiCamV3_ConfigFormat+0xa8>
-    373c:	00812403          	lw	s0,8(sp)
-    3740:	fb5ff06f          	j	36f4 <PiCamV3_ConfigFormat+0x8c>
-    3744:	00812423          	sw	s0,8(sp)
-    3748:	00000413          	li	s0,0
-    374c:	fe9ff06f          	j	3734 <PiCamV3_ConfigFormat+0xcc>
-    3750:	00812403          	lw	s0,8(sp)
-    3754:	fa1ff06f          	j	36f4 <PiCamV3_ConfigFormat+0x8c>
+    3650:	00140413          	addi	s0,s0,1
+    3654:	05a00793          	li	a5,90
+    3658:	fc87fce3          	bgeu	a5,s0,3630 <PiCamV3_ConfigFormat+0xa8>
+    365c:	00812403          	lw	s0,8(sp)
+    3660:	fb5ff06f          	j	3614 <PiCamV3_ConfigFormat+0x8c>
+    3664:	00812423          	sw	s0,8(sp)
+    3668:	00000413          	li	s0,0
+    366c:	fe9ff06f          	j	3654 <PiCamV3_ConfigFormat+0xcc>
+    3670:	00812403          	lw	s0,8(sp)
+    3674:	fa1ff06f          	j	3614 <PiCamV3_ConfigFormat+0x8c>
 
-00003758 <PiCamV3_ConfigLinkFreq>:
+00003678 <PiCamV3_ConfigLinkFreq>:
 
 void PiCamV3_ConfigLinkFreq(u32 i2c_addr)
 {
-    3758:	ff010113          	addi	sp,sp,-16
-    375c:	00112623          	sw	ra,12(sp)
-    3760:	00812423          	sw	s0,8(sp)
-    3764:	00912223          	sw	s1,4(sp)
-    3768:	00050493          	mv	s1,a0
+    3678:	ff010113          	addi	sp,sp,-16
+    367c:	00112623          	sw	ra,12(sp)
+    3680:	00812423          	sw	s0,8(sp)
+    3684:	00912223          	sw	s1,4(sp)
+    3688:	00050493          	mv	s1,a0
 	for (int i = 0; i < sizeof(link_450Mhz_regs) / sizeof(link_450Mhz_regs[0]); i++)
-    376c:	00000413          	li	s0,0
-    3770:	0240006f          	j	3794 <PiCamV3_ConfigLinkFreq+0x3c>
+    368c:	00000413          	li	s0,0
+    3690:	0240006f          	j	36b4 <PiCamV3_ConfigLinkFreq+0x3c>
 	{
 		PiCamV3_WriteRegData(i2c_addr, link_450Mhz_regs[i].address, link_450Mhz_regs[i].val);
-    3774:	00241713          	slli	a4,s0,0x2
-    3778:	81018793          	addi	a5,gp,-2032 # 4878 <link_450Mhz_regs>
-    377c:	00e787b3          	add	a5,a5,a4
-    3780:	0027c603          	lbu	a2,2(a5)
-    3784:	0007d583          	lhu	a1,0(a5)
-    3788:	00048513          	mv	a0,s1
-    378c:	d71ff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    3694:	00241713          	slli	a4,s0,0x2
+    3698:	81018793          	addi	a5,gp,-2032 # 4788 <link_450Mhz_regs>
+    369c:	00e787b3          	add	a5,a5,a4
+    36a0:	0027c603          	lbu	a2,2(a5)
+    36a4:	0007d583          	lhu	a1,0(a5)
+    36a8:	00048513          	mv	a0,s1
+    36ac:	d71ff0ef          	jal	341c <PiCamV3_WriteRegData>
 	for (int i = 0; i < sizeof(link_450Mhz_regs) / sizeof(link_450Mhz_regs[0]); i++)
-    3790:	00140413          	addi	s0,s0,1
-    3794:	00100793          	li	a5,1
-    3798:	fc87fee3          	bgeu	a5,s0,3774 <PiCamV3_ConfigLinkFreq+0x1c>
+    36b0:	00140413          	addi	s0,s0,1
+    36b4:	00100793          	li	a5,1
+    36b8:	fc87fee3          	bgeu	a5,s0,3694 <PiCamV3_ConfigLinkFreq+0x1c>
 	}
 }
-    379c:	00c12083          	lw	ra,12(sp)
-    37a0:	00812403          	lw	s0,8(sp)
-    37a4:	00412483          	lw	s1,4(sp)
-    37a8:	01010113          	addi	sp,sp,16
-    37ac:	00008067          	ret
+    36bc:	00c12083          	lw	ra,12(sp)
+    36c0:	00812403          	lw	s0,8(sp)
+    36c4:	00412483          	lw	s1,4(sp)
+    36c8:	01010113          	addi	sp,sp,16
+    36cc:	00008067          	ret
 
-000037b0 <PiCamV3_ConfigQuadBayerRemosaicAdjustment>:
+000036d0 <PiCamV3_ConfigQuadBayerRemosaicAdjustment>:
 
 void PiCamV3_ConfigQuadBayerRemosaicAdjustment(u32 i2c_addr)
 {
-    37b0:	ff010113          	addi	sp,sp,-16
-    37b4:	00112623          	sw	ra,12(sp)
-    37b8:	00812423          	sw	s0,8(sp)
-    37bc:	00050413          	mv	s0,a0
+    36d0:	ff010113          	addi	sp,sp,-16
+    36d4:	00112623          	sw	ra,12(sp)
+    36d8:	00812423          	sw	s0,8(sp)
+    36dc:	00050413          	mv	s0,a0
 	PiCamV3_WriteRegData(i2c_addr, IMX708_LPF_INTENSITY_EN, IMX708_LPF_INTENSITY_ENABLED);
-    37c0:	00000613          	li	a2,0
-    37c4:	0000c5b7          	lui	a1,0xc
-    37c8:	42858593          	addi	a1,a1,1064 # c428 <__freertos_irq_stack_top+0x6b88>
-    37cc:	d31ff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    36e0:	00000613          	li	a2,0
+    36e4:	0000c5b7          	lui	a1,0xc
+    36e8:	42858593          	addi	a1,a1,1064 # c428 <__freertos_irq_stack_top+0x6c78>
+    36ec:	d31ff0ef          	jal	341c <PiCamV3_WriteRegData>
 	PiCamV3_WriteRegData(i2c_addr, IMX708_LPF_INTENSITY, 0x04);
-    37d0:	00400613          	li	a2,4
-    37d4:	0000c5b7          	lui	a1,0xc
-    37d8:	42958593          	addi	a1,a1,1065 # c429 <__freertos_irq_stack_top+0x6b89>
-    37dc:	00040513          	mv	a0,s0
-    37e0:	d1dff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    36f0:	00400613          	li	a2,4
+    36f4:	0000c5b7          	lui	a1,0xc
+    36f8:	42958593          	addi	a1,a1,1065 # c429 <__freertos_irq_stack_top+0x6c79>
+    36fc:	00040513          	mv	a0,s0
+    3700:	d1dff0ef          	jal	341c <PiCamV3_WriteRegData>
 }
-    37e4:	00c12083          	lw	ra,12(sp)
-    37e8:	00812403          	lw	s0,8(sp)
-    37ec:	01010113          	addi	sp,sp,16
-    37f0:	00008067          	ret
+    3704:	00c12083          	lw	ra,12(sp)
+    3708:	00812403          	lw	s0,8(sp)
+    370c:	01010113          	addi	sp,sp,16
+    3710:	00008067          	ret
 
-000037f4 <PiCamV3_SetPdafGain>:
+00003714 <PiCamV3_SetPdafGain>:
 
 void PiCamV3_SetPdafGain(u32 i2c_addr)
 {
-    37f4:	fe010113          	addi	sp,sp,-32
-    37f8:	00112e23          	sw	ra,28(sp)
-    37fc:	00812c23          	sw	s0,24(sp)
-    3800:	00912a23          	sw	s1,20(sp)
-    3804:	01212823          	sw	s2,16(sp)
-    3808:	01312623          	sw	s3,12(sp)
-    380c:	00050993          	mv	s3,a0
+    3714:	fe010113          	addi	sp,sp,-32
+    3718:	00112e23          	sw	ra,28(sp)
+    371c:	00812c23          	sw	s0,24(sp)
+    3720:	00912a23          	sw	s1,20(sp)
+    3724:	01212823          	sw	s2,16(sp)
+    3728:	01312623          	sw	s3,12(sp)
+    372c:	00050993          	mv	s3,a0
 	for (int i = 0; i < 54; i++)
-    3810:	00000493          	li	s1,0
-    3814:	0640006f          	j	3878 <PiCamV3_SetPdafGain+0x84>
+    3730:	00000493          	li	s1,0
+    3734:	0640006f          	j	3798 <PiCamV3_SetPdafGain+0x84>
 	{
 		PiCamV3_WriteRegData(i2c_addr, IMX708_REG_BASE_SPC_GAINS_L + i, pdaf_gains[0][i % 9]);
-    3818:	01049913          	slli	s2,s1,0x10
-    381c:	01095913          	srli	s2,s2,0x10
-    3820:	00900793          	li	a5,9
-    3824:	02f4e7b3          	rem	a5,s1,a5
-    3828:	00004437          	lui	s0,0x4
-    382c:	34c40413          	addi	s0,s0,844 # 434c <pdaf_gains>
-    3830:	00f40433          	add	s0,s0,a5
-    3834:	000085b7          	lui	a1,0x8
-    3838:	b1058593          	addi	a1,a1,-1264 # 7b10 <__freertos_irq_stack_top+0x2270>
-    383c:	00b905b3          	add	a1,s2,a1
-    3840:	00044603          	lbu	a2,0(s0)
-    3844:	01059593          	slli	a1,a1,0x10
-    3848:	0105d593          	srli	a1,a1,0x10
-    384c:	00098513          	mv	a0,s3
-    3850:	cadff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    3738:	01049913          	slli	s2,s1,0x10
+    373c:	01095913          	srli	s2,s2,0x10
+    3740:	00900793          	li	a5,9
+    3744:	02f4e7b3          	rem	a5,s1,a5
+    3748:	00004437          	lui	s0,0x4
+    374c:	25c40413          	addi	s0,s0,604 # 425c <pdaf_gains>
+    3750:	00f40433          	add	s0,s0,a5
+    3754:	000085b7          	lui	a1,0x8
+    3758:	b1058593          	addi	a1,a1,-1264 # 7b10 <__freertos_irq_stack_top+0x2360>
+    375c:	00b905b3          	add	a1,s2,a1
+    3760:	00044603          	lbu	a2,0(s0)
+    3764:	01059593          	slli	a1,a1,0x10
+    3768:	0105d593          	srli	a1,a1,0x10
+    376c:	00098513          	mv	a0,s3
+    3770:	cadff0ef          	jal	341c <PiCamV3_WriteRegData>
 		PiCamV3_WriteRegData(i2c_addr, IMX708_REG_BASE_SPC_GAINS_R + i, pdaf_gains[1][i % 9]);
-    3854:	000087b7          	lui	a5,0x8
-    3858:	c0078793          	addi	a5,a5,-1024 # 7c00 <__freertos_irq_stack_top+0x2360>
-    385c:	00f905b3          	add	a1,s2,a5
-    3860:	00944603          	lbu	a2,9(s0)
-    3864:	01059593          	slli	a1,a1,0x10
-    3868:	0105d593          	srli	a1,a1,0x10
-    386c:	00098513          	mv	a0,s3
-    3870:	c8dff0ef          	jal	34fc <PiCamV3_WriteRegData>
+    3774:	000087b7          	lui	a5,0x8
+    3778:	c0078793          	addi	a5,a5,-1024 # 7c00 <__freertos_irq_stack_top+0x2450>
+    377c:	00f905b3          	add	a1,s2,a5
+    3780:	00944603          	lbu	a2,9(s0)
+    3784:	01059593          	slli	a1,a1,0x10
+    3788:	0105d593          	srli	a1,a1,0x10
+    378c:	00098513          	mv	a0,s3
+    3790:	c8dff0ef          	jal	341c <PiCamV3_WriteRegData>
 	for (int i = 0; i < 54; i++)
-    3874:	00148493          	addi	s1,s1,1
-    3878:	03500793          	li	a5,53
-    387c:	f897dee3          	bge	a5,s1,3818 <PiCamV3_SetPdafGain+0x24>
+    3794:	00148493          	addi	s1,s1,1
+    3798:	03500793          	li	a5,53
+    379c:	f897dee3          	bge	a5,s1,3738 <PiCamV3_SetPdafGain+0x24>
 	}
 }
-    3880:	01c12083          	lw	ra,28(sp)
-    3884:	01812403          	lw	s0,24(sp)
-    3888:	01412483          	lw	s1,20(sp)
-    388c:	01012903          	lw	s2,16(sp)
-    3890:	00c12983          	lw	s3,12(sp)
-    3894:	02010113          	addi	sp,sp,32
-    3898:	00008067          	ret
+    37a0:	01c12083          	lw	ra,28(sp)
+    37a4:	01812403          	lw	s0,24(sp)
+    37a8:	01412483          	lw	s1,20(sp)
+    37ac:	01012903          	lw	s2,16(sp)
+    37b0:	00c12983          	lw	s3,12(sp)
+    37b4:	02010113          	addi	sp,sp,32
+    37b8:	00008067          	ret
 
-0000389c <PiCamV3_OnActuator>:
+000037bc <PiCamV3_OnActuator>:
 	PiCamV3_WriteRegData(i2c_addr, IMX708_REG_DIGITAL_GAIN, (val & 0xFF00) >> 8);
 	PiCamV3_WriteRegData(i2c_addr, IMX708_REG_DIGITAL_GAIN + 1, val & 0xFF);
 }
 
 void PiCamV3_OnActuator(u32 i2c_addr)
 {
-    389c:	ff010113          	addi	sp,sp,-16
-    38a0:	00112623          	sw	ra,12(sp)
-    38a4:	00812423          	sw	s0,8(sp)
-    38a8:	00050413          	mv	s0,a0
+    37bc:	ff010113          	addi	sp,sp,-16
+    37c0:	00112623          	sw	ra,12(sp)
+    37c4:	00812423          	sw	s0,8(sp)
+    37c8:	00050413          	mv	s0,a0
 	// Turn on actuator
 	i2c_masterStartBlocking(i2c_addr);
-    38ac:	ba9ff0ef          	jal	3454 <i2c_masterStartBlocking>
-    38b0:	000017b7          	lui	a5,0x1
-    38b4:	b1878793          	addi	a5,a5,-1256 # b18 <CUSTOM2+0xabd>
-    38b8:	00f42023          	sw	a5,0(s0)
+    37cc:	ba9ff0ef          	jal	3374 <i2c_masterStartBlocking>
+    37d0:	000017b7          	lui	a5,0x1
+    37d4:	b1878793          	addi	a5,a5,-1256 # b18 <CUSTOM2+0xabd>
+    37d8:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_I2C_ADDRESS << 1);
 	i2c_txNackBlocking(i2c_addr);
-    38bc:	00040513          	mv	a0,s0
-    38c0:	c0dff0ef          	jal	34cc <i2c_txNackBlocking>
+    37dc:	00040513          	mv	a0,s0
+    37e0:	c0dff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    38c4:	00040513          	mv	a0,s0
-    38c8:	c25ff0ef          	jal	34ec <i2c_rxAck>
-    38cc:	adcfe0ef          	jal	1ba8 <assert>
-    38d0:	000017b7          	lui	a5,0x1
-    38d4:	b0278793          	addi	a5,a5,-1278 # b02 <CUSTOM2+0xaa7>
-    38d8:	00f42023          	sw	a5,0(s0)
+    37e4:	00040513          	mv	a0,s0
+    37e8:	c25ff0ef          	jal	340c <i2c_rxAck>
+    37ec:	bbcfe0ef          	jal	1ba8 <assert>
+    37f0:	000017b7          	lui	a5,0x1
+    37f4:	b0278793          	addi	a5,a5,-1278 # b02 <CUSTOM2+0xaa7>
+    37f8:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_CTL_ADDR);
 	i2c_txNackBlocking(i2c_addr);
-    38dc:	00040513          	mv	a0,s0
-    38e0:	bedff0ef          	jal	34cc <i2c_txNackBlocking>
+    37fc:	00040513          	mv	a0,s0
+    3800:	bedff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    38e4:	00040513          	mv	a0,s0
-    38e8:	c05ff0ef          	jal	34ec <i2c_rxAck>
-    38ec:	abcfe0ef          	jal	1ba8 <assert>
-    38f0:	000017b7          	lui	a5,0x1
-    38f4:	b0078793          	addi	a5,a5,-1280 # b00 <CUSTOM2+0xaa5>
-    38f8:	00f42023          	sw	a5,0(s0)
+    3804:	00040513          	mv	a0,s0
+    3808:	c05ff0ef          	jal	340c <i2c_rxAck>
+    380c:	b9cfe0ef          	jal	1ba8 <assert>
+    3810:	000017b7          	lui	a5,0x1
+    3814:	b0078793          	addi	a5,a5,-1280 # b00 <CUSTOM2+0xaa5>
+    3818:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_ACTIVE);
 	i2c_txNackBlocking(i2c_addr);
-    38fc:	00040513          	mv	a0,s0
-    3900:	bcdff0ef          	jal	34cc <i2c_txNackBlocking>
+    381c:	00040513          	mv	a0,s0
+    3820:	bcdff0ef          	jal	33ec <i2c_txNackBlocking>
 	i2c_masterStopBlocking(i2c_addr);
-    3904:	00040513          	mv	a0,s0
-    3908:	b95ff0ef          	jal	349c <i2c_masterStopBlocking>
+    3824:	00040513          	mv	a0,s0
+    3828:	b95ff0ef          	jal	33bc <i2c_masterStopBlocking>
 }
-    390c:	00c12083          	lw	ra,12(sp)
-    3910:	00812403          	lw	s0,8(sp)
-    3914:	01010113          	addi	sp,sp,16
-    3918:	00008067          	ret
+    382c:	00c12083          	lw	ra,12(sp)
+    3830:	00812403          	lw	s0,8(sp)
+    3834:	01010113          	addi	sp,sp,16
+    3838:	00008067          	ret
 
-0000391c <PiCamV3_OffActuator>:
+0000383c <PiCamV3_OffActuator>:
 
 void PiCamV3_OffActuator(u32 i2c_addr)
 {
-    391c:	ff010113          	addi	sp,sp,-16
-    3920:	00112623          	sw	ra,12(sp)
-    3924:	00812423          	sw	s0,8(sp)
-    3928:	00050413          	mv	s0,a0
+    383c:	ff010113          	addi	sp,sp,-16
+    3840:	00112623          	sw	ra,12(sp)
+    3844:	00812423          	sw	s0,8(sp)
+    3848:	00050413          	mv	s0,a0
 	// Turn off actuator
 	i2c_masterStartBlocking(i2c_addr);
-    392c:	b29ff0ef          	jal	3454 <i2c_masterStartBlocking>
-    3930:	000017b7          	lui	a5,0x1
-    3934:	b1878793          	addi	a5,a5,-1256 # b18 <CUSTOM2+0xabd>
-    3938:	00f42023          	sw	a5,0(s0)
+    384c:	b29ff0ef          	jal	3374 <i2c_masterStartBlocking>
+    3850:	000017b7          	lui	a5,0x1
+    3854:	b1878793          	addi	a5,a5,-1256 # b18 <CUSTOM2+0xabd>
+    3858:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_I2C_ADDRESS << 1);
 	i2c_txNackBlocking(i2c_addr);
-    393c:	00040513          	mv	a0,s0
-    3940:	b8dff0ef          	jal	34cc <i2c_txNackBlocking>
+    385c:	00040513          	mv	a0,s0
+    3860:	b8dff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    3944:	00040513          	mv	a0,s0
-    3948:	ba5ff0ef          	jal	34ec <i2c_rxAck>
-    394c:	a5cfe0ef          	jal	1ba8 <assert>
-    3950:	000017b7          	lui	a5,0x1
-    3954:	b0278793          	addi	a5,a5,-1278 # b02 <CUSTOM2+0xaa7>
-    3958:	00f42023          	sw	a5,0(s0)
+    3864:	00040513          	mv	a0,s0
+    3868:	ba5ff0ef          	jal	340c <i2c_rxAck>
+    386c:	b3cfe0ef          	jal	1ba8 <assert>
+    3870:	000017b7          	lui	a5,0x1
+    3874:	b0278793          	addi	a5,a5,-1278 # b02 <CUSTOM2+0xaa7>
+    3878:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_CTL_ADDR);
 	i2c_txNackBlocking(i2c_addr);
-    395c:	00040513          	mv	a0,s0
-    3960:	b6dff0ef          	jal	34cc <i2c_txNackBlocking>
+    387c:	00040513          	mv	a0,s0
+    3880:	b6dff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    3964:	00040513          	mv	a0,s0
-    3968:	b85ff0ef          	jal	34ec <i2c_rxAck>
-    396c:	a3cfe0ef          	jal	1ba8 <assert>
-    3970:	000017b7          	lui	a5,0x1
-    3974:	b0178793          	addi	a5,a5,-1279 # b01 <CUSTOM2+0xaa6>
-    3978:	00f42023          	sw	a5,0(s0)
+    3884:	00040513          	mv	a0,s0
+    3888:	b85ff0ef          	jal	340c <i2c_rxAck>
+    388c:	b1cfe0ef          	jal	1ba8 <assert>
+    3890:	000017b7          	lui	a5,0x1
+    3894:	b0178793          	addi	a5,a5,-1279 # b01 <CUSTOM2+0xaa6>
+    3898:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_SLEEP);
 	i2c_txNackBlocking(i2c_addr);
-    397c:	00040513          	mv	a0,s0
-    3980:	b4dff0ef          	jal	34cc <i2c_txNackBlocking>
+    389c:	00040513          	mv	a0,s0
+    38a0:	b4dff0ef          	jal	33ec <i2c_txNackBlocking>
 	i2c_masterStopBlocking(i2c_addr);
-    3984:	00040513          	mv	a0,s0
-    3988:	b15ff0ef          	jal	349c <i2c_masterStopBlocking>
+    38a4:	00040513          	mv	a0,s0
+    38a8:	b15ff0ef          	jal	33bc <i2c_masterStopBlocking>
 }
-    398c:	00c12083          	lw	ra,12(sp)
-    3990:	00812403          	lw	s0,8(sp)
-    3994:	01010113          	addi	sp,sp,16
-    3998:	00008067          	ret
+    38ac:	00c12083          	lw	ra,12(sp)
+    38b0:	00812403          	lw	s0,8(sp)
+    38b4:	01010113          	addi	sp,sp,16
+    38b8:	00008067          	ret
 
-0000399c <PiCamV3_SetFocusStep>:
+000038bc <PiCamV3_SetFocusStep>:
 
 void PiCamV3_SetFocusStep(u32 i2c_addr, u32 focus_step)
 {
-    399c:	fe010113          	addi	sp,sp,-32
-    39a0:	00112e23          	sw	ra,28(sp)
-    39a4:	00812c23          	sw	s0,24(sp)
-    39a8:	00912a23          	sw	s1,20(sp)
-    39ac:	01212823          	sw	s2,16(sp)
-    39b0:	01312623          	sw	s3,12(sp)
-    39b4:	00050413          	mv	s0,a0
-    39b8:	00058493          	mv	s1,a1
+    38bc:	fe010113          	addi	sp,sp,-32
+    38c0:	00112e23          	sw	ra,28(sp)
+    38c4:	00812c23          	sw	s0,24(sp)
+    38c8:	00912a23          	sw	s1,20(sp)
+    38cc:	01212823          	sw	s2,16(sp)
+    38d0:	01312623          	sw	s3,12(sp)
+    38d4:	00050413          	mv	s0,a0
+    38d8:	00058493          	mv	s1,a1
 	if (focus_step >= DW9807_MAX_FOCUS_POS)
-    39bc:	3fe00793          	li	a5,1022
-    39c0:	00b7f463          	bgeu	a5,a1,39c8 <PiCamV3_SetFocusStep+0x2c>
+    38dc:	3fe00793          	li	a5,1022
+    38e0:	00b7f463          	bgeu	a5,a1,38e8 <PiCamV3_SetFocusStep+0x2c>
 		focus_step = DW9807_MAX_FOCUS_POS;
-    39c4:	3ff00493          	li	s1,1023
+    38e4:	3ff00493          	li	s1,1023
 	else if (focus_step <= 0)
 		focus_step = 0;
 
 	i2c_masterStartBlocking(i2c_addr);
-    39c8:	00040513          	mv	a0,s0
-    39cc:	a89ff0ef          	jal	3454 <i2c_masterStartBlocking>
-    39d0:	000019b7          	lui	s3,0x1
-    39d4:	b1898993          	addi	s3,s3,-1256 # b18 <CUSTOM2+0xabd>
-    39d8:	01342023          	sw	s3,0(s0)
+    38e8:	00040513          	mv	a0,s0
+    38ec:	a89ff0ef          	jal	3374 <i2c_masterStartBlocking>
+    38f0:	000019b7          	lui	s3,0x1
+    38f4:	b1898993          	addi	s3,s3,-1256 # b18 <CUSTOM2+0xabd>
+    38f8:	01342023          	sw	s3,0(s0)
 	i2c_txByte(i2c_addr, DW9807_I2C_ADDRESS << 1);
 	i2c_txNackBlocking(i2c_addr);
-    39dc:	00040513          	mv	a0,s0
-    39e0:	aedff0ef          	jal	34cc <i2c_txNackBlocking>
+    38fc:	00040513          	mv	a0,s0
+    3900:	aedff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    39e4:	00040513          	mv	a0,s0
-    39e8:	b05ff0ef          	jal	34ec <i2c_rxAck>
-    39ec:	9bcfe0ef          	jal	1ba8 <assert>
-    39f0:	000017b7          	lui	a5,0x1
-    39f4:	b0378793          	addi	a5,a5,-1277 # b03 <CUSTOM2+0xaa8>
-    39f8:	00f42023          	sw	a5,0(s0)
+    3904:	00040513          	mv	a0,s0
+    3908:	b05ff0ef          	jal	340c <i2c_rxAck>
+    390c:	a9cfe0ef          	jal	1ba8 <assert>
+    3910:	000017b7          	lui	a5,0x1
+    3914:	b0378793          	addi	a5,a5,-1277 # b03 <CUSTOM2+0xaa8>
+    3918:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_MSB_ADDR);
 	i2c_txNackBlocking(i2c_addr);
-    39fc:	00040513          	mv	a0,s0
-    3a00:	acdff0ef          	jal	34cc <i2c_txNackBlocking>
+    391c:	00040513          	mv	a0,s0
+    3920:	acdff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    3a04:	00040513          	mv	a0,s0
-    3a08:	ae5ff0ef          	jal	34ec <i2c_rxAck>
-    3a0c:	99cfe0ef          	jal	1ba8 <assert>
+    3924:	00040513          	mv	a0,s0
+    3928:	ae5ff0ef          	jal	340c <i2c_rxAck>
+    392c:	a7cfe0ef          	jal	1ba8 <assert>
 	i2c_txByte(i2c_addr, (focus_step >> 8) & 0x03);
-    3a10:	0084d793          	srli	a5,s1,0x8
-    3a14:	0037f793          	andi	a5,a5,3
-    3a18:	00001937          	lui	s2,0x1
-    3a1c:	b0090913          	addi	s2,s2,-1280 # b00 <CUSTOM2+0xaa5>
-    3a20:	0127e7b3          	or	a5,a5,s2
-    3a24:	00f42023          	sw	a5,0(s0)
+    3930:	0084d793          	srli	a5,s1,0x8
+    3934:	0037f793          	andi	a5,a5,3
+    3938:	00001937          	lui	s2,0x1
+    393c:	b0090913          	addi	s2,s2,-1280 # b00 <CUSTOM2+0xaa5>
+    3940:	0127e7b3          	or	a5,a5,s2
+    3944:	00f42023          	sw	a5,0(s0)
 	i2c_txNackBlocking(i2c_addr);
-    3a28:	00040513          	mv	a0,s0
-    3a2c:	aa1ff0ef          	jal	34cc <i2c_txNackBlocking>
+    3948:	00040513          	mv	a0,s0
+    394c:	aa1ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    3a30:	00040513          	mv	a0,s0
-    3a34:	ab9ff0ef          	jal	34ec <i2c_rxAck>
-    3a38:	970fe0ef          	jal	1ba8 <assert>
+    3950:	00040513          	mv	a0,s0
+    3954:	ab9ff0ef          	jal	340c <i2c_rxAck>
+    3958:	a50fe0ef          	jal	1ba8 <assert>
 	i2c_masterStopBlocking(i2c_addr);
-    3a3c:	00040513          	mv	a0,s0
-    3a40:	a5dff0ef          	jal	349c <i2c_masterStopBlocking>
+    395c:	00040513          	mv	a0,s0
+    3960:	a5dff0ef          	jal	33bc <i2c_masterStopBlocking>
 
 	i2c_masterStartBlocking(i2c_addr);
-    3a44:	00040513          	mv	a0,s0
-    3a48:	a0dff0ef          	jal	3454 <i2c_masterStartBlocking>
-    3a4c:	01342023          	sw	s3,0(s0)
+    3964:	00040513          	mv	a0,s0
+    3968:	a0dff0ef          	jal	3374 <i2c_masterStartBlocking>
+    396c:	01342023          	sw	s3,0(s0)
 	i2c_txByte(i2c_addr, DW9807_I2C_ADDRESS << 1);
 	i2c_txNackBlocking(i2c_addr);
-    3a50:	00040513          	mv	a0,s0
-    3a54:	a79ff0ef          	jal	34cc <i2c_txNackBlocking>
+    3970:	00040513          	mv	a0,s0
+    3974:	a79ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    3a58:	00040513          	mv	a0,s0
-    3a5c:	a91ff0ef          	jal	34ec <i2c_rxAck>
-    3a60:	948fe0ef          	jal	1ba8 <assert>
-    3a64:	000017b7          	lui	a5,0x1
-    3a68:	b0478793          	addi	a5,a5,-1276 # b04 <CUSTOM2+0xaa9>
-    3a6c:	00f42023          	sw	a5,0(s0)
+    3978:	00040513          	mv	a0,s0
+    397c:	a91ff0ef          	jal	340c <i2c_rxAck>
+    3980:	a28fe0ef          	jal	1ba8 <assert>
+    3984:	000017b7          	lui	a5,0x1
+    3988:	b0478793          	addi	a5,a5,-1276 # b04 <CUSTOM2+0xaa9>
+    398c:	00f42023          	sw	a5,0(s0)
 	i2c_txByte(i2c_addr, DW9807_LSB_ADDR);
 	i2c_txNackBlocking(i2c_addr);
-    3a70:	00040513          	mv	a0,s0
-    3a74:	a59ff0ef          	jal	34cc <i2c_txNackBlocking>
+    3990:	00040513          	mv	a0,s0
+    3994:	a59ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    3a78:	00040513          	mv	a0,s0
-    3a7c:	a71ff0ef          	jal	34ec <i2c_rxAck>
-    3a80:	928fe0ef          	jal	1ba8 <assert>
-    3a84:	0ff4f493          	zext.b	s1,s1
-    3a88:	0124e4b3          	or	s1,s1,s2
-    3a8c:	00942023          	sw	s1,0(s0)
+    3998:	00040513          	mv	a0,s0
+    399c:	a71ff0ef          	jal	340c <i2c_rxAck>
+    39a0:	a08fe0ef          	jal	1ba8 <assert>
+    39a4:	0ff4f493          	zext.b	s1,s1
+    39a8:	0124e4b3          	or	s1,s1,s2
+    39ac:	00942023          	sw	s1,0(s0)
 	i2c_txByte(i2c_addr, focus_step & 0xFF);
 	i2c_txNackBlocking(i2c_addr);
-    3a90:	00040513          	mv	a0,s0
-    3a94:	a39ff0ef          	jal	34cc <i2c_txNackBlocking>
+    39b0:	00040513          	mv	a0,s0
+    39b4:	a39ff0ef          	jal	33ec <i2c_txNackBlocking>
 	assert(i2c_rxAck(i2c_addr));
-    3a98:	00040513          	mv	a0,s0
-    3a9c:	a51ff0ef          	jal	34ec <i2c_rxAck>
-    3aa0:	908fe0ef          	jal	1ba8 <assert>
+    39b8:	00040513          	mv	a0,s0
+    39bc:	a51ff0ef          	jal	340c <i2c_rxAck>
+    39c0:	9e8fe0ef          	jal	1ba8 <assert>
 	i2c_masterStopBlocking(i2c_addr);
-    3aa4:	00040513          	mv	a0,s0
-    3aa8:	9f5ff0ef          	jal	349c <i2c_masterStopBlocking>
+    39c4:	00040513          	mv	a0,s0
+    39c8:	9f5ff0ef          	jal	33bc <i2c_masterStopBlocking>
 }
-    3aac:	01c12083          	lw	ra,28(sp)
-    3ab0:	01812403          	lw	s0,24(sp)
-    3ab4:	01412483          	lw	s1,20(sp)
-    3ab8:	01012903          	lw	s2,16(sp)
-    3abc:	00c12983          	lw	s3,12(sp)
-    3ac0:	02010113          	addi	sp,sp,32
-    3ac4:	00008067          	ret
+    39cc:	01c12083          	lw	ra,28(sp)
+    39d0:	01812403          	lw	s0,24(sp)
+    39d4:	01412483          	lw	s1,20(sp)
+    39d8:	01012903          	lw	s2,16(sp)
+    39dc:	00c12983          	lw	s3,12(sp)
+    39e0:	02010113          	addi	sp,sp,32
+    39e4:	00008067          	ret
 
-00003ac8 <PiCamV3_Init>:
+000039e8 <PiCamV3_Init>:
 	PiCamV3_WriteRegData(IMX708_REG_TEST_PATTERN, IMX708_TEST_PATTERN_SOLID_COLOR);
 }
 */
 
 void PiCamV3_Init(u32 i2c_addr)
 {
-    3ac8:	ff010113          	addi	sp,sp,-16
-    3acc:	00112623          	sw	ra,12(sp)
-    3ad0:	00812423          	sw	s0,8(sp)
-    3ad4:	00050413          	mv	s0,a0
+    39e8:	ff010113          	addi	sp,sp,-16
+    39ec:	00112623          	sw	ra,12(sp)
+    39f0:	00812423          	sw	s0,8(sp)
+    39f4:	00050413          	mv	s0,a0
 
 	PiCamV3_StopStreaming(i2c_addr);
-    3ad8:	b15ff0ef          	jal	35ec <PiCamV3_StopStreaming>
+    39f8:	b15ff0ef          	jal	350c <PiCamV3_StopStreaming>
 
 	PiCamV3_ConfigCommon(i2c_addr);
-    3adc:	00040513          	mv	a0,s0
-    3ae0:	b2dff0ef          	jal	360c <PiCamV3_ConfigCommon>
+    39fc:	00040513          	mv	a0,s0
+    3a00:	b2dff0ef          	jal	352c <PiCamV3_ConfigCommon>
 
 	PiCamV3_SetPdafGain(i2c_addr);
-    3ae4:	00040513          	mv	a0,s0
-    3ae8:	d0dff0ef          	jal	37f4 <PiCamV3_SetPdafGain>
+    3a04:	00040513          	mv	a0,s0
+    3a08:	d0dff0ef          	jal	3714 <PiCamV3_SetPdafGain>
 
 	PiCamV3_ConfigFormat(i2c_addr, 1);
-    3aec:	00100593          	li	a1,1
-    3af0:	00040513          	mv	a0,s0
-    3af4:	b75ff0ef          	jal	3668 <PiCamV3_ConfigFormat>
+    3a0c:	00100593          	li	a1,1
+    3a10:	00040513          	mv	a0,s0
+    3a14:	b75ff0ef          	jal	3588 <PiCamV3_ConfigFormat>
 
 	PiCamV3_ConfigLinkFreq(i2c_addr);
-    3af8:	00040513          	mv	a0,s0
-    3afc:	c5dff0ef          	jal	3758 <PiCamV3_ConfigLinkFreq>
+    3a18:	00040513          	mv	a0,s0
+    3a1c:	c5dff0ef          	jal	3678 <PiCamV3_ConfigLinkFreq>
 
 	PiCamV3_ConfigQuadBayerRemosaicAdjustment(i2c_addr);
-    3b00:	00040513          	mv	a0,s0
-    3b04:	cadff0ef          	jal	37b0 <PiCamV3_ConfigQuadBayerRemosaicAdjustment>
+    3a20:	00040513          	mv	a0,s0
+    3a24:	cadff0ef          	jal	36d0 <PiCamV3_ConfigQuadBayerRemosaicAdjustment>
 
 	PiCamV3_OnActuator(i2c_addr);
-    3b08:	00040513          	mv	a0,s0
-    3b0c:	d91ff0ef          	jal	389c <PiCamV3_OnActuator>
+    3a28:	00040513          	mv	a0,s0
+    3a2c:	d91ff0ef          	jal	37bc <PiCamV3_OnActuator>
 
 	PiCamV3_SetFocusStep(i2c_addr, 700);
-    3b10:	2bc00593          	li	a1,700
-    3b14:	00040513          	mv	a0,s0
-    3b18:	e85ff0ef          	jal	399c <PiCamV3_SetFocusStep>
+    3a30:	2bc00593          	li	a1,700
+    3a34:	00040513          	mv	a0,s0
+    3a38:	e85ff0ef          	jal	38bc <PiCamV3_SetFocusStep>
 
 	PiCamV3_OffActuator(i2c_addr);
-    3b1c:	00040513          	mv	a0,s0
-    3b20:	dfdff0ef          	jal	391c <PiCamV3_OffActuator>
+    3a3c:	00040513          	mv	a0,s0
+    3a40:	dfdff0ef          	jal	383c <PiCamV3_OffActuator>
 
 	//	PiCamV3_StartStreaming();
 
 	uart_writeStr(BSP_UART_TERMINAL, "\n\rDone Camera Init");
-    3b24:	000045b7          	lui	a1,0x4
-    3b28:	15c58593          	addi	a1,a1,348 # 415c <_data+0x588>
-    3b2c:	f8010537          	lui	a0,0xf8010
-    3b30:	8d5ff0ef          	jal	3404 <uart_writeStr>
+    3a44:	000045b7          	lui	a1,0x4
+    3a48:	07c58593          	addi	a1,a1,124 # 407c <_data+0x588>
+    3a4c:	f8010537          	lui	a0,0xf8010
+    3a50:	8d5ff0ef          	jal	3324 <uart_writeStr>
 }
-    3b34:	00c12083          	lw	ra,12(sp)
-    3b38:	00812403          	lw	s0,8(sp)
-    3b3c:	01010113          	addi	sp,sp,16
-    3b40:	00008067          	ret
+    3a54:	00c12083          	lw	ra,12(sp)
+    3a58:	00812403          	lw	s0,8(sp)
+    3a5c:	01010113          	addi	sp,sp,16
+    3a60:	00008067          	ret
 
-00003b44 <trap_entry>:
+00003a64 <trap_entry>:
 
 trap_entry:
 #ifdef __riscv_flen
   addi sp, sp, -STACK_SIZE
 #else
   addi sp, sp, -64
-    3b44:	fc010113          	addi	sp,sp,-64
+    3a64:	fc010113          	addi	sp,sp,-64
 #endif
   sw x1,   0*4(sp)
-    3b48:	00112023          	sw	ra,0(sp)
+    3a68:	00112023          	sw	ra,0(sp)
   sw x5,   1*4(sp)
-    3b4c:	00512223          	sw	t0,4(sp)
+    3a6c:	00512223          	sw	t0,4(sp)
   sw x6,   2*4(sp)
-    3b50:	00612423          	sw	t1,8(sp)
+    3a70:	00612423          	sw	t1,8(sp)
   sw x7,   3*4(sp)
-    3b54:	00712623          	sw	t2,12(sp)
+    3a74:	00712623          	sw	t2,12(sp)
   sw x10,  4*4(sp)
-    3b58:	00a12823          	sw	a0,16(sp)
+    3a78:	00a12823          	sw	a0,16(sp)
   sw x11,  5*4(sp)
-    3b5c:	00b12a23          	sw	a1,20(sp)
+    3a7c:	00b12a23          	sw	a1,20(sp)
   sw x12,  6*4(sp)
-    3b60:	00c12c23          	sw	a2,24(sp)
+    3a80:	00c12c23          	sw	a2,24(sp)
   sw x13,  7*4(sp)
-    3b64:	00d12e23          	sw	a3,28(sp)
+    3a84:	00d12e23          	sw	a3,28(sp)
   sw x14,  8*4(sp)
-    3b68:	02e12023          	sw	a4,32(sp)
+    3a88:	02e12023          	sw	a4,32(sp)
   sw x15,  9*4(sp)
-    3b6c:	02f12223          	sw	a5,36(sp)
+    3a8c:	02f12223          	sw	a5,36(sp)
   sw x16, 10*4(sp)
-    3b70:	03012423          	sw	a6,40(sp)
+    3a90:	03012423          	sw	a6,40(sp)
   sw x17, 11*4(sp)
-    3b74:	03112623          	sw	a7,44(sp)
+    3a94:	03112623          	sw	a7,44(sp)
   sw x28, 12*4(sp)
-    3b78:	03c12823          	sw	t3,48(sp)
+    3a98:	03c12823          	sw	t3,48(sp)
   sw x29, 13*4(sp)
-    3b7c:	03d12a23          	sw	t4,52(sp)
+    3a9c:	03d12a23          	sw	t4,52(sp)
   sw x30, 14*4(sp)
-    3b80:	03e12c23          	sw	t5,56(sp)
+    3aa0:	03e12c23          	sw	t5,56(sp)
   sw x31, 15*4(sp)
-    3b84:	03f12e23          	sw	t6,60(sp)
+    3aa4:	03f12e23          	sw	t6,60(sp)
   FSTORE f30, 64 + 18*FPR_SIZE(sp)
   FSTORE f31, 64 + 19*FPR_SIZE(sp)
   csrr t0, fcsr
   sw t0, 64 + 20*FPR_SIZE(sp)
 #endif
   call trap
-    3b88:	ef5fd0ef          	jal	1a7c <trap>
+    3aa8:	fd5fd0ef          	jal	1a7c <trap>
   FLOAD f28, 64 + 16*FPR_SIZE(sp)
   FLOAD f29, 64 + 17*FPR_SIZE(sp)
   FLOAD f30, 64 + 18*FPR_SIZE(sp)
   FLOAD f31, 64 + 19*FPR_SIZE(sp)
 #endif
   lw x1 ,  0*4(sp)
-    3b8c:	00012083          	lw	ra,0(sp)
+    3aac:	00012083          	lw	ra,0(sp)
   lw x5,   1*4(sp)
-    3b90:	00412283          	lw	t0,4(sp)
+    3ab0:	00412283          	lw	t0,4(sp)
   lw x6,   2*4(sp)
-    3b94:	00812303          	lw	t1,8(sp)
+    3ab4:	00812303          	lw	t1,8(sp)
   lw x7,   3*4(sp)
-    3b98:	00c12383          	lw	t2,12(sp)
+    3ab8:	00c12383          	lw	t2,12(sp)
   lw x10,  4*4(sp)
-    3b9c:	01012503          	lw	a0,16(sp)
+    3abc:	01012503          	lw	a0,16(sp)
   lw x11,  5*4(sp)
-    3ba0:	01412583          	lw	a1,20(sp)
+    3ac0:	01412583          	lw	a1,20(sp)
   lw x12,  6*4(sp)
-    3ba4:	01812603          	lw	a2,24(sp)
+    3ac4:	01812603          	lw	a2,24(sp)
   lw x13,  7*4(sp)
-    3ba8:	01c12683          	lw	a3,28(sp)
+    3ac8:	01c12683          	lw	a3,28(sp)
   lw x14,  8*4(sp)
-    3bac:	02012703          	lw	a4,32(sp)
+    3acc:	02012703          	lw	a4,32(sp)
   lw x15,  9*4(sp)
-    3bb0:	02412783          	lw	a5,36(sp)
+    3ad0:	02412783          	lw	a5,36(sp)
   lw x16, 10*4(sp)
-    3bb4:	02812803          	lw	a6,40(sp)
+    3ad4:	02812803          	lw	a6,40(sp)
   lw x17, 11*4(sp)
-    3bb8:	02c12883          	lw	a7,44(sp)
+    3ad8:	02c12883          	lw	a7,44(sp)
   lw x28, 12*4(sp)
-    3bbc:	03012e03          	lw	t3,48(sp)
+    3adc:	03012e03          	lw	t3,48(sp)
   lw x29, 13*4(sp)
-    3bc0:	03412e83          	lw	t4,52(sp)
+    3ae0:	03412e83          	lw	t4,52(sp)
   lw x30, 14*4(sp)
-    3bc4:	03812f03          	lw	t5,56(sp)
+    3ae4:	03812f03          	lw	t5,56(sp)
   lw x31, 15*4(sp)
-    3bc8:	03c12f83          	lw	t6,60(sp)
+    3ae8:	03c12f83          	lw	t6,60(sp)
 #ifdef __riscv_flen
   addi sp, sp, STACK_SIZE
 #else
   addi sp, sp, 64
-    3bcc:	04010113          	addi	sp,sp,64
+    3aec:	04010113          	addi	sp,sp,64
 #endif
-    3bd0:	30200073          	mret
+    3af0:	30200073          	mret

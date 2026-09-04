@@ -8,10 +8,22 @@
 module common_apb3 #(
    parameter   ADDR_WIDTH  = 12,
    parameter   DATA_WIDTH  = 32,
-   parameter   NUM_REG     = 10
+   parameter   NUM_REG     = 17
 ) (
    input    [1:0]          select_demo_mode,
-   output   [15:0]         rgb_control,
+   output   [15:0]         black_level,
+   output   [15:0]         rgain,
+   output   [15:0]         ggain,
+   output   [15:0]         bgain,
+   output   [15:0]         ccm_r_r,
+   output   [15:0]         ccm_r_g,
+   output   [15:0]         ccm_r_b,
+   output   [15:0]         ccm_g_r,
+   output   [15:0]         ccm_g_g,
+   output   [15:0]         ccm_g_b,
+   output   [15:0]         ccm_b_r,
+   output   [15:0]         ccm_b_g,
+   output   [15:0]         ccm_b_b,
    output                  mipi_rstn,
    output                  enable_cam,
    output                  trigger_capture_frame,
@@ -45,7 +57,7 @@ localparam [1:0] IDLE   = 2'b00,
 
 reg [1:0]            busState, 
                      busNext;
-reg [DATA_WIDTH-1:0] slaveReg [0:NUM_REG-1];
+reg [          15:0] slaveReg [0:NUM_REG-1];
 reg [DATA_WIDTH-1:0] slaveRegOut;
 reg                  slaveReady;
 wire                 actWrite,
@@ -127,15 +139,15 @@ integer              byteIndex;
       else begin
          if (actRead) begin
             case(PADDR[6:2])
-               5'd5  : slaveRegOut <= 32'hABCD_5678;   //To verify correct slave read operation
-               5'd6  : slaveRegOut <= debug_fifo_status;
-               5'd7  : slaveRegOut <= debug_cam_dma_fifo_rcount;
-               5'd8  : slaveRegOut <= debug_cam_dma_fifo_wcount;
-               5'd9  : slaveRegOut <= debug_display_dma_fifo_rcount;
-               5'd10 : slaveRegOut <= debug_display_dma_fifo_wcount;
-               5'd11 : slaveRegOut <= debug_cam_dma_status;
-               5'd12 : slaveRegOut <= frames_per_second;
-               5'd13 : slaveRegOut <= {30'd0, select_demo_mode};
+               5'd17  : slaveRegOut <= 32'hABCD_5678;   //To verify correct slave read operation
+               5'd18  : slaveRegOut <= debug_fifo_status;
+               5'd19  : slaveRegOut <= debug_cam_dma_fifo_rcount;
+               5'd20  : slaveRegOut <= debug_cam_dma_fifo_wcount;
+               5'd21  : slaveRegOut <= debug_display_dma_fifo_rcount;
+               5'd22  : slaveRegOut <= debug_display_dma_fifo_wcount;
+               5'd23  : slaveRegOut <= debug_cam_dma_status;
+               5'd12  : slaveRegOut <= frames_per_second;
+               5'd13  : slaveRegOut <= {30'd0, select_demo_mode};
                default: begin slaveRegOut <= slaveRegOut; end
             endcase
          end
@@ -145,12 +157,24 @@ integer              byteIndex;
    end
 
    //custom logic starts here
-   assign rgb_control              = slaveReg[0][15:0];
+   assign black_level              = slaveReg[0][15:0];
    assign mipi_rstn                = slaveReg[1][0];
    assign trigger_capture_frame    = slaveReg[2][0];
    assign continuous_capture_frame = slaveReg[2][1];
    assign rgb_gray                 = slaveReg[3][0];
    assign cam_dma_init_done        = slaveReg[4][0];
    assign enable_cam               = slaveReg[1][1];
-   
+   assign rgain                    = slaveReg[5][15:0];
+   assign ggain                    = slaveReg[6][15:0];
+   assign bgain                    = slaveReg[7][15:0];
+   assign ccm_r_r                  = slaveReg[8][15:0];
+   assign ccm_r_g                  = slaveReg[9][15:0];
+   assign ccm_r_b                  = slaveReg[10][15:0];
+   assign ccm_g_r                  = slaveReg[11][15:0];
+   assign ccm_g_g                  = slaveReg[12][15:0];
+   assign ccm_g_b                  = slaveReg[13][15:0];
+   assign ccm_b_r                  = slaveReg[14][15:0];
+   assign ccm_b_g                  = slaveReg[15][15:0];
+   assign ccm_b_b                  = slaveReg[16][15:0];
+
 endmodule

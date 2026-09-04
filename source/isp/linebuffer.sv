@@ -172,8 +172,24 @@ module linebuffer
       pipe_1_tvalid   <= pipe_0_tvalid & output_enable;
       pipe_1_tlast    <= pipe_0_tlast;
       pipe_1_tuser    <= pipe_0_tuser;
+      // ------------------------------------------------------------------------
+      // FIX (per-frame SOF): with the start-of-frame line suppression disabled
+      // (see the note above), output_enable rises once and never falls, so the
+      // original regeneration below produced a SINGLE tuser pulse at the very
+      // first output line after reset - demosaic / colorgain / ccm then never
+      // saw another start of frame. The ISP stages latch their coefficients
+      // (colour gain / CCM / black level) on tuser, so coefficient updates
+      // programmed at runtime would never take effect, and the demosaic line
+      // counter was only re-aligned by its even line count. The input tuser
+      // already marks the first beat of every frame, and pipe_0/pipe_1 delay
+      // tuser by exactly the same two cycles as the pixel data, so passing it
+      // through aligns SOF with the first output beat of each frame and
+      // restores per-frame coefficient latching (and per-frame demosaic
+      // line-counter resynchronisation) exactly as the original AMD design
+      // intends.
+      // ------------------------------------------------------------------------
       // re-create start of frame signal from output enable
-      pipe_1_tuser[0] <= output_enable & ~output_enable_d;
+      // pipe_1_tuser[0] <= output_enable & ~output_enable_d;
     end
 
     if (rstn == 1'b0) begin

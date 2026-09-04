@@ -27,7 +27,7 @@ module isp
     parameter DECOMPANDING_YLUT_FILE              = "../../rtl/decompanding_ylut_12_bit.mem",
     parameter DECOMPANDING_FLUT_FILE              = "../../rtl/decompanding_flut_12_bit.mem",
     parameter DECOMPANDING_NUM_KNEE_POINTS        = 16,
-    parameter GAMMA_LUT_FILE                      = "../../rtl/lut.mem"
+    parameter GAMMA_LUT_FILE                      = "../../rtl/lut_8_bit.mem"
   )
   (
     input  wire                           clk,

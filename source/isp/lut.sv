@@ -13,7 +13,7 @@ module lut
     parameter INPUT_DATA_WIDTH                    = 8*$rtoi($floor((PIXEL_PER_CYCLE * INPUT_PIXEL_BIT_WIDTH + 7)/8)),
     parameter OUTPUT_DATA_WIDTH                   = 8*$rtoi($floor((PIXEL_PER_CYCLE * OUTPUT_PIXEL_BIT_WIDTH + 7)/8)),
     parameter TUSER_WIDTH                         = 1,
-    parameter LUT_FILE                            = "../../rtl/lut.mem"
+    parameter LUT_FILE                            = "../../rtl/lut_8_bit.mem"
   )
   (
     input  wire                           clk,

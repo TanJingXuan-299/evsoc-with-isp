@@ -65,51 +65,148 @@ void trigger_next_display_dma()
     dmasg_direct_start(DMASG_BASE, DMASG_DISPLAY_MM2S_CHANNEL, (FRAME_WIDTH * FRAME_HEIGHT) * 4, 0); // Without self restar
 }
 
-void uart_demo_mode_selection()
-{
-    uint32_t uart_user_input;
-    if (uart_status_read(BSP_UART_TERMINAL) & 0x00000200)
-    {
+#define UART_CMD_MAX_LEN  64
+volatile char uart_cmd_buffer[UART_CMD_MAX_LEN];
+volatile uint8_t uart_cmd_index = 0;
+volatile bool uart_cmd_ready = false;
+volatile char var;
+volatile char char_data;
+volatile int data;
 
+void uart_buffer_read()
+{
+    while (uart_status_read(BSP_UART_TERMINAL) & 0x00000200) {
         uart_status_write(BSP_UART_TERMINAL, uart_status_read(BSP_UART_TERMINAL) & 0xFFFFFFFD); // RX FIFO not empty interrupt Disable
-        uart_user_input = uart_read(BSP_UART_TERMINAL);
+        char c = uart_read(BSP_UART_TERMINAL);
         uart_status_write(BSP_UART_TERMINAL, uart_status_read(BSP_UART_TERMINAL) | 0x02); // RX FIFO not empty interrupt enable
 
+        if (c == '\r' || c == '\n') {
+            // Command complete – null-terminate and signal main loop
+            if (uart_cmd_index > 0) {
+                uart_cmd_buffer[uart_cmd_index] = '\0';
+                uart_cmd_ready = true;
+                uart_cmd_index = 0;         // reset for next command
+            }
+            // Ignore empty lines (just newline)
+            continue;
+        }
+
+        // Store character if space remains
+        if (uart_cmd_index < UART_CMD_MAX_LEN - 1) {
+            uart_cmd_buffer[uart_cmd_index++] = c;
+        } else {
+            // Buffer overflow – discard and reset
+            uart_cmd_index = 0;
+        }
+    }
+
+    if (uart_cmd_ready) {
+        var = uart_cmd_buffer[0];
+        data= atoi(&uart_cmd_buffer[1]);
+        char_data= uart_cmd_buffer[1];
+    }
+}
+
+void settings()
+{
+    if (uart_cmd_ready)
+    {uart_cmd_ready = false; // Reset command ready flag
         // Assign UART input for demo mode selection
-        if (uart_user_input == 'a')
+        switch (var)
         {
-            select_demo_mode = 0;
-            bsp_printf("Selected Demo Mode: a\n\r");
-        }
-        else if (uart_user_input == 'b')
-        {
-            select_demo_mode = 1;
-            bsp_printf("Selected Demo Mode: b\n\r");
-        }
-        else if (uart_user_input == 'c')
-        {
-            select_demo_mode = 2;
-            bsp_printf("Selected Demo Mode: c\n\r");
-        }
-        else if (uart_user_input == 'd')
-        {
-            select_demo_mode = 3;
-            bsp_printf("Selected Demo Mode: d\n\r");
-        }
-        else if (uart_user_input == 'e')
-        {
-            select_demo_mode = 4;
-            bsp_printf("Selected Demo Mode: e\n\r");
-        }
-        else if (uart_user_input == 'f')
-        {
-            select_demo_mode = 5;
-            bsp_printf("Selected Demo Mode: f\n\r");
-        }
-        else
-        {
-            select_demo_mode = 6;
-            bsp_printf("Selected Demo Mode: g\n\r");
+            case 'D':
+            if (char_data == 'a')
+            {
+                select_demo_mode = 0;
+                bsp_printf("Selected Demo Mode: a\n\r");
+            }
+            else if (char_data == 'b')
+            {
+                select_demo_mode = 1;
+                bsp_printf("Selected Demo Mode: b\n\r");
+            }
+            else if (char_data == 'c')
+            {
+                select_demo_mode = 2;
+                bsp_printf("Selected Demo Mode: c\n\r");
+            }
+            else if (char_data == 'd')
+            {
+                select_demo_mode = 3;
+                bsp_printf("Selected Demo Mode: d\n\r");
+            }
+            else if (char_data == 'e')
+            {
+                select_demo_mode = 4;
+                bsp_printf("Selected Demo Mode: e\n\r");
+            }
+            else if (char_data == 'f')
+            {
+                select_demo_mode = 5;
+                bsp_printf("Selected Demo Mode: f\n\r");
+            }
+            else if (char_data == 'g')
+            {
+                select_demo_mode = 6;
+                bsp_printf("Selected Demo Mode: g\n\r");
+            }
+            else
+            {
+                bsp_printf("Invalid Demo Mode: %c\n\r");
+            }
+            break;
+
+            case '0':
+            Set_Gain(0, data);
+            break;
+
+            case '1':
+            Set_Gain(1, data);
+            break;
+
+            case '2':
+            Set_Gain(2, data);
+            break;
+
+            case '3':
+            Set_Gain(3, data);
+            break;
+
+            case '4':
+            Set_Gain(4, data);
+            break;
+
+            case '5':
+            Set_Gain(5, data);
+            break;
+
+            case '6':
+            Set_Gain(6, data);
+            break;
+
+            case '7':
+            Set_Gain(7, data);
+            break;
+
+            case '8':
+            Set_Gain(8, data);
+            break;
+
+            case '9':
+            Set_Gain(9, data);
+            break;
+
+            case 'A':
+            Set_Gain(10, data);
+            break;
+
+            case 'B':
+            Set_Gain(11, data);
+            break;
+
+            case 'C':
+            Set_Gain(12, data);
+            break;
         }
     }
 }
@@ -129,7 +226,8 @@ void externalInterrupt()
             }
             break;
         case SYSTEM_PLIC_SYSTEM_UART_0_IO_INTERRUPT:
-            uart_demo_mode_selection();
+            uart_buffer_read();
+            settings();
             break;
         default:
             crash();

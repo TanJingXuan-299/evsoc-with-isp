@@ -230,3 +230,545 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-Xu
 
 !ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-08-27 13:30:22.392
 !MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+!SESSION 2026-08-28 14:52:31.707 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-08-28 14:53:01.131
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-08-28 14:53:57.539
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-08-28 14:53:58.910
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-08-28 15:15:27.644
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-08-28 15:15:28.654
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+!SESSION 2026-09-01 14:08:59.144 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-09-01 14:09:20.751
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.cdt.ui 4 4 2026-09-01 14:09:56.015
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:48)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:448)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getOutputStream(BuildConsolePartitioner.java:495)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getOutputStream(MultiBuildConsoleAdapter.java:100)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getOutputStream(CBuildConsole.java:66)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:147)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:129)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performExternalClean(CommonBuilder.java:1170)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1101)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1070)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:863)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at com.ashling.riscfree.efinix.commands.CleanAndBuildHandler$1.run(CleanAndBuildHandler.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	... 27 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 272 2026-09-01 14:09:56.017
+!MESSAGE Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getOutputStream(BuildConsolePartitioner.java:495)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getOutputStream(MultiBuildConsoleAdapter.java:100)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getOutputStream(CBuildConsole.java:66)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:147)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:129)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performExternalClean(CommonBuilder.java:1170)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1101)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1070)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:863)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at com.ashling.riscfree.efinix.commands.CleanAndBuildHandler$1.run(CleanAndBuildHandler.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2026-09-01 14:09:56.033
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:48)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:448)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getInfoStream(BuildConsolePartitioner.java:500)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getInfoStream(MultiBuildConsoleAdapter.java:106)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getInfoStream(CBuildConsole.java:72)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:454)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:434)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:416)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:135)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performExternalClean(CommonBuilder.java:1170)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1101)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1070)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:863)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at com.ashling.riscfree.efinix.commands.CleanAndBuildHandler$1.run(CleanAndBuildHandler.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	... 29 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 272 2026-09-01 14:09:56.035
+!MESSAGE Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getInfoStream(BuildConsolePartitioner.java:500)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getInfoStream(MultiBuildConsoleAdapter.java:106)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getInfoStream(CBuildConsole.java:72)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:454)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:434)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:416)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:135)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performExternalClean(CommonBuilder.java:1170)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1101)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1070)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:863)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at com.ashling.riscfree.efinix.commands.CleanAndBuildHandler$1.run(CleanAndBuildHandler.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:10:16.909
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:10:18.254
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:11:15.427
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:11:16.409
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:11:52.511
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:11:53.533
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:53:08.536
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:53:09.511
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:54:19.211
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 14:54:20.207
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:46:37.810
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:46:39.175
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 0 2026-09-01 16:50:03.476
+!MESSAGE Debug session 'evsoc_ispExample_demo_ti' already started. Terminate the first one before restarting.
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:50:22.934
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:50:23.962
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.ui 4 4 2026-09-01 16:51:26.037
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:48)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:448)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getOutputStream(BuildConsolePartitioner.java:495)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getOutputStream(MultiBuildConsoleAdapter.java:100)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getOutputStream(CBuildConsole.java:66)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:147)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:129)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:774)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2$1.run(AbstractCLaunchDelegate2.java:381)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2335)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildProject(AbstractCLaunchDelegate2.java:391)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildForLaunch(AbstractCLaunchDelegate2.java:306)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:778)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	... 35 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 272 2026-09-01 16:51:26.037
+!MESSAGE Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getOutputStream(BuildConsolePartitioner.java:495)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getOutputStream(MultiBuildConsoleAdapter.java:100)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getOutputStream(CBuildConsole.java:66)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.prepareStreams(BuildRunnerHelper.java:147)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:129)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:774)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2$1.run(AbstractCLaunchDelegate2.java:381)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2335)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildProject(AbstractCLaunchDelegate2.java:391)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildForLaunch(AbstractCLaunchDelegate2.java:306)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:778)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2026-09-01 16:51:26.048
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:48)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:448)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getInfoStream(BuildConsolePartitioner.java:500)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getInfoStream(MultiBuildConsoleAdapter.java:106)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getInfoStream(CBuildConsole.java:72)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:454)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:434)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:416)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:135)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:774)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2$1.run(AbstractCLaunchDelegate2.java:381)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2335)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildProject(AbstractCLaunchDelegate2.java:391)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildForLaunch(AbstractCLaunchDelegate2.java:306)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:778)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	... 37 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 272 2026-09-01 16:51:26.050
+!MESSAGE Could not write file: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc\.metadata\.plugins\org.eclipse.cdt.ui\evsoc_ispExample_demo.build.log (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.logOpen(BuildConsolePartitioner.java:197)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.setStreamOpened(BuildConsolePartitioner.java:141)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildOutputStream.<init>(BuildOutputStream.java:41)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.getInfoStream(BuildConsolePartitioner.java:500)
+	at org.eclipse.cdt.internal.ui.buildconsole.MultiBuildConsoleAdapter.getInfoStream(MultiBuildConsoleAdapter.java:106)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.getInfoStream(CBuildConsole.java:72)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:454)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:434)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.greeting(BuildRunnerHelper.java:416)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:135)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:774)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:521)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:495)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:604)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2$1.run(AbstractCLaunchDelegate2.java:381)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2335)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildProject(AbstractCLaunchDelegate2.java:391)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildForLaunch(AbstractCLaunchDelegate2.java:306)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:778)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:51:26.474
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:51:27.487
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:52:51.999
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:52:53.030
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 0 2026-09-01 16:54:10.864
+!MESSAGE Debug session 'evsoc_ispExample_demo_ti' already started. Terminate the first one before restarting.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-09-01 16:54:19.385
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4aa0a160): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #21 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3f99401e): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #21 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@720c215f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #21 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3f99401e): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #21' resulted in a rejected execution exception.]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2026-09-01 16:54:19.385
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #21 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3f99401e): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #21
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-09-01 16:54:19.385
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@720c215f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #21 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@3f99401e): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@2e6bf06f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #21' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:54:19.697
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:54:20.681
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:56:04.734
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:56:05.825
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:58:12.704
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 16:58:13.743
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 17:20:11.888
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-01 17:20:13.174
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+!SESSION 2026-09-02 08:33:19.876 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-09-02 08:33:40.158
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 08:34:21.131
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 08:34:22.458
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:03:04.107
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:03:05.454
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:04:11.390
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:04:12.405
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:06:51.995
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:06:53.101
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:09:13.339
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:09:14.322
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:38:27.295
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 09:38:28.316
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 16:20:11.202
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 16:20:12.316
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 16:35:07.032
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 16:35:08.042
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 16:35:43.200
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 16:35:44.196
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 17:16:11.660
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 17:16:12.682
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 17:17:30.877
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 17:17:31.896
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 17:19:03.288
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-02 17:19:04.276
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx

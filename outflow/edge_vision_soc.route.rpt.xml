@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<efx:tool_report xmlns:efx="http://www.efinixinc.com/tool_report" date="2026-08-27T13:29:24+0800" project="edge_vision_soc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/tool_report tool_report.xsd">
+<efx:tool_report xmlns:efx="http://www.efinixinc.com/tool_report" date="2026-09-02T08:31:55+0800" project="edge_vision_soc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/tool_report tool_report.xsd">
 
   <efx:group name="Interface">
     <efx:group_data name="Missing Interface Pins" severity="info" value="6"/>
@@ -7,50 +7,50 @@
   </efx:group>
 
   <efx:group name="System Resources">
-    <efx:group_data info="runtime" name="packing" severity="info" value="0|0:0:10"/>
-    <efx:group_data info="runtime" name="placement" severity="info" value="0|0:3:14"/>
-    <efx:group_data info="runtime" name="routing" severity="info" value="0|0:0:59"/>
-    <efx:group_data info="runtime" name="Latest PnR Run" severity="info" value="0|0:4:44"/>
-    <efx:group_data info="peak_rr" name="Peak RSS" severity="info" value="538.604 MB"/>
+    <efx:group_data info="runtime" name="packing" severity="info" value="0|0:0:5"/>
+    <efx:group_data info="runtime" name="placement" severity="info" value="0|0:1:0"/>
+    <efx:group_data info="runtime" name="routing" severity="info" value="0|0:0:29"/>
+    <efx:group_data info="runtime" name="Latest PnR Run" severity="info" value="0|0:1:48"/>
+    <efx:group_data info="peak_rr" name="Peak RSS" severity="info" value="532.772 MB"/>
   </efx:group>
 
   <efx:group name="Core Resources">
     <efx:group_data name="Inputs" severity="info" value="93 / 1703"/>
     <efx:group_data name="Outputs" severity="info" value="229 / 2267"/>
-    <efx:group_data name="XLRs" severity="info" value="33993 / 60800"/>
+    <efx:group_data name="XLRs" severity="info" value="33240 / 60800"/>
     <efx:group_data name="Clocks" severity="info" value="14 / 64"/>
-    <efx:group_data name="Memory Blocks" severity="info" value="254 / 256"/>
-    <efx:group_data name="DSP Blocks" severity="info" value="9 / 160"/>
+    <efx:group_data name="Memory Blocks" severity="info" value="252 / 256"/>
+    <efx:group_data name="DSP Blocks" severity="info" value="15 / 160"/>
   </efx:group>
 
   <efx:group name="Timing (Post-Placement)">
-    <efx:group_data name="Worst Negative Slack (WNS)" severity="info" value="0.395 ns"/>
-    <efx:group_data name="Worst Hold Slack (WHS)" severity="error" value="-0.745 ns"/>
-    <efx:group_data name="i_fb_clk" severity="info" value="266.099 MHz"/>
-    <efx:group_data name="i_systemClk" severity="info" value="340.368 MHz"/>
-    <efx:group_data name="i_sysclk_div_2" severity="info" value="260.213 MHz"/>
-    <efx:group_data name="i_mipi_rx_pclk" severity="info" value="217.817 MHz"/>
-    <efx:group_data name="i_mipi_clk" severity="info" value="239.693 MHz"/>
-    <efx:group_data name="i_mipi_tx_pclk" severity="info" value="221.582 MHz"/>
-    <efx:group_data name="i_hbramClk_cal" severity="info" value="567.537 MHz"/>
-    <efx:group_data name="i_hbramClk" severity="info" value="258.532 MHz"/>
-    <efx:group_data name="jtag_inst1_TCK" severity="info" value="241.896 MHz"/>
-    <efx:group_data name="i_cam_ck_CLKOUT_0" severity="info" value="231.696 MHz"/>
+    <efx:group_data name="Worst Negative Slack (WNS)" severity="info" value="0.353 ns"/>
+    <efx:group_data name="Worst Hold Slack (WHS)" severity="error" value="-0.768 ns"/>
+    <efx:group_data name="i_fb_clk" severity="info" value="282.566 MHz"/>
+    <efx:group_data name="i_systemClk" severity="info" value="335.570 MHz"/>
+    <efx:group_data name="i_sysclk_div_2" severity="info" value="246.488 MHz"/>
+    <efx:group_data name="i_mipi_rx_pclk" severity="info" value="219.250 MHz"/>
+    <efx:group_data name="i_mipi_clk" severity="info" value="245.218 MHz"/>
+    <efx:group_data name="i_mipi_tx_pclk" severity="info" value="215.750 MHz"/>
+    <efx:group_data name="i_hbramClk_cal" severity="info" value="584.795 MHz"/>
+    <efx:group_data name="i_hbramClk" severity="info" value="244.678 MHz"/>
+    <efx:group_data name="jtag_inst1_TCK" severity="info" value="232.396 MHz"/>
+    <efx:group_data name="i_cam_ck_CLKOUT_0" severity="info" value="256.082 MHz"/>
   </efx:group>
 
   <efx:group name="Timing (Final)">
-    <efx:group_data name="Worst Negative Slack (WNS)" severity="info" value="0.244 ns"/>
+    <efx:group_data name="Worst Negative Slack (WNS)" severity="info" value="0.146 ns"/>
     <efx:group_data name="Worst Hold Slack (WHS)" severity="info" value="0.026 ns"/>
-    <efx:group_data name="i_fb_clk" severity="info" value="208.377 MHz"/>
-    <efx:group_data name="i_systemClk" severity="info" value="323.729 MHz"/>
-    <efx:group_data name="i_sysclk_div_2" severity="info" value="221.779 MHz"/>
-    <efx:group_data name="i_mipi_rx_pclk" severity="info" value="176.960 MHz"/>
-    <efx:group_data name="i_mipi_clk" severity="info" value="191.939 MHz"/>
-    <efx:group_data name="i_mipi_tx_pclk" severity="info" value="207.771 MHz"/>
-    <efx:group_data name="i_hbramClk_cal" severity="info" value="499.002 MHz"/>
-    <efx:group_data name="i_hbramClk" severity="info" value="241.429 MHz"/>
-    <efx:group_data name="jtag_inst1_TCK" severity="info" value="214.823 MHz"/>
-    <efx:group_data name="i_cam_ck_CLKOUT_0" severity="info" value="211.015 MHz"/>
+    <efx:group_data name="i_fb_clk" severity="info" value="223.264 MHz"/>
+    <efx:group_data name="i_systemClk" severity="info" value="313.775 MHz"/>
+    <efx:group_data name="i_sysclk_div_2" severity="info" value="192.456 MHz"/>
+    <efx:group_data name="i_mipi_rx_pclk" severity="info" value="174.095 MHz"/>
+    <efx:group_data name="i_mipi_clk" severity="info" value="188.324 MHz"/>
+    <efx:group_data name="i_mipi_tx_pclk" severity="info" value="187.899 MHz"/>
+    <efx:group_data name="i_hbramClk_cal" severity="info" value="455.789 MHz"/>
+    <efx:group_data name="i_hbramClk" severity="info" value="235.073 MHz"/>
+    <efx:group_data name="jtag_inst1_TCK" severity="info" value="205.550 MHz"/>
+    <efx:group_data name="i_cam_ck_CLKOUT_0" severity="info" value="213.812 MHz"/>
   </efx:group>
 
 </efx:tool_report>

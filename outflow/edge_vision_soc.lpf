@@ -2,7 +2,7 @@
 <efxpt:periphery design="edge_vision_soc" device="Ti60F225" xmlns:efxpt="http://www.efinixinc.com/peri_device_db" xmlns:efxutil="http://www.efinixinc.com/peri_tool" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/peri_device_db lpf.xsd" checksum="71828369">
   <!-- Efinity Logical Peripheral File -->
   <!-- Version: 2026.1.132.1.15 -->
-  <!-- Date: 2026-08-27 13:24 -->
+  <!-- Date: 2026-09-02 08:29 -->
   <!-- Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved. -->
   <efxpt:sequence size="119">
     <efxpt:instance id="BG_1A" index="0" type="hsio_bg"/>

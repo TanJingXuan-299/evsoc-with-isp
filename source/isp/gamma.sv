@@ -14,7 +14,7 @@ module gamma
     parameter S_AXIS_DATA_WIDTH           = 8*$rtoi($floor((PIXEL_PER_CYCLE * 3 * INPUT_COMPONENT_BIT_WIDTH + 7)/8)),
     parameter M_AXIS_DATA_WIDTH           = 8*$rtoi($floor((PIXEL_PER_CYCLE * 3 * OUTPUT_COMPONENT_BIT_WIDTH + 7)/8)),
     parameter TUSER_WIDTH                 = 1,
-    parameter LUT_FILE                    = "../../rtl/lut.mem"
+    parameter LUT_FILE                    = "../../rtl/lut_8_bit.mem"
   )
   (
     input  wire                           clk,
