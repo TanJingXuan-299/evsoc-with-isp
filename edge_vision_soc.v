@@ -280,19 +280,19 @@ module edge_vision_soc #(
   ///////////////////////////////////////////////////////////////////////////////
 
   wire [ 31:0] debug_cam_display_fifo_status;
-  wire [ 15:0]         black_level,
-  wire [ 15:0]         rgain,
-  wire [ 15:0]         ggain,
-  wire [ 15:0]         bgain,
-  wire [ 15:0]         ccm_r_r,
-  wire [ 15:0]         ccm_r_g,
-  wire [ 15:0]         ccm_r_b,
-  wire [ 15:0]         ccm_g_r,
-  wire [ 15:0]         ccm_g_g,
-  wire [ 15:0]         ccm_g_b,
-  wire [ 15:0]         ccm_b_r,
-  wire [ 15:0]         ccm_b_g,
-  wire [ 15:0]         ccm_b_b,
+  wire [ 15:0]         black_level;
+  wire [ 15:0]         rgain;
+  wire [ 15:0]         ggain;
+  wire [ 15:0]         bgain;
+  wire [ 15:0]         ccm_r_r;
+  wire [ 15:0]         ccm_r_g;
+  wire [ 15:0]         ccm_r_b;
+  wire [ 15:0]         ccm_g_r;
+  wire [ 15:0]         ccm_g_g;
+  wire [ 15:0]         ccm_g_b;
+  wire [ 15:0]         ccm_b_r;
+  wire [ 15:0]         ccm_b_g;
+  wire [ 15:0]         ccm_b_b;
   wire         trigger_capture_frame;
   wire         continuous_capture_frame;
   wire         rgb_gray;
@@ -1089,7 +1089,7 @@ module edge_vision_soc #(
   common_apb3 #(
       .ADDR_WIDTH(16),
       .DATA_WIDTH(32),
-      .NUM_REG   (7)
+      .NUM_REG   (17)
   ) u_apb3_cam_display (
       .select_demo_mode             ({user_dip1, user_dip0}),
       .enable_cam                   (enable_cam),

@@ -475,3 +475,245 @@ make: Nothing to be done for 'all'.
 17:19:02 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.
+14:15:41 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+14:15:43 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c:71:10: error: unknown type name 'bool'
+   71 | volatile bool uart_cmd_ready = false;
+      |          ^~~~
+src/main.c:71:32: error: 'false' undeclared here (not in a function)
+   71 | volatile bool uart_cmd_ready = false;
+      |                                ^~~~~
+src/main.c:22:1: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   21 | #include "isp.h"
+  +++ |+#include <stdbool.h>
+   22 | 
+src/main.c: In function 'uart_buffer_read':
+src/main.c:87:34: error: 'true' undeclared (first use in this function)
+   87 |                 uart_cmd_ready = true;
+      |                                  ^~~~
+src/main.c:87:34: note: 'true' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+src/main.c:87:34: note: each undeclared identifier is reported only once for each function it appears in
+src/main.c:105:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  105 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+src/main.c: In function 'settings':
+src/main.c:160:13: error: too few arguments to function 'Set_Gain'
+  160 |             Set_Gain(0, data);
+      |             ^~~~~~~~
+In file included from src/main.c:13:
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:164:13: error: too few arguments to function 'Set_Gain'
+  164 |             Set_Gain(1, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:168:13: error: too few arguments to function 'Set_Gain'
+  168 |             Set_Gain(2, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:172:13: error: too few arguments to function 'Set_Gain'
+  172 |             Set_Gain(3, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:176:13: error: too few arguments to function 'Set_Gain'
+  176 |             Set_Gain(4, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:180:13: error: too few arguments to function 'Set_Gain'
+  180 |             Set_Gain(5, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:184:13: error: too few arguments to function 'Set_Gain'
+  184 |             Set_Gain(6, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:188:13: error: too few arguments to function 'Set_Gain'
+  188 |             Set_Gain(7, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:192:13: error: too few arguments to function 'Set_Gain'
+  192 |             Set_Gain(8, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:196:13: error: too few arguments to function 'Set_Gain'
+  196 |             Set_Gain(9, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:200:13: error: too few arguments to function 'Set_Gain'
+  200 |             Set_Gain(10, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:204:13: error: too few arguments to function 'Set_Gain'
+  204 |             Set_Gain(11, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:208:13: error: too few arguments to function 'Set_Gain'
+  208 |             Set_Gain(12, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+make: *** [../common/standalone.mk:62: build/obj_files/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:23:24 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+14:23:24 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+src/main.c: In function 'settings':
+src/main.c:161:13: error: too few arguments to function 'Set_Gain'
+  161 |             Set_Gain(0, data);
+      |             ^~~~~~~~
+In file included from src/main.c:13:
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:165:13: error: too few arguments to function 'Set_Gain'
+  165 |             Set_Gain(1, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:169:13: error: too few arguments to function 'Set_Gain'
+  169 |             Set_Gain(2, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:173:13: error: too few arguments to function 'Set_Gain'
+  173 |             Set_Gain(3, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:177:13: error: too few arguments to function 'Set_Gain'
+  177 |             Set_Gain(4, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:181:13: error: too few arguments to function 'Set_Gain'
+  181 |             Set_Gain(5, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:185:13: error: too few arguments to function 'Set_Gain'
+  185 |             Set_Gain(6, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:189:13: error: too few arguments to function 'Set_Gain'
+  189 |             Set_Gain(7, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:193:13: error: too few arguments to function 'Set_Gain'
+  193 |             Set_Gain(8, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:197:13: error: too few arguments to function 'Set_Gain'
+  197 |             Set_Gain(9, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:201:13: error: too few arguments to function 'Set_Gain'
+  201 |             Set_Gain(10, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:205:13: error: too few arguments to function 'Set_Gain'
+  205 |             Set_Gain(11, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+src/main.c:209:13: error: too few arguments to function 'Set_Gain'
+  209 |             Set_Gain(12, data);
+      |             ^~~~~~~~
+src/apb3_cam.h:83:20: note: declared here
+   83 | static inline void Set_Gain(int camId, int var, u16 setting)
+      |                    ^~~~~~~~
+make: *** [../common/standalone.mk:62: build/obj_files/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:30:31 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+14:30:31 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       20832 B       124 KB     16.41%
+14:31:59 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.

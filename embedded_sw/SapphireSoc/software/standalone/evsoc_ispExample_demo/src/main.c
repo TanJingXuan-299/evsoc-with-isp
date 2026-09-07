@@ -19,6 +19,7 @@
 #include "dmasg_config.h"
 #include "apb3_hw_accel.h"
 #include "isp.h"
+#include <stdbool.h>
 
 // Start address to be divided evenly by 8. Otherwise DMA tkeep might be shifted, not handled in display and hw_accel blocks.
 #define cam_array ((volatile uint32_t *)CAM_START_ADDR)
@@ -152,60 +153,60 @@ void settings()
             }
             else
             {
-                bsp_printf("Invalid Demo Mode: %c\n\r");
+                bsp_printf("Invalid Demo Mode: %c\n\r", char_data);
             }
             break;
 
             case '0':
-            Set_Gain(0, data);
+            Set_Gain(0, 0, data);
             break;
 
             case '1':
-            Set_Gain(1, data);
+            Set_Gain(0, 1, data);
             break;
 
             case '2':
-            Set_Gain(2, data);
+            Set_Gain(0, 2, data);
             break;
 
             case '3':
-            Set_Gain(3, data);
+            Set_Gain(0, 3, data);
             break;
 
             case '4':
-            Set_Gain(4, data);
+            Set_Gain(0, 4, data);
             break;
 
             case '5':
-            Set_Gain(5, data);
+            Set_Gain(0, 5, data);
             break;
 
             case '6':
-            Set_Gain(6, data);
+            Set_Gain(0, 6, data);
             break;
 
             case '7':
-            Set_Gain(7, data);
+            Set_Gain(0, 7, data);
             break;
 
             case '8':
-            Set_Gain(8, data);
+            Set_Gain(0, 8, data);
             break;
 
             case '9':
-            Set_Gain(9, data);
+            Set_Gain(0, 9, data);
             break;
 
             case 'A':
-            Set_Gain(10, data);
+            Set_Gain(0, 10, data);
             break;
 
             case 'B':
-            Set_Gain(11, data);
+            Set_Gain(0, 11, data);
             break;
 
             case 'C':
-            Set_Gain(12, data);
+            Set_Gain(0, 12, data);
             break;
         }
     }

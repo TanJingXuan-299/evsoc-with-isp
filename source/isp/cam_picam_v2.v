@@ -71,8 +71,37 @@ module cam_picam_v2 #(
 );
 
 reg  [223:0] gain_control;
-assign gain_control = {black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b, ccm_g_g, ccm_g_r, ccm_r_b, 
-                       ccm_r_g, ccm_r_r, bgain, ggain, ggain, rgain};
+// FIX (field order): the ISP AXI-Lite register bank packs TWO 16-bit fields
+// per 32-bit register:
+//   reg0 0x00 = {bgain[31:16], rgain[15:0]}
+//   reg1 0x04 = {g1gain[31:16], g0gain[15:0]}
+//   reg2 0x08 = {ccm_r_g, ccm_r_r}
+//   reg3 0x0C = {ccm_g_r, ccm_r_b}
+//   reg4 0x10 = {ccm_g_b, ccm_g_g}
+//   reg5 0x14 = {ccm_b_g, ccm_b_r}
+//   reg6 0x18 = {black_level, ccm_b_b}
+// The previous concatenation ended with {..., bgain, ggain, ggain, rgain},
+// which puts the DUPLICATED ggain at bit [31:16] - exactly where reg0's
+// bgain half is taken from. The blue gain never reached the ISP: the ISP's
+// bgain field received the green gain instead. The correct packing for the
+// 7-register map is (MSB -> LSB):
+//   [223:208] black_level   (reg6 high)
+//   [207:192] ccm_b_b       (reg6 low)
+//   [191:176] ccm_b_g       (reg5 high)
+//   [175:160] ccm_b_r       (reg5 low)
+//   [159:144] ccm_g_b       (reg4 high)
+//   [143:128] ccm_g_g       (reg4 low)
+//   [127:112] ccm_g_r       (reg3 high)
+//   [111: 96] ccm_r_b       (reg3 low)
+//   [ 95: 80] ccm_r_g       (reg2 high)
+//   [ 79: 64] ccm_r_r       (reg2 low)
+//   [ 63: 48] ggain         (reg1 high = g1gain)
+//   [ 47: 32] ggain         (reg1 low  = g0gain)
+//   [ 31: 16] bgain         (reg0 high)
+//   [ 15:  0] rgain         (reg0 low)
+// (the APB slave exposes one 16-bit green gain, which drives both g0/g1)
+assign gain_control = {black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b, ccm_g_g, ccm_g_r, ccm_r_b,
+                       ccm_r_g, ccm_r_r, ggain, ggain, bgain, rgain};
 
 localparam CAM_DMA_COUNT_BIT = $clog2(DMA_TRANSFER_LENGTH);
 localparam CAM_X_COUNT_BIT   = $clog2(MIPI_FRAME_WIDTH/4); //4PPC
@@ -135,11 +164,10 @@ wire                            isp_m_axis_tuser;
 reg  [ISP_LINE_CNT_BIT-1:0]     isp_s_line_count;
 reg                             isp_sof_pending;
 
-//AXI-Lite master to the isp_top register bank: programs the ISP colour-gain
-//(white balance) registers from the APB register - see the FSM
-//in the "ISP white balance programming" section further below. CCM matrix
-//and black level keep their safe reset defaults from axi_lite_register.sv
-//(identity CCM 0x1000, black level 0).
+//AXI-Lite master to the isp_top register bank: programs ALL SEVEN ISP
+//parameter registers (colour gains, CCM matrix, black level) from the APB
+//register bank - see the FSM in the "ISP parameter programming" section
+//further below.
 wire [4:0]                      isp_s_axi_awaddr;
 wire                            isp_s_axi_awvalid;
 wire                            isp_s_axi_awready;
@@ -154,10 +182,19 @@ wire                            isp_s_axi_bready;
 //gain_control synchroniser + ISP AXI-Lite programming FSM state
 reg  [223:0]                     gain_control_r1;
 reg  [223:0]                     gain_control_synced;
-reg  [223:0]                     rgb_control_programmed;
+reg  [223:0]                     gain_control_programmed;
 reg  [223:0]                     gain_control_shadow;
 reg  [  2:0]                     isp_axi_state;
-reg                              isp_axi_phase;
+// FIX (register sequencing): the previous code used "isp_axi_phase" plus a
+// 7-iteration for-loop of NON-BLOCKING assignments to the same registers.
+// With non-blocking assignments every iteration's value is scheduled and
+// only the LAST one (i=6) actually lands, so the FSM only ever wrote ISP
+// register 0x18 (dead after the CCM hardwire removal), twice, with the
+// wrong data - the colour gains at 0x00/0x04 were NEVER programmed, which
+// is why UART gain commands had no effect on the image. The loop also used
+// an undeclared loop variable "i" (no "integer i;" in the module).
+// Replaced with a proper 3-bit register index that sequences 0..6.
+reg  [  2:0]                     isp_axi_reg_idx;
 reg  [  4:0]                     isp_axi_addr_r;
 reg  [ 31:0]                     isp_axi_data_r;
 reg                              isp_s_axi_awvalid_r;
@@ -428,7 +465,7 @@ assign rgb_pixel_g_out     = {isp_m_axis_tdata[31:24], isp_m_axis_tdata[7:0]};
 assign rgb_pixel_b_out     = {isp_m_axis_tdata[39:32], isp_m_axis_tdata[15:8]};
 
 //------------------------------------------------------------------------
-// ISP white balance programming (replaces the old cam_rgb_gain stage)
+// ISP parameter programming (replaces the old cam_rgb_gain stage)
 //------------------------------------------------------------------------
 
 //gain_control is an APB (peripheralClk) register - 2FF synchronise to
@@ -439,23 +476,30 @@ begin
    gain_control_synced <= gain_control_r1;
 end
 
-//Program the two gain registers whenever the synchronised gain_control
-//value differs from the last value programmed into the ISP.
-//axi_lite_register.sv expects awvalid and wvalid to be asserted together
-//and holds them ready for one cycle; the write completes when bvalid
-//pulses (bready is tied high).
+//Program all SEVEN ISP parameter registers (0x00..0x18) whenever the
+//synchronised gain_control value differs from the last value programmed
+//into the ISP. axi_lite_register.sv expects awvalid and wvalid to be
+//asserted together and holds them ready for one cycle; the write completes
+//when bvalid pulses (bready is tied high).
+//Sequencing: isp_axi_reg_idx walks 0..6; each IDLE pass latches that
+//register's address/data slice from gain_control_synced. The shadow
+//captures the value at the START of a pass; comparing against the shadow
+//(not the live value) at the end means a value that changes mid-pass
+//triggers one clean extra pass, so the ISP always converges to the last
+//stable value. All ISP stages latch their coefficients at the next start
+//of frame (tuser), so updates are frame-atomic.
 always @(posedge mipi_pclk)
 begin
    if (~rst_n)
    begin
-      gain_control_programmed<= {224{1'b1}};  // != reset value of gain_control (0) - forces initial programming
-      gain_control_shadow    <= 224'd0;
-      isp_axi_state          <= ISP_AXI_IDLE;
-      isp_axi_phase          <= 1'b0;
-      isp_axi_addr_r         <= 5'd0;
-      isp_axi_data_r         <= 32'd0;
-      isp_s_axi_awvalid_r    <= 1'b0;
-      isp_s_axi_wvalid_r     <= 1'b0;
+      gain_control_programmed <= {224{1'b1}};  // != any APB reset value - forces initial programming
+      gain_control_shadow     <= 224'd0;
+      isp_axi_state           <= ISP_AXI_IDLE;
+      isp_axi_reg_idx         <= 3'd0;
+      isp_axi_addr_r          <= 5'd0;
+      isp_axi_data_r          <= 32'd0;
+      isp_s_axi_awvalid_r     <= 1'b0;
+      isp_s_axi_wvalid_r      <= 1'b0;
    end
    else
    begin
@@ -463,21 +507,17 @@ begin
          ISP_AXI_IDLE:
          begin
             if (gain_control_synced != gain_control_programmed)
-               begin
-                     if (~isp_axi_phase)
-                     begin
-                        for (i=0; i<7; i=i+1)
-                        begin
-                        isp_axi_addr_r     <= 5'h00+i*4;
-                        isp_axi_data_r     <= {gain_control_synced[31+i*16:16+i*16],
-                                             gain_control_synced[15+i*16: 0+i*16]};
-                        gain_control_shadow <= gain_control_synced;
-                        end
-                     end
-                     isp_s_axi_awvalid_r <= 1'b1;
-                     isp_s_axi_wvalid_r  <= 1'b1;
-                     isp_axi_state       <= ISP_AXI_ASSERT;
-               end
+            begin
+               if (isp_axi_reg_idx == 3'd0)
+                  gain_control_shadow <= gain_control_synced;
+               //awaddr[4:2] = register index, byte address = index*4
+               isp_axi_addr_r        <= {isp_axi_reg_idx, 2'b00};
+               //32-bit double-word slice: bits [31:0] for reg0 up to [223:192] for reg6
+               isp_axi_data_r        <= gain_control_synced[32*isp_axi_reg_idx +: 32];
+               isp_s_axi_awvalid_r   <= 1'b1;
+               isp_s_axi_wvalid_r    <= 1'b1;
+               isp_axi_state         <= ISP_AXI_ASSERT;
+            end
          end
          ISP_AXI_ASSERT:
          begin
@@ -494,17 +534,17 @@ begin
          begin
             if (isp_s_axi_bvalid)
             begin
-               if (isp_axi_phase)
+               if (isp_axi_reg_idx == 3'd6)
                begin
-                  //Both gain registers written - mark this gain_control
+                  //All seven registers written - mark this gain_control
                   //value as programmed (shadow: if gain_control changed
                   //mid-sequence a new pass is triggered automatically)
                   gain_control_programmed <= gain_control_shadow;
-                  isp_axi_phase          <= 1'b0;
+                  isp_axi_reg_idx         <= 3'd0;
                end
                else
                begin
-                  isp_axi_phase <= 1'b1;
+                  isp_axi_reg_idx <= isp_axi_reg_idx + 3'd1;
                end
                isp_axi_state <= ISP_AXI_IDLE;
             end

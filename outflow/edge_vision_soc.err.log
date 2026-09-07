@@ -384,3 +384,22 @@
 // Sep 02, 2026 08:28:01
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 07, 2026 14:02:02
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'i' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:469)
+[EFX-0010 VERI-ERROR] 'i' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:471)
+[EFX-0010 VERI-ERROR] 'i' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:472)
+[EFX-0010 VERI-ERROR] range must be bounded by constant expressions (VERI-1952) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:472)
+[EFX-0010 VERI-ERROR] 'i' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:473)
+[EFX-0010 VERI-ERROR] range must be bounded by constant expressions (VERI-1952) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:473)
+[EFX-0010 VERI-ERROR] module 'cam_picam_v2' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:771)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 07, 2026 14:03:21
+///////////////////////////////////
+

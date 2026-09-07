@@ -120,9 +120,23 @@ integer              byteIndex;
 
    always@ (posedge clk or negedge resetn)
    begin
-      if(!resetn)
+      if(!resetn) begin
          for(byteIndex = 0; byteIndex < NUM_REG; byteIndex = byteIndex + 1)
             slaveReg[byteIndex] <= {{DATA_WIDTH}{1'b0}};
+         slaveReg[0]  <= 16'h0010;  // black_level
+         slaveReg[5]  <= 16'h00A0;  // rgain
+         slaveReg[6]  <= 16'h0060;  // ggain
+         slaveReg[7]  <= 16'h0080;  // bgain
+         slaveReg[8]  <= 16'h252F;  // ccm_r_r =  9519
+         slaveReg[9]  <= 16'hF1DA;  // ccm_r_g = -3622
+         slaveReg[10] <= 16'hF8F7;  // ccm_r_b = -1801
+         slaveReg[11] <= 16'hF5CA;  // ccm_g_r = -2614
+         slaveReg[12] <= 16'h2956;  // ccm_g_g = 10582
+         slaveReg[13] <= 16'hF0E0;  // ccm_g_b = -3872
+         slaveReg[14] <= 16'hFB6F;  // ccm_b_r = -1169
+         slaveReg[15] <= 16'hF758;  // ccm_b_g = -2216
+         slaveReg[16] <= 16'h1D39;  // ccm_b_b =  7481
+      end
       else begin
          for(byteIndex = 0; byteIndex < NUM_REG; byteIndex = byteIndex + 1)
             if(actWrite && PADDR[ADDR_WIDTH-1:0] == (byteIndex*4))
