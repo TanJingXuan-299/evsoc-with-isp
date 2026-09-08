@@ -50,8 +50,9 @@ module axi_lite_register
     output wire [15:0]                    ccm_g_b,
     output wire [15:0]                    ccm_b_r,
     output wire [15:0]                    ccm_b_g,
-    output wire [15:0]                    ccm_b_b
+    output wire [15:0]                    ccm_b_b,
 
+    output wire [1:0]                     isp_enable
   );
 
   localparam   NUM_REGISTERS      = 2**(S_AXI_ADDR_WIDTH-2);
@@ -233,6 +234,8 @@ module axi_lite_register
       registers[5] <= 32'h00000000;
       // black level, ccm_b_b
       registers[6] <= 32'h00001000;
+      // gamma, demosaic enable
+      registers[7] <= 32'h00000003;
     end
   end
 
@@ -251,6 +254,7 @@ module axi_lite_register
   assign ccm_b_g     = registers[5][31:16];
   assign ccm_b_b     = registers[6][15:0];
   assign black_level = registers[6][31:16];
+  assign isp_enable  = registers[7][ 1:0];
   // assign ccm_r_r = 16'sd9519;   // +2.32392
   // assign ccm_r_g = -16'sd3622;  // -0.88421
   // assign ccm_r_b = -16'sd1801;  // -0.43971

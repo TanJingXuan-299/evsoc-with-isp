@@ -717,3 +717,6 @@ Memory region         Used Size  Region Size  %age Used
 14:31:59 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.
+15:07:03 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.

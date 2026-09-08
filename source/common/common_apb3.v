@@ -24,6 +24,7 @@ module common_apb3 #(
    output   [15:0]         ccm_b_r,
    output   [15:0]         ccm_b_g,
    output   [15:0]         ccm_b_b,
+   output   [1:0]          isp_enable,
    output                  mipi_rstn,
    output                  enable_cam,
    output                  trigger_capture_frame,
@@ -136,6 +137,7 @@ integer              byteIndex;
          slaveReg[14] <= 16'hFB6F;  // ccm_b_r = -1169
          slaveReg[15] <= 16'hF758;  // ccm_b_g = -2216
          slaveReg[16] <= 16'h1D39;  // ccm_b_b =  7481
+         slaveReg[17] <= 16'h3;     // isp_enable
       end
       else begin
          for(byteIndex = 0; byteIndex < NUM_REG; byteIndex = byteIndex + 1)
@@ -190,5 +192,5 @@ integer              byteIndex;
    assign ccm_b_r                  = slaveReg[14][15:0];
    assign ccm_b_g                  = slaveReg[15][15:0];
    assign ccm_b_b                  = slaveReg[16][15:0];
-
+   assign isp_enable               = slaveReg[17][1:0];
 endmodule

@@ -1,6 +1,6 @@
-14:31:59 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+15:07:03 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.
 
-14:31:59 Build Finished. 0 errors, 0 warnings. (took 180ms)
+15:07:03 Build Finished. 0 errors, 0 warnings. (took 232ms)
 

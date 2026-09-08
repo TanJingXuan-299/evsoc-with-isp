@@ -293,6 +293,7 @@ module edge_vision_soc #(
   wire [ 15:0]         ccm_b_r;
   wire [ 15:0]         ccm_b_g;
   wire [ 15:0]         ccm_b_b;
+  wire [  1:0]         isp_enable;
   wire         trigger_capture_frame;
   wire         continuous_capture_frame;
   wire         rgb_gray;
@@ -868,6 +869,7 @@ module edge_vision_soc #(
       .ccm_b_r                             (ccm_b_r    [15:0]),
       .ccm_b_g                             (ccm_b_g    [15:0]),
       .ccm_b_b                             (ccm_b_b    [15:0]),
+      .isp_enable                          (isp_enable),
       .trigger_capture_frame               (trigger_capture_frame),
       .continuous_capture_frame            (continuous_capture_frame),
       .rgb_gray                            (rgb_gray),
@@ -1089,7 +1091,7 @@ module edge_vision_soc #(
   common_apb3 #(
       .ADDR_WIDTH(16),
       .DATA_WIDTH(32),
-      .NUM_REG   (17)
+      .NUM_REG   (18)
   ) u_apb3_cam_display (
       .select_demo_mode             ({user_dip1, user_dip0}),
       .enable_cam                   (enable_cam),
@@ -1107,6 +1109,7 @@ module edge_vision_soc #(
       .ccm_b_r                      (ccm_b_r    [15:0]),
       .ccm_b_g                      (ccm_b_g    [15:0]),
       .ccm_b_b                      (ccm_b_b    [15:0]),
+      .isp_enable                   (isp_enable),
       .trigger_capture_frame        (trigger_capture_frame),
       .continuous_capture_frame     (continuous_capture_frame),
       .rgb_gray                     (rgb_gray),

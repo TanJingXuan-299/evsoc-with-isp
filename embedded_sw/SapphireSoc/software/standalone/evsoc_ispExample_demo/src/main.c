@@ -208,6 +208,10 @@ void settings()
             case 'C':
             Set_Gain(0, 12, data);
             break;
+
+            case 'E':
+            Set_Gain(0, 13, data);
+            break;
         }
     }
 }

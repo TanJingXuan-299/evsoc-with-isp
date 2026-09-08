@@ -55,6 +55,7 @@ module cam_picam_v2 #(
    input  wire [15:0] ccm_b_r,
    input  wire [15:0] ccm_b_g,
    input  wire [15:0] ccm_b_b,
+   input  wire [1:0]  isp_enable,
    input  wire        trigger_capture_frame,
    input  wire        continuous_capture_frame,
    input  wire        rgb_gray,
@@ -70,7 +71,7 @@ module cam_picam_v2 #(
    output wire [31:0] debug_cam_dma_status
 );
 
-reg  [223:0] gain_control;
+reg  [225:0] gain_control;
 // FIX (field order): the ISP AXI-Lite register bank packs TWO 16-bit fields
 // per 32-bit register:
 //   reg0 0x00 = {bgain[31:16], rgain[15:0]}
@@ -100,7 +101,7 @@ reg  [223:0] gain_control;
 //   [ 31: 16] bgain         (reg0 high)
 //   [ 15:  0] rgain         (reg0 low)
 // (the APB slave exposes one 16-bit green gain, which drives both g0/g1)
-assign gain_control = {black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b, ccm_g_g, ccm_g_r, ccm_r_b,
+assign gain_control ={ {30{1'b0}}, isp_enable, black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b, ccm_g_g, ccm_g_r, ccm_r_b,
                        ccm_r_g, ccm_r_r, ggain, ggain, bgain, rgain};
 
 localparam CAM_DMA_COUNT_BIT = $clog2(DMA_TRANSFER_LENGTH);
@@ -180,10 +181,10 @@ wire                            isp_s_axi_bvalid;
 wire                            isp_s_axi_bready;
 
 //gain_control synchroniser + ISP AXI-Lite programming FSM state
-reg  [223:0]                     gain_control_r1;
-reg  [223:0]                     gain_control_synced;
-reg  [223:0]                     gain_control_programmed;
-reg  [223:0]                     gain_control_shadow;
+reg  [225:0]                     gain_control_r1;
+reg  [225:0]                     gain_control_synced;
+reg  [225:0]                     gain_control_programmed;
+reg  [225:0]                     gain_control_shadow;
 reg  [  2:0]                     isp_axi_state;
 // FIX (register sequencing): the previous code used "isp_axi_phase" plus a
 // 7-iteration for-loop of NON-BLOCKING assignments to the same registers.
@@ -534,7 +535,7 @@ begin
          begin
             if (isp_s_axi_bvalid)
             begin
-               if (isp_axi_reg_idx == 3'd6)
+               if (isp_axi_reg_idx == 3'd7)
                begin
                   //All seven registers written - mark this gain_control
                   //value as programmed (shadow: if gain_control changed

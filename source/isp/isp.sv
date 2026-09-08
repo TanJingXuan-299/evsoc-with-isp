@@ -81,6 +81,7 @@ module isp
   wire [15:0]                     reg_ccm_b_r;
   wire [15:0]                     reg_ccm_b_g;
   wire [15:0]                     reg_ccm_b_b;
+  wire [1:0]                      isp_enable;
 
   axi_lite_register #(
     .S_AXI_DATA_WIDTH             (S_AXI_DATA_WIDTH),
@@ -128,7 +129,9 @@ module isp
     .ccm_g_b                      (reg_ccm_g_b),
     .ccm_b_r                      (reg_ccm_b_r),
     .ccm_b_g                      (reg_ccm_b_g),
-    .ccm_b_b                      (reg_ccm_b_b)
+    .ccm_b_b                      (reg_ccm_b_b),
+
+    .isp_enable                   (isp_enable)
   );
 
   localparam BLC_PIXEL_BIT_WIDTH          = PIXEL_BIT_WIDTH;
@@ -229,6 +232,7 @@ module isp
   localparam DEMOSAIC_PIXEL_BIT_WIDTH     = COLORGAIN_PIXEL_BIT_WIDTH;
   localparam DEMOSAIC_DATA_BIT_WIDTH      = 8*$rtoi($floor((PIXEL_PER_CYCLE * 3 * DEMOSAIC_PIXEL_BIT_WIDTH + 7)/8));
 
+
   wire [DEMOSAIC_DATA_BIT_WIDTH-1:0]      demosaic_tdata;
   wire                                    demosaic_tvalid;
   wire                                    demosaic_tready;
@@ -288,11 +292,11 @@ module isp
     .ccm_b_g                              (reg_ccm_b_g),
     .ccm_b_b                              (reg_ccm_b_b),
 
-    .s_axis_tdata                         (demosaic_tdata),
-    .s_axis_tvalid                        (demosaic_tvalid),
-    .s_axis_tready                        (demosaic_tready),
-    .s_axis_tlast                         (demosaic_tlast),
-    .s_axis_tuser                         (demosaic_tuser),
+    .s_axis_tdata                         (isp_enable [0] ? demosaic_tdata  : skidbuffer1_tdata),
+    .s_axis_tvalid                        (isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid),
+    .s_axis_tready                        (isp_enable [0] ? demosaic_tready : skidbuffer1_tready),
+    .s_axis_tlast                         (isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast),
+    .s_axis_tuser                         (isp_enable [0] ? demosaic_tuser  : skidbuffer1_tuser),
 
     .m_axis_tdata                         (ccm_tdata),
     .m_axis_tvalid                        (ccm_tvalid),
@@ -322,7 +326,7 @@ module isp
 
     .m_axis_tdata                          (skidbuffer2_tdata),
     .m_axis_tvalid                         (skidbuffer2_tvalid),
-    .m_axis_tready                         (skidbuffer2_tready),
+    .m_axis_tready                         (isp_enable[1] ? skidbuffer2_tready : m_axis_tready),
     .m_axis_tlast                          (skidbuffer2_tlast),
     .m_axis_tuser                          (skidbuffer2_tuser)
   );
@@ -387,11 +391,11 @@ module isp
     .m_axis_tuser                          (skidbuffer3_tuser)
   );
 
-  assign skidbuffer3_tready = m_axis_tready;
+  assign skidbuffer3_tready = isp_enable[1] ? m_axis_tready : 'b1;
 
-  assign m_axis_tdata       = skidbuffer3_tdata;
-  assign m_axis_tvalid      = skidbuffer3_tvalid;
-  assign m_axis_tlast       = skidbuffer3_tlast;
-  assign m_axis_tuser       = skidbuffer3_tuser;
+  assign m_axis_tdata       = isp_enable[1] ? skidbuffer3_tdata : skidbuffer2_tdata[9:2];
+  assign m_axis_tvalid      = isp_enable[1] ? skidbuffer3_tvalid: skidbuffer2_tvalid;
+  assign m_axis_tlast       = isp_enable[1] ? skidbuffer3_tlast : skidbuffer2_tlast;
+  assign m_axis_tuser       = isp_enable[1] ? skidbuffer3_tuser : skidbuffer2_tuser;
 
 endmodule
