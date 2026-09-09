@@ -55,15 +55,15 @@
 #define EXAMPLE_APB3_SLV_REG15_OFFSET 60	// ccm_b_g
 #define EXAMPLE_APB3_SLV_REG16_OFFSET 64	// ccm_b_b
 #define EXAMPLE_APB3_SLV_REG17_OFFSET 68	// isp_enable
-#define EXAMPLE_APB3_SLV_REG17_OFFSET 72	// Expect 32'hABCD_5678 - Verify slave read operation
-#define EXAMPLE_APB3_SLV_REG18_OFFSET 76	// debug_fifo_status
-#define EXAMPLE_APB3_SLV_REG19_OFFSET 80	// debug_cam_dma_fifo_rcount
-#define EXAMPLE_APB3_SLV_REG20_OFFSET 84	// debug_cam_dma_fifo_wcount
-#define EXAMPLE_APB3_SLV_REG21_OFFSET 88	// debug_display_dma_fifo_rcount
-#define EXAMPLE_APB3_SLV_REG22_OFFSET 92 	// debug_display_dma_fifo_wcount
-#define EXAMPLE_APB3_SLV_REG23_OFFSET 96 	// debug_cam_dma_status
-#define EXAMPLE_APB3_SLV_REG24_OFFSET 100 	// frames_per_second
-#define EXAMPLE_APB3_SLV_REG25_OFFSET 104 	// select_demo_mode
+#define EXAMPLE_APB3_SLV_REG18_OFFSET 72	// Expect 32'hABCD_5678 - Verify slave read operation
+#define EXAMPLE_APB3_SLV_REG19_OFFSET 76	// debug_fifo_status
+#define EXAMPLE_APB3_SLV_REG20_OFFSET 80	// debug_cam_dma_fifo_rcount
+#define EXAMPLE_APB3_SLV_REG21_OFFSET 84	// debug_cam_dma_fifo_wcount
+#define EXAMPLE_APB3_SLV_REG22_OFFSET 88	// debug_display_dma_fifo_rcount
+#define EXAMPLE_APB3_SLV_REG23_OFFSET 92 	// debug_display_dma_fifo_wcount
+#define EXAMPLE_APB3_SLV_REG24_OFFSET 96 	// debug_cam_dma_status
+#define EXAMPLE_APB3_SLV_REG25_OFFSET 100 	// frames_per_second
+#define EXAMPLE_APB3_SLV_REG26_OFFSET 104 	// select_demo_mode
 
 #endif
 

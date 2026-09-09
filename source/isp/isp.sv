@@ -271,6 +271,13 @@ module isp
   wire                                    ccm_tready;
   wire                                    ccm_tlast;
   wire [TUSER_WIDTH-1:0]                  ccm_tuser;
+  wire [CCM_S_AXIS_DATA_BIT_WIDTH-1:0]    demosaic_bypass_tdata;
+  generate
+    for (genvar db_p = 0; db_p < PIXEL_PER_CYCLE; db_p++) begin : gen_demosaic_bypass
+      assign demosaic_bypass_tdata[db_p*3*CCM_COMPONENT_BIT_WIDTH +: 3*CCM_COMPONENT_BIT_WIDTH] =
+             {3{skidbuffer1_tdata[db_p*COLORGAIN_PIXEL_BIT_WIDTH +: COLORGAIN_PIXEL_BIT_WIDTH]}};
+    end
+  endgenerate
 
   ccm #(
     .PIXEL_PER_CYCLE                      (PIXEL_PER_CYCLE),
@@ -292,7 +299,7 @@ module isp
     .ccm_b_g                              (reg_ccm_b_g),
     .ccm_b_b                              (reg_ccm_b_b),
 
-    .s_axis_tdata                         (isp_enable [0] ? demosaic_tdata  : skidbuffer1_tdata),
+    .s_axis_tdata                         (isp_enable [0] ? demosaic_tdata  : demosaic_bypass_tdata),
     .s_axis_tvalid                        (isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid),
     .s_axis_tready                        (demosaic_tready),
     .s_axis_tlast                         (isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast),
@@ -393,7 +400,17 @@ module isp
 
   assign skidbuffer3_tready = isp_enable[1] ? m_axis_tready : 'b1;
 
-  assign m_axis_tdata       = isp_enable[1] ? skidbuffer3_tdata : skidbuffer2_tdata[9:2];
+  wire [M_AXIS_DATA_WIDTH-1:0]            gamma_bypass_tdata;
+  generate
+    for (genvar gb_p = 0; gb_p < PIXEL_PER_CYCLE; gb_p++) begin : gen_gamma_bypass_p
+      for (genvar gb_c = 0; gb_c < 3; gb_c++) begin : gen_gamma_bypass_c
+        assign gamma_bypass_tdata[(gb_p*3+gb_c)*COMPONENT_BIT_WIDTH +: COMPONENT_BIT_WIDTH] =
+               skidbuffer2_tdata[(gb_p*3+gb_c)*GAMMA_INPUT_PIXEL_BIT_WIDTH + (GAMMA_INPUT_PIXEL_BIT_WIDTH-COMPONENT_BIT_WIDTH) +: COMPONENT_BIT_WIDTH];
+      end
+    end
+  endgenerate
+
+  assign m_axis_tdata       = isp_enable[1] ? skidbuffer3_tdata : gamma_bypass_tdata;
   assign m_axis_tvalid      = isp_enable[1] ? skidbuffer3_tvalid: skidbuffer2_tvalid;
   assign m_axis_tlast       = isp_enable[1] ? skidbuffer3_tlast : skidbuffer2_tlast;
   assign m_axis_tuser       = isp_enable[1] ? skidbuffer3_tuser : skidbuffer2_tuser;
