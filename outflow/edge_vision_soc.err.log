@@ -403,3 +403,41 @@
 // Sep 07, 2026 14:03:21
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 08, 2026 17:29:47
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] illegal expression in target (VERI-1042) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:297)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 08, 2026 17:32:13
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] constant is not allowed here (VERI-1180) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:297)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 08, 2026 17:36:09
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] illegal expression in target (VERI-1042) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:298)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 09, 2026 08:57:21
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] illegal expression in target (VERI-1042) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:298)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 09, 2026 09:13:24
+///////////////////////////////////
+

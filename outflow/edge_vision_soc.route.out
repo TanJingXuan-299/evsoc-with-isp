@@ -7,83 +7,74 @@ INFO     : Route Circuit with 4 threads
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INFO     : Beneficial skew enabled! Optimizing clock skews ... 
 INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from -2147483648ps to -2147483648ps)
-INFO     : CSS improved CPD of clock i_fb_clk by 0.00% (from 3414ps to 3414ps)
-INFO     : CSS improved CPD of clock i_systemClk by 0.00% (from 2862ps to 2862ps)
-INFO     : CSS improved CPD of clock i_sysclk_div_2 by 0.00% (from 4073ps to 4073ps)
-INFO     : CSS improved CPD of clock i_mipi_rx_pclk by 0.00% (from 4468ps to 4468ps)
-INFO     : CSS improved CPD of clock i_mipi_clk by 0.00% (from 3716ps to 3716ps)
-INFO     : CSS improved CPD of clock i_mipi_tx_pclk by 0.00% (from 4185ps to 4185ps)
-INFO     : CSS improved CPD of clock i_hbramClk_cal by 0.00% (from 1725ps to 1725ps)
-INFO     : CSS improved CPD of clock i_hbramClk by 0.00% (from 1259ps to 1259ps)
-INFO     : CSS improved CPD of clock jtag_inst1_TCK by 0.00% (from -791ps to -791ps)
-INFO     : CSS improved CPD of clock i_cam_ck_CLKOUT_0 by 0.00% (from 3648ps to 3648ps)
-INFO     : Discretized beneficial skew improved geomean CPD by 0.00% (from -2147483648ps to -2147483648ps in 40 iterations and 6.5 sec)
+INFO     : CSS improved CPD of clock i_fb_clk by 0.00% (from 3039ps to 3039ps)
+INFO     : CSS improved CPD of clock i_systemClk by 0.00% (from 2932ps to 2932ps)
+INFO     : CSS improved CPD of clock i_sysclk_div_2 by 0.00% (from 3369ps to 3369ps)
+INFO     : CSS improved CPD of clock i_mipi_rx_pclk by 0.00% (from 4111ps to 4111ps)
+INFO     : CSS improved CPD of clock i_mipi_clk by 0.00% (from 3673ps to 3673ps)
+INFO     : CSS improved CPD of clock i_mipi_tx_pclk by 0.00% (from 4289ps to 4289ps)
+INFO     : CSS improved CPD of clock i_hbramClk_cal by 0.00% (from 1774ps to 1774ps)
+INFO     : CSS improved CPD of clock i_hbramClk by 0.00% (from 3969ps to 3969ps)
+INFO     : CSS improved CPD of clock jtag_inst1_TCK by 0.00% (from -588ps to -588ps)
+INFO     : CSS improved CPD of clock i_cam_ck_CLKOUT_0 by -1.58% (from 3492ps to 3547ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.00% (from -2147483648ps to -2147483648ps in 40 iterations and 7.9 sec)
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INFO     : Overridding delay budgets for 1205 synchronizer-related pins
-INFO     : Iter  1: overlap=89824   heapops=9685012    (0%) cpd=1542  frr=1.00  msec=11700
-INFO     : [Setup Delay Budgets | 1384.9 ms]
+INFO     : Iter  1: overlap=90686   heapops=10019078   (0%) cpd=2932  frr=1.00  msec=15809
+INFO     : [Setup Delay Budgets | 2178.0 ms]
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INFO     : Hold Fixing
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-INFO     : Total min wire delay:  13236640
-INFO     : Hold fix wire delay:        238
+INFO     : Total min wire delay:  13174107
+INFO     : Hold fix wire delay:        255
 INFO     : Hold fix delay ratio:     0.00%
-INFO     : Pins requiring hold fix:  0.00%
+INFO     : Pins requiring hold fix:  0.01%
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-INFO     : Iter  2: overlap=38777   heapops=7743288    (24%) cpd=1540  frr=1.00  msec=2958
-INFO     : Iter  3: overlap=22060   heapops=6811252    (40%) cpd=1537  frr=1.00  msec=2397
-INFO     : Iter  4: overlap=10389   heapops=5536890    (55%) cpd=1553  frr=1.01  msec=2363
-INFO     : Iter  5: overlap=3876    heapops=3719346    (69%) cpd=1553  frr=1.01  msec=1672
-INFO     : Iter  6: overlap=1145    heapops=2108975    (81%) cpd=2926  frr=1.90  msec=1183
-INFO     : Iter  7: overlap=339     heapops=1150014    (86%) cpd=3021  frr=1.96  msec=955
+INFO     : Iter  2: overlap=39743   heapops=8017950    (23%) cpd=2922  frr=1.00  msec=4026
+INFO     : Iter  3: overlap=22842   heapops=7078082    (38%) cpd=2916  frr=0.99  msec=3574
+INFO     : Iter  4: overlap=10814   heapops=5721108    (55%) cpd=2971  frr=1.01  msec=3140
+INFO     : Iter  5: overlap=4029    heapops=3872514    (71%) cpd=2949  frr=1.01  msec=2735
+INFO     : Iter  6: overlap=1183    heapops=2299726    (81%) cpd=2968  frr=1.01  msec=1822
+INFO     : Iter  7: overlap=390     heapops=1414823    (86%) cpd=2968  frr=1.01  msec=1634
 INFO     : [Rebuild Parallel Routing Scheduler]
-INFO     : Iter  8: overlap=105     heapops=908137     (88%) cpd=2958  frr=1.92  msec=1415
-INFO     : Iter  9: overlap=34      heapops=960896     (88%) cpd=2918  frr=1.89  msec=1234
-INFO     : Iter 10: overlap=12      heapops=629461     (88%) cpd=2918  frr=1.89  msec=936
-INFO     : Iter 11: overlap=4       heapops=686592     (88%) cpd=2994  frr=1.94  msec=1059
-INFO     : Iter 12: overlap=4       heapops=545975     (88%) cpd=2994  frr=1.94  msec=845
-INFO     : Iter 13: overlap=2       heapops=667762     (88%) cpd=2994  frr=1.94  msec=893
-INFO     : Iter 14: overlap=1       heapops=516874     (88%) cpd=2994  frr=1.94  msec=1330
-INFO     : Iter 15: overlap=1       heapops=514475     (88%) cpd=2994  frr=1.94  msec=822
-INFO     : Iter 16: overlap=1       heapops=514021     (88%) cpd=2994  frr=1.94  msec=767
-INFO     : Iter 17: overlap=1       heapops=514070     (88%) cpd=2994  frr=1.94  msec=756
-INFO     : Iter 18: overlap=3       heapops=513939     (88%) cpd=2994  frr=1.94  msec=992
-INFO     : Iter 19: overlap=2       heapops=542617     (88%) cpd=2994  frr=1.94  msec=1948
-INFO     : Iter 20: overlap=1       heapops=487659     (88%) cpd=2994  frr=1.94  msec=802
-INFO     : Iter 21: overlap=1       heapops=332386     (88%) cpd=2994  frr=1.94  msec=589
-INFO     : Iter 22: overlap=2       heapops=500258     (88%) cpd=2994  frr=1.94  msec=883
+INFO     : Iter  8: overlap=112     heapops=976067     (88%) cpd=2968  frr=1.01  msec=2565
+INFO     : Iter  9: overlap=44      heapops=1096807    (88%) cpd=2968  frr=1.01  msec=2046
+INFO     : Iter 10: overlap=24      heapops=586746     (88%) cpd=2968  frr=1.01  msec=1135
+INFO     : Iter 11: overlap=4       heapops=580344     (89%) cpd=2968  frr=1.01  msec=1277
+INFO     : Iter 12: overlap=2       heapops=253120     (89%) cpd=2968  frr=1.01  msec=669
+INFO     : Iter 13: overlap=3       heapops=223071     (89%) cpd=2968  frr=1.01  msec=697
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INFO     : Beneficial skew enabled! Optimizing clock skews ... 
-INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 3607ps to 3607ps)
-INFO     : CSS improved CPD of clock i_fb_clk by 0.00% (from 4237ps to 4237ps)
-INFO     : CSS improved CPD of clock i_systemClk by 1.67% (from 2994ps to 2944ps)
-INFO     : CSS improved CPD of clock i_sysclk_div_2 by 0.00% (from 4660ps to 4660ps)
-INFO     : CSS improved CPD of clock i_mipi_rx_pclk by 0.00% (from 5505ps to 5505ps)
-INFO     : CSS improved CPD of clock i_mipi_clk by 0.00% (from 4470ps to 4470ps)
-INFO     : CSS improved CPD of clock i_mipi_tx_pclk by 0.00% (from 4902ps to 4902ps)
-INFO     : CSS improved CPD of clock i_hbramClk_cal by 0.00% (from 2182ps to 2182ps)
-INFO     : CSS improved CPD of clock i_hbramClk by 0.00% (from 3960ps to 3960ps)
-INFO     : CSS improved CPD of clock jtag_inst1_TCK by 0.00% (from 1378ps to 1378ps)
-INFO     : CSS improved CPD of clock i_cam_ck_CLKOUT_0 by 0.00% (from 4392ps to 4392ps)
-INFO     : Discretized beneficial skew improved geomean CPD by 0.17% (from 3607ps to 3601ps in 1 iterations and 4.8 sec)
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 3086ps to 3086ps)
+INFO     : CSS improved CPD of clock i_fb_clk by 0.00% (from 3966ps to 3966ps)
+INFO     : CSS improved CPD of clock i_systemClk by 0.88% (from 2968ps to 2942ps)
+INFO     : CSS improved CPD of clock i_sysclk_div_2 by 0.00% (from 4253ps to 4253ps)
+INFO     : CSS improved CPD of clock i_mipi_rx_pclk by -0.51% (from 5249ps to 5276ps)
+INFO     : CSS improved CPD of clock i_mipi_clk by 0.00% (from 4354ps to 4354ps)
+INFO     : CSS improved CPD of clock i_mipi_tx_pclk by 0.00% (from 4724ps to 4724ps)
+INFO     : CSS improved CPD of clock i_hbramClk_cal by 2.49% (from 2213ps to 2158ps)
+INFO     : CSS improved CPD of clock i_hbramClk by 0.00% (from 4009ps to 4009ps)
+INFO     : CSS improved CPD of clock jtag_inst1_TCK by 0.00% (from 386ps to 386ps)
+INFO     : CSS improved CPD of clock i_cam_ck_CLKOUT_0 by 0.00% (from 4236ps to 4236ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.29% (from 3086ps to 3077ps in 1 iterations and 5.6 sec)
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-INFO     : Iter 23: overlap=0       heapops=171694     (88%) cpd=2944  frr=1.91  msec=5409
+INFO     : Iter 14: overlap=0       heapops=173557     (89%) cpd=2942  frr=1.00  msec=6274
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INFO     : Routing Result
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-INFO     : Routing Succeeded in 46.60 seconds taking 23 iterations! 
+INFO     : Routing Succeeded in 51.12 seconds taking 14 iterations! 
 INFO     : 
-INFO     : First iteration critical path delay = 1.542 ns 
-INFO     : Last iteration critical path delay  = 2.944 ns (ratio = 1.91)
-INFO     : Max Routing Heap Size = 100,006
+INFO     : First iteration critical path delay = 2.932 ns 
+INFO     : Last iteration critical path delay  = 2.942 ns (ratio = 1.00)
+INFO     : Max Routing Heap Size = 98,977
 INFO     : Routing trace written to file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.troutingtraces' 
 INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-INFO     : Routing took 54.64624 seconds [FlowMsg::StageDuration]
-INFO     :     Routing took 118.015625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Routing virtual memory usage: begin = 157.908 MB, end = 449.812 MB, delta = 291.904 MB [FlowMsg::VMUsage]
-INFO     :     Routing peak virtual memory usage = 532.236 MB [FlowMsg::VMUsage::Peak]
-INFO     : Routing resident set memory usage: begin = 177.66 MB, end = 458.552 MB, delta = 280.892 MB [FlowMsg::RSSUsage]
-INFO     :     Routing peak resident set memory usage = 521.428 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Routing took 59.9746702 seconds [FlowMsg::StageDuration]
+INFO     :     Routing took 129.421875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Routing virtual memory usage: begin = 160.4 MB, end = 447.756 MB, delta = 287.356 MB [FlowMsg::VMUsage]
+INFO     :     Routing peak virtual memory usage = 529.396 MB [FlowMsg::VMUsage::Peak]
+INFO     : Routing resident set memory usage: begin = 175.596 MB, end = 452.38 MB, delta = 276.784 MB [FlowMsg::RSSUsage]
+INFO     :     Routing peak resident set memory usage = 516.38 MB [FlowMsg::RSSUsage::Peak]
            ***** Beginning stage final timing analysis ... *****
 WARNING  : No ports matched 'jtag_inst1_DRCK'
 WARNING  : [SDC C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/edge_vision_soc.sdc:65] set_input_delay: No valid input port(s) found
@@ -94,85 +85,85 @@ WARNING  : [SDC C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evs
 INFO     : SDC file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/edge_vision_soc.sdc' parsed successfully.
 Maximum possible analyzed clocks frequency
    Clock Name     Period (ns)  Frequency (MHz)     Edge
-i_fb_clk             4.347        230.044         (R-R)
-i_systemClk          3.054        327.439         (R-R)
-i_sysclk_div_2       4.770        209.644         (R-R)
-i_mipi_rx_pclk       5.615        178.094         (R-R)
-i_mipi_clk           4.580        218.341         (R-R)
-i_mipi_tx_pclk       5.012        199.521         (R-R)
-i_hbramClk_cal       2.292        436.300         (R-R)
-i_hbramClk           4.070        245.700         (R-R)
-jtag_inst1_TCK       4.846        206.356         (R-R)
-i_cam_ck_CLKOUT_0    4.502        222.124         (R-R)
+i_fb_clk             4.076        245.339         (R-R)
+i_systemClk          3.052        327.654         (R-R)
+i_sysclk_div_2       4.363        229.200         (R-R)
+i_mipi_rx_pclk       5.386        185.667         (R-R)
+i_mipi_clk           4.464        224.014         (R-R)
+i_mipi_tx_pclk       4.834        206.868         (R-R)
+i_hbramClk_cal       2.268        440.917         (R-R)
+i_hbramClk           4.119        242.777         (R-R)
+jtag_inst1_TCK       4.800        208.333         (R-R)
+i_cam_ck_CLKOUT_0    4.346        230.097         (R-R)
 
-Geomean max period: 4.188
+Geomean max period: 4.064
 
 Setup (Max) Clock Relationship
   Launch Clock      Capture Clock   Constraint (ns)     Slack (ns)          Edge
-i_fb_clk          i_fb_clk               40.000           35.653           (R-R)
-i_systemClk       i_systemClk             3.333            0.279           (R-R)
-i_sysclk_div_2    i_sysclk_div_2         16.000           11.230           (R-R)
-i_mipi_rx_pclk    i_mipi_rx_pclk         10.000            4.385           (R-R)
-i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       2.000            0.337           (R-R)
-i_mipi_clk        i_mipi_clk             10.000            5.420           (R-R)
-i_mipi_clk        i_cam_ck_CLKOUT_0       2.000            1.139           (R-R)
-i_mipi_tx_pclk    i_mipi_tx_pclk          8.000            2.988           (R-R)
-i_hbramClk_cal    i_hbramClk_cal          5.000            2.708           (R-R)
-i_hbramClk_cal    i_hbramClk              5.000            4.619           (R-R)
-i_hbramClk        i_hbramClk90            3.750            2.675           (R-F)
-i_hbramClk        i_hbramClk_cal          5.000            3.246           (R-R)
-i_hbramClk        i_hbramClk              5.000            0.930           (R-R)
-i_hbramClk        i_hbramClk              2.500            1.118           (R-F)
-jtag_inst1_TCK    jtag_inst1_TCK        100.000           95.154           (R-R)
-jtag_inst1_TCK    jtag_inst1_TCK         50.000           48.512           (F-R)
-i_cam_ck_CLKOUT_0 i_mipi_rx_pclk          2.000            0.486           (R-R)
-i_cam_ck_CLKOUT_0 i_mipi_clk              2.000            1.416           (R-R)
-i_cam_ck_CLKOUT_0 i_cam_ck_CLKOUT_0       8.000            3.498           (R-R)
+i_fb_clk          i_fb_clk               40.000           35.924           (R-R)
+i_systemClk       i_systemClk             3.333            0.281           (R-R)
+i_sysclk_div_2    i_sysclk_div_2         16.000           11.637           (R-R)
+i_mipi_rx_pclk    i_mipi_rx_pclk         10.000            4.614           (R-R)
+i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       2.000            0.663           (R-R)
+i_mipi_clk        i_mipi_clk             10.000            5.536           (R-R)
+i_mipi_clk        i_cam_ck_CLKOUT_0       2.000            1.134           (R-R)
+i_mipi_tx_pclk    i_mipi_tx_pclk          8.000            3.166           (R-R)
+i_hbramClk_cal    i_hbramClk_cal          5.000            2.732           (R-R)
+i_hbramClk_cal    i_hbramClk              5.000            4.609           (R-R)
+i_hbramClk        i_hbramClk90            3.750            2.601           (R-F)
+i_hbramClk        i_hbramClk_cal          5.000            3.480           (R-R)
+i_hbramClk        i_hbramClk              5.000            0.881           (R-R)
+i_hbramClk        i_hbramClk              2.500            1.122           (R-F)
+jtag_inst1_TCK    jtag_inst1_TCK        100.000           95.200           (R-R)
+jtag_inst1_TCK    jtag_inst1_TCK         50.000           49.504           (F-R)
+i_cam_ck_CLKOUT_0 i_mipi_rx_pclk          2.000            0.889           (R-R)
+i_cam_ck_CLKOUT_0 i_mipi_clk              2.000            1.388           (R-R)
+i_cam_ck_CLKOUT_0 i_cam_ck_CLKOUT_0       8.000            3.654           (R-R)
 
 Hold (Min) Clock Relationship
   Launch Clock      Capture Clock   Constraint (ns)     Slack (ns)          Edge
-i_fb_clk          i_fb_clk                0.000            0.097           (R-R)
-i_systemClk       i_systemClk             0.000            0.029           (R-R)
-i_sysclk_div_2    i_sysclk_div_2          0.000            0.046           (R-R)
+i_fb_clk          i_fb_clk                0.000            0.049           (R-R)
+i_systemClk       i_systemClk             0.000            0.026           (R-R)
+i_sysclk_div_2    i_sysclk_div_2          0.000            0.042           (R-R)
 i_mipi_rx_pclk    i_mipi_rx_pclk          0.000            0.026           (R-R)
-i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       0.000            0.125           (R-R)
-i_mipi_clk        i_mipi_clk              0.000            0.091           (R-R)
-i_mipi_clk        i_cam_ck_CLKOUT_0       0.000            0.143           (R-R)
-i_mipi_tx_pclk    i_mipi_tx_pclk          0.000            0.029           (R-R)
-i_hbramClk_cal    i_hbramClk_cal          0.000            0.059           (R-R)
-i_hbramClk_cal    i_hbramClk              0.000            0.103           (R-R)
-i_hbramClk        i_hbramClk90           -1.250            1.438           (R-F)
+i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       0.000            0.128           (R-R)
+i_mipi_clk        i_mipi_clk              0.000            0.093           (R-R)
+i_mipi_clk        i_cam_ck_CLKOUT_0       0.000            0.162           (R-R)
+i_mipi_tx_pclk    i_mipi_tx_pclk          0.000            0.043           (R-R)
+i_hbramClk_cal    i_hbramClk_cal          0.000            0.027           (R-R)
+i_hbramClk_cal    i_hbramClk              0.000            0.096           (R-R)
+i_hbramClk        i_hbramClk90           -1.250            1.537           (R-F)
 i_hbramClk        i_hbramClk_cal          0.000            0.136           (R-R)
 i_hbramClk        i_hbramClk              0.000            0.026           (R-R)
-i_hbramClk        i_hbramClk             -2.500            2.562           (R-F)
-jtag_inst1_TCK    jtag_inst1_TCK          0.000            0.072           (R-R)
-jtag_inst1_TCK    jtag_inst1_TCK        -50.000           48.475           (F-R)
-i_cam_ck_CLKOUT_0 i_mipi_rx_pclk          0.000            0.080           (R-R)
-i_cam_ck_CLKOUT_0 i_mipi_clk              0.000            0.101           (R-R)
-i_cam_ck_CLKOUT_0 i_cam_ck_CLKOUT_0       0.000            0.046           (R-R)
+i_hbramClk        i_hbramClk             -2.500            2.538           (R-F)
+jtag_inst1_TCK    jtag_inst1_TCK          0.000            0.090           (R-R)
+jtag_inst1_TCK    jtag_inst1_TCK        -50.000           48.541           (F-R)
+i_cam_ck_CLKOUT_0 i_mipi_rx_pclk          0.000            0.104           (R-R)
+i_cam_ck_CLKOUT_0 i_mipi_clk              0.000            0.102           (R-R)
+i_cam_ck_CLKOUT_0 i_cam_ck_CLKOUT_0       0.000            0.028           (R-R)
 
 INFO     : Write Timing Report to "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow\edge_vision_soc.timing.rpt" ...
-INFO     : final timing analysis took 6.2264189 seconds [FlowMsg::StageDuration]
-INFO     :     final timing analysis took 6.578125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : final timing analysis virtual memory usage: begin = 390.78 MB, end = 539.336 MB, delta = 148.556 MB [FlowMsg::VMUsage]
-INFO     :     final timing analysis peak virtual memory usage = 540.656 MB [FlowMsg::VMUsage::Peak]
-INFO     : final timing analysis resident set memory usage: begin = 398.504 MB, end = 547.56 MB, delta = 149.056 MB [FlowMsg::RSSUsage]
-INFO     :     final timing analysis peak resident set memory usage = 548.616 MB [FlowMsg::RSSUsage::Peak]
+INFO     : final timing analysis took 8.3723078 seconds [FlowMsg::StageDuration]
+INFO     :     final timing analysis took 9.171875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : final timing analysis virtual memory usage: begin = 393.172 MB, end = 536.488 MB, delta = 143.316 MB [FlowMsg::VMUsage]
+INFO     :     final timing analysis peak virtual memory usage = 536.928 MB [FlowMsg::VMUsage::Peak]
+INFO     : final timing analysis resident set memory usage: begin = 397.796 MB, end = 542.772 MB, delta = 144.976 MB [FlowMsg::RSSUsage]
+INFO     :     final timing analysis peak resident set memory usage = 543.192 MB [FlowMsg::RSSUsage::Peak]
            ***** Ending stage final timing analysis *****
            
            ***** Beginning stage bitstream generation ... *****
 INFO     : Reading core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
 INFO     : Successfully read core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
 INFO     : Finished writing bitstream file C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_pnr\edge_vision_soc.lbf.
-INFO     : Bitstream generation took 3.8276329 seconds [FlowMsg::StageDuration]
-INFO     :     Bitstream generation took 3.484375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Bitstream generation virtual memory usage: begin = 354.624 MB, end = 521.168 MB, delta = 166.544 MB [FlowMsg::VMUsage]
-INFO     :     Bitstream generation peak virtual memory usage = 540.656 MB [FlowMsg::VMUsage::Peak]
-INFO     : Bitstream generation resident set memory usage: begin = 365.204 MB, end = 533.484 MB, delta = 168.28 MB [FlowMsg::RSSUsage]
-INFO     :     Bitstream generation peak resident set memory usage = 548.616 MB [FlowMsg::RSSUsage::Peak]
-INFO     : The entire flow of EFX_PNR took 177.8173674 seconds [FlowMsg::StageDuration]
-INFO     :     The entire flow of EFX_PNR took 438.421875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : The entire flow of EFX_PNR virtual memory usage: begin = 20.032 MB, end = 521.168 MB, delta = 501.136 MB [FlowMsg::VMUsage]
-INFO     :     The entire flow of EFX_PNR peak virtual memory usage = 540.656 MB [FlowMsg::VMUsage::Peak]
-INFO     : The entire flow of EFX_PNR resident set memory usage: begin = 22.936 MB, end = 533.52 MB, delta = 510.584 MB [FlowMsg::RSSUsage]
-INFO     :     The entire flow of EFX_PNR peak resident set memory usage = 548.616 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Bitstream generation took 6.1641605 seconds [FlowMsg::StageDuration]
+INFO     :     Bitstream generation took 5.578125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Bitstream generation virtual memory usage: begin = 351.744 MB, end = 518.008 MB, delta = 166.264 MB [FlowMsg::VMUsage]
+INFO     :     Bitstream generation peak virtual memory usage = 536.928 MB [FlowMsg::VMUsage::Peak]
+INFO     : Bitstream generation resident set memory usage: begin = 359.376 MB, end = 527.02 MB, delta = 167.644 MB [FlowMsg::RSSUsage]
+INFO     :     Bitstream generation peak resident set memory usage = 543.192 MB [FlowMsg::RSSUsage::Peak]
+INFO     : The entire flow of EFX_PNR took 194.2880662 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_PNR took 478.46875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_PNR virtual memory usage: begin = 20.036 MB, end = 517.68 MB, delta = 497.644 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_PNR peak virtual memory usage = 536.928 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_PNR resident set memory usage: begin = 23.016 MB, end = 526.728 MB, delta = 503.712 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_PNR peak resident set memory usage = 543.192 MB [FlowMsg::RSSUsage::Peak]

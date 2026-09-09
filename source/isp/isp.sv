@@ -224,7 +224,7 @@ module isp
 
     .m_axis_tdata                         (skidbuffer1_tdata),
     .m_axis_tvalid                        (skidbuffer1_tvalid),
-    .m_axis_tready                        (skidbuffer1_tready),
+    .m_axis_tready                        (isp_enable [0] ? skidbuffer1_tready : demosaic_tready),
     .m_axis_tlast                         (skidbuffer1_tlast),
     .m_axis_tuser                         (skidbuffer1_tuser)
   );
@@ -294,7 +294,7 @@ module isp
 
     .s_axis_tdata                         (isp_enable [0] ? demosaic_tdata  : skidbuffer1_tdata),
     .s_axis_tvalid                        (isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid),
-    .s_axis_tready                        (isp_enable [0] ? demosaic_tready : skidbuffer1_tready),
+    .s_axis_tready                        (demosaic_tready),
     .s_axis_tlast                         (isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast),
     .s_axis_tuser                         (isp_enable [0] ? demosaic_tuser  : skidbuffer1_tuser),
 
