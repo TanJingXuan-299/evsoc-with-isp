@@ -441,3 +441,39 @@
 // Sep 09, 2026 09:13:24
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 09, 2026 15:38:59
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 10, 2026 09:21:55
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'PIXEL_BIT_WIDTH' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv:82)
+[EFX-0010 VERI-ERROR] 'PIXEL_BIT_WIDTH' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv:83)
+[EFX-0010 VERI-ERROR] 'PIXEL_BIT_WIDTH' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv:84)
+[EFX-0010 VERI-ERROR] module 'gamma' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv:191)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 10, 2026 09:24:17
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '[' (VERI-1137) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:464)
+[EFX-0010 VERI-ERROR] module 'cam_picam_v2' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:812)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 10, 2026 09:30:15
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 10, 2026 09:46:58
+///////////////////////////////////
+

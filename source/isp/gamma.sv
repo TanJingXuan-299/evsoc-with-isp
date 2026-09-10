@@ -14,7 +14,7 @@ module gamma
     parameter S_AXIS_DATA_WIDTH           = 8*$rtoi($floor((PIXEL_PER_CYCLE * 3 * INPUT_COMPONENT_BIT_WIDTH + 7)/8)),
     parameter M_AXIS_DATA_WIDTH           = 8*$rtoi($floor((PIXEL_PER_CYCLE * 3 * OUTPUT_COMPONENT_BIT_WIDTH + 7)/8)),
     parameter TUSER_WIDTH                 = 1,
-    parameter LUT_FILE                    = "../../rtl/lut_8_bit.mem"
+    parameter LUT_FILE                    = "../../rtl/lut.mem"
   )
   (
     input  wire                           clk,
@@ -79,16 +79,16 @@ module gamma
   generate
     for (genvar pixel = 0; pixel < PIXEL_PER_CYCLE; pixel = pixel + 1) begin
 
-      assign gamma_r_s_axis_tdata[(pixel+1)*INPUT_COMPONENT_BIT_WIDTH-1:pixel*INPUT_COMPONENT_BIT_WIDTH] = s_axis_tdata[pixel*3*INPUT_COMPONENT_BIT_WIDTH+INPUT_COMPONENT_BIT_WIDTH-1:pixel*3*INPUT_COMPONENT_BIT_WIDTH]<<2;
-      assign gamma_b_s_axis_tdata[(pixel+1)*INPUT_COMPONENT_BIT_WIDTH-1:pixel*INPUT_COMPONENT_BIT_WIDTH] = s_axis_tdata[pixel*3*INPUT_COMPONENT_BIT_WIDTH+2*INPUT_COMPONENT_BIT_WIDTH-1:pixel*3*INPUT_COMPONENT_BIT_WIDTH+INPUT_COMPONENT_BIT_WIDTH]<<2;
-      assign gamma_g_s_axis_tdata[(pixel+1)*INPUT_COMPONENT_BIT_WIDTH-1:pixel*INPUT_COMPONENT_BIT_WIDTH] = s_axis_tdata[pixel*3*INPUT_COMPONENT_BIT_WIDTH+3*INPUT_COMPONENT_BIT_WIDTH-1:pixel*3*INPUT_COMPONENT_BIT_WIDTH+2*INPUT_COMPONENT_BIT_WIDTH]<<2;
+      assign gamma_r_s_axis_tdata[(pixel+1)*INPUT_COMPONENT_BIT_WIDTH-1:pixel*INPUT_COMPONENT_BIT_WIDTH] = s_axis_tdata[pixel*3*INPUT_COMPONENT_BIT_WIDTH+INPUT_COMPONENT_BIT_WIDTH-1:pixel*3*INPUT_COMPONENT_BIT_WIDTH]<<(12-INPUT_COMPONENT_BIT_WIDTH);
+      assign gamma_b_s_axis_tdata[(pixel+1)*INPUT_COMPONENT_BIT_WIDTH-1:pixel*INPUT_COMPONENT_BIT_WIDTH] = s_axis_tdata[pixel*3*INPUT_COMPONENT_BIT_WIDTH+2*INPUT_COMPONENT_BIT_WIDTH-1:pixel*3*INPUT_COMPONENT_BIT_WIDTH+INPUT_COMPONENT_BIT_WIDTH]<<(12-INPUT_COMPONENT_BIT_WIDTH);
+      assign gamma_g_s_axis_tdata[(pixel+1)*INPUT_COMPONENT_BIT_WIDTH-1:pixel*INPUT_COMPONENT_BIT_WIDTH] = s_axis_tdata[pixel*3*INPUT_COMPONENT_BIT_WIDTH+3*INPUT_COMPONENT_BIT_WIDTH-1:pixel*3*INPUT_COMPONENT_BIT_WIDTH+2*INPUT_COMPONENT_BIT_WIDTH]<<(12-INPUT_COMPONENT_BIT_WIDTH);
 
     end
   endgenerate
 
   lut #(
     .PIXEL_PER_CYCLE        (PIXEL_PER_CYCLE),
-    .INPUT_PIXEL_BIT_WIDTH  (INPUT_COMPONENT_BIT_WIDTH),
+    .INPUT_PIXEL_BIT_WIDTH  (12),
     .OUTPUT_PIXEL_BIT_WIDTH (OUTPUT_COMPONENT_BIT_WIDTH),
     .LUT_FILE               (LUT_FILE)
   ) gamma_r_inst
@@ -111,7 +111,7 @@ module gamma
 
   lut #(
     .PIXEL_PER_CYCLE        (PIXEL_PER_CYCLE),
-    .INPUT_PIXEL_BIT_WIDTH  (INPUT_COMPONENT_BIT_WIDTH),
+    .INPUT_PIXEL_BIT_WIDTH  (12),
     .OUTPUT_PIXEL_BIT_WIDTH (OUTPUT_COMPONENT_BIT_WIDTH),
     .LUT_FILE               (LUT_FILE)
   ) gamma_b_inst
@@ -134,7 +134,7 @@ module gamma
 
   lut #(
     .PIXEL_PER_CYCLE        (PIXEL_PER_CYCLE),
-    .INPUT_PIXEL_BIT_WIDTH  (INPUT_COMPONENT_BIT_WIDTH),
+    .INPUT_PIXEL_BIT_WIDTH  (12),
     .OUTPUT_PIXEL_BIT_WIDTH (OUTPUT_COMPONENT_BIT_WIDTH),
     .LUT_FILE               (LUT_FILE)
   ) gamma_g_inst

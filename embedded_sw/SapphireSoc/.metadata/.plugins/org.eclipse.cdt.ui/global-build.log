@@ -1,601 +1,14 @@
-11:37:31 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-11:37:32 **** Build of configuration Default for project evsoc_ispExample_demo ****
+16:29:48 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
-CC src/dma.c
-CC src/common.c
 CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-11:37:46 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:27:25 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:28:17 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:29:40 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-11:29:40 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-11:29:54 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:32:33 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:33:51 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:37:00 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:40:45 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-15:05:04 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-15:05:05 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-15:05:19 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-15:08:19 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-15:08:19 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-15:08:29 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-15:09:39 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-15:09:39 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-15:09:50 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-09:50:25 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-09:50:26 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-09:50:58 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-09:56:46 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-10:18:36 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-10:35:28 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:32:39 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-11:32:40 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-11:33:06 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:39:29 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-11:41:54 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-13:30:20 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-14:53:30 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-14:53:32 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-14:53:55 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-15:15:27 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-14:09:56 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-14:09:57 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-14:10:15 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-14:11:14 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-14:11:52 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-14:53:08 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-14:54:18 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:46:23 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-16:46:24 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-16:46:36 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:49:55 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-16:49:55 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-16:50:22 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:51:18 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-16:51:18 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-16:51:26 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:52:44 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-16:52:45 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-16:52:51 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:54:03 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-16:54:03 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-16:54:19 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:55:55 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-16:55:56 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-16:56:04 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:58:04 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-16:58:04 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-16:58:12 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-17:20:10 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-08:34:03 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-08:34:04 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-08:34:19 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-09:02:42 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-09:02:43 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-09:03:02 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-09:03:57 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-09:03:57 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-09:04:11 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-09:06:42 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-09:06:43 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-09:06:51 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-09:09:12 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-09:38:19 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-09:38:20 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-CC src/driver/PiCamDriver.c
-CC src/driver/camera.c
-CC src/driver/PiCamV3Driver.c
-CC ../common/start.S
-CC ../common/trap.S
-CC syscalls.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18592 B       124 KB     14.64%
-09:38:26 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:20:07 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/driver/camera.c
-LD evsoc_ispExample_demo
-Memory region         Used Size  Region Size  %age Used
-             ram:       18352 B       124 KB     14.45%
-16:35:06 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-16:35:42 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-17:16:11 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-17:17:30 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-17:19:02 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-make: Nothing to be done for 'all'.
-14:15:41 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-14:15:43 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
-src/main.c:71:10: error: unknown type name 'bool'
-   71 | volatile bool uart_cmd_ready = false;
-      |          ^~~~
-src/main.c:71:32: error: 'false' undeclared here (not in a function)
-   71 | volatile bool uart_cmd_ready = false;
-      |                                ^~~~~
-src/main.c:22:1: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
-   21 | #include "isp.h"
-  +++ |+#include <stdbool.h>
-   22 | 
-src/main.c: In function 'uart_buffer_read':
-src/main.c:87:34: error: 'true' undeclared (first use in this function)
-   87 |                 uart_cmd_ready = true;
-      |                                  ^~~~
-src/main.c:87:34: note: 'true' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
-src/main.c:87:34: note: each undeclared identifier is reported only once for each function it appears in
-src/main.c:105:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  105 |         data= atoi(&uart_cmd_buffer[1]);
-      |                    ^~~~~~~~~~~~~~~~~~~
-In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
-                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
-                 from src/main.c:6:
-C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
-   81 | int     atoi (const char *__nptr);
-      |               ~~~~~~~~~~~~^~~~~~
-src/main.c: In function 'settings':
-src/main.c:160:13: error: too few arguments to function 'Set_Gain'
-  160 |             Set_Gain(0, data);
-      |             ^~~~~~~~
 In file included from src/main.c:13:
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:164:13: error: too few arguments to function 'Set_Gain'
-  164 |             Set_Gain(1, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:168:13: error: too few arguments to function 'Set_Gain'
-  168 |             Set_Gain(2, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:172:13: error: too few arguments to function 'Set_Gain'
-  172 |             Set_Gain(3, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:176:13: error: too few arguments to function 'Set_Gain'
-  176 |             Set_Gain(4, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:180:13: error: too few arguments to function 'Set_Gain'
-  180 |             Set_Gain(5, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:184:13: error: too few arguments to function 'Set_Gain'
-  184 |             Set_Gain(6, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:188:13: error: too few arguments to function 'Set_Gain'
-  188 |             Set_Gain(7, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:192:13: error: too few arguments to function 'Set_Gain'
-  192 |             Set_Gain(8, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:196:13: error: too few arguments to function 'Set_Gain'
-  196 |             Set_Gain(9, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:200:13: error: too few arguments to function 'Set_Gain'
-  200 |             Set_Gain(10, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:204:13: error: too few arguments to function 'Set_Gain'
-  204 |             Set_Gain(11, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:208:13: error: too few arguments to function 'Set_Gain'
-  208 |             Set_Gain(12, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-make: *** [../common/standalone.mk:62: build/obj_files/main.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-14:23:24 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
-make clean 
-14:23:24 **** Build of configuration Default for project evsoc_ispExample_demo ****
-make all 
-CC src/dma.c
-CC src/common.c
-CC src/main.c
+src/apb3_cam.h: In function 'Set_Gain':
+src/apb3_cam.h:73:47: error: expected ',' or ';' before 'write_u32'
+   73 | #define EXAMPLE_APB3_REGW(addr, offset, data) write_u32(data, addr + offset)
+      |                                               ^~~~~~~~~
+src/apb3_cam.h:106:9: note: in expansion of macro 'EXAMPLE_APB3_REGW'
+  106 |         EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);
+      |         ^~~~~~~~~~~~~~~~~
 src/main.c: In function 'uart_buffer_read':
 src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
   106 |         data= atoi(&uart_cmd_buffer[1]);
@@ -606,91 +19,92 @@ In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
    81 | int     atoi (const char *__nptr);
       |               ~~~~~~~~~~~~^~~~~~
-src/main.c: In function 'settings':
-src/main.c:161:13: error: too few arguments to function 'Set_Gain'
-  161 |             Set_Gain(0, data);
-      |             ^~~~~~~~
-In file included from src/main.c:13:
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:165:13: error: too few arguments to function 'Set_Gain'
-  165 |             Set_Gain(1, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:169:13: error: too few arguments to function 'Set_Gain'
-  169 |             Set_Gain(2, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:173:13: error: too few arguments to function 'Set_Gain'
-  173 |             Set_Gain(3, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:177:13: error: too few arguments to function 'Set_Gain'
-  177 |             Set_Gain(4, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:181:13: error: too few arguments to function 'Set_Gain'
-  181 |             Set_Gain(5, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:185:13: error: too few arguments to function 'Set_Gain'
-  185 |             Set_Gain(6, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:189:13: error: too few arguments to function 'Set_Gain'
-  189 |             Set_Gain(7, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:193:13: error: too few arguments to function 'Set_Gain'
-  193 |             Set_Gain(8, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:197:13: error: too few arguments to function 'Set_Gain'
-  197 |             Set_Gain(9, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:201:13: error: too few arguments to function 'Set_Gain'
-  201 |             Set_Gain(10, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:205:13: error: too few arguments to function 'Set_Gain'
-  205 |             Set_Gain(11, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
-src/main.c:209:13: error: too few arguments to function 'Set_Gain'
-  209 |             Set_Gain(12, data);
-      |             ^~~~~~~~
-src/apb3_cam.h:83:20: note: declared here
-   83 | static inline void Set_Gain(int camId, int var, u16 setting)
-      |                    ^~~~~~~~
 make: *** [../common/standalone.mk:62: build/obj_files/main.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-14:30:31 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+16:31:48 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
 make clean 
-14:30:31 **** Build of configuration Default for project evsoc_ispExample_demo ****
+16:31:49 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+In file included from src/main.c:13:
+src/apb3_cam.h: In function 'Set_Gain':
+src/apb3_cam.h:74:9: error: expected ',' or ';' before 'write_u32'
+   74 |         write_u32(data, addr + offset)
+      |         ^~~~~~~~~
+src/apb3_cam.h:107:9: note: in expansion of macro 'EXAMPLE_APB3_REGW'
+  107 |         EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);
+      |         ^~~~~~~~~~~~~~~~~
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+make: *** [../common/standalone.mk:62: build/obj_files/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:32:38 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+16:32:38 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+In file included from src/main.c:13:
+src/apb3_cam.h: In function 'Set_Gain':
+src/apb3_cam.h:74:9: error: expected ',' or ';' before 'write_u32'
+   74 |         write_u32(data, addr + offset)
+      |         ^~~~~~~~~
+src/apb3_cam.h:107:9: note: in expansion of macro 'EXAMPLE_APB3_REGW'
+  107 |         EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);
+      |         ^~~~~~~~~~~~~~~~~
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+make: *** [../common/standalone.mk:62: build/obj_files/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:33:44 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+16:33:45 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+In file included from src/main.c:13:
+src/apb3_cam.h: In function 'Set_Gain':
+src/apb3_cam.h:74:9: error: expected ',' or ';' before 'write_u32'
+   74 |         write_u32(data, addr + offset)
+      |         ^~~~~~~~~
+src/apb3_cam.h:107:9: note: in expansion of macro 'EXAMPLE_APB3_REGW'
+  107 |         EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);
+      |         ^~~~~~~~~~~~~~~~~
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+make: *** [../common/standalone.mk:62: build/obj_files/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:36:38 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+16:36:38 **** Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 CC src/dma.c
 CC src/common.c
@@ -713,10 +127,39 @@ CC ../common/trap.S
 CC syscalls.c
 LD evsoc_ispExample_demo
 Memory region         Used Size  Region Size  %age Used
-             ram:       20832 B       124 KB     16.41%
-14:31:59 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+             ram:       20880 B       124 KB     16.44%
+16:37:19 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.
-15:07:03 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+09:56:24 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+10:02:18 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+10:02:19 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       20880 B       124 KB     16.44%
+10:03:43 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.

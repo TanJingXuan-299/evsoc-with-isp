@@ -67,11 +67,11 @@
 
 #endif
 
-#define EXAMPLE_APB3_REGW(addr, offset, data) \
-	write_u32(data, addr + offset)
-
 #define EXAMPLE_APB3_REGR(addr, offset) \
 	read_u32(addr + offset)
+
+#define EXAMPLE_APB3_REGW(addr, offset, data) \
+	write_u32(data, addr + offset)
 
 static u32 example_register_read(u16 reg)
 {
@@ -101,7 +101,7 @@ static inline void Set_Gain(int camId, int var, u16 setting)
 				 (var==9) ? EXAMPLE_APB3_SLV_REG13_OFFSET:
 				 (var==10)? EXAMPLE_APB3_SLV_REG14_OFFSET:
 				 (var==11)? EXAMPLE_APB3_SLV_REG15_OFFSET: 
-				 (var==12)? EXAMPLE_APB3_SLV_REG16_OFFSET:EXAMPLE_APB3_SLV_REG17_OFFSET // single cam, camId ignored
+				 (var==12)? EXAMPLE_APB3_SLV_REG16_OFFSET:EXAMPLE_APB3_SLV_REG17_OFFSET; // single cam, camId ignored
 #endif
 
 	EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);

@@ -1,7 +1,7 @@
 
 Efinix FPGA Placement and Routing.
 Version: 2026.1.132.1.15 
-Date: Wed Sep  9 09:15:57 2026
+Date: Thu Sep 10 09:49:04 2026
 
 Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
  
@@ -31,7 +31,7 @@ Top-level Entity Name: edge_vision_soc
 
 ----------- Module Resource Usage Distribution Estimates (end) ----------
 
-Elapsed time for packing: 0 hours 0 minutes 9 seconds
+Elapsed time for packing: 0 hours 0 minutes 6 seconds
 ---------- Resource Summary (begin) ----------
 Inputs: 93 / 1703 (5.46%)
 Outputs: 229 / 2267 (10.10%)
@@ -40,19 +40,19 @@ Regional Clocks (RBUF): 0 / 32 (0.00%)
 	RBUF: Core: 0 / 16 (0.00%)
 	RBUF: Periphery: 0 / 8 (0.00%)
 	RBUF: Multi-Region: 0 / 8 (0.00%)
-XLRs: 35032 / 60800 (57.62%)
-	XLRs needed for LUT4: 12503 / 60800 (20.56%)
-	XLRs needed for LUT4 + FF: 7934 / 60800 (13.05%)
+XLRs: 34761 / 60800 (57.17%)
+	XLRs needed for LUT4: 12440 / 60800 (20.46%)
+	XLRs needed for LUT4 + FF: 7903 / 60800 (13.00%)
 	XLRs needed for COMB4: 0 / 60800 (0.00%)
 	XLRs needed for COMB4 + FF: 0 / 60800 (0.00%)
-	XLRs needed for Adder: 2157 / 60800 (3.55%)
-	XLRs needed for Adder + FF: 1666 / 60800 (2.74%)
+	XLRs needed for Adder: 2139 / 60800 (3.52%)
+	XLRs needed for Adder + FF: 1626 / 60800 (2.67%)
 	XLRs needed for SRL8: 10 / 14720 (0.07%)
 	XLRs needed for SRL8 + FF: 0 / 14720 (0.00%)
-	XLRs needed for FF: 10762 / 60800 (17.70%)
+	XLRs needed for FF: 10643 / 60800 (17.50%)
 	XLRs needed for Routing: 0 / 60800 (0.00%)
-Memory Blocks: 252 / 256 (98.44%)
+Memory Blocks: 248 / 256 (96.88%)
 DSP Blocks: 15 / 160 (9.38%)
 ---------- Resource Summary (end) ----------
 
-Elapsed time for placement: 0 hours 1 minutes 42 seconds
+Elapsed time for placement: 0 hours 1 minutes 20 seconds

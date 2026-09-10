@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>EVSoC · ISP Control</title>
+<style>
+:root{
+  --bg:#0a0d14; --panel:#111522; --panel2:#171d2e; --line:#222b40; --line2:#2c3852;
+  --txt:#e8edf7; --dim:#929db3; --faint:#5d687e;
+  --acc:#4f8ef7; --acc2:#22d3ee; --on:#34d399; --warn:#f5a623; --err:#f87171;
+  --mono:ui-monospace,"Cascadia Mono","JetBrains Mono",Consolas,monospace;
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--txt);font:13px/1.45 var(--ui)}
+body{padding:14px 16px 8px;max-width:1280px;margin:0 auto;
+     background:radial-gradient(1100px 480px at 60% -120px,rgba(47,110,220,.16),transparent 60%),var(--bg)}
+button{font-family:var(--ui)}
+::selection{background:#2e5f9e}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;
+        gap:12px;flex-wrap:wrap;padding:10px 2px 10px;margin-bottom:12px;
+        background:rgba(10,13,20,.82);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,rgba(79,142,247,.18),rgba(34,211,238,.14));
+      border:1px solid rgba(79,142,247,.35);box-shadow:0 4px 16px rgba(47,110,220,.25)}
+.tt .title{font-weight:800;font-size:16.5px;letter-spacing:.3px}
+.tt .title b{background:linear-gradient(135deg,#6aa5ff,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tt .sub{color:var(--faint);font-size:11px;font-family:var(--mono);margin-top:1px}
+.conn{display:flex;align-items:center;gap:8px}
+select{background:#0d1220;color:var(--txt);border:1px solid var(--line2);border-radius:10px;
+       padding:7px 9px;font-size:12.5px;outline:none;cursor:pointer}
+select:focus{border-color:var(--acc)}
+.status{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;
+        border:1px solid var(--line2);background:var(--panel);font:500 11.5px var(--mono);color:var(--dim)}
+.dot{width:8px;height:8px;border-radius:50%;background:#4a5568;flex:none;transition:all .2s}
+.dot.on{background:var(--on);box-shadow:0 0 8px rgba(52,211,153,.8)}
+.dot.err{background:var(--err);box-shadow:0 0 8px rgba(248,113,113,.6)}
+
+/* ---------- buttons ---------- */
+.btn{background:var(--panel2);color:var(--txt);border:1px solid var(--line2);border-radius:10px;
+     padding:7px 16px;font-size:12.5px;font-weight:500;cursor:pointer;transition:all .15s}
+.btn:hover{border-color:#3d4c72;filter:brightness(1.15)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:linear-gradient(135deg,#2f6bd8,#0e9fc0);border:none;color:#fff;font-weight:600;
+             box-shadow:0 4px 14px rgba(47,122,216,.3)}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.primary.connected{background:var(--panel2);color:var(--dim);border:1px solid var(--line2);box-shadow:none}
+.btn.ghost{background:transparent}
+.btn.tiny{padding:4px 11px;font-size:11px;border-radius:8px}
+.btn:disabled{opacity:.4;cursor:not-allowed;filter:none}
+
+/* ---------- cards ---------- */
+.card{background:linear-gradient(180deg,rgba(255,255,255,.022),rgba(255,255,255,0)),var(--panel);
+      border:1px solid var(--line);border-radius:16px;padding:13px 15px;margin-bottom:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,.22);transition:border-color .25s,box-shadow .25s}
+.card.flash{border-color:var(--acc);box-shadow:0 0 0 3px rgba(79,142,247,.28),0 10px 30px rgba(0,0,0,.22)}
+.card-h{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.card-h .grow{flex:1}
+.stage-ic{width:30px;height:30px;border-radius:9px;flex:none;display:flex;align-items:center;justify-content:center;
+          background:linear-gradient(135deg,#3565cf,#0fa3c7);color:#fff;
+          box-shadow:0 3px 10px rgba(47,110,220,.35);transition:filter .2s,opacity .2s}
+.stage-ic svg{width:16px;height:16px;display:block}
+.ctt{display:flex;flex-direction:column;gap:1px;min-width:0}
+.ctt .t{font-weight:700;font-size:13.5px}
+.ctt .s{color:var(--faint);font-size:10.5px;font-family:var(--mono)}
+.card-body{transition:opacity .2s,filter .2s}
+.card.off .card-body{opacity:.42;filter:saturate(.55)}
+.card.off .stage-ic{filter:grayscale(.75);opacity:.65}
+.badge{font:600 11px var(--mono);color:#8fbcff;background:rgba(79,142,247,.12);
+       border:1px solid rgba(79,142,247,.35);border-radius:7px;padding:2px 8px}
+
+/* ---------- status pill ---------- */
+.pill{display:inline-flex;align-items:center;gap:5px;font:600 10px var(--mono);letter-spacing:.6px;
+      padding:4px 9px;border-radius:999px;border:1px solid;flex:none}
+.pill .pd{width:6px;height:6px;border-radius:50%;background:currentColor}
+.pill.on{color:#39d98a;background:rgba(52,211,153,.09);border-color:rgba(52,211,153,.35)}
+.pill.off{color:var(--warn);background:rgba(245,166,35,.08);border-color:rgba(245,166,35,.35)}
+
+/* ---------- enable switch ---------- */
+.sw{position:relative;display:inline-block;width:42px;height:23px;flex:none;cursor:pointer}
+.sw input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.sw input:focus-visible + .knob{outline:1px solid var(--acc);outline-offset:3px;border-radius:999px}
+.sw .knob{position:absolute;inset:0;border-radius:999px;background:#28304a;border:1px solid var(--line2);
+          transition:background .18s,border-color .18s}
+.sw .knob::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;
+                 background:#98a3b8;box-shadow:0 1px 3px rgba(0,0,0,.45);transition:left .18s,background .18s}
+.sw input:checked + .knob{background:linear-gradient(135deg,#2f7bd9,#1296b4);border-color:transparent}
+.sw input:checked + .knob::after{left:21px;background:#fff}
+
+/* ---------- demo row ---------- */
+.demo-row{display:flex;flex-wrap:wrap;gap:8px}
+.demo-btn{flex:1 1 122px;background:var(--panel2);border:1px solid var(--line2);color:var(--dim);
+          border-radius:10px;padding:8px 10px;font-size:12.5px;cursor:pointer;text-align:center;
+          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:all .13s}
+.demo-btn:hover{color:var(--txt);border-color:#3d4c72}
+.demo-btn.active{background:linear-gradient(135deg,#274b8f,#0e7490);border-color:transparent;color:#fff;
+                 font-weight:600;box-shadow:0 4px 14px rgba(56,130,246,.28)}
+
+/* ---------- pipeline flow strip ---------- */
+.card.slim{padding:10px 13px}
+.flow{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.fchip{display:inline-flex;align-items:center;gap:7px;padding:5px 12px 5px 9px;border-radius:999px;
+       background:var(--panel2);border:1px solid var(--line2);cursor:pointer;transition:border-color .15s;text-align:left}
+.fchip:hover{border-color:#3d4c72}
+.fchip .fd{width:7px;height:7px;border-radius:50%;background:var(--on);box-shadow:0 0 6px rgba(52,211,153,.7);flex:none}
+.fchip.off .fd{background:var(--warn);box-shadow:none}
+.fchip .fn{font:600 10px var(--mono);color:var(--faint)}
+.fchip .ft{font-size:12px;color:var(--txt)}
+.farrow{color:var(--faint);font-size:13px}
+
+/* ---------- stage grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid .card{margin-bottom:0}
+.span2{grid-column:span 2}
+@media(max-width:1020px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:660px){.grid{grid-template-columns:1fr}.span2{grid-column:auto}}
+
+/* ---------- param rows (BLC / gain) ---------- */
+.prow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:7px 0;border-bottom:1px dashed #1e2637}
+.prow:last-child{border-bottom:none;padding-bottom:2px}
+.plabel{width:86px;flex:none;font-size:12.5px;font-weight:500;cursor:default}
+.stp{width:30px;height:30px;flex:none;background:var(--panel2);border:1px solid var(--line2);border-radius:9px;
+     color:var(--dim);font-size:16px;line-height:1;cursor:pointer;user-select:none;-webkit-user-select:none;
+     display:flex;align-items:center;justify-content:center;transition:all .1s}
+.stp:hover{color:var(--acc);border-color:#3d4c72}
+.stp:active{transform:scale(.92)}
+.val{width:92px;flex:none;text-align:right;font-family:var(--mono);font-size:12.5px;padding:6px 9px;
+     background:#0d1220;border:1px solid var(--line2);border-radius:9px;color:var(--txt);outline:none;transition:border-color .15s}
+.val:focus{border-color:var(--acc)}
+.peq{width:74px;flex:none;text-align:right;font-family:var(--mono);font-size:11.5px;color:#5ed4b8;white-space:nowrap}
+
+/* ---------- CCM matrix ---------- */
+.ccm-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+@media(max-width:760px){.ccm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.ccm-grid{grid-template-columns:1fr}}
+.ccell{background:#10141f;border:1px solid var(--line);border-radius:11px;padding:8px 9px}
+.ccell .ch{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
+.ccell .cl{font:600 12px var(--mono)}
+.ccell .cv{font:11.5px var(--mono);color:#5ed4b8}
+.ccell .cr{display:flex;gap:6px;align-items:center}
+.ccell .cr .val{width:84px;text-align:center}
+.ccell .rng{width:100%;margin-top:9px;flex:none}
+
+/* ---------- presets ---------- */
+.presets{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
+.pbtn{padding:5px 15px;border-radius:999px;font-size:11.5px;font-weight:600;border:1px solid var(--line2);
+     background:transparent;color:var(--dim);cursor:pointer;transition:all .13s}
+.pbtn:hover{border-color:var(--acc);color:#9cc6ff}
+
+/* ---------- bit-only cards (demosaic / gamma) ---------- */
+.bitbody{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:3px 0 2px}
+.bigstate{font:700 13px var(--ui);letter-spacing:.8px;color:var(--on)}
+.card.off .bigstate{color:var(--warn)}
+.tag{font:10.5px var(--mono);color:var(--faint);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+
+/* ---------- range styling ---------- */
+input[type=range]{-webkit-appearance:none;appearance:none;background:transparent;cursor:pointer;
+                  flex:1 1 120px;min-width:110px;height:18px;margin:0}
+input[type=range]:focus-visible{outline:1px solid var(--acc);outline-offset:4px;border-radius:6px}
+input[type=range]::-webkit-slider-runnable-track{height:5px;border-radius:4px;
+  background:linear-gradient(90deg,var(--acc),var(--acc2)) 0 0/var(--p,0%) 100% no-repeat,#232c42}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:15px;height:15px;
+  border-radius:50%;background:#eef4ff;border:2.5px solid var(--acc);margin-top:-5px;
+  box-shadow:0 1px 5px rgba(0,0,0,.45);transition:transform .12s}
+input[type=range]:hover::-webkit-slider-thumb{transform:scale(1.12)}
+input[type=range]::-moz-range-track{height:5px;border-radius:4px;background:#232c42}
+input[type=range]::-moz-range-progress{height:5px;border-radius:4px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:#eef4ff;border:2.5px solid var(--acc)}
+
+/* ---------- console ---------- */
+.console .log{background:#090c13;border:1px solid var(--line);border-radius:12px;height:190px;
+              overflow-y:auto;padding:8px 11px;font:12px/1.55 var(--mono)}
+.console .ln{white-space:pre-wrap;word-break:break-all}
+.console .ln.tx{color:#6e87ad}
+.console .ln.rx{color:#c6d2e6}
+.console .ln.sys{color:var(--warn)}
+.manual{display:flex;gap:8px;margin-top:10px}
+.manual input{flex:1;font-family:var(--mono);background:#0d1220;border:1px solid var(--line2);
+              border-radius:10px;color:var(--txt);padding:8px 12px;font-size:12.5px;outline:none}
+.manual input:focus{border-color:var(--acc)}
+footer{color:var(--faint);font:11px var(--mono);text-align:center;margin:16px 0 6px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="24" y2="24">
+          <stop offset="0" stop-color="#4f8ef7"/><stop offset="1" stop-color="#22d3ee"/>
+        </linearGradient></defs>
+        <circle cx="12" cy="12" r="8.6" stroke="url(#lg1)" stroke-width="2.2"/>
+        <circle cx="12" cy="12" r="3.6" fill="url(#lg1)"/>
+      </svg>
+    </div>
+    <div class="tt">
+      <div class="title">EVSoC <b>ISP Control</b></div>
+      <div class="sub">evsoc-with-isp · evsoc_ispExample_demo</div>
+    </div>
+  </div>
+  <div class="conn">
+    <select id="baud" title="Baud rate">
+      <option>9600</option><option>19200</option><option>38400</option>
+      <option>57600</option><option selected>115200</option><option>230400</option>
+      <option>460800</option><option>921600</option>
+    </select>
+    <button class="btn ghost" id="btnSync" title="Push every current setting to the board">Sync</button>
+    <button class="btn primary" id="btnConnect">Connect</button>
+    <span class="status"><span class="dot" id="dot"></span><span id="statusTxt">offline</span></span>
+  </div>
+</header>
+
+<section class="card">
+  <div class="card-h">
+    <span class="ctt"><span class="t">Demo Mode</span></span>
+    <span class="grow"></span>
+    <span class="badge" id="demoBadge">mode a</span>
+  </div>
+  <div class="demo-row" id="demoRow"></div>
+</section>
+
+<section class="card slim">
+  <div class="flow" id="flow"></div>
+</section>
+
+<div class="grid" id="grid"></div>
+
+<section class="card console">
+  <div class="card-h">
+    <span class="ctt"><span class="t">Console</span><span class="s">UART · 8N1</span></span>
+    <span class="grow"></span>
+    <button class="btn tiny" id="btnClear">Clear</button>
+  </div>
+  <div class="log" id="log"></div>
+  <div class="manual">
+    <input type="text" id="manual" placeholder="raw command · Dd · 1128 · E3" spellcheck="false" autocomplete="off">
+    <button class="btn" id="btnSend">Send</button>
+  </div>
+</section>
+
+<footer>Web Serial · Chrome / Edge · commands: D&lt;a–g&gt; · 0–C&lt;val&gt; · E0–E3</footer>
+
+<script>
+"use strict";
+/* ============================ protocol =====================================
+   Stock evsoc_ispExample_demo firmware (main.c unmodified), 115200 8N1,
+   commands terminated with '\n':
+     D<a..g>        demo mode
+     0<val>         BLC black level        0 .. 4095
+     1/2/3<val>     R/G/B colour gain      UQ9.7   (1.0 = 128)
+     4..9,A..C<val> CCM coefficient        Q4.12 signed (1.0 = 4096)
+     E<0..3>        isp_enable — bit0 = demosaic, bit1 = gamma
+   The firmware parses numbers only, so this GUI never sends 'X'
+   placeholders: it tracks both enable bits itself and computes the
+   matching E0..E3 (demosaic off with gamma on -> E2, gamma off with
+   demosaic on -> E1, ...).  Preset "Default" values equal the APB
+   slave reset values in common_apb3.v.
+   ============================================================================ */
+
+const DEMOS = [
+  {k:'a', label:'Camera',   tip:'Camera Capture + HDMI Display'},
+  {k:'b', label:'Gray SW',  tip:'Camera + RGB2Grayscale (SW) + HDMI'},
+  {k:'c', label:'Sobel SW', tip:'Camera + RGB2Grayscale (SW) + Sobel (HW) + HDMI'},
+  {k:'d', label:'Gray HW',  tip:'Camera + RGB2Grayscale (HW) + HDMI'},
+  {k:'e', label:'Sobel HW', tip:'Camera + RGB2Grayscale & Sobel (HW) + HDMI'},
+  {k:'f', label:'Dilate',   tip:'Camera + Grayscale & Sobel & Dilation (HW) + HDMI'},
+  {k:'g', label:'Erode',    tip:'Camera + Grayscale & Sobel & Erosion (HW) + HDMI'}
+];
+
+/* hardware ranges: min / max / smallest defined step (raw register units) */
+const RG = {
+  blc : {min:0,     max:4095,  step:1},   /* 12-bit pixel domain      */
+  gain: {min:0,     max:65535, step:1},   /* UQ9.7  -> value/128      */
+  ccm : {min:-32768,max:32767, step:1}    /* Q4.12 signed -> value/4096 */
+};
+const fQ47 = v => (v/4096).toFixed(4);
+const fQ97 = v => (v/128).toFixed(3) + '\u00d7';
+
+const P = {
+  blc:{cmd:'0', label:'Black Level', rng:RG.blc,  def:16},
+  rg :{cmd:'1', label:'Red',         rng:RG.gain, def:160, unity:128, eq:fQ97},
+  gg :{cmd:'2', label:'Green',       rng:RG.gain, def:96,  unity:128, eq:fQ97},
+  bg :{cmd:'3', label:'Blue',        rng:RG.gain, def:128, unity:128, eq:fQ97},
+  c00:{cmd:'4', label:'R\u2190R', rng:RG.ccm, def: 9519, unity:4096, eq:fQ47},
+  c01:{cmd:'5', label:'R\u2190G', rng:RG.ccm, def:-3622, unity:0,    eq:fQ47},
+  c02:{cmd:'6', label:'R\u2190B', rng:RG.ccm, def:-1801, unity:0,    eq:fQ47},
+  c10:{cmd:'7', label:'G\u2190R', rng:RG.ccm, def:-2614, unity:0,    eq:fQ47},
+  c11:{cmd:'8', label:'G\u2190G', rng:RG.ccm, def:10582, unity:4096, eq:fQ47},
+  c12:{cmd:'9', label:'G\u2190B', rng:RG.ccm, def:-3872, unity:0,    eq:fQ47},
+  c20:{cmd:'A', label:'B\u2190R', rng:RG.ccm, def:-1169, unity:0,    eq:fQ47},
+  c21:{cmd:'B', label:'B\u2190G', rng:RG.ccm, def:-2216, unity:0,    eq:fQ47},
+  c22:{cmd:'C', label:'B\u2190B', rng:RG.ccm, def: 7481, unity:4096, eq:fQ47}
+};
+const CCM_KEYS = ['c00','c01','c02','c10','c11','c12','c20','c21','c22'];
+const ccmVals  = arr => Object.fromEntries(CCM_KEYS.map((k,i)=>[k,arr[i]]));
+const CCM_DEF  = ccmVals([9519,-3622,-1801,-2614,10582,-3872,-1169,-2216,7481]);
+const CCM_ID   = ccmVals([4096,0,0, 0,4096,0, 0,0,4096]);
+
+/* stage icons */
+const ICONS = {
+  blc:'<svg viewBox="0 0 16 16"><path d="M2.5 5.2h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".45"/><rect x="3" y="9" width="10" height="3.4" rx="1.2" fill="currentColor"/></svg>',
+  gain:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.5 8 5.5l4.5 4"/><path d="M3.5 13.5 8 9.5l4.5 4" opacity=".55"/></svg>',
+  demosaic:'<svg viewBox="0 0 16 16"><rect x="2.5" y="2.5" width="4.6" height="4.6" rx="1" fill="#ff7b7b"/><rect x="8.9" y="2.5" width="4.6" height="4.6" rx="1" fill="#7ee29a"/><rect x="2.5" y="8.9" width="4.6" height="4.6" rx="1" fill="#7ee29a"/><rect x="8.9" y="8.9" width="4.6" height="4.6" rx="1" fill="#8fc3ff"/></svg>',
+  ccm:'<svg viewBox="0 0 16 16">' + [[3.4,3.4],[8,3.4],[12.6,3.4],[3.4,8],[8,8],[12.6,8],[3.4,12.6],[8,12.6],[12.6,12.6]].map(p=>'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.5" fill="currentColor"/>').join('') + '</svg>',
+  gamma:'<svg viewBox="0 0 16 16" fill="none"><path d="M2.5 13.5C7 13 10.5 8 13.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+};
+
+/* one card per ISP stage, in pipeline order: BLC -> gain -> demosaic -> CCM -> gamma */
+const BLOCKS = [
+  {id:'blc', n:1, title:'Black Level', sub:'BLC · 0–4095 · step 1',
+   params:['blc'], neutral:{blc:0},
+   presets:[{name:'Default', vals:{blc:16}}]},
+  {id:'gain', n:2, title:'Colour Gain', sub:'UQ9.7 · 0–65535 · step 1',
+   params:['rg','gg','bg'], neutral:{rg:128,gg:128,bg:128},
+   presets:[{name:'Default', vals:{rg:160,gg:96,bg:128}},
+            {name:'Unity',   vals:{rg:128,gg:128,bg:128}}]},
+  {id:'demosaic', n:3, title:'Demosaic', sub:'Bayer → RGB', bit:0},
+  {id:'ccm', n:4, title:'Colour Correction', sub:'CCM · Q4.12 · −32768…32767 · step 1',
+   params:CCM_KEYS, neutral:CCM_ID,
+   presets:[{name:'Default',  vals:CCM_DEF},
+            {name:'Identity', vals:CCM_ID}]},
+  {id:'gamma', n:5, title:'Gamma', sub:'tone curve', bit:1}
+];
+const paramBlock = {};
+BLOCKS.forEach(b => (b.params||[]).forEach(k => paramBlock[k] = b.id));
+
+/* ================================ state ==================================== */
+const state = {
+  values:{}, enabled:{}, demo:'a',
+  pending:new Map(),          /* paramKey -> value, drained to UART */
+  port:null, connected:false
+};
+
+/* =============================== helpers =================================== */
+const $  = s => document.querySelector(s);
+function el(tag, cls, text){ const n=document.createElement(tag); if(cls)n.className=cls; if(text!=null)n.textContent=text; return n; }
+function clamp(v,p){ v=Math.round(v/p.rng.step)*p.rng.step; return Math.min(p.rng.max,Math.max(p.rng.min,v)); }
+
+/* ============================ console log ================================== */
+const logBox = $('#log');
+const txLines = {};                     /* one line per command char, updated in place */
+let lastWarn = 0;
+function addLog(cls, text){
+  const ln = el('div','ln '+cls, text);
+  logBox.appendChild(ln);
+  while(logBox.children.length > 400) logBox.removeChild(logBox.firstChild);
+  logBox.scrollTop = logBox.scrollHeight;
+  return ln;
+}
+function logTx(s){
+  const ch = s[0];
+  /* discrete events (demo mode / enable) keep their own line;
+     repeated parameter writes update their line in place */
+  if(ch==='D' || ch==='E'){ addLog('tx','\u2192 ' + s); return; }
+  let ln = txLines[ch];
+  if(!ln){ ln = addLog('tx',''); txLines[ch]=ln; }
+  ln.textContent = '\u2192 ' + s;
+}
+function logSys(s){
+  const now = Date.now();
+  if(s.startsWith('not connected') && now-lastWarn < 3000) return;
+  lastWarn = now;
+  addLog('sys','\u26a0 ' + s);
+}
+
+/* ============================= serial link ================================= */
+let writeChain = Promise.resolve();
+function writeSerial(str){
+  const p = state.port;
+  if(!p || !p.writable) return;
+  writeChain = writeChain.then(async () => {
+    const w = p.writable.getWriter();
+    try{ await w.write(new TextEncoder().encode(str)); }
+    finally{ w.releaseLock(); }
+  }).catch(()=>{});
+}
+function sendCmd(s){
+  logTx(s);
+  if(state.connected) writeSerial(s + '\n');
+  else logSys('not connected \u2014 "' + s + '" not sent');
+}
+
+let rxBuf = '';
+function onRxData(txt){
+  rxBuf = (rxBuf + txt).replace(/\r/g,'\n');
+  const parts = rxBuf.split('\n');
+  rxBuf = parts.pop();
+  for(const p of parts) if(p.trim()) addLog('rx', p);
+}
+async function readLoop(){
+  const dec = new TextDecoder();
+  while(state.port && state.port.readable){
+    const reader = state.port.readable.getReader();
+    try{
+      for(;;){
+        const {value, done} = await reader.read();
+        if(done) break;
+        onRxData(dec.decode(value, {stream:true}));
+      }
+    }catch(e){ addLog('sys','\u26a0 read error: '+e.message); break; }
+    finally{ try{ reader.releaseLock(); }catch(_){} }
+  }
+}
+function setStatus(cls, txt){
+  $('#dot').className = 'dot' + (cls ? ' '+cls : '');
+  $('#statusTxt').textContent = txt;
+}
+async function connect(){
+  if(!('serial' in navigator)){ logSys('Web Serial API not available \u2014 use Chrome or Edge'); setStatus('err','no serial'); return; }
+  try{
+    state.port = await navigator.serial.requestPort();
+    await state.port.open({baudRate:+$('#baud').value, dataBits:8, stopBits:1, parity:'none', flowControl:'none'});
+    state.port.addEventListener('disconnect', () => { if(state.connected) disconnect(true); });
+    state.connected = true;
+    $('#btnConnect').textContent = 'Disconnect';
+    $('#btnConnect').classList.add('connected');
+    setStatus('on','online');
+    addLog('sys','\u2022 connected @ ' + $('#baud').value + ' 8N1');
+    readLoop();
+  }catch(e){
+    if(e.name !== 'NotFoundError'){ logSys('connect error: ' + e.message); setStatus('err','error'); }
+  }
+}
+async function disconnect(gone){
+  state.connected = false;
+  try{ if(state.port){ if(state.port.readable){ try{ const r=state.port.readable.getReader(); r.cancel(); r.releaseLock(); }catch(_){} } if(!gone) await state.port.close(); } }catch(_){}
+  state.port = null;
+  $('#btnConnect').textContent = 'Connect';
+  $('#btnConnect').classList.remove('connected');
+  setStatus(gone ? 'err' : '', 'offline');
+  addLog('sys', gone ? '\u26a0 port unplugged' : '\u2022 disconnected');
+}
+$('#btnConnect').addEventListener('click', () => state.connected ? disconnect(false) : connect());
+
+/* ======================= command queue (drain) ============================= */
+/* one queued parameter per ~12 ms — coalesces slider storms, keeps the
+   115200 line and the firmware ISR comfortable */
+setInterval(() => {
+  if(!state.pending.size) return;
+  const [key, val] = state.pending.entries().next().value;
+  state.pending.delete(key);
+  sendCmd(P[key].cmd + val);
+}, 12);
+
+/* ========================= parameter widgets =============================== */
+const ui = {};
+function refreshUi(key){
+  const u = ui[key], p = P[key], v = state.values[key];
+  u.inp.value = String(v);
+  u.rng.value = v;
+  if(u.eq) u.eq.textContent = p.eq(v);
+  const pct = (v - p.rng.min) / (p.rng.max - p.rng.min) * 100;
+  u.rng.style.setProperty('--p', pct + '%');
+}
+function commit(key, v){
+  const p = P[key];
+  v = clamp(v, p);
+  state.values[key] = v;
+  refreshUi(key);
+  if(state.enabled[paramBlock[key]]) state.pending.set(key, v);
+}
+function holdable(btn, fn){
+  let t1=null, t2=null, sawPointer=false;
+  const start = e => { e.preventDefault(); sawPointer=true; fn(); t1=setTimeout(()=>{ t2=setInterval(fn,70); }, 380); };
+  const stop  = () => { clearTimeout(t1); clearInterval(t2); t1=t2=null; };
+  btn.addEventListener('pointerdown', start);
+  ['pointerup','pointerleave','pointercancel'].forEach(ev => btn.addEventListener(ev, stop));
+  /* keyboard / programmatic activation */
+  btn.addEventListener('click', () => { if(!sawPointer) fn(); sawPointer=false; });
+}
+function wireParam(key, inp, rng, eq, minus, plus){
+  ui[key] = {inp, rng, eq};
+  const r = P[key].rng;
+  rng.min = r.min; rng.max = r.max; rng.step = r.step;
+  state.values[key] = P[key].def;
+  inp.title = 'type a value (' + r.min + ' \u2026 ' + r.max + ')';
+  minus.title = 'step \u2212' + r.step;
+  plus.title  = 'step +' + r.step;
+  rng.addEventListener('input', () => commit(key, +rng.value));
+  inp.addEventListener('change', () => {
+    const t = inp.value.trim();
+    if(t === ''){ refreshUi(key); return; }
+    const n = parseInt(t, 10);
+    if(isNaN(n)) refreshUi(key); else commit(key, n);
+  });
+  inp.addEventListener('keydown', e => { if(e.key==='Enter') inp.blur(); });
+  holdable(minus, () => commit(key, state.values[key] - r.step));
+  holdable(plus,  () => commit(key, state.values[key] + r.step));
+}
+
+/* wide param row (BLC / colour gain cards) */
+function paramRow(key){
+  const p = P[key];
+  const row = el('div','prow');
+  const lb  = el('label','plabel',p.label);
+  const minus = el('button','stp','\u2212'); minus.type='button';
+  const inp = document.createElement('input'); inp.type='text'; inp.className='val';
+  inp.spellcheck=false; inp.autocomplete='off';
+  const plus = el('button','stp','+'); plus.type='button';
+  const rng = document.createElement('input'); rng.type='range'; rng.className='rng';
+  row.append(lb, minus, inp, plus, rng);
+  if(p.eq){
+    const eq = el('span','peq');
+    row.append(eq);
+    wireParam(key, inp, rng, eq, minus, plus);
+  }else{
+    wireParam(key, inp, rng, null, minus, plus);
+  }
+  lb.addEventListener('click', () => inp.focus());
+  return row;
+}
+
+/* compact cell (CCM 3x3) */
+function ccmCell(key){
+  const cell = el('div','ccell');
+  const head = el('div','ch');
+  head.append(el('span','cl',P[key].label));
+  const cv = el('span','cv');
+  head.append(cv);
+  const row = el('div','cr');
+  const minus = el('button','stp','\u2212'); minus.type='button';
+  const inp = document.createElement('input'); inp.type='text'; inp.className='val';
+  inp.spellcheck=false; inp.autocomplete='off';
+  const plus = el('button','stp','+'); plus.type='button';
+  row.append(minus, inp, plus);
+  const rng = document.createElement('input'); rng.type='range'; rng.className='rng';
+  cell.append(head, row, rng);
+  wireParam(key, inp, rng, cv, minus, plus);
+  return cell;
+}
+
+/* ============================ block cards ================================== */
+function buildCard(B){
+  const card = el('section','card');
+  card.id = 'blk-' + B.id;
+  if(B.id === 'ccm') card.classList.add('span2');
+
+  const head = el('div','card-h');
+  const ic = el('span','stage-ic'); ic.innerHTML = ICONS[B.id];
+  const ctt = el('div','ctt');
+  ctt.append(el('span','t',B.title));
+  if(B.sub) ctt.append(el('span','s',B.sub));
+  head.append(ic, ctt);
+
+  const pill = el('span','pill on');
+  pill.innerHTML = '<span class="pd"></span>ACTIVE';
+  pill.id = 'pill-' + B.id;
+  head.append(el('span','grow'), pill);
+
+  const sw = el('label','sw'); sw.title = 'enable / bypass this stage';
+  const cb = document.createElement('input'); cb.type='checkbox'; cb.checked = true; cb.id = 'sw-'+B.id;
+  const knob = el('span','knob');
+  sw.append(cb, knob);
+  cb.addEventListener('change', () => setBlockEnabled(B.id, cb.checked));
+  head.append(sw);
+
+  const body = el('div','card-body');
+
+  if(B.bit !== undefined){                        /* demosaic / gamma: hw enable bit */
+    const bs = el('span','bigstate','ENABLED'); bs.id = 'big-' + B.id;
+    const t1 = el('span','tag','bit ' + B.bit);
+    const t2 = el('span','tag','E3'); t2.id = 'elast-' + B.id;
+    body.append(bs, t1, t2);
+  }else if(B.id === 'ccm'){
+    const grid = el('div','ccm-grid');
+    B.params.forEach(k => grid.appendChild(ccmCell(k)));
+    body.appendChild(grid);
+  }else{
+    B.params.forEach(k => body.appendChild(paramRow(k)));
+  }
+
+  if(B.presets){
+    const pr = el('div','presets');
+    B.presets.forEach(ps => {
+      const b = el('button','pbtn',ps.name); b.type='button';
+      b.addEventListener('click', () => applyPreset(B.id, ps.vals));
+      pr.appendChild(b);
+    });
+    body.appendChild(pr);
+  }
+
+  card.append(head, body);
+  $('#grid').appendChild(card);
+  state.enabled[B.id] = true;
+}
+
+/* ============================ enable logic ================================= */
+function eVal(){ return (state.enabled.gamma ? 2 : 0) | (state.enabled.demosaic ? 1 : 0); }
+function updateETags(){
+  ['demosaic','gamma'].forEach(id => {
+    const e = document.getElementById('elast-'+id);
+    if(e) e.textContent = 'E' + eVal();
+  });
+}
+function sendEnable(){ sendCmd('E' + eVal()); updateETags(); }
+
+function setBlockEnabled(id, on){
+  const B = BLOCKS.find(b => b.id===id);
+  state.enabled[id] = on;
+  const card = $('#blk-'+id);
+  card.classList.toggle('off', !on);
+  const pill = $('#pill-'+id);
+  pill.className = 'pill ' + (on ? 'on' : 'off');
+  pill.innerHTML = '<span class="pd"></span>' + (on ? 'ACTIVE' : 'BYPASSED');
+  const big = $('#big-'+id);
+  if(big) big.textContent = on ? 'ENABLED' : 'BYPASSED';
+  updateFlow();
+
+  if(B.bit !== undefined){
+    /* single shared E0..E3 register: GUI computes both bits so the
+       other stage's state is always preserved (stock-main.c safe) */
+    sendEnable();
+    return;
+  }
+  /* value stages: disable writes the neutral value, re-enable restores */
+  const pairs = on ? B.params.map(k => [k, state.values[k]])
+                   : Object.entries(B.neutral);
+  pairs.forEach(([k,v]) => state.pending.set(k, clamp(v, P[k])));
+}
+
+function applyPreset(id, vals){
+  Object.entries(vals).forEach(([k,v]) => {
+    v = clamp(v, P[k]);
+    state.values[k] = v;
+    refreshUi(k);
+    if(state.enabled[id]) state.pending.set(k, v);
+  });
+}
+
+/* ============================ pipeline strip =============================== */
+function buildFlow(){
+  const flow = $('#flow');
+  BLOCKS.forEach((B,i) => {
+    if(i) flow.appendChild(el('span','farrow','\u2192'));
+    const c = el('button','fchip'); c.type='button'; c.dataset.id = B.id;
+    c.title = B.title + ' \u2014 jump to stage';
+    c.append(el('span','fd'), el('span','fn',String(B.n)), el('span','ft',B.title));
+    c.addEventListener('click', () => {
+      const card = $('#blk-'+B.id);
+      card.scrollIntoView({behavior:'smooth', block:'center'});
+      card.classList.add('flash');
+      setTimeout(() => card.classList.remove('flash'), 900);
+    });
+    flow.appendChild(c);
+  });
+}
+function updateFlow(){
+  document.querySelectorAll('.fchip').forEach(c => c.classList.toggle('off', !state.enabled[c.dataset.id]));
+}
+
+/* =============================== demo row ================================== */
+function setDemo(k, send){
+  state.demo = k;
+  document.querySelectorAll('.demo-btn').forEach(b => b.classList.toggle('active', b.dataset.k===k));
+  $('#demoBadge').textContent = 'mode ' + k;
+  if(send !== false) sendCmd('D' + k);
+}
+DEMOS.forEach(d => {
+  const b = el('button','demo-btn',d.label);
+  b.type='button'; b.dataset.k = d.k; b.title = d.tip;
+  b.addEventListener('click', () => setDemo(d.k));
+  $('#demoRow').appendChild(b);
+});
+
+/* ================================ sync ===================================== */
+$('#btnSync').addEventListener('click', () => {
+  if(!state.connected){ logSys('not connected \u2014 connect the board first'); return; }
+  sendCmd('D' + state.demo);
+  sendCmd('E' + eVal());
+  Object.keys(P).forEach(k => state.pending.set(k, state.values[k]));
+  addLog('sys','\u2022 sync queued: mode + E' + eVal() + ' + ' + Object.keys(P).length + ' parameters');
+});
+
+/* ============================== manual send ================================ */
+function sendManual(){
+  const inp = $('#manual');
+  let v = inp.value.trim();
+  if(!v) return;
+  v = v[0].toUpperCase() + v.slice(1);
+  if(v[0]==='D' && v.length>1) v = 'D' + v[1].toLowerCase();
+  if(v[0]==='E' && !/^E[0-3]$/.test(v)){
+    logSys('E must be E0\u2013E3 \u2014 stock firmware takes numbers only');
+    return;
+  }
+  sendCmd(v);
+  inp.value = '';
+}
+$('#btnSend').addEventListener('click', sendManual);
+$('#manual').addEventListener('keydown', e => { if(e.key==='Enter') sendManual(); });
+$('#btnClear').addEventListener('click', () => { logBox.innerHTML=''; Object.keys(txLines).forEach(k=>delete txLines[k]); });
+
+/* ================================ build ==================================== */
+buildFlow();
+BLOCKS.forEach(buildCard);
+Object.keys(P).forEach(refreshUi);
+setDemo('a', false);
+updateETags();
+addLog('sys','\u2022 ready \u2014 connect the board UART (115200 \u00b7 8N1)');
+</script>
+</body>
+</html>

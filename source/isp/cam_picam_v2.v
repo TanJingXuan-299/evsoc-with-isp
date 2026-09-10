@@ -101,8 +101,8 @@ reg  [225:0] gain_control;
 //   [ 31: 16] bgain         (reg0 high)
 //   [ 15:  0] rgain         (reg0 low)
 // (the APB slave exposes one 16-bit green gain, which drives both g0/g1)
-assign gain_control ={ {30{1'b0}}, isp_enable, black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b, ccm_g_g, ccm_g_r, ccm_r_b,
-                       ccm_r_g, ccm_r_r, ggain, ggain, bgain, rgain};
+assign gain_control ={ {30{1'b0}}, isp_enable, black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b,
+                       ccm_g_g, ccm_g_r, ccm_r_b, ccm_r_g, ccm_r_r, ggain, ggain, bgain, rgain};
 
 localparam CAM_DMA_COUNT_BIT = $clog2(DMA_TRANSFER_LENGTH);
 localparam CAM_X_COUNT_BIT   = $clog2(MIPI_FRAME_WIDTH/4); //4PPC
@@ -144,9 +144,9 @@ localparam ISP_PPC              = 2;   //Matches existing 2PPC downstream (crop/
 //table and lut.sv addresses the ROM DIRECTLY with the input pixel value.
 //With PIXEL_BIT_WIDTH=8 only the first 256 LUT entries were ever addressed
 //(max gamma output = 0x46 = ~27% brightness). Run the ISP at its native
-//12-bit pixel width and shift the 8-bit RAW data left by 4 when packing
-//s_axis_tdata, so raw8=0xFF addresses LUT entry 0xFF0 and produces 0xFF.
-localparam ISP_PIXEL_BIT_WIDTH  = 12;  //12-bit internal pipeline (gamma LUT is 12-bit addressed)
+//10-bit pixel width and shift the 8-bit RAW data left by 2 when packing
+//s_axis_tdata, so raw8=0xFF addresses LUT entry 0x3FC and produces 0xFF.
+localparam ISP_PIXEL_BIT_WIDTH  = 10;  //10-bit internal pipeline
 localparam ISP_COMPONENT_WIDTH  = 8;   //RGB8 out
 localparam ISP_S_AXIS_WIDTH     = 8*(((ISP_PPC*ISP_PIXEL_BIT_WIDTH)+7)/8);        //24
 localparam ISP_M_AXIS_WIDTH     = 8*(((ISP_PPC*3*ISP_COMPONENT_WIDTH)+7)/8);      //48
@@ -253,7 +253,7 @@ begin
       cam_vs              <= 1'b0;
       cam_vs_r            <= 1'b0;
    end else begin
-      cam_data            <= mipi_cam_data[39:0];   //Keep valid least significant 4 x 10 bits data (RAW10, 4PPC)
+      cam_data            <= mipi_cam_data[39:0]; //Keep valid least significant 4 x 10 bits data (RAW10, 4PPC)
       cam_valid           <= mipi_cam_valid && (mipi_cam_type == 6'h2B);  //For RAW10 data type
       cam_vs              <= mipi_cam_vs;
       cam_vs_r            <= cam_vs;
@@ -674,8 +674,7 @@ cam_rgb2gray #(
 
 //Select RGB or grayscale output
 assign cam_dma_fifo_wdata  = (rgb_gray_synced) ? {gray_pixel_out[15:8],  gray_pixel_out[15:8],  gray_pixel_out[15:8],  gray_pixel_out[7:0],  gray_pixel_out[7:0],  gray_pixel_out[7:0]} :
-                                                 {rgb_pixel_b_scale_out[15:8], rgb_pixel_g_scale_out[15:8], rgb_pixel_r_scale_out[15:8], 
-                                                  rgb_pixel_b_scale_out[7:0], rgb_pixel_g_scale_out[7:0], rgb_pixel_r_scale_out[7:0]};
+                                                 {rgb_pixel_b_scale_out[15:8], rgb_pixel_g_scale_out[15:8], rgb_pixel_r_scale_out[15:8], rgb_pixel_b_scale_out[7:0], rgb_pixel_g_scale_out[7:0], rgb_pixel_r_scale_out[7:0]};
 
 `else
 
@@ -722,7 +721,8 @@ begin
       trigger_capture_frame_r1      <= trigger_capture_frame;
       trigger_capture_frame_r2      <= trigger_capture_frame_r1;
       trigger_capture_frame_r3      <= trigger_capture_frame_r2;
-      trigger_capture_frame_hold    <= (~trigger_capture_frame_r3 && trigger_capture_frame_r2) ? 1'b1 : (cam_dma_fifo_wvalid) ? 1'b0 : trigger_capture_frame_hold;
+      trigger_capture_frame_hold    <= (~trigger_capture_frame_r3 && trigger_capture_frame_r2) ? 1'b1:
+                                       (cam_dma_fifo_wvalid) ? 1'b0 : trigger_capture_frame_hold;
       continuous_capture_frame_r1   <= continuous_capture_frame;
       continuous_capture_frame_r2   <= continuous_capture_frame_r1;
       continuous_capture_frame_hold <= (continuous_capture_frame_r2) ? 1'b1 : continuous_capture_frame_hold;

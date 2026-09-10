@@ -12,7 +12,7 @@ module isp_top #(
     // Pixel per cycle. 1, 2 or 4
     parameter PIXEL_PER_CYCLE                     = 4,
     // Pixel bit width. 8, 10, 12, 14, 16, 18
-    parameter PIXEL_BIT_WIDTH                     = 12,
+    parameter PIXEL_BIT_WIDTH                     = 10,
     // Output component bit width. 8
     parameter COMPONENT_BIT_WIDTH                 = 8,
     parameter S_AXI_DATA_WIDTH                    = 32,
