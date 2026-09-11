@@ -11,7 +11,6 @@
         <efx:design_file name="source/source.f" version="na" library="default"/>
         <efx:design_file name="evsoc_defines.v" version="default" library="default"/>
         <efx:design_file name="ip/cam_dma_fifo/cam_dma_fifo.sv" version="default" library="default"/>
-        <efx:design_file name="ip/cam_pixel_remap_fifo/cam_pixel_remap_fifo.sv" version="default" library="default"/>
         <efx:design_file name="ip/csi2_rx_cam/csi2_rx_cam.sv" version="default" library="default"/>
         <efx:design_file name="ip/display_dma_fifo/display_dma_fifo.sv" version="default" library="default"/>
         <efx:design_file name="ip/dsi_tx_display/dsi_tx_display.sv" version="default" library="default"/>
@@ -42,6 +41,9 @@
         </efx:ip>
         <efx:ip instance_name="dma" path="ip/dma/settings.json" ooc="false">
             <efx:ip_src_file name="dma.v"/>
+        </efx:ip>
+        <efx:ip instance_name="cam_pixel_remap_fifo" path="ip/cam_pixel_remap_fifo/settings.json" ooc="false">
+            <efx:ip_src_file name="cam_pixel_remap_fifo.sv"/>
         </efx:ip>
     </efx:ip_info>
     <efx:synthesis tool_name="efx_map">

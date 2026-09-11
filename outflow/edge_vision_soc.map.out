@@ -132,6 +132,7 @@ INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efin
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/xyz_to_rgb.sv(12): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\SapphireSoc\SapphireSoc.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v' [VERI-1482]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(6): analyzing included file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi/evsoc_defines.v' [VERI-1328]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(6): back to file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v' [VERI-2320]
@@ -139,7 +140,6 @@ INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(227): back to file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v' [VERI-2320]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\evsoc_defines.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_dma_fifo\cam_dma_fifo.sv' [VERI-1482]
-INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv' [VERI-1482]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv(7306): undeclared symbol '**', assumed default net type '**' [VERI-2561]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\display_dma_fifo\display_dma_fifo.sv' [VERI-1482]
@@ -159,12 +159,12 @@ INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efin
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\hw_accel_dma_out_fifo\hw_accel_dma_out_fifo.sv' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\hw_accel\hw_accel_apb3.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v' [VERI-1482]
-INFO     : Analysis took 1.4031536 seconds [FlowMsg::StageDuration]
-INFO     :     Analysis took 1.28125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Analysis virtual memory usage: begin = 59.532 MB, end = 81.136 MB, delta = 21.604 MB [FlowMsg::VMUsage]
-INFO     :     Analysis peak virtual memory usage = 81.136 MB [FlowMsg::VMUsage::Peak]
-INFO     : Analysis resident set memory usage: begin = 63.68 MB, end = 89.652 MB, delta = 25.972 MB [FlowMsg::RSSUsage]
-INFO     :     Analysis peak resident set memory usage = 89.652 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Analysis took 1.5611559 seconds [FlowMsg::StageDuration]
+INFO     :     Analysis took 1.484375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Analysis virtual memory usage: begin = 59.512 MB, end = 81.116 MB, delta = 21.604 MB [FlowMsg::VMUsage]
+INFO     :     Analysis peak virtual memory usage = 81.116 MB [FlowMsg::VMUsage::Peak]
+INFO     : Analysis resident set memory usage: begin = 63.728 MB, end = 89.72 MB, delta = 25.992 MB [FlowMsg::RSSUsage]
+INFO     :     Analysis peak resident set memory usage = 89.72 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Analysis ... *****
 INFO     : ***** Beginning Elaboration ... *****
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1308): port 'system_spi_0_io_data_2_read' is not connected on this instance [VERI-2435]
@@ -231,17 +231,17 @@ INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv(8121): compiling module 'efx_fifo_gray2bin_f123b49f0f574f64a9a2982368753f7b(WIDTH=4)' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv(8121): compiling module 'efx_fifo_gray2bin_f123b49f0f574f64a9a2982368753f7b(WIDTH=3)' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv(8121): compiling module 'efx_fifo_gray2bin_f123b49f0f574f64a9a2982368753f7b(WIDTH=2)' [VERI-1018]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(310): port 'rst_busy' remains unconnected for this instance [VERI-1927]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(757): port 'rst_busy' remains unconnected for this instance [VERI-1927]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(253): port 'rst_busy' remains unconnected for this instance [VERI-1927]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(668): port 'rst_busy' remains unconnected for this instance [VERI-1927]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(6): compiling module 'cam_picam_v2(MIPI_FRAME_WIDTH=1920,MIPI_FRAME_HEIGHT=1080,FRAME_WIDTH=540,FRAME_HEIGHT=540,DMA_TRANSFER_LENGTH=145800)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(110): port 'a_wr_rst_i' remains unconnected for this instance [VERI-1927]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(49): compiling module 'cam_pixel_remap_fifo' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(310): compiling module 'efx_fifo_top_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",SYNC_CLK=1,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(1370): compiling module 'efx_resetsync_04a96f5177a940fe94d182603b3fa9c9(ACTIVE_LOW=0)' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(1415): compiling module 'efx_asyncreg_04a96f5177a940fe94d182603b3fa9c9(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(630): compiling module 'efx_fifo_ram_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",WDATA_WIDTH=32,RDATA_WIDTH=32,RAM_MUX_RATIO=1)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(310): compiling module 'efx_fifo_top_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",SYNC_CLK=1,DATA_WIDTH=40,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(1370): compiling module 'efx_resetsync_077823fa68f649b1a7074c944568f3e4(ACTIVE_LOW=0)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(1415): compiling module 'efx_asyncreg_077823fa68f649b1a7074c944568f3e4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(630): compiling module 'efx_fifo_ram_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",WDATA_WIDTH=40,RDATA_WIDTH=40,RAM_MUX_RATIO=1)' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(667): extracting RAM for identifier 'ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(942): compiling module 'efx_fifo_ctl_04a96f5177a940fe94d182603b3fa9c9(PIPELINE_REG=0,PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(942): compiling module 'efx_fifo_ctl_077823fa68f649b1a7074c944568f3e4(PIPELINE_REG=0,PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(92): input port 'a_wr_rst_i' is not connected on this instance [VDB-1013]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp_top.v(6): compiling module 'isp_top(PIXEL_PER_CYCLE=2,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(20): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
@@ -254,7 +254,7 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(267): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(343): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(344): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(6): compiling module 'isp(S_AXI_WSTRB_WIDTH=4,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48,DECOMPANDING_XLUT_FILE="decompanding_xlut.mem",DECOMPANDING_YLUT_FILE="decompanding_ylut_12_bit.mem",DECOMPANDING_FLUT_FILE="decompanding_flut_12_bit.mem",GAMMA_LUT_FILE="lut.mem")' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(6): compiling module 'isp(PIXEL_BIT_WIDTH=12,S_AXI_WSTRB_WIDTH=4,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48,DECOMPANDING_XLUT_FILE="decompanding_xlut.mem",DECOMPANDING_YLUT_FILE="decompanding_ylut_12_bit.mem",DECOMPANDING_FLUT_FILE="decompanding_flut_12_bit.mem",GAMMA_LUT_FILE="lut.mem")' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(138): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(170): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(233): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
@@ -265,24 +265,22 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/axi_lite_register.sv(10): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/axi_lite_register.sv(6): compiling module 'axi_lite_register(S_AXI_WSTRB_WIDTH=4)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(12): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(6): compiling module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(6): compiling module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(12): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(42): net 'int_black_level[16]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(44): net 'pipe_0_pixel_0_wire[16]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(45): net 'pipe_0_pixel_1_wire[16]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(46): net 'pipe_0_pixel_2_wire[16]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(47): net 'pipe_0_pixel_3_wire[16]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv(57): net 'pipe_1_tdata_wire[23]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/colorgain.sv(14): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/colorgain.sv(6): compiling module 'colorgain(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/colorgain.sv(6): compiling module 'colorgain(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/colorgain.sv(14): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/colorgain.sv(94): expression size 2 truncated to fit in target size 1 [VERI-1209]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/colorgain.sv(80): net 'multiplier_output[23]' does not have a driver [VDB-1002]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/skidbuffer.sv(6): compiling module 'skidbuffer(DATA_WIDTH=24)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(17): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(57): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(6): compiling module 'demosaic(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(6): compiling module 'demosaic(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(17): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(57): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
@@ -313,9 +311,9 @@ INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(102): extracting RAM for identifier 'pipe_2_rb_at_g2_x2' [VERI-2571]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(103): extracting RAM for identifier 'pipe_2_rb_at_rb_x2' [VERI-2571]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(6): compiling module 'linebuffer(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(6): compiling module 'linebuffer(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/simple_dual_ported_ram.sv(6): compiling module 'simple_dual_ported_ram(DATA_WIDTH=20)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/simple_dual_ported_ram.sv(6): compiling module 'simple_dual_ported_ram(DATA_WIDTH=24)' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/simple_dual_ported_ram.sv(23): extracting RAM for identifier 'ram' [VERI-2571]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
@@ -323,51 +321,48 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(104): expression size 11 truncated to fit in target size 10 [VERI-1209]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(120): expression size 32 truncated to fit in target size 3 [VERI-1209]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(58): net 'line_data_out[95]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(57): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(335): expression size 2 truncated to fit in target size 1 [VERI-1209]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv(120): net 'pipe_4_tdata_comb[63]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(12): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(13): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(6): compiling module 'ccm(COMPONENT_BIT_WIDTH=10,S_AXIS_DATA_WIDTH=64,M_AXIS_DATA_WIDTH=64)' [VERI-1018]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(91): net 'pipe_0_pixel2_r_wire[10]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(92): net 'pipe_0_pixel2_g_wire[10]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(93): net 'pipe_0_pixel2_b_wire[10]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(94): net 'pipe_0_pixel3_r_wire[10]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(95): net 'pipe_0_pixel3_g_wire[10]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(96): net 'pipe_0_pixel3_b_wire[10]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(157): net 'pipe_1_pixel2_r_r_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(158): net 'pipe_1_pixel2_r_g_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(159): net 'pipe_1_pixel2_r_b_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(160): net 'pipe_1_pixel2_g_r_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(161): net 'pipe_1_pixel2_g_g_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(162): net 'pipe_1_pixel2_g_b_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(163): net 'pipe_1_pixel2_b_r_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(164): net 'pipe_1_pixel2_b_g_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(165): net 'pipe_1_pixel2_b_b_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(166): net 'pipe_1_pixel3_r_r_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(167): net 'pipe_1_pixel3_r_g_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(168): net 'pipe_1_pixel3_r_b_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(169): net 'pipe_1_pixel3_g_r_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(170): net 'pipe_1_pixel3_g_g_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(171): net 'pipe_1_pixel3_g_b_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(172): net 'pipe_1_pixel3_b_r_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(173): net 'pipe_1_pixel3_b_g_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(174): net 'pipe_1_pixel3_b_b_wire[26]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(199): net 'pipe_2_pixel2_r_wire[29]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(200): net 'pipe_2_pixel2_g_wire[29]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(201): net 'pipe_2_pixel2_b_wire[29]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(202): net 'pipe_2_pixel3_r_wire[29]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(203): net 'pipe_2_pixel3_g_wire[29]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(204): net 'pipe_2_pixel3_b_wire[29]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(245): net 'pipe_4_tdata_wire[63]' does not have a driver [VDB-1002]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/skidbuffer.sv(6): compiling module 'skidbuffer(DATA_WIDTH=64)' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(6): compiling module 'ccm(S_AXIS_DATA_WIDTH=72,M_AXIS_DATA_WIDTH=72)' [VERI-1018]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(91): net 'pipe_0_pixel2_r_wire[12]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(92): net 'pipe_0_pixel2_g_wire[12]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(93): net 'pipe_0_pixel2_b_wire[12]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(94): net 'pipe_0_pixel3_r_wire[12]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(95): net 'pipe_0_pixel3_g_wire[12]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(96): net 'pipe_0_pixel3_b_wire[12]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(157): net 'pipe_1_pixel2_r_r_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(158): net 'pipe_1_pixel2_r_g_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(159): net 'pipe_1_pixel2_r_b_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(160): net 'pipe_1_pixel2_g_r_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(161): net 'pipe_1_pixel2_g_g_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(162): net 'pipe_1_pixel2_g_b_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(163): net 'pipe_1_pixel2_b_r_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(164): net 'pipe_1_pixel2_b_g_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(165): net 'pipe_1_pixel2_b_b_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(166): net 'pipe_1_pixel3_r_r_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(167): net 'pipe_1_pixel3_r_g_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(168): net 'pipe_1_pixel3_r_b_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(169): net 'pipe_1_pixel3_g_r_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(170): net 'pipe_1_pixel3_g_g_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(171): net 'pipe_1_pixel3_g_b_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(172): net 'pipe_1_pixel3_b_r_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(173): net 'pipe_1_pixel3_b_g_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(174): net 'pipe_1_pixel3_b_b_wire[28]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(199): net 'pipe_2_pixel2_r_wire[31]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(200): net 'pipe_2_pixel2_g_wire[31]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(201): net 'pipe_2_pixel2_b_wire[31]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(202): net 'pipe_2_pixel3_r_wire[31]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(203): net 'pipe_2_pixel3_g_wire[31]' does not have a driver [VDB-1002]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/ccm.sv(204): net 'pipe_2_pixel3_b_wire[31]' does not have a driver [VDB-1002]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/skidbuffer.sv(6): compiling module 'skidbuffer(DATA_WIDTH=72)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(14): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(15): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(36): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(37): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(6): compiling module 'gamma(INPUT_COMPONENT_BIT_WIDTH=10,LUT_FILE="lut.mem")' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(6): compiling module 'gamma(LUT_FILE="lut.mem")' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(14): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(15): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(36): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
@@ -383,13 +378,9 @@ INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/simple_dual_ported_rom.sv(24): net 'rom' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/lut.sv(44): net 'pipe_0_pixel2_wire[11]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/lut.sv(45): net 'pipe_0_pixel3_wire[11]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(39): net 'gamma_r_s_axis_tdata[23]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(48): net 'gamma_b_s_axis_tdata[23]' does not have a driver [VDB-1002]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(55): net 'gamma_g_s_axis_tdata[23]' does not have a driver [VDB-1002]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(117): input port 's_axis_tlast' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(140): input port 's_axis_tlast' remains unconnected for this instance [VDB-1053]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/skidbuffer.sv(6): compiling module 'skidbuffer(DATA_WIDTH=48)' [VERI-1018]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(274): net 'demosaic_bypass_tdata[63]' does not have a driver [VDB-1002]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/cam/cam_crop.v(6): compiling module 'cam_crop(P_DEPTH=16,X_START=210,X_WIN=540,Y_WIN=1080)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/cam/cam_crop.v(82): expression size 32 truncated to fit in target size 11 [VERI-1209]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/cam/scale_down_2x_nn.v(6): compiling module 'scale_down_2x_nn' [VERI-1018]
@@ -778,21 +769,21 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1207): input port 'system_spi_0_io_data_2_read' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1366): input port 'dat1_o_tready' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1504): input port 's_axi_awuser[1]' remains unconnected for this instance [VDB-1053]
-INFO     : Elaboration took 2.094102 seconds [FlowMsg::StageDuration]
-INFO     :     Elaboration took 1.984375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Elaboration virtual memory usage: begin = 81.136 MB, end = 268.928 MB, delta = 187.792 MB [FlowMsg::VMUsage]
-INFO     :     Elaboration peak virtual memory usage = 268.928 MB [FlowMsg::VMUsage::Peak]
-INFO     : Elaboration resident set memory usage: begin = 89.696 MB, end = 279.788 MB, delta = 190.092 MB [FlowMsg::RSSUsage]
-INFO     :     Elaboration peak resident set memory usage = 279.788 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Elaboration took 2.7642129 seconds [FlowMsg::StageDuration]
+INFO     :     Elaboration took 2.578125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Elaboration virtual memory usage: begin = 81.116 MB, end = 268.908 MB, delta = 187.792 MB [FlowMsg::VMUsage]
+INFO     :     Elaboration peak virtual memory usage = 268.908 MB [FlowMsg::VMUsage::Peak]
+INFO     : Elaboration resident set memory usage: begin = 89.764 MB, end = 280.956 MB, delta = 191.192 MB [FlowMsg::RSSUsage]
+INFO     :     Elaboration peak resident set memory usage = 280.956 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Elaboration ... *****
 INFO     : ... Setting Synthesis Option: mode=speed
 INFO     : ***** Beginning Reading Mapping Library ... *****
-INFO     : Reading Mapping Library took 0.0356509 seconds [FlowMsg::StageDuration]
-INFO     :     Reading Mapping Library took 0.03125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Reading Mapping Library virtual memory usage: begin = 298.68 MB, end = 298.68 MB, delta = 0 MB [FlowMsg::VMUsage]
-INFO     :     Reading Mapping Library peak virtual memory usage = 298.68 MB [FlowMsg::VMUsage::Peak]
-INFO     : Reading Mapping Library resident set memory usage: begin = 310.352 MB, end = 310.352 MB, delta = 0 MB [FlowMsg::RSSUsage]
-INFO     :     Reading Mapping Library peak resident set memory usage = 310.352 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Reading Mapping Library took 0.0836784 seconds [FlowMsg::StageDuration]
+INFO     :     Reading Mapping Library took 0.0625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Reading Mapping Library virtual memory usage: begin = 297.636 MB, end = 297.636 MB, delta = 0 MB [FlowMsg::VMUsage]
+INFO     :     Reading Mapping Library peak virtual memory usage = 297.636 MB [FlowMsg::VMUsage::Peak]
+INFO     : Reading Mapping Library resident set memory usage: begin = 311.54 MB, end = 311.54 MB, delta = 0 MB [FlowMsg::RSSUsage]
+INFO     :     Reading Mapping Library peak resident set memory usage = 311.54 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Reading Mapping Library ... *****
 INFO     : ... Pre-synthesis checks begin
 WARNING  : Removing redundant signal : Rx_HS_D_2[7:0]. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv:6307) [EFX-0200]
@@ -836,16 +827,16 @@ INFO     : Module Instance 'csi2_rx_top_inst' input pin 'RxClkEsc[0]' is tied to
 INFO     : Module Instance 'csi2_rx_top_inst' input pin 'RxClkEsc[1]' is tied to constant (=0). [EFX-0266]
 INFO     : Module Instance 'active_high.efx_resetsync_active_high' input pin 'd_i[0]' is tied to constant (=0). [EFX-0266]
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:667) [EFX-0677]
-WARNING  : Re-wiring to GND non-driven net/port 'a_wr_rst_i' in module 'efx_fifo_top_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",SYNC_CLK=1,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'a_rd_rst_i' in module 'efx_fifo_top_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",SYNC_CLK=1,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'wr_clk_i' in module 'efx_fifo_top_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",SYNC_CLK=1,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'rd_clk_i' in module 'efx_fifo_top_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",SYNC_CLK=1,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[16]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[15]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[14]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[13]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[12]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
-WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[11]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'a_wr_rst_i' in module 'efx_fifo_top_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",SYNC_CLK=1,DATA_WIDTH=40,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'a_rd_rst_i' in module 'efx_fifo_top_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",SYNC_CLK=1,DATA_WIDTH=40,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'wr_clk_i' in module 'efx_fifo_top_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",SYNC_CLK=1,DATA_WIDTH=40,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'rd_clk_i' in module 'efx_fifo_top_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",SYNC_CLK=1,DATA_WIDTH=40,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:92) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[16]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[15]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[14]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[13]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_0_wire[12]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:44) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'pipe_0_pixel_1_wire[16]' in module 'blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/blc.sv:45) [EFX-0201]
 WARNING  : (The above message was generated too many times, subsequent similar messages will be muted.) [EFX-0201]
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/simple_dual_ported_ram.sv:23) [EFX-0677]
 INFO     : ... Memory 'pipe_0_center' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:68) [EFX-0677]
@@ -1001,12 +992,12 @@ INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents.
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2626) [EFX-0677]
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2414) [EFX-0677]
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2202) [EFX-0677]
-INFO     : ... Pre-synthesis checks end (Real time : 1s)
+INFO     : ... Pre-synthesis checks end (Real time : 0s)
 INFO     : ... NameSpace init begin
 INFO     : ... NameSpace init end (Real time : 0s)
 INFO     : ... Mapping design "edge_vision_soc"
 INFO     : ... Hierarchical pre-synthesis "reset(OUT_RST_ACTIVE="LOW")" begin
-INFO     : ... Hierarchical pre-synthesis "reset(OUT_RST_ACTIVE="LOW")" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "reset(OUT_RST_ACTIVE="LOW")" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "reset" begin
 INFO     : ... Hierarchical pre-synthesis "reset" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "common_reset(NUM_RST=8,IN_RST_ACTIVE=8'b0,OUT_RST_ACTIVE=8'b0101010)" begin
@@ -1094,75 +1085,75 @@ INFO     : ... Hierarchical pre-synthesis "efx_csi2_byte2pixel_f123b49f0f574f64a
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" begin
-INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" end (Real time : 1s)
-INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_04a96f5177a940fe94d182603b3fa9c9(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_04a96f5177a940fe94d182603b3fa9c9(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "efx_resetsync_04a96f5177a940fe94d182603b3fa9c9(ACTIVE_LOW=0)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_resetsync_04a96f5177a940fe94d182603b3fa9c9(ACTIVE_LOW=0)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",WDATA_WIDTH=32,RDATA_WIDTH=32,RAM_MUX_RATIO=1)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",WDATA_WIDTH=32,RDATA_WIDTH=32,RAM_MUX_RATIO=1)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_04a96f5177a940fe94d182603b3fa9c9(PIPELINE_REG=0,PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_04a96f5177a940fe94d182603b3fa9c9(PIPELINE_REG=0,PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",SYNC_CLK=1,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_04a96f5177a940fe94d182603b3fa9c9(FAMILY="",SYNC_CLK=1,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_077823fa68f649b1a7074c944568f3e4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_077823fa68f649b1a7074c944568f3e4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_077823fa68f649b1a7074c944568f3e4(ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_077823fa68f649b1a7074c944568f3e4(ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",WDATA_WIDTH=40,RDATA_WIDTH=40,RAM_MUX_RATIO=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",WDATA_WIDTH=40,RDATA_WIDTH=40,RAM_MUX_RATIO=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_077823fa68f649b1a7074c944568f3e4(PIPELINE_REG=0,PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_077823fa68f649b1a7074c944568f3e4(PIPELINE_REG=0,PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",SYNC_CLK=1,DATA_WIDTH=40,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_077823fa68f649b1a7074c944568f3e4(FAMILY="TITANIUM",SYNC_CLK=1,DATA_WIDTH=40,PIPELINE_REG=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=510,PROG_FULL_NEGATE=510,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "cam_pixel_remap_fifo" begin
 INFO     : ... Hierarchical pre-synthesis "cam_pixel_remap_fifo" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "axi_lite_register(S_AXI_WSTRB_WIDTH=4)" begin
 INFO     : ... Hierarchical pre-synthesis "axi_lite_register(S_AXI_WSTRB_WIDTH=4)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" begin
-INFO     : ... Hierarchical pre-synthesis "blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "colorgain(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" begin
-INFO     : ... Hierarchical pre-synthesis "colorgain(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)" begin
+INFO     : ... Hierarchical pre-synthesis "blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "colorgain(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)" begin
+INFO     : ... Hierarchical pre-synthesis "colorgain(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=24)" begin
 INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=24)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "simple_dual_ported_ram(DATA_WIDTH=20)" begin
-INFO     : ... Hierarchical pre-synthesis "simple_dual_ported_ram(DATA_WIDTH=20)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "linebuffer(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" begin
-INFO     : ... Hierarchical pre-synthesis "linebuffer(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "demosaic(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" begin
-WARNING  : Mapping into logic memory block 'pipe_0_center' (24 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:68) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_0_outer_horizontal' (24 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:69) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_0_outer_vertical' (24 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:70) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_0_inner_horizontal' (24 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:71) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_0_inner_vertical' (24 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:72) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_0_inner_top' (24 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:73) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_0_inner_bottom' (24 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:74) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_center' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:80) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_center_x5' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:81) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_center_x6' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:82) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_outer_horizontal' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:83) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_outer_vertical' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:84) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_outer_cross' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:85) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_inner_h_outer_v_x2' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:86) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_inner_v_outer_h_x2' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:87) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_inner_corner' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:88) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_1_inner_cross' (32 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:89) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_center' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:95) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_center_cross_x2' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:96) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_outer_cross_x2' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:97) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_outer_cross_x3' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:98) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_inner_c_outer_h_x2' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:99) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_inner_c_outer_v_x2' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:100) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_rb_at_g1_x2' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:101) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_rb_at_g2_x2' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:102) because size is too small (<=64) [EFX-0657]
-WARNING  : Mapping into logic memory block 'pipe_2_rb_at_rb_x2' (40 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:103) because size is too small (<=64) [EFX-0657]
-INFO     : ... Hierarchical pre-synthesis "demosaic(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=10)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "ccm(COMPONENT_BIT_WIDTH=10,S_AXIS_DATA_WIDTH=64,M_AXIS_DATA_WIDTH=64)" begin
-INFO     : ... Hierarchical pre-synthesis "ccm(COMPONENT_BIT_WIDTH=10,S_AXIS_DATA_WIDTH=64,M_AXIS_DATA_WIDTH=64)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=64)" begin
-INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=64)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "simple_dual_ported_ram(DATA_WIDTH=24)" begin
+INFO     : ... Hierarchical pre-synthesis "simple_dual_ported_ram(DATA_WIDTH=24)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "linebuffer(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)" begin
+INFO     : ... Hierarchical pre-synthesis "linebuffer(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "demosaic(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2)" begin
+WARNING  : Mapping into logic memory block 'pipe_0_center' (28 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:68) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_0_outer_horizontal' (28 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:69) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_0_outer_vertical' (28 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:70) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_0_inner_horizontal' (28 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:71) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_0_inner_vertical' (28 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:72) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_0_inner_top' (28 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:73) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_0_inner_bottom' (28 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:74) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_center' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:80) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_center_x5' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:81) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_center_x6' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:82) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_outer_horizontal' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:83) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_outer_vertical' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:84) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_outer_cross' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:85) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_inner_h_outer_v_x2' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:86) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_inner_v_outer_h_x2' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:87) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_inner_corner' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:88) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_1_inner_cross' (36 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:89) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_center' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:95) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_center_cross_x2' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:96) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_outer_cross_x2' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:97) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_outer_cross_x3' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:98) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_inner_c_outer_h_x2' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:99) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_inner_c_outer_v_x2' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:100) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_rb_at_g1_x2' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:101) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_rb_at_g2_x2' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:102) because size is too small (<=64) [EFX-0657]
+WARNING  : Mapping into logic memory block 'pipe_2_rb_at_rb_x2' (44 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/demosaic.sv:103) because size is too small (<=64) [EFX-0657]
+INFO     : ... Hierarchical pre-synthesis "demosaic(MAX_RESOLUTION=2048,PIXEL_PER_CYCLE=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "ccm(S_AXIS_DATA_WIDTH=72,M_AXIS_DATA_WIDTH=72)" begin
+INFO     : ... Hierarchical pre-synthesis "ccm(S_AXIS_DATA_WIDTH=72,M_AXIS_DATA_WIDTH=72)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=72)" begin
+INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=72)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "simple_dual_ported_rom(DATA_WIDTH=8,ADDR_WIDTH=12,MEM_FILE="lut.mem")" begin
 INFO     : ... Hierarchical pre-synthesis "simple_dual_ported_rom(DATA_WIDTH=8,ADDR_WIDTH=12,MEM_FILE="lut.mem")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "lut(PIXEL_PER_CYCLE=2,LUT_FILE="lut.mem")" begin
 INFO     : ... Hierarchical pre-synthesis "lut(PIXEL_PER_CYCLE=2,LUT_FILE="lut.mem")" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "gamma(INPUT_COMPONENT_BIT_WIDTH=10,LUT_FILE="lut.mem")" begin
-INFO     : ... Hierarchical pre-synthesis "gamma(INPUT_COMPONENT_BIT_WIDTH=10,LUT_FILE="lut.mem")" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "gamma(LUT_FILE="lut.mem")" begin
+INFO     : ... Hierarchical pre-synthesis "gamma(LUT_FILE="lut.mem")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=48)" begin
 INFO     : ... Hierarchical pre-synthesis "skidbuffer(DATA_WIDTH=48)" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "isp(S_AXI_WSTRB_WIDTH=4,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48,DECOMPANDING_XLUT_FILE="decompanding_xlut.mem",DECOMPANDING_YLUT_FILE="decompanding_ylut_12_bit.mem",DECOMPANDING_FLUT_FILE="decompanding_flut_12_bit.mem",GAMMA_LUT_FILE="lut.mem")" begin
-INFO     : ... Hierarchical pre-synthesis "isp(S_AXI_WSTRB_WIDTH=4,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48,DECOMPANDING_XLUT_FILE="decompanding_xlut.mem",DECOMPANDING_YLUT_FILE="decompanding_ylut_12_bit.mem",DECOMPANDING_FLUT_FILE="decompanding_flut_12_bit.mem",GAMMA_LUT_FILE="lut.mem")" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "isp(PIXEL_BIT_WIDTH=12,S_AXI_WSTRB_WIDTH=4,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48,DECOMPANDING_XLUT_FILE="decompanding_xlut.mem",DECOMPANDING_YLUT_FILE="decompanding_ylut_12_bit.mem",DECOMPANDING_FLUT_FILE="decompanding_flut_12_bit.mem",GAMMA_LUT_FILE="lut.mem")" begin
+INFO     : ... Hierarchical pre-synthesis "isp(PIXEL_BIT_WIDTH=12,S_AXI_WSTRB_WIDTH=4,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48,DECOMPANDING_XLUT_FILE="decompanding_xlut.mem",DECOMPANDING_YLUT_FILE="decompanding_ylut_12_bit.mem",DECOMPANDING_FLUT_FILE="decompanding_flut_12_bit.mem",GAMMA_LUT_FILE="lut.mem")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "isp_top(PIXEL_PER_CYCLE=2,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48)" begin
 INFO     : ... Hierarchical pre-synthesis "isp_top(PIXEL_PER_CYCLE=2,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "cam_crop(P_DEPTH=16,X_START=210,X_WIN=540,Y_WIN=1080)" begin
@@ -1186,11 +1177,11 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_b0792a13d328448586f08ea7
 INFO     : ... Hierarchical pre-synthesis "cam_dma_fifo" begin
 INFO     : ... Hierarchical pre-synthesis "cam_dma_fifo" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "cam_picam_v2(MIPI_FRAME_WIDTH=1920,MIPI_FRAME_HEIGHT=1080,FRAME_WIDTH=540,FRAME_HEIGHT=540,DMA_TRANSFER_LENGTH=145800)" begin
-INFO     : ... Hierarchical pre-synthesis "cam_picam_v2(MIPI_FRAME_WIDTH=1920,MIPI_FRAME_HEIGHT=1080,FRAME_WIDTH=540,FRAME_HEIGHT=540,DMA_TRANSFER_LENGTH=145800)" end (Real time : 2s)
+INFO     : ... Hierarchical pre-synthesis "cam_picam_v2(MIPI_FRAME_WIDTH=1920,MIPI_FRAME_HEIGHT=1080,FRAME_WIDTH=540,FRAME_HEIGHT=540,DMA_TRANSFER_LENGTH=145800)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "common_true_dual_port_ram(DATA_WIDTH=40,WRITE_MODE_1="WRITE_FIRST",WRITE_MODE_2="WRITE_FIRST",OUTPUT_REG_1="TRUE",OUTPUT_REG_2="TRUE",RAM_INIT_FILE="source/display/dsi/dsi_panel_1080p_reg.mem")" begin
 INFO     : ... Hierarchical pre-synthesis "common_true_dual_port_ram(DATA_WIDTH=40,WRITE_MODE_1="WRITE_FIRST",WRITE_MODE_2="WRITE_FIRST",OUTPUT_REG_1="TRUE",OUTPUT_REG_2="TRUE",RAM_INIT_FILE="source/display/dsi/dsi_panel_1080p_reg.mem")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "panel_config(INITIAL_CODE="source/display/dsi/dsi_panel_1080p_reg.mem")" begin
-INFO     : ... Hierarchical pre-synthesis "panel_config(INITIAL_CODE="source/display/dsi/dsi_panel_1080p_reg.mem")" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "panel_config(INITIAL_CODE="source/display/dsi/dsi_panel_1080p_reg.mem")" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" begin
 INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "common_simple_dual_port_ram(DATA_WIDTH=48,OUTPUT_REG="FALSE")" begin
@@ -1300,7 +1291,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_98c52b03a74a4ce095debab7
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DEPTH=2048,DATA_WIDTH=64,OPTIONAL_FLAGS=0,PROG_FULL_ASSERT=404,PROG_FULL_NEGATE=404,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DEPTH=2048,DATA_WIDTH=64,OPTIONAL_FLAGS=0,PROG_FULL_ASSERT=404,PROG_FULL_NEGATE=404,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_pixel2byte_98c52b03a74a4ce095debab75db1d287(MAX_HRES=1080,PACK_TYPE=1,PIXEL_FIFO_DEPTH=2048)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_dsi_pixel2byte_98c52b03a74a4ce095debab75db1d287(MAX_HRES=1080,PACK_TYPE=1,PIXEL_FIFO_DEPTH=2048)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "efx_dsi_pixel2byte_98c52b03a74a4ce095debab75db1d287(MAX_HRES=1080,PACK_TYPE=1,PIXEL_FIFO_DEPTH=2048)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_98c52b03a74a4ce095debab75db1d287(WIDTH=2)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_98c52b03a74a4ce095debab75db1d287(WIDTH=2)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_98c52b03a74a4ce095debab75db1d287(WIDTH=6)" begin
@@ -1324,7 +1315,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_98c52b03a74a4ce095debab7
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DATA_WIDTH=36,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE       ",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DATA_WIDTH=36,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE       ",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_64b_packetizer_4lane_98c52b03a74a4ce095debab75db1d287(ENABLE_EOTP=1'b0,HS_LANE_FIFO_DEPTH=512)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_dsi_64b_packetizer_4lane_98c52b03a74a4ce095debab75db1d287(ENABLE_EOTP=1'b0,HS_LANE_FIFO_DEPTH=512)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_dsi_64b_packetizer_4lane_98c52b03a74a4ce095debab75db1d287(ENABLE_EOTP=1'b0,HS_LANE_FIFO_DEPTH=512)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_top_98c52b03a74a4ce095debab75db1d287(tINIT_NS=100000,ENABLE_INIT_SKEWCAL=0,ENABLE_EOTP=1'b0,HS_BYTECLK_MHZ=125,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,HS_DATA_WIDTH=8)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_top_98c52b03a74a4ce095debab75db1d287(tINIT_NS=100000,ENABLE_INIT_SKEWCAL=0,ENABLE_EOTP=1'b0,HS_BYTECLK_MHZ=125,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,HS_DATA_WIDTH=8)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_98c52b03a74a4ce095debab75db1d287(tLPX_NS=60,tCLK_ZERO_NS=280,tCLK_TRAIL_NS=100,tCLK_POST_NS=100,tCLK_PREPARE_NS=50,tHS_PREPARE_NS=50,tHS_EXIT_NS=120,tHS_ZERO_NS=200,tHS_TRAIL_NS=65,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,ENABLE_BIDIR=1'b1,ENABLE_EOTP=1'b0)" begin
@@ -1438,9 +1429,9 @@ INFO     : ... Hierarchical pre-synthesis "hbram_cal_slv_b64bd53245f74d6a99e917b
 INFO     : ... Hierarchical pre-synthesis "hbram_cal_controller_top_b64bd53245f74d6a99e917bfa5663d9f(CAL_MODE=2,CAL_BYTES=100,RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CFG_CR1=16'b1111111111000001,CR0W_CA=48'b010000000001100000,CR1W_CA=48'b010000000000000000000000010000000001100000,DQIN_MODE="RESYNC",TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0,ONE_SEC=200000000,RECAL_DAYS=7)" begin
 INFO     : ... Hierarchical pre-synthesis "hbram_cal_controller_top_b64bd53245f74d6a99e917bfa5663d9f(CAL_MODE=2,CAL_BYTES=100,RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CFG_CR1=16'b1111111111000001,CR0W_CA=48'b010000000001100000,CR1W_CA=48'b010000000000000000000000010000000001100000,DQIN_MODE="RESYNC",TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0,ONE_SEC=200000000,RECAL_DAYS=7)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hbram_cal_axi_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CR0_ILC=4'b010,CFG_CR1=16'b1111111111000001,AXI_IF=1'b1,AXI_DBW=128,DQIN_MODE="RESYNC",CAL_CLK_CH=5'b0100,CAL_BYTES=100,TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0,CAL_CLK_CH_LO=5'b0100,CAL_CLK_CH_HI=5'b01000,ONE_SEC=200000000,RECAL_DAYS=7)" begin
-INFO     : ... Hierarchical pre-synthesis "hbram_cal_axi_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CR0_ILC=4'b010,CFG_CR1=16'b1111111111000001,AXI_IF=1'b1,AXI_DBW=128,DQIN_MODE="RESYNC",CAL_CLK_CH=5'b0100,CAL_BYTES=100,TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0,CAL_CLK_CH_LO=5'b0100,CAL_CLK_CH_HI=5'b01000,ONE_SEC=200000000,RECAL_DAYS=7)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "hbram_cal_axi_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CR0_ILC=4'b010,CFG_CR1=16'b1111111111000001,AXI_IF=1'b1,AXI_DBW=128,DQIN_MODE="RESYNC",CAL_CLK_CH=5'b0100,CAL_BYTES=100,TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0,CAL_CLK_CH_LO=5'b0100,CAL_CLK_CH_HI=5'b01000,ONE_SEC=200000000,RECAL_DAYS=7)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "hbram_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_ABW=25,CR0_ODS=0,CR0_ILC=2,CR0_WBL=3,CR1_HSE=1'b0,CR1_PAR=0,AXI_IF=1'b1,AXI_SBW=16,DDIN_MODE=1'b0,CAL_CLK_CH=4,CAL_CLK_CH_LO=4,CAL_CLK_CH_HI=8,CAL_BYTES=100,RECAL_DAYS=7)" begin
-INFO     : ... Hierarchical pre-synthesis "hbram_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_ABW=25,CR0_ODS=0,CR0_ILC=2,CR0_WBL=3,CR1_HSE=1'b0,CR1_PAR=0,AXI_IF=1'b1,AXI_SBW=16,DDIN_MODE=1'b0,CAL_CLK_CH=4,CAL_CLK_CH_LO=4,CAL_CLK_CH_HI=8,CAL_BYTES=100,RECAL_DAYS=7)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "hbram_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_ABW=25,CR0_ODS=0,CR0_ILC=2,CR0_WBL=3,CR1_HSE=1'b0,CR1_PAR=0,AXI_IF=1'b1,AXI_SBW=16,DDIN_MODE=1'b0,CAL_CLK_CH=4,CAL_CLK_CH_LO=4,CAL_CLK_CH_HI=8,CAL_BYTES=100,RECAL_DAYS=7)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hbram" begin
 INFO     : ... Hierarchical pre-synthesis "hbram" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "InstructionCache_2c15f6f801f0432490dd1015460eb67f" begin
@@ -1454,7 +1445,7 @@ INFO     : ... Hierarchical pre-synthesis "EfxCPUSp1_2c15f6f801f0432490dd1015460
 INFO     : ... Hierarchical pre-synthesis "EfxCPUSp2_2c15f6f801f0432490dd1015460eb67f" begin
 INFO     : ... Hierarchical pre-synthesis "EfxCPUSp2_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "VexRiscv_2c15f6f801f0432490dd1015460eb67f" begin
-INFO     : ... Hierarchical pre-synthesis "VexRiscv_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "VexRiscv_2c15f6f801f0432490dd1015460eb67f" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "DebugModule_2c15f6f801f0432490dd1015460eb67f" begin
 WARNING  : Mapping into logic memory block 'logic_progbufX_mem' (64 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\SapphireSoc\SapphireSoc.v:12000) because size is too small (<=64) [EFX-0657]
 INFO     : ... Hierarchical pre-synthesis "DebugModule_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
@@ -1491,7 +1482,7 @@ INFO     : ... Hierarchical pre-synthesis "BmbArbiter_2c15f6f801f0432490dd101546
 INFO     : ... Hierarchical pre-synthesis "StreamFifo_2c15f6f801f0432490dd1015460eb67f" begin
 INFO     : ... Hierarchical pre-synthesis "StreamFifo_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "BmbToAxi4SharedBridge_2c15f6f801f0432490dd1015460eb67f" begin
-INFO     : ... Hierarchical pre-synthesis "BmbToAxi4SharedBridge_2c15f6f801f0432490dd1015460eb67f" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "BmbToAxi4SharedBridge_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "BufferCC_4_2c15f6f801f0432490dd1015460eb67f" begin
 INFO     : ... Hierarchical pre-synthesis "BufferCC_4_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "BufferCC_5_2c15f6f801f0432490dd1015460eb67f" begin
@@ -1576,7 +1567,7 @@ INFO     : ... Hierarchical pre-synthesis "I2cSlave_2c15f6f801f0432490dd1015460e
 INFO     : ... Hierarchical pre-synthesis "BmbI2cCtrl_2c15f6f801f0432490dd1015460eb67f" begin
 INFO     : ... Wide MUX mapping to ram-net, output: 'bridge_masterLogic_fsm_stateReg_string' select size : 4 output width: 56
 INFO     : ... Wide MUX mapping to ram-net, output: 'bridge_masterLogic_fsm_stateNext_string' select size : 4 output width: 56
-INFO     : ... Hierarchical pre-synthesis "BmbI2cCtrl_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "BmbI2cCtrl_2c15f6f801f0432490dd1015460eb67f" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "BmbToApb3Bridge_2c15f6f801f0432490dd1015460eb67f" begin
 INFO     : ... Hierarchical pre-synthesis "BmbToApb3Bridge_2c15f6f801f0432490dd1015460eb67f" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "BufferCC_20_2c15f6f801f0432490dd1015460eb67f" begin
@@ -1590,11 +1581,11 @@ INFO     : ... Hierarchical pre-synthesis "SapphireSoc" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hw_accel_apb3" begin
 INFO     : ... Hierarchical pre-synthesis "hw_accel_apb3" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_44d0531f71c04713b005469f3b8ead04" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_44d0531f71c04713b005469f3b8ead04" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_44d0531f71c04713b005469f3b8ead04" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_44d0531f71c04713b005469f3b8ead04" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_44d0531f71c04713b005469f3b8ead04" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_44d0531f71c04713b005469f3b8ead04" end (Real time : 2s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_44d0531f71c04713b005469f3b8ead04" begin
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_44d0531f71c04713b005469f3b8ead04" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_44d0531f71c04713b005469f3b8ead04" begin
@@ -1614,7 +1605,7 @@ INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_44d0531f71c04713b00
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_44d0531f71c04713b005469f3b8ead04" begin
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_44d0531f71c04713b005469f3b8ead04" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4ReadOnlyBridge_44d0531f71c04713b005469f3b8ead04" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4ReadOnlyBridge_44d0531f71c04713b005469f3b8ead04" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4ReadOnlyBridge_44d0531f71c04713b005469f3b8ead04" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_3_44d0531f71c04713b005469f3b8ead04" begin
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_3_44d0531f71c04713b005469f3b8ead04" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_1_44d0531f71c04713b005469f3b8ead04" begin
@@ -1656,7 +1647,7 @@ INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_4_44d0531f71c0471
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbDownSizerSparse_44d0531f71c04713b005469f3b8ead04" begin
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbDownSizerSparse_44d0531f71c04713b005469f3b8ead04" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_44d0531f71c04713b005469f3b8ead04" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_44d0531f71c04713b005469f3b8ead04" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_44d0531f71c04713b005469f3b8ead04" end (Real time : 2s)
 INFO     : ... Hierarchical pre-synthesis "dma" begin
 INFO     : ... Hierarchical pre-synthesis "dma" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "priority_encoder(WIDTH=2,LSB_PRIORITY="HIGH")" begin
@@ -1671,24 +1662,24 @@ INFO     : ... Hierarchical pre-synthesis "axi_full_to_half_duplex(DATA_WIDTH=12
 INFO     : ... Hierarchical pre-synthesis "axi_full_to_half_duplex(DATA_WIDTH=128)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" begin
 INFO     : ... Clock Enable Synthesis Performed on 2500 flops.
-INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" end (Real time : 15s)
+INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" end (Real time : 16s)
 INFO     : ... Flat optimizations begin
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$c1'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2838) [EFX-0656]
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$b12'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2838) [EFX-0656]
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$12'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2838) [EFX-0656]
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$2'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2838) [EFX-0656]
-INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Flat optimizations end (Real time : 1s)
 INFO     : ... Flat synthesis begin
 INFO     : ... Flat synthesis end (Real time : 0s)
 INFO     : ... Flat optimizations begin
-INFO     : ... Flat optimizations end (Real time : 1s)
+INFO     : ... Flat optimizations end (Real time : 0s)
 INFO     : ... Check and break combinational loops begin
 INFO     : ... Check and break combinational loops end (Real time : 0s)
 INFO     : ... Setup for logic synthesis begin
 INFO     : ... Setup for logic synthesis end (Real time : 1s)
 INFO     : ... LUT mapping begin
-INFO     : ... LS, strategy: 3, nd: 20584, ed: 67155, lv: 11, pw: 43838.82
-INFO     : ... LUT mapping end (Real time : 59s)
+INFO     : ... LS, strategy: 3, nd: 20714, ed: 67693, lv: 11, pw: 44288.76
+INFO     : ... LUT mapping end (Real time : 65s)
 INFO     : ... Post-synthesis Verific netlist creation begin
 INFO     : ... Post-synthesis Verific netlist creation end (Real time : 1s)
 INFO     : ***** Beginning VDB Netlist Checker ... *****
@@ -1774,28 +1765,28 @@ WARNING  : Net u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/popCC_popPtrPlus[0
 WARNING  : Net u_dma/u_EfxDMA/outputsAdapter_1_crossclock_fifo/popCC_popPtrPlus[0] is dangling. [VDB-8009]
 WARNING  : Net u_dma/u_EfxDMA/inputsAdapter_0_crossclock_fifo/popCC_popPtrPlus[0] is dangling. [VDB-8009]
 WARNING  : Found 123 warnings in the post-synthesis netlist.
-INFO     : VDB Netlist Checker took 0.1037999 seconds [FlowMsg::StageDuration]
-INFO     :     VDB Netlist Checker took 0.1875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : VDB Netlist Checker virtual memory usage: begin = 346.804 MB, end = 346.888 MB, delta = 0.084 MB [FlowMsg::VMUsage]
-INFO     :     VDB Netlist Checker peak virtual memory usage = 404.908 MB [FlowMsg::VMUsage::Peak]
-INFO     : VDB Netlist Checker resident set memory usage: begin = 365.368 MB, end = 365.524 MB, delta = 0.156 MB [FlowMsg::RSSUsage]
-INFO     :     VDB Netlist Checker peak resident set memory usage = 421.992 MB [FlowMsg::RSSUsage::Peak]
+INFO     : VDB Netlist Checker took 0.2714851 seconds [FlowMsg::StageDuration]
+INFO     :     VDB Netlist Checker took 0.421875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : VDB Netlist Checker virtual memory usage: begin = 346.432 MB, end = 346.56 MB, delta = 0.128 MB [FlowMsg::VMUsage]
+INFO     :     VDB Netlist Checker peak virtual memory usage = 398.92 MB [FlowMsg::VMUsage::Peak]
+INFO     : VDB Netlist Checker resident set memory usage: begin = 367.24 MB, end = 367.44 MB, delta = 0.2 MB [FlowMsg::RSSUsage]
+INFO     :     VDB Netlist Checker peak resident set memory usage = 416.424 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending VDB Netlist Checker ... *****
 INFO     : Resource Summary 
 INFO     : ======================================= 
-INFO     : EFX_ADD                 : 	3765
-INFO     : EFX_LUT4                : 	20341
+INFO     : EFX_ADD                 : 	3825
+INFO     : EFX_LUT4                : 	20469
 INFO     : EFX_DSP48               : 	15
-INFO     : EFX_FF                  : 	20172
+INFO     : EFX_FF                  : 	20442
 INFO     : EFX_SRL8                : 	10
-INFO     : EFX_RAM10               : 	248
+INFO     : EFX_RAM10               : 	252
 INFO     : ======================================= 
 INFO     : ... Post-Map Verilog Writer begin
 INFO     : Writing netlist 'edge_vision_soc' to Verilog file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.map.v' [VDB-1030]
-INFO     : ... Post-Map Verilog Writer end (Real time : 2s)
-INFO     : The entire flow of EFX_MAP took 109.5712587 seconds [FlowMsg::StageDuration]
-INFO     :     The entire flow of EFX_MAP took 129.203125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.008 MB, end = 439.032 MB, delta = 420.024 MB [FlowMsg::VMUsage]
-INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 439.032 MB [FlowMsg::VMUsage::Peak]
-INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.6 MB, end = 451.632 MB, delta = 432.032 MB [FlowMsg::RSSUsage]
-INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 451.632 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ... Post-Map Verilog Writer end (Real time : 1s)
+INFO     : The entire flow of EFX_MAP took 121.248043 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_MAP took 144.0625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 18.976 MB, end = 441.244 MB, delta = 422.268 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 441.652 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.644 MB, end = 456.304 MB, delta = 436.66 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 456.7 MB [FlowMsg::RSSUsage::Peak]

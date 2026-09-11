@@ -283,23 +283,23 @@ const fQ47 = v => (v/4096).toFixed(4);
 const fQ97 = v => (v/128).toFixed(3) + '\u00d7';
 
 const P = {
-  blc:{cmd:'0', label:'Black Level', rng:RG.blc,  def:16},
-  rg :{cmd:'1', label:'Red',         rng:RG.gain, def:160, unity:128, eq:fQ97},
-  gg :{cmd:'2', label:'Green',       rng:RG.gain, def:96,  unity:128, eq:fQ97},
-  bg :{cmd:'3', label:'Blue',        rng:RG.gain, def:128, unity:128, eq:fQ97},
-  c00:{cmd:'4', label:'R\u2190R', rng:RG.ccm, def: 9519, unity:4096, eq:fQ47},
-  c01:{cmd:'5', label:'R\u2190G', rng:RG.ccm, def:-3622, unity:0,    eq:fQ47},
-  c02:{cmd:'6', label:'R\u2190B', rng:RG.ccm, def:-1801, unity:0,    eq:fQ47},
-  c10:{cmd:'7', label:'G\u2190R', rng:RG.ccm, def:-2614, unity:0,    eq:fQ47},
-  c11:{cmd:'8', label:'G\u2190G', rng:RG.ccm, def:10582, unity:4096, eq:fQ47},
-  c12:{cmd:'9', label:'G\u2190B', rng:RG.ccm, def:-3872, unity:0,    eq:fQ47},
-  c20:{cmd:'A', label:'B\u2190R', rng:RG.ccm, def:-1169, unity:0,    eq:fQ47},
-  c21:{cmd:'B', label:'B\u2190G', rng:RG.ccm, def:-2216, unity:0,    eq:fQ47},
-  c22:{cmd:'C', label:'B\u2190B', rng:RG.ccm, def: 7481, unity:4096, eq:fQ47}
+  blc:{cmd:'0', label:'Black Level', rng:RG.blc,  def:64},
+  rg :{cmd:'1', label:'Red',         rng:RG.gain, def:251, unity:128, eq:fQ97},
+  gg :{cmd:'2', label:'Green',       rng:RG.gain, def:154,  unity:128, eq:fQ97},
+  bg :{cmd:'3', label:'Blue',        rng:RG.gain, def:217, unity:128, eq:fQ97},
+  c00:{cmd:'4', label:'R\u2190R', rng:RG.ccm, def: 7659, unity:4096, eq:fQ47},
+  c01:{cmd:'5', label:'R\u2190G', rng:RG.ccm, def:-2388, unity:0,    eq:fQ47},
+  c02:{cmd:'6', label:'R\u2190B', rng:RG.ccm, def:-767, unity:0,    eq:fQ47},
+  c10:{cmd:'7', label:'G\u2190R', rng:RG.ccm, def:-1668, unity:0,    eq:fQ47},
+  c11:{cmd:'8', label:'G\u2190G', rng:RG.ccm, def:6849, unity:4096, eq:fQ47},
+  c12:{cmd:'9', label:'G\u2190B', rng:RG.ccm, def:-631, unity:0,    eq:fQ47},
+  c20:{cmd:'A', label:'B\u2190R', rng:RG.ccm, def: 91, unity:0,    eq:fQ47},
+  c21:{cmd:'B', label:'B\u2190G', rng:RG.ccm, def:-2704, unity:0,    eq:fQ47},
+  c22:{cmd:'C', label:'B\u2190B', rng:RG.ccm, def: 7119, unity:4096, eq:fQ47}
 };
 const CCM_KEYS = ['c00','c01','c02','c10','c11','c12','c20','c21','c22'];
 const ccmVals  = arr => Object.fromEntries(CCM_KEYS.map((k,i)=>[k,arr[i]]));
-const CCM_DEF  = ccmVals([9519,-3622,-1801,-2614,10582,-3872,-1169,-2216,7481]);
+const CCM_DEF  = ccmVals([7659,-2388,-767,-1668,6849,-631,91,-2704,7119]);
 const CCM_ID   = ccmVals([4096,0,0, 0,4096,0, 0,0,4096]);
 
 /* stage icons */
@@ -315,10 +315,10 @@ const ICONS = {
 const BLOCKS = [
   {id:'blc', n:1, title:'Black Level', sub:'BLC · 0–4095 · step 1',
    params:['blc'], neutral:{blc:0},
-   presets:[{name:'Default', vals:{blc:16}}]},
+   presets:[{name:'Default', vals:{blc:64}}]},
   {id:'gain', n:2, title:'Colour Gain', sub:'UQ9.7 · 0–65535 · step 1',
    params:['rg','gg','bg'], neutral:{rg:128,gg:128,bg:128},
-   presets:[{name:'Default', vals:{rg:160,gg:96,bg:128}},
+   presets:[{name:'Default', vals:{rg:251,gg:154,bg:217}},
             {name:'Unity',   vals:{rg:128,gg:128,bg:128}}]},
   {id:'demosaic', n:3, title:'Demosaic', sub:'Bayer → RGB', bit:0},
   {id:'ccm', n:4, title:'Colour Correction', sub:'CCM · Q4.12 · −32768…32767 · step 1',

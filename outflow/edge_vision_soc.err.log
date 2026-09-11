@@ -477,3 +477,37 @@
 // Sep 10, 2026 09:46:58
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 10, 2026 17:28:21
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] overwriting previous definition of module 'cam_pixel_remap_fifo' (VERI-1206) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:111)
+[EFX-0010 VERI-ERROR] module 'efx_fifo_gray2bin_077823fa68f649b1a7074c944568f3e4' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:159)
+[EFX-0010 VERI-ERROR] module 'efx_fifo_bin2gray_077823fa68f649b1a7074c944568f3e4' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:252)
+[EFX-0010 VERI-ERROR] module 'efx_fifo_top_077823fa68f649b1a7074c944568f3e4' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:611)
+[EFX-0010 VERI-ERROR] module 'efx_fifo_ram_077823fa68f649b1a7074c944568f3e4' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:884)
+[EFX-0010 VERI-ERROR] module 'efx_fifo_ctl_077823fa68f649b1a7074c944568f3e4' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:1362)
+[EFX-0010 VERI-ERROR] module 'efx_resetsync_077823fa68f649b1a7074c944568f3e4' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:1407)
+[EFX-0010 VERI-ERROR] ** '**' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv:1591)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 10, 2026 17:29:13
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 11, 2026 09:39:47
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] index 19 is out of range [15:0] for 'cam_pixel_remap_2ppc_data' (VERI-1216) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:325)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 11, 2026 09:43:52
+///////////////////////////////////
+

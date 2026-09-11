@@ -5,7 +5,7 @@
 
 module cam_picam_v2 #(
    //Input resolution from camera MIPI interface
-   parameter MIPI_FRAME_WIDTH     = 11'd1920,  
+   parameter MIPI_FRAME_WIDTH     = 11'd1920,
    parameter MIPI_FRAME_HEIGHT    = 11'd1080,
    //Output resolution to external memory
    parameter FRAME_WIDTH          = 11'd540,
@@ -17,7 +17,7 @@ module cam_picam_v2 #(
 ) (
    input  wire        mipi_pclk,
    input  wire        rst_n,
- 
+
    //Input camera frame data from MIPI interface
    input  wire [63:0] mipi_cam_data,
    input  wire        mipi_cam_valid,
@@ -34,13 +34,13 @@ module cam_picam_v2 #(
    input wire [15:0] sim_cam_g_pix,
    input wire [15:0] sim_cam_b_pix,
 `endif
-   
+
    //DMA
    input  wire        cam_dma_wready,
    output wire        cam_dma_wvalid,
    output wire        cam_dma_wlast,
    output wire [63:0] cam_dma_wdata,
-   
+
    //RISC-V slave control & Debug
    input  wire [15:0] black_level,
    input  wire [15:0] rgain,
@@ -60,7 +60,7 @@ module cam_picam_v2 #(
    input  wire        continuous_capture_frame,
    input  wire        rgb_gray,
    input  wire        cam_dma_init_done,
-   
+
    output reg  [31:0] frames_per_second,
    output reg         debug_cam_pixel_remap_fifo_overflow,
    output reg         debug_cam_pixel_remap_fifo_underflow,
@@ -71,36 +71,8 @@ module cam_picam_v2 #(
    output wire [31:0] debug_cam_dma_status
 );
 
-reg  [225:0] gain_control;
-// FIX (field order): the ISP AXI-Lite register bank packs TWO 16-bit fields
-// per 32-bit register:
-//   reg0 0x00 = {bgain[31:16], rgain[15:0]}
-//   reg1 0x04 = {g1gain[31:16], g0gain[15:0]}
-//   reg2 0x08 = {ccm_r_g, ccm_r_r}
-//   reg3 0x0C = {ccm_g_r, ccm_r_b}
-//   reg4 0x10 = {ccm_g_b, ccm_g_g}
-//   reg5 0x14 = {ccm_b_g, ccm_b_r}
-//   reg6 0x18 = {black_level, ccm_b_b}
-// The previous concatenation ended with {..., bgain, ggain, ggain, rgain},
-// which puts the DUPLICATED ggain at bit [31:16] - exactly where reg0's
-// bgain half is taken from. The blue gain never reached the ISP: the ISP's
-// bgain field received the green gain instead. The correct packing for the
-// 7-register map is (MSB -> LSB):
-//   [223:208] black_level   (reg6 high)
-//   [207:192] ccm_b_b       (reg6 low)
-//   [191:176] ccm_b_g       (reg5 high)
-//   [175:160] ccm_b_r       (reg5 low)
-//   [159:144] ccm_g_b       (reg4 high)
-//   [143:128] ccm_g_g       (reg4 low)
-//   [127:112] ccm_g_r       (reg3 high)
-//   [111: 96] ccm_r_b       (reg3 low)
-//   [ 95: 80] ccm_r_g       (reg2 high)
-//   [ 79: 64] ccm_r_r       (reg2 low)
-//   [ 63: 48] ggain         (reg1 high = g1gain)
-//   [ 47: 32] ggain         (reg1 low  = g0gain)
-//   [ 31: 16] bgain         (reg0 high)
-//   [ 15:  0] rgain         (reg0 low)
-// (the APB slave exposes one 16-bit green gain, which drives both g0/g1)
+reg  [255:0] gain_control;
+
 assign gain_control ={ {30{1'b0}}, isp_enable, black_level, ccm_b_b, ccm_b_g, ccm_b_r, ccm_g_b,
                        ccm_g_g, ccm_g_r, ccm_r_b, ccm_r_g, ccm_r_r, ggain, ggain, bgain, rgain};
 
@@ -116,37 +88,25 @@ wire                        cam_vs_fall_edge;
 reg                         cam_hs;
 reg                         cam_hs_r;
 wire                        cam_hs_fall_edge;
-wire [31:0]                 cam_data8;
 reg  [CAM_X_COUNT_BIT-1:0]  cam_x_count;
 reg  [CAM_Y_COUNT_BIT-1:0]  cam_y_count;
 
 reg                         cam_alternate_clock; 
 wire                        cam_pixel_remap_fifo_wvalid;
-wire [31:0]                 cam_pixel_remap_fifo_wdata;
+wire [39:0]                 cam_pixel_remap_fifo_wdata;
 wire                        cam_pixel_remap_fifo_re;
 wire                        cam_pixel_remap_fifo_rvalid;
-wire [31:0]                 cam_pixel_remap_fifo_rdata;
+wire [39:0]                 cam_pixel_remap_fifo_rdata;
 wire                        cam_pixel_remap_fifo_empty;
 wire                        cam_pixel_remap_fifo_overflow;
 wire                        cam_pixel_remap_fifo_underflow;
 reg                         cam_pixel_remap_fifo_rvalid_r;
-reg  [15:0]                 cam_pixel_remap_fifo_rdata_r;
+reg  [19:0]                 cam_pixel_remap_fifo_rdata_r;
 wire                        cam_pixel_remap_2ppc_valid;
-wire [15:0]                 cam_pixel_remap_2ppc_data;
+wire [19:0]                 cam_pixel_remap_2ppc_data;
 
-//isp_top (raw->RGB pipeline: BLC, color gain, demosaic, CCM, gamma)
-//replaces cam_rgb_gain + cam_pixel_remap 4PPC->2PPC stays, cam_line_buffer
-//and cam_raw_to_rgb are removed - isp_top now sits directly after the
-//existing 4PPC->2PPC remap FIFO and drives the same rgb_pixel_*_out /
-//rgb_pixel_out_valid signals that cam_crop already consumes below.
 localparam ISP_PPC              = 2;   //Matches existing 2PPC downstream (crop/scale/gray)
-//FIX (Bug #4 - dark image): the ISP gamma LUT (lut.mem) is a 4096-entry
-//table and lut.sv addresses the ROM DIRECTLY with the input pixel value.
-//With PIXEL_BIT_WIDTH=8 only the first 256 LUT entries were ever addressed
-//(max gamma output = 0x46 = ~27% brightness). Run the ISP at its native
-//10-bit pixel width and shift the 8-bit RAW data left by 2 when packing
-//s_axis_tdata, so raw8=0xFF addresses LUT entry 0x3FC and produces 0xFF.
-localparam ISP_PIXEL_BIT_WIDTH  = 10;  //10-bit internal pipeline
+localparam ISP_PIXEL_BIT_WIDTH  = 12;  //12-bit internal pipeline
 localparam ISP_COMPONENT_WIDTH  = 8;   //RGB8 out
 localparam ISP_S_AXIS_WIDTH     = 8*(((ISP_PPC*ISP_PIXEL_BIT_WIDTH)+7)/8);        //24
 localparam ISP_M_AXIS_WIDTH     = 8*(((ISP_PPC*3*ISP_COMPONENT_WIDTH)+7)/8);      //48
@@ -165,10 +125,7 @@ wire                            isp_m_axis_tuser;
 reg  [ISP_LINE_CNT_BIT-1:0]     isp_s_line_count;
 reg                             isp_sof_pending;
 
-//AXI-Lite master to the isp_top register bank: programs ALL SEVEN ISP
-//parameter registers (colour gains, CCM matrix, black level) from the APB
-//register bank - see the FSM in the "ISP parameter programming" section
-//further below.
+//AXI-Lite master to the isp_top register bank: programs ALL SEVEN ISP parameter registers
 wire [4:0]                      isp_s_axi_awaddr;
 wire                            isp_s_axi_awvalid;
 wire                            isp_s_axi_awready;
@@ -181,20 +138,11 @@ wire                            isp_s_axi_bvalid;
 wire                            isp_s_axi_bready;
 
 //gain_control synchroniser + ISP AXI-Lite programming FSM state
-reg  [225:0]                     gain_control_r1;
-reg  [225:0]                     gain_control_synced;
-reg  [225:0]                     gain_control_programmed;
-reg  [225:0]                     gain_control_shadow;
+reg  [255:0]                     gain_control_r1;
+reg  [255:0]                     gain_control_synced;
+reg  [255:0]                     gain_control_programmed;
+reg  [255:0]                     gain_control_shadow;
 reg  [  2:0]                     isp_axi_state;
-// FIX (register sequencing): the previous code used "isp_axi_phase" plus a
-// 7-iteration for-loop of NON-BLOCKING assignments to the same registers.
-// With non-blocking assignments every iteration's value is scheduled and
-// only the LAST one (i=6) actually lands, so the FSM only ever wrote ISP
-// register 0x18 (dead after the CCM hardwire removal), twice, with the
-// wrong data - the colour gains at 0x00/0x04 were NEVER programmed, which
-// is why UART gain commands had no effect on the image. The loop also used
-// an undeclared loop variable "i" (no "integer i;" in the module).
-// Replaced with a proper 3-bit register index that sequences 0..6.
 reg  [  2:0]                     isp_axi_reg_idx;
 reg  [  4:0]                     isp_axi_addr_r;
 reg  [ 31:0]                     isp_axi_data_r;
@@ -264,11 +212,6 @@ end
 
 assign cam_hs_fall_edge = cam_hs_r && ~cam_hs;
 assign cam_vs_fall_edge = cam_vs_r && ~cam_vs;
-assign cam_data8        = {cam_data[39:32], cam_data[29:22], cam_data[19:12], cam_data[9:2]};  //Keep MSB 8-bit per pixel only
-
-//RGB gain removed - raw8 data (cam_data8) is fed straight into the
-//4PPC->2PPC remap FIFO below and then into isp_top, which now performs
-//BLC + color gain + demosaic + CCM + gamma.
 
 //Map from 4PPC to 2PPC
 always @(posedge mipi_pclk)
@@ -277,19 +220,19 @@ begin
    begin
       cam_alternate_clock           <= 1'b0;
       cam_pixel_remap_fifo_rvalid_r <= 1'b0;
-      cam_pixel_remap_fifo_rdata_r  <= 16'd0;
+      cam_pixel_remap_fifo_rdata_r  <= 20'd0;
    end else begin
       cam_alternate_clock           <= ~cam_alternate_clock;
       cam_pixel_remap_fifo_rvalid_r <= cam_pixel_remap_fifo_rvalid;
-      cam_pixel_remap_fifo_rdata_r  <= cam_pixel_remap_fifo_rdata [31:16]; //Store most significant half word only
+      cam_pixel_remap_fifo_rdata_r  <= cam_pixel_remap_fifo_rdata [39:20]; //Store most significant half word only
    end
 end
 
 assign cam_pixel_remap_fifo_wvalid = capture_frame && cam_valid;
-assign cam_pixel_remap_fifo_wdata  = cam_data8;
+assign cam_pixel_remap_fifo_wdata  = cam_data;
 assign cam_pixel_remap_fifo_re     = (~cam_pixel_remap_fifo_empty) && cam_alternate_clock;
 assign cam_pixel_remap_2ppc_valid  = cam_pixel_remap_fifo_rvalid || cam_pixel_remap_fifo_rvalid_r;
-assign cam_pixel_remap_2ppc_data   = (cam_pixel_remap_fifo_rvalid) ? cam_pixel_remap_fifo_rdata [15:0] : cam_pixel_remap_fifo_rdata_r;
+assign cam_pixel_remap_2ppc_data   = (cam_pixel_remap_fifo_rvalid) ? cam_pixel_remap_fifo_rdata [19:0] : cam_pixel_remap_fifo_rdata_r;
 
 cam_pixel_remap_fifo u_cam_pixel_remap_fifo (
    .almost_full_o  (),
@@ -379,8 +322,8 @@ assign isp_s_axis_tvalid = cam_pixel_remap_2ppc_valid;
 //so they span the full input range of the ISP's 4096-entry gamma LUT.
 //pixel 0 (left/even pixel) occupies tdata[11:0], pixel 1 (right/odd pixel)
 //tdata[23:12] - this is the packing colorgain.sv expects (pixel_0 = LSB).
-assign isp_s_axis_tdata  = {cam_pixel_remap_2ppc_data[15:8], 4'b0000,   //pixel 1 (odd)
-                            cam_pixel_remap_2ppc_data[7:0],  4'b0000};  //pixel 0 (even)
+assign isp_s_axis_tdata  = {2'b00, cam_pixel_remap_2ppc_data[19:10],    //pixel 1 (odd)
+                            2'b00,cam_pixel_remap_2ppc_data[9:0]};  //pixel 0 (even)
 assign isp_s_axis_tlast  = cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
 assign isp_s_axis_tuser  = isp_sof_pending;
 //NOTE: isp_s_axis_tready is intentionally not used to gate the camera
@@ -389,20 +332,7 @@ assign isp_s_axis_tuser  = isp_sof_pending;
 //in normal operation; if it ever deasserts, that beat's pixels are lost.
 
 isp_top #(
-   //FIX (magenta / dull colours): the Bayer pattern DELIVERED BY THIS
-   //PLATFORM is RGGB - sensor line 0 is an "R Gr" row with the R site on
-   //EVEN x positions. This is proven twice over by the old (working)
-   //pipeline, whose two blocks agree with each other:
-   //   1) cam_rgb_gain.v applies red gain to even-x sites of line 0
-   //      (r_line_cnt=0 selects the "red row" gain formula), and
-   //   2) cam_raw_to_rgb.v demosaics sensor line 0 with its "R Gr" branch
-   //      (line_count[0]=1 while line 0 is the interpolation centre).
-   //CFA_ORIENTATION=1 (GBRG) assumed a Gb site at the frame origin - a
-   //one-line/one-pixel DIAGONAL phase shift - which made the R and B
-   //channels receive green-row data and the G channel receive R/B-row
-   //data: the classic magenta-cast + desaturated ("dull") signature.
-   //CFA_ORIENTATION=3 (RG) puts R at the frame origin and matches the old
-   //working design exactly. (0=BG, 1=GB, 2=GR, 3=RG)
+   //working design. (0=BG, 1=GB, 2=GR, 3=RG)
    .CFA_ORIENTATION    (3),              //RGGB - matches old cam_raw_to_rgb/cam_rgb_gain
    .MAX_RESOLUTION     (2048),           //RES_2K - covers MIPI_FRAME_WIDTH up to 1920
    .PIXEL_PER_CYCLE    (ISP_PPC),
@@ -450,51 +380,33 @@ isp_top #(
 //(2 pixel) per-channel signal format, consistent with the earlier/first
 //pixel occupying the LSB half - same convention already used for
 //cam_data8/gray_pixel_out elsewhere in this file.
-//
-//Verified ISP output packing (demosaic.sv stage-4, ccm.sv stage-4 and
-//gamma.sv stage-0 - gamma preserves byte positions since all three LUT
+//gamma preserves byte positions since all three LUT
 //instances are identical): each pixel is packed {R, B, G} with G in the
 //LSB byte, i.e. for the 48-bit 2PPC m_axis word:
 //   [47:40] = pixel1 R   [39:32] = pixel1 B   [31:24] = pixel1 G
 //   [23:16] = pixel0 R   [15:8]  = pixel0 B   [7:0]   = pixel0 G
-//
-//FIX (Bug #3 - green/blue swap): the previous unpack mapped [39:32]/[15:8]
-//to green and [31:24]/[7:0] to blue, swapping the green and blue channels.
+
 assign rgb_pixel_out_valid = isp_m_axis_tvalid;
 assign rgb_pixel_r_out     = {isp_m_axis_tdata[47:40], isp_m_axis_tdata[23:16]};
 assign rgb_pixel_g_out     = {isp_m_axis_tdata[31:24], isp_m_axis_tdata[7:0]};
 assign rgb_pixel_b_out     = {isp_m_axis_tdata[39:32], isp_m_axis_tdata[15:8]};
 
 //------------------------------------------------------------------------
-// ISP parameter programming (replaces the old cam_rgb_gain stage)
+// ISP parameter programming
 //------------------------------------------------------------------------
 
-//gain_control is an APB (peripheralClk) register - 2FF synchronise to
-//mipi_pclk, same as the old design's gain field synchronisers
 always @(posedge mipi_pclk)
 begin
    gain_control_r1     <= gain_control;
    gain_control_synced <= gain_control_r1;
 end
 
-//Program all SEVEN ISP parameter registers (0x00..0x18) whenever the
-//synchronised gain_control value differs from the last value programmed
-//into the ISP. axi_lite_register.sv expects awvalid and wvalid to be
-//asserted together and holds them ready for one cycle; the write completes
-//when bvalid pulses (bready is tied high).
-//Sequencing: isp_axi_reg_idx walks 0..6; each IDLE pass latches that
-//register's address/data slice from gain_control_synced. The shadow
-//captures the value at the START of a pass; comparing against the shadow
-//(not the live value) at the end means a value that changes mid-pass
-//triggers one clean extra pass, so the ISP always converges to the last
-//stable value. All ISP stages latch their coefficients at the next start
-//of frame (tuser), so updates are frame-atomic.
 always @(posedge mipi_pclk)
 begin
    if (~rst_n)
    begin
-      gain_control_programmed <= {224{1'b1}};  // != any APB reset value - forces initial programming
-      gain_control_shadow     <= 224'd0;
+      gain_control_programmed <= {256{1'b1}};  // != any APB reset value - forces initial programming
+      gain_control_shadow     <= 256'd0;
       isp_axi_state           <= ISP_AXI_IDLE;
       isp_axi_reg_idx         <= 3'd0;
       isp_axi_addr_r          <= 5'd0;
@@ -537,7 +449,6 @@ begin
             begin
                if (isp_axi_reg_idx == 3'd7)
                begin
-                  //All seven registers written - mark this gain_control
                   //value as programmed (shadow: if gain_control changed
                   //mid-sequence a new pass is triggered automatically)
                   gain_control_programmed <= gain_control_shadow;

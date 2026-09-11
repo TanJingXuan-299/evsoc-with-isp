@@ -21,9 +21,9 @@ INFO     : 	seu_wait_interval                        = 0xFFFFFF
 INFO     : 	jtag_usercode                            = 0xFFFFFFFF
 INFO     : 	io_weak_pullup                           = on
 INFO     : Finished generating "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.hex"
-INFO     : Efinix Bitstream Generator took 2.630999 seconds [FlowMsg::StageDuration]
-INFO     :     Efinix Bitstream Generator took 2.21875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Efinix Bitstream Generator virtual memory usage: begin = 2.644 MB, end = 12.656 MB, delta = 10.012 MB [FlowMsg::VMUsage]
-INFO     :     Efinix Bitstream Generator peak virtual memory usage = 152.812 MB [FlowMsg::VMUsage::Peak]
-INFO     : Efinix Bitstream Generator resident set memory usage: begin = 9.356 MB, end = 22.072 MB, delta = 12.716 MB [FlowMsg::RSSUsage]
-INFO     :     Efinix Bitstream Generator peak resident set memory usage = 159.288 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Efinix Bitstream Generator took 2.6357861 seconds [FlowMsg::StageDuration]
+INFO     :     Efinix Bitstream Generator took 2.203125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Efinix Bitstream Generator virtual memory usage: begin = 2.628 MB, end = 11.508 MB, delta = 8.88 MB [FlowMsg::VMUsage]
+INFO     :     Efinix Bitstream Generator peak virtual memory usage = 152.728 MB [FlowMsg::VMUsage::Peak]
+INFO     : Efinix Bitstream Generator resident set memory usage: begin = 9.416 MB, end = 21.68 MB, delta = 12.264 MB [FlowMsg::RSSUsage]
+INFO     :     Efinix Bitstream Generator peak resident set memory usage = 159.404 MB [FlowMsg::RSSUsage::Peak]
