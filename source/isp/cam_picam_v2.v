@@ -55,12 +55,19 @@ module cam_picam_v2 #(
    input  wire [15:0] ccm_b_r,
    input  wire [15:0] ccm_b_g,
    input  wire [15:0] ccm_b_b,
-   input  wire [1:0]  isp_enable,
+   input  wire [ 1:0] isp_enable,
+   input  wire [11:0] isp_ready,
    input  wire        trigger_capture_frame,
    input  wire        continuous_capture_frame,
    input  wire        rgb_gray,
    input  wire        cam_dma_init_done,
 
+   output reg  [63:0] isp_info5,
+   output reg  [63:0] isp_info4,
+   output reg  [63:0] isp_info3,
+   output reg  [63:0] isp_info2,
+   output reg  [63:0] isp_info1,
+   output reg  [63:0] isp_info0,
    output reg  [31:0] frames_per_second,
    output reg         debug_cam_pixel_remap_fifo_overflow,
    output reg         debug_cam_pixel_remap_fifo_underflow,
@@ -112,10 +119,11 @@ localparam ISP_S_AXIS_WIDTH     = 8*(((ISP_PPC*ISP_PIXEL_BIT_WIDTH)+7)/8);      
 localparam ISP_M_AXIS_WIDTH     = 8*(((ISP_PPC*3*ISP_COMPONENT_WIDTH)+7)/8);      //48
 localparam ISP_LINE_CNT_BIT     = $clog2(MIPI_FRAME_WIDTH/ISP_PPC);
 
+
 wire                            isp_s_axis_tvalid;
 wire [ISP_S_AXIS_WIDTH-1:0]     isp_s_axis_tdata;
 wire                            isp_s_axis_tlast;
-wire                            isp_s_axis_tuser;
+wire [1:0]                      isp_s_axis_tuser;
 wire                            isp_s_axis_tready;
 wire                            isp_m_axis_tvalid;
 wire [ISP_M_AXIS_WIDTH-1:0]     isp_m_axis_tdata;
@@ -126,16 +134,23 @@ reg  [ISP_LINE_CNT_BIT-1:0]     isp_s_line_count;
 reg                             isp_sof_pending;
 
 //AXI-Lite master to the isp_top register bank: programs ALL SEVEN ISP parameter registers
-wire [4:0]                      isp_s_axi_awaddr;
+wire [ 5:0]                     isp_s_axi_awaddr;
 wire                            isp_s_axi_awvalid;
 wire                            isp_s_axi_awready;
 wire [31:0]                     isp_s_axi_wdata;
-wire [3:0]                      isp_s_axi_wstrb;
+wire [ 3:0]                     isp_s_axi_wstrb;
 wire                            isp_s_axi_wvalid;
 wire                            isp_s_axi_wready;
-wire [1:0]                      isp_s_axi_bresp;
+wire [ 1:0]                     isp_s_axi_bresp;
 wire                            isp_s_axi_bvalid;
 wire                            isp_s_axi_bready;
+wire [ 5:0]                     isp_s_axi_araddr;
+wire                            isp_s_axi_arvalid;
+wire                            isp_s_axi_arready;
+wire [31:0]                     isp_s_axi_rdata;
+wire [ 1:0]                     isp_s_axi_rresp;
+wire                            isp_s_axi_rvalid;
+wire                            isp_s_axi_rready;
 
 //gain_control synchroniser + ISP AXI-Lite programming FSM state
 reg  [255:0]                     gain_control_r1;
@@ -143,11 +158,15 @@ reg  [255:0]                     gain_control_synced;
 reg  [255:0]                     gain_control_programmed;
 reg  [255:0]                     gain_control_shadow;
 reg  [  2:0]                     isp_axi_state;
-reg  [  2:0]                     isp_axi_reg_idx;
-reg  [  4:0]                     isp_axi_addr_r;
+reg  [  3:0]                     isp_axi_reg_idx;
+reg  [  5:0]                     isp_axi_addr_r;
 reg  [ 31:0]                     isp_axi_data_r;
 reg                              isp_s_axi_awvalid_r;
 reg                              isp_s_axi_wvalid_r;
+reg  [ 11:0]                     isp_ready_r1;
+reg  [ 11:0]                     isp_ready_synced;
+reg  [ 11:0]                     isp_ready_programmed;
+reg  [ 11:0]                     isp_ready_shadow;
 
 localparam ISP_AXI_IDLE   = 3'd0;
 localparam ISP_AXI_ASSERT = 3'd1;
@@ -235,21 +254,21 @@ assign cam_pixel_remap_2ppc_valid  = cam_pixel_remap_fifo_rvalid || cam_pixel_re
 assign cam_pixel_remap_2ppc_data   = (cam_pixel_remap_fifo_rvalid) ? cam_pixel_remap_fifo_rdata [19:0] : cam_pixel_remap_fifo_rdata_r;
 
 cam_pixel_remap_fifo u_cam_pixel_remap_fifo (
-   .almost_full_o  (),
-   .full_o         (),
-   .overflow_o     (cam_pixel_remap_fifo_overflow),
-   .wr_ack_o       (),
-   .empty_o        (cam_pixel_remap_fifo_empty),
-   .almost_empty_o (),
+   .almost_full_o  (                              ),
+   .full_o         (                              ),
+   .overflow_o     (cam_pixel_remap_fifo_overflow ),
+   .wr_ack_o       (                              ),
+   .empty_o        (cam_pixel_remap_fifo_empty    ),
+   .almost_empty_o (                              ),
    .underflow_o    (cam_pixel_remap_fifo_underflow),
-   .rd_valid_o     (cam_pixel_remap_fifo_rvalid),
-   .rdata          (cam_pixel_remap_fifo_rdata),
-   .clk_i          (mipi_pclk),
-   .wr_en_i        (cam_pixel_remap_fifo_wvalid),
-   .rd_en_i        (cam_pixel_remap_fifo_re),
-   .a_rst_i        (~rst_n),
-   .wdata          (cam_pixel_remap_fifo_wdata),
-   .datacount_o    ()
+   .rd_valid_o     (cam_pixel_remap_fifo_rvalid   ),
+   .rdata          (cam_pixel_remap_fifo_rdata    ),
+   .clk_i          (mipi_pclk                     ),
+   .wr_en_i        (cam_pixel_remap_fifo_wvalid   ),
+   .rd_en_i        (cam_pixel_remap_fifo_re       ),
+   .a_rst_i        (~rst_n                        ),
+   .wdata          (cam_pixel_remap_fifo_wdata    ),
+   .datacount_o    (                              )
 );
 
 //Adjusted vsync signal for 2PPC outputs
@@ -263,6 +282,7 @@ reg                            vsync_2PPC_pre;
 reg                            delay_count_en;
 reg [VSYNC_2PPC_COUNT_BIT-1:0] delay_count;
 wire                           cam_vs_2PPC;
+wire                           end_of_frame;
 
 assign cam_vs_2PPC = delay_count_en && (delay_count==DELAY_VSYNC_2PPC-1);
 
@@ -309,11 +329,14 @@ begin
    if (~rst_n) begin
       isp_s_line_count <= {ISP_LINE_CNT_BIT{1'b0}};
       isp_sof_pending  <= 1'b1;   //FIX: arm SOF for the first captured frame
+      cam_y_count      <= {CAM_Y_COUNT_BIT{1'b0}};
    end else begin
       isp_s_line_count <= (cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
                           (cam_pixel_remap_2ppc_valid)                                                     ? isp_s_line_count + 1'b1 : isp_s_line_count;
-      isp_sof_pending  <= (cam_vs_2PPC)                 ? 1'b1 :
-                          (cam_pixel_remap_2ppc_valid)  ? 1'b0 : isp_sof_pending;
+      isp_sof_pending  <= (cam_vs_2PPC)                                              ? 1'b1 :
+                          (cam_pixel_remap_2ppc_valid && isp_s_axis_tready)          ? 1'b0 : isp_sof_pending;
+      cam_y_count      <= (isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1)) ? {CAM_Y_COUNT_BIT{1'b0}} :
+                          (isp_s_axis_tlast)                                         ? cam_y_count + 1'b1 : cam_y_count;
    end
 end
 
@@ -325,55 +348,52 @@ assign isp_s_axis_tvalid = cam_pixel_remap_2ppc_valid;
 assign isp_s_axis_tdata  = {2'b00, cam_pixel_remap_2ppc_data[19:10],    //pixel 1 (odd)
                             2'b00,cam_pixel_remap_2ppc_data[9:0]};  //pixel 0 (even)
 assign isp_s_axis_tlast  = cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
-assign isp_s_axis_tuser  = isp_sof_pending;
-//NOTE: isp_s_axis_tready is intentionally not used to gate the camera
-//source - the MIPI pixel stream can't be paused. isp_top's internal
-//pipeline is assumed to sustain 1 beat/cycle so tready should stay high
-//in normal operation; if it ever deasserts, that beat's pixels are lost.
+assign end_of_frame      = isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1);
+assign isp_s_axis_tuser  = {end_of_frame, isp_sof_pending};
 
 isp_top #(
    //working design. (0=BG, 1=GB, 2=GR, 3=RG)
-   .CFA_ORIENTATION    (3),              //RGGB - matches old cam_raw_to_rgb/cam_rgb_gain
-   .MAX_RESOLUTION     (2048),           //RES_2K - covers MIPI_FRAME_WIDTH up to 1920
-   .PIXEL_PER_CYCLE    (ISP_PPC),
-   .PIXEL_BIT_WIDTH    (ISP_PIXEL_BIT_WIDTH),
-   .COMPONENT_BIT_WIDTH(ISP_COMPONENT_WIDTH),
-   .S_AXIS_DATA_WIDTH  (ISP_S_AXIS_WIDTH),
-   .M_AXIS_DATA_WIDTH  (ISP_M_AXIS_WIDTH),
-   .TUSER_WIDTH        (1)
+   .CFA_ORIENTATION     (3                  ), //RGGB - matches old cam_raw_to_rgb/cam_rgb_gain
+   .MAX_RESOLUTION      (2048               ), //RES_2K - covers MIPI_FRAME_WIDTH up to 1920
+   .PIXEL_PER_CYCLE     (ISP_PPC            ),
+   .PIXEL_BIT_WIDTH     (ISP_PIXEL_BIT_WIDTH),
+   .COMPONENT_BIT_WIDTH (ISP_COMPONENT_WIDTH),
+   .S_AXIS_DATA_WIDTH   (ISP_S_AXIS_WIDTH   ),
+   .M_AXIS_DATA_WIDTH   (ISP_M_AXIS_WIDTH   ),
+   .TUSER_WIDTH         (2                  )
 ) u_isp_top (
-   .aclk           (mipi_pclk),
-   .aresetn        (rst_n),
+   .aclk                (mipi_pclk          ),
+   .aresetn             (rst_n              ),
 
-   .s_axi_awaddr   (isp_s_axi_awaddr),
-   .s_axi_awvalid  (isp_s_axi_awvalid),
-   .s_axi_awready  (isp_s_axi_awready),
-   .s_axi_wdata    (isp_s_axi_wdata),
-   .s_axi_wstrb    (isp_s_axi_wstrb),
-   .s_axi_wvalid   (isp_s_axi_wvalid),
-   .s_axi_wready   (isp_s_axi_wready),
-   .s_axi_bresp    (isp_s_axi_bresp),
-   .s_axi_bvalid   (isp_s_axi_bvalid),
-   .s_axi_bready   (isp_s_axi_bready),
-   .s_axi_araddr   (5'd0),
-   .s_axi_arvalid  (1'b0),
-   .s_axi_arready  (),
-   .s_axi_rdata    (),
-   .s_axi_rresp    (),
-   .s_axi_rvalid   (),
-   .s_axi_rready   (1'b1),
+   .s_axi_awaddr        (isp_s_axi_awaddr   ),
+   .s_axi_awvalid       (isp_s_axi_awvalid  ),
+   .s_axi_awready       (isp_s_axi_awready  ),
+   .s_axi_wdata         (isp_s_axi_wdata    ),
+   .s_axi_wstrb         (isp_s_axi_wstrb    ),
+   .s_axi_wvalid        (isp_s_axi_wvalid   ),
+   .s_axi_wready        (isp_s_axi_wready   ),
+   .s_axi_bresp         (isp_s_axi_bresp    ),
+   .s_axi_bvalid        (isp_s_axi_bvalid   ),
+   .s_axi_bready        (isp_s_axi_bready   ),
+   .s_axi_araddr        (isp_s_axi_araddr   ),
+   .s_axi_arvalid       (isp_s_axi_arvalid  ),
+   .s_axi_arready       (isp_s_axi_arready  ),
+   .s_axi_rdata         (isp_s_axi_rdata    ),
+   .s_axi_rresp         (isp_s_axi_rresp    ),
+   .s_axi_rvalid        (isp_s_axi_rvalid   ),
+   .s_axi_rready        (isp_s_axi_rready   ),
 
-   .s_axis_tdata   (isp_s_axis_tdata),
-   .s_axis_tvalid  (isp_s_axis_tvalid),
-   .s_axis_tready  (isp_s_axis_tready),
-   .s_axis_tlast   (isp_s_axis_tlast),
-   .s_axis_tuser   (isp_s_axis_tuser),
+   .s_axis_tdata        (isp_s_axis_tdata   ),
+   .s_axis_tvalid       (isp_s_axis_tvalid  ),
+   .s_axis_tready       (isp_s_axis_tready  ),
+   .s_axis_tlast        (isp_s_axis_tlast   ),
+   .s_axis_tuser        (isp_s_axis_tuser   ),
 
-   .m_axis_tdata   (isp_m_axis_tdata),
-   .m_axis_tvalid  (isp_m_axis_tvalid),
-   .m_axis_tready  (1'b1),
-   .m_axis_tlast   (isp_m_axis_tlast),
-   .m_axis_tuser   (isp_m_axis_tuser)
+   .m_axis_tdata        (isp_m_axis_tdata   ),
+   .m_axis_tvalid       (isp_m_axis_tvalid  ),
+   .m_axis_tready       (1'b1               ),
+   .m_axis_tlast        (isp_m_axis_tlast   ),
+   .m_axis_tuser        (isp_m_axis_tuser   )
 );
 
 //Unpack isp_top's 2PPC RGB888 output into this module's existing 16-bit
@@ -392,13 +412,15 @@ assign rgb_pixel_g_out     = {isp_m_axis_tdata[31:24], isp_m_axis_tdata[7:0]};
 assign rgb_pixel_b_out     = {isp_m_axis_tdata[39:32], isp_m_axis_tdata[15:8]};
 
 //------------------------------------------------------------------------
-// ISP parameter programming
+// ISP parameter programming & lantency reading
 //------------------------------------------------------------------------
 
 always @(posedge mipi_pclk)
 begin
    gain_control_r1     <= gain_control;
    gain_control_synced <= gain_control_r1;
+   isp_ready_r1        <= isp_ready;
+   isp_ready_synced    <= isp_ready_r1;
 end
 
 always @(posedge mipi_pclk)
@@ -407,9 +429,11 @@ begin
    begin
       gain_control_programmed <= {256{1'b1}};  // != any APB reset value - forces initial programming
       gain_control_shadow     <= 256'd0;
+      isp_ready_programmed    <= 12'b0;
+      isp_ready_shadow        <= 12'b0;
       isp_axi_state           <= ISP_AXI_IDLE;
-      isp_axi_reg_idx         <= 3'd0;
-      isp_axi_addr_r          <= 5'd0;
+      isp_axi_reg_idx         <= 4'd0;
+      isp_axi_addr_r          <= 6'd0;
       isp_axi_data_r          <= 32'd0;
       isp_s_axi_awvalid_r     <= 1'b0;
       isp_s_axi_wvalid_r      <= 1'b0;
@@ -421,15 +445,24 @@ begin
          begin
             if (gain_control_synced != gain_control_programmed)
             begin
-               if (isp_axi_reg_idx == 3'd0)
+               if (isp_axi_reg_idx == 4'd0)
                   gain_control_shadow <= gain_control_synced;
-               //awaddr[4:2] = register index, byte address = index*4
                isp_axi_addr_r        <= {isp_axi_reg_idx, 2'b00};
                //32-bit double-word slice: bits [31:0] for reg0 up to [223:192] for reg6
                isp_axi_data_r        <= gain_control_synced[32*isp_axi_reg_idx +: 32];
                isp_s_axi_awvalid_r   <= 1'b1;
                isp_s_axi_wvalid_r    <= 1'b1;
                isp_axi_state         <= ISP_AXI_ASSERT;
+            end
+            else if (isp_ready_synced != isp_ready_programmed)
+            begin
+               isp_ready_shadow      <= isp_ready_synced;
+               isp_axi_addr_r        <= {4'd8, 2'b00};
+               isp_axi_data_r        <= {20'b0, isp_ready_synced[11:0]};
+               isp_s_axi_awvalid_r   <= 1'b1;
+               isp_s_axi_wvalid_r    <= 1'b1;
+               isp_axi_state         <= ISP_AXI_ASSERT;
+               isp_axi_reg_idx       <= 4'd8;
             end
          end
          ISP_AXI_ASSERT:
@@ -447,16 +480,21 @@ begin
          begin
             if (isp_s_axi_bvalid)
             begin
-               if (isp_axi_reg_idx == 3'd7)
+               if (isp_axi_reg_idx == 4'd8)
+               begin
+                  isp_ready_programmed <= isp_ready_shadow;
+                  isp_axi_reg_idx         <= 4'd0;
+               end
+               else if (isp_axi_reg_idx == 4'd7)
                begin
                   //value as programmed (shadow: if gain_control changed
                   //mid-sequence a new pass is triggered automatically)
                   gain_control_programmed <= gain_control_shadow;
-                  isp_axi_reg_idx         <= 3'd0;
+                  isp_axi_reg_idx         <= 4'd0;
                end
                else
                begin
-                  isp_axi_reg_idx <= isp_axi_reg_idx + 3'd1;
+                  isp_axi_reg_idx <= isp_axi_reg_idx + 4'd1;
                end
                isp_axi_state <= ISP_AXI_IDLE;
             end
@@ -466,15 +504,78 @@ begin
    end
 end
 
-//AXI-Lite master drive (read side unused - tied off)
-assign isp_s_axi_awaddr  = isp_axi_addr_r;
-assign isp_s_axi_awvalid = isp_s_axi_awvalid_r;
-assign isp_s_axi_wdata   = isp_axi_data_r;
-assign isp_s_axi_wstrb   = 4'b1111;
-assign isp_s_axi_wvalid  = isp_s_axi_wvalid_r;
-assign isp_s_axi_bready  = 1'b1;
+localparam   RD_IDLE            = 1'b0;
+localparam   RD_DATA            = 1'b1;
 
-//Perform cropping and scaling 
+// state for read channel
+reg [ 0:0]                       rd_state = RD_IDLE;
+// read signals
+reg                              axi_rden;
+reg [ 5:0]                       axi_araddr;
+reg                              axi_arvalid;
+reg [31:0]                       axi_rdata[0:11];
+reg                              axi_rready;
+
+// read state machine
+always_ff @ (posedge mipi_pclk) begin
+  case (rd_state)
+    RD_IDLE: begin
+      axi_araddr  <= axi_araddr == {6'b101100} ? {6{1'b0}} : axi_araddr + 8;
+      axi_rden    <= 1'b0;
+      axi_arvalid <= 1'b1;
+      axi_rready  <= 1'b0;
+      if ((isp_s_axi_arready == 1'b1) && (axi_arvalid == 1'b1)) begin
+        axi_rden    <= 1'b1;
+        axi_arvalid <= 1'b0;
+        axi_rready  <= 1'b0;
+        rd_state    <= RD_DATA;
+      end
+    end
+    RD_DATA: begin
+      axi_rden    <= 1'b0;
+      axi_arvalid <= 1'b0;
+      axi_rready  <= 1'b1;
+      if ((axi_rready == 1'b1) && (isp_s_axi_rvalid == 1'b1)) begin
+        axi_rden    <= 1'b0;
+        axi_arvalid <= 1'b1;
+        axi_rready  <= 1'b0;
+        rd_state    <= RD_IDLE;
+      end
+    end
+    default: begin
+      rd_state <= RD_IDLE;
+    end
+  endcase
+  if (rst_n == 1'b0) begin
+      rd_state <= RD_IDLE;
+      axi_rden    <= 'b0;
+      axi_arvalid <= 'b0;
+      axi_rready  <= 'b0;
+      axi_araddr  <= 'b0;
+  end
+  if (axi_rden == 1'b1) begin
+      axi_rdata[axi_araddr[5:2]] <= isp_s_axi_rdata;
+  end
+end
+
+//AXI-Lite master drive (read side unused - tied off)
+assign isp_s_axi_awaddr      = isp_axi_addr_r;
+assign isp_s_axi_awvalid     = isp_s_axi_awvalid_r;
+assign isp_s_axi_wdata       = isp_axi_data_r;
+assign isp_s_axi_wstrb       = 4'b1111;
+assign isp_s_axi_wvalid      = isp_s_axi_wvalid_r;
+assign isp_s_axi_bready      = 1'b1;
+assign isp_s_axi_araddr      = axi_araddr;
+assign isp_s_axi_arvalid     = axi_arvalid;
+assign isp_s_axi_rready      = axi_rready;
+assign isp_info0             = {axi_rdata[ 6],axi_rdata[0]};
+assign isp_info1             = {axi_rdata[ 7],axi_rdata[1]};
+assign isp_info2             = {axi_rdata[ 8],axi_rdata[2]};
+assign isp_info3             = {axi_rdata[ 9],axi_rdata[3]};
+assign isp_info4             = {axi_rdata[10],axi_rdata[4]};
+assign isp_info5             = {axi_rdata[11],axi_rdata[5]};
+
+//Perform cropping and scaling
 reg [10:0] mipi_x_count;
 reg [10:0] mipi_y_count;
 reg [10:0] crop_x_count;
@@ -528,7 +629,7 @@ end
 
 //Resolution adjustment to be compatible with the deployed display panel and available memory/processing bandwidth
 //Default crop from 1920x1080 to 1080x1080 - 2PPC
-cam_crop #(  
+cam_crop #(
    .P_DEPTH (16),
    .X_START ((MIPI_FRAME_WIDTH-2*FRAME_WIDTH)/4), //((MIPI_FRAME_WIDTH-2*FRAME_WIDTH)/2)/2 - With consideration of subsequent 2x downscaling
    .Y_START (0),
@@ -693,11 +794,11 @@ begin
       cam_dma_init_done_r3                 <= cam_dma_init_done_r2;
       cam_dma_write                        <= (~cam_dma_init_done_r3 && cam_dma_init_done_r2)            ? 1'b1 :
                                               (cam_dma_wvalid && (cam_dma_count==DMA_TRANSFER_LENGTH-1)) ? 1'b0 : cam_dma_write;
-      
+
       //To determine cam_dma_wlast
       cam_dma_count                        <= (cam_dma_wvalid && (cam_dma_count==DMA_TRANSFER_LENGTH-1)) ? {CAM_DMA_COUNT_BIT{1'b0}}                           :
                                               (cam_dma_wvalid)                                           ? cam_dma_count + {{CAM_DMA_COUNT_BIT-1{1'b0}}, 1'b1} : cam_dma_count;
-      
+
       //Debug registers
       debug_cam_pixel_remap_fifo_overflow  <= (cam_pixel_remap_fifo_overflow)   ? 1'b1 : debug_cam_pixel_remap_fifo_overflow;
       debug_cam_pixel_remap_fifo_underflow <= (cam_pixel_remap_fifo_underflow)  ? 1'b1 : debug_cam_pixel_remap_fifo_underflow;

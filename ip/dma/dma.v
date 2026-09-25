@@ -43,7 +43,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-`define IP_UUID _44d0531f71c04713b005469f3b8ead04
+`define IP_UUID _2176bebf0e03438c95113a4b5fdff9eb
 `define IP_NAME_CONCAT(a,b) a``b
 `define IP_MODULE_NAME(name) `IP_NAME_CONCAT(name,`IP_UUID)
 module dma
@@ -231,11 +231,12 @@ module dma
 endmodule
 
 // Generator : SpinalHDL dev    git head : a69f4b9a329be784802c37cd8038b7dc9aec3094
-// Component : EfxDMA_44d0531f71c04713b005469f3b8ead04
+// Component : EfxDMA_2176bebf0e03438c95113a4b5fdff9eb
+// Git hash  : 239e07be6cdf7b2e5d7aa2dcdb585389095aa6b2
 
 `timescale 1ns/1ps
 
-module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [13:0]   ctrl_PADDR,
   input  wire [0:0]    ctrl_PSEL,
   input  wire          ctrl_PENABLE,
@@ -946,7 +947,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
   wire       [0:0]    interconnect_write_aggregated_slaveModel_arbiterGen_oneToOne_arbiter_rsp_payload_fragment_opcode;
   wire       [13:0]   interconnect_write_aggregated_slaveModel_arbiterGen_oneToOne_arbiter_rsp_payload_fragment_context;
 
-  EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 core (
+  EfxDMA_Core_2176bebf0e03438c95113a4b5fdff9eb core (
     .io_read_cmd_valid                     (core_io_read_cmd_valid                                                                                 ), //o
     .io_read_cmd_ready                     (interconnect_read_aggregated_slaveModel_arbiterGen_oneToOne_arbiter_cmd_ready                          ), //i
     .io_read_cmd_payload_last              (core_io_read_cmd_payload_last                                                                          ), //o
@@ -1020,7 +1021,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                                   (clk                                                                                                    ), //i
     .reset                                 (reset                                                                                                  )  //i
   );
-  EfxDMA_Apb3CC_44d0531f71c04713b005469f3b8ead04 withCtrlCc_apbCc (
+  EfxDMA_Apb3CC_2176bebf0e03438c95113a4b5fdff9eb withCtrlCc_apbCc (
     .io_input_PADDR      (ctrl_PADDR[13:0]                       ), //i
     .io_input_PSEL       (ctrl_PSEL                              ), //i
     .io_input_PENABLE    (ctrl_PENABLE                           ), //i
@@ -1042,13 +1043,13 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                 (clk                                    ), //i
     .reset               (reset                                  )  //i
   );
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_12_44d0531f71c04713b005469f3b8ead04 io_interrupts_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_12_2176bebf0e03438c95113a4b5fdff9eb io_interrupts_buffercc (
     .io_dataIn  (core_io_interrupts[4:0]               ), //i
     .io_dataOut (io_interrupts_buffercc_io_dataOut[4:0]), //o
     .ctrl_clk   (ctrl_clk                              ), //i
     .ctrl_reset (ctrl_reset                            )  //i
   );
-  EfxDMA_BmbSourceRemover_44d0531f71c04713b005469f3b8ead04 readLogic_sourceRemover (
+  EfxDMA_BmbSourceRemover_2176bebf0e03438c95113a4b5fdff9eb readLogic_sourceRemover (
     .io_input_cmd_valid                     (readLogic_resized_cmd_valid                                         ), //i
     .io_input_cmd_ready                     (readLogic_sourceRemover_io_input_cmd_ready                          ), //o
     .io_input_cmd_payload_last              (readLogic_resized_cmd_payload_last                                  ), //i
@@ -1078,7 +1079,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .io_output_rsp_payload_fragment_data    (readLogic_bridge_io_input_rsp_payload_fragment_data[127:0]          ), //i
     .io_output_rsp_payload_fragment_context (readLogic_bridge_io_input_rsp_payload_fragment_context[24:0]        )  //i
   );
-  EfxDMA_BmbToAxi4ReadOnlyBridge_44d0531f71c04713b005469f3b8ead04 readLogic_bridge (
+  EfxDMA_BmbToAxi4ReadOnlyBridge_2176bebf0e03438c95113a4b5fdff9eb readLogic_bridge (
     .io_input_cmd_valid                    (readLogic_sourceRemover_io_output_cmd_valid                         ), //i
     .io_input_cmd_ready                    (readLogic_bridge_io_input_cmd_ready                                 ), //o
     .io_input_cmd_payload_last             (readLogic_sourceRemover_io_output_cmd_payload_last                  ), //i
@@ -1107,7 +1108,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                                   (clk                                                                 ), //i
     .reset                                 (reset                                                               )  //i
   );
-  EfxDMA_StreamFifo_3_44d0531f71c04713b005469f3b8ead04 readLogic_beforeQueue_fifo (
+  EfxDMA_StreamFifo_3_2176bebf0e03438c95113a4b5fdff9eb readLogic_beforeQueue_fifo (
     .io_push_valid        (readLogic_beforeQueue_valid                          ), //i
     .io_push_ready        (readLogic_beforeQueue_fifo_io_push_ready             ), //o
     .io_push_payload_data (readLogic_beforeQueue_payload_data[127:0]            ), //i
@@ -1124,7 +1125,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                  (clk                                                  ), //i
     .reset                (reset                                                )  //i
   );
-  EfxDMA_BmbSourceRemover_1_44d0531f71c04713b005469f3b8ead04 writeLogic_sourceRemover (
+  EfxDMA_BmbSourceRemover_1_2176bebf0e03438c95113a4b5fdff9eb writeLogic_sourceRemover (
     .io_input_cmd_valid                     (writeLogic_resized_cmd_valid                                         ), //i
     .io_input_cmd_ready                     (writeLogic_sourceRemover_io_input_cmd_ready                          ), //o
     .io_input_cmd_payload_last              (writeLogic_resized_cmd_payload_last                                  ), //i
@@ -1156,7 +1157,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .io_output_rsp_payload_fragment_opcode  (writeLogic_retainer_io_input_rsp_payload_fragment_opcode             ), //i
     .io_output_rsp_payload_fragment_context (writeLogic_retainer_io_input_rsp_payload_fragment_context[14:0]      )  //i
   );
-  EfxDMA_BmbWriteRetainer_44d0531f71c04713b005469f3b8ead04 writeLogic_retainer (
+  EfxDMA_BmbWriteRetainer_2176bebf0e03438c95113a4b5fdff9eb writeLogic_retainer (
     .io_input_cmd_valid                     (writeLogic_sourceRemover_io_output_cmd_valid                         ), //i
     .io_input_cmd_ready                     (writeLogic_retainer_io_input_cmd_ready                               ), //o
     .io_input_cmd_payload_last              (writeLogic_sourceRemover_io_output_cmd_payload_last                  ), //i
@@ -1188,7 +1189,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                                    (clk                                                                  ), //i
     .reset                                  (reset                                                                )  //i
   );
-  EfxDMA_BmbToAxi4WriteOnlyBridge_44d0531f71c04713b005469f3b8ead04 writeLogic_bridge (
+  EfxDMA_BmbToAxi4WriteOnlyBridge_2176bebf0e03438c95113a4b5fdff9eb writeLogic_bridge (
     .io_input_cmd_valid                    (writeLogic_retainer_io_output_cmd_valid                         ), //i
     .io_input_cmd_ready                    (writeLogic_bridge_io_input_cmd_ready                            ), //o
     .io_input_cmd_payload_last             (writeLogic_retainer_io_output_cmd_payload_last                  ), //i
@@ -1221,7 +1222,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                                   (clk                                                             ), //i
     .reset                                 (reset                                                           )  //i
   );
-  EfxDMA_StreamFifoCC_44d0531f71c04713b005469f3b8ead04 inputsAdapter_0_crossclock_fifo (
+  EfxDMA_StreamFifoCC_2176bebf0e03438c95113a4b5fdff9eb inputsAdapter_0_crossclock_fifo (
     .io_push_valid        (dat0_i_tvalid                                            ), //i
     .io_push_ready        (inputsAdapter_0_crossclock_fifo_io_push_ready            ), //o
     .io_push_payload_data (dat0_i_tdata[63:0]                                       ), //i
@@ -1241,7 +1242,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                  (clk                                                      ), //i
     .reset                (reset                                                    )  //i
   );
-  EfxDMA_BsbUpSizerDense_44d0531f71c04713b005469f3b8ead04 inputsAdapter_1_upsizer_logic (
+  EfxDMA_BsbUpSizerDense_2176bebf0e03438c95113a4b5fdff9eb inputsAdapter_1_upsizer_logic (
     .io_input_valid         (dat3_i_tvalid                                             ), //i
     .io_input_ready         (inputsAdapter_1_upsizer_logic_io_input_ready              ), //o
     .io_input_payload_data  (dat3_i_tdata[31:0]                                        ), //i
@@ -1257,7 +1258,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .dat3_i_clk             (dat3_i_clk                                                ), //i
     .dat3_i_reset           (dat3_i_reset                                              )  //i
   );
-  EfxDMA_StreamFifoCC_1_44d0531f71c04713b005469f3b8ead04 inputsAdapter_1_crossclock_fifo (
+  EfxDMA_StreamFifoCC_1_2176bebf0e03438c95113a4b5fdff9eb inputsAdapter_1_crossclock_fifo (
     .io_push_valid        (inputsAdapter_1_upsizer_logic_io_output_valid             ), //i
     .io_push_ready        (inputsAdapter_1_crossclock_fifo_io_push_ready             ), //o
     .io_push_payload_data (inputsAdapter_1_upsizer_logic_io_output_payload_data[63:0]), //i
@@ -1277,7 +1278,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .clk                  (clk                                                       ), //i
     .reset                (reset                                                     )  //i
   );
-  EfxDMA_StreamFifoCC_2_44d0531f71c04713b005469f3b8ead04 outputsAdapter_0_crossclock_fifo (
+  EfxDMA_StreamFifoCC_2_2176bebf0e03438c95113a4b5fdff9eb outputsAdapter_0_crossclock_fifo (
     .io_push_valid        (outputsAdapter_0_ptr_valid                                ), //i
     .io_push_ready        (outputsAdapter_0_crossclock_fifo_io_push_ready            ), //o
     .io_push_payload_data (outputsAdapter_0_ptr_payload_data[63:0]                   ), //i
@@ -1297,7 +1298,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .dat1_o_clk           (dat1_o_clk                                                ), //i
     .dat1_o_reset         (dat1_o_reset                                              )  //i
   );
-  EfxDMA_StreamFifoCC_3_44d0531f71c04713b005469f3b8ead04 outputsAdapter_1_crossclock_fifo (
+  EfxDMA_StreamFifoCC_3_2176bebf0e03438c95113a4b5fdff9eb outputsAdapter_1_crossclock_fifo (
     .io_push_valid        (outputsAdapter_1_ptr_valid                                ), //i
     .io_push_ready        (outputsAdapter_1_crossclock_fifo_io_push_ready            ), //o
     .io_push_payload_data (outputsAdapter_1_ptr_payload_data[63:0]                   ), //i
@@ -1317,7 +1318,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .dat2_o_clk           (dat2_o_clk                                                ), //i
     .dat2_o_reset         (dat2_o_reset                                              )  //i
   );
-  EfxDMA_StreamFifoCC_4_44d0531f71c04713b005469f3b8ead04 outputsAdapter_2_crossclock_fifo (
+  EfxDMA_StreamFifoCC_4_2176bebf0e03438c95113a4b5fdff9eb outputsAdapter_2_crossclock_fifo (
     .io_push_valid        (outputsAdapter_2_ptr_valid                                ), //i
     .io_push_ready        (outputsAdapter_2_crossclock_fifo_io_push_ready            ), //o
     .io_push_payload_data (outputsAdapter_2_ptr_payload_data[63:0]                   ), //i
@@ -1337,7 +1338,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
     .dat4_o_clk           (dat4_o_clk                                                ), //i
     .dat4_o_reset         (dat4_o_reset                                              )  //i
   );
-  EfxDMA_BsbDownSizerSparse_44d0531f71c04713b005469f3b8ead04 outputsAdapter_2_sparseDownsizer_logic (
+  EfxDMA_BsbDownSizerSparse_2176bebf0e03438c95113a4b5fdff9eb outputsAdapter_2_sparseDownsizer_logic (
     .io_input_valid         (outputsAdapter_2_crossclock_fifo_io_pop_valid                      ), //i
     .io_input_ready         (outputsAdapter_2_sparseDownsizer_logic_io_input_ready              ), //o
     .io_input_payload_data  (outputsAdapter_2_crossclock_fifo_io_pop_payload_data[63:0]         ), //i
@@ -2066,7 +2067,7 @@ module EfxDMA_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BsbDownSizerSparse_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BsbDownSizerSparse_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_valid,
   output wire          io_input_ready,
   input  wire [63:0]   io_input_payload_data,
@@ -2123,7 +2124,7 @@ module EfxDMA_BsbDownSizerSparse_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifoCC_4_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifoCC_4_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [63:0]   io_push_payload_data,
@@ -2217,13 +2218,13 @@ module EfxDMA_StreamFifoCC_4_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04 popToPushGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb popToPushGray_buffercc (
     .io_dataIn  (popToPushGray[4:0]                    ), //i
     .io_dataOut (popToPushGray_buffercc_io_dataOut[4:0]), //o
     .clk        (clk                                   ), //i
     .reset      (reset                                 )  //i
   );
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_11_44d0531f71c04713b005469f3b8ead04 pushToPopGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_11_2176bebf0e03438c95113a4b5fdff9eb pushToPopGray_buffercc (
     .io_dataIn    (pushToPopGray[4:0]                    ), //i
     .io_dataOut   (pushToPopGray_buffercc_io_dataOut[4:0]), //o
     .dat4_o_clk   (dat4_o_clk                            ), //i
@@ -2335,7 +2336,7 @@ module EfxDMA_StreamFifoCC_4_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifoCC_3_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifoCC_3_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [63:0]   io_push_payload_data,
@@ -2429,13 +2430,13 @@ module EfxDMA_StreamFifoCC_3_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04 popToPushGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb popToPushGray_buffercc (
     .io_dataIn  (popToPushGray[4:0]                    ), //i
     .io_dataOut (popToPushGray_buffercc_io_dataOut[4:0]), //o
     .clk        (clk                                   ), //i
     .reset      (reset                                 )  //i
   );
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_9_44d0531f71c04713b005469f3b8ead04 pushToPopGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_9_2176bebf0e03438c95113a4b5fdff9eb pushToPopGray_buffercc (
     .io_dataIn    (pushToPopGray[4:0]                    ), //i
     .io_dataOut   (pushToPopGray_buffercc_io_dataOut[4:0]), //o
     .dat2_o_clk   (dat2_o_clk                            ), //i
@@ -2547,7 +2548,7 @@ module EfxDMA_StreamFifoCC_3_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifoCC_2_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifoCC_2_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [63:0]   io_push_payload_data,
@@ -2641,13 +2642,13 @@ module EfxDMA_StreamFifoCC_2_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04 popToPushGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb popToPushGray_buffercc (
     .io_dataIn  (popToPushGray[4:0]                    ), //i
     .io_dataOut (popToPushGray_buffercc_io_dataOut[4:0]), //o
     .clk        (clk                                   ), //i
     .reset      (reset                                 )  //i
   );
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_7_44d0531f71c04713b005469f3b8ead04 pushToPopGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_7_2176bebf0e03438c95113a4b5fdff9eb pushToPopGray_buffercc (
     .io_dataIn    (pushToPopGray[4:0]                    ), //i
     .io_dataOut   (pushToPopGray_buffercc_io_dataOut[4:0]), //o
     .dat1_o_clk   (dat1_o_clk                            ), //i
@@ -2759,7 +2760,7 @@ module EfxDMA_StreamFifoCC_2_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifoCC_1_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifoCC_1_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [63:0]   io_push_payload_data,
@@ -2853,13 +2854,13 @@ module EfxDMA_StreamFifoCC_1_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_4_44d0531f71c04713b005469f3b8ead04 popToPushGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_4_2176bebf0e03438c95113a4b5fdff9eb popToPushGray_buffercc (
     .io_dataIn    (popToPushGray[4:0]                    ), //i
     .io_dataOut   (popToPushGray_buffercc_io_dataOut[4:0]), //o
     .dat3_i_clk   (dat3_i_clk                            ), //i
     .dat3_i_reset (dat3_i_reset                          )  //i
   );
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04 pushToPopGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb pushToPopGray_buffercc (
     .io_dataIn  (pushToPopGray[4:0]                    ), //i
     .io_dataOut (pushToPopGray_buffercc_io_dataOut[4:0]), //o
     .clk        (clk                                   ), //i
@@ -2971,7 +2972,7 @@ module EfxDMA_StreamFifoCC_1_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BsbUpSizerDense_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BsbUpSizerDense_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_valid,
   output wire          io_input_ready,
   input  wire [31:0]   io_input_payload_data,
@@ -3056,7 +3057,7 @@ module EfxDMA_BsbUpSizerDense_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifoCC_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifoCC_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [63:0]   io_push_payload_data,
@@ -3150,13 +3151,13 @@ module EfxDMA_StreamFifoCC_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_2_44d0531f71c04713b005469f3b8ead04 popToPushGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_2_2176bebf0e03438c95113a4b5fdff9eb popToPushGray_buffercc (
     .io_dataIn    (popToPushGray[4:0]                    ), //i
     .io_dataOut   (popToPushGray_buffercc_io_dataOut[4:0]), //o
     .dat0_i_clk   (dat0_i_clk                            ), //i
     .dat0_i_reset (dat0_i_reset                          )  //i
   );
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04 pushToPopGray_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb pushToPopGray_buffercc (
     .io_dataIn  (pushToPopGray[4:0]                    ), //i
     .io_dataOut (pushToPopGray_buffercc_io_dataOut[4:0]), //o
     .clk        (clk                                   ), //i
@@ -3268,7 +3269,7 @@ module EfxDMA_StreamFifoCC_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BmbToAxi4WriteOnlyBridge_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BmbToAxi4WriteOnlyBridge_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_cmd_valid,
   output wire          io_input_cmd_ready,
   input  wire          io_input_cmd_payload_last,
@@ -3360,7 +3361,7 @@ module EfxDMA_BmbToAxi4WriteOnlyBridge_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_io_output_aw_payload_len_1 = ({1'b0,cmdStage_payload_fragment_length} + _zz_io_output_aw_payload_len_2);
   assign _zz_io_output_aw_payload_len_3 = cmdStage_payload_fragment_address[3 : 0];
   assign _zz_io_output_aw_payload_len_2 = {9'd0, _zz_io_output_aw_payload_len_3};
-  EfxDMA_BmbContextRemover_1_44d0531f71c04713b005469f3b8ead04 contextRemover (
+  EfxDMA_BmbContextRemover_1_2176bebf0e03438c95113a4b5fdff9eb contextRemover (
     .io_input_cmd_valid                     (io_input_cmd_valid                                         ), //i
     .io_input_cmd_ready                     (contextRemover_io_input_cmd_ready                          ), //o
     .io_input_cmd_payload_last              (io_input_cmd_payload_last                                  ), //i
@@ -3492,7 +3493,7 @@ module EfxDMA_BmbToAxi4WriteOnlyBridge_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BmbWriteRetainer_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BmbWriteRetainer_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_cmd_valid,
   output wire          io_input_cmd_ready,
   input  wire          io_input_cmd_payload_last,
@@ -3573,7 +3574,7 @@ module EfxDMA_BmbWriteRetainer_44d0531f71c04713b005469f3b8ead04 (
   wire                halt;
   wire                _zz_io_output_cmd_valid;
 
-  EfxDMA_StreamFifo_1_44d0531f71c04713b005469f3b8ead04 io_input_cmd_fifo (
+  EfxDMA_StreamFifo_1_2176bebf0e03438c95113a4b5fdff9eb io_input_cmd_fifo (
     .io_push_valid                    (io_input_cmd_valid                                     ), //i
     .io_push_ready                    (io_input_cmd_fifo_io_push_ready                        ), //o
     .io_push_payload_last             (io_input_cmd_payload_last                              ), //i
@@ -3698,7 +3699,7 @@ module EfxDMA_BmbWriteRetainer_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BmbSourceRemover_1_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BmbSourceRemover_1_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_cmd_valid,
   output wire          io_input_cmd_ready,
   input  wire          io_input_cmd_payload_last,
@@ -3760,7 +3761,7 @@ module EfxDMA_BmbSourceRemover_1_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifo_3_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifo_3_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [127:0]  io_push_payload_data,
@@ -3936,7 +3937,7 @@ module EfxDMA_StreamFifo_3_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BmbToAxi4ReadOnlyBridge_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BmbToAxi4ReadOnlyBridge_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_cmd_valid,
   output wire          io_input_cmd_ready,
   input  wire          io_input_cmd_payload_last,
@@ -3989,7 +3990,7 @@ module EfxDMA_BmbToAxi4ReadOnlyBridge_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_io_output_ar_payload_len_1 = ({1'b0,contextRemover_io_output_cmd_payload_fragment_length} + _zz_io_output_ar_payload_len_2);
   assign _zz_io_output_ar_payload_len_3 = contextRemover_io_output_cmd_payload_fragment_address[3 : 0];
   assign _zz_io_output_ar_payload_len_2 = {9'd0, _zz_io_output_ar_payload_len_3};
-  EfxDMA_BmbContextRemover_44d0531f71c04713b005469f3b8ead04 contextRemover (
+  EfxDMA_BmbContextRemover_2176bebf0e03438c95113a4b5fdff9eb contextRemover (
     .io_input_cmd_valid                     (io_input_cmd_valid                                         ), //i
     .io_input_cmd_ready                     (contextRemover_io_input_cmd_ready                          ), //o
     .io_input_cmd_payload_last              (io_input_cmd_payload_last                                  ), //i
@@ -4042,7 +4043,7 @@ module EfxDMA_BmbToAxi4ReadOnlyBridge_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BmbSourceRemover_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BmbSourceRemover_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_cmd_valid,
   output wire          io_input_cmd_ready,
   input  wire          io_input_cmd_payload_last,
@@ -4101,7 +4102,7 @@ module EfxDMA_BmbSourceRemover_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BufferCC_12_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_12_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [4:0]    io_dataIn,
   output wire [4:0]    io_dataOut,
   input  wire          ctrl_clk,
@@ -4120,7 +4121,7 @@ module EfxDMA_BufferCC_12_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_Apb3CC_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_Apb3CC_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [13:0]   io_input_PADDR,
   input  wire [0:0]    io_input_PSEL,
   input  wire          io_input_PENABLE,
@@ -4181,7 +4182,7 @@ module EfxDMA_Apb3CC_44d0531f71c04713b005469f3b8ead04 (
   wire                outputLogic_outputRsp_payload_PSLVERROR;
   wire                outputLogic_outputCmd_fire;
 
-  EfxDMA_FlowCCUnsafeByToggle_44d0531f71c04713b005469f3b8ead04 flowCCUnsafeByToggle (
+  EfxDMA_FlowCCUnsafeByToggle_2176bebf0e03438c95113a4b5fdff9eb flowCCUnsafeByToggle (
     .io_input_valid           (inputLogic_inputCmd_valid                          ), //i
     .io_input_payload_PADDR   (inputLogic_inputCmd_payload_PADDR[13:0]            ), //i
     .io_input_payload_PWRITE  (inputLogic_inputCmd_payload_PWRITE                 ), //i
@@ -4195,7 +4196,7 @@ module EfxDMA_Apb3CC_44d0531f71c04713b005469f3b8ead04 (
     .clk                      (clk                                                ), //i
     .reset                    (reset                                              )  //i
   );
-  EfxDMA_FlowCCUnsafeByToggle_1_44d0531f71c04713b005469f3b8ead04 flowCCUnsafeByToggle_1 (
+  EfxDMA_FlowCCUnsafeByToggle_1_2176bebf0e03438c95113a4b5fdff9eb flowCCUnsafeByToggle_1 (
     .io_input_valid              (outputLogic_outputRsp_valid                          ), //i
     .io_input_payload_PRDATA     (outputLogic_outputRsp_payload_PRDATA[31:0]           ), //i
     .io_input_payload_PSLVERROR  (outputLogic_outputRsp_payload_PSLVERROR              ), //i
@@ -4315,7 +4316,7 @@ module EfxDMA_Apb3CC_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_Core_2176bebf0e03438c95113a4b5fdff9eb (
   output reg           io_read_cmd_valid,
   input  wire          io_read_cmd_ready,
   output wire          io_read_cmd_payload_last,
@@ -4390,24 +4391,24 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   input  wire          reset
 );
 
-  wire       [12:0]   memory_core_io_writes_0_cmd_payload_address;
+  wire       [11:0]   memory_core_io_writes_0_cmd_payload_address;
   wire       [6:0]    memory_core_io_writes_0_cmd_payload_context;
-  wire       [12:0]   memory_core_io_writes_1_cmd_payload_address;
+  wire       [11:0]   memory_core_io_writes_1_cmd_payload_address;
   wire       [6:0]    memory_core_io_writes_1_cmd_payload_context;
-  wire       [12:0]   memory_core_io_writes_2_cmd_payload_address;
+  wire       [11:0]   memory_core_io_writes_2_cmd_payload_address;
   reg        [15:0]   memory_core_io_writes_2_cmd_payload_mask;
   wire       [8:0]    memory_core_io_writes_2_cmd_payload_context;
   wire                memory_core_io_reads_0_cmd_valid;
-  wire       [12:0]   memory_core_io_reads_0_cmd_payload_address;
+  wire       [11:0]   memory_core_io_reads_0_cmd_payload_address;
   wire       [2:0]    memory_core_io_reads_0_cmd_payload_context;
   wire                memory_core_io_reads_1_cmd_valid;
-  wire       [12:0]   memory_core_io_reads_1_cmd_payload_address;
+  wire       [11:0]   memory_core_io_reads_1_cmd_payload_address;
   wire       [2:0]    memory_core_io_reads_1_cmd_payload_context;
   wire                memory_core_io_reads_2_cmd_valid;
-  wire       [12:0]   memory_core_io_reads_2_cmd_payload_address;
+  wire       [11:0]   memory_core_io_reads_2_cmd_payload_address;
   wire       [2:0]    memory_core_io_reads_2_cmd_payload_context;
-  wire       [12:0]   memory_core_io_reads_3_cmd_payload_address;
-  wire       [14:0]   memory_core_io_reads_3_cmd_payload_context;
+  wire       [11:0]   memory_core_io_reads_3_cmd_payload_address;
+  wire       [13:0]   memory_core_io_reads_3_cmd_payload_context;
   wire       [15:0]   b2m_fsm_aggregate_engine_io_input_payload_mask;
   wire                b2m_fsm_aggregate_engine_io_flush;
   wire       [3:0]    b2m_fsm_aggregate_engine_io_offset;
@@ -4439,18 +4440,18 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                memory_core_io_reads_3_rsp_valid;
   wire       [127:0]  memory_core_io_reads_3_rsp_payload_data;
   wire       [15:0]   memory_core_io_reads_3_rsp_payload_mask;
-  wire       [14:0]   memory_core_io_reads_3_rsp_payload_context;
+  wire       [13:0]   memory_core_io_reads_3_rsp_payload_context;
   wire                b2m_fsm_aggregate_engine_io_input_ready;
   wire       [127:0]  b2m_fsm_aggregate_engine_io_output_data;
   wire       [15:0]   b2m_fsm_aggregate_engine_io_output_mask;
   wire                b2m_fsm_aggregate_engine_io_output_consumed;
   wire       [3:0]    b2m_fsm_aggregate_engine_io_output_usedUntil;
-  wire       [16:0]   _zz_channels_0_fifo_pop_withOverride_backupNext;
-  wire       [16:0]   _zz_channels_0_fifo_pop_withOverride_exposed;
+  wire       [15:0]   _zz_channels_0_fifo_pop_withOverride_backupNext;
+  wire       [15:0]   _zz_channels_0_fifo_pop_withOverride_exposed;
   wire       [26:0]   _zz_channels_0_pop_b2m_selfFlush;
-  wire       [16:0]   _zz_channels_0_pop_b2m_request;
-  wire       [13:0]   _zz_channels_0_pop_b2m_request_1;
-  wire       [12:0]   _zz_channels_0_pop_b2m_request_2;
+  wire       [15:0]   _zz_channels_0_pop_b2m_request;
+  wire       [12:0]   _zz_channels_0_pop_b2m_request_1;
+  wire       [11:0]   _zz_channels_0_pop_b2m_request_2;
   wire       [3:0]    _zz_channels_0_pop_b2m_memPending;
   wire       [3:0]    _zz_channels_0_pop_b2m_memPending_1;
   wire       [0:0]    _zz_channels_0_pop_b2m_memPending_2;
@@ -4458,37 +4459,37 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [0:0]    _zz_channels_0_pop_b2m_memPending_4;
   wire       [31:0]   _zz_channels_0_pop_b2m_address;
   wire       [31:0]   _zz_channels_0_pop_b2m_address_1;
-  wire       [13:0]   _zz_channels_0_fifo_push_available;
-  wire       [16:0]   _zz_channels_1_fifo_pop_withoutOverride_exposed;
+  wire       [12:0]   _zz_channels_0_fifo_push_available;
+  wire       [15:0]   _zz_channels_1_fifo_pop_withoutOverride_exposed;
   wire       [3:0]    _zz_channels_1_push_m2b_memPending;
   wire       [3:0]    _zz_channels_1_push_m2b_memPending_1;
   wire       [0:0]    _zz_channels_1_push_m2b_memPending_2;
   wire       [3:0]    _zz_channels_1_push_m2b_memPending_3;
   wire       [0:0]    _zz_channels_1_push_m2b_memPending_4;
-  wire       [13:0]   _zz_channels_1_push_m2b_loadRequest;
+  wire       [12:0]   _zz_channels_1_push_m2b_loadRequest;
   wire       [8:0]    _zz_channels_1_push_m2b_loadRequest_1;
   wire       [25:0]   _zz_when_DmaSg_l486;
   wire       [31:0]   _zz_channels_1_push_m2b_address;
   wire       [31:0]   _zz_channels_1_push_m2b_address_1;
-  wire       [13:0]   _zz_channels_1_fifo_push_available;
-  wire       [16:0]   _zz_channels_2_fifo_pop_withoutOverride_exposed;
+  wire       [12:0]   _zz_channels_1_fifo_push_available;
+  wire       [15:0]   _zz_channels_2_fifo_pop_withoutOverride_exposed;
   wire       [3:0]    _zz_channels_2_push_m2b_memPending;
   wire       [3:0]    _zz_channels_2_push_m2b_memPending_1;
   wire       [0:0]    _zz_channels_2_push_m2b_memPending_2;
   wire       [3:0]    _zz_channels_2_push_m2b_memPending_3;
   wire       [0:0]    _zz_channels_2_push_m2b_memPending_4;
-  wire       [13:0]   _zz_channels_2_push_m2b_loadRequest;
+  wire       [12:0]   _zz_channels_2_push_m2b_loadRequest;
   wire       [8:0]    _zz_channels_2_push_m2b_loadRequest_1;
   wire       [25:0]   _zz_when_DmaSg_l486_1;
   wire       [31:0]   _zz_channels_2_push_m2b_address;
   wire       [31:0]   _zz_channels_2_push_m2b_address_1;
-  wire       [13:0]   _zz_channels_2_fifo_push_available;
-  wire       [16:0]   _zz_channels_3_fifo_pop_withOverride_backupNext;
-  wire       [16:0]   _zz_channels_3_fifo_pop_withOverride_exposed;
+  wire       [12:0]   _zz_channels_2_fifo_push_available;
+  wire       [15:0]   _zz_channels_3_fifo_pop_withOverride_backupNext;
+  wire       [15:0]   _zz_channels_3_fifo_pop_withOverride_exposed;
   wire       [26:0]   _zz_channels_3_pop_b2m_selfFlush;
-  wire       [16:0]   _zz_channels_3_pop_b2m_request;
-  wire       [13:0]   _zz_channels_3_pop_b2m_request_1;
-  wire       [12:0]   _zz_channels_3_pop_b2m_request_2;
+  wire       [15:0]   _zz_channels_3_pop_b2m_request;
+  wire       [12:0]   _zz_channels_3_pop_b2m_request_1;
+  wire       [11:0]   _zz_channels_3_pop_b2m_request_2;
   wire       [3:0]    _zz_channels_3_pop_b2m_memPending;
   wire       [3:0]    _zz_channels_3_pop_b2m_memPending_1;
   wire       [0:0]    _zz_channels_3_pop_b2m_memPending_2;
@@ -4496,19 +4497,19 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [0:0]    _zz_channels_3_pop_b2m_memPending_4;
   wire       [31:0]   _zz_channels_3_pop_b2m_address;
   wire       [31:0]   _zz_channels_3_pop_b2m_address_1;
-  wire       [13:0]   _zz_channels_3_fifo_push_available;
-  wire       [16:0]   _zz_channels_4_fifo_pop_withoutOverride_exposed;
+  wire       [12:0]   _zz_channels_3_fifo_push_available;
+  wire       [15:0]   _zz_channels_4_fifo_pop_withoutOverride_exposed;
   wire       [3:0]    _zz_channels_4_push_m2b_memPending;
   wire       [3:0]    _zz_channels_4_push_m2b_memPending_1;
   wire       [0:0]    _zz_channels_4_push_m2b_memPending_2;
   wire       [3:0]    _zz_channels_4_push_m2b_memPending_3;
   wire       [0:0]    _zz_channels_4_push_m2b_memPending_4;
-  wire       [13:0]   _zz_channels_4_push_m2b_loadRequest;
+  wire       [12:0]   _zz_channels_4_push_m2b_loadRequest;
   wire       [8:0]    _zz_channels_4_push_m2b_loadRequest_1;
   wire       [25:0]   _zz_when_DmaSg_l486_2;
   wire       [31:0]   _zz_channels_4_push_m2b_address;
   wire       [31:0]   _zz_channels_4_push_m2b_address_1;
-  wire       [13:0]   _zz_channels_4_fifo_push_available;
+  wire       [12:0]   _zz_channels_4_fifo_push_available;
   wire       [0:0]    _zz_s2b_0_cmd_firsts;
   wire       [4:0]    _zz_s2b_0_cmd_firsts_1;
   wire       [3:0]    _zz_s2b_0_cmd_byteCount_8;
@@ -4553,17 +4554,17 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [3:0]    _zz_m2b_cmd_s1_fifoPushDecr_3;
   wire       [12:0]   _zz_m2b_cmd_s1_fifoPushDecr_4;
   wire       [1:0]    _zz_m2b_cmd_s1_fifoPushDecr_5;
-  reg        [13:0]   _zz_io_writes_2_cmd_payload_address;
+  reg        [12:0]   _zz_io_writes_2_cmd_payload_address;
   wire       [3:0]    _zz__zz_b2m_fsm_arbiter_logic_priority_chosenOh_2;
   wire       [3:0]    _zz__zz_b2m_fsm_arbiter_logic_priority_chosenOh_2_1;
   wire       [1:0]    _zz__zz_b2m_fsm_arbiter_logic_priority_chosenOh_2_2;
   reg        [1:0]    _zz__zz_b2m_fsm_arbiter_logic_priority_chosenOh_2_3;
   reg                 _zz_b2m_fsm_arbiter_logic_priority_weightLast;
   reg        [31:0]   _zz_b2m_fsm_sel_address;
-  reg        [13:0]   _zz_b2m_fsm_sel_ptr;
-  reg        [13:0]   _zz_b2m_fsm_sel_ptrMask;
+  reg        [12:0]   _zz_b2m_fsm_sel_ptr;
+  reg        [12:0]   _zz_b2m_fsm_sel_ptrMask;
   reg        [11:0]   _zz_b2m_fsm_sel_bytePerBurst;
-  reg        [16:0]   _zz_b2m_fsm_sel_bytesInFifo;
+  reg        [15:0]   _zz_b2m_fsm_sel_bytesInFifo;
   reg                 _zz_b2m_fsm_sel_flush;
   reg                 _zz_b2m_fsm_sel_packet;
   reg        [26:0]   _zz_b2m_fsm_sel_bytesLeft;
@@ -4578,13 +4579,13 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [25:0]   _zz_b2m_fsm_sel_bytesInBurst_3;
   wire       [25:0]   _zz_b2m_fsm_sel_bytesInBurst_4;
   wire       [25:0]   _zz_b2m_fsm_sel_bytesInBurst_5;
-  wire       [16:0]   _zz_b2m_fsm_fifoCompletion;
-  wire       [16:0]   _zz_b2m_fsm_fifoCompletion_1;
+  wire       [15:0]   _zz_b2m_fsm_fifoCompletion;
+  wire       [15:0]   _zz_b2m_fsm_fifoCompletion_1;
   wire       [11:0]   _zz_b2m_fsm_beatCounter;
   wire       [11:0]   _zz_b2m_fsm_beatCounter_1;
   wire       [3:0]    _zz_b2m_fsm_beatCounter_2;
-  reg        [13:0]   _zz_b2m_fsm_fetch_context_ptr;
-  wire       [13:0]   _zz_b2m_fsm_sel_ptr_1;
+  reg        [12:0]   _zz_b2m_fsm_fetch_context_ptr;
+  wire       [12:0]   _zz_b2m_fsm_sel_ptr_1;
   reg        [3:0]    _zz_b2m_fsm_aggregate_bytesToSkip;
   wire       [3:0]    _zz_b2m_fsm_aggregate_bytesToSkipMask;
   wire                _zz_b2m_fsm_aggregate_bytesToSkipMask_1;
@@ -4633,38 +4634,38 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [0:0]    _zz_channels_4_ctrl_kick;
   wire       [0:0]    _zz_channels_4_interrupts_completion_valid;
   wire       [0:0]    _zz_channels_4_interrupts_onChannelCompletion_valid;
-  wire       [13:0]   _zz_channels_0_fifo_push_ptrIncr_value;
+  wire       [12:0]   _zz_channels_0_fifo_push_ptrIncr_value;
   wire       [0:0]    _zz_channels_0_fifo_push_ptrIncr_value_1;
-  wire       [16:0]   _zz_channels_0_fifo_pop_bytesIncr_value_1;
+  wire       [15:0]   _zz_channels_0_fifo_pop_bytesIncr_value_1;
   wire       [3:0]    _zz_channels_0_fifo_pop_bytesIncr_value_2;
-  wire       [13:0]   _zz_channels_0_fifo_pop_ptrIncr_value;
+  wire       [12:0]   _zz_channels_0_fifo_pop_ptrIncr_value;
   wire       [1:0]    _zz_channels_0_fifo_pop_ptrIncr_value_1;
-  wire       [13:0]   _zz_channels_1_fifo_push_ptrIncr_value;
+  wire       [12:0]   _zz_channels_1_fifo_push_ptrIncr_value;
   wire       [1:0]    _zz_channels_1_fifo_push_ptrIncr_value_1;
-  wire       [16:0]   _zz_channels_1_fifo_pop_bytesIncr_value_1;
+  wire       [15:0]   _zz_channels_1_fifo_pop_bytesIncr_value_1;
   wire       [4:0]    _zz_channels_1_fifo_pop_bytesIncr_value_2;
   wire       [4:0]    _zz_channels_1_fifo_pop_bytesIncr_value_3;
-  wire       [13:0]   _zz_channels_1_fifo_pop_ptrIncr_value;
+  wire       [12:0]   _zz_channels_1_fifo_pop_ptrIncr_value;
   wire       [0:0]    _zz_channels_1_fifo_pop_ptrIncr_value_1;
-  wire       [13:0]   _zz_channels_2_fifo_push_ptrIncr_value;
+  wire       [12:0]   _zz_channels_2_fifo_push_ptrIncr_value;
   wire       [1:0]    _zz_channels_2_fifo_push_ptrIncr_value_1;
-  wire       [16:0]   _zz_channels_2_fifo_pop_bytesIncr_value_1;
+  wire       [15:0]   _zz_channels_2_fifo_pop_bytesIncr_value_1;
   wire       [4:0]    _zz_channels_2_fifo_pop_bytesIncr_value_2;
   wire       [4:0]    _zz_channels_2_fifo_pop_bytesIncr_value_3;
-  wire       [13:0]   _zz_channels_2_fifo_pop_ptrIncr_value;
+  wire       [12:0]   _zz_channels_2_fifo_pop_ptrIncr_value;
   wire       [0:0]    _zz_channels_2_fifo_pop_ptrIncr_value_1;
-  wire       [13:0]   _zz_channels_3_fifo_push_ptrIncr_value;
+  wire       [12:0]   _zz_channels_3_fifo_push_ptrIncr_value;
   wire       [0:0]    _zz_channels_3_fifo_push_ptrIncr_value_1;
-  wire       [16:0]   _zz_channels_3_fifo_pop_bytesIncr_value_1;
+  wire       [15:0]   _zz_channels_3_fifo_pop_bytesIncr_value_1;
   wire       [3:0]    _zz_channels_3_fifo_pop_bytesIncr_value_2;
-  wire       [13:0]   _zz_channels_3_fifo_pop_ptrIncr_value;
+  wire       [12:0]   _zz_channels_3_fifo_pop_ptrIncr_value;
   wire       [1:0]    _zz_channels_3_fifo_pop_ptrIncr_value_1;
-  wire       [13:0]   _zz_channels_4_fifo_push_ptrIncr_value;
+  wire       [12:0]   _zz_channels_4_fifo_push_ptrIncr_value;
   wire       [1:0]    _zz_channels_4_fifo_push_ptrIncr_value_1;
-  wire       [16:0]   _zz_channels_4_fifo_pop_bytesIncr_value_1;
+  wire       [15:0]   _zz_channels_4_fifo_pop_bytesIncr_value_1;
   wire       [4:0]    _zz_channels_4_fifo_pop_bytesIncr_value_2;
   wire       [4:0]    _zz_channels_4_fifo_pop_bytesIncr_value_3;
-  wire       [13:0]   _zz_channels_4_fifo_pop_ptrIncr_value;
+  wire       [12:0]   _zz_channels_4_fifo_pop_ptrIncr_value;
   wire       [0:0]    _zz_channels_4_fifo_pop_ptrIncr_value_1;
   wire                ctrl_readErrorFlag;
   wire                ctrl_writeErrorFlag;
@@ -4685,25 +4686,25 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_0_selfRestart;
   reg                 channels_0_readyToStop;
   reg                 channels_0_ctrl_kick;
-  wire       [13:0]   channels_0_fifo_base;
-  wire       [13:0]   channels_0_fifo_words;
-  reg        [13:0]   channels_0_fifo_push_available;
-  wire       [13:0]   channels_0_fifo_push_availableDecr;
-  reg        [13:0]   channels_0_fifo_push_ptr;
-  wire       [13:0]   channels_0_fifo_push_ptrWithBase;
-  wire       [13:0]   channels_0_fifo_push_ptrIncr_value;
-  reg        [13:0]   channels_0_fifo_pop_ptr;
-  wire       [16:0]   channels_0_fifo_pop_bytes;
-  wire       [13:0]   channels_0_fifo_pop_ptrWithBase;
-  wire       [16:0]   channels_0_fifo_pop_bytesIncr_value;
-  wire       [16:0]   channels_0_fifo_pop_bytesDecr_value;
+  wire       [12:0]   channels_0_fifo_base;
+  wire       [12:0]   channels_0_fifo_words;
+  reg        [12:0]   channels_0_fifo_push_available;
+  wire       [12:0]   channels_0_fifo_push_availableDecr;
+  reg        [12:0]   channels_0_fifo_push_ptr;
+  wire       [12:0]   channels_0_fifo_push_ptrWithBase;
+  wire       [12:0]   channels_0_fifo_push_ptrIncr_value;
+  reg        [12:0]   channels_0_fifo_pop_ptr;
+  wire       [15:0]   channels_0_fifo_pop_bytes;
+  wire       [12:0]   channels_0_fifo_pop_ptrWithBase;
+  wire       [15:0]   channels_0_fifo_pop_bytesIncr_value;
+  wire       [15:0]   channels_0_fifo_pop_bytesDecr_value;
   wire                channels_0_fifo_pop_empty;
-  wire       [13:0]   channels_0_fifo_pop_ptrIncr_value;
-  reg        [16:0]   channels_0_fifo_pop_withOverride_backup;
-  wire       [16:0]   channels_0_fifo_pop_withOverride_backupNext;
+  wire       [12:0]   channels_0_fifo_pop_ptrIncr_value;
+  reg        [15:0]   channels_0_fifo_pop_withOverride_backup;
+  wire       [15:0]   channels_0_fifo_pop_withOverride_backupNext;
   reg                 channels_0_fifo_pop_withOverride_load;
   reg                 channels_0_fifo_pop_withOverride_unload;
-  reg        [16:0]   channels_0_fifo_pop_withOverride_exposed;
+  reg        [15:0]   channels_0_fifo_pop_withOverride_exposed;
   reg                 channels_0_fifo_pop_withOverride_valid;
   wire                when_DmaSg_l409;
   wire                channels_0_fifo_empty;
@@ -4728,7 +4729,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                channels_0_pop_b2m_selfFlush;
   wire                channels_0_pop_b2m_request;
   reg        [3:0]    channels_0_pop_b2m_bytesToSkip;
-  reg        [16:0]   channels_0_pop_b2m_decrBytes;
+  reg        [15:0]   channels_0_pop_b2m_decrBytes;
   reg                 channels_0_pop_b2m_memPendingInc;
   wire                when_DmaSg_l523;
   wire                when_DmaSg_l532;
@@ -4740,7 +4741,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                when_DmaSg_l578;
   wire                when_DmaSg_l593;
   wire                channels_0_s2b_full;
-  reg        [13:0]   channels_0_fifo_pop_ptrIncr_value_regNext;
+  reg        [12:0]   channels_0_fifo_pop_ptrIncr_value_regNext;
   wire                when_DmaSg_l255;
   reg                 channels_0_interrupts_completion_enable;
   reg                 channels_0_interrupts_completion_valid;
@@ -4765,21 +4766,21 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_1_selfRestart;
   reg                 channels_1_readyToStop;
   reg                 channels_1_ctrl_kick;
-  wire       [13:0]   channels_1_fifo_base;
-  wire       [13:0]   channels_1_fifo_words;
-  reg        [13:0]   channels_1_fifo_push_available;
-  reg        [13:0]   channels_1_fifo_push_availableDecr;
-  reg        [13:0]   channels_1_fifo_push_ptr;
-  wire       [13:0]   channels_1_fifo_push_ptrWithBase;
-  wire       [13:0]   channels_1_fifo_push_ptrIncr_value;
-  reg        [13:0]   channels_1_fifo_pop_ptr;
-  wire       [16:0]   channels_1_fifo_pop_bytes;
-  wire       [13:0]   channels_1_fifo_pop_ptrWithBase;
-  wire       [16:0]   channels_1_fifo_pop_bytesIncr_value;
-  wire       [16:0]   channels_1_fifo_pop_bytesDecr_value;
+  wire       [12:0]   channels_1_fifo_base;
+  wire       [12:0]   channels_1_fifo_words;
+  reg        [12:0]   channels_1_fifo_push_available;
+  reg        [12:0]   channels_1_fifo_push_availableDecr;
+  reg        [12:0]   channels_1_fifo_push_ptr;
+  wire       [12:0]   channels_1_fifo_push_ptrWithBase;
+  wire       [12:0]   channels_1_fifo_push_ptrIncr_value;
+  reg        [12:0]   channels_1_fifo_pop_ptr;
+  wire       [15:0]   channels_1_fifo_pop_bytes;
+  wire       [12:0]   channels_1_fifo_pop_ptrWithBase;
+  wire       [15:0]   channels_1_fifo_pop_bytesIncr_value;
+  wire       [15:0]   channels_1_fifo_pop_bytesDecr_value;
   wire                channels_1_fifo_pop_empty;
-  wire       [13:0]   channels_1_fifo_pop_ptrIncr_value;
-  reg        [16:0]   channels_1_fifo_pop_withoutOverride_exposed;
+  wire       [12:0]   channels_1_fifo_pop_ptrIncr_value;
+  reg        [15:0]   channels_1_fifo_pop_withoutOverride_exposed;
   wire                channels_1_fifo_empty;
   reg                 channels_1_push_memory;
   reg        [31:0]   channels_1_push_m2b_address;
@@ -4797,7 +4798,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_1_pop_b2s_veryLastTrigger;
   reg                 channels_1_pop_b2s_veryLastValid;
   wire                when_DmaSg_l474;
-  reg        [13:0]   channels_1_pop_b2s_veryLastPtr;
+  reg        [12:0]   channels_1_pop_b2s_veryLastPtr;
   reg                 channels_1_pop_b2s_veryLastEndPacket;
   wire                when_DmaSg_l483;
   wire                when_DmaSg_l486;
@@ -4809,7 +4810,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                when_DmaSg_l578_1;
   wire                when_DmaSg_l593_1;
   wire                channels_1_s2b_full;
-  reg        [13:0]   channels_1_fifo_pop_ptrIncr_value_regNext;
+  reg        [12:0]   channels_1_fifo_pop_ptrIncr_value_regNext;
   wire                when_DmaSg_l255_5;
   reg                 channels_1_interrupts_completion_enable;
   reg                 channels_1_interrupts_completion_valid;
@@ -4831,21 +4832,21 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_2_selfRestart;
   reg                 channels_2_readyToStop;
   reg                 channels_2_ctrl_kick;
-  wire       [13:0]   channels_2_fifo_base;
-  wire       [13:0]   channels_2_fifo_words;
-  reg        [13:0]   channels_2_fifo_push_available;
-  reg        [13:0]   channels_2_fifo_push_availableDecr;
-  reg        [13:0]   channels_2_fifo_push_ptr;
-  wire       [13:0]   channels_2_fifo_push_ptrWithBase;
-  wire       [13:0]   channels_2_fifo_push_ptrIncr_value;
-  reg        [13:0]   channels_2_fifo_pop_ptr;
-  wire       [16:0]   channels_2_fifo_pop_bytes;
-  wire       [13:0]   channels_2_fifo_pop_ptrWithBase;
-  wire       [16:0]   channels_2_fifo_pop_bytesIncr_value;
-  wire       [16:0]   channels_2_fifo_pop_bytesDecr_value;
+  wire       [12:0]   channels_2_fifo_base;
+  wire       [12:0]   channels_2_fifo_words;
+  reg        [12:0]   channels_2_fifo_push_available;
+  reg        [12:0]   channels_2_fifo_push_availableDecr;
+  reg        [12:0]   channels_2_fifo_push_ptr;
+  wire       [12:0]   channels_2_fifo_push_ptrWithBase;
+  wire       [12:0]   channels_2_fifo_push_ptrIncr_value;
+  reg        [12:0]   channels_2_fifo_pop_ptr;
+  wire       [15:0]   channels_2_fifo_pop_bytes;
+  wire       [12:0]   channels_2_fifo_pop_ptrWithBase;
+  wire       [15:0]   channels_2_fifo_pop_bytesIncr_value;
+  wire       [15:0]   channels_2_fifo_pop_bytesDecr_value;
   wire                channels_2_fifo_pop_empty;
-  wire       [13:0]   channels_2_fifo_pop_ptrIncr_value;
-  reg        [16:0]   channels_2_fifo_pop_withoutOverride_exposed;
+  wire       [12:0]   channels_2_fifo_pop_ptrIncr_value;
+  reg        [15:0]   channels_2_fifo_pop_withoutOverride_exposed;
   wire                channels_2_fifo_empty;
   reg                 channels_2_push_memory;
   reg        [31:0]   channels_2_push_m2b_address;
@@ -4863,7 +4864,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_2_pop_b2s_veryLastTrigger;
   reg                 channels_2_pop_b2s_veryLastValid;
   wire                when_DmaSg_l474_1;
-  reg        [13:0]   channels_2_pop_b2s_veryLastPtr;
+  reg        [12:0]   channels_2_pop_b2s_veryLastPtr;
   reg                 channels_2_pop_b2s_veryLastEndPacket;
   wire                when_DmaSg_l483_1;
   wire                when_DmaSg_l486_1;
@@ -4875,7 +4876,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                when_DmaSg_l578_2;
   wire                when_DmaSg_l593_2;
   wire                channels_2_s2b_full;
-  reg        [13:0]   channels_2_fifo_pop_ptrIncr_value_regNext;
+  reg        [12:0]   channels_2_fifo_pop_ptrIncr_value_regNext;
   wire                when_DmaSg_l255_9;
   reg                 channels_2_interrupts_completion_enable;
   reg                 channels_2_interrupts_completion_valid;
@@ -4897,25 +4898,25 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_3_selfRestart;
   reg                 channels_3_readyToStop;
   reg                 channels_3_ctrl_kick;
-  wire       [13:0]   channels_3_fifo_base;
-  wire       [13:0]   channels_3_fifo_words;
-  reg        [13:0]   channels_3_fifo_push_available;
-  wire       [13:0]   channels_3_fifo_push_availableDecr;
-  reg        [13:0]   channels_3_fifo_push_ptr;
-  wire       [13:0]   channels_3_fifo_push_ptrWithBase;
-  wire       [13:0]   channels_3_fifo_push_ptrIncr_value;
-  reg        [13:0]   channels_3_fifo_pop_ptr;
-  wire       [16:0]   channels_3_fifo_pop_bytes;
-  wire       [13:0]   channels_3_fifo_pop_ptrWithBase;
-  wire       [16:0]   channels_3_fifo_pop_bytesIncr_value;
-  wire       [16:0]   channels_3_fifo_pop_bytesDecr_value;
+  wire       [12:0]   channels_3_fifo_base;
+  wire       [12:0]   channels_3_fifo_words;
+  reg        [12:0]   channels_3_fifo_push_available;
+  wire       [12:0]   channels_3_fifo_push_availableDecr;
+  reg        [12:0]   channels_3_fifo_push_ptr;
+  wire       [12:0]   channels_3_fifo_push_ptrWithBase;
+  wire       [12:0]   channels_3_fifo_push_ptrIncr_value;
+  reg        [12:0]   channels_3_fifo_pop_ptr;
+  wire       [15:0]   channels_3_fifo_pop_bytes;
+  wire       [12:0]   channels_3_fifo_pop_ptrWithBase;
+  wire       [15:0]   channels_3_fifo_pop_bytesIncr_value;
+  wire       [15:0]   channels_3_fifo_pop_bytesDecr_value;
   wire                channels_3_fifo_pop_empty;
-  wire       [13:0]   channels_3_fifo_pop_ptrIncr_value;
-  reg        [16:0]   channels_3_fifo_pop_withOverride_backup;
-  wire       [16:0]   channels_3_fifo_pop_withOverride_backupNext;
+  wire       [12:0]   channels_3_fifo_pop_ptrIncr_value;
+  reg        [15:0]   channels_3_fifo_pop_withOverride_backup;
+  wire       [15:0]   channels_3_fifo_pop_withOverride_backupNext;
   reg                 channels_3_fifo_pop_withOverride_load;
   reg                 channels_3_fifo_pop_withOverride_unload;
-  reg        [16:0]   channels_3_fifo_pop_withOverride_exposed;
+  reg        [15:0]   channels_3_fifo_pop_withOverride_exposed;
   reg                 channels_3_fifo_pop_withOverride_valid;
   wire                when_DmaSg_l409_1;
   wire                channels_3_fifo_empty;
@@ -4940,7 +4941,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                channels_3_pop_b2m_selfFlush;
   wire                channels_3_pop_b2m_request;
   reg        [3:0]    channels_3_pop_b2m_bytesToSkip;
-  reg        [16:0]   channels_3_pop_b2m_decrBytes;
+  reg        [15:0]   channels_3_pop_b2m_decrBytes;
   reg                 channels_3_pop_b2m_memPendingInc;
   wire                when_DmaSg_l523_1;
   wire                when_DmaSg_l532_1;
@@ -4952,7 +4953,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                when_DmaSg_l578_3;
   wire                when_DmaSg_l593_3;
   wire                channels_3_s2b_full;
-  reg        [13:0]   channels_3_fifo_pop_ptrIncr_value_regNext;
+  reg        [12:0]   channels_3_fifo_pop_ptrIncr_value_regNext;
   wire                when_DmaSg_l255_13;
   reg                 channels_3_interrupts_completion_enable;
   reg                 channels_3_interrupts_completion_valid;
@@ -4977,21 +4978,21 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_4_selfRestart;
   reg                 channels_4_readyToStop;
   reg                 channels_4_ctrl_kick;
-  wire       [13:0]   channels_4_fifo_base;
-  wire       [13:0]   channels_4_fifo_words;
-  reg        [13:0]   channels_4_fifo_push_available;
-  reg        [13:0]   channels_4_fifo_push_availableDecr;
-  reg        [13:0]   channels_4_fifo_push_ptr;
-  wire       [13:0]   channels_4_fifo_push_ptrWithBase;
-  wire       [13:0]   channels_4_fifo_push_ptrIncr_value;
-  reg        [13:0]   channels_4_fifo_pop_ptr;
-  wire       [16:0]   channels_4_fifo_pop_bytes;
-  wire       [13:0]   channels_4_fifo_pop_ptrWithBase;
-  wire       [16:0]   channels_4_fifo_pop_bytesIncr_value;
-  wire       [16:0]   channels_4_fifo_pop_bytesDecr_value;
+  wire       [12:0]   channels_4_fifo_base;
+  wire       [12:0]   channels_4_fifo_words;
+  reg        [12:0]   channels_4_fifo_push_available;
+  reg        [12:0]   channels_4_fifo_push_availableDecr;
+  reg        [12:0]   channels_4_fifo_push_ptr;
+  wire       [12:0]   channels_4_fifo_push_ptrWithBase;
+  wire       [12:0]   channels_4_fifo_push_ptrIncr_value;
+  reg        [12:0]   channels_4_fifo_pop_ptr;
+  wire       [15:0]   channels_4_fifo_pop_bytes;
+  wire       [12:0]   channels_4_fifo_pop_ptrWithBase;
+  wire       [15:0]   channels_4_fifo_pop_bytesIncr_value;
+  wire       [15:0]   channels_4_fifo_pop_bytesDecr_value;
   wire                channels_4_fifo_pop_empty;
-  wire       [13:0]   channels_4_fifo_pop_ptrIncr_value;
-  reg        [16:0]   channels_4_fifo_pop_withoutOverride_exposed;
+  wire       [12:0]   channels_4_fifo_pop_ptrIncr_value;
+  reg        [15:0]   channels_4_fifo_pop_withoutOverride_exposed;
   wire                channels_4_fifo_empty;
   reg                 channels_4_push_memory;
   reg        [31:0]   channels_4_push_m2b_address;
@@ -5009,7 +5010,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 channels_4_pop_b2s_veryLastTrigger;
   reg                 channels_4_pop_b2s_veryLastValid;
   wire                when_DmaSg_l474_2;
-  reg        [13:0]   channels_4_pop_b2s_veryLastPtr;
+  reg        [12:0]   channels_4_pop_b2s_veryLastPtr;
   reg                 channels_4_pop_b2s_veryLastEndPacket;
   wire                when_DmaSg_l483_2;
   wire                when_DmaSg_l486_2;
@@ -5021,7 +5022,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                when_DmaSg_l578_4;
   wire                when_DmaSg_l593_4;
   wire                channels_4_s2b_full;
-  reg        [13:0]   channels_4_fifo_pop_ptrIncr_value_regNext;
+  reg        [12:0]   channels_4_fifo_pop_ptrIncr_value_regNext;
   wire                when_DmaSg_l255_18;
   reg                 channels_4_interrupts_completion_enable;
   reg                 channels_4_interrupts_completion_valid;
@@ -5184,8 +5185,8 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [0:0]    b2s_0_cmd_context_channel;
   wire                b2s_0_cmd_context_veryLast;
   wire                b2s_0_cmd_context_endPacket;
-  wire       [13:0]   b2s_0_cmd_veryLastPtr;
-  wire       [13:0]   b2s_0_cmd_address;
+  wire       [12:0]   b2s_0_cmd_veryLastPtr;
+  wire       [12:0]   b2s_0_cmd_address;
   wire       [0:0]    b2s_0_rsp_context_channel;
   wire                b2s_0_rsp_context_veryLast;
   wire                b2s_0_rsp_context_endPacket;
@@ -5197,8 +5198,8 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [0:0]    b2s_1_cmd_context_channel;
   wire                b2s_1_cmd_context_veryLast;
   wire                b2s_1_cmd_context_endPacket;
-  wire       [13:0]   b2s_1_cmd_veryLastPtr;
-  wire       [13:0]   b2s_1_cmd_address;
+  wire       [12:0]   b2s_1_cmd_veryLastPtr;
+  wire       [12:0]   b2s_1_cmd_address;
   wire       [0:0]    b2s_1_rsp_context_channel;
   wire                b2s_1_rsp_context_veryLast;
   wire                b2s_1_rsp_context_endPacket;
@@ -5210,8 +5211,8 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire       [0:0]    b2s_2_cmd_context_channel;
   wire                b2s_2_cmd_context_veryLast;
   wire                b2s_2_cmd_context_endPacket;
-  wire       [13:0]   b2s_2_cmd_veryLastPtr;
-  wire       [13:0]   b2s_2_cmd_address;
+  wire       [12:0]   b2s_2_cmd_veryLastPtr;
+  wire       [12:0]   b2s_2_cmd_address;
   wire       [0:0]    b2s_2_rsp_context_channel;
   wire                b2s_2_rsp_context_veryLast;
   wire                b2s_2_rsp_context_endPacket;
@@ -5309,10 +5310,10 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg        [0:0]    b2m_fsm_sel_channel;
   reg        [11:0]   b2m_fsm_sel_bytePerBurst;
   reg        [11:0]   b2m_fsm_sel_bytesInBurst;
-  reg        [16:0]   b2m_fsm_sel_bytesInFifo;
+  reg        [15:0]   b2m_fsm_sel_bytesInFifo;
   reg        [31:0]   b2m_fsm_sel_address;
-  reg        [13:0]   b2m_fsm_sel_ptr;
-  reg        [13:0]   b2m_fsm_sel_ptrMask;
+  reg        [12:0]   b2m_fsm_sel_ptr;
+  reg        [12:0]   b2m_fsm_sel_ptrMask;
   reg                 b2m_fsm_sel_flush;
   reg                 b2m_fsm_sel_packet;
   reg        [25:0]   b2m_fsm_sel_bytesLeft;
@@ -5355,7 +5356,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   reg                 b2m_fsm_s1;
   reg                 b2m_fsm_s2;
   wire                when_DmaSg_l986;
-  wire       [16:0]   _zz_b2m_fsm_sel_bytesInBurst;
+  wire       [15:0]   _zz_b2m_fsm_sel_bytesInBurst;
   wire       [25:0]   _zz_b2m_fsm_sel_bytesInBurst_1;
   wire       [11:0]   _zz_b2m_fsm_sel_bytesInBurst_2;
   wire                b2m_fsm_fifoCompletion;
@@ -5365,27 +5366,27 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   wire                when_DmaSg_l1001_1;
   reg                 b2m_fsm_toggle;
   wire                when_DmaSg_l1013;
-  wire       [13:0]   b2m_fsm_fetch_context_ptr;
+  wire       [12:0]   b2m_fsm_fetch_context_ptr;
   wire                b2m_fsm_fetch_context_toggle;
   wire                when_DmaSg_l1033;
-  wire       [13:0]   b2m_fsm_aggregate_context_ptr;
+  wire       [12:0]   b2m_fsm_aggregate_context_ptr;
   wire                b2m_fsm_aggregate_context_toggle;
-  wire       [14:0]   _zz_b2m_fsm_aggregate_context_ptr;
+  wire       [13:0]   _zz_b2m_fsm_aggregate_context_ptr;
   wire                memory_core_io_reads_3_rsp_s2mPipe_valid;
   reg                 memory_core_io_reads_3_rsp_s2mPipe_ready;
   wire       [127:0]  memory_core_io_reads_3_rsp_s2mPipe_payload_data;
   wire       [15:0]   memory_core_io_reads_3_rsp_s2mPipe_payload_mask;
-  wire       [14:0]   memory_core_io_reads_3_rsp_s2mPipe_payload_context;
+  wire       [13:0]   memory_core_io_reads_3_rsp_s2mPipe_payload_context;
   reg                 memory_core_io_reads_3_rsp_rValidN;
   reg        [127:0]  memory_core_io_reads_3_rsp_rData_data;
   reg        [15:0]   memory_core_io_reads_3_rsp_rData_mask;
-  reg        [14:0]   memory_core_io_reads_3_rsp_rData_context;
+  reg        [13:0]   memory_core_io_reads_3_rsp_rData_context;
   wire                when_Stream_l445;
   reg                 b2m_fsm_aggregate_memoryPort_valid;
   wire                b2m_fsm_aggregate_memoryPort_ready;
   wire       [127:0]  b2m_fsm_aggregate_memoryPort_payload_data;
   wire       [15:0]   b2m_fsm_aggregate_memoryPort_payload_mask;
-  wire       [14:0]   b2m_fsm_aggregate_memoryPort_payload_context;
+  wire       [13:0]   b2m_fsm_aggregate_memoryPort_payload_context;
   reg                 b2m_fsm_aggregate_first;
   wire                b2m_fsm_aggregate_memoryPort_fire;
   wire                when_DmaSg_l1050;
@@ -5467,8 +5468,8 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
   assign _zz_channels_0_fifo_pop_withOverride_backupNext = (channels_0_fifo_pop_withOverride_backup + channels_0_fifo_pop_bytesIncr_value);
   assign _zz_channels_0_fifo_pop_withOverride_exposed = (channels_0_fifo_pop_withOverride_exposed - channels_0_fifo_pop_bytesDecr_value);
-  assign _zz_channels_0_pop_b2m_selfFlush = {10'd0, channels_0_fifo_pop_bytes};
-  assign _zz_channels_0_pop_b2m_request = {5'd0, channels_0_pop_b2m_bytePerBurst};
+  assign _zz_channels_0_pop_b2m_selfFlush = {11'd0, channels_0_fifo_pop_bytes};
+  assign _zz_channels_0_pop_b2m_request = {4'd0, channels_0_pop_b2m_bytePerBurst};
   assign _zz_channels_0_pop_b2m_request_2 = (channels_0_fifo_words >>> 1'd1);
   assign _zz_channels_0_pop_b2m_request_1 = {1'd0, _zz_channels_0_pop_b2m_request_2};
   assign _zz_channels_0_pop_b2m_memPending = (channels_0_pop_b2m_memPending + _zz_channels_0_pop_b2m_memPending_1);
@@ -5486,7 +5487,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_channels_1_push_m2b_memPending_4 = channels_1_push_m2b_memPendingDecr;
   assign _zz_channels_1_push_m2b_memPending_3 = {3'd0, _zz_channels_1_push_m2b_memPending_4};
   assign _zz_channels_1_push_m2b_loadRequest_1 = (channels_1_push_m2b_bytePerBurst >>> 2'd3);
-  assign _zz_channels_1_push_m2b_loadRequest = {5'd0, _zz_channels_1_push_m2b_loadRequest_1};
+  assign _zz_channels_1_push_m2b_loadRequest = {4'd0, _zz_channels_1_push_m2b_loadRequest_1};
   assign _zz_when_DmaSg_l486 = {14'd0, channels_1_push_m2b_bytePerBurst};
   assign _zz_channels_1_push_m2b_address = (channels_1_push_m2b_address - _zz_channels_1_push_m2b_address_1);
   assign _zz_channels_1_push_m2b_address_1 = {6'd0, channels_1_bytes};
@@ -5498,15 +5499,15 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_channels_2_push_m2b_memPending_4 = channels_2_push_m2b_memPendingDecr;
   assign _zz_channels_2_push_m2b_memPending_3 = {3'd0, _zz_channels_2_push_m2b_memPending_4};
   assign _zz_channels_2_push_m2b_loadRequest_1 = (channels_2_push_m2b_bytePerBurst >>> 2'd3);
-  assign _zz_channels_2_push_m2b_loadRequest = {5'd0, _zz_channels_2_push_m2b_loadRequest_1};
+  assign _zz_channels_2_push_m2b_loadRequest = {4'd0, _zz_channels_2_push_m2b_loadRequest_1};
   assign _zz_when_DmaSg_l486_1 = {14'd0, channels_2_push_m2b_bytePerBurst};
   assign _zz_channels_2_push_m2b_address = (channels_2_push_m2b_address - _zz_channels_2_push_m2b_address_1);
   assign _zz_channels_2_push_m2b_address_1 = {6'd0, channels_2_bytes};
   assign _zz_channels_2_fifo_push_available = (channels_2_fifo_push_available + channels_2_fifo_pop_ptrIncr_value_regNext);
   assign _zz_channels_3_fifo_pop_withOverride_backupNext = (channels_3_fifo_pop_withOverride_backup + channels_3_fifo_pop_bytesIncr_value);
   assign _zz_channels_3_fifo_pop_withOverride_exposed = (channels_3_fifo_pop_withOverride_exposed - channels_3_fifo_pop_bytesDecr_value);
-  assign _zz_channels_3_pop_b2m_selfFlush = {10'd0, channels_3_fifo_pop_bytes};
-  assign _zz_channels_3_pop_b2m_request = {5'd0, channels_3_pop_b2m_bytePerBurst};
+  assign _zz_channels_3_pop_b2m_selfFlush = {11'd0, channels_3_fifo_pop_bytes};
+  assign _zz_channels_3_pop_b2m_request = {4'd0, channels_3_pop_b2m_bytePerBurst};
   assign _zz_channels_3_pop_b2m_request_2 = (channels_3_fifo_words >>> 1'd1);
   assign _zz_channels_3_pop_b2m_request_1 = {1'd0, _zz_channels_3_pop_b2m_request_2};
   assign _zz_channels_3_pop_b2m_memPending = (channels_3_pop_b2m_memPending + _zz_channels_3_pop_b2m_memPending_1);
@@ -5524,7 +5525,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_channels_4_push_m2b_memPending_4 = channels_4_push_m2b_memPendingDecr;
   assign _zz_channels_4_push_m2b_memPending_3 = {3'd0, _zz_channels_4_push_m2b_memPending_4};
   assign _zz_channels_4_push_m2b_loadRequest_1 = (channels_4_push_m2b_bytePerBurst >>> 2'd3);
-  assign _zz_channels_4_push_m2b_loadRequest = {5'd0, _zz_channels_4_push_m2b_loadRequest_1};
+  assign _zz_channels_4_push_m2b_loadRequest = {4'd0, _zz_channels_4_push_m2b_loadRequest_1};
   assign _zz_when_DmaSg_l486_2 = {14'd0, channels_4_push_m2b_bytePerBurst};
   assign _zz_channels_4_push_m2b_address = (channels_4_push_m2b_address - _zz_channels_4_push_m2b_address_1);
   assign _zz_channels_4_push_m2b_address_1 = {6'd0, channels_4_bytes};
@@ -5562,18 +5563,18 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_b2m_fsm_addressNext = {19'd0, b2m_fsm_bytesInBurstP1};
   assign _zz_b2m_fsm_bytesLeftNext_1 = {1'b0,b2m_fsm_bytesInBurstP1};
   assign _zz_b2m_fsm_bytesLeftNext = {13'd0, _zz_b2m_fsm_bytesLeftNext_1};
-  assign _zz__zz_b2m_fsm_sel_bytesInBurst_1 = {9'd0, _zz_b2m_fsm_sel_bytesInBurst};
-  assign _zz__zz_b2m_fsm_sel_bytesInBurst_1_1 = {9'd0, _zz_b2m_fsm_sel_bytesInBurst};
+  assign _zz__zz_b2m_fsm_sel_bytesInBurst_1 = {10'd0, _zz_b2m_fsm_sel_bytesInBurst};
+  assign _zz__zz_b2m_fsm_sel_bytesInBurst_1_1 = {10'd0, _zz_b2m_fsm_sel_bytesInBurst};
   assign _zz__zz_b2m_fsm_sel_bytesInBurst_2 = b2m_fsm_sel_address[11:0];
   assign _zz_b2m_fsm_sel_bytesInBurst_3 = ((_zz_b2m_fsm_sel_bytesInBurst_1 < _zz_b2m_fsm_sel_bytesInBurst_4) ? _zz_b2m_fsm_sel_bytesInBurst_1 : _zz_b2m_fsm_sel_bytesInBurst_5);
   assign _zz_b2m_fsm_sel_bytesInBurst_4 = {14'd0, _zz_b2m_fsm_sel_bytesInBurst_2};
   assign _zz_b2m_fsm_sel_bytesInBurst_5 = {14'd0, _zz_b2m_fsm_sel_bytesInBurst_2};
-  assign _zz_b2m_fsm_fifoCompletion = {5'd0, b2m_fsm_sel_bytesInBurst};
-  assign _zz_b2m_fsm_fifoCompletion_1 = (b2m_fsm_sel_bytesInFifo - 17'h00001);
+  assign _zz_b2m_fsm_fifoCompletion = {4'd0, b2m_fsm_sel_bytesInBurst};
+  assign _zz_b2m_fsm_fifoCompletion_1 = (b2m_fsm_sel_bytesInFifo - 16'h0001);
   assign _zz_b2m_fsm_beatCounter = (_zz_b2m_fsm_beatCounter_1 + b2m_fsm_sel_bytesInBurst);
   assign _zz_b2m_fsm_beatCounter_2 = b2m_fsm_sel_address[3 : 0];
   assign _zz_b2m_fsm_beatCounter_1 = {8'd0, _zz_b2m_fsm_beatCounter_2};
-  assign _zz_b2m_fsm_sel_ptr_1 = (b2m_fsm_sel_ptr + 14'h0002);
+  assign _zz_b2m_fsm_sel_ptr_1 = (b2m_fsm_sel_ptr + 13'h0002);
   assign _zz_b2m_fsm_cmd_maskLastTriggerComb = b2m_fsm_sel_bytesInBurst[3:0];
   assign _zz_channels_0_channelStart = 1'b1;
   assign _zz_channels_0_ctrl_kick = 1'b1;
@@ -5598,38 +5599,38 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_channels_4_interrupts_completion_valid = 1'b0;
   assign _zz_channels_4_interrupts_onChannelCompletion_valid = 1'b0;
   assign _zz_channels_0_fifo_push_ptrIncr_value_1 = ((when_DmaSg_l665 && (|s2b_0_cmd_sinkHalted_payload_mask)) ? 1'b1 : 1'b0);
-  assign _zz_channels_0_fifo_push_ptrIncr_value = {13'd0, _zz_channels_0_fifo_push_ptrIncr_value_1};
+  assign _zz_channels_0_fifo_push_ptrIncr_value = {12'd0, _zz_channels_0_fifo_push_ptrIncr_value_1};
   assign _zz_channels_0_fifo_pop_bytesIncr_value_2 = (_zz_channels_0_fifo_pop_bytesIncr_value ? s2b_0_rsp_context_bytes : 4'b0000);
-  assign _zz_channels_0_fifo_pop_bytesIncr_value_1 = {13'd0, _zz_channels_0_fifo_pop_bytesIncr_value_2};
+  assign _zz_channels_0_fifo_pop_bytesIncr_value_1 = {12'd0, _zz_channels_0_fifo_pop_bytesIncr_value_2};
   assign _zz_channels_0_fifo_pop_ptrIncr_value_1 = ((b2m_fsm_cmd_doPtrIncr && (b2m_fsm_sel_channel == 1'b0)) ? 2'b10 : 2'b00);
-  assign _zz_channels_0_fifo_pop_ptrIncr_value = {12'd0, _zz_channels_0_fifo_pop_ptrIncr_value_1};
+  assign _zz_channels_0_fifo_pop_ptrIncr_value = {11'd0, _zz_channels_0_fifo_pop_ptrIncr_value_1};
   assign _zz_channels_1_fifo_push_ptrIncr_value_1 = ((memory_core_io_writes_2_cmd_fire && (m2b_rsp_context_channel == 2'b00)) ? 2'b10 : 2'b00);
-  assign _zz_channels_1_fifo_push_ptrIncr_value = {12'd0, _zz_channels_1_fifo_push_ptrIncr_value_1};
+  assign _zz_channels_1_fifo_push_ptrIncr_value = {11'd0, _zz_channels_1_fifo_push_ptrIncr_value_1};
   assign _zz_channels_1_fifo_pop_bytesIncr_value_2 = (_zz_channels_1_fifo_pop_bytesIncr_value ? _zz_channels_1_fifo_pop_bytesIncr_value_3 : 5'h0);
-  assign _zz_channels_1_fifo_pop_bytesIncr_value_1 = {12'd0, _zz_channels_1_fifo_pop_bytesIncr_value_2};
+  assign _zz_channels_1_fifo_pop_bytesIncr_value_1 = {11'd0, _zz_channels_1_fifo_pop_bytesIncr_value_2};
   assign _zz_channels_1_fifo_pop_bytesIncr_value_3 = (m2b_writeRsp_context_loadByteInNextBeat + 5'h01);
   assign _zz_channels_1_fifo_pop_ptrIncr_value_1 = ((b2s_0_cmd_channelsOh[0] && memory_core_io_reads_0_cmd_ready) ? 1'b1 : 1'b0);
-  assign _zz_channels_1_fifo_pop_ptrIncr_value = {13'd0, _zz_channels_1_fifo_pop_ptrIncr_value_1};
+  assign _zz_channels_1_fifo_pop_ptrIncr_value = {12'd0, _zz_channels_1_fifo_pop_ptrIncr_value_1};
   assign _zz_channels_2_fifo_push_ptrIncr_value_1 = ((memory_core_io_writes_2_cmd_fire && (m2b_rsp_context_channel == 2'b01)) ? 2'b10 : 2'b00);
-  assign _zz_channels_2_fifo_push_ptrIncr_value = {12'd0, _zz_channels_2_fifo_push_ptrIncr_value_1};
+  assign _zz_channels_2_fifo_push_ptrIncr_value = {11'd0, _zz_channels_2_fifo_push_ptrIncr_value_1};
   assign _zz_channels_2_fifo_pop_bytesIncr_value_2 = (_zz_channels_2_fifo_pop_bytesIncr_value ? _zz_channels_2_fifo_pop_bytesIncr_value_3 : 5'h0);
-  assign _zz_channels_2_fifo_pop_bytesIncr_value_1 = {12'd0, _zz_channels_2_fifo_pop_bytesIncr_value_2};
+  assign _zz_channels_2_fifo_pop_bytesIncr_value_1 = {11'd0, _zz_channels_2_fifo_pop_bytesIncr_value_2};
   assign _zz_channels_2_fifo_pop_bytesIncr_value_3 = (m2b_writeRsp_context_loadByteInNextBeat + 5'h01);
   assign _zz_channels_2_fifo_pop_ptrIncr_value_1 = ((b2s_1_cmd_channelsOh[0] && memory_core_io_reads_1_cmd_ready) ? 1'b1 : 1'b0);
-  assign _zz_channels_2_fifo_pop_ptrIncr_value = {13'd0, _zz_channels_2_fifo_pop_ptrIncr_value_1};
+  assign _zz_channels_2_fifo_pop_ptrIncr_value = {12'd0, _zz_channels_2_fifo_pop_ptrIncr_value_1};
   assign _zz_channels_3_fifo_push_ptrIncr_value_1 = ((when_DmaSg_l665_1 && (|s2b_1_cmd_sinkHalted_payload_mask)) ? 1'b1 : 1'b0);
-  assign _zz_channels_3_fifo_push_ptrIncr_value = {13'd0, _zz_channels_3_fifo_push_ptrIncr_value_1};
+  assign _zz_channels_3_fifo_push_ptrIncr_value = {12'd0, _zz_channels_3_fifo_push_ptrIncr_value_1};
   assign _zz_channels_3_fifo_pop_bytesIncr_value_2 = (_zz_channels_3_fifo_pop_bytesIncr_value ? s2b_1_rsp_context_bytes : 4'b0000);
-  assign _zz_channels_3_fifo_pop_bytesIncr_value_1 = {13'd0, _zz_channels_3_fifo_pop_bytesIncr_value_2};
+  assign _zz_channels_3_fifo_pop_bytesIncr_value_1 = {12'd0, _zz_channels_3_fifo_pop_bytesIncr_value_2};
   assign _zz_channels_3_fifo_pop_ptrIncr_value_1 = ((b2m_fsm_cmd_doPtrIncr && (b2m_fsm_sel_channel == 1'b1)) ? 2'b10 : 2'b00);
-  assign _zz_channels_3_fifo_pop_ptrIncr_value = {12'd0, _zz_channels_3_fifo_pop_ptrIncr_value_1};
+  assign _zz_channels_3_fifo_pop_ptrIncr_value = {11'd0, _zz_channels_3_fifo_pop_ptrIncr_value_1};
   assign _zz_channels_4_fifo_push_ptrIncr_value_1 = ((memory_core_io_writes_2_cmd_fire && (m2b_rsp_context_channel == 2'b10)) ? 2'b10 : 2'b00);
-  assign _zz_channels_4_fifo_push_ptrIncr_value = {12'd0, _zz_channels_4_fifo_push_ptrIncr_value_1};
+  assign _zz_channels_4_fifo_push_ptrIncr_value = {11'd0, _zz_channels_4_fifo_push_ptrIncr_value_1};
   assign _zz_channels_4_fifo_pop_bytesIncr_value_2 = (_zz_channels_4_fifo_pop_bytesIncr_value ? _zz_channels_4_fifo_pop_bytesIncr_value_3 : 5'h0);
-  assign _zz_channels_4_fifo_pop_bytesIncr_value_1 = {12'd0, _zz_channels_4_fifo_pop_bytesIncr_value_2};
+  assign _zz_channels_4_fifo_pop_bytesIncr_value_1 = {11'd0, _zz_channels_4_fifo_pop_bytesIncr_value_2};
   assign _zz_channels_4_fifo_pop_bytesIncr_value_3 = (m2b_writeRsp_context_loadByteInNextBeat + 5'h01);
   assign _zz_channels_4_fifo_pop_ptrIncr_value_1 = ((b2s_2_cmd_channelsOh[0] && memory_core_io_reads_2_cmd_ready) ? 1'b1 : 1'b0);
-  assign _zz_channels_4_fifo_pop_ptrIncr_value = {13'd0, _zz_channels_4_fifo_pop_ptrIncr_value_1};
+  assign _zz_channels_4_fifo_pop_ptrIncr_value = {12'd0, _zz_channels_4_fifo_pop_ptrIncr_value_1};
   assign _zz_s2b_0_cmd_byteCount_10 = {s2b_0_cmd_sinkHalted_payload_mask[2],{s2b_0_cmd_sinkHalted_payload_mask[1],s2b_0_cmd_sinkHalted_payload_mask[0]}};
   assign _zz_s2b_0_cmd_byteCount_12 = {s2b_0_cmd_sinkHalted_payload_mask[5],{s2b_0_cmd_sinkHalted_payload_mask[4],s2b_0_cmd_sinkHalted_payload_mask[3]}};
   assign _zz_s2b_1_cmd_byteCount_10 = {s2b_1_cmd_sinkHalted_payload_mask[2],{s2b_1_cmd_sinkHalted_payload_mask[1],s2b_1_cmd_sinkHalted_payload_mask[0]}};
@@ -5662,10 +5663,10 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign _zz_b2m_fsm_cmd_maskFirst_3 = {(b2m_fsm_cmd_maskFirstTrigger <= 4'b0111),{(b2m_fsm_cmd_maskFirstTrigger <= 4'b0110),{(b2m_fsm_cmd_maskFirstTrigger <= 4'b0101),{(b2m_fsm_cmd_maskFirstTrigger <= 4'b0100),{(b2m_fsm_cmd_maskFirstTrigger <= 4'b0011),{(b2m_fsm_cmd_maskFirstTrigger <= 4'b0010),{(b2m_fsm_cmd_maskFirstTrigger <= _zz_b2m_fsm_cmd_maskFirst_4),(b2m_fsm_cmd_maskFirstTrigger <= _zz_b2m_fsm_cmd_maskFirst_5)}}}}}}};
   assign _zz_b2m_fsm_cmd_maskFirst_4 = 4'b0001;
   assign _zz_b2m_fsm_cmd_maskFirst_5 = 4'b0000;
-  EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 memory_core (
+  EfxDMA_DmaMemoryCore_2176bebf0e03438c95113a4b5fdff9eb memory_core (
     .io_writes_0_cmd_valid            (s2b_0_cmd_sinkHalted_valid                       ), //i
     .io_writes_0_cmd_ready            (memory_core_io_writes_0_cmd_ready                ), //o
-    .io_writes_0_cmd_payload_address  (memory_core_io_writes_0_cmd_payload_address[12:0]), //i
+    .io_writes_0_cmd_payload_address  (memory_core_io_writes_0_cmd_payload_address[11:0]), //i
     .io_writes_0_cmd_payload_data     (s2b_0_cmd_sinkHalted_payload_data[63:0]          ), //i
     .io_writes_0_cmd_payload_mask     (s2b_0_cmd_sinkHalted_payload_mask[7:0]           ), //i
     .io_writes_0_cmd_payload_priority (channels_0_priority[1:0]                         ), //i
@@ -5674,7 +5675,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     .io_writes_0_rsp_payload_context  (memory_core_io_writes_0_rsp_payload_context[6:0] ), //o
     .io_writes_1_cmd_valid            (s2b_1_cmd_sinkHalted_valid                       ), //i
     .io_writes_1_cmd_ready            (memory_core_io_writes_1_cmd_ready                ), //o
-    .io_writes_1_cmd_payload_address  (memory_core_io_writes_1_cmd_payload_address[12:0]), //i
+    .io_writes_1_cmd_payload_address  (memory_core_io_writes_1_cmd_payload_address[11:0]), //i
     .io_writes_1_cmd_payload_data     (s2b_1_cmd_sinkHalted_payload_data[63:0]          ), //i
     .io_writes_1_cmd_payload_mask     (s2b_1_cmd_sinkHalted_payload_mask[7:0]           ), //i
     .io_writes_1_cmd_payload_priority (channels_3_priority[1:0]                         ), //i
@@ -5683,7 +5684,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     .io_writes_1_rsp_payload_context  (memory_core_io_writes_1_rsp_payload_context[6:0] ), //o
     .io_writes_2_cmd_valid            (io_read_rsp_valid                                ), //i
     .io_writes_2_cmd_ready            (memory_core_io_writes_2_cmd_ready                ), //o
-    .io_writes_2_cmd_payload_address  (memory_core_io_writes_2_cmd_payload_address[12:0]), //i
+    .io_writes_2_cmd_payload_address  (memory_core_io_writes_2_cmd_payload_address[11:0]), //i
     .io_writes_2_cmd_payload_data     (io_read_rsp_payload_fragment_data[127:0]         ), //i
     .io_writes_2_cmd_payload_mask     (memory_core_io_writes_2_cmd_payload_mask[15:0]   ), //i
     .io_writes_2_cmd_payload_context  (memory_core_io_writes_2_cmd_payload_context[8:0] ), //i
@@ -5691,7 +5692,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     .io_writes_2_rsp_payload_context  (memory_core_io_writes_2_rsp_payload_context[8:0] ), //o
     .io_reads_0_cmd_valid             (memory_core_io_reads_0_cmd_valid                 ), //i
     .io_reads_0_cmd_ready             (memory_core_io_reads_0_cmd_ready                 ), //o
-    .io_reads_0_cmd_payload_address   (memory_core_io_reads_0_cmd_payload_address[12:0] ), //i
+    .io_reads_0_cmd_payload_address   (memory_core_io_reads_0_cmd_payload_address[11:0] ), //i
     .io_reads_0_cmd_payload_priority  (channels_1_priority[1:0]                         ), //i
     .io_reads_0_cmd_payload_context   (memory_core_io_reads_0_cmd_payload_context[2:0]  ), //i
     .io_reads_0_rsp_valid             (memory_core_io_reads_0_rsp_valid                 ), //o
@@ -5701,7 +5702,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     .io_reads_0_rsp_payload_context   (memory_core_io_reads_0_rsp_payload_context[2:0]  ), //o
     .io_reads_1_cmd_valid             (memory_core_io_reads_1_cmd_valid                 ), //i
     .io_reads_1_cmd_ready             (memory_core_io_reads_1_cmd_ready                 ), //o
-    .io_reads_1_cmd_payload_address   (memory_core_io_reads_1_cmd_payload_address[12:0] ), //i
+    .io_reads_1_cmd_payload_address   (memory_core_io_reads_1_cmd_payload_address[11:0] ), //i
     .io_reads_1_cmd_payload_priority  (channels_2_priority[1:0]                         ), //i
     .io_reads_1_cmd_payload_context   (memory_core_io_reads_1_cmd_payload_context[2:0]  ), //i
     .io_reads_1_rsp_valid             (memory_core_io_reads_1_rsp_valid                 ), //o
@@ -5711,7 +5712,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     .io_reads_1_rsp_payload_context   (memory_core_io_reads_1_rsp_payload_context[2:0]  ), //o
     .io_reads_2_cmd_valid             (memory_core_io_reads_2_cmd_valid                 ), //i
     .io_reads_2_cmd_ready             (memory_core_io_reads_2_cmd_ready                 ), //o
-    .io_reads_2_cmd_payload_address   (memory_core_io_reads_2_cmd_payload_address[12:0] ), //i
+    .io_reads_2_cmd_payload_address   (memory_core_io_reads_2_cmd_payload_address[11:0] ), //i
     .io_reads_2_cmd_payload_priority  (channels_4_priority[1:0]                         ), //i
     .io_reads_2_cmd_payload_context   (memory_core_io_reads_2_cmd_payload_context[2:0]  ), //i
     .io_reads_2_rsp_valid             (memory_core_io_reads_2_rsp_valid                 ), //o
@@ -5721,17 +5722,17 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     .io_reads_2_rsp_payload_context   (memory_core_io_reads_2_rsp_payload_context[2:0]  ), //o
     .io_reads_3_cmd_valid             (b2m_fsm_sel_valid                                ), //i
     .io_reads_3_cmd_ready             (memory_core_io_reads_3_cmd_ready                 ), //o
-    .io_reads_3_cmd_payload_address   (memory_core_io_reads_3_cmd_payload_address[12:0] ), //i
-    .io_reads_3_cmd_payload_context   (memory_core_io_reads_3_cmd_payload_context[14:0] ), //i
+    .io_reads_3_cmd_payload_address   (memory_core_io_reads_3_cmd_payload_address[11:0] ), //i
+    .io_reads_3_cmd_payload_context   (memory_core_io_reads_3_cmd_payload_context[13:0] ), //i
     .io_reads_3_rsp_valid             (memory_core_io_reads_3_rsp_valid                 ), //o
     .io_reads_3_rsp_ready             (memory_core_io_reads_3_rsp_rValidN               ), //i
     .io_reads_3_rsp_payload_data      (memory_core_io_reads_3_rsp_payload_data[127:0]   ), //o
     .io_reads_3_rsp_payload_mask      (memory_core_io_reads_3_rsp_payload_mask[15:0]    ), //o
-    .io_reads_3_rsp_payload_context   (memory_core_io_reads_3_rsp_payload_context[14:0] ), //o
+    .io_reads_3_rsp_payload_context   (memory_core_io_reads_3_rsp_payload_context[13:0] ), //o
     .clk                              (clk                                              ), //i
     .reset                            (reset                                            )  //i
   );
-  EfxDMA_Aggregator_44d0531f71c04713b005469f3b8ead04 b2m_fsm_aggregate_engine (
+  EfxDMA_Aggregator_2176bebf0e03438c95113a4b5fdff9eb b2m_fsm_aggregate_engine (
     .io_input_valid         (b2m_fsm_aggregate_memoryPort_valid                  ), //i
     .io_input_ready         (b2m_fsm_aggregate_engine_io_input_ready             ), //o
     .io_input_payload_data  (b2m_fsm_aggregate_memoryPort_payload_data[127:0]    ), //i
@@ -6043,9 +6044,9 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  assign channels_0_fifo_base = 14'h0;
-  assign channels_0_fifo_words = 14'h00ff;
-  assign channels_0_fifo_push_availableDecr = 14'h0;
+  assign channels_0_fifo_base = 13'h0;
+  assign channels_0_fifo_words = 13'h00ff;
+  assign channels_0_fifo_push_availableDecr = 13'h0;
   assign channels_0_fifo_push_ptrWithBase = ((channels_0_fifo_base & (~ channels_0_fifo_words)) | (channels_0_fifo_push_ptr & channels_0_fifo_words));
   assign channels_0_fifo_pop_ptrWithBase = ((channels_0_fifo_base & (~ channels_0_fifo_words)) | (channels_0_fifo_pop_ptr & channels_0_fifo_words));
   assign channels_0_fifo_pop_empty = (channels_0_fifo_pop_ptr == channels_0_fifo_push_ptr);
@@ -6112,7 +6113,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   end
 
   assign channels_0_pop_b2m_selfFlush = (channels_0_pop_b2m_bytesLeft < _zz_channels_0_pop_b2m_selfFlush);
-  assign channels_0_pop_b2m_request = ((((((channels_0_descriptorValid && (! channels_0_channelStop)) && (! channels_0_pop_b2m_waitFinalRsp)) && channels_0_pop_memory) && ((_zz_channels_0_pop_b2m_request < channels_0_fifo_pop_bytes) || (((channels_0_fifo_push_available < _zz_channels_0_pop_b2m_request_1) || channels_0_pop_b2m_flush) || channels_0_pop_b2m_selfFlush))) && (channels_0_fifo_pop_bytes != 17'h0)) && (channels_0_pop_b2m_memPending != 4'b1111));
+  assign channels_0_pop_b2m_request = ((((((channels_0_descriptorValid && (! channels_0_channelStop)) && (! channels_0_pop_b2m_waitFinalRsp)) && channels_0_pop_memory) && ((_zz_channels_0_pop_b2m_request < channels_0_fifo_pop_bytes) || (((channels_0_fifo_push_available < _zz_channels_0_pop_b2m_request_1) || channels_0_pop_b2m_flush) || channels_0_pop_b2m_selfFlush))) && (channels_0_fifo_pop_bytes != 16'h0)) && (channels_0_pop_b2m_memPending != 4'b1111));
   always @(*) begin
     channels_0_pop_b2m_memPendingInc = 1'b0;
     if(when_DmaSg_l758_1) begin
@@ -6123,15 +6124,15 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   end
 
   always @(*) begin
-    channels_0_pop_b2m_decrBytes = 17'h0;
+    channels_0_pop_b2m_decrBytes = 16'h0;
     if(b2m_fsm_s1) begin
       if(when_DmaSg_l996) begin
-        channels_0_pop_b2m_decrBytes = {4'd0, b2m_fsm_bytesInBurstP1};
+        channels_0_pop_b2m_decrBytes = {3'd0, b2m_fsm_bytesInBurstP1};
       end
     end
   end
 
-  assign when_DmaSg_l523 = ((channels_0_pop_b2m_memPending == 4'b0000) && (channels_0_fifo_pop_bytes == 17'h0));
+  assign when_DmaSg_l523 = ((channels_0_pop_b2m_memPending == 4'b0000) && (channels_0_fifo_pop_bytes == 16'h0));
   assign when_DmaSg_l532 = (channels_0_descriptorValid && (! channels_0_push_memory));
   assign when_DmaSg_l547 = ((channels_0_descriptorValid && (channels_0_pop_b2m_memPending == 4'b0000)) && channels_0_pop_b2m_waitFinalRsp);
   assign when_DmaSg_l563 = (channels_0_pop_b2m_memPending != 4'b0000);
@@ -6149,7 +6150,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
   assign when_DmaSg_l578 = (channels_0_selfRestart && (! channels_0_ctrl_kick));
   assign when_DmaSg_l593 = (_zz_when_DmaSg_l593 && channels_0_readyForChannelCompletion);
-  assign channels_0_s2b_full = (channels_0_fifo_push_available < 14'h0002);
+  assign channels_0_s2b_full = (channels_0_fifo_push_available < 13'h0002);
   assign when_DmaSg_l255 = (channels_0_descriptorValid && channels_0_descriptorCompletion);
   assign when_DmaSg_l255_1 = (! channels_0_interrupts_completion_enable);
   assign when_DmaSg_l255_2 = (channels_0_channelValid && channels_0_channelCompletion);
@@ -6212,14 +6213,14 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  assign channels_1_fifo_base = 14'h0100;
-  assign channels_1_fifo_words = 14'h00ff;
+  assign channels_1_fifo_base = 13'h0100;
+  assign channels_1_fifo_words = 13'h00ff;
   always @(*) begin
-    channels_1_fifo_push_availableDecr = 14'h0;
+    channels_1_fifo_push_availableDecr = 13'h0;
     if(m2b_cmd_s1_valid) begin
       if(io_read_cmd_ready) begin
         if(when_DmaSg_l828) begin
-          channels_1_fifo_push_availableDecr = {4'd0, m2b_cmd_s1_fifoPushDecr};
+          channels_1_fifo_push_availableDecr = {3'd0, m2b_cmd_s1_fifoPushDecr};
         end
       end
     end
@@ -6288,7 +6289,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
   assign when_DmaSg_l578_1 = (channels_1_selfRestart && (! channels_1_ctrl_kick));
   assign when_DmaSg_l593_1 = (_zz_when_DmaSg_l593_1 && channels_1_readyForChannelCompletion);
-  assign channels_1_s2b_full = (channels_1_fifo_push_available < 14'h0002);
+  assign channels_1_s2b_full = (channels_1_fifo_push_available < 13'h0002);
   assign when_DmaSg_l255_5 = (channels_1_descriptorValid && channels_1_descriptorCompletion);
   assign when_DmaSg_l255_6 = (! channels_1_interrupts_completion_enable);
   assign when_DmaSg_l255_7 = (channels_1_channelValid && channels_1_channelCompletion);
@@ -6350,14 +6351,14 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  assign channels_2_fifo_base = 14'h0200;
-  assign channels_2_fifo_words = 14'h00ff;
+  assign channels_2_fifo_base = 13'h0200;
+  assign channels_2_fifo_words = 13'h00ff;
   always @(*) begin
-    channels_2_fifo_push_availableDecr = 14'h0;
+    channels_2_fifo_push_availableDecr = 13'h0;
     if(m2b_cmd_s1_valid) begin
       if(io_read_cmd_ready) begin
         if(when_DmaSg_l828_1) begin
-          channels_2_fifo_push_availableDecr = {4'd0, m2b_cmd_s1_fifoPushDecr};
+          channels_2_fifo_push_availableDecr = {3'd0, m2b_cmd_s1_fifoPushDecr};
         end
       end
     end
@@ -6426,7 +6427,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
   assign when_DmaSg_l578_2 = (channels_2_selfRestart && (! channels_2_ctrl_kick));
   assign when_DmaSg_l593_2 = (_zz_when_DmaSg_l593_2 && channels_2_readyForChannelCompletion);
-  assign channels_2_s2b_full = (channels_2_fifo_push_available < 14'h0002);
+  assign channels_2_s2b_full = (channels_2_fifo_push_available < 13'h0002);
   assign when_DmaSg_l255_9 = (channels_2_descriptorValid && channels_2_descriptorCompletion);
   assign when_DmaSg_l255_10 = (! channels_2_interrupts_completion_enable);
   assign when_DmaSg_l255_11 = (channels_2_channelValid && channels_2_channelCompletion);
@@ -6495,9 +6496,9 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  assign channels_3_fifo_base = 14'h0300;
-  assign channels_3_fifo_words = 14'h00ff;
-  assign channels_3_fifo_push_availableDecr = 14'h0;
+  assign channels_3_fifo_base = 13'h0300;
+  assign channels_3_fifo_words = 13'h00ff;
+  assign channels_3_fifo_push_availableDecr = 13'h0;
   assign channels_3_fifo_push_ptrWithBase = ((channels_3_fifo_base & (~ channels_3_fifo_words)) | (channels_3_fifo_push_ptr & channels_3_fifo_words));
   assign channels_3_fifo_pop_ptrWithBase = ((channels_3_fifo_base & (~ channels_3_fifo_words)) | (channels_3_fifo_pop_ptr & channels_3_fifo_words));
   assign channels_3_fifo_pop_empty = (channels_3_fifo_pop_ptr == channels_3_fifo_push_ptr);
@@ -6564,7 +6565,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   end
 
   assign channels_3_pop_b2m_selfFlush = (channels_3_pop_b2m_bytesLeft < _zz_channels_3_pop_b2m_selfFlush);
-  assign channels_3_pop_b2m_request = ((((((channels_3_descriptorValid && (! channels_3_channelStop)) && (! channels_3_pop_b2m_waitFinalRsp)) && channels_3_pop_memory) && ((_zz_channels_3_pop_b2m_request < channels_3_fifo_pop_bytes) || (((channels_3_fifo_push_available < _zz_channels_3_pop_b2m_request_1) || channels_3_pop_b2m_flush) || channels_3_pop_b2m_selfFlush))) && (channels_3_fifo_pop_bytes != 17'h0)) && (channels_3_pop_b2m_memPending != 4'b1111));
+  assign channels_3_pop_b2m_request = ((((((channels_3_descriptorValid && (! channels_3_channelStop)) && (! channels_3_pop_b2m_waitFinalRsp)) && channels_3_pop_memory) && ((_zz_channels_3_pop_b2m_request < channels_3_fifo_pop_bytes) || (((channels_3_fifo_push_available < _zz_channels_3_pop_b2m_request_1) || channels_3_pop_b2m_flush) || channels_3_pop_b2m_selfFlush))) && (channels_3_fifo_pop_bytes != 16'h0)) && (channels_3_pop_b2m_memPending != 4'b1111));
   always @(*) begin
     channels_3_pop_b2m_memPendingInc = 1'b0;
     if(when_DmaSg_l758_1) begin
@@ -6575,15 +6576,15 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   end
 
   always @(*) begin
-    channels_3_pop_b2m_decrBytes = 17'h0;
+    channels_3_pop_b2m_decrBytes = 16'h0;
     if(b2m_fsm_s1) begin
       if(when_DmaSg_l996_1) begin
-        channels_3_pop_b2m_decrBytes = {4'd0, b2m_fsm_bytesInBurstP1};
+        channels_3_pop_b2m_decrBytes = {3'd0, b2m_fsm_bytesInBurstP1};
       end
     end
   end
 
-  assign when_DmaSg_l523_1 = ((channels_3_pop_b2m_memPending == 4'b0000) && (channels_3_fifo_pop_bytes == 17'h0));
+  assign when_DmaSg_l523_1 = ((channels_3_pop_b2m_memPending == 4'b0000) && (channels_3_fifo_pop_bytes == 16'h0));
   assign when_DmaSg_l532_1 = (channels_3_descriptorValid && (! channels_3_push_memory));
   assign when_DmaSg_l547_1 = ((channels_3_descriptorValid && (channels_3_pop_b2m_memPending == 4'b0000)) && channels_3_pop_b2m_waitFinalRsp);
   assign when_DmaSg_l563_1 = (channels_3_pop_b2m_memPending != 4'b0000);
@@ -6601,7 +6602,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
   assign when_DmaSg_l578_3 = (channels_3_selfRestart && (! channels_3_ctrl_kick));
   assign when_DmaSg_l593_3 = (_zz_when_DmaSg_l593_3 && channels_3_readyForChannelCompletion);
-  assign channels_3_s2b_full = (channels_3_fifo_push_available < 14'h0002);
+  assign channels_3_s2b_full = (channels_3_fifo_push_available < 13'h0002);
   assign when_DmaSg_l255_13 = (channels_3_descriptorValid && channels_3_descriptorCompletion);
   assign when_DmaSg_l255_14 = (! channels_3_interrupts_completion_enable);
   assign when_DmaSg_l255_15 = (channels_3_channelValid && channels_3_channelCompletion);
@@ -6664,14 +6665,14 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     end
   end
 
-  assign channels_4_fifo_base = 14'h0400;
-  assign channels_4_fifo_words = 14'h00ff;
+  assign channels_4_fifo_base = 13'h0400;
+  assign channels_4_fifo_words = 13'h00ff;
   always @(*) begin
-    channels_4_fifo_push_availableDecr = 14'h0;
+    channels_4_fifo_push_availableDecr = 13'h0;
     if(m2b_cmd_s1_valid) begin
       if(io_read_cmd_ready) begin
         if(when_DmaSg_l828_2) begin
-          channels_4_fifo_push_availableDecr = {4'd0, m2b_cmd_s1_fifoPushDecr};
+          channels_4_fifo_push_availableDecr = {3'd0, m2b_cmd_s1_fifoPushDecr};
         end
       end
     end
@@ -6740,7 +6741,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
   assign when_DmaSg_l578_4 = (channels_4_selfRestart && (! channels_4_ctrl_kick));
   assign when_DmaSg_l593_4 = (_zz_when_DmaSg_l593_4 && channels_4_readyForChannelCompletion);
-  assign channels_4_s2b_full = (channels_4_fifo_push_available < 14'h0002);
+  assign channels_4_s2b_full = (channels_4_fifo_push_available < 13'h0002);
   assign when_DmaSg_l255_18 = (channels_4_descriptorValid && channels_4_descriptorCompletion);
   assign when_DmaSg_l255_19 = (! channels_4_interrupts_completion_enable);
   assign when_DmaSg_l255_20 = (channels_4_channelValid && channels_4_channelCompletion);
@@ -6806,7 +6807,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign s2b_0_cmd_context_flush = io_inputs_0_payload_last;
   assign s2b_0_cmd_context_packet = io_inputs_0_payload_last;
   assign s2b_0_cmd_sinkHalted_ready = memory_core_io_writes_0_cmd_ready;
-  assign memory_core_io_writes_0_cmd_payload_address = channels_0_fifo_push_ptrWithBase[12:0];
+  assign memory_core_io_writes_0_cmd_payload_address = channels_0_fifo_push_ptrWithBase[11:0];
   assign memory_core_io_writes_0_cmd_payload_context = {s2b_0_cmd_context_packet,{s2b_0_cmd_context_flush,{s2b_0_cmd_context_bytes,s2b_0_cmd_context_channel}}};
   assign memory_core_io_writes_0_cmd_fire = (s2b_0_cmd_sinkHalted_valid && memory_core_io_writes_0_cmd_ready);
   assign when_DmaSg_l665 = (s2b_0_cmd_channelsOh[0] && memory_core_io_writes_0_cmd_fire);
@@ -6880,7 +6881,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign s2b_1_cmd_context_flush = io_inputs_1_payload_last;
   assign s2b_1_cmd_context_packet = io_inputs_1_payload_last;
   assign s2b_1_cmd_sinkHalted_ready = memory_core_io_writes_1_cmd_ready;
-  assign memory_core_io_writes_1_cmd_payload_address = channels_3_fifo_push_ptrWithBase[12:0];
+  assign memory_core_io_writes_1_cmd_payload_address = channels_3_fifo_push_ptrWithBase[11:0];
   assign memory_core_io_writes_1_cmd_payload_context = {s2b_1_cmd_context_packet,{s2b_1_cmd_context_flush,{s2b_1_cmd_context_bytes,s2b_1_cmd_context_channel}}};
   assign memory_core_io_writes_1_cmd_fire = (s2b_1_cmd_sinkHalted_valid && memory_core_io_writes_1_cmd_ready);
   assign when_DmaSg_l665_1 = (s2b_1_cmd_channelsOh[0] && memory_core_io_writes_1_cmd_fire);
@@ -6897,10 +6898,10 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign b2s_0_cmd_veryLastPtr = channels_1_pop_b2s_veryLastPtr;
   assign b2s_0_cmd_address = channels_1_fifo_pop_ptrWithBase;
   assign b2s_0_cmd_context_channel = b2s_0_cmd_channelsOh;
-  assign b2s_0_cmd_context_veryLast = ((channels_1_pop_b2s_veryLastValid && (b2s_0_cmd_address[13 : 1] == b2s_0_cmd_veryLastPtr[13 : 1])) && (b2s_0_cmd_address[0 : 0] == 1'b1));
+  assign b2s_0_cmd_context_veryLast = ((channels_1_pop_b2s_veryLastValid && (b2s_0_cmd_address[12 : 1] == b2s_0_cmd_veryLastPtr[12 : 1])) && (b2s_0_cmd_address[0 : 0] == 1'b1));
   assign b2s_0_cmd_context_endPacket = channels_1_pop_b2s_veryLastEndPacket;
   assign memory_core_io_reads_0_cmd_valid = (|b2s_0_cmd_channelsOh);
-  assign memory_core_io_reads_0_cmd_payload_address = b2s_0_cmd_address[12:0];
+  assign memory_core_io_reads_0_cmd_payload_address = b2s_0_cmd_address[11:0];
   assign memory_core_io_reads_0_cmd_payload_context = {b2s_0_cmd_context_endPacket,{b2s_0_cmd_context_veryLast,b2s_0_cmd_context_channel}};
   assign _zz_b2s_0_rsp_context_channel = memory_core_io_reads_0_rsp_payload_context;
   assign b2s_0_rsp_context_channel = _zz_b2s_0_rsp_context_channel[0 : 0];
@@ -6918,10 +6919,10 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign b2s_1_cmd_veryLastPtr = channels_2_pop_b2s_veryLastPtr;
   assign b2s_1_cmd_address = channels_2_fifo_pop_ptrWithBase;
   assign b2s_1_cmd_context_channel = b2s_1_cmd_channelsOh;
-  assign b2s_1_cmd_context_veryLast = ((channels_2_pop_b2s_veryLastValid && (b2s_1_cmd_address[13 : 1] == b2s_1_cmd_veryLastPtr[13 : 1])) && (b2s_1_cmd_address[0 : 0] == 1'b1));
+  assign b2s_1_cmd_context_veryLast = ((channels_2_pop_b2s_veryLastValid && (b2s_1_cmd_address[12 : 1] == b2s_1_cmd_veryLastPtr[12 : 1])) && (b2s_1_cmd_address[0 : 0] == 1'b1));
   assign b2s_1_cmd_context_endPacket = channels_2_pop_b2s_veryLastEndPacket;
   assign memory_core_io_reads_1_cmd_valid = (|b2s_1_cmd_channelsOh);
-  assign memory_core_io_reads_1_cmd_payload_address = b2s_1_cmd_address[12:0];
+  assign memory_core_io_reads_1_cmd_payload_address = b2s_1_cmd_address[11:0];
   assign memory_core_io_reads_1_cmd_payload_context = {b2s_1_cmd_context_endPacket,{b2s_1_cmd_context_veryLast,b2s_1_cmd_context_channel}};
   assign _zz_b2s_1_rsp_context_channel = memory_core_io_reads_1_rsp_payload_context;
   assign b2s_1_rsp_context_channel = _zz_b2s_1_rsp_context_channel[0 : 0];
@@ -6939,10 +6940,10 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign b2s_2_cmd_veryLastPtr = channels_4_pop_b2s_veryLastPtr;
   assign b2s_2_cmd_address = channels_4_fifo_pop_ptrWithBase;
   assign b2s_2_cmd_context_channel = b2s_2_cmd_channelsOh;
-  assign b2s_2_cmd_context_veryLast = ((channels_4_pop_b2s_veryLastValid && (b2s_2_cmd_address[13 : 1] == b2s_2_cmd_veryLastPtr[13 : 1])) && (b2s_2_cmd_address[0 : 0] == 1'b1));
+  assign b2s_2_cmd_context_veryLast = ((channels_4_pop_b2s_veryLastValid && (b2s_2_cmd_address[12 : 1] == b2s_2_cmd_veryLastPtr[12 : 1])) && (b2s_2_cmd_address[0 : 0] == 1'b1));
   assign b2s_2_cmd_context_endPacket = channels_4_pop_b2s_veryLastEndPacket;
   assign memory_core_io_reads_2_cmd_valid = (|b2s_2_cmd_channelsOh);
-  assign memory_core_io_reads_2_cmd_payload_address = b2s_2_cmd_address[12:0];
+  assign memory_core_io_reads_2_cmd_payload_address = b2s_2_cmd_address[11:0];
   assign memory_core_io_reads_2_cmd_payload_context = {b2s_2_cmd_context_endPacket,{b2s_2_cmd_context_veryLast,b2s_2_cmd_context_channel}};
   assign _zz_b2s_2_rsp_context_channel = memory_core_io_reads_2_rsp_payload_context;
   assign b2s_2_rsp_context_channel = _zz_b2s_2_rsp_context_channel[0 : 0];
@@ -7048,7 +7049,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign m2b_rsp_writeContext_lastOfBurst = io_read_rsp_payload_last;
   assign m2b_rsp_writeContext_channel = m2b_rsp_context_channel;
   assign m2b_rsp_writeContext_loadByteInNextBeat = ({1'b0,(io_read_rsp_payload_last ? m2b_rsp_context_stop : 4'b1111)} - {1'b0,(m2b_rsp_first ? m2b_rsp_context_start : 4'b0000)});
-  assign memory_core_io_writes_2_cmd_payload_address = _zz_io_writes_2_cmd_payload_address[12:0];
+  assign memory_core_io_writes_2_cmd_payload_address = _zz_io_writes_2_cmd_payload_address[11:0];
   assign io_read_rsp_ready = memory_core_io_writes_2_cmd_ready;
   assign memory_core_io_writes_2_cmd_payload_context = {m2b_rsp_writeContext_loadByteInNextBeat,{m2b_rsp_writeContext_channel,{m2b_rsp_writeContext_lastOfBurst,m2b_rsp_writeContext_last}}};
   assign memory_core_io_writes_2_cmd_fire = (io_read_rsp_valid && memory_core_io_writes_2_cmd_ready);
@@ -7091,7 +7092,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign b2m_fsm_isFinalCmd = b2m_fsm_bytesLeftNext[26];
   assign b2m_fsm_s0 = (b2m_fsm_sel_valid && (! b2m_fsm_sel_valid_regNext));
   assign when_DmaSg_l986 = (! b2m_fsm_sel_valid);
-  assign _zz_b2m_fsm_sel_bytesInBurst = (b2m_fsm_sel_bytesInFifo - 17'h00001);
+  assign _zz_b2m_fsm_sel_bytesInBurst = (b2m_fsm_sel_bytesInFifo - 16'h0001);
   assign _zz_b2m_fsm_sel_bytesInBurst_1 = ((_zz__zz_b2m_fsm_sel_bytesInBurst_1 < b2m_fsm_sel_bytesLeft) ? _zz__zz_b2m_fsm_sel_bytesInBurst_1_1 : b2m_fsm_sel_bytesLeft);
   assign _zz_b2m_fsm_sel_bytesInBurst_2 = (b2m_fsm_sel_bytePerBurst - (_zz__zz_b2m_fsm_sel_bytesInBurst_2 & b2m_fsm_sel_bytePerBurst));
   assign b2m_fsm_fifoCompletion = (_zz_b2m_fsm_fifoCompletion == _zz_b2m_fsm_fifoCompletion_1);
@@ -7109,12 +7110,12 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
   assign b2m_fsm_fetch_context_ptr = _zz_b2m_fsm_fetch_context_ptr;
   assign b2m_fsm_fetch_context_toggle = b2m_fsm_toggle;
-  assign memory_core_io_reads_3_cmd_payload_address = b2m_fsm_sel_ptr[12:0];
+  assign memory_core_io_reads_3_cmd_payload_address = b2m_fsm_sel_ptr[11:0];
   assign memory_core_io_reads_3_cmd_payload_context = {b2m_fsm_fetch_context_toggle,b2m_fsm_fetch_context_ptr};
   assign when_DmaSg_l1033 = (b2m_fsm_sel_valid && memory_core_io_reads_3_cmd_ready);
   assign _zz_b2m_fsm_aggregate_context_ptr = memory_core_io_reads_3_rsp_payload_context;
-  assign b2m_fsm_aggregate_context_ptr = _zz_b2m_fsm_aggregate_context_ptr[13 : 0];
-  assign b2m_fsm_aggregate_context_toggle = _zz_b2m_fsm_aggregate_context_ptr[14];
+  assign b2m_fsm_aggregate_context_ptr = _zz_b2m_fsm_aggregate_context_ptr[12 : 0];
+  assign b2m_fsm_aggregate_context_toggle = _zz_b2m_fsm_aggregate_context_ptr[13];
   assign memory_core_io_reads_3_rsp_s2mPipe_valid = (memory_core_io_reads_3_rsp_valid || (! memory_core_io_reads_3_rsp_rValidN));
   assign memory_core_io_reads_3_rsp_s2mPipe_payload_data = (memory_core_io_reads_3_rsp_rValidN ? memory_core_io_reads_3_rsp_payload_data : memory_core_io_reads_3_rsp_rData_data);
   assign memory_core_io_reads_3_rsp_s2mPipe_payload_mask = (memory_core_io_reads_3_rsp_rValidN ? memory_core_io_reads_3_rsp_payload_mask : memory_core_io_reads_3_rsp_rData_mask);
@@ -7534,11 +7535,11 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign channels_0_fifo_pop_ptrIncr_value = _zz_channels_0_fifo_pop_ptrIncr_value;
   assign channels_1_fifo_push_ptrIncr_value = _zz_channels_1_fifo_push_ptrIncr_value;
   assign channels_1_fifo_pop_bytesIncr_value = _zz_channels_1_fifo_pop_bytesIncr_value_1;
-  assign channels_1_fifo_pop_bytesDecr_value = 17'h0;
+  assign channels_1_fifo_pop_bytesDecr_value = 16'h0;
   assign channels_1_fifo_pop_ptrIncr_value = _zz_channels_1_fifo_pop_ptrIncr_value;
   assign channels_2_fifo_push_ptrIncr_value = _zz_channels_2_fifo_push_ptrIncr_value;
   assign channels_2_fifo_pop_bytesIncr_value = _zz_channels_2_fifo_pop_bytesIncr_value_1;
-  assign channels_2_fifo_pop_bytesDecr_value = 17'h0;
+  assign channels_2_fifo_pop_bytesDecr_value = 16'h0;
   assign channels_2_fifo_pop_ptrIncr_value = _zz_channels_2_fifo_pop_ptrIncr_value;
   assign channels_3_fifo_push_ptrIncr_value = _zz_channels_3_fifo_push_ptrIncr_value;
   assign channels_3_fifo_pop_bytesIncr_value = _zz_channels_3_fifo_pop_bytesIncr_value_1;
@@ -7546,7 +7547,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   assign channels_3_fifo_pop_ptrIncr_value = _zz_channels_3_fifo_pop_ptrIncr_value;
   assign channels_4_fifo_push_ptrIncr_value = _zz_channels_4_fifo_push_ptrIncr_value;
   assign channels_4_fifo_pop_bytesIncr_value = _zz_channels_4_fifo_pop_bytesIncr_value_1;
-  assign channels_4_fifo_pop_bytesDecr_value = 17'h0;
+  assign channels_4_fifo_pop_bytesDecr_value = 16'h0;
   assign channels_4_fifo_pop_ptrIncr_value = _zz_channels_4_fifo_pop_ptrIncr_value;
   always @(posedge clk) begin
     if(reset) begin
@@ -8180,7 +8181,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
   always @(posedge clk) begin
     channels_0_fifo_push_ptr <= (channels_0_fifo_push_ptr + channels_0_fifo_push_ptrIncr_value);
     if(channels_0_channelStart) begin
-      channels_0_fifo_push_ptr <= 14'h0;
+      channels_0_fifo_push_ptr <= 13'h0;
     end
     channels_0_fifo_pop_ptr <= (channels_0_fifo_pop_ptr + channels_0_fifo_pop_ptrIncr_value);
     channels_0_fifo_pop_withOverride_backup <= channels_0_fifo_pop_withOverride_backupNext;
@@ -8192,7 +8193,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     end
     channels_0_fifo_pop_withOverride_exposed <= ((! channels_0_fifo_pop_withOverride_valid) ? channels_0_fifo_pop_withOverride_backupNext : _zz_channels_0_fifo_pop_withOverride_exposed);
     if(channels_0_channelStart) begin
-      channels_0_fifo_pop_withOverride_backup <= 17'h0;
+      channels_0_fifo_pop_withOverride_backup <= 16'h0;
       channels_0_fifo_pop_withOverride_valid <= 1'b0;
     end
     if(channels_0_channelStart) begin
@@ -8234,18 +8235,18 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     channels_0_fifo_pop_ptrIncr_value_regNext <= channels_0_fifo_pop_ptrIncr_value;
     channels_0_fifo_push_available <= (_zz_channels_0_fifo_push_available - (channels_0_push_memory ? channels_0_fifo_push_availableDecr : channels_0_fifo_push_ptrIncr_value));
     if(channels_0_channelStart) begin
-      channels_0_fifo_push_ptr <= 14'h0;
-      channels_0_fifo_push_available <= (channels_0_fifo_words + 14'h0001);
-      channels_0_fifo_pop_ptr <= 14'h0;
+      channels_0_fifo_push_ptr <= 13'h0;
+      channels_0_fifo_push_available <= (channels_0_fifo_words + 13'h0001);
+      channels_0_fifo_pop_ptr <= 13'h0;
     end
     channels_1_fifo_push_ptr <= (channels_1_fifo_push_ptr + channels_1_fifo_push_ptrIncr_value);
     if(channels_1_channelStart) begin
-      channels_1_fifo_push_ptr <= 14'h0;
+      channels_1_fifo_push_ptr <= 13'h0;
     end
     channels_1_fifo_pop_ptr <= (channels_1_fifo_pop_ptr + channels_1_fifo_pop_ptrIncr_value);
     channels_1_fifo_pop_withoutOverride_exposed <= (_zz_channels_1_fifo_pop_withoutOverride_exposed - channels_1_fifo_pop_bytesDecr_value);
     if(channels_1_channelStart) begin
-      channels_1_fifo_pop_withoutOverride_exposed <= 17'h0;
+      channels_1_fifo_pop_withoutOverride_exposed <= 16'h0;
     end
     if(channels_1_descriptorStart) begin
       channels_1_push_m2b_bytesLeft <= channels_1_bytes;
@@ -8275,18 +8276,18 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     channels_1_fifo_pop_ptrIncr_value_regNext <= channels_1_fifo_pop_ptrIncr_value;
     channels_1_fifo_push_available <= (_zz_channels_1_fifo_push_available - (channels_1_push_memory ? channels_1_fifo_push_availableDecr : channels_1_fifo_push_ptrIncr_value));
     if(channels_1_channelStart) begin
-      channels_1_fifo_push_ptr <= 14'h0;
-      channels_1_fifo_push_available <= (channels_1_fifo_words + 14'h0001);
-      channels_1_fifo_pop_ptr <= 14'h0;
+      channels_1_fifo_push_ptr <= 13'h0;
+      channels_1_fifo_push_available <= (channels_1_fifo_words + 13'h0001);
+      channels_1_fifo_pop_ptr <= 13'h0;
     end
     channels_2_fifo_push_ptr <= (channels_2_fifo_push_ptr + channels_2_fifo_push_ptrIncr_value);
     if(channels_2_channelStart) begin
-      channels_2_fifo_push_ptr <= 14'h0;
+      channels_2_fifo_push_ptr <= 13'h0;
     end
     channels_2_fifo_pop_ptr <= (channels_2_fifo_pop_ptr + channels_2_fifo_pop_ptrIncr_value);
     channels_2_fifo_pop_withoutOverride_exposed <= (_zz_channels_2_fifo_pop_withoutOverride_exposed - channels_2_fifo_pop_bytesDecr_value);
     if(channels_2_channelStart) begin
-      channels_2_fifo_pop_withoutOverride_exposed <= 17'h0;
+      channels_2_fifo_pop_withoutOverride_exposed <= 16'h0;
     end
     if(channels_2_descriptorStart) begin
       channels_2_push_m2b_bytesLeft <= channels_2_bytes;
@@ -8316,13 +8317,13 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     channels_2_fifo_pop_ptrIncr_value_regNext <= channels_2_fifo_pop_ptrIncr_value;
     channels_2_fifo_push_available <= (_zz_channels_2_fifo_push_available - (channels_2_push_memory ? channels_2_fifo_push_availableDecr : channels_2_fifo_push_ptrIncr_value));
     if(channels_2_channelStart) begin
-      channels_2_fifo_push_ptr <= 14'h0;
-      channels_2_fifo_push_available <= (channels_2_fifo_words + 14'h0001);
-      channels_2_fifo_pop_ptr <= 14'h0;
+      channels_2_fifo_push_ptr <= 13'h0;
+      channels_2_fifo_push_available <= (channels_2_fifo_words + 13'h0001);
+      channels_2_fifo_pop_ptr <= 13'h0;
     end
     channels_3_fifo_push_ptr <= (channels_3_fifo_push_ptr + channels_3_fifo_push_ptrIncr_value);
     if(channels_3_channelStart) begin
-      channels_3_fifo_push_ptr <= 14'h0;
+      channels_3_fifo_push_ptr <= 13'h0;
     end
     channels_3_fifo_pop_ptr <= (channels_3_fifo_pop_ptr + channels_3_fifo_pop_ptrIncr_value);
     channels_3_fifo_pop_withOverride_backup <= channels_3_fifo_pop_withOverride_backupNext;
@@ -8334,7 +8335,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     end
     channels_3_fifo_pop_withOverride_exposed <= ((! channels_3_fifo_pop_withOverride_valid) ? channels_3_fifo_pop_withOverride_backupNext : _zz_channels_3_fifo_pop_withOverride_exposed);
     if(channels_3_channelStart) begin
-      channels_3_fifo_pop_withOverride_backup <= 17'h0;
+      channels_3_fifo_pop_withOverride_backup <= 16'h0;
       channels_3_fifo_pop_withOverride_valid <= 1'b0;
     end
     if(channels_3_channelStart) begin
@@ -8376,18 +8377,18 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     channels_3_fifo_pop_ptrIncr_value_regNext <= channels_3_fifo_pop_ptrIncr_value;
     channels_3_fifo_push_available <= (_zz_channels_3_fifo_push_available - (channels_3_push_memory ? channels_3_fifo_push_availableDecr : channels_3_fifo_push_ptrIncr_value));
     if(channels_3_channelStart) begin
-      channels_3_fifo_push_ptr <= 14'h0;
-      channels_3_fifo_push_available <= (channels_3_fifo_words + 14'h0001);
-      channels_3_fifo_pop_ptr <= 14'h0;
+      channels_3_fifo_push_ptr <= 13'h0;
+      channels_3_fifo_push_available <= (channels_3_fifo_words + 13'h0001);
+      channels_3_fifo_pop_ptr <= 13'h0;
     end
     channels_4_fifo_push_ptr <= (channels_4_fifo_push_ptr + channels_4_fifo_push_ptrIncr_value);
     if(channels_4_channelStart) begin
-      channels_4_fifo_push_ptr <= 14'h0;
+      channels_4_fifo_push_ptr <= 13'h0;
     end
     channels_4_fifo_pop_ptr <= (channels_4_fifo_pop_ptr + channels_4_fifo_pop_ptrIncr_value);
     channels_4_fifo_pop_withoutOverride_exposed <= (_zz_channels_4_fifo_pop_withoutOverride_exposed - channels_4_fifo_pop_bytesDecr_value);
     if(channels_4_channelStart) begin
-      channels_4_fifo_pop_withoutOverride_exposed <= 17'h0;
+      channels_4_fifo_pop_withoutOverride_exposed <= 16'h0;
     end
     if(channels_4_descriptorStart) begin
       channels_4_push_m2b_bytesLeft <= channels_4_bytes;
@@ -8417,9 +8418,9 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
     channels_4_fifo_pop_ptrIncr_value_regNext <= channels_4_fifo_pop_ptrIncr_value;
     channels_4_fifo_push_available <= (_zz_channels_4_fifo_push_available - (channels_4_push_memory ? channels_4_fifo_push_availableDecr : channels_4_fifo_push_ptrIncr_value));
     if(channels_4_channelStart) begin
-      channels_4_fifo_push_ptr <= 14'h0;
-      channels_4_fifo_push_available <= (channels_4_fifo_words + 14'h0001);
-      channels_4_fifo_pop_ptr <= 14'h0;
+      channels_4_fifo_push_ptr <= 13'h0;
+      channels_4_fifo_push_available <= (channels_4_fifo_words + 13'h0001);
+      channels_4_fifo_pop_ptr <= 13'h0;
     end
     if(when_DmaSg_l665) begin
       channels_0_push_s2b_waitFirst <= 1'b0;
@@ -8724,7 +8725,7 @@ module EfxDMA_Core_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BufferCC_11_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_11_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [4:0]    io_dataIn,
   output wire [4:0]    io_dataOut,
   input  wire          dat4_o_clk,
@@ -8748,9 +8749,9 @@ module EfxDMA_BufferCC_11_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-//EfxDMA_BufferCC_10 replaced by EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04
+//EfxDMA_BufferCC_10 replaced by EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb
 
-module EfxDMA_BufferCC_9_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_9_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [4:0]    io_dataIn,
   output wire [4:0]    io_dataOut,
   input  wire          dat2_o_clk,
@@ -8774,9 +8775,9 @@ module EfxDMA_BufferCC_9_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-//EfxDMA_BufferCC_8 replaced by EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04
+//EfxDMA_BufferCC_8 replaced by EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb
 
-module EfxDMA_BufferCC_7_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_7_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [4:0]    io_dataIn,
   output wire [4:0]    io_dataOut,
   input  wire          dat1_o_clk,
@@ -8800,11 +8801,11 @@ module EfxDMA_BufferCC_7_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-//EfxDMA_BufferCC_6 replaced by EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04
+//EfxDMA_BufferCC_6 replaced by EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb
 
-//EfxDMA_BufferCC_5 replaced by EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04
+//EfxDMA_BufferCC_5 replaced by EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb
 
-module EfxDMA_BufferCC_4_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_4_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [4:0]    io_dataIn,
   output wire [4:0]    io_dataOut,
   input  wire          dat3_i_clk,
@@ -8828,7 +8829,7 @@ module EfxDMA_BufferCC_4_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_3_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [4:0]    io_dataIn,
   output wire [4:0]    io_dataOut,
   input  wire          clk,
@@ -8852,7 +8853,7 @@ module EfxDMA_BufferCC_3_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BufferCC_2_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_2_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire [4:0]    io_dataIn,
   output wire [4:0]    io_dataOut,
   input  wire          dat0_i_clk,
@@ -8876,7 +8877,7 @@ module EfxDMA_BufferCC_2_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BmbContextRemover_1_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BmbContextRemover_1_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_cmd_valid,
   output reg           io_input_cmd_ready,
   input  wire          io_input_cmd_payload_last,
@@ -8960,7 +8961,7 @@ module EfxDMA_BmbContextRemover_1_44d0531f71c04713b005469f3b8ead04 (
   wire                when_Stream_l375;
   wire                _zz_io_input_rsp_valid;
 
-  EfxDMA_StreamFifo_2_44d0531f71c04713b005469f3b8ead04 fifoFork_thrown_translated_fifo (
+  EfxDMA_StreamFifo_2_2176bebf0e03438c95113a4b5fdff9eb fifoFork_thrown_translated_fifo (
     .io_push_valid           (fifoFork_thrown_translated_valid                            ), //i
     .io_push_ready           (fifoFork_thrown_translated_fifo_io_push_ready               ), //o
     .io_push_payload_context (fifoFork_thrown_translated_payload_context[14:0]            ), //i
@@ -9090,7 +9091,7 @@ module EfxDMA_BmbContextRemover_1_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifo_1_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifo_1_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire          io_push_payload_last,
@@ -9304,7 +9305,7 @@ module EfxDMA_StreamFifo_1_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BmbContextRemover_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BmbContextRemover_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_cmd_valid,
   output reg           io_input_cmd_ready,
   input  wire          io_input_cmd_payload_last,
@@ -9380,7 +9381,7 @@ module EfxDMA_BmbContextRemover_44d0531f71c04713b005469f3b8ead04 (
   wire                when_Stream_l375;
   wire                _zz_io_input_rsp_valid;
 
-  EfxDMA_StreamFifo_44d0531f71c04713b005469f3b8ead04 fifoFork_thrown_translated_fifo (
+  EfxDMA_StreamFifo_2176bebf0e03438c95113a4b5fdff9eb fifoFork_thrown_translated_fifo (
     .io_push_valid           (fifoFork_thrown_translated_valid                            ), //i
     .io_push_ready           (fifoFork_thrown_translated_fifo_io_push_ready               ), //o
     .io_push_payload_context (fifoFork_thrown_translated_payload_context[24:0]            ), //i
@@ -9503,7 +9504,7 @@ module EfxDMA_BmbContextRemover_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_FlowCCUnsafeByToggle_1_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_FlowCCUnsafeByToggle_1_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_valid,
   input  wire [31:0]   io_input_payload_PRDATA,
   input  wire          io_input_payload_PSLVERROR,
@@ -9529,7 +9530,7 @@ module EfxDMA_FlowCCUnsafeByToggle_1_44d0531f71c04713b005469f3b8ead04 (
   (* async_reg = "true" *) reg        [31:0]   outputArea_flow_m2sPipe_payload_PRDATA;
   (* async_reg = "true" *) reg                 outputArea_flow_m2sPipe_payload_PSLVERROR;
 
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_1_44d0531f71c04713b005469f3b8ead04 inputArea_target_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_1_2176bebf0e03438c95113a4b5fdff9eb inputArea_target_buffercc (
     .io_dataIn  (inputArea_target                    ), //i
     .io_dataOut (inputArea_target_buffercc_io_dataOut), //o
     .ctrl_clk   (ctrl_clk                            ), //i
@@ -9579,7 +9580,7 @@ module EfxDMA_FlowCCUnsafeByToggle_1_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_FlowCCUnsafeByToggle_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_FlowCCUnsafeByToggle_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_valid,
   input  wire [13:0]   io_input_payload_PADDR,
   input  wire          io_input_payload_PWRITE,
@@ -9606,7 +9607,7 @@ module EfxDMA_FlowCCUnsafeByToggle_44d0531f71c04713b005469f3b8ead04 (
   wire                outputArea_flow_payload_PWRITE;
   wire       [31:0]   outputArea_flow_payload_PWDATA;
 
-  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_44d0531f71c04713b005469f3b8ead04 inputArea_target_buffercc (
+  (* keep_hierarchy = "TRUE" *) EfxDMA_BufferCC_2176bebf0e03438c95113a4b5fdff9eb inputArea_target_buffercc (
     .io_dataIn  (inputArea_target                    ), //i
     .io_dataOut (inputArea_target_buffercc_io_dataOut), //o
     .clk        (clk                                 ), //i
@@ -9650,7 +9651,7 @@ module EfxDMA_FlowCCUnsafeByToggle_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_Aggregator_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_Aggregator_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_input_valid,
   output reg           io_input_ready,
   input  wire [127:0]  io_input_payload_data,
@@ -13025,10 +13026,10 @@ module EfxDMA_Aggregator_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_DmaMemoryCore_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_writes_0_cmd_valid,
   output wire          io_writes_0_cmd_ready,
-  input  wire [12:0]   io_writes_0_cmd_payload_address,
+  input  wire [11:0]   io_writes_0_cmd_payload_address,
   input  wire [63:0]   io_writes_0_cmd_payload_data,
   input  wire [7:0]    io_writes_0_cmd_payload_mask,
   input  wire [1:0]    io_writes_0_cmd_payload_priority,
@@ -13037,7 +13038,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   output wire [6:0]    io_writes_0_rsp_payload_context,
   input  wire          io_writes_1_cmd_valid,
   output wire          io_writes_1_cmd_ready,
-  input  wire [12:0]   io_writes_1_cmd_payload_address,
+  input  wire [11:0]   io_writes_1_cmd_payload_address,
   input  wire [63:0]   io_writes_1_cmd_payload_data,
   input  wire [7:0]    io_writes_1_cmd_payload_mask,
   input  wire [1:0]    io_writes_1_cmd_payload_priority,
@@ -13046,7 +13047,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   output wire [6:0]    io_writes_1_rsp_payload_context,
   input  wire          io_writes_2_cmd_valid,
   output wire          io_writes_2_cmd_ready,
-  input  wire [12:0]   io_writes_2_cmd_payload_address,
+  input  wire [11:0]   io_writes_2_cmd_payload_address,
   input  wire [127:0]  io_writes_2_cmd_payload_data,
   input  wire [15:0]   io_writes_2_cmd_payload_mask,
   input  wire [8:0]    io_writes_2_cmd_payload_context,
@@ -13054,7 +13055,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   output wire [8:0]    io_writes_2_rsp_payload_context,
   input  wire          io_reads_0_cmd_valid,
   output wire          io_reads_0_cmd_ready,
-  input  wire [12:0]   io_reads_0_cmd_payload_address,
+  input  wire [11:0]   io_reads_0_cmd_payload_address,
   input  wire [1:0]    io_reads_0_cmd_payload_priority,
   input  wire [2:0]    io_reads_0_cmd_payload_context,
   output wire          io_reads_0_rsp_valid,
@@ -13064,7 +13065,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   output wire [2:0]    io_reads_0_rsp_payload_context,
   input  wire          io_reads_1_cmd_valid,
   output wire          io_reads_1_cmd_ready,
-  input  wire [12:0]   io_reads_1_cmd_payload_address,
+  input  wire [11:0]   io_reads_1_cmd_payload_address,
   input  wire [1:0]    io_reads_1_cmd_payload_priority,
   input  wire [2:0]    io_reads_1_cmd_payload_context,
   output wire          io_reads_1_rsp_valid,
@@ -13074,7 +13075,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   output wire [2:0]    io_reads_1_rsp_payload_context,
   input  wire          io_reads_2_cmd_valid,
   output wire          io_reads_2_cmd_ready,
-  input  wire [12:0]   io_reads_2_cmd_payload_address,
+  input  wire [11:0]   io_reads_2_cmd_payload_address,
   input  wire [1:0]    io_reads_2_cmd_payload_priority,
   input  wire [2:0]    io_reads_2_cmd_payload_context,
   output wire          io_reads_2_rsp_valid,
@@ -13084,13 +13085,13 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   output wire [2:0]    io_reads_2_rsp_payload_context,
   input  wire          io_reads_3_cmd_valid,
   output wire          io_reads_3_cmd_ready,
-  input  wire [12:0]   io_reads_3_cmd_payload_address,
-  input  wire [14:0]   io_reads_3_cmd_payload_context,
+  input  wire [11:0]   io_reads_3_cmd_payload_address,
+  input  wire [13:0]   io_reads_3_cmd_payload_context,
   output wire          io_reads_3_rsp_valid,
   input  wire          io_reads_3_rsp_ready,
   output wire [127:0]  io_reads_3_rsp_payload_data,
   output wire [15:0]   io_reads_3_rsp_payload_mask,
-  output wire [14:0]   io_reads_3_rsp_payload_context,
+  output wire [13:0]   io_reads_3_rsp_payload_context,
   input  wire          clk,
   input  wire          reset
 );
@@ -13101,10 +13102,10 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire       [71:0]   _zz_banks_1_ram_port;
   wire       [7:0]    _zz_write_ports_0_priority_value;
   wire       [7:0]    _zz_write_ports_1_priority_value;
-  wire       [12:0]   _zz_when_MemoryCore_l136;
-  wire       [12:0]   _zz_when_MemoryCore_l136_1;
-  wire       [12:0]   _zz_when_MemoryCore_l136_2;
-  wire       [12:0]   _zz_when_MemoryCore_l136_3;
+  wire       [11:0]   _zz_when_MemoryCore_l136;
+  wire       [11:0]   _zz_when_MemoryCore_l136_1;
+  wire       [11:0]   _zz_when_MemoryCore_l136_2;
+  wire       [11:0]   _zz_when_MemoryCore_l136_3;
   reg        [63:0]   _zz_read_ports_0_buffer_bufferIn_payload_data;
   reg        [7:0]    _zz_read_ports_0_buffer_bufferIn_payload_mask;
   wire       [7:0]    _zz_read_ports_0_priority_value;
@@ -13114,44 +13115,44 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   reg        [63:0]   _zz_read_ports_2_buffer_bufferIn_payload_data;
   reg        [7:0]    _zz_read_ports_2_buffer_bufferIn_payload_mask;
   wire       [7:0]    _zz_read_ports_2_priority_value;
-  wire       [12:0]   _zz_when_MemoryCore_l221;
-  wire       [12:0]   _zz_when_MemoryCore_l221_1;
-  wire       [12:0]   _zz_when_MemoryCore_l221_2;
-  wire       [12:0]   _zz_when_MemoryCore_l221_3;
-  wire       [12:0]   _zz_when_MemoryCore_l221_4;
-  wire       [12:0]   _zz_when_MemoryCore_l221_5;
+  wire       [11:0]   _zz_when_MemoryCore_l221;
+  wire       [11:0]   _zz_when_MemoryCore_l221_1;
+  wire       [11:0]   _zz_when_MemoryCore_l221_2;
+  wire       [11:0]   _zz_when_MemoryCore_l221_3;
+  wire       [11:0]   _zz_when_MemoryCore_l221_4;
+  wire       [11:0]   _zz_when_MemoryCore_l221_5;
   reg                 _zz_1;
   reg                 _zz_2;
   reg                 banks_0_write_valid;
-  reg        [11:0]   banks_0_write_payload_address;
+  reg        [10:0]   banks_0_write_payload_address;
   reg        [63:0]   banks_0_write_payload_data_data;
   reg        [7:0]    banks_0_write_payload_data_mask;
   wire                banks_0_read_cmd_valid;
-  wire       [11:0]   banks_0_read_cmd_payload;
+  wire       [10:0]   banks_0_read_cmd_payload;
   wire       [63:0]   banks_0_read_rsp_data;
   wire       [7:0]    banks_0_read_rsp_mask;
   wire       [71:0]   _zz_banks_0_read_rsp_data;
   wire                banks_0_writeOr_value_valid;
-  wire       [11:0]   banks_0_writeOr_value_payload_address;
+  wire       [10:0]   banks_0_writeOr_value_payload_address;
   wire       [63:0]   banks_0_writeOr_value_payload_data_data;
   wire       [7:0]    banks_0_writeOr_value_payload_data_mask;
   wire                banks_0_readOr_value_valid;
-  wire       [11:0]   banks_0_readOr_value_payload;
+  wire       [10:0]   banks_0_readOr_value_payload;
   reg                 banks_1_write_valid;
-  reg        [11:0]   banks_1_write_payload_address;
+  reg        [10:0]   banks_1_write_payload_address;
   reg        [63:0]   banks_1_write_payload_data_data;
   reg        [7:0]    banks_1_write_payload_data_mask;
   wire                banks_1_read_cmd_valid;
-  wire       [11:0]   banks_1_read_cmd_payload;
+  wire       [10:0]   banks_1_read_cmd_payload;
   wire       [63:0]   banks_1_read_rsp_data;
   wire       [7:0]    banks_1_read_rsp_mask;
   wire       [71:0]   _zz_banks_1_read_rsp_data;
   wire                banks_1_writeOr_value_valid;
-  wire       [11:0]   banks_1_writeOr_value_payload_address;
+  wire       [10:0]   banks_1_writeOr_value_payload_address;
   wire       [63:0]   banks_1_writeOr_value_payload_data_data;
   wire       [7:0]    banks_1_writeOr_value_payload_data_mask;
   wire                banks_1_readOr_value_valid;
-  wire       [11:0]   banks_1_readOr_value_payload;
+  wire       [10:0]   banks_1_readOr_value_payload;
   reg        [7:0]    write_ports_0_priority_value;
   reg        [7:0]    write_ports_1_priority_value;
   wire                write_nodes_0_0_priority;
@@ -13175,12 +13176,12 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire       [1:0]    write_arbiter_0_losedAgainst;
   reg                 write_arbiter_0_doIt;
   reg                 _zz_banks_0_writeOr_value_valid;
-  reg        [11:0]   _zz_banks_0_writeOr_value_valid_1;
+  reg        [10:0]   _zz_banks_0_writeOr_value_valid_1;
   reg        [63:0]   _zz_banks_0_writeOr_value_valid_2;
   reg        [7:0]    _zz_banks_0_writeOr_value_valid_3;
   wire                when_MemoryCore_l136;
   reg                 _zz_banks_1_writeOr_value_valid;
-  reg        [11:0]   _zz_banks_1_writeOr_value_valid_1;
+  reg        [10:0]   _zz_banks_1_writeOr_value_valid_1;
   reg        [63:0]   _zz_banks_1_writeOr_value_valid_2;
   reg        [7:0]    _zz_banks_1_writeOr_value_valid_3;
   wire                when_MemoryCore_l136_1;
@@ -13189,12 +13190,12 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire       [1:0]    write_arbiter_1_losedAgainst;
   reg                 write_arbiter_1_doIt;
   reg                 _zz_banks_0_writeOr_value_valid_4;
-  reg        [11:0]   _zz_banks_0_writeOr_value_valid_5;
+  reg        [10:0]   _zz_banks_0_writeOr_value_valid_5;
   reg        [63:0]   _zz_banks_0_writeOr_value_valid_6;
   reg        [7:0]    _zz_banks_0_writeOr_value_valid_7;
   wire                when_MemoryCore_l136_2;
   reg                 _zz_banks_1_writeOr_value_valid_4;
-  reg        [11:0]   _zz_banks_1_writeOr_value_valid_5;
+  reg        [10:0]   _zz_banks_1_writeOr_value_valid_5;
   reg        [63:0]   _zz_banks_1_writeOr_value_valid_6;
   reg        [7:0]    _zz_banks_1_writeOr_value_valid_7;
   wire                when_MemoryCore_l136_3;
@@ -13203,12 +13204,12 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire       [1:0]    write_arbiter_2_losedAgainst;
   reg                 write_arbiter_2_doIt;
   reg                 _zz_banks_0_writeOr_value_valid_8;
-  reg        [11:0]   _zz_banks_0_writeOr_value_valid_9;
+  reg        [10:0]   _zz_banks_0_writeOr_value_valid_9;
   reg        [63:0]   _zz_banks_0_writeOr_value_valid_10;
   reg        [7:0]    _zz_banks_0_writeOr_value_valid_11;
   wire                when_MemoryCore_l136_4;
   reg                 _zz_banks_1_writeOr_value_valid_8;
-  reg        [11:0]   _zz_banks_1_writeOr_value_valid_9;
+  reg        [10:0]   _zz_banks_1_writeOr_value_valid_9;
   reg        [63:0]   _zz_banks_1_writeOr_value_valid_10;
   reg        [7:0]    _zz_banks_1_writeOr_value_valid_11;
   wire                when_MemoryCore_l136_5;
@@ -13216,10 +13217,10 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   reg        [8:0]    io_writes_2_cmd_payload_context_regNext;
   wire                read_ports_0_buffer_s0_valid;
   wire       [2:0]    read_ports_0_buffer_s0_payload_context;
-  wire       [12:0]   read_ports_0_buffer_s0_payload_address;
+  wire       [11:0]   read_ports_0_buffer_s0_payload_address;
   reg                 read_ports_0_buffer_s1_valid;
   reg        [2:0]    read_ports_0_buffer_s1_payload_context;
-  reg        [12:0]   read_ports_0_buffer_s1_payload_address;
+  reg        [11:0]   read_ports_0_buffer_s1_payload_address;
   wire       [0:0]    read_ports_0_buffer_groupSel;
   wire                read_ports_0_buffer_bufferIn_valid;
   wire                read_ports_0_buffer_bufferIn_ready;
@@ -13239,16 +13240,16 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire                _zz_io_reads_0_cmd_ready;
   wire                read_ports_0_cmd_valid;
   wire                read_ports_0_cmd_ready;
-  wire       [12:0]   read_ports_0_cmd_payload_address;
+  wire       [11:0]   read_ports_0_cmd_payload_address;
   wire       [1:0]    read_ports_0_cmd_payload_priority;
   wire       [2:0]    read_ports_0_cmd_payload_context;
   reg        [7:0]    read_ports_0_priority_value;
   wire                read_ports_1_buffer_s0_valid;
   wire       [2:0]    read_ports_1_buffer_s0_payload_context;
-  wire       [12:0]   read_ports_1_buffer_s0_payload_address;
+  wire       [11:0]   read_ports_1_buffer_s0_payload_address;
   reg                 read_ports_1_buffer_s1_valid;
   reg        [2:0]    read_ports_1_buffer_s1_payload_context;
-  reg        [12:0]   read_ports_1_buffer_s1_payload_address;
+  reg        [11:0]   read_ports_1_buffer_s1_payload_address;
   wire       [0:0]    read_ports_1_buffer_groupSel;
   wire                read_ports_1_buffer_bufferIn_valid;
   wire                read_ports_1_buffer_bufferIn_ready;
@@ -13268,16 +13269,16 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire                _zz_io_reads_1_cmd_ready;
   wire                read_ports_1_cmd_valid;
   wire                read_ports_1_cmd_ready;
-  wire       [12:0]   read_ports_1_cmd_payload_address;
+  wire       [11:0]   read_ports_1_cmd_payload_address;
   wire       [1:0]    read_ports_1_cmd_payload_priority;
   wire       [2:0]    read_ports_1_cmd_payload_context;
   reg        [7:0]    read_ports_1_priority_value;
   wire                read_ports_2_buffer_s0_valid;
   wire       [2:0]    read_ports_2_buffer_s0_payload_context;
-  wire       [12:0]   read_ports_2_buffer_s0_payload_address;
+  wire       [11:0]   read_ports_2_buffer_s0_payload_address;
   reg                 read_ports_2_buffer_s1_valid;
   reg        [2:0]    read_ports_2_buffer_s1_payload_context;
-  reg        [12:0]   read_ports_2_buffer_s1_payload_address;
+  reg        [11:0]   read_ports_2_buffer_s1_payload_address;
   wire       [0:0]    read_ports_2_buffer_groupSel;
   wire                read_ports_2_buffer_bufferIn_valid;
   wire                read_ports_2_buffer_bufferIn_ready;
@@ -13297,36 +13298,36 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire                _zz_io_reads_2_cmd_ready;
   wire                read_ports_2_cmd_valid;
   wire                read_ports_2_cmd_ready;
-  wire       [12:0]   read_ports_2_cmd_payload_address;
+  wire       [11:0]   read_ports_2_cmd_payload_address;
   wire       [1:0]    read_ports_2_cmd_payload_priority;
   wire       [2:0]    read_ports_2_cmd_payload_context;
   reg        [7:0]    read_ports_2_priority_value;
   wire                read_ports_3_buffer_s0_valid;
-  wire       [14:0]   read_ports_3_buffer_s0_payload_context;
-  wire       [12:0]   read_ports_3_buffer_s0_payload_address;
+  wire       [13:0]   read_ports_3_buffer_s0_payload_context;
+  wire       [11:0]   read_ports_3_buffer_s0_payload_address;
   reg                 read_ports_3_buffer_s1_valid;
-  reg        [14:0]   read_ports_3_buffer_s1_payload_context;
-  reg        [12:0]   read_ports_3_buffer_s1_payload_address;
+  reg        [13:0]   read_ports_3_buffer_s1_payload_context;
+  reg        [11:0]   read_ports_3_buffer_s1_payload_address;
   wire                read_ports_3_buffer_bufferIn_valid;
   wire                read_ports_3_buffer_bufferIn_ready;
   wire       [127:0]  read_ports_3_buffer_bufferIn_payload_data;
   wire       [15:0]   read_ports_3_buffer_bufferIn_payload_mask;
-  wire       [14:0]   read_ports_3_buffer_bufferIn_payload_context;
+  wire       [13:0]   read_ports_3_buffer_bufferIn_payload_context;
   wire                read_ports_3_buffer_bufferOut_valid;
   wire                read_ports_3_buffer_bufferOut_ready;
   wire       [127:0]  read_ports_3_buffer_bufferOut_payload_data;
   wire       [15:0]   read_ports_3_buffer_bufferOut_payload_mask;
-  wire       [14:0]   read_ports_3_buffer_bufferOut_payload_context;
+  wire       [13:0]   read_ports_3_buffer_bufferOut_payload_context;
   reg                 read_ports_3_buffer_bufferIn_rValidN;
   reg        [127:0]  read_ports_3_buffer_bufferIn_rData_data;
   reg        [15:0]   read_ports_3_buffer_bufferIn_rData_mask;
-  reg        [14:0]   read_ports_3_buffer_bufferIn_rData_context;
+  reg        [13:0]   read_ports_3_buffer_bufferIn_rData_context;
   wire                read_ports_3_buffer_full;
   wire                _zz_io_reads_3_cmd_ready;
   wire                read_ports_3_cmd_valid;
   wire                read_ports_3_cmd_ready;
-  wire       [12:0]   read_ports_3_cmd_payload_address;
-  wire       [14:0]   read_ports_3_cmd_payload_context;
+  wire       [11:0]   read_ports_3_cmd_payload_address;
+  wire       [13:0]   read_ports_3_cmd_payload_context;
   wire                read_nodes_0_0_priority;
   wire                read_nodes_0_0_conflict;
   wire                read_nodes_0_1_priority;
@@ -13362,66 +13363,66 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   wire       [2:0]    read_arbiter_0_losedAgainst;
   wire                read_arbiter_0_doIt;
   reg                 _zz_banks_0_readOr_value_valid;
-  reg        [11:0]   _zz_banks_0_readOr_value_valid_1;
+  reg        [10:0]   _zz_banks_0_readOr_value_valid_1;
   wire                when_MemoryCore_l221;
   reg                 _zz_banks_1_readOr_value_valid;
-  reg        [11:0]   _zz_banks_1_readOr_value_valid_1;
+  reg        [10:0]   _zz_banks_1_readOr_value_valid_1;
   wire                when_MemoryCore_l221_1;
   wire       [2:0]    read_arbiter_1_losedAgainst;
   wire                read_arbiter_1_doIt;
   reg                 _zz_banks_0_readOr_value_valid_2;
-  reg        [11:0]   _zz_banks_0_readOr_value_valid_3;
+  reg        [10:0]   _zz_banks_0_readOr_value_valid_3;
   wire                when_MemoryCore_l221_2;
   reg                 _zz_banks_1_readOr_value_valid_2;
-  reg        [11:0]   _zz_banks_1_readOr_value_valid_3;
+  reg        [10:0]   _zz_banks_1_readOr_value_valid_3;
   wire                when_MemoryCore_l221_3;
   wire       [2:0]    read_arbiter_2_losedAgainst;
   wire                read_arbiter_2_doIt;
   reg                 _zz_banks_0_readOr_value_valid_4;
-  reg        [11:0]   _zz_banks_0_readOr_value_valid_5;
+  reg        [10:0]   _zz_banks_0_readOr_value_valid_5;
   wire                when_MemoryCore_l221_4;
   reg                 _zz_banks_1_readOr_value_valid_4;
-  reg        [11:0]   _zz_banks_1_readOr_value_valid_5;
+  reg        [10:0]   _zz_banks_1_readOr_value_valid_5;
   wire                when_MemoryCore_l221_5;
   wire       [2:0]    read_arbiter_3_losedAgainst;
   wire                read_arbiter_3_doIt;
   reg                 _zz_banks_0_readOr_value_valid_6;
-  reg        [11:0]   _zz_banks_0_readOr_value_valid_7;
+  reg        [10:0]   _zz_banks_0_readOr_value_valid_7;
   wire                when_MemoryCore_l221_6;
   reg                 _zz_banks_1_readOr_value_valid_6;
-  reg        [11:0]   _zz_banks_1_readOr_value_valid_7;
+  reg        [10:0]   _zz_banks_1_readOr_value_valid_7;
   wire                when_MemoryCore_l221_7;
-  reg        [12:0]   initialiser_counter;
+  reg        [11:0]   initialiser_counter;
   wire                initialiser_done;
   wire                when_MemoryCore_l239;
   wire       [71:0]   _zz_banks_0_write_payload_data_data;
   wire       [71:0]   _zz_banks_1_write_payload_data_data;
-  wire       [84:0]   _zz_banks_0_writeOr_value_valid_12;
-  wire       [83:0]   _zz_banks_0_writeOr_value_payload_address;
+  wire       [83:0]   _zz_banks_0_writeOr_value_valid_12;
+  wire       [82:0]   _zz_banks_0_writeOr_value_payload_address;
   wire       [71:0]   _zz_banks_0_writeOr_value_payload_data_data;
-  wire       [12:0]   _zz_banks_0_readOr_value_valid_8;
-  wire       [84:0]   _zz_banks_1_writeOr_value_valid_12;
-  wire       [83:0]   _zz_banks_1_writeOr_value_payload_address;
+  wire       [11:0]   _zz_banks_0_readOr_value_valid_8;
+  wire       [83:0]   _zz_banks_1_writeOr_value_valid_12;
+  wire       [82:0]   _zz_banks_1_writeOr_value_payload_address;
   wire       [71:0]   _zz_banks_1_writeOr_value_payload_data_data;
-  wire       [12:0]   _zz_banks_1_readOr_value_valid_8;
-  (* ram_style = "block" *) reg [71:0] banks_0_ram [0:4095];
-  (* ram_style = "block" *) reg [71:0] banks_1_ram [0:4095];
+  wire       [11:0]   _zz_banks_1_readOr_value_valid_8;
+  (* ram_style = "block" *) reg [71:0] banks_0_ram [0:2047];
+  (* ram_style = "block" *) reg [71:0] banks_1_ram [0:2047];
 
   assign _zz_write_ports_0_priority_value = {6'd0, io_writes_0_cmd_payload_priority};
   assign _zz_write_ports_1_priority_value = {6'd0, io_writes_1_cmd_payload_priority};
-  assign _zz_when_MemoryCore_l136 = (io_writes_0_cmd_payload_address ^ 13'h0);
-  assign _zz_when_MemoryCore_l136_1 = (io_writes_0_cmd_payload_address ^ 13'h0001);
-  assign _zz_when_MemoryCore_l136_2 = (io_writes_1_cmd_payload_address ^ 13'h0);
-  assign _zz_when_MemoryCore_l136_3 = (io_writes_1_cmd_payload_address ^ 13'h0001);
+  assign _zz_when_MemoryCore_l136 = (io_writes_0_cmd_payload_address ^ 12'h0);
+  assign _zz_when_MemoryCore_l136_1 = (io_writes_0_cmd_payload_address ^ 12'h001);
+  assign _zz_when_MemoryCore_l136_2 = (io_writes_1_cmd_payload_address ^ 12'h0);
+  assign _zz_when_MemoryCore_l136_3 = (io_writes_1_cmd_payload_address ^ 12'h001);
   assign _zz_read_ports_0_priority_value = {6'd0, read_ports_0_cmd_payload_priority};
   assign _zz_read_ports_1_priority_value = {6'd0, read_ports_1_cmd_payload_priority};
   assign _zz_read_ports_2_priority_value = {6'd0, read_ports_2_cmd_payload_priority};
-  assign _zz_when_MemoryCore_l221 = (read_ports_0_cmd_payload_address ^ 13'h0);
-  assign _zz_when_MemoryCore_l221_1 = (read_ports_0_cmd_payload_address ^ 13'h0001);
-  assign _zz_when_MemoryCore_l221_2 = (read_ports_1_cmd_payload_address ^ 13'h0);
-  assign _zz_when_MemoryCore_l221_3 = (read_ports_1_cmd_payload_address ^ 13'h0001);
-  assign _zz_when_MemoryCore_l221_4 = (read_ports_2_cmd_payload_address ^ 13'h0);
-  assign _zz_when_MemoryCore_l221_5 = (read_ports_2_cmd_payload_address ^ 13'h0001);
+  assign _zz_when_MemoryCore_l221 = (read_ports_0_cmd_payload_address ^ 12'h0);
+  assign _zz_when_MemoryCore_l221_1 = (read_ports_0_cmd_payload_address ^ 12'h001);
+  assign _zz_when_MemoryCore_l221_2 = (read_ports_1_cmd_payload_address ^ 12'h0);
+  assign _zz_when_MemoryCore_l221_3 = (read_ports_1_cmd_payload_address ^ 12'h001);
+  assign _zz_when_MemoryCore_l221_4 = (read_ports_2_cmd_payload_address ^ 12'h0);
+  assign _zz_when_MemoryCore_l221_5 = (read_ports_2_cmd_payload_address ^ 12'h001);
   assign _zz_banks_0_ram_port = {banks_0_write_payload_data_mask,banks_0_write_payload_data_data};
   assign _zz_banks_1_ram_port = {banks_1_write_payload_data_mask,banks_1_write_payload_data_data};
   always @(posedge clk) begin
@@ -13524,7 +13525,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   always @(*) begin
     banks_0_write_payload_address = banks_0_writeOr_value_payload_address;
     if(when_MemoryCore_l239) begin
-      banks_0_write_payload_address = initialiser_counter[11:0];
+      banks_0_write_payload_address = initialiser_counter[10:0];
     end
   end
 
@@ -13557,7 +13558,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   always @(*) begin
     banks_1_write_payload_address = banks_1_writeOr_value_payload_address;
     if(when_MemoryCore_l239) begin
-      banks_1_write_payload_address = initialiser_counter[11:0];
+      banks_1_write_payload_address = initialiser_counter[10:0];
     end
   end
 
@@ -13579,15 +13580,15 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   assign banks_1_read_cmd_payload = banks_1_readOr_value_payload;
   assign write_nodes_0_1_priority = (write_ports_1_priority_value < write_ports_0_priority_value);
   assign write_nodes_1_0_priority = (! write_nodes_0_1_priority);
-  assign write_nodes_0_1_conflict = ((io_writes_0_cmd_valid && io_writes_1_cmd_valid) && (((io_writes_0_cmd_payload_address ^ io_writes_1_cmd_payload_address) & 13'h0001) == 13'h0));
+  assign write_nodes_0_1_conflict = ((io_writes_0_cmd_valid && io_writes_1_cmd_valid) && (((io_writes_0_cmd_payload_address ^ io_writes_1_cmd_payload_address) & 12'h001) == 12'h0));
   assign write_nodes_1_0_conflict = write_nodes_0_1_conflict;
   assign write_nodes_0_2_priority = 1'b0;
   assign write_nodes_2_0_priority = 1'b1;
-  assign write_nodes_0_2_conflict = ((io_writes_0_cmd_valid && io_writes_2_cmd_valid) && (((io_writes_0_cmd_payload_address ^ io_writes_2_cmd_payload_address) & 13'h0) == 13'h0));
+  assign write_nodes_0_2_conflict = ((io_writes_0_cmd_valid && io_writes_2_cmd_valid) && (((io_writes_0_cmd_payload_address ^ io_writes_2_cmd_payload_address) & 12'h0) == 12'h0));
   assign write_nodes_2_0_conflict = write_nodes_0_2_conflict;
   assign write_nodes_1_2_priority = 1'b0;
   assign write_nodes_2_1_priority = 1'b1;
-  assign write_nodes_1_2_conflict = ((io_writes_1_cmd_valid && io_writes_2_cmd_valid) && (((io_writes_1_cmd_payload_address ^ io_writes_2_cmd_payload_address) & 13'h0) == 13'h0));
+  assign write_nodes_1_2_conflict = ((io_writes_1_cmd_valid && io_writes_2_cmd_valid) && (((io_writes_1_cmd_payload_address ^ io_writes_2_cmd_payload_address) & 12'h0) == 12'h0));
   assign write_nodes_2_1_conflict = write_nodes_1_2_conflict;
   assign write_arbiter_0_losedAgainst = {(write_nodes_0_2_conflict && (! write_nodes_0_2_priority)),(write_nodes_0_1_conflict && (! write_nodes_0_1_priority))};
   always @(*) begin
@@ -13610,7 +13611,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l136) begin
       _zz_banks_0_writeOr_value_valid_1 = (io_writes_0_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_0_writeOr_value_valid_1 = 12'h0;
+      _zz_banks_0_writeOr_value_valid_1 = 11'h0;
     end
   end
 
@@ -13643,7 +13644,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l136_1) begin
       _zz_banks_1_writeOr_value_valid_1 = (io_writes_0_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_1_writeOr_value_valid_1 = 12'h0;
+      _zz_banks_1_writeOr_value_valid_1 = 11'h0;
     end
   end
 
@@ -13687,7 +13688,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l136_2) begin
       _zz_banks_0_writeOr_value_valid_5 = (io_writes_1_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_0_writeOr_value_valid_5 = 12'h0;
+      _zz_banks_0_writeOr_value_valid_5 = 11'h0;
     end
   end
 
@@ -13720,7 +13721,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l136_3) begin
       _zz_banks_1_writeOr_value_valid_5 = (io_writes_1_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_1_writeOr_value_valid_5 = 12'h0;
+      _zz_banks_1_writeOr_value_valid_5 = 11'h0;
     end
   end
 
@@ -13764,7 +13765,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l136_4) begin
       _zz_banks_0_writeOr_value_valid_9 = (io_writes_2_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_0_writeOr_value_valid_9 = 12'h0;
+      _zz_banks_0_writeOr_value_valid_9 = 11'h0;
     end
   end
 
@@ -13797,7 +13798,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l136_5) begin
       _zz_banks_1_writeOr_value_valid_9 = (io_writes_2_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_1_writeOr_value_valid_9 = 12'h0;
+      _zz_banks_1_writeOr_value_valid_9 = 11'h0;
     end
   end
 
@@ -13908,27 +13909,27 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   assign read_ports_3_cmd_payload_context = io_reads_3_cmd_payload_context;
   assign read_nodes_0_1_priority = (read_ports_1_priority_value < read_ports_0_priority_value);
   assign read_nodes_1_0_priority = (! read_nodes_0_1_priority);
-  assign read_nodes_0_1_conflict = ((read_ports_0_cmd_valid && read_ports_1_cmd_valid) && (((read_ports_0_cmd_payload_address ^ io_reads_1_cmd_payload_address) & 13'h0001) == 13'h0));
+  assign read_nodes_0_1_conflict = ((read_ports_0_cmd_valid && read_ports_1_cmd_valid) && (((read_ports_0_cmd_payload_address ^ io_reads_1_cmd_payload_address) & 12'h001) == 12'h0));
   assign read_nodes_1_0_conflict = read_nodes_0_1_conflict;
   assign read_nodes_0_2_priority = (read_ports_2_priority_value < read_ports_0_priority_value);
   assign read_nodes_2_0_priority = (! read_nodes_0_2_priority);
-  assign read_nodes_0_2_conflict = ((read_ports_0_cmd_valid && read_ports_2_cmd_valid) && (((read_ports_0_cmd_payload_address ^ io_reads_2_cmd_payload_address) & 13'h0001) == 13'h0));
+  assign read_nodes_0_2_conflict = ((read_ports_0_cmd_valid && read_ports_2_cmd_valid) && (((read_ports_0_cmd_payload_address ^ io_reads_2_cmd_payload_address) & 12'h001) == 12'h0));
   assign read_nodes_2_0_conflict = read_nodes_0_2_conflict;
   assign read_nodes_0_3_priority = 1'b0;
   assign read_nodes_3_0_priority = 1'b1;
-  assign read_nodes_0_3_conflict = ((read_ports_0_cmd_valid && read_ports_3_cmd_valid) && (((read_ports_0_cmd_payload_address ^ io_reads_3_cmd_payload_address) & 13'h0) == 13'h0));
+  assign read_nodes_0_3_conflict = ((read_ports_0_cmd_valid && read_ports_3_cmd_valid) && (((read_ports_0_cmd_payload_address ^ io_reads_3_cmd_payload_address) & 12'h0) == 12'h0));
   assign read_nodes_3_0_conflict = read_nodes_0_3_conflict;
   assign read_nodes_1_2_priority = (read_ports_2_priority_value < read_ports_1_priority_value);
   assign read_nodes_2_1_priority = (! read_nodes_1_2_priority);
-  assign read_nodes_1_2_conflict = ((read_ports_1_cmd_valid && read_ports_2_cmd_valid) && (((read_ports_1_cmd_payload_address ^ io_reads_2_cmd_payload_address) & 13'h0001) == 13'h0));
+  assign read_nodes_1_2_conflict = ((read_ports_1_cmd_valid && read_ports_2_cmd_valid) && (((read_ports_1_cmd_payload_address ^ io_reads_2_cmd_payload_address) & 12'h001) == 12'h0));
   assign read_nodes_2_1_conflict = read_nodes_1_2_conflict;
   assign read_nodes_1_3_priority = 1'b0;
   assign read_nodes_3_1_priority = 1'b1;
-  assign read_nodes_1_3_conflict = ((read_ports_1_cmd_valid && read_ports_3_cmd_valid) && (((read_ports_1_cmd_payload_address ^ io_reads_3_cmd_payload_address) & 13'h0) == 13'h0));
+  assign read_nodes_1_3_conflict = ((read_ports_1_cmd_valid && read_ports_3_cmd_valid) && (((read_ports_1_cmd_payload_address ^ io_reads_3_cmd_payload_address) & 12'h0) == 12'h0));
   assign read_nodes_3_1_conflict = read_nodes_1_3_conflict;
   assign read_nodes_2_3_priority = 1'b0;
   assign read_nodes_3_2_priority = 1'b1;
-  assign read_nodes_2_3_conflict = ((read_ports_2_cmd_valid && read_ports_3_cmd_valid) && (((read_ports_2_cmd_payload_address ^ io_reads_3_cmd_payload_address) & 13'h0) == 13'h0));
+  assign read_nodes_2_3_conflict = ((read_ports_2_cmd_valid && read_ports_3_cmd_valid) && (((read_ports_2_cmd_payload_address ^ io_reads_3_cmd_payload_address) & 12'h0) == 12'h0));
   assign read_nodes_3_2_conflict = read_nodes_2_3_conflict;
   assign read_arbiter_0_losedAgainst = {(read_nodes_0_3_conflict && (! read_nodes_0_3_priority)),{(read_nodes_0_2_conflict && (! read_nodes_0_2_priority)),(read_nodes_0_1_conflict && (! read_nodes_0_1_priority))}};
   assign read_arbiter_0_doIt = (read_ports_0_cmd_valid && (read_arbiter_0_losedAgainst == 3'b000));
@@ -13945,7 +13946,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221) begin
       _zz_banks_0_readOr_value_valid_1 = (read_ports_0_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_0_readOr_value_valid_1 = 12'h0;
+      _zz_banks_0_readOr_value_valid_1 = 11'h0;
     end
   end
 
@@ -13962,7 +13963,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221_1) begin
       _zz_banks_1_readOr_value_valid_1 = (read_ports_0_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_1_readOr_value_valid_1 = 12'h0;
+      _zz_banks_1_readOr_value_valid_1 = 11'h0;
     end
   end
 
@@ -13985,7 +13986,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221_2) begin
       _zz_banks_0_readOr_value_valid_3 = (read_ports_1_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_0_readOr_value_valid_3 = 12'h0;
+      _zz_banks_0_readOr_value_valid_3 = 11'h0;
     end
   end
 
@@ -14002,7 +14003,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221_3) begin
       _zz_banks_1_readOr_value_valid_3 = (read_ports_1_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_1_readOr_value_valid_3 = 12'h0;
+      _zz_banks_1_readOr_value_valid_3 = 11'h0;
     end
   end
 
@@ -14025,7 +14026,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221_4) begin
       _zz_banks_0_readOr_value_valid_5 = (read_ports_2_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_0_readOr_value_valid_5 = 12'h0;
+      _zz_banks_0_readOr_value_valid_5 = 11'h0;
     end
   end
 
@@ -14042,7 +14043,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221_5) begin
       _zz_banks_1_readOr_value_valid_5 = (read_ports_2_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_1_readOr_value_valid_5 = 12'h0;
+      _zz_banks_1_readOr_value_valid_5 = 11'h0;
     end
   end
 
@@ -14065,7 +14066,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221_6) begin
       _zz_banks_0_readOr_value_valid_7 = (read_ports_3_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_0_readOr_value_valid_7 = 12'h0;
+      _zz_banks_0_readOr_value_valid_7 = 11'h0;
     end
   end
 
@@ -14082,7 +14083,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
     if(when_MemoryCore_l221_7) begin
       _zz_banks_1_readOr_value_valid_7 = (read_ports_3_cmd_payload_address >>> 1'd1);
     end else begin
-      _zz_banks_1_readOr_value_valid_7 = 12'h0;
+      _zz_banks_1_readOr_value_valid_7 = 11'h0;
     end
   end
 
@@ -14090,30 +14091,30 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
   assign read_ports_3_buffer_s0_valid = read_arbiter_3_doIt;
   assign read_ports_3_buffer_s0_payload_context = read_ports_3_cmd_payload_context;
   assign read_ports_3_buffer_s0_payload_address = read_ports_3_cmd_payload_address;
-  assign initialiser_done = initialiser_counter[12];
+  assign initialiser_done = initialiser_counter[11];
   assign when_MemoryCore_l239 = (! initialiser_done);
   assign _zz_banks_0_write_payload_data_data = 72'h0;
   assign _zz_banks_1_write_payload_data_data = 72'h0;
   assign _zz_banks_0_writeOr_value_valid_12 = (({{{_zz_banks_0_writeOr_value_valid_3,_zz_banks_0_writeOr_value_valid_2},_zz_banks_0_writeOr_value_valid_1},_zz_banks_0_writeOr_value_valid} | {{{_zz_banks_0_writeOr_value_valid_7,_zz_banks_0_writeOr_value_valid_6},_zz_banks_0_writeOr_value_valid_5},_zz_banks_0_writeOr_value_valid_4}) | {{{_zz_banks_0_writeOr_value_valid_11,_zz_banks_0_writeOr_value_valid_10},_zz_banks_0_writeOr_value_valid_9},_zz_banks_0_writeOr_value_valid_8});
   assign banks_0_writeOr_value_valid = _zz_banks_0_writeOr_value_valid_12[0];
-  assign _zz_banks_0_writeOr_value_payload_address = _zz_banks_0_writeOr_value_valid_12[84 : 1];
-  assign banks_0_writeOr_value_payload_address = _zz_banks_0_writeOr_value_payload_address[11 : 0];
-  assign _zz_banks_0_writeOr_value_payload_data_data = _zz_banks_0_writeOr_value_payload_address[83 : 12];
+  assign _zz_banks_0_writeOr_value_payload_address = _zz_banks_0_writeOr_value_valid_12[83 : 1];
+  assign banks_0_writeOr_value_payload_address = _zz_banks_0_writeOr_value_payload_address[10 : 0];
+  assign _zz_banks_0_writeOr_value_payload_data_data = _zz_banks_0_writeOr_value_payload_address[82 : 11];
   assign banks_0_writeOr_value_payload_data_data = _zz_banks_0_writeOr_value_payload_data_data[63 : 0];
   assign banks_0_writeOr_value_payload_data_mask = _zz_banks_0_writeOr_value_payload_data_data[71 : 64];
   assign _zz_banks_0_readOr_value_valid_8 = (({_zz_banks_0_readOr_value_valid_1,_zz_banks_0_readOr_value_valid} | {_zz_banks_0_readOr_value_valid_3,_zz_banks_0_readOr_value_valid_2}) | ({_zz_banks_0_readOr_value_valid_5,_zz_banks_0_readOr_value_valid_4} | {_zz_banks_0_readOr_value_valid_7,_zz_banks_0_readOr_value_valid_6}));
   assign banks_0_readOr_value_valid = _zz_banks_0_readOr_value_valid_8[0];
-  assign banks_0_readOr_value_payload = _zz_banks_0_readOr_value_valid_8[12 : 1];
+  assign banks_0_readOr_value_payload = _zz_banks_0_readOr_value_valid_8[11 : 1];
   assign _zz_banks_1_writeOr_value_valid_12 = (({{{_zz_banks_1_writeOr_value_valid_3,_zz_banks_1_writeOr_value_valid_2},_zz_banks_1_writeOr_value_valid_1},_zz_banks_1_writeOr_value_valid} | {{{_zz_banks_1_writeOr_value_valid_7,_zz_banks_1_writeOr_value_valid_6},_zz_banks_1_writeOr_value_valid_5},_zz_banks_1_writeOr_value_valid_4}) | {{{_zz_banks_1_writeOr_value_valid_11,_zz_banks_1_writeOr_value_valid_10},_zz_banks_1_writeOr_value_valid_9},_zz_banks_1_writeOr_value_valid_8});
   assign banks_1_writeOr_value_valid = _zz_banks_1_writeOr_value_valid_12[0];
-  assign _zz_banks_1_writeOr_value_payload_address = _zz_banks_1_writeOr_value_valid_12[84 : 1];
-  assign banks_1_writeOr_value_payload_address = _zz_banks_1_writeOr_value_payload_address[11 : 0];
-  assign _zz_banks_1_writeOr_value_payload_data_data = _zz_banks_1_writeOr_value_payload_address[83 : 12];
+  assign _zz_banks_1_writeOr_value_payload_address = _zz_banks_1_writeOr_value_valid_12[83 : 1];
+  assign banks_1_writeOr_value_payload_address = _zz_banks_1_writeOr_value_payload_address[10 : 0];
+  assign _zz_banks_1_writeOr_value_payload_data_data = _zz_banks_1_writeOr_value_payload_address[82 : 11];
   assign banks_1_writeOr_value_payload_data_data = _zz_banks_1_writeOr_value_payload_data_data[63 : 0];
   assign banks_1_writeOr_value_payload_data_mask = _zz_banks_1_writeOr_value_payload_data_data[71 : 64];
   assign _zz_banks_1_readOr_value_valid_8 = (({_zz_banks_1_readOr_value_valid_1,_zz_banks_1_readOr_value_valid} | {_zz_banks_1_readOr_value_valid_3,_zz_banks_1_readOr_value_valid_2}) | ({_zz_banks_1_readOr_value_valid_5,_zz_banks_1_readOr_value_valid_4} | {_zz_banks_1_readOr_value_valid_7,_zz_banks_1_readOr_value_valid_6}));
   assign banks_1_readOr_value_valid = _zz_banks_1_readOr_value_valid_8[0];
-  assign banks_1_readOr_value_payload = _zz_banks_1_readOr_value_valid_8[12 : 1];
+  assign banks_1_readOr_value_payload = _zz_banks_1_readOr_value_valid_8[11 : 1];
   always @(posedge clk) begin
     if(io_writes_0_cmd_valid) begin
       write_ports_0_priority_value <= (write_ports_0_priority_value + _zz_write_ports_0_priority_value);
@@ -14191,7 +14192,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
       read_ports_2_buffer_bufferIn_rValidN <= 1'b1;
       read_ports_3_buffer_s1_valid <= 1'b0;
       read_ports_3_buffer_bufferIn_rValidN <= 1'b1;
-      initialiser_counter <= 13'h0;
+      initialiser_counter <= 12'h0;
     end else begin
       write_arbiter_0_doIt_regNext <= write_arbiter_0_doIt;
       write_arbiter_1_doIt_regNext <= write_arbiter_1_doIt;
@@ -14225,7 +14226,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
         read_ports_3_buffer_bufferIn_rValidN <= 1'b1;
       end
       if(when_MemoryCore_l239) begin
-        initialiser_counter <= (initialiser_counter + 13'h0001);
+        initialiser_counter <= (initialiser_counter + 12'h001);
       end
     end
   end
@@ -14233,7 +14234,7 @@ module EfxDMA_DmaMemoryCore_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifo_2_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifo_2_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [14:0]   io_push_payload_context,
@@ -14415,7 +14416,7 @@ module EfxDMA_StreamFifo_2_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_StreamFifo_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_StreamFifo_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_push_valid,
   output wire          io_push_ready,
   input  wire [24:0]   io_push_payload_context,
@@ -14597,7 +14598,7 @@ module EfxDMA_StreamFifo_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BufferCC_1_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_1_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_dataIn,
   output wire          io_dataOut,
   input  wire          ctrl_clk,
@@ -14621,7 +14622,7 @@ module EfxDMA_BufferCC_1_44d0531f71c04713b005469f3b8ead04 (
 
 endmodule
 
-module EfxDMA_BufferCC_44d0531f71c04713b005469f3b8ead04 (
+module EfxDMA_BufferCC_2176bebf0e03438c95113a4b5fdff9eb (
   input  wire          io_dataIn,
   output wire          io_dataOut,
   input  wire          clk,

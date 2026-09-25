@@ -6,7 +6,7 @@
 module axi_lite_register
   #(
     parameter S_AXI_DATA_WIDTH            = 32,
-    parameter S_AXI_ADDR_WIDTH            = 5,
+    parameter S_AXI_ADDR_WIDTH            = 6,
     parameter S_AXI_WSTRB_WIDTH           = $rtoi($floor((S_AXI_DATA_WIDTH + 7)/8)),
     parameter S_AXI_RRESP_WIDTH           = 2,
     parameter S_AXI_BRESP_WIDTH           = 2
@@ -52,7 +52,15 @@ module axi_lite_register
     output wire [15:0]                    ccm_b_g,
     output wire [15:0]                    ccm_b_b,
 
-    output wire [1:0]                     isp_enable
+    output wire [1:0]                     isp_enable,
+
+    output wire [11:0]                    isp_ready,
+    input  wire [63:0]                    isp_info0,
+    input  wire [63:0]                    isp_info1,
+    input  wire [63:0]                    isp_info2,
+    input  wire [63:0]                    isp_info3,
+    input  wire [63:0]                    isp_info4,
+    input  wire [63:0]                    isp_info5
   );
 
   localparam   NUM_REGISTERS      = 2**(S_AXI_ADDR_WIDTH-2);
@@ -87,8 +95,8 @@ module axi_lite_register
   reg                             axi_rvalid;
 
   // registers
-  reg [S_AXI_DATA_WIDTH-1:0]      registers [0:NUM_REGISTERS-1];
-
+  reg [S_AXI_DATA_WIDTH-1:0]      w_registers [0:NUM_REGISTERS-1];
+  reg [S_AXI_DATA_WIDTH-1:0]      r_registers [0:NUM_REGISTERS-1];
 
   // write state machine
   always_ff @ (posedge clk) begin
@@ -202,59 +210,79 @@ module axi_lite_register
   always_ff @ (posedge clk) begin
     if (axi_wren == 1'b1) begin
         if (axi_wstrb[0] == 1'b1) begin
-          registers[axi_awaddr][7:0] <= axi_wdata[7:0];
+          w_registers[axi_awaddr][7:0] <= axi_wdata[7:0];
         end
         if (axi_wstrb[1] == 1'b1) begin
-          registers[axi_awaddr][15:8] <= axi_wdata[15:8];
+          w_registers[axi_awaddr][15:8] <= axi_wdata[15:8];
         end
         if (axi_wstrb[2] == 1'b1) begin
-          registers[axi_awaddr][23:16] <= axi_wdata[23:16];
+          w_registers[axi_awaddr][23:16] <= axi_wdata[23:16];
         end
         if (axi_wstrb[3] == 1'b1) begin
-          registers[axi_awaddr][31:24] <= axi_wdata[31:24];
+          w_registers[axi_awaddr][31:24] <= axi_wdata[31:24];
         end
     end
 
     if (axi_rden == 1'b1) begin
-      axi_rdata <= registers[axi_araddr];
+      axi_rdata <= r_registers[axi_araddr];
     end
 
     if (rstn == 1'b0) begin
       // bgain, rgain
-      registers[0] <= 32'h00800080;
+      w_registers[0] <= 32'h00800080;
       // g1gain, g0gain
-      registers[1] <= 32'h00800080;
+      w_registers[1] <= 32'h00800080;
       // ccm_r_g, ccm_r_r
-      registers[2] <= 32'h00001000;
+      w_registers[2] <= 32'h00001000;
       // ccm_g_r, ccm_r_b
-      registers[3] <= 32'h00000000;
+      w_registers[3] <= 32'h00000000;
       // ccm_g_b, ccm_g_g
-      registers[4] <= 32'h00001000;
+      w_registers[4] <= 32'h00001000;
       // ccm_b_g, ccm_b_r
-      registers[5] <= 32'h00000000;
+      w_registers[5] <= 32'h00000000;
       // black level, ccm_b_b
-      registers[6] <= 32'h00001000;
+      w_registers[6] <= 32'h00001000;
       // gamma, demosaic enable
-      registers[7] <= 32'h00000003;
+      w_registers[7] <= 32'h00000003;
+      // tready
+      w_registers[8] <= 32'h00000000;
     end
   end
 
   // register assignments
-  assign rgain       = registers[0][15:0];
-  assign bgain       = registers[0][31:16];
-  assign g0gain      = registers[1][15:0];
-  assign g1gain      = registers[1][31:16];
-  assign ccm_r_r     = registers[2][15:0];
-  assign ccm_r_g     = registers[2][31:16];
-  assign ccm_r_b     = registers[3][15:0];
-  assign ccm_g_r     = registers[3][31:16];
-  assign ccm_g_g     = registers[4][15:0];
-  assign ccm_g_b     = registers[4][31:16];
-  assign ccm_b_r     = registers[5][15:0];
-  assign ccm_b_g     = registers[5][31:16];
-  assign ccm_b_b     = registers[6][15:0];
-  assign black_level = registers[6][31:16];
-  assign isp_enable  = registers[7][ 1:0];
+  assign rgain       = w_registers[0][15: 0];
+  assign bgain       = w_registers[0][31:16];
+  assign g0gain      = w_registers[1][15: 0];
+  assign g1gain      = w_registers[1][31:16];
+  assign ccm_r_r     = w_registers[2][15: 0];
+  assign ccm_r_g     = w_registers[2][31:16];
+  assign ccm_r_b     = w_registers[3][15: 0];
+  assign ccm_g_r     = w_registers[3][31:16];
+  assign ccm_g_g     = w_registers[4][15: 0];
+  assign ccm_g_b     = w_registers[4][31:16];
+  assign ccm_b_r     = w_registers[5][15: 0];
+  assign ccm_b_g     = w_registers[5][31:16];
+  assign ccm_b_b     = w_registers[6][15: 0];
+  assign black_level = w_registers[6][31:16];
+  assign isp_enable  = w_registers[7][ 1: 0];
+  assign isp_ready   = w_registers[8][11: 0];
+
+  //minimum clock cycle
+  assign r_registers[ 0] = {isp_info0[15: 0]};
+  assign r_registers[ 1] = {isp_info1[15: 0]};
+  assign r_registers[ 2] = {isp_info2[15: 0]};
+  assign r_registers[ 3] = {isp_info3[15: 0]};
+  assign r_registers[ 4] = {isp_info4[15: 0]};
+  assign r_registers[ 5] = {isp_info5[15: 0]};
+
+  //maximum clock cycle
+  assign r_registers[ 6] = {isp_info0[63:16]};
+  assign r_registers[ 7] = {isp_info1[63:16]};
+  assign r_registers[ 8] = {isp_info2[63:16]};
+  assign r_registers[ 9] = {isp_info3[63:16]};
+  assign r_registers[10] = {isp_info4[63:16]};
+  assign r_registers[11] = {isp_info5[63:16]};
+
   // assign ccm_r_r = 16'sd9519;   // +2.32392
   // assign ccm_r_g = -16'sd3622;  // -0.88421
   // assign ccm_r_b = -16'sd1801;  // -0.43971

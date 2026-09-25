@@ -1,0 +1,23 @@
+sep=\t
+Module Resource Usage Distribution Estimates
+Generated at: Sep 25, 2026 15:01:22
+
+Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module	        FFs	      SRLs	      ADDs	       LUTs	    COMB4s	      RAMs	 DSP/MULTs
+edb_top:edb_top                                             	   2592(0)	   384(0)	   142(0)	   3379(0)	     0(0)	    20(0)	     0(0)	
+ +la0:edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1	2505(1478)	   384(0)	  142(37)	 3347(446)	     0(0)	    20(0)	     0(0)	
+  +axi_crc_i:edb_adbg_crc32_1db2daa1f3c94ac88d392c3e9cb89f62	    32(32)	     0(0)	     0(0)	    38(38)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[0].genblk7.genblk3.trigger_cu:compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  296(296)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[1].genblk7.genblk3.trigger_cu:compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  294(294)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[2].genblk7.genblk3.trigger_cu:compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  300(300)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[3].genblk7.genblk3.trigger_cu:compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  293(293)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[4].genblk7.genblk3.trigger_cu:compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  296(296)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[5].genblk7.genblk3.trigger_cu:compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  295(295)	     0(0)	     0(0)	     0(0)	
+  +trigger_tu:trigger_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=32'b0110,PIPE=1)	      1(1)	     0(0)	     0(0)	    11(11)	     0(0)	     0(0)	     0(0)	
+  +trigger_skipper_n:trigger_skipper_1db2daa1f3c94ac88d392c3e9cb89f62	    65(65)	     0(0)	   63(63)	  211(211)	     0(0)	     0(0)	     0(0)	
+  +la_biu_inst:la_biu_1db2daa1f3c94ac88d392c3e9cb89f62(CAPTURE_WIDTH=32'b0110000000,DATA_DEPTH=512)	   143(96)	   384(0)	    42(0)	  867(397)	     0(0)	    20(0)	     0(0)	
+   +fifo_with_read_inst:fifo_with_read_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,ADDR_WIDTH=9,PIPE=0)	    47(47)	 384(384)	   42(42)	   470(47)	     0(0)	    20(0)	     0(0)	
+    +transcode_write_addr:fifo_address_trancode_unit_1db2daa1f3c94ac88d392c3e9cb89f62(TOTAL_ADDR_WIDTH=9,CELL_ADDR_WIDTH=10,PIPE=0)	      0(0)	     0(0)	     0(0)	    39(39)	     0(0)	     0(0)	     0(0)	
+    +simple_dual_port_ram_inst:edb_simple_dual_port_ram_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,RAM_INIT_FILE="")	      0(0)	     0(0)	     0(0)	  384(384)	     0(0)	   20(20)	     0(0)	
+ +debug_hub_inst:debug_hub_1db2daa1f3c94ac88d392c3e9cb89f62 	    87(87)	     0(0)	     0(0)	    32(32)	     0(0)	     0(0)	     0(0)	

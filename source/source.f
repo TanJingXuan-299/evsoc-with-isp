@@ -58,3 +58,4 @@ isp/simple_dual_ported_ram.sv
 isp/simple_dual_ported_rom.sv
 isp/skidbuffer.sv
 isp/xyz_to_rgb.sv
+isp/min_max_timer.v

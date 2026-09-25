@@ -1027,3 +1027,75 @@ java.io.IOException: Error opening \\.\COM3 (5)
 
 !ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-11 16:13:25.824
 !MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-14 09:55:53.989
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-14 09:55:55.090
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-14 09:58:35.092
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-14 09:58:36.065
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-14 12:49:56.168
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-14 12:49:57.272
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-09-14 14:23:39.644
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$ErrorReadJob
+!SESSION 2026-09-25 14:47:04.283 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-09-25 14:47:20.592
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-25 14:48:54.195
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3339 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-25 14:48:55.442
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-25 14:55:38.240
+!MESSAGE Indexed 'evsoc_ispExample_demo' (8 sources, 146 headers) in 3.29 sec: 5,616 declarations; 11,250 references; 4 unresolved inclusions; 10 syntax errors; 1,120 unresolved names (6.2%)
+!SESSION 2026-09-25 15:12:12.740 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-09-25 15:12:15.812
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-25 15:12:31.272
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-25 15:12:32.030
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-25 15:14:05.291
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-25 15:14:06.043
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-25 15:15:39.155
+!MESSAGE Indexed 'evsoc_ispExample_demo' (8 sources, 146 headers) in 3.57 sec: 5,616 declarations; 11,257 references; 0 unresolved inclusions; 10 syntax errors; 1,114 unresolved names (6.2%)
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-25 15:16:06.947
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-25 16:02:56.123
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-25 16:02:57.111
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx

@@ -1,0 +1,155 @@
+INFO     : Efinix FPGA Synthesis.
+INFO     : Version: 2026.1.132.1.15
+INFO     : Compiled: May 29 2026.
+INFO     : 
+INFO     : Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+
+INFO     : Maximum concurrency has been set to 4 [FlowMsg::MaxThreads]
+INFO     : ***** Beginning Analysis ... *****
+INFO     : default VHDL library search path is now "C:/Efinity/2026.1/sim_models/vhdl/packages/vhdl_2008" [VHDL-1504]
+INFO     : Restoring all Verilog modules from file 'C:/Efinity/2026.1/sim_models/maplib/perilib_efxlib_parsetree.vdb' [VERI-2484]
+INFO     : Restoring all Verilog modules from file 'C:/Efinity/2026.1/sim_models/maplib/maplib_efxlib_parsetree.vdb' [VERI-2484]
+INFO     : Analyzing Verilog file 'C:/Efinity/2026.1/sim_models/maplib/efinix_maplib.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'C:/Efinity/2026.1/sim_models/maplib/efinix_peri_lib.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v' [VERI-1482]
+INFO     : Analysis took 0.0733672 seconds [FlowMsg::StageDuration]
+INFO     :     Analysis took 0.0625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Analysis virtual memory usage: begin = 59.576 MB, end = 59.592 MB, delta = 0.016 MB [FlowMsg::VMUsage]
+INFO     :     Analysis peak virtual memory usage = 59.6 MB [FlowMsg::VMUsage::Peak]
+INFO     : Analysis resident set memory usage: begin = 63.872 MB, end = 66.956 MB, delta = 3.084 MB [FlowMsg::RSSUsage]
+INFO     :     Analysis peak resident set memory usage = 66.956 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending Analysis ... *****
+INFO     : ***** Beginning Elaboration ... *****
+WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(134): port 'probe6' remains unconnected for this instance [VERI-1927]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(14): compiling module 'edb_top' [VERI-1018]
+INFO     : ../../vdb/src/efinix_maplib.v(48): compiling module 'EFX_GBUFCE(CE_POLARITY=1'b1)' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(520): compiling module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(209): compiling module 'edb_adbg_crc32_1db2daa1f3c94ac88d392c3e9cb89f62' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(5530): compiling module 'compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(5735): compiling module 'trigger_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=32'b0110,PIPE=1)' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(5860): compiling module 'trigger_skipper_1db2daa1f3c94ac88d392c3e9cb89f62' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(4874): compiling module 'la_biu_1db2daa1f3c94ac88d392c3e9cb89f62(CAPTURE_WIDTH=32'b0110000000,DATA_DEPTH=512)' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(4614): compiling module 'fifo_with_read_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,ADDR_WIDTH=9,PIPE=0)' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(4564): compiling module 'fifo_address_trancode_unit_1db2daa1f3c94ac88d392c3e9cb89f62(TOTAL_ADDR_WIDTH=9,CELL_ADDR_WIDTH=10,PIPE=0)' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(430): compiling module 'edb_simple_dual_port_ram_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,RAM_INIT_FILE="")' [VERI-1018]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(445): extracting RAM for identifier 'ram' [VERI-2571]
+INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(287): compiling module 'debug_hub_1db2daa1f3c94ac88d392c3e9cb89f62' [VERI-1018]
+WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(107): input port 'probe6[0]' remains unconnected for this instance [VDB-1053]
+INFO     : Elaboration took 0.2847439 seconds [FlowMsg::StageDuration]
+INFO     :     Elaboration took 0.28125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Elaboration virtual memory usage: begin = 59.592 MB, end = 91.4 MB, delta = 31.808 MB [FlowMsg::VMUsage]
+INFO     :     Elaboration peak virtual memory usage = 91.4 MB [FlowMsg::VMUsage::Peak]
+INFO     : Elaboration resident set memory usage: begin = 67 MB, end = 99.36 MB, delta = 32.36 MB [FlowMsg::RSSUsage]
+INFO     :     Elaboration peak resident set memory usage = 99.36 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending Elaboration ... *****
+INFO     : ... Setting Synthesis Option: mode=speed
+INFO     : ***** Beginning Reading Mapping Library ... *****
+INFO     : Reading Mapping Library took 0.0040925 seconds [FlowMsg::StageDuration]
+INFO     :     Reading Mapping Library took 0 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Reading Mapping Library virtual memory usage: begin = 91.4 MB, end = 91.4 MB, delta = 0 MB [FlowMsg::VMUsage]
+INFO     :     Reading Mapping Library peak virtual memory usage = 91.4 MB [FlowMsg::VMUsage::Peak]
+INFO     : Reading Mapping Library resident set memory usage: begin = 100.372 MB, end = 100.376 MB, delta = 0.004 MB [FlowMsg::RSSUsage]
+INFO     :     Reading Mapping Library peak resident set memory usage = 100.376 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending Reading Mapping Library ... *****
+INFO     : ... Pre-synthesis checks begin
+WARNING  : Removing redundant signal : trigger_in. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5747) [EFX-0200]
+WARNING  : Removing redundant signal : clk. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4570) [EFX-0200]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:445) [EFX-0677]
+WARNING  : Removing redundant signal : full. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4624) [EFX-0200]
+WARNING  : Removing redundant signal : shift_i. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4894) [EFX-0200]
+WARNING  : Removing redundant signal : trig_out. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4911) [EFX-0200]
+WARNING  : Removing redundant signal : trig_out_ack. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4912) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_DRCK. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1053) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_RESET. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1054) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_RUNTEST. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1055) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_SEL. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1056) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_TMS. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1060) [EFX-0200]
+WARNING  : Removing redundant signal : trig_in_ack. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1072) [EFX-0200]
+WARNING  : Removing redundant signal : mux_capture_cmp[5:0]. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3491) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_CAPTURE. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:292) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_DRCK. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:293) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_RUNTEST. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:295) [EFX-0200]
+WARNING  : Removing redundant signal : bscan_TMS. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:300) [EFX-0200]
+INFO     : Module Instance 'la0' input pin 'trig_in' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'la0' input pin 'trig_out_ack' is tied to constant (=0). [EFX-0266]
+WARNING  : Re-wiring to GND non-driven net/port 'probe6[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe7[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe8[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe9[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe10[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe11[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe12[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe13[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe14[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net/port 'probe15[0]' in module 'edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:107) [EFX-0201]
+WARNING  : (The above message was generated too many times, subsequent similar messages will be muted.) [EFX-0201]
+INFO     : ... Pre-synthesis checks end (Real time : 0s)
+INFO     : ... NameSpace init begin
+INFO     : ... NameSpace init end (Real time : 0s)
+INFO     : ... Mapping design "edb_top"
+INFO     : ... Hierarchical pre-synthesis "edb_adbg_crc32_1db2daa1f3c94ac88d392c3e9cb89f62" begin
+INFO     : ... Hierarchical pre-synthesis "edb_adbg_crc32_1db2daa1f3c94ac88d392c3e9cb89f62" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)" begin
+INFO     : ... Hierarchical pre-synthesis "compare_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=11'b01000000,PIPE=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "trigger_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=32'b0110,PIPE=1)" begin
+INFO     : ... Hierarchical pre-synthesis "trigger_unit_1db2daa1f3c94ac88d392c3e9cb89f62(WIDTH=32'b0110,PIPE=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "trigger_skipper_1db2daa1f3c94ac88d392c3e9cb89f62" begin
+INFO     : ... Hierarchical pre-synthesis "trigger_skipper_1db2daa1f3c94ac88d392c3e9cb89f62" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "fifo_address_trancode_unit_1db2daa1f3c94ac88d392c3e9cb89f62(TOTAL_ADDR_WIDTH=9,CELL_ADDR_WIDTH=10,PIPE=0)" begin
+INFO     : ... Hierarchical pre-synthesis "fifo_address_trancode_unit_1db2daa1f3c94ac88d392c3e9cb89f62(TOTAL_ADDR_WIDTH=9,CELL_ADDR_WIDTH=10,PIPE=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "edb_simple_dual_port_ram_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,RAM_INIT_FILE="")" begin
+INFO     : ... Hierarchical pre-synthesis "edb_simple_dual_port_ram_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,RAM_INIT_FILE="")" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "fifo_with_read_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,ADDR_WIDTH=9,PIPE=0)" begin
+INFO     : ... Hierarchical pre-synthesis "fifo_with_read_1db2daa1f3c94ac88d392c3e9cb89f62(DATA_WIDTH=32'b0110000001,ADDR_WIDTH=9,PIPE=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "la_biu_1db2daa1f3c94ac88d392c3e9cb89f62(CAPTURE_WIDTH=32'b0110000000,DATA_DEPTH=512)" begin
+INFO     : ... Hierarchical pre-synthesis "la_biu_1db2daa1f3c94ac88d392c3e9cb89f62(CAPTURE_WIDTH=32'b0110000000,DATA_DEPTH=512)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1" begin
+INFO     : ... Hierarchical pre-synthesis "edb_la_top_1db2daa1f3c94ac88d392c3e9cb89f62_renamed_due_excessive_length_1" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "debug_hub_1db2daa1f3c94ac88d392c3e9cb89f62" begin
+INFO     : ... Hierarchical pre-synthesis "debug_hub_1db2daa1f3c94ac88d392c3e9cb89f62" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "edb_top" begin
+INFO     : ... Clock Enable Synthesis Performed on 127 flops.
+INFO     : ... Hierarchical pre-synthesis "edb_top" end (Real time : 1s)
+INFO     : ... Flat optimizations begin
+INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Flat synthesis begin
+INFO     : ... Flat synthesis end (Real time : 0s)
+INFO     : ... Flat optimizations begin
+INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Check and break combinational loops begin
+INFO     : ... Check and break combinational loops end (Real time : 0s)
+INFO     : ... Setup for logic synthesis begin
+INFO     : ... Setup for logic synthesis end (Real time : 0s)
+INFO     : ... LUT mapping begin
+INFO     : ... LS, strategy: 3, nd: 3013, ed: 9631, lv: 7, pw: 5825.26
+INFO     : ... LUT mapping end (Real time : 14s)
+INFO     : ... Post-synthesis Verific netlist creation begin
+INFO     : ... Post-synthesis Verific netlist creation end (Real time : 0s)
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(17): Input/inout port bscan_DRCK is unconnected. Place and route may remove this unconnected port. [VDB-8003]
+WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(19): Input/inout port bscan_RUNTEST is unconnected. Place and route may remove this unconnected port. [VDB-8003]
+WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(24): Input/inout port bscan_TMS is unconnected. Place and route may remove this unconnected port. [VDB-8003]
+WARNING  : Found 3 warnings in the post-synthesis netlist.
+INFO     : VDB Netlist Checker took 0.0122343 seconds [FlowMsg::StageDuration]
+INFO     :     VDB Netlist Checker took 0.015625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : VDB Netlist Checker virtual memory usage: begin = 117.888 MB, end = 117.94 MB, delta = 0.052 MB [FlowMsg::VMUsage]
+INFO     :     VDB Netlist Checker peak virtual memory usage = 165.26 MB [FlowMsg::VMUsage::Peak]
+INFO     : VDB Netlist Checker resident set memory usage: begin = 134.356 MB, end = 134.484 MB, delta = 0.128 MB [FlowMsg::RSSUsage]
+INFO     :     VDB Netlist Checker peak resident set memory usage = 173.212 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Resource Summary 
+INFO     : ======================================= 
+INFO     : EFX_ADD                 : 	142
+INFO     : EFX_LUT4                : 	3379
+INFO     : EFX_FF                  : 	2592
+INFO     : EFX_SRL8                : 	384
+INFO     : EFX_RAM10               : 	20
+INFO     : EFX_GBUFCE              : 	1
+INFO     : ======================================= 
+INFO     : Writing netlist 'edb_top' to Verilog file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.stub.v' [VDB-1030]
+INFO     : The entire flow of EFX_MAP took 17.6098981 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_MAP took 20.453125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.036 MB, end = 122.868 MB, delta = 103.832 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 165.26 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.664 MB, end = 139.016 MB, delta = 119.352 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 173.212 MB [FlowMsg::RSSUsage::Peak]

@@ -511,3 +511,79 @@
 // Sep 11, 2026 09:43:52
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 14:19:46
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot index into non-array type logic for 'ccm_axis_tuser' (VERI-1011) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:420)
+[EFX-0010 VERI-ERROR] module 'isp' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:551)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 14:24:56
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot index into non-array type logic for 'ccm_axis_tuser' (VERI-1011) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:421)
+[EFX-0010 VERI-ERROR] module 'isp' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:552)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 14:26:48
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'axi_rready' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:526)
+[EFX-0010 VERI-ERROR] 'axi_rready' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:530)
+[EFX-0010 VERI-ERROR] 'axi_rready' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:537)
+[EFX-0010 VERI-ERROR] 'axi_rready' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:538)
+[EFX-0010 VERI-ERROR] 'axi_rready' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:541)
+[EFX-0010 VERI-ERROR] 'rstn' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:549)
+[EFX-0010 VERI-ERROR] 'axi_rready' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:553)
+[EFX-0010 VERI-ERROR] 'isp_axi_s_rdata' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:557)
+[EFX-0010 VERI-ERROR] 'axi_rready' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:570)
+[EFX-0010 VERI-ERROR] module 'cam_picam_v2' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:824)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 14:30:38
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] instantiating unknown module 'min_max_timer' (VERI-1063) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv:114)
+[EFX-0021 ERROR] Elaboration of module 'edge_vision_soc' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 14:31:49
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 14:59:34
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 15:42:32
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 15:42:40
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 15:58:20
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 25, 2026 16:06:09
+///////////////////////////////////
+

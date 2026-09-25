@@ -16,7 +16,7 @@ module isp
     // Output component bit width. 8
     parameter COMPONENT_BIT_WIDTH                 = 8,
     parameter S_AXI_DATA_WIDTH                    = 32,
-    parameter S_AXI_ADDR_WIDTH                    = 5,
+    parameter S_AXI_ADDR_WIDTH                    = 6,
     parameter S_AXI_WSTRB_WIDTH                   = $rtoi($floor((S_AXI_DATA_WIDTH + 7)/8)),
     parameter S_AXI_RRESP_WIDTH                   = 2,
     parameter S_AXI_BRESP_WIDTH                   = 2,
@@ -81,7 +81,37 @@ module isp
   wire [15:0]                     reg_ccm_b_r;
   wire [15:0]                     reg_ccm_b_g;
   wire [15:0]                     reg_ccm_b_b;
-  wire [1:0]                      isp_enable;
+  wire [ 1:0]                     isp_enable;
+  wire [65:0]                     isp_info0;
+  wire [65:0]                     isp_info1;
+  wire [65:0]                     isp_info2;
+  wire [65:0]                     isp_info3;
+  wire [65:0]                     isp_info4;
+  wire [65:0]                     isp_info5;
+
+  assign isp_info5[35] = isp_info5[3];
+  assign isp_info4[35] = isp_info4[3];
+  assign isp_info3[35] = isp_info3[3];
+  assign isp_info2[35] = isp_info2[3];
+  assign isp_info1[35] = isp_info1[3];
+  assign isp_info0[35] = isp_info0[3];
+
+  min_max_timer #(
+    .TIMER_WIDTH                          (30)
+  ) min_max_timer_inst0
+  (
+    .clk                                  (clk),
+    .rst                                  (~rstn),
+    .start                                (s_axis_tuser[0] && s_axis_tready && s_axis_tvalid),
+    .stop                                 (m_axis_tuser[1]),
+    .min_ready                            (isp_info0[0]),
+    .max_ready                            (isp_info0[1]),
+    .min_valid                            (isp_info0[2]),
+    .max_valid                            (isp_info0[34]),
+    .timer_overflow                       (isp_info0[3]),
+    .min_time_consumed                    (isp_info0[33: 4]),
+    .max_time_consumed                    (isp_info0[65:36])
+  );
 
   axi_lite_register #(
     .S_AXI_DATA_WIDTH             (S_AXI_DATA_WIDTH),
@@ -131,7 +161,20 @@ module isp
     .ccm_b_g                      (reg_ccm_b_g),
     .ccm_b_b                      (reg_ccm_b_b),
 
-    .isp_enable                   (isp_enable)
+    .isp_enable                   (isp_enable),
+
+    .isp_info0                    (isp_info0[65:2]),
+    .isp_info1                    (isp_info1[65:2]),
+    .isp_info2                    (isp_info2[65:2]),
+    .isp_info3                    (isp_info3[65:2]),
+    .isp_info4                    (isp_info4[65:2]),
+    .isp_info5                    (isp_info5[65:2]),
+    .isp_ready                    ({isp_info5[1:0],
+                                    isp_info4[1:0],
+                                    isp_info3[1:0],
+                                    isp_info2[1:0],
+                                    isp_info1[1:0],
+                                    isp_info0[1:0]})
   );
 
   localparam BLC_PIXEL_BIT_WIDTH          = PIXEL_BIT_WIDTH;
@@ -164,6 +207,23 @@ module isp
     .m_axis_tready                        (blc_tready),
     .m_axis_tlast                         (blc_tlast),
     .m_axis_tuser                         (blc_tuser)
+  );
+
+  min_max_timer #(
+    .TIMER_WIDTH                          (30)
+  ) min_max_timer_inst1
+  (
+    .clk                                  (clk),
+    .rst                                  (~rstn),
+    .start                                (s_axis_tuser[0] && s_axis_tready && s_axis_tvalid),
+    .stop                                 (blc_tuser[1]),
+    .min_ready                            (isp_info1[0]),
+    .max_ready                            (isp_info1[1]),
+    .min_valid                            (isp_info1[2]),
+    .max_valid                            (isp_info1[34]),
+    .timer_overflow                       (isp_info1[3]),
+    .min_time_consumed                    (isp_info1[33: 4]),
+    .max_time_consumed                    (isp_info1[65:36])
   );
 
   localparam COLORGAIN_PIXEL_BIT_WIDTH    = BLC_PIXEL_BIT_WIDTH;
@@ -201,6 +261,23 @@ module isp
     .m_axis_tready                        (colorgain_tready),
     .m_axis_tlast                         (colorgain_tlast),
     .m_axis_tuser                         (colorgain_tuser)
+  );
+
+  min_max_timer #(
+    .TIMER_WIDTH                          (30)
+  ) min_max_timer_inst2
+  (
+    .clk                                  (clk),
+    .rst                                  (~rstn),
+    .start                                (blc_tuser[0] && blc_tready && blc_tvalid),
+    .stop                                 (colorgain_tuser[1]),
+    .min_ready                            (isp_info2[0]),
+    .max_ready                            (isp_info2[1]),
+    .min_valid                            (isp_info2[2]),
+    .max_valid                            (isp_info2[34]),
+    .timer_overflow                       (isp_info2[3]),
+    .min_time_consumed                    (isp_info2[33: 4]),
+    .max_time_consumed                    (isp_info2[65:36])
   );
 
   wire [COLORGAIN_DATA_WIDTH-1:0]         skidbuffer1_tdata;
@@ -262,6 +339,23 @@ module isp
     .m_axis_tuser                         (demosaic_tuser)
   );
 
+    min_max_timer #(
+    .TIMER_WIDTH                          (30)
+  ) min_max_timer_inst3
+  (
+    .clk                                  (clk),
+    .rst                                  (~rstn),
+    .start                                (skidbuffer1_tuser[0] && skidbuffer1_tready && skidbuffer1_tvalid),
+    .stop                                 (demosaic_tuser[1]),
+    .min_ready                            (isp_info3[0]),
+    .max_ready                            (isp_info3[1]),
+    .min_valid                            (isp_info3[2]),
+    .max_valid                            (isp_info3[34]),
+    .timer_overflow                       (isp_info3[3]),
+    .min_time_consumed                    (isp_info3[33: 4]),
+    .max_time_consumed                    (isp_info3[65:36])
+  );
+
   localparam CCM_COMPONENT_BIT_WIDTH      = DEMOSAIC_PIXEL_BIT_WIDTH;
   localparam CCM_S_AXIS_DATA_BIT_WIDTH    = 8*$rtoi($floor((PIXEL_PER_CYCLE * 3 * CCM_COMPONENT_BIT_WIDTH + 7)/8));
   localparam CCM_M_AXIS_DATA_BIT_WIDTH    = 8*$rtoi($floor((PIXEL_PER_CYCLE * 3 * CCM_COMPONENT_BIT_WIDTH + 7)/8));
@@ -299,17 +393,40 @@ module isp
     .ccm_b_g                              (reg_ccm_b_g),
     .ccm_b_b                              (reg_ccm_b_b),
 
-    .s_axis_tdata                         (isp_enable [0] ? demosaic_tdata  : demosaic_bypass_tdata),
-    .s_axis_tvalid                        (isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid),
+    .s_axis_tdata                         (ccm_axis_tdata),
+    .s_axis_tvalid                        (ccm_axis_tvalid),
     .s_axis_tready                        (demosaic_tready),
-    .s_axis_tlast                         (isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast),
-    .s_axis_tuser                         (isp_enable [0] ? demosaic_tuser  : skidbuffer1_tuser),
+    .s_axis_tlast                         (ccm_axis_tlast),
+    .s_axis_tuser                         (ccm_axis_tuser),
 
     .m_axis_tdata                         (ccm_tdata),
     .m_axis_tvalid                        (ccm_tvalid),
     .m_axis_tready                        (ccm_tready),
     .m_axis_tlast                         (ccm_tlast),
     .m_axis_tuser                         (ccm_tuser)
+  );
+
+  wire ccm_axis_tdata   = isp_enable [0] ? demosaic_tdata  : demosaic_bypass_tdata;
+  wire ccm_axis_tvalid  = isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid;
+  wire ccm_axis_tlast   = isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast;
+  wire [TUSER_WIDTH-1:0] ccm_axis_tuser;
+  assign ccm_axis_tuser = isp_enable [0] ? demosaic_tuser  : skidbuffer1_tuser;
+
+  min_max_timer #(
+    .TIMER_WIDTH                          (30)
+  ) min_max_timer_inst4
+  (
+    .clk                                  (clk),
+    .rst                                  (~rstn),
+    .start                                (ccm_axis_tuser[0] && ccm_axis_tready && ccm_axis_tvalid),
+    .stop                                 (ccm_tuser[1]),
+    .min_ready                            (isp_info4[0]),
+    .max_ready                            (isp_info4[1]),
+    .min_valid                            (isp_info4[2]),
+    .max_valid                            (isp_info4[34]),
+    .timer_overflow                       (isp_info4[3]),
+    .min_time_consumed                    (isp_info4[33: 4]),
+    .max_time_consumed                    (isp_info4[65:36])
   );
 
   wire [CCM_M_AXIS_DATA_BIT_WIDTH-1:0]    skidbuffer2_tdata;
@@ -370,6 +487,23 @@ module isp
     .m_axis_tready                        (gamma_tready),
     .m_axis_tlast                         (gamma_tlast),
     .m_axis_tuser                         (gamma_tuser)
+  );
+
+  min_max_timer #(
+    .TIMER_WIDTH                          (30)
+  ) min_max_timer_inst5
+  (
+    .clk                                  (clk),
+    .rst                                  (~rstn),
+    .start                                (skidbuffer2_tuser[0] && skidbuffer2_tready && skidbuffer2_tvalid),
+    .stop                                 (gamma_tuser[1]),
+    .min_ready                            (isp_info5[0]),
+    .max_ready                            (isp_info5[1]),
+    .min_valid                            (isp_info5[2]),
+    .max_valid                            (isp_info5[34]),
+    .timer_overflow                       (isp_info5[3]),
+    .min_time_consumed                    (isp_info5[33: 4]),
+    .max_time_consumed                    (isp_info5[65:36])
   );
 
   wire [GAMMA_M_AXIS_DATA_BIT_WIDTH-1:0]  skidbuffer3_tdata;

@@ -19,7 +19,7 @@
         "EfinixDDR": "1'b0",
         "RdQueue": "1'b1",
         "BufferWidth": "64",
-        "BufferWords": "4096",
+        "BufferWords": "2048",
         "MemExtWidth": "128",
         "CH0_SGMode": "1'b0",
         "CH0_Output": "1'b0",

@@ -226,3 +226,27 @@ make: Nothing to be done for 'all'.
 16:13:24 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.
+09:55:51 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+09:58:34 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+12:49:55 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:48:52 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:12:30 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:14:04 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:06 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+16:02:55 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
