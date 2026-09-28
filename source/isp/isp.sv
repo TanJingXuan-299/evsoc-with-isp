@@ -188,7 +188,8 @@ module isp
 
   blc #(
     .PIXEL_PER_CYCLE                      (PIXEL_PER_CYCLE),
-    .PIXEL_BIT_WIDTH                      (BLC_PIXEL_BIT_WIDTH)
+    .PIXEL_BIT_WIDTH                      (BLC_PIXEL_BIT_WIDTH),
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) blc_inst
   (
     .clk                                  (clk),
@@ -238,7 +239,8 @@ module isp
   colorgain #(
     .CFA_ORIENTATION                      (CFA_ORIENTATION),
     .PIXEL_PER_CYCLE                      (PIXEL_PER_CYCLE),
-    .PIXEL_BIT_WIDTH                      (COLORGAIN_PIXEL_BIT_WIDTH)
+    .PIXEL_BIT_WIDTH                      (COLORGAIN_PIXEL_BIT_WIDTH),
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) colorgain_inst
   (
     .clk                                  (clk),
@@ -287,7 +289,8 @@ module isp
   wire [TUSER_WIDTH-1:0]                  skidbuffer1_tuser;
 
   skidbuffer #(
-    .DATA_WIDTH                           (COLORGAIN_DATA_WIDTH)
+    .DATA_WIDTH                           (COLORGAIN_DATA_WIDTH),
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) skidbuffer1_inst
   (
     .clk                                  (clk),
@@ -320,7 +323,8 @@ module isp
     .CFA_ORIENTATION                      (CFA_ORIENTATION),
     .MAX_RESOLUTION                       (MAX_RESOLUTION),
     .PIXEL_PER_CYCLE                      (PIXEL_PER_CYCLE),
-    .PIXEL_BIT_WIDTH                      (DEMOSAIC_PIXEL_BIT_WIDTH)
+    .PIXEL_BIT_WIDTH                      (DEMOSAIC_PIXEL_BIT_WIDTH),
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) demosaic_inst
   (
     .clk                                  (clk),
@@ -377,7 +381,8 @@ module isp
     .PIXEL_PER_CYCLE                      (PIXEL_PER_CYCLE),
     .COMPONENT_BIT_WIDTH                  (CCM_COMPONENT_BIT_WIDTH),
     .S_AXIS_DATA_WIDTH                    (CCM_S_AXIS_DATA_BIT_WIDTH),
-    .M_AXIS_DATA_WIDTH                    (CCM_M_AXIS_DATA_BIT_WIDTH)
+    .M_AXIS_DATA_WIDTH                    (CCM_M_AXIS_DATA_BIT_WIDTH),
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) ccm_inst
   (
     .clk                                  (clk),
@@ -436,7 +441,8 @@ module isp
   wire [TUSER_WIDTH-1:0]                  skidbuffer2_tuser;
 
   skidbuffer #(
-    .DATA_WIDTH                           (CCM_M_AXIS_DATA_BIT_WIDTH)
+    .DATA_WIDTH                           (CCM_M_AXIS_DATA_BIT_WIDTH),
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) skidbuffer2_inst
   (
     .clk                                   (clk),
@@ -470,7 +476,8 @@ module isp
     .PIXEL_PER_CYCLE                      (PIXEL_PER_CYCLE),
     .INPUT_COMPONENT_BIT_WIDTH            (GAMMA_INPUT_PIXEL_BIT_WIDTH),
     .OUTPUT_COMPONENT_BIT_WIDTH           (GAMMA_OUTPUT_PIXEL_BIT_WIDTH),
-    .LUT_FILE                             (GAMMA_LUT_FILE)
+    .LUT_FILE                             (GAMMA_LUT_FILE),
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) gamma_inst
   (
     .clk                                  (clk),
@@ -513,7 +520,8 @@ module isp
   wire [TUSER_WIDTH-1:0]                  skidbuffer3_tuser;
 
   skidbuffer #(
-    .DATA_WIDTH                           (GAMMA_M_AXIS_DATA_BIT_WIDTH)
+    .DATA_WIDTH                           (GAMMA_M_AXIS_DATA_BIT_WIDTH),
+    .TUSER_WIDTH                          (2)
   ) skidbuffer3_inst
   (
     .clk                                   (clk),

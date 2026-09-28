@@ -55,15 +55,29 @@
 #define EXAMPLE_APB3_SLV_REG15_OFFSET 60	// ccm_b_g
 #define EXAMPLE_APB3_SLV_REG16_OFFSET 64	// ccm_b_b
 #define EXAMPLE_APB3_SLV_REG17_OFFSET 68	// isp_enable
-#define EXAMPLE_APB3_SLV_REG18_OFFSET 72	// Expect 32'hABCD_5678 - Verify slave read operation
-#define EXAMPLE_APB3_SLV_REG19_OFFSET 76	// debug_fifo_status
-#define EXAMPLE_APB3_SLV_REG20_OFFSET 80	// debug_cam_dma_fifo_rcount
-#define EXAMPLE_APB3_SLV_REG21_OFFSET 84	// debug_cam_dma_fifo_wcount
-#define EXAMPLE_APB3_SLV_REG22_OFFSET 88	// debug_display_dma_fifo_rcount
-#define EXAMPLE_APB3_SLV_REG23_OFFSET 92 	// debug_display_dma_fifo_wcount
-#define EXAMPLE_APB3_SLV_REG24_OFFSET 96 	// debug_cam_dma_status
-#define EXAMPLE_APB3_SLV_REG25_OFFSET 100 	// frames_per_second
-#define EXAMPLE_APB3_SLV_REG26_OFFSET 104 	// select_demo_mode
+#define EXAMPLE_APB3_SLV_REG18_OFFSET 72	// isp_counter_ready
+#define EXAMPLE_APB3_SLV_REG19_OFFSET 76	// Expect 32'hABCD_5678 - Verify slave read operation
+#define EXAMPLE_APB3_SLV_REG20_OFFSET 80	// debug_fifo_status
+#define EXAMPLE_APB3_SLV_REG21_OFFSET 84	// debug_cam_dma_fifo_rcount
+#define EXAMPLE_APB3_SLV_REG22_OFFSET 88	// debug_cam_dma_fifo_wcount
+#define EXAMPLE_APB3_SLV_REG23_OFFSET 92	// debug_display_dma_fifo_rcount
+#define EXAMPLE_APB3_SLV_REG24_OFFSET 96 	// debug_display_dma_fifo_wcount
+#define EXAMPLE_APB3_SLV_REG25_OFFSET 100 	// debug_cam_dma_status
+#define EXAMPLE_APB3_SLV_REG26_OFFSET 104 	// frames_per_second
+#define EXAMPLE_APB3_SLV_REG27_OFFSET 108 	// select_demo_mode
+#define EXAMPLE_APB3_SLV_REG28_OFFSET 112   // isp_info0_min
+#define EXAMPLE_APB3_SLV_REG29_OFFSET 116   // isp_info1_min
+#define EXAMPLE_APB3_SLV_REG30_OFFSET 120   // isp_info2_min
+#define EXAMPLE_APB3_SLV_REG31_OFFSET 124   // isp_info3_min
+#define EXAMPLE_APB3_SLV_REG32_OFFSET 128   // isp_info4_min
+#define EXAMPLE_APB3_SLV_REG33_OFFSET 132   // isp_info5_min
+#define EXAMPLE_APB3_SLV_REG34_OFFSET 136   // isp_info0_max
+#define EXAMPLE_APB3_SLV_REG35_OFFSET 140   // isp_info1_max
+#define EXAMPLE_APB3_SLV_REG36_OFFSET 144   // isp_info2_max
+#define EXAMPLE_APB3_SLV_REG37_OFFSET 148   // isp_info3_max
+#define EXAMPLE_APB3_SLV_REG38_OFFSET 152   // isp_info4_max
+#define EXAMPLE_APB3_SLV_REG39_OFFSET 156   // isp_info5_max
+#define EXAMPLE_APB3_SLV_REG40_OFFSET 160   // isp_counter_valid
 
 #endif
 
@@ -72,6 +86,8 @@
 
 #define EXAMPLE_APB3_REGW(addr, offset, data) \
 	write_u32(data, addr + offset)
+
+#define MASK_OVERWRITE_BIT 1
 
 static u32 example_register_read(u16 reg)
 {
@@ -121,3 +137,70 @@ static inline void Set_MipiRst(u8 rst)
 }
 
 #endif
+
+static inline void Read_Latency()
+{
+	u32 valid_status = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG40_OFFSET);
+	for(int i=0; i<12; i++)
+	{
+		if(valid_status & (1 << i) != 0)
+		{
+			write_u32(1 << i, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
+			u32 counter_data = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4) >> 1;
+			u32 overflow     = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4) & 1;
+			bsp_uDelay(DELAY_BUSY);
+
+			switch(i)
+			{
+				case 0:
+					overflow = 0 ? bsp_printf("TOTAL ISP minimum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("TOTAL ISP minimum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 1:
+					overflow = 0 ? bsp_printf("BLC minimum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("BLC minimum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 2:
+					overflow = 0 ? bsp_printf("COLOUR GAIN minimum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("COLOUR GAIN minimum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 3:
+					overflow = 0 ? bsp_printf("DEMOSAIC minimum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("DEMOSAIC minimum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 4:
+					overflow = 0 ? bsp_printf("CCM minimum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("CCM minimum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 5:
+					overflow = 0 ? bsp_printf("GAMMA minimum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("GAMMA minimum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 6:
+					overflow = 0 ? bsp_printf("TOTAL ISP maximum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("TOTAL ISP maximum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 7:
+					overflow = 0 ? bsp_printf("BLC maximum latency: %d clock cycles\n\r", counter_data):
+					               bsp_printf("BLC maximum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 8:
+					overflow = 0 ? bsp_printf("COLOUR GAIN maximum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("COLOUR GAIN maximum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 9:
+					overflow = 0 ? bsp_printf("DEMOSAIC maximum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("DEMOSAIC maximum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 10:
+					overflow = 0 ? bsp_printf("CCM maximum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("CCM maximum latency: OVERFLOW\n\r", counter_data);
+				break;
+				case 11:
+					overflow = 0 ? bsp_printf("GAMMA maximum latency: %d clock cycles\n\r", counter_data):
+								   bsp_printf("GAMMA maximum latency: OVERFLOW\n\r", counter_data);
+				break;
+			}
+		}
+	}
+}

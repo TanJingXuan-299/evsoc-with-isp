@@ -268,20 +268,20 @@ module axi_lite_register
   assign isp_ready   = w_registers[8][11: 0];
 
   //minimum clock cycle
-  assign r_registers[ 0] = {isp_info0[15: 0]};
-  assign r_registers[ 1] = {isp_info1[15: 0]};
-  assign r_registers[ 2] = {isp_info2[15: 0]};
-  assign r_registers[ 3] = {isp_info3[15: 0]};
-  assign r_registers[ 4] = {isp_info4[15: 0]};
-  assign r_registers[ 5] = {isp_info5[15: 0]};
+  assign r_registers[ 0] = {isp_info0[31: 0]};
+  assign r_registers[ 1] = {isp_info1[31: 0]};
+  assign r_registers[ 2] = {isp_info2[31: 0]};
+  assign r_registers[ 3] = {isp_info3[31: 0]};
+  assign r_registers[ 4] = {isp_info4[31: 0]};
+  assign r_registers[ 5] = {isp_info5[31: 0]};
 
   //maximum clock cycle
-  assign r_registers[ 6] = {isp_info0[63:16]};
-  assign r_registers[ 7] = {isp_info1[63:16]};
-  assign r_registers[ 8] = {isp_info2[63:16]};
-  assign r_registers[ 9] = {isp_info3[63:16]};
-  assign r_registers[10] = {isp_info4[63:16]};
-  assign r_registers[11] = {isp_info5[63:16]};
+  assign r_registers[ 6] = {isp_info0[63:32]};
+  assign r_registers[ 7] = {isp_info1[63:32]};
+  assign r_registers[ 8] = {isp_info2[63:32]};
+  assign r_registers[ 9] = {isp_info3[63:32]};
+  assign r_registers[10] = {isp_info4[63:32]};
+  assign r_registers[11] = {isp_info5[63:32]};
 
   // assign ccm_r_r = 16'sd9519;   // +2.32392
   // assign ccm_r_g = -16'sd3622;  // -0.88421

@@ -375,6 +375,7 @@ void main()
     while (1)
     {
 
+        Read_Latency();
         /**********************************************************CAMERA CAPTURE***********************************************************/
 
         // SELECT RGB or grayscale output from camera pre-processing block.

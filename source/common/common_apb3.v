@@ -6,9 +6,9 @@
 `timescale 1ns / 1ps
 
 module common_apb3 #(
-   parameter   ADDR_WIDTH  = 12,
+   parameter   ADDR_WIDTH  = 8,
    parameter   DATA_WIDTH  = 32,
-   parameter   NUM_REG     = 17
+   parameter   NUM_REG     = 19
 ) (
    input    [1:0]          select_demo_mode,
    output   [15:0]         black_level,
@@ -25,6 +25,13 @@ module common_apb3 #(
    output   [15:0]         ccm_b_g,
    output   [15:0]         ccm_b_b,
    output   [1:0]          isp_enable,
+   input    [63:0]         isp_info0,
+   input    [63:0]         isp_info1,
+   input    [63:0]         isp_info2,
+   input    [63:0]         isp_info3,
+   input    [63:0]         isp_info4,
+   input    [63:0]         isp_info5,
+   output   [11:0]         isp_ready,
    output                  mipi_rstn,
    output                  enable_cam,
    output                  trigger_capture_frame,
@@ -56,7 +63,7 @@ localparam [1:0] IDLE   = 2'b00,
                  SETUP  = 2'b01,
                  ACCESS = 2'b10;
 
-reg [1:0]            busState, 
+reg [1:0]            busState,
                      busNext;
 reg [          15:0] slaveReg [0:NUM_REG-1];
 reg [DATA_WIDTH-1:0] slaveRegOut;
@@ -78,7 +85,7 @@ integer              byteIndex;
    always@(*)
    begin
       busNext = busState;
-   
+
       case(busState)
          IDLE:
          begin
@@ -137,7 +144,8 @@ integer              byteIndex;
          slaveReg[14] <= 16'hFB6F;  // ccm_b_r = -1169
          slaveReg[15] <= 16'hF758;  // ccm_b_g = -2216
          slaveReg[16] <= 16'h1D39;  // ccm_b_b =  7481
-         slaveReg[17] <= 16'h3;     // isp_enable
+         slaveReg[17] <= 16'h0003;  // isp_enable
+         slaveReg[18] <= 16'h0000;  // isp_ready
       end
       else begin
          for(byteIndex = 0; byteIndex < NUM_REG; byteIndex = byteIndex + 1)
@@ -154,16 +162,41 @@ integer              byteIndex;
          slaveRegOut <= {{DATA_WIDTH}{1'b0}};
       else begin
          if (actRead) begin
-            case(PADDR[6:2])
-               5'd17  : slaveRegOut <= 32'hABCD_5678;   //To verify correct slave read operation
-               5'd18  : slaveRegOut <= debug_fifo_status;
-               5'd19  : slaveRegOut <= debug_cam_dma_fifo_rcount;
-               5'd20  : slaveRegOut <= debug_cam_dma_fifo_wcount;
-               5'd21  : slaveRegOut <= debug_display_dma_fifo_rcount;
-               5'd22  : slaveRegOut <= debug_display_dma_fifo_wcount;
-               5'd23  : slaveRegOut <= debug_cam_dma_status;
-               5'd12  : slaveRegOut <= frames_per_second;
-               5'd13  : slaveRegOut <= {30'd0, select_demo_mode};
+            case(PADDR[ADDR_WIDTH-1:2])
+               'd19  : slaveRegOut <= 32'hABCD_5678;   //To verify correct slave read operation
+               'd20  : slaveRegOut <= debug_fifo_status;
+               'd21  : slaveRegOut <= debug_cam_dma_fifo_rcount;
+               'd22  : slaveRegOut <= debug_cam_dma_fifo_wcount;
+               'd23  : slaveRegOut <= debug_display_dma_fifo_rcount;
+               'd24  : slaveRegOut <= debug_display_dma_fifo_wcount;
+               'd25  : slaveRegOut <= debug_cam_dma_status;
+               'd26  : slaveRegOut <= frames_per_second;
+               'd27  : slaveRegOut <= {30'd0, select_demo_mode};
+               'd28  : slaveRegOut <= isp_info0[31: 1];
+               'd29  : slaveRegOut <= isp_info1[31: 1];
+               'd30  : slaveRegOut <= isp_info2[31: 1];
+               'd31  : slaveRegOut <= isp_info3[31: 1];
+               'd32  : slaveRegOut <= isp_info4[31: 1];
+               'd32  : slaveRegOut <= isp_info5[31: 1];
+               'd33  : slaveRegOut <= isp_info0[63:33];
+               'd34  : slaveRegOut <= isp_info1[63:33];
+               'd35  : slaveRegOut <= isp_info2[63:33];
+               'd36  : slaveRegOut <= isp_info3[63:33];
+               'd37  : slaveRegOut <= isp_info4[63:33];
+               'd38  : slaveRegOut <= isp_info5[63:33];
+               'd39  : slaveRegOut <= {{20{1'b0}},
+                                       isp_info5[32],
+                                       isp_info4[32],
+                                       isp_info3[32],
+                                       isp_info2[32],
+                                       isp_info1[32],
+                                       isp_info0[32],
+                                       isp_info5[ 0],
+                                       isp_info4[ 0],
+                                       isp_info3[ 0],
+                                       isp_info2[ 0],
+                                       isp_info1[ 0],
+                                       isp_info0[ 0]};
                default: begin slaveRegOut <= slaveRegOut; end
             endcase
          end
@@ -192,5 +225,6 @@ integer              byteIndex;
    assign ccm_b_r                  = slaveReg[14][15:0];
    assign ccm_b_g                  = slaveReg[15][15:0];
    assign ccm_b_b                  = slaveReg[16][15:0];
-   assign isp_enable               = slaveReg[17][1:0];
+   assign isp_enable               = slaveReg[17][ 1:0];
+   assign isp_ready                = slaveReg[18][11:0];
 endmodule

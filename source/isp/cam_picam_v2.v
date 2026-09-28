@@ -520,12 +520,12 @@ reg                              axi_rready;
 always_ff @ (posedge mipi_pclk) begin
   case (rd_state)
     RD_IDLE: begin
-      axi_araddr  <= axi_araddr == {6'b101100} ? {6{1'b0}} : axi_araddr + 8;
+      axi_araddr  <= axi_araddr == {6'b101100} ? {6{1'b0}} : axi_araddr + 4;
       axi_rden    <= 1'b0;
       axi_arvalid <= 1'b1;
       axi_rready  <= 1'b0;
       if ((isp_s_axi_arready == 1'b1) && (axi_arvalid == 1'b1)) begin
-        axi_rden    <= 1'b1;
+        axi_rden    <= 1'b0;
         axi_arvalid <= 1'b0;
         axi_rready  <= 1'b0;
         rd_state    <= RD_DATA;
@@ -536,7 +536,7 @@ always_ff @ (posedge mipi_pclk) begin
       axi_arvalid <= 1'b0;
       axi_rready  <= 1'b1;
       if ((axi_rready == 1'b1) && (isp_s_axi_rvalid == 1'b1)) begin
-        axi_rden    <= 1'b0;
+        axi_rden    <= 1'b1;
         axi_arvalid <= 1'b1;
         axi_rready  <= 1'b0;
         rd_state    <= RD_IDLE;

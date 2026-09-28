@@ -146,7 +146,8 @@ module demosaic
     .MAX_RESOLUTION       (MAX_RESOLUTION),
     .PIXEL_PER_CYCLE      (PIXEL_PER_CYCLE),
     .PIXEL_BIT_WIDTH      (PIXEL_BIT_WIDTH),
-    .CONV_SIZE            (NUM_ROWS)
+    .CONV_SIZE            (NUM_ROWS),
+    .TUSER_WIDTH          (TUSER_WIDTH)
   ) linebuffer_inst
   (
     .clk            (clk),
@@ -198,8 +199,8 @@ module demosaic
       conv_tlast       <= linebuf_tlast;
 
       // capture SOF; it is reset when a successful transfer happened
-      if (linebuf_tuser) begin
-        conv_tuser[0]  <= linebuf_tuser;
+      if (linebuf_tuser[0]) begin
+        conv_tuser  <= linebuf_tuser;
       end
     end
 

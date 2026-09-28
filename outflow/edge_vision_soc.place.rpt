@@ -1,7 +1,7 @@
 
 Efinix FPGA Placement and Routing.
 Version: 2026.1.132.1.15 
-Date: Fri Sep 25 16:07:58 2026
+Date: Mon Sep 28 18:01:34 2026
 
 Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
  
@@ -27,7 +27,7 @@ Top-level Entity Name: edge_vision_soc
 
 ---------- Module Resource Usage Distribution Estimates (begin) ----------
 
-'Module Resource Usage Distribution Estimates' table printed in: C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi/outflow\edge_vision_soc.hier_util.rpt
+'Module Resource Usage Distribution Estimates' table printed in: C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow\edge_vision_soc.hier_util.rpt
 
 ----------- Module Resource Usage Distribution Estimates (end) ----------
 
@@ -40,19 +40,19 @@ Regional Clocks (RBUF): 0 / 32 (0.00%)
 	RBUF: Core: 0 / 16 (0.00%)
 	RBUF: Periphery: 0 / 8 (0.00%)
 	RBUF: Multi-Region: 0 / 8 (0.00%)
-XLRs: 29023 / 60800 (47.74%)
-	XLRs needed for LUT4: 10903 / 60800 (17.93%)
-	XLRs needed for LUT4 + FF: 7242 / 60800 (11.91%)
+XLRs: 32925 / 60800 (54.15%)
+	XLRs needed for LUT4: 12400 / 60800 (20.39%)
+	XLRs needed for LUT4 + FF: 7718 / 60800 (12.69%)
 	XLRs needed for COMB4: 0 / 60800 (0.00%)
 	XLRs needed for COMB4 + FF: 0 / 60800 (0.00%)
-	XLRs needed for Adder: 1617 / 60800 (2.66%)
-	XLRs needed for Adder + FF: 1247 / 60800 (2.05%)
-	XLRs needed for SRL8: 10 / 14720 (0.07%)
+	XLRs needed for Adder: 1733 / 60800 (2.85%)
+	XLRs needed for Adder + FF: 1285 / 60800 (2.11%)
+	XLRs needed for SRL8: 16 / 14720 (0.11%)
 	XLRs needed for SRL8 + FF: 0 / 14720 (0.00%)
-	XLRs needed for FF: 8004 / 60800 (13.16%)
+	XLRs needed for FF: 9773 / 60800 (16.07%)
 	XLRs needed for Routing: 0 / 60800 (0.00%)
 Memory Blocks: 167 / 256 (65.23%)
 DSP Blocks: 4 / 160 (2.50%)
 ---------- Resource Summary (end) ----------
 
-Elapsed time for placement: 0 hours 0 minutes 48 seconds
+Elapsed time for placement: 0 hours 0 minutes 56 seconds

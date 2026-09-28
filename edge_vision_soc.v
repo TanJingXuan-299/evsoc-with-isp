@@ -280,20 +280,27 @@ module edge_vision_soc #(
   ///////////////////////////////////////////////////////////////////////////////
 
   wire [ 31:0] debug_cam_display_fifo_status;
-  wire [ 15:0]         black_level;
-  wire [ 15:0]         rgain;
-  wire [ 15:0]         ggain;
-  wire [ 15:0]         bgain;
-  wire [ 15:0]         ccm_r_r;
-  wire [ 15:0]         ccm_r_g;
-  wire [ 15:0]         ccm_r_b;
-  wire [ 15:0]         ccm_g_r;
-  wire [ 15:0]         ccm_g_g;
-  wire [ 15:0]         ccm_g_b;
-  wire [ 15:0]         ccm_b_r;
-  wire [ 15:0]         ccm_b_g;
-  wire [ 15:0]         ccm_b_b;
-  wire [  1:0]         isp_enable;
+  wire [ 15:0] black_level;
+  wire [ 15:0] rgain;
+  wire [ 15:0] ggain;
+  wire [ 15:0] bgain;
+  wire [ 15:0] ccm_r_r;
+  wire [ 15:0] ccm_r_g;
+  wire [ 15:0] ccm_r_b;
+  wire [ 15:0] ccm_g_r;
+  wire [ 15:0] ccm_g_g;
+  wire [ 15:0] ccm_g_b;
+  wire [ 15:0] ccm_b_r;
+  wire [ 15:0] ccm_b_g;
+  wire [ 15:0] ccm_b_b;
+  wire [  1:0] isp_enable;
+  wire [ 63:0] isp_info0;
+  wire [ 63:0] isp_info1;
+  wire [ 63:0] isp_info2;
+  wire [ 63:0] isp_info3;
+  wire [ 63:0] isp_info4;
+  wire [ 63:0] isp_info5;
+  wire [ 11:0] isp_ready;
   wire         trigger_capture_frame;
   wire         continuous_capture_frame;
   wire         rgb_gray;
@@ -870,13 +877,13 @@ module edge_vision_soc #(
       .ccm_b_g                             (ccm_b_g    [15:0]),
       .ccm_b_b                             (ccm_b_b    [15:0]),
       .isp_enable                          (isp_enable),
-      .isp_ready                           ({12{1'b1}}),
-      .isp_info5                           (),
-      .isp_info4                           (),
-      .isp_info3                           (),
-      .isp_info2                           (),
-      .isp_info1                           (),
-      .isp_info0                           (),
+      .isp_ready                           (isp_ready),
+      .isp_info0                           (isp_info0),
+      .isp_info1                           (isp_info1),
+      .isp_info2                           (isp_info2),
+      .isp_info3                           (isp_info3),
+      .isp_info4                           (isp_info4),
+      .isp_info5                           (isp_info5),
       .trigger_capture_frame               (trigger_capture_frame),
       .continuous_capture_frame            (continuous_capture_frame),
       .rgb_gray                            (rgb_gray),
@@ -1096,9 +1103,9 @@ module edge_vision_soc #(
   };
 
   common_apb3 #(
-      .ADDR_WIDTH(16),
-      .DATA_WIDTH(32),
-      .NUM_REG   (18)
+      .ADDR_WIDTH   ( 8),
+      .DATA_WIDTH   (32),
+      .NUM_REG      (19)
   ) u_apb3_cam_display (
       .select_demo_mode             ({user_dip1, user_dip0}),
       .enable_cam                   (enable_cam),
@@ -1117,6 +1124,13 @@ module edge_vision_soc #(
       .ccm_b_g                      (ccm_b_g    [15:0]),
       .ccm_b_b                      (ccm_b_b    [15:0]),
       .isp_enable                   (isp_enable),
+      .isp_info0                    (isp_info0),
+      .isp_info1                    (isp_info1),
+      .isp_info2                    (isp_info2),
+      .isp_info3                    (isp_info3),
+      .isp_info4                    (isp_info4),
+      .isp_info5                    (isp_info5),
+      .isp_ready                    (isp_ready),
       .trigger_capture_frame        (trigger_capture_frame),
       .continuous_capture_frame     (continuous_capture_frame),
       .rgb_gray                     (rgb_gray),
