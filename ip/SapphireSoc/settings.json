@@ -24,7 +24,7 @@
         "IDE_SEL": "1'b0",
         "RISCV_DEBUG_PRIV": "1'b1",
         "HARD_BREAKPOINT": "0",
-        "CO_DEBUG": "1'b0",
+        "CO_DEBUG": "1'b1",
         "SOFT_TAP": "1'b0",
         "TAP_MODE": "1'b0",
         "TAP_COUNT": "1",

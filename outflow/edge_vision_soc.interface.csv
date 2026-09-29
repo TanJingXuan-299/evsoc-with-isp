@@ -1,7 +1,7 @@
 
 # Efinity Interface Configuration
 # Version: 2026.1.132.1.15
-# Date: 2026-09-29 10:47
+# Date: 2026-09-29 15:53
 
 # Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
 
@@ -212,6 +212,17 @@ required input, 0, 21, 1, __bypass__, jtag_inst1_TDI
 required output, 0, 23, 0, __bypass__, jtag_inst1_TDO
 input, 0, 21, 3, __bypass__, jtag_inst1_TMS
 input, 0, 24, 1, __bypass__, jtag_inst1_UPDATE
+input, 0, 40, 3, __bypass__, jtag_inst2_autodbg_CAPTURE__
+input, 0, 36, 3, __bypass__, jtag_inst2_autodbg_DRCK__
+input, 0, 38, 3, __bypass__, jtag_inst2_autodbg_RESET__
+input, 0, 39, 1, __bypass__, jtag_inst2_autodbg_RUNTEST__
+input, 0, 36, 1, __bypass__, jtag_inst2_autodbg_SEL__
+input, 0, 39, 3, __bypass__, jtag_inst2_autodbg_SHIFT__
+input, 0, 38, 1, __bypass__, jtag_inst2_autodbg_TCK__
+required input, 0, 37, 1, __bypass__, jtag_inst2_autodbg_TDI__
+required output, 0, 39, 2, __bypass__, jtag_inst2_autodbg_TDO__
+input, 0, 37, 3, __bypass__, jtag_inst2_autodbg_TMS__
+input, 0, 40, 1, __bypass__, jtag_inst2_autodbg_UPDATE__
 output, 219, 272, 0, __bypass__, mipi_dp_clk_HS_OE
 output, 219, 265, 2, __bypass__, mipi_dp_clk_HS_OUT[0]
 output, 219, 268, 0, __bypass__, mipi_dp_clk_HS_OUT[1]

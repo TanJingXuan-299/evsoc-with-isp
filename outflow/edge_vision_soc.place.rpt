@@ -1,7 +1,7 @@
 
 Efinix FPGA Placement and Routing.
 Version: 2026.1.132.1.15 
-Date: Tue Sep 29 10:47:34 2026
+Date: Tue Sep 29 15:53:46 2026
 
 Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
  
@@ -11,16 +11,19 @@ Top-level Entity Name: edge_vision_soc
 
 ---------- IO Interface Summary (begin) ----------
 
-+------------------------+--------------+
-| Missing Interface Pins | Input/Output |
-+------------------------+--------------+
-|    jtag_inst1_DRCK     |    Input     |
-|     jtag_inst1_TMS     |    Input     |
-|   jtag_inst1_RUNTEST   |    Input     |
-|  i_mipi_tx_pll_locked  |    Input     |
-|          sw7           |    Input     |
-|          sw6           |    Input     |
-+------------------------+--------------+
++------------------------------+--------------+
+|    Missing Interface Pins    | Input/Output |
++------------------------------+--------------+
+|       jtag_inst1_DRCK        |    Input     |
+|        jtag_inst1_TMS        |    Input     |
+|      jtag_inst1_RUNTEST      |    Input     |
+|  jtag_inst2_autodbg_DRCK__   |    Input     |
+|   jtag_inst2_autodbg_TMS__   |    Input     |
+| jtag_inst2_autodbg_RUNTEST__ |    Input     |
+|     i_mipi_tx_pll_locked     |    Input     |
+|             sw7              |    Input     |
+|             sw6              |    Input     |
++------------------------------+--------------+
 
 ----------- IO Interface Summary (end) ----------
 
@@ -31,28 +34,28 @@ Top-level Entity Name: edge_vision_soc
 
 ----------- Module Resource Usage Distribution Estimates (end) ----------
 
-Elapsed time for packing: 0 hours 0 minutes 6 seconds
+Elapsed time for packing: 0 hours 0 minutes 7 seconds
 ---------- Resource Summary (begin) ----------
-Inputs: 93 / 1703 (5.46%)
-Outputs: 229 / 2267 (10.10%)
-Global Clocks (GBUF): 14 / 32 (43.75%)
+Inputs: 100 / 1703 (5.87%)
+Outputs: 230 / 2267 (10.15%)
+Global Clocks (GBUF): 15 / 32 (46.88%)
 Regional Clocks (RBUF): 0 / 32 (0.00%)
 	RBUF: Core: 0 / 16 (0.00%)
 	RBUF: Periphery: 0 / 8 (0.00%)
 	RBUF: Multi-Region: 0 / 8 (0.00%)
-XLRs: 37277 / 60800 (61.31%)
-	XLRs needed for LUT4: 14083 / 60800 (23.16%)
-	XLRs needed for LUT4 + FF: 8502 / 60800 (13.98%)
+XLRs: 43834 / 60800 (72.10%)
+	XLRs needed for LUT4: 16404 / 60800 (26.98%)
+	XLRs needed for LUT4 + FF: 9700 / 60800 (15.95%)
 	XLRs needed for COMB4: 0 / 60800 (0.00%)
 	XLRs needed for COMB4 + FF: 0 / 60800 (0.00%)
-	XLRs needed for Adder: 2108 / 60800 (3.47%)
-	XLRs needed for Adder + FF: 1406 / 60800 (2.31%)
-	XLRs needed for SRL8: 10 / 14720 (0.07%)
+	XLRs needed for Adder: 2411 / 60800 (3.97%)
+	XLRs needed for Adder + FF: 1696 / 60800 (2.79%)
+	XLRs needed for SRL8: 406 / 14720 (2.76%)
 	XLRs needed for SRL8 + FF: 0 / 14720 (0.00%)
-	XLRs needed for FF: 11168 / 60800 (18.37%)
+	XLRs needed for FF: 13217 / 60800 (21.74%)
 	XLRs needed for Routing: 0 / 60800 (0.00%)
-Memory Blocks: 195 / 256 (76.17%)
-DSP Blocks: 9 / 160 (5.62%)
+Memory Blocks: 216 / 256 (84.38%)
+DSP Blocks: 15 / 160 (9.38%)
 ---------- Resource Summary (end) ----------
 
-Elapsed time for placement: 0 hours 1 minutes 25 seconds
+Elapsed time for placement: 0 hours 1 minutes 24 seconds

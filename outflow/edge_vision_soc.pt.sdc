@@ -5,7 +5,7 @@
 
 # Efinity Interface Designer SDC
 # Version: 2026.1.132.1.15
-# Date: 2026-09-29 10:47
+# Date: 2026-09-29 15:53
 
 # Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
 
@@ -66,6 +66,27 @@ set_input_delay -clock_fall -clock jtag_inst1_TCK -min 0.620 [get_ports {jtag_in
 # set_input_delay -clock_fall -clock jtag_inst1_TCK -min 0.066 [get_ports {jtag_inst1_RUNTEST}]
 # Create separate clock groups for JTAG clocks. Remove DRCK clock from the list below if it is not defined.
 # set_clock_groups -asynchronous -group {jtag_inst1_TCK jtag_inst1_DRCK}
+# create_clock -period <USER_PERIOD> -name jtag_inst2_autodbg_TCK__ [get_ports {jtag_inst2_autodbg_TCK__}]
+set_output_delay -clock jtag_inst2_autodbg_TCK__ -max 1.321 [get_ports {jtag_inst2_autodbg_TDO__}]
+set_output_delay -clock jtag_inst2_autodbg_TCK__ -min 0.495 [get_ports {jtag_inst2_autodbg_TDO__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -max 0.125 [get_ports {jtag_inst2_autodbg_CAPTURE__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -min 0.077 [get_ports {jtag_inst2_autodbg_CAPTURE__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -max 0.660 [get_ports {jtag_inst2_autodbg_RESET__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -min 0.401 [get_ports {jtag_inst2_autodbg_RESET__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -max 0.204 [get_ports {jtag_inst2_autodbg_SEL__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -min 0.025 [get_ports {jtag_inst2_autodbg_SEL__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -max 0.153 [get_ports {jtag_inst2_autodbg_UPDATE__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -min 0.074 [get_ports {jtag_inst2_autodbg_UPDATE__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -max 0.172 [get_ports {jtag_inst2_autodbg_SHIFT__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -min 0.055 [get_ports {jtag_inst2_autodbg_SHIFT__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -max 1.035 [get_ports {jtag_inst2_autodbg_DRCK__}]
+set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -min 0.620 [get_ports {jtag_inst2_autodbg_DRCK__}]
+# JTAG Constraints (extra... not used by current Efinity debug tools)
+# create_clock -period <USER_PERIOD> -name jtag_inst2_autodbg_DRCK__ [get_ports {jtag_inst2_autodbg_DRCK__}]
+# set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -max 0.147 [get_ports {jtag_inst2_autodbg_RUNTEST__}]
+# set_input_delay -clock_fall -clock jtag_inst2_autodbg_TCK__ -min 0.066 [get_ports {jtag_inst2_autodbg_RUNTEST__}]
+# Create separate clock groups for JTAG clocks. Remove DRCK clock from the list below if it is not defined.
+# set_clock_groups -asynchronous -group {jtag_inst2_autodbg_TCK__ jtag_inst2_autodbg_DRCK__}
 
 # HSIO GPIO Constraints
 #########################

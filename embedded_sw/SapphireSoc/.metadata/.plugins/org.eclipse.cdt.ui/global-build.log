@@ -291,3 +291,235 @@ make: Nothing to be done for 'all'.
 10:51:39 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.
+13:29:57 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+13:39:06 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+13:42:28 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:22:10 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:23:11 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:28:10 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+14:28:10 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       22624 B       124 KB     17.82%
+14:29:41 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+14:29:41 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       22624 B       124 KB     17.82%
+14:30:26 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+14:30:27 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       22624 B       124 KB     17.82%
+14:30:37 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:31:11 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:32:35 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:33:16 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:38:29 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:39:17 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:51 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:54:56 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+14:55:11 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:24:42 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:26:10 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:27:00 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:28:34 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:33:07 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:34:16 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+15:34:16 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       22624 B       124 KB     17.82%
+15:39:03 **** Clean-only build of configuration Default for project evsoc_ispExample_demo ****
+make clean 
+15:39:04 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       22624 B       124 KB     17.82%
+15:39:22 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:40:53 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:41:15 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+15:42:43 **** Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/dma.c
+CC src/common.c
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:106:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+CC src/driver/PiCamDriver.c
+CC src/driver/camera.c
+CC src/driver/PiCamV3Driver.c
+CC ../common/start.S
+CC ../common/trap.S
+CC syscalls.c
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       22624 B       124 KB     17.82%
+15:43:33 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+16:05:23 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+16:42:03 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.
+16:43:28 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+make: Nothing to be done for 'all'.

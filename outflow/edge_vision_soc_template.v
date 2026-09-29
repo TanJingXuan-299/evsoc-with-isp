@@ -1,7 +1,7 @@
 
 // Efinity Top-level template
 // Version: 2026.1.132.1.15
-// Date: 2026-09-29 10:47
+// Date: 2026-09-29 15:53
 
 // Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
 
@@ -48,6 +48,16 @@ module edge_vision_soc
   (* syn_peri_port = 0 *) input jtag_inst1_TDI,
   (* syn_peri_port = 0 *) input jtag_inst1_TMS,
   (* syn_peri_port = 0 *) input jtag_inst1_UPDATE,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_CAPTURE__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_DRCK__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_RESET__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_RUNTEST__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_SEL__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_SHIFT__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_TCK__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_TDI__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_TMS__,
+  (* syn_peri_port = 0 *) input jtag_inst2_autodbg_UPDATE__,
   (* syn_peri_port = 0 *) input [15:0] hbc_dq_IN_HI,
   (* syn_peri_port = 0 *) input [15:0] hbc_dq_IN_LO,
   (* syn_peri_port = 0 *) input [1:0] hbc_rwds_IN_HI,
@@ -83,6 +93,7 @@ module edge_vision_soc
   (* syn_peri_port = 0 *) output o_hbc_cal_SHIFT_ENA,
   (* syn_peri_port = 0 *) output [4:0] o_hbc_cal_SHIFT_SEL,
   (* syn_peri_port = 0 *) output jtag_inst1_TDO,
+  (* syn_peri_port = 0 *) output jtag_inst2_autodbg_TDO__,
   (* syn_peri_port = 0 *) output hbc_cal_pass,
   (* syn_peri_port = 0 *) output hbc_ck_n_HI,
   (* syn_peri_port = 0 *) output hbc_ck_n_LO,

@@ -1156,3 +1156,1127 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-Xu
 
 !ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 10:51:42.103
 !MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 13:29:58.983
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 13:30:00.332
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 13:39:06.872
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 13:39:07.866
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 13:42:28.984
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 13:42:30.098
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-09-29 13:47:39.882
+!MESSAGE Error opening \\.\COM3 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM3 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:420)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:298)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-09-29 13:54:53.574
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2026-09-29 14:21:17.117 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-09-29 14:21:33.751
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:22:11.052
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:22:26.612
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:22:26.614
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:22:26.614
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:23:11.734
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-29 14:27:37.520
+!MESSAGE Indexed 'evsoc_ispExample_demo' (8 sources, 146 headers) in 3.23 sec: 5,621 declarations; 11,343 references; 4 unresolved inclusions; 10 syntax errors; 1,120 unresolved names (6.2%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-29 14:30:18.449
+!MESSAGE Indexed 'evsoc_ispExample_demo' (8 sources, 146 headers) in 1.57 sec: 5,621 declarations; 11,350 references; 0 unresolved inclusions; 10 syntax errors; 1,114 unresolved names (6.2%)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:30:38.359
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:30:41.140
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: Not a directory.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: Not a directory.
+java.lang.Exception: Remote communication error.  Target disconnected: error while reading: Not a directory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:30:41.140
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: Not a directory.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:30:41.140
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: Not a directory.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected: error while reading: Not a directory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.ui 4 0 2026-09-29 14:30:54.397
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument cannot be null
+	at org.eclipse.swt.SWT.error(SWT.java:4899)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:447)
+	at org.eclipse.swt.widgets.Text.setText(Text.java:2331)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.ui.TabDebugger.updateGdbServerActualPath(TabDebugger.java:745)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.ui.TabDebugger$6.modifyText(TabDebugger.java:409)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:183)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Text.wmCommandChild(Text.java:3100)
+	at org.eclipse.swt.widgets.Control.WM_COMMAND(Control.java:4897)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4749)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Text.callWindowProc(Text.java:293)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetWindowText(Native Method)
+	at org.eclipse.swt.internal.win32.OS.SetWindowText(OS.java:2275)
+	at org.eclipse.swt.widgets.Text.setText(Text.java:2342)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.ui.TabDebugger.initializeFrom(TabDebugger.java:819)
+	at org.eclipse.debug.ui.AbstractLaunchConfigurationTabGroup.initializeFrom(AbstractLaunchConfigurationTabGroup.java:93)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupWrapper.initializeFrom(LaunchConfigurationTabGroupWrapper.java:182)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.displayInstanceTabs(LaunchConfigurationTabGroupViewer.java:867)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.lambda$4(LaunchConfigurationTabGroupViewer.java:727)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.inputChanged(LaunchConfigurationTabGroupViewer.java:742)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput0(LaunchConfigurationTabGroupViewer.java:674)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput(LaunchConfigurationTabGroupViewer.java:654)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.handleLaunchConfigurationSelectionChanged(LaunchConfigurationsDialog.java:1049)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.lambda$1(LaunchConfigurationsDialog.java:612)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:818)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1661)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1090)
+	at org.eclipse.jface.viewers.Viewer.setSelection(Viewer.java:376)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.doInitialTreeSelection(LaunchConfigurationsDialog.java:658)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.initializeContent(LaunchConfigurationsDialog.java:1185)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.createContents(LaunchConfigurationsDialog.java:473)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.create(LaunchConfigurationsDialog.java:378)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1238)
+	at org.eclipse.debug.ui.DebugUITools.lambda$1(DebugUITools.java:630)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:636)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:574)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:85)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:31:12.257
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:31:27.220
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:31:27.220
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:31:27.220
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:32:36.138
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:32:51.122
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:32:51.122
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:32:51.122
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:33:16.881
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:33:31.815
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:33:31.816
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:33:31.816
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:38:30.009
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:38:44.970
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:38:44.970
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:38:44.970
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:39:18.151
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:39:33.078
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:39:33.079
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:39:33.079
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:45:51.714
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:46:06.680
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:46:06.681
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:46:06.681
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:54:56.844
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:55:11.468
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 14:55:12.442
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 14:55:12.794
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 14:55:12.795
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 14:55:12.795
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-09-29 15:24:00.366
+!MESSAGE An internal error occurred during: "Launching co_debug_evsoc_ispExample_demo_group".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.debug.core.ILaunchConfiguration.getName()" because the return value of "org.eclipse.debug.core.ILaunch.getLaunchConfiguration()" is null
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.postLaunchAction(GroupLaunchConfigurationDelegate.java:208)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:197)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2026-09-29 15:24:00.870
+!MESSAGE Exception while shutting down launch org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.Launch@b85dfd4
+!STACK 1
+org.eclipse.core.runtime.CoreException: Composite status
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:139)
+	at org.eclipse.cdt.dsf.gdb.internal.GdbPlugin.shutdownActiveLaunches(GdbPlugin.java:135)
+	at org.eclipse.cdt.dsf.gdb.internal.GdbPlugin.stop(GdbPlugin.java:75)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:870)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:862)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1888)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1763)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Contains: Executor shut down while executing Sequence Sequence "", result for executing step #17 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55eae76b): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #17
+Contains: Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@5aa63bf8): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #17 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55eae76b): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #17' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-09-29 15:24:00.871
+!MESSAGE Composite status
+!SUBENTRY 2 org.eclipse.cdt.dsf 4 0 2026-09-29 15:24:00.871
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #17 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55eae76b): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #17
+!SUBENTRY 2 org.eclipse.cdt.dsf 4 10005 2026-09-29 15:24:00.871
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$5@5aa63bf8): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #17 = Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception. Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55eae76b): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2 Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.embedcdt.debug.gdbjtag.core.dsf.GnuMcuGdbBackend$3@1598abba): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #2 = Status OK: unknown code=0 OK, step #2' resulted in a rejected execution exception.]' resulted in a rejected execution exception.], step #17' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-09-29 15:24:01.880
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2026-09-29 15:24:05.860 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-09-29 15:24:09.484
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 15:24:43.317
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 15:24:58.657
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 15:24:58.657
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 15:24:58.657
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 15:26:10.388
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 15:26:26.257
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 15:26:26.257
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 15:26:26.257
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 15:27:00.394
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 15:27:16.283
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 15:27:16.283
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 15:27:16.283
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 15:28:35.342
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 15:28:36.369
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 15:28:54.728
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: No error.
+java.lang.Exception: Remote communication error.  Target disconnected: error while reading: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 15:28:54.728
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: No error.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 15:28:54.728
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+Remote communication error.  Target disconnected: error while reading: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected: error while reading: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 15:33:08.191
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 15:33:23.982
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 15:33:23.982
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 15:33:23.982
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-29 15:39:22.631
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 15:39:37.412
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 15:39:37.412
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 15:39:37.412
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-29 15:40:53.661
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-29 15:40:54.651
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-29 15:41:15.690
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-09-29 15:41:31.445
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-09-29 15:41:31.445
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-09-29 15:41:31.445
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-29 15:42:42.586
+!MESSAGE Indexed 'evsoc_ispExample_demo' (8 sources, 146 headers) in 2.75 sec: 5,621 declarations; 11,343 references; 4 unresolved inclusions; 10 syntax errors; 1,120 unresolved names (6.2%)
+
+!ENTRY org.eclipse.embedcdt.managedbuild.cross.riscv.core 4 1 2026-09-29 15:43:34.148
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+!SESSION 2026-09-29 16:04:53.744 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-09-29 16:04:57.320
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 16:05:24.714
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-09-29 16:08:28.362
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@133619e0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "CSR" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-09-29 16:08:28.362
+!MESSAGE The group name "CSR" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-09-29 16:08:28.364
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1dee28e2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "General Purpose Registers" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-09-29 16:08:28.364
+!MESSAGE The group name "General Purpose Registers" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-09-29 16:08:28.366
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2dc70ba7): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "CSR" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-09-29 16:08:28.366
+!MESSAGE The group name "CSR" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-09-29 16:08:28.368
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@e9dfee6): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "General Purpose Registers" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-09-29 16:08:28.368
+!MESSAGE The group name "General Purpose Registers" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-09-29 16:08:28.370
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@6dab4562): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "CSR" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-09-29 16:08:28.370
+!MESSAGE The group name "CSR" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-09-29 16:08:28.371
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1eec90d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "General Purpose Registers" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-09-29 16:08:28.371
+!MESSAGE The group name "General Purpose Registers" is already in use
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 16:42:03.549
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 16:42:04.545
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-09-29 16:42:18.007
+!MESSAGE Error opening \\.\COM3 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM3 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:420)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:298)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-09-29 16:42:35.248
+!MESSAGE Error opening \\.\COM3 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM3 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:420)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:298)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2026-09-29 16:42:40.368
+!MESSAGE Error opening \\.\COM3 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM3 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:420)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:298)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 16:43:28.630
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-09-29 16:43:29.600
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx

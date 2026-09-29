@@ -3,7 +3,7 @@
 // Auto-generated Efinix JTAG debugger top module. Do not modify. 
 //
 
-`define DBG_MODULE_UUID _1db2daa1f3c94ac88d392c3e9cb89f62
+`define DBG_MODULE_UUID _dd992241e178408eade159fd69402e46
 `define CONCAT(a,b) a``b
 `define DBG_MODULE_NAME(name) `CONCAT(name,`DBG_MODULE_UUID)
 
@@ -25,12 +25,24 @@ module edb_top (
     input  bscan_UPDATE,
     output bscan_TDO,
     input  la0_clk,
-    input  [63:0] la0_probe0,
-    input  [63:0] la0_probe1,
-    input  [63:0] la0_probe2,
-    input  [63:0] la0_probe3,
-    input  [63:0] la0_probe4,
-    input  [63:0] la0_probe5
+    input  la0_probe0,
+    input  la0_probe1,
+    input  la0_probe2,
+    input  la0_probe3,
+    input  la0_probe4,
+    input  la0_probe5,
+    input  la0_probe6,
+    input  la0_probe7,
+    input  la0_probe8,
+    input  la0_probe9,
+    input  la0_probe10,
+    input  la0_probe11,
+    input  [63:0] la0_probe12,
+    input  [63:0] la0_probe13,
+    input  [63:0] la0_probe14,
+    input  [63:0] la0_probe15,
+    input  [63:0] la0_probe16,
+    input  [63:0] la0_probe17
 );
 
     localparam HUB_CS_WIDTH = 15;
@@ -84,26 +96,50 @@ module edb_top (
 
     // debug core instances
     `DBG_MODULE_NAME(edb_la_top) #(
-        .NUM_PROBES         ( 6 ),
+        .NUM_PROBES         ( 18 ),
         .DATA_DEPTH         ( 512 ),
         .TRIGIN_EN          ( 0 ),
         .TRIGOUT_EN         ( 0 ),
         .INPUT_PIPE_STAGES      ( 1 ),
         .CAPTURE_CONTROL    ( 0 ),
-        .UUID   ( 128'hc3224f545aea4980b46e8ad17bc06f31 ),
+        .UUID   ( 128'h316c4fb67e9745c2b594b916bb4a48ea ),
         .CNDTNL_STRG_EN     ( 0 ),
-        .PROBE0_WIDTH       ( 64 ),
+        .PROBE0_WIDTH       ( 1 ),
         .PROBE0_TYPE        ( 1 ),
-        .PROBE1_WIDTH       ( 64 ),
+        .PROBE1_WIDTH       ( 1 ),
         .PROBE1_TYPE        ( 1 ),
-        .PROBE2_WIDTH       ( 64 ),
+        .PROBE2_WIDTH       ( 1 ),
         .PROBE2_TYPE        ( 1 ),
-        .PROBE3_WIDTH       ( 64 ),
+        .PROBE3_WIDTH       ( 1 ),
         .PROBE3_TYPE        ( 1 ),
-        .PROBE4_WIDTH       ( 64 ),
+        .PROBE4_WIDTH       ( 1 ),
         .PROBE4_TYPE        ( 1 ),
-        .PROBE5_WIDTH       ( 64 ),
-        .PROBE5_TYPE        ( 1 )
+        .PROBE5_WIDTH       ( 1 ),
+        .PROBE5_TYPE        ( 1 ),
+        .PROBE6_WIDTH       ( 1 ),
+        .PROBE6_TYPE        ( 1 ),
+        .PROBE7_WIDTH       ( 1 ),
+        .PROBE7_TYPE        ( 1 ),
+        .PROBE8_WIDTH       ( 1 ),
+        .PROBE8_TYPE        ( 1 ),
+        .PROBE9_WIDTH       ( 1 ),
+        .PROBE9_TYPE        ( 1 ),
+        .PROBE10_WIDTH      ( 1 ),
+        .PROBE10_TYPE       ( 1 ),
+        .PROBE11_WIDTH      ( 1 ),
+        .PROBE11_TYPE       ( 1 ),
+        .PROBE12_WIDTH      ( 64 ),
+        .PROBE12_TYPE       ( 1 ),
+        .PROBE13_WIDTH      ( 64 ),
+        .PROBE13_TYPE       ( 1 ),
+        .PROBE14_WIDTH      ( 64 ),
+        .PROBE14_TYPE       ( 1 ),
+        .PROBE15_WIDTH      ( 64 ),
+        .PROBE15_TYPE       ( 1 ),
+        .PROBE16_WIDTH      ( 64 ),
+        .PROBE16_TYPE       ( 1 ),
+        .PROBE17_WIDTH      ( 64 ),
+        .PROBE17_TYPE       ( 1 )
     ) la0 (
         .bscan_CAPTURE                  ( bscan_CAPTURE ),
         .bscan_DRCK                     ( bscan_DRCK ),
@@ -130,7 +166,19 @@ module edb_top (
         .probe2                 ( la0_probe2 ),
         .probe3                 ( la0_probe3 ),
         .probe4                 ( la0_probe4 ),
-        .probe5                 ( la0_probe5 )
+        .probe5                 ( la0_probe5 ),
+        .probe6                 ( la0_probe6 ),
+        .probe7                 ( la0_probe7 ),
+        .probe8                 ( la0_probe8 ),
+        .probe9                 ( la0_probe9 ),
+        .probe10                    ( la0_probe10 ),
+        .probe11                    ( la0_probe11 ),
+        .probe12                    ( la0_probe12 ),
+        .probe13                    ( la0_probe13 ),
+        .probe14                    ( la0_probe14 ),
+        .probe15                    ( la0_probe15 ),
+        .probe16                    ( la0_probe16 ),
+        .probe17                    ( la0_probe17 )
     );
 
     `DBG_MODULE_NAME(debug_hub) debug_hub_inst (

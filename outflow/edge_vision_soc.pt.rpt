@@ -1,7 +1,7 @@
 
 Efinity Interface Designer Report
 Version: 2026.1.132.1.15
-Date: 2026-09-29 10:47
+Date: 2026-09-29 15:53
 
 Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
 
@@ -42,7 +42,7 @@ hsio: 27.5 / 70 (39.29%)
 	lvds or mipi lane: 8
 hsio_bg: 0 / 8 (0.0%)
 hvio_poc: 0 / 4 (0.0%)
-jtag: 1 / 4 (25.0%)
+jtag: 2 / 4 (50.0%)
 osc: 0 / 1 (0.0%)
 pll: 3 / 4 (75.0%)
 seu: 0 / 1 (0.0%)
@@ -652,6 +652,8 @@ No Configuration SEU Detection was configured
 
 ---------- 13. JTAG Usage Summary (begin) ----------
 
+***** JTAG 0 *****
+
 Instance Name                                     : jtag_inst1
 
 Resource                                          : JTAG_USER1
@@ -667,6 +669,24 @@ Test Data Pin Name                                : jtag_inst1_TDI
 Test Data Pin Name                                : jtag_inst1_TDO
 Test Mode Select Pin Name                         : jtag_inst1_TMS
 Update Pin Name                                   : jtag_inst1_UPDATE
+
+***** JTAG 1 *****
+
+Instance Name                                     : jtag_inst2_autodbg__
+
+Resource                                          : JTAG_USER2
+
+Capture Pin Name                                  : jtag_inst2_autodbg_CAPTURE__
+Gated Test Clock Pin Name                         : jtag_inst2_autodbg_DRCK__
+Reset Pin Name                                    : jtag_inst2_autodbg_RESET__
+Run Test Pin Name                                 : jtag_inst2_autodbg_RUNTEST__
+User Instruction Active Pin Name                  : jtag_inst2_autodbg_SEL__
+Shift Pin Name                                    : jtag_inst2_autodbg_SHIFT__
+Test Clock Pin Name                               : jtag_inst2_autodbg_TCK__
+Test Data Pin Name                                : jtag_inst2_autodbg_TDI__
+Test Data Pin Name                                : jtag_inst2_autodbg_TDO__
+Test Mode Select Pin Name                         : jtag_inst2_autodbg_TMS__
+Update Pin Name                                   : jtag_inst2_autodbg_UPDATE__
 
 ---------- JTAG Usage Summary (end) ----------
 

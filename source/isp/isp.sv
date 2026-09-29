@@ -378,7 +378,7 @@ module isp
   endgenerate
 
   wire [TUSER_WIDTH-1:0] ccm_axis_tuser;
-  wire [CCM_S_AXIS_DATA_BIT_WIDTH-1:0]ccm_aixs_tdata;
+  wire [CCM_S_AXIS_DATA_BIT_WIDTH-1:0]ccm_axis_tdata;
   wire ccm_axis_tvalid  = isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid;
   wire ccm_axis_tlast   = isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast;
   assign ccm_axis_tdata = isp_enable [0] ? demosaic_tdata  : demosaic_bypass_tdata;
