@@ -377,6 +377,13 @@ module isp
     end
   endgenerate
 
+  wire [TUSER_WIDTH-1:0] ccm_axis_tuser;
+  wire [CCM_S_AXIS_DATA_BIT_WIDTH-1:0]ccm_aixs_tdata;
+  wire ccm_axis_tvalid  = isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid;
+  wire ccm_axis_tlast   = isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast;
+  assign ccm_axis_tdata = isp_enable [0] ? demosaic_tdata  : demosaic_bypass_tdata;
+  assign ccm_axis_tuser = isp_enable [0] ? demosaic_tuser  : skidbuffer1_tuser;
+
   ccm #(
     .PIXEL_PER_CYCLE                      (PIXEL_PER_CYCLE),
     .COMPONENT_BIT_WIDTH                  (CCM_COMPONENT_BIT_WIDTH),
@@ -411,19 +418,13 @@ module isp
     .m_axis_tuser                         (ccm_tuser)
   );
 
-  wire ccm_axis_tdata   = isp_enable [0] ? demosaic_tdata  : demosaic_bypass_tdata;
-  wire ccm_axis_tvalid  = isp_enable [0] ? demosaic_tvalid : skidbuffer1_tvalid;
-  wire ccm_axis_tlast   = isp_enable [0] ? demosaic_tlast  : skidbuffer1_tlast;
-  wire [TUSER_WIDTH-1:0] ccm_axis_tuser;
-  assign ccm_axis_tuser = isp_enable [0] ? demosaic_tuser  : skidbuffer1_tuser;
-
   min_max_timer #(
     .TIMER_WIDTH                          (30)
   ) min_max_timer_inst4
   (
     .clk                                  (clk),
     .rst                                  (~rstn),
-    .start                                (ccm_axis_tuser[0] && ccm_axis_tready && ccm_axis_tvalid),
+    .start                                (ccm_axis_tuser[0] && demosaic_tready && ccm_axis_tvalid),
     .stop                                 (ccm_tuser[1]),
     .min_ready                            (isp_info4[0]),
     .max_ready                            (isp_info4[1]),
@@ -521,7 +522,7 @@ module isp
 
   skidbuffer #(
     .DATA_WIDTH                           (GAMMA_M_AXIS_DATA_BIT_WIDTH),
-    .TUSER_WIDTH                          (2)
+    .TUSER_WIDTH                          (TUSER_WIDTH)
   ) skidbuffer3_inst
   (
     .clk                                   (clk),

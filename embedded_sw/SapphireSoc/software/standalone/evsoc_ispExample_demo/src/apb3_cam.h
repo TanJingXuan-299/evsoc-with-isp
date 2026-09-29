@@ -153,52 +153,52 @@ static inline void Read_Latency()
 			switch(i)
 			{
 				case 0:
-					overflow = 0 ? bsp_printf("TOTAL ISP minimum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("TOTAL ISP minimum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("TOTAL ISP minimum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("TOTAL ISP minimum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 1:
-					overflow = 0 ? bsp_printf("BLC minimum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("BLC minimum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("BLC minimum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("BLC minimum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 2:
-					overflow = 0 ? bsp_printf("COLOUR GAIN minimum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("COLOUR GAIN minimum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("COLOUR GAIN minimum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("COLOUR GAIN minimum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 3:
-					overflow = 0 ? bsp_printf("DEMOSAIC minimum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("DEMOSAIC minimum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("DEMOSAIC minimum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("DEMOSAIC minimum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 4:
-					overflow = 0 ? bsp_printf("CCM minimum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("CCM minimum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("CCM minimum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("CCM minimum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 5:
-					overflow = 0 ? bsp_printf("GAMMA minimum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("GAMMA minimum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("GAMMA minimum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("GAMMA minimum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 6:
-					overflow = 0 ? bsp_printf("TOTAL ISP maximum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("TOTAL ISP maximum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("TOTAL ISP maximum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("TOTAL ISP maximum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 7:
-					overflow = 0 ? bsp_printf("BLC maximum latency: %d clock cycles\n\r", counter_data):
-					               bsp_printf("BLC maximum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("BLC maximum latency: %d clock cycles\n\r", counter_data):
+					                bsp_printf("BLC maximum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 8:
-					overflow = 0 ? bsp_printf("COLOUR GAIN maximum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("COLOUR GAIN maximum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("COLOUR GAIN maximum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("COLOUR GAIN maximum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 9:
-					overflow = 0 ? bsp_printf("DEMOSAIC maximum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("DEMOSAIC maximum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("DEMOSAIC maximum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("DEMOSAIC maximum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 10:
-					overflow = 0 ? bsp_printf("CCM maximum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("CCM maximum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("CCM maximum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("CCM maximum latency: OVERFLOW\n\r", counter_data);
 				break;
 				case 11:
-					overflow = 0 ? bsp_printf("GAMMA maximum latency: %d clock cycles\n\r", counter_data):
-								   bsp_printf("GAMMA maximum latency: OVERFLOW\n\r", counter_data);
+					overflow == 0 ? bsp_printf("GAMMA maximum latency: %d clock cycles\n\r", counter_data):
+								    bsp_printf("GAMMA maximum latency: OVERFLOW\n\r", counter_data);
 				break;
 			}
 		}

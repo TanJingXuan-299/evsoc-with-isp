@@ -177,14 +177,14 @@ integer              byteIndex;
                'd30  : slaveRegOut <= isp_info2[31: 1];
                'd31  : slaveRegOut <= isp_info3[31: 1];
                'd32  : slaveRegOut <= isp_info4[31: 1];
-               'd32  : slaveRegOut <= isp_info5[31: 1];
-               'd33  : slaveRegOut <= isp_info0[63:33];
-               'd34  : slaveRegOut <= isp_info1[63:33];
-               'd35  : slaveRegOut <= isp_info2[63:33];
-               'd36  : slaveRegOut <= isp_info3[63:33];
-               'd37  : slaveRegOut <= isp_info4[63:33];
-               'd38  : slaveRegOut <= isp_info5[63:33];
-               'd39  : slaveRegOut <= {{20{1'b0}},
+               'd33  : slaveRegOut <= isp_info5[31: 1];
+               'd34  : slaveRegOut <= isp_info0[63:33];
+               'd35  : slaveRegOut <= isp_info1[63:33];
+               'd36  : slaveRegOut <= isp_info2[63:33];
+               'd37  : slaveRegOut <= isp_info3[63:33];
+               'd38  : slaveRegOut <= isp_info4[63:33];
+               'd39  : slaveRegOut <= isp_info5[63:33];
+               'd40  : slaveRegOut <= {{20{1'b0}},
                                        isp_info5[32],
                                        isp_info4[32],
                                        isp_info3[32],

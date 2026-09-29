@@ -90,7 +90,8 @@ module gamma
     .PIXEL_PER_CYCLE        (PIXEL_PER_CYCLE),
     .INPUT_PIXEL_BIT_WIDTH  (12),
     .OUTPUT_PIXEL_BIT_WIDTH (OUTPUT_COMPONENT_BIT_WIDTH),
-    .LUT_FILE               (LUT_FILE)
+    .LUT_FILE               (LUT_FILE),
+    .TUSER_WIDTH            (TUSER_WIDTH)
   ) gamma_r_inst
   (
     .clk                    (clk),
@@ -113,7 +114,8 @@ module gamma
     .PIXEL_PER_CYCLE        (PIXEL_PER_CYCLE),
     .INPUT_PIXEL_BIT_WIDTH  (12),
     .OUTPUT_PIXEL_BIT_WIDTH (OUTPUT_COMPONENT_BIT_WIDTH),
-    .LUT_FILE               (LUT_FILE)
+    .LUT_FILE               (LUT_FILE),
+    .TUSER_WIDTH            (TUSER_WIDTH)
   ) gamma_b_inst
   (
     .clk                    (clk),
@@ -136,7 +138,8 @@ module gamma
     .PIXEL_PER_CYCLE        (PIXEL_PER_CYCLE),
     .INPUT_PIXEL_BIT_WIDTH  (12),
     .OUTPUT_PIXEL_BIT_WIDTH (OUTPUT_COMPONENT_BIT_WIDTH),
-    .LUT_FILE               (LUT_FILE)
+    .LUT_FILE               (LUT_FILE),
+    .TUSER_WIDTH            (TUSER_WIDTH)
   ) gamma_g_inst
   (
     .clk                    (clk),
