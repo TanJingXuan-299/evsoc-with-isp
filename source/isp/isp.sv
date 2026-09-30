@@ -169,12 +169,18 @@ module isp
     .isp_info3                    (isp_info3[65:2]),
     .isp_info4                    (isp_info4[65:2]),
     .isp_info5                    (isp_info5[65:2]),
-    .isp_ready                    ({isp_info5[1:0],
-                                    isp_info4[1:0],
-                                    isp_info3[1:0],
-                                    isp_info2[1:0],
-                                    isp_info1[1:0],
-                                    isp_info0[1:0]})
+    .isp_ready                    ({isp_info5[1],
+                                    isp_info4[1],
+                                    isp_info3[1],
+                                    isp_info2[1],
+                                    isp_info1[1],
+                                    isp_info0[1],
+                                    isp_info5[0],
+                                    isp_info4[0],
+                                    isp_info3[0],
+                                    isp_info2[0],
+                                    isp_info1[0],
+                                    isp_info0[0]})
   );
 
   localparam BLC_PIXEL_BIT_WIDTH          = PIXEL_BIT_WIDTH;

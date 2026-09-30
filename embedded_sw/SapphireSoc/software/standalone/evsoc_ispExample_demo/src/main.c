@@ -82,8 +82,8 @@ void uart_buffer_read()
         uart_status_write(BSP_UART_TERMINAL, uart_status_read(BSP_UART_TERMINAL) | 0x02); // RX FIFO not empty interrupt enable
 
         if (c == '\r' || c == '\n') {
-           uart_write(BSP_UART_TERMINAL, '\n');
-           uart_write(BSP_UART_TERMINAL, '\r');
+            uart_write(BSP_UART_TERMINAL, '\r');
+            uart_write(BSP_UART_TERMINAL, '\n');
         } else {
            uart_write(BSP_UART_TERMINAL, c);
         }
@@ -126,37 +126,37 @@ void settings()
             if (char_data == 'a')
             {
                 select_demo_mode = 0;
-                bsp_printf("Selected Demo Mode: a\n\r");
+                bsp_printf("Selected Demo Mode: Da\n\r");
             }
             else if (char_data == 'b')
             {
                 select_demo_mode = 1;
-                bsp_printf("Selected Demo Mode: b\n\r");
+                bsp_printf("Selected Demo Mode: Db\n\r");
             }
             else if (char_data == 'c')
             {
                 select_demo_mode = 2;
-                bsp_printf("Selected Demo Mode: c\n\r");
+                bsp_printf("Selected Demo Mode: Dc\n\r");
             }
             else if (char_data == 'd')
             {
                 select_demo_mode = 3;
-                bsp_printf("Selected Demo Mode: d\n\r");
+                bsp_printf("Selected Demo Mode: Dd\n\r");
             }
             else if (char_data == 'e')
             {
                 select_demo_mode = 4;
-                bsp_printf("Selected Demo Mode: e\n\r");
+                bsp_printf("Selected Demo Mode: De\n\r");
             }
             else if (char_data == 'f')
             {
                 select_demo_mode = 5;
-                bsp_printf("Selected Demo Mode: f\n\r");
+                bsp_printf("Selected Demo Mode: Df\n\r");
             }
             else if (char_data == 'g')
             {
                 select_demo_mode = 6;
-                bsp_printf("Selected Demo Mode: g\n\r");
+                bsp_printf("Selected Demo Mode: Dg\n\r");
             }
             else
             {

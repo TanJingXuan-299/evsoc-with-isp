@@ -120,9 +120,7 @@ static inline void Set_Gain(int camId, int var, u16 setting)
 				 (var==12)? EXAMPLE_APB3_SLV_REG16_OFFSET:EXAMPLE_APB3_SLV_REG17_OFFSET; // single cam, camId ignored
 #endif
 
-	if (var == 0) {                       // REG0 black level (RAW10 range)
-		if (data > 0x3F) data = 0x3F;
-	} else if (var >= 1 && var <= 3) {    // REG5-7 colour gains (Q9.7)
+	if (var >= 1 && var <= 3) {    // REG5-7 colour gains (Q9.7)
 		if (data > 0x400) data = 0x400;   // ceiling: 8.0x
 	} else if (var == 13) {               // REG17 isp_enable
 		data &= 0x3;
