@@ -512,6 +512,7 @@ reg [ 0:0]                       rd_state = RD_IDLE;
 // read signals
 reg                              axi_rden;
 reg [ 5:0]                       axi_araddr;
+reg [ 5:0]                       axi_araddr_q;
 reg                              axi_arvalid;
 reg [31:0]                       axi_rdata[0:11];
 reg                              axi_rready;
@@ -525,6 +526,7 @@ always_ff @ (posedge mipi_pclk) begin
       axi_arvalid <= 1'b1;
       axi_rready  <= 1'b0;
       if ((isp_s_axi_arready == 1'b1) && (axi_arvalid == 1'b1)) begin
+        axi_araddr_q  <= axi_araddr;
         axi_rden    <= 1'b0;
         axi_arvalid <= 1'b0;
         axi_rready  <= 1'b0;
@@ -548,13 +550,14 @@ always_ff @ (posedge mipi_pclk) begin
   endcase
   if (rst_n == 1'b0) begin
       rd_state <= RD_IDLE;
-      axi_rden    <= 'b0;
-      axi_arvalid <= 'b0;
-      axi_rready  <= 'b0;
-      axi_araddr  <= 'b0;
+      axi_rden     <= 'b0;
+      axi_arvalid  <= 'b0;
+      axi_rready   <= 'b0;
+      axi_araddr   <= 'b0;
+      axi_araddr_q <= 'b0;
   end
   if (axi_rden == 1'b1) begin
-      axi_rdata[axi_araddr[5:2]] <= isp_s_axi_rdata;
+      axi_rdata[axi_araddr_q[5:2]] <= isp_s_axi_rdata;
   end
 end
 

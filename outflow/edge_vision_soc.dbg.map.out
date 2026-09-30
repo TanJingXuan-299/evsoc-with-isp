@@ -12,12 +12,12 @@ INFO     : Restoring all Verilog modules from file 'C:/Efinity/2026.1/sim_models
 INFO     : Analyzing Verilog file 'C:/Efinity/2026.1/sim_models/maplib/efinix_maplib.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:/Efinity/2026.1/sim_models/maplib/efinix_peri_lib.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v' [VERI-1482]
-INFO     : Analysis took 0.07518 seconds [FlowMsg::StageDuration]
-INFO     :     Analysis took 0.0625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Analysis virtual memory usage: begin = 60.568 MB, end = 60.584 MB, delta = 0.016 MB [FlowMsg::VMUsage]
-INFO     :     Analysis peak virtual memory usage = 60.592 MB [FlowMsg::VMUsage::Peak]
-INFO     : Analysis resident set memory usage: begin = 64.944 MB, end = 68.024 MB, delta = 3.08 MB [FlowMsg::RSSUsage]
-INFO     :     Analysis peak resident set memory usage = 68.024 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Analysis took 0.0692965 seconds [FlowMsg::StageDuration]
+INFO     :     Analysis took 0.046875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Analysis virtual memory usage: begin = 60.608 MB, end = 60.624 MB, delta = 0.016 MB [FlowMsg::VMUsage]
+INFO     :     Analysis peak virtual memory usage = 60.632 MB [FlowMsg::VMUsage::Peak]
+INFO     : Analysis resident set memory usage: begin = 65 MB, end = 68.08 MB, delta = 3.08 MB [FlowMsg::RSSUsage]
+INFO     :     Analysis peak resident set memory usage = 68.08 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Analysis ... *****
 INFO     : ***** Beginning Elaboration ... *****
 WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(182): port 'probe18' remains unconnected for this instance [VERI-1927]
@@ -36,21 +36,21 @@ INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-ef
 INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(493): extracting RAM for identifier 'ram' [VERI-2571]
 INFO     : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(335): compiling module 'debug_hub_dd992241e178408eade159fd69402e46' [VERI-1018]
 WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(143): input port 'probe18[0]' remains unconnected for this instance [VDB-1053]
-INFO     : Elaboration took 0.6367412 seconds [FlowMsg::StageDuration]
-INFO     :     Elaboration took 0.625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Elaboration virtual memory usage: begin = 60.584 MB, end = 105.732 MB, delta = 45.148 MB [FlowMsg::VMUsage]
-INFO     :     Elaboration peak virtual memory usage = 105.732 MB [FlowMsg::VMUsage::Peak]
-INFO     : Elaboration resident set memory usage: begin = 68.068 MB, end = 113.988 MB, delta = 45.92 MB [FlowMsg::RSSUsage]
-INFO     :     Elaboration peak resident set memory usage = 113.988 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Elaboration took 0.6520463 seconds [FlowMsg::StageDuration]
+INFO     :     Elaboration took 0.578125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Elaboration virtual memory usage: begin = 60.624 MB, end = 105.772 MB, delta = 45.148 MB [FlowMsg::VMUsage]
+INFO     :     Elaboration peak virtual memory usage = 105.772 MB [FlowMsg::VMUsage::Peak]
+INFO     : Elaboration resident set memory usage: begin = 68.124 MB, end = 114.044 MB, delta = 45.92 MB [FlowMsg::RSSUsage]
+INFO     :     Elaboration peak resident set memory usage = 114.044 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Elaboration ... *****
 INFO     : ... Setting Synthesis Option: mode=speed
 INFO     : ***** Beginning Reading Mapping Library ... *****
-INFO     : Reading Mapping Library took 0.0045567 seconds [FlowMsg::StageDuration]
-INFO     :     Reading Mapping Library took 0 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Reading Mapping Library virtual memory usage: begin = 105.732 MB, end = 105.732 MB, delta = 0 MB [FlowMsg::VMUsage]
-INFO     :     Reading Mapping Library peak virtual memory usage = 105.732 MB [FlowMsg::VMUsage::Peak]
-INFO     : Reading Mapping Library resident set memory usage: begin = 115 MB, end = 115.016 MB, delta = 0.016 MB [FlowMsg::RSSUsage]
-INFO     :     Reading Mapping Library peak resident set memory usage = 115.016 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Reading Mapping Library took 0.0058504 seconds [FlowMsg::StageDuration]
+INFO     :     Reading Mapping Library took 0.015625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Reading Mapping Library virtual memory usage: begin = 105.772 MB, end = 105.772 MB, delta = 0 MB [FlowMsg::VMUsage]
+INFO     :     Reading Mapping Library peak virtual memory usage = 105.772 MB [FlowMsg::VMUsage::Peak]
+INFO     : Reading Mapping Library resident set memory usage: begin = 115.056 MB, end = 115.072 MB, delta = 0.016 MB [FlowMsg::RSSUsage]
+INFO     :     Reading Mapping Library peak resident set memory usage = 115.072 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Reading Mapping Library ... *****
 INFO     : ... Pre-synthesis checks begin
 WARNING  : Removing redundant signal : compared_in[0]. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5584) [EFX-0200]
@@ -107,9 +107,9 @@ INFO     : ... Hierarchical pre-synthesis "edb_simple_dual_port_ram_dd992241e178
 INFO     : ... Hierarchical pre-synthesis "fifo_with_read_dd992241e178408eade159fd69402e46(DATA_WIDTH=32'b0110001101,ADDR_WIDTH=9,PIPE=0)" begin
 INFO     : ... Hierarchical pre-synthesis "fifo_with_read_dd992241e178408eade159fd69402e46(DATA_WIDTH=32'b0110001101,ADDR_WIDTH=9,PIPE=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "la_biu_dd992241e178408eade159fd69402e46(CAPTURE_WIDTH=32'b0110001100,DATA_DEPTH=512)" begin
-INFO     : ... Hierarchical pre-synthesis "la_biu_dd992241e178408eade159fd69402e46(CAPTURE_WIDTH=32'b0110001100,DATA_DEPTH=512)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "la_biu_dd992241e178408eade159fd69402e46(CAPTURE_WIDTH=32'b0110001100,DATA_DEPTH=512)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1" begin
-INFO     : ... Hierarchical pre-synthesis "edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "debug_hub_dd992241e178408eade159fd69402e46" begin
 INFO     : ... Hierarchical pre-synthesis "debug_hub_dd992241e178408eade159fd69402e46" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "edb_top" begin
@@ -124,10 +124,10 @@ INFO     : ... Flat optimizations end (Real time : 0s)
 INFO     : ... Check and break combinational loops begin
 INFO     : ... Check and break combinational loops end (Real time : 0s)
 INFO     : ... Setup for logic synthesis begin
-INFO     : ... Setup for logic synthesis end (Real time : 1s)
+INFO     : ... Setup for logic synthesis end (Real time : 0s)
 INFO     : ... LUT mapping begin
 INFO     : ... LS, strategy: 3, nd: 3121, ed: 9983, lv: 7, pw: 6062.16
-INFO     : ... LUT mapping end (Real time : 20s)
+INFO     : ... LUT mapping end (Real time : 22s)
 INFO     : ... Post-synthesis Verific netlist creation begin
 INFO     : ... Post-synthesis Verific netlist creation end (Real time : 0s)
 INFO     : ***** Beginning VDB Netlist Checker ... *****
@@ -135,12 +135,12 @@ WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-ef
 WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(19): Input/inout port bscan_RUNTEST is unconnected. Place and route may remove this unconnected port. [VDB-8003]
 WARNING  : C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v(24): Input/inout port bscan_TMS is unconnected. Place and route may remove this unconnected port. [VDB-8003]
 WARNING  : Found 3 warnings in the post-synthesis netlist.
-INFO     : VDB Netlist Checker took 0.010929 seconds [FlowMsg::StageDuration]
-INFO     :     VDB Netlist Checker took 0.03125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : VDB Netlist Checker virtual memory usage: begin = 120.164 MB, end = 120.196 MB, delta = 0.032 MB [FlowMsg::VMUsage]
-INFO     :     VDB Netlist Checker peak virtual memory usage = 170.544 MB [FlowMsg::VMUsage::Peak]
-INFO     : VDB Netlist Checker resident set memory usage: begin = 136.48 MB, end = 136.588 MB, delta = 0.108 MB [FlowMsg::RSSUsage]
-INFO     :     VDB Netlist Checker peak resident set memory usage = 180.94 MB [FlowMsg::RSSUsage::Peak]
+INFO     : VDB Netlist Checker took 0.0116627 seconds [FlowMsg::StageDuration]
+INFO     :     VDB Netlist Checker took 0.015625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : VDB Netlist Checker virtual memory usage: begin = 120.432 MB, end = 120.46 MB, delta = 0.028 MB [FlowMsg::VMUsage]
+INFO     :     VDB Netlist Checker peak virtual memory usage = 181.16 MB [FlowMsg::VMUsage::Peak]
+INFO     : VDB Netlist Checker resident set memory usage: begin = 136.86 MB, end = 136.964 MB, delta = 0.104 MB [FlowMsg::RSSUsage]
+INFO     :     VDB Netlist Checker peak resident set memory usage = 183.128 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending VDB Netlist Checker ... *****
 INFO     : Resource Summary 
 INFO     : ======================================= 
@@ -152,9 +152,9 @@ INFO     : EFX_RAM10               : 	20
 INFO     : EFX_GBUFCE              : 	1
 INFO     : ======================================= 
 INFO     : Writing netlist 'edb_top' to Verilog file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.stub.v' [VDB-1030]
-INFO     : The entire flow of EFX_MAP took 25.0705041 seconds [FlowMsg::StageDuration]
-INFO     :     The entire flow of EFX_MAP took 27.765625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 18.992 MB, end = 124.732 MB, delta = 105.74 MB [FlowMsg::VMUsage]
-INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 170.544 MB [FlowMsg::VMUsage::Peak]
-INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.656 MB, end = 140.744 MB, delta = 121.088 MB [FlowMsg::RSSUsage]
-INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 180.94 MB [FlowMsg::RSSUsage::Peak]
+INFO     : The entire flow of EFX_MAP took 25.5739859 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_MAP took 28.46875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.032 MB, end = 125.516 MB, delta = 106.484 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 181.16 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.692 MB, end = 141.612 MB, delta = 121.92 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 183.128 MB [FlowMsg::RSSUsage::Peak]

@@ -653,3 +653,17 @@
 // Sep 29, 2026 15:10:34
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 30, 2026 13:36:00
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'axi_araddr_q' is not declared (VERI-1128) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:560)
+[EFX-0010 VERI-ERROR] module 'cam_picam_v2' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:827)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 30, 2026 13:37:38
+///////////////////////////////////
+

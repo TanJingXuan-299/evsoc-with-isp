@@ -59,15 +59,15 @@ module ccm
     end
   endfunction
 
-  reg signed [15:0]                       ccm_r_r_int;
-  reg signed [15:0]                       ccm_r_g_int;
-  reg signed [15:0]                       ccm_r_b_int;
-  reg signed [15:0]                       ccm_g_r_int;
-  reg signed [15:0]                       ccm_g_g_int;
-  reg signed [15:0]                       ccm_g_b_int;
-  reg signed [15:0]                       ccm_b_r_int;
-  reg signed [15:0]                       ccm_b_g_int;
-  reg signed [15:0]                       ccm_b_b_int;
+  reg signed [15:0]                       ccm_r_r_int = 16'sh1000;
+  reg signed [15:0]                       ccm_r_g_int = 16'sh0000;
+  reg signed [15:0]                       ccm_r_b_int = 16'sh0000;
+  reg signed [15:0]                       ccm_g_r_int = 16'sh0000;
+  reg signed [15:0]                       ccm_g_g_int = 16'sh1000;
+  reg signed [15:0]                       ccm_g_b_int = 16'sh0000;
+  reg signed [15:0]                       ccm_b_r_int = 16'sh0000;
+  reg signed [15:0]                       ccm_b_g_int = 16'sh0000;
+  reg signed [15:0]                       ccm_b_b_int = 16'sh1000;
 
   // Pipe 0 signals
   reg signed  [COMPONENT_BIT_WIDTH:0]     pipe_0_pixel0_r;

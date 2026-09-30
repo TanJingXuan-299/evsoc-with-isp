@@ -691,3 +691,50 @@
 // Sep 29, 2026 15:53:14
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 30, 2026 13:39:37
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] port 'probe18' remains unconnected for this instance (VERI-1927) (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:182)
+[EFX-0011 VERI-WARNING] input port 'probe18[0]' remains unconnected for this instance (VDB-1053) (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0200 WARNING] Removing redundant signal : compared_in[0]. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5584)
+[EFX-0200 WARNING] Removing redundant signal : mask_in[0]. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5585)
+[EFX-0200 WARNING] Removing redundant signal : trigger_in. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5795)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4618)
+[EFX-0200 WARNING] Removing redundant signal : full. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4672)
+[EFX-0200 WARNING] Removing redundant signal : shift_i. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4942)
+[EFX-0200 WARNING] Removing redundant signal : trig_out. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4959)
+[EFX-0200 WARNING] Removing redundant signal : trig_out_ack. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:4960)
+[EFX-0200 WARNING] Removing redundant signal : bscan_DRCK. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1101)
+[EFX-0200 WARNING] Removing redundant signal : bscan_RESET. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1102)
+[EFX-0200 WARNING] Removing redundant signal : bscan_RUNTEST. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1103)
+[EFX-0200 WARNING] Removing redundant signal : bscan_SEL. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1104)
+[EFX-0200 WARNING] Removing redundant signal : bscan_TMS. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1108)
+[EFX-0200 WARNING] Removing redundant signal : trig_in_ack. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:1120)
+[EFX-0200 WARNING] Removing redundant signal : mux_capture_cmp[17:0]. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3539)
+[EFX-0200 WARNING] Removing redundant signal : bscan_CAPTURE. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:340)
+[EFX-0200 WARNING] Removing redundant signal : bscan_DRCK. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:341)
+[EFX-0200 WARNING] Removing redundant signal : bscan_RUNTEST. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:343)
+[EFX-0200 WARNING] Removing redundant signal : bscan_TMS. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:348)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe18[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe19[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe20[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe21[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe22[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe23[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe24[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe25[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe26[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net/port 'probe27[0]' in module 'edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1'. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:143)
+[EFX-0011 VERI-WARNING] Input/inout port bscan_DRCK is unconnected. Place and route may remove this unconnected port. (VDB-8003) (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:17)
+[EFX-0011 VERI-WARNING] Input/inout port bscan_RUNTEST is unconnected. Place and route may remove this unconnected port. (VDB-8003) (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:19)
+[EFX-0011 VERI-WARNING] Input/inout port bscan_TMS is unconnected. Place and route may remove this unconnected port. (VDB-8003) (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:24)
+[EFX-0011 VERI-WARNING] Found 3 warnings in the post-synthesis netlist. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 30, 2026 13:40:03
+///////////////////////////////////
+

@@ -120,6 +120,14 @@ static inline void Set_Gain(int camId, int var, u16 setting)
 				 (var==12)? EXAMPLE_APB3_SLV_REG16_OFFSET:EXAMPLE_APB3_SLV_REG17_OFFSET; // single cam, camId ignored
 #endif
 
+	if (var == 0) {                       // REG0 black level (RAW10 range)
+		if (data > 0x3F) data = 0x3F;
+	} else if (var >= 1 && var <= 3) {    // REG5-7 colour gains (Q9.7)
+		if (data > 0x400) data = 0x400;   // ceiling: 8.0x
+	} else if (var == 13) {               // REG17 isp_enable
+		data &= 0x3;
+	}
+
 	EXAMPLE_APB3_REGW(EXAMPLE_APB3_SLV, offset, data);
 	bsp_uDelay(DELAY_BUSY);
 }
@@ -143,11 +151,12 @@ static inline void Read_Latency()
 	u32 valid_status = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG40_OFFSET);
 	for(int i=0; i<12; i++)
 	{
-		if(valid_status & (1 << i) != 0)
+		if((valid_status & (1 << i)) != 0)
 		{
 			write_u32(1 << i, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
-			u32 counter_data = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4) >> 1;
-			u32 overflow     = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4) & 1;
+			u32 raw          = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4);
+			u32 counter_data = raw >> 1;
+			u32 overflow     = raw & 1;
 			bsp_uDelay(DELAY_BUSY);
 
 			switch(i)

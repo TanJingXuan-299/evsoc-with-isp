@@ -82,6 +82,13 @@ void uart_buffer_read()
         uart_status_write(BSP_UART_TERMINAL, uart_status_read(BSP_UART_TERMINAL) | 0x02); // RX FIFO not empty interrupt enable
 
         if (c == '\r' || c == '\n') {
+           uart_write(BSP_UART_TERMINAL, '\n');
+           uart_write(BSP_UART_TERMINAL, '\r');
+        } else {
+           uart_write(BSP_UART_TERMINAL, c);
+        }
+
+        if (c == '\r' || c == '\n') {
             // Command complete – null-terminate and signal main loop
             if (uart_cmd_index > 0) {
                 uart_cmd_buffer[uart_cmd_index] = '\0';
@@ -212,6 +219,11 @@ void settings()
             case 'E':
             Set_Gain(0, 13, data);
             break;
+
+            default:
+
+            bsp_printf("Unknown command: %c (demo modes: D+a-g, gains: 0-9/A/B/C/E+value)\n\r", var);
+            break;
         }
     }
 }
@@ -246,19 +258,19 @@ void externalInterrupt()
 
 void ispExample_menu()
 {
-    bsp_printf("================================================================================\n\r");
+    bsp_printf("================================================================================ \n\r");
     bsp_printf("                    ISP Example Design Scenario Selection\n\r");
-    bsp_printf("================================================================================\n\r");
+    bsp_printf("================================================================================ \n\r");
 
-    bsp_printf("'a' : Camera Capture + HDMI Display                                             \n\r");
-    bsp_printf("'b' : Camera Capture + RGB2Grayscale (SW) + HDMI Display                        \n\r");
-    bsp_printf("'c' : Camera Capture + RGB2Grayscale (SW) + Sobel (HW) + HDMI Display           \n\r");
-    bsp_printf("'d' : Camera Capture + RGB2Grayscale (HW) + HDMI Display                        \n\r");
-    bsp_printf("'e' : Camera Capture + RGB2Grayscale & Sobel (HW) + HDMI Display                \n\r");
-    bsp_printf("'f' : Camera Capture + RGB2Grayscale & Sobel & Dilation (HW) + HDMI Display     \n\r");
-    bsp_printf("'g' : Camera Capture + RGB2Grayscale & Sobel & Erosion  (HW) + HDMI Display     \n\r");
+    bsp_printf("'Da' : Camera Capture + HDMI Display                                             \n\r");
+    bsp_printf("'Db' : Camera Capture + RGB2Grayscale (SW) + HDMI Display                        \n\r");
+    bsp_printf("'Dc' : Camera Capture + RGB2Grayscale (SW) + Sobel (HW) + HDMI Display           \n\r");
+    bsp_printf("'Dd' : Camera Capture + RGB2Grayscale (HW) + HDMI Display                        \n\r");
+    bsp_printf("'De' : Camera Capture + RGB2Grayscale & Sobel (HW) + HDMI Display                \n\r");
+    bsp_printf("'Df' : Camera Capture + RGB2Grayscale & Sobel & Dilation (HW) + HDMI Display     \n\r");
+    bsp_printf("'Dg' : Camera Capture + RGB2Grayscale & Sobel & Erosion  (HW) + HDMI Display     \n\r");
 
-    bsp_printf("================================================================================\n\n\r");
+    bsp_printf("================================================================================ \n\n\r");
 }
 
 /****************************************************************MAIN**************************************************************/

@@ -43,10 +43,10 @@ module colorgain
     end
   endfunction
 
-  reg [15:0]            int_rgain = 'b0;
-  reg [15:0]            int_bgain = 'b0;
-  reg [15:0]            int_g0gain = 'b0;
-  reg [15:0]            int_g1gain = 'b0;
+  reg [15:0]            int_rgain  = 16'h0080;
+  reg [15:0]            int_bgain  = 16'h0080;
+  reg [15:0]            int_g0gain = 16'h0080;
+  reg [15:0]            int_g1gain = 16'h0080;
 
   reg [DATA_WIDTH-1:0]  pipe_0_tdata;
   reg                   pipe_0_tvalid = 'b0;

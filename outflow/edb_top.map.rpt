@@ -1,6 +1,6 @@
 Efinity Synthesis report for project edb_top
 Version: 2026.1.132.1.15
-Generated at: Sep 29, 2026 15:52:49
+Generated at: Sep 30, 2026 13:39:38
 Copyright (C) 2013 - 2026  All rights reserved.
 
 Top-level Entity Name : edb_top
@@ -57,22 +57,22 @@ Total number of FFs with enable signals: 1434
 +------------------------------------------------+------------------+
 |debug_hub_inst/n96                              |               82 |
 |la0/la_biu_inst/data_o_en                       |               65 |
-|la0/n2009                                       |               64 |
+|la0/n13457                                      |               64 |
 |la0/n17492                                      |               64 |
-|la0/n17690                                      |               64 |
-|la0/n18837                                      |               64 |
-|la0/n19035                                      |               64 |
-|la0/tu_trigger                                  |               64 |
-|la0/n20182                                      |               64 |
-|la0/n20380                                      |               64 |
 |la0/n16345                                      |               64 |
 |la0/n16147                                      |               64 |
-|la0/n1492                                       |               64 |
-|ceg_net8                                        |               64 |
-|la0/n13457                                      |               64 |
-|la0/n13655                                      |               64 |
+|la0/n17690                                      |               64 |
 |la0/n15000                                      |               64 |
+|la0/n18837                                      |               64 |
 |la0/n14802                                      |               64 |
+|la0/n19035                                      |               64 |
+|la0/n13655                                      |               64 |
+|la0/n20182                                      |               64 |
+|la0/n20380                                      |               64 |
+|la0/n1492                                       |               64 |
+|la0/tu_trigger                                  |               64 |
+|ceg_net8                                        |               64 |
+|la0/n2009                                       |               64 |
 |ceg_net19                                       |               32 |
 |la0/addr_ct_en                                  |               24 |
 |la0/n2142                                       |               22 |
@@ -81,35 +81,35 @@ Total number of FFs with enable signals: 1434
 |la0/word_ct_en                                  |               16 |
 |la0/la_biu_inst/n745                            |               13 |
 |la0/regsel_ld_en                                |               13 |
+|la0/la_biu_inst/n3901                           |                9 |
 |la0/la_biu_inst/fifo_push                       |                9 |
 |la0/la_biu_inst/fifo_with_read_inst/is_last_data|                9 |
-|la0/la_biu_inst/n3901                           |                9 |
 |ceg_net2                                        |                6 |
-|debug_hub_inst/n267                             |                4 |
 |la0/op_reg_en                                   |                4 |
-|la0/n18822                                      |                3 |
-|la0/n16132                                      |                3 |
-|la0/n17477                                      |                3 |
-|la0/n13442                                      |                3 |
-|la0/n20167                                      |                3 |
-|la0/n14787                                      |                3 |
-|la0/n12161                                      |                3 |
-|la0/n11328                                      |                3 |
-|la0/n10495                                      |                3 |
-|la0/n8829                                       |                3 |
-|la0/n7996                                       |                3 |
+|debug_hub_inst/n267                             |                4 |
 |la0/n7163                                       |                3 |
+|la0/n7996                                       |                3 |
+|ceg_net5                                        |                3 |
 |la0/n6330                                       |                3 |
+|la0/n10495                                      |                3 |
 |la0/n5497                                       |                3 |
+|la0/n11328                                      |                3 |
 |la0/n4664                                       |                3 |
 |la0/n3831                                       |                3 |
 |la0/n2998                                       |                3 |
-|ceg_net5                                        |                3 |
 |la0/n9662                                       |                3 |
-|ceg_net14                                       |                1 |
-|ceg_net27                                       |                1 |
+|la0/n8829                                       |                3 |
+|la0/n17477                                      |                3 |
+|la0/n12161                                      |                3 |
+|la0/n13442                                      |                3 |
+|la0/n20167                                      |                3 |
+|la0/n14787                                      |                3 |
+|la0/n18822                                      |                3 |
+|la0/n16132                                      |                3 |
 |debug_hub_inst/n265                             |                1 |
+|ceg_net27                                       |                1 |
 |la0/trigger_skipper_n/equal_6/n127              |                1 |
+|ceg_net14                                       |                1 |
 +------------------------------------------------+------------------+
 
 ### ### EFX_FF CE enables (end) ### ### ###
@@ -128,9 +128,9 @@ Total number of FFs with set/reset signals: 1453
 |la0/la_biu_inst/fifo_with_read_inst/n2565|               28 |
 |la0/la_biu_inst/fifo_rstn                |               19 |
 |la0/n2985                                |                2 |
+|la0/la_biu_inst/n3915                    |                1 |
 |la0/trigger_skipper_n/n469               |                1 |
 |la0/n30071                               |                1 |
-|la0/la_biu_inst/n3915                    |                1 |
 +-----------------------------------------+------------------+
 
 ### ### EFX_FF SR set/reset (end) ### ### ###
@@ -220,4 +220,4 @@ EFX_GBUFCE              : 	1
 ### ### Resource Summary (end) ### ### ###
 
 Plain synthesis (without verilog dump and post-map checks) time : 24s
-Elapsed synthesis time : 24s
+Elapsed synthesis time : 25s

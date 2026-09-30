@@ -583,10 +583,53 @@ module demosaic
     end
   end
 
-  // assign outputs
+  generate
+  if (TUSER_WIDTH > 1) begin : gen_eof_regen
+
+    reg [15:0] in_line_cnt;    // completed input lines (absolute)
+    reg [15:0] out_line_cnt;   // completed output lines (absolute)
+    reg [15:0] eof_line;       // absolute index of the line carrying EOF
+    reg        eof_seen;
+
+    wire in_eol_hs  = s_axis_tvalid & s_axis_tready & s_axis_tlast;
+    wire in_eof_hs  = s_axis_tvalid & s_axis_tready & s_axis_tuser[1];
+    wire out_eol_hs = m_axis_tvalid & m_axis_tready & m_axis_tlast;
+
+    always_ff @ (posedge clk) begin
+      if (rstn == 1'b0) begin
+        in_line_cnt  <= '0;
+        out_line_cnt <= '0;
+        eof_line     <= '0;
+        eof_seen     <= 1'b0;
+      end else begin
+        if (in_eol_hs) begin
+          in_line_cnt <= in_line_cnt + 1'b1;
+        end
+        if (in_eof_hs) begin
+          // EOF rides the last beat of the last line: latch that line's
+          // index (pre-increment value, 0-based).
+          eof_line <= in_line_cnt;
+          eof_seen <= 1'b1;
+        end
+        if (out_eol_hs) begin
+          out_line_cnt <= out_line_cnt + 1'b1;
+        end
+      end
+    end
+
+    // assert on the EOL beat of the frame's last output line
+    wire eof_regen = eof_seen && (out_line_cnt == eof_line) && m_axis_tvalid && m_axis_tlast;
+
+    assign m_axis_tuser = {eof_regen, pipe_4_tuser[TUSER_WIDTH-2:0]};
+
+  end else begin : gen_no_eof_regen
+    assign m_axis_tuser = pipe_4_tuser;
+  end
+endgenerate
+
+ // assign outputs
   assign m_axis_tdata   = pipe_4_tdata;
   assign m_axis_tvalid  = pipe_4_tvalid;
   assign m_axis_tlast   = pipe_4_tlast;
-  assign m_axis_tuser   = pipe_4_tuser;
 
 endmodule
