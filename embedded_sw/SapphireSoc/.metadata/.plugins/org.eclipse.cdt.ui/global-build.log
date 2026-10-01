@@ -555,3 +555,19 @@ make: Nothing to be done for 'all'.
 14:06:09 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
 make all 
 make: Nothing to be done for 'all'.
+17:13:15 **** Incremental Build of configuration Default for project evsoc_ispExample_demo ****
+make all 
+CC src/main.c
+src/main.c: In function 'uart_buffer_read':
+src/main.c:113:20: warning: passing argument 1 of 'atoi' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  113 |         data= atoi(&uart_cmd_buffer[1]);
+      |                    ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../bsp/efinix/EfxSapphireSoc/include/print.h:17,
+                 from ../../../bsp/efinix/EfxSapphireSoc/include/bsp.h:102,
+                 from src/main.c:6:
+C:/Efinity/efinity-riscv-ide-2026.1/toolchain/riscv-none-elf/include/stdlib.h:81:27: note: expected 'const char *' but argument is of type 'volatile char *'
+   81 | int     atoi (const char *__nptr);
+      |               ~~~~~~~~~~~~^~~~~~
+LD evsoc_ispExample_demo
+Memory region         Used Size  Region Size  %age Used
+             ram:       23024 B       124 KB     18.13%

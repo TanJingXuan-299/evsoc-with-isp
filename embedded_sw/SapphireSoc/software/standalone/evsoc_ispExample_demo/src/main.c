@@ -220,9 +220,16 @@ void settings()
             Set_Gain(0, 13, data);
             break;
 
+            //FIX (GUI reset): 'L' prints the full ISP latency report on demand
+            //so the GUI latency-panel reset button can repopulate the panel
+            //immediately (also usable from any terminal).
+            case 'L':
+            Latency_Report();
+            break;
+
             default:
 
-            bsp_printf("Unknown command: %c (demo modes: D+a-g, gains: 0-9/A/B/C/E+value)\n\r", var);
+            bsp_printf("Unknown command: %c (demo modes: D+a-g, gains: 0-9/A/B/C/E+value, L: latency report)\n\r", var);
             break;
         }
     }
@@ -269,6 +276,7 @@ void ispExample_menu()
     bsp_printf("'De' : Camera Capture + RGB2Grayscale & Sobel (HW) + HDMI Display                \n\r");
     bsp_printf("'Df' : Camera Capture + RGB2Grayscale & Sobel & Dilation (HW) + HDMI Display     \n\r");
     bsp_printf("'Dg' : Camera Capture + RGB2Grayscale & Sobel & Erosion  (HW) + HDMI Display     \n\r");
+    bsp_printf("'L'  : Print ISP latency report (min/max per pipeline stage)                        \n\r");
 
     bsp_printf("================================================================================ \n\n\r");
 }

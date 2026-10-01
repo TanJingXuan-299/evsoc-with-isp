@@ -690,6 +690,15 @@ $('#btnLatClr').addEventListener('click', () => {
   LAT_STAGES.forEach(s => lat[s.key] = {min:{v:null,ovf:false}, max:{v:null,ovf:false}});
   lastLatTs = 0;
   renderLat();
+  /* FIX: with the firmware's event-driven prints the panel would stay empty
+     after a reset once min/max converged (no new records -> no prints).
+     Ask the firmware for an immediate full report ('L' command) so the
+     panel repopulates right away when a board is connected. */
+  if(state.connected){
+    sendCmd('L');
+  }else{
+    logSys('latency panel cleared \u2014 connect the board and press reset again (or send \'L\') for a fresh report');
+  }
 });
 
 /* ---- simulation: exercises the exact same parser path as real UART ---- */
@@ -699,14 +708,17 @@ function simEmit(name, kind, val){
 }
 function simTick(){
   simRound++;
-  const base = 1036800 + Math.floor(Math.random()*60);
+  /* post-fix expected readings: each timer now measures SOF->SOF pipeline
+     latency per stage (tens..thousands of cycles), NOT the ~1,036,800-cycle
+     frame duration they measured before. DEMOSAIC dominates (~2 linebuffer
+     lines @ 960 beats/line) and TOTAL is roughly the sum of the stages. */
   const d = {
-    'TOTAL ISP'  : [base+180,  base+228 ],
-    'BLC'        : [base+4,    base+9   ],
-    'COLOUR GAIN': [base+7,    base+13  ],
-    'DEMOSAIC'   : [base+2080, base+2140],
-    'CCM'        : [base+2096, base+2150],
-    'GAMMA'      : [base+2108, base+2168]
+    'TOTAL ISP'  : [1948,     2012    ],
+    'BLC'        : [4,        9       ],
+    'COLOUR GAIN': [7,        13      ],
+    'DEMOSAIC'   : [1925,     1961    ],
+    'CCM'        : [8,        14      ],
+    'GAMMA'      : [10,       17      ]
   };
   const ovfName = (simRound % 6 === 0) ? 'CCM' : null;   /* once in a while: overflow */
   for(const [name,[mn,mx]] of Object.entries(d)){

@@ -144,6 +144,64 @@ static inline void Set_MipiRst(u8 rst)
 
 #endif
 
+static inline void Latency_Print(int i, u32 raw)
+{
+	u32 counter_data = raw >> 1;
+	u32 overflow     = raw & 1;
+
+	switch(i)
+	{
+		case 0:
+			overflow == 0 ? bsp_printf("TOTAL ISP minimum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("TOTAL ISP minimum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 1:
+			overflow == 0 ? bsp_printf("BLC minimum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("BLC minimum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 2:
+			overflow == 0 ? bsp_printf("COLOUR GAIN minimum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("COLOUR GAIN minimum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 3:
+			overflow == 0 ? bsp_printf("DEMOSAIC minimum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("DEMOSAIC minimum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 4:
+			overflow == 0 ? bsp_printf("CCM minimum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("CCM minimum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 5:
+			overflow == 0 ? bsp_printf("GAMMA minimum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("GAMMA minimum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 6:
+			overflow == 0 ? bsp_printf("TOTAL ISP maximum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("TOTAL ISP maximum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 7:
+			overflow == 0 ? bsp_printf("BLC maximum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("BLC maximum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 8:
+			overflow == 0 ? bsp_printf("COLOUR GAIN maximum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("COLOUR GAIN maximum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 9:
+			overflow == 0 ? bsp_printf("DEMOSAIC maximum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("DEMOSAIC maximum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 10:
+			overflow == 0 ? bsp_printf("CCM maximum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("CCM maximum latency: OVERFLOW\n\r", counter_data);
+		break;
+		case 11:
+			overflow == 0 ? bsp_printf("GAMMA maximum latency: %d clock cycles\n\r", counter_data):
+						    bsp_printf("GAMMA maximum latency: OVERFLOW\n\r", counter_data);
+		break;
+	}
+}
+
 static inline void Read_Latency()
 {
 	u32 valid_status = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG40_OFFSET);
@@ -151,63 +209,38 @@ static inline void Read_Latency()
 	{
 		if((valid_status & (1 << i)) != 0)
 		{
+			//FIX: read the value FIRST, while it is still the exact
+			//record that raised the valid flag.
+			u32 raw = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4);
+
+			//FIX: pulse the ready bit (set, let the handshake
+			//complete, clear) instead of leaving it stuck high.
 			write_u32(1 << i, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
-			u32 raw          = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4);
-			u32 counter_data = raw >> 1;
-			u32 overflow     = raw & 1;
+			bsp_uDelay(DELAY_BUSY);
+			write_u32(0, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
 			bsp_uDelay(DELAY_BUSY);
 
-			switch(i)
-			{
-				case 0:
-					overflow == 0 ? bsp_printf("TOTAL ISP minimum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("TOTAL ISP minimum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 1:
-					overflow == 0 ? bsp_printf("BLC minimum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("BLC minimum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 2:
-					overflow == 0 ? bsp_printf("COLOUR GAIN minimum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("COLOUR GAIN minimum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 3:
-					overflow == 0 ? bsp_printf("DEMOSAIC minimum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("DEMOSAIC minimum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 4:
-					overflow == 0 ? bsp_printf("CCM minimum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("CCM minimum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 5:
-					overflow == 0 ? bsp_printf("GAMMA minimum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("GAMMA minimum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 6:
-					overflow == 0 ? bsp_printf("TOTAL ISP maximum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("TOTAL ISP maximum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 7:
-					overflow == 0 ? bsp_printf("BLC maximum latency: %d clock cycles\n\r", counter_data):
-					                bsp_printf("BLC maximum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 8:
-					overflow == 0 ? bsp_printf("COLOUR GAIN maximum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("COLOUR GAIN maximum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 9:
-					overflow == 0 ? bsp_printf("DEMOSAIC maximum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("DEMOSAIC maximum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 10:
-					overflow == 0 ? bsp_printf("CCM maximum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("CCM maximum latency: OVERFLOW\n\r", counter_data);
-				break;
-				case 11:
-					overflow == 0 ? bsp_printf("GAMMA maximum latency: %d clock cycles\n\r", counter_data):
-								    bsp_printf("GAMMA maximum latency: OVERFLOW\n\r", counter_data);
-				break;
-			}
+			Latency_Print(i, raw);
 		}
+	}
+}
+
+//Unconditional full report of all 12 latched min/max values (valid or not).
+//Used by the 'L' command and the GUI latency-panel reset button: it always
+//repopulates the panel immediately, even when the values have converged and
+//no new records would ever trigger a print.
+static inline void Latency_Report()
+{
+	for(int i=0; i<12; i++)
+	{
+		u32 raw = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4);
+
+		//clear any pending valid with a ready pulse so state stays clean
+		write_u32(1 << i, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
+		bsp_uDelay(DELAY_BUSY);
+		write_u32(0, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
+		bsp_uDelay(DELAY_BUSY);
+
+		Latency_Print(i, raw);
 	}
 }
