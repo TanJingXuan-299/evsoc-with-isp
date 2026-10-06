@@ -944,7 +944,7 @@ LOAD C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf
                 0x00001000                _start
                 0x0000106c                _init
 
-.text           0x00001070     0x340c
+.text           0x00001070     0x34a0
  *(.text.Proc_1)
  *(.text.Proc_2)
  *(.text.Proc_3)
@@ -1093,192 +1093,196 @@ LOAD C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf
                 0x00002448       0x18 build/obj_files/main.o
  .text.bsp_printf
                 0x00002460      0x130 build/obj_files/main.o
+ .text.Latency_Print
+                0x00002590      0x1f0 build/obj_files/main.o
+ .text.Latency_Report
+                0x00002780       0x9c build/obj_files/main.o
  .text.Read_Latency
-                0x00002590      0x2c4 build/obj_files/main.o
+                0x0000281c       0xb8 build/obj_files/main.o
  .text.rgb2grayscale
-                0x00002854       0x98 build/obj_files/main.o
-                0x00002854                rgb2grayscale
+                0x000028d4       0x98 build/obj_files/main.o
+                0x000028d4                rgb2grayscale
  .text.uart_interrupt_init
-                0x000028ec       0x54 build/obj_files/main.o
-                0x000028ec                uart_interrupt_init
+                0x0000296c       0x54 build/obj_files/main.o
+                0x0000296c                uart_interrupt_init
  .text.trigger_next_display_dma
-                0x00002940       0xb4 build/obj_files/main.o
-                0x00002940                trigger_next_display_dma
+                0x000029c0       0xb4 build/obj_files/main.o
+                0x000029c0                trigger_next_display_dma
  .text.uart_buffer_read
-                0x000029f4      0x148 build/obj_files/main.o
-                0x000029f4                uart_buffer_read
+                0x00002a74      0x148 build/obj_files/main.o
+                0x00002a74                uart_buffer_read
  .text.settings
-                0x00002b3c      0x3c0 build/obj_files/main.o
-                0x00002b3c                settings
+                0x00002bbc      0x3c8 build/obj_files/main.o
+                0x00002bbc                settings
  .text.externalInterrupt
-                0x00002efc       0x84 build/obj_files/main.o
-                0x00002efc                externalInterrupt
+                0x00002f84       0x84 build/obj_files/main.o
+                0x00002f84                externalInterrupt
  .text.ispExample_menu
-                0x00002f80       0x9c build/obj_files/main.o
-                0x00002f80                ispExample_menu
+                0x00003008       0xa8 build/obj_files/main.o
+                0x00003008                ispExample_menu
  .text.i2c_masterBusy
-                0x0000301c        0xc build/obj_files/PiCamDriver.o
+                0x000030b0        0xc build/obj_files/PiCamDriver.o
  .text.i2c_masterStartBlocking
-                0x00003028       0x1c build/obj_files/PiCamDriver.o
+                0x000030bc       0x1c build/obj_files/PiCamDriver.o
  .text.i2c_masterStopWait
-                0x00003044       0x2c build/obj_files/PiCamDriver.o
+                0x000030d8       0x2c build/obj_files/PiCamDriver.o
  .text.i2c_masterStopBlocking
-                0x00003070       0x20 build/obj_files/PiCamDriver.o
+                0x00003104       0x20 build/obj_files/PiCamDriver.o
  .text.i2c_txAckWait
-                0x00003090       0x10 build/obj_files/PiCamDriver.o
+                0x00003124       0x10 build/obj_files/PiCamDriver.o
  .text.i2c_txNackBlocking
-                0x000030a0       0x20 build/obj_files/PiCamDriver.o
+                0x00003134       0x20 build/obj_files/PiCamDriver.o
  .text.i2c_rxAck
-                0x000030c0       0x10 build/obj_files/PiCamDriver.o
+                0x00003154       0x10 build/obj_files/PiCamDriver.o
  .text.PiCam_WriteRegData
-                0x000030d0       0xd0 build/obj_files/PiCamDriver.o
-                0x000030d0                PiCam_WriteRegData
+                0x00003164       0xd0 build/obj_files/PiCamDriver.o
+                0x00003164                PiCam_WriteRegData
  .text.AccessCommSeq
-                0x000031a0       0x94 build/obj_files/PiCamDriver.o
-                0x000031a0                AccessCommSeq
+                0x00003234       0x94 build/obj_files/PiCamDriver.o
+                0x00003234                AccessCommSeq
  .text.PiCam_Output_Size
-                0x00003234       0x74 build/obj_files/PiCamDriver.o
-                0x00003234                PiCam_Output_Size
+                0x000032c8       0x74 build/obj_files/PiCamDriver.o
+                0x000032c8                PiCam_Output_Size
  .text.PiCam_Output_activePixel
-                0x000032a8       0xcc build/obj_files/PiCamDriver.o
-                0x000032a8                PiCam_Output_activePixel
+                0x0000333c       0xcc build/obj_files/PiCamDriver.o
+                0x0000333c                PiCam_Output_activePixel
  .text.PiCam_SetBinningMode
-                0x00003374       0x64 build/obj_files/PiCamDriver.o
-                0x00003374                PiCam_SetBinningMode
+                0x00003408       0x64 build/obj_files/PiCamDriver.o
+                0x00003408                PiCam_SetBinningMode
  .text.PiCam_Gainfilter
-                0x000033d8       0x5c build/obj_files/PiCamDriver.o
-                0x000033d8                PiCam_Gainfilter
+                0x0000346c       0x5c build/obj_files/PiCamDriver.o
+                0x0000346c                PiCam_Gainfilter
  .text.PiCam_init
-                0x00003434      0x2a0 build/obj_files/PiCamDriver.o
-                0x00003434                PiCam_init
+                0x000034c8      0x2a0 build/obj_files/PiCamDriver.o
+                0x000034c8                PiCam_init
  .text.i2c_masterStartBlocking
-                0x000036d4       0x1c build/obj_files/camera.o
+                0x00003768       0x1c build/obj_files/camera.o
  .text.i2c_txAckWait
-                0x000036f0       0x10 build/obj_files/camera.o
+                0x00003784       0x10 build/obj_files/camera.o
  .text.i2c_txNackBlocking
-                0x00003700       0x20 build/obj_files/camera.o
+                0x00003794       0x20 build/obj_files/camera.o
  .text.i2c_rxAck
-                0x00003720       0x10 build/obj_files/camera.o
+                0x000037b4       0x10 build/obj_files/camera.o
  .text.uart_writeAvailability
-                0x00003730       0x10 build/obj_files/camera.o
+                0x000037c4       0x10 build/obj_files/camera.o
  .text.uart_write
-                0x00003740       0x3c build/obj_files/camera.o
+                0x000037d4       0x3c build/obj_files/camera.o
  .text._putchar
-                0x0000377c       0x20 build/obj_files/camera.o
+                0x00003810       0x20 build/obj_files/camera.o
  .text._putchar_s
-                0x0000379c       0x34 build/obj_files/camera.o
+                0x00003830       0x34 build/obj_files/camera.o
  .text.bsp_printHex
-                0x000037d0       0x54 build/obj_files/camera.o
+                0x00003864       0x54 build/obj_files/camera.o
  .text.bsp_printHex_lower
-                0x00003824       0x54 build/obj_files/camera.o
+                0x000038b8       0x54 build/obj_files/camera.o
  .text.bsp_printf_c
-                0x00003878       0x1c build/obj_files/camera.o
+                0x0000390c       0x1c build/obj_files/camera.o
  .text.bsp_printf_s
-                0x00003894       0x18 build/obj_files/camera.o
+                0x00003928       0x18 build/obj_files/camera.o
  .text.bsp_printf_d
-                0x000038ac       0x80 build/obj_files/camera.o
+                0x00003940       0x80 build/obj_files/camera.o
  .text.bsp_printf_x
-                0x0000392c       0x40 build/obj_files/camera.o
+                0x000039c0       0x40 build/obj_files/camera.o
  .text.bsp_printf_X
-                0x0000396c       0x40 build/obj_files/camera.o
+                0x00003a00       0x40 build/obj_files/camera.o
  .text.mipi_i2c_probe
-                0x000039ac       0x50 build/obj_files/camera.o
+                0x00003a40       0x50 build/obj_files/camera.o
  .text.bsp_printf
-                0x000039fc      0x130 build/obj_files/camera.o
+                0x00003a90      0x130 build/obj_files/camera.o
  .text.camera_init
-                0x00003b2c      0x114 build/obj_files/camera.o
+                0x00003bc0      0x114 build/obj_files/camera.o
  .text.cam0_init
-                0x00003c40       0x20 build/obj_files/camera.o
-                0x00003c40                cam0_init
+                0x00003cd4       0x20 build/obj_files/camera.o
+                0x00003cd4                cam0_init
  .text.uart_writeAvailability
-                0x00003c60       0x10 build/obj_files/PiCamV3Driver.o
+                0x00003cf4       0x10 build/obj_files/PiCamV3Driver.o
  .text.uart_write
-                0x00003c70       0x3c build/obj_files/PiCamV3Driver.o
+                0x00003d04       0x3c build/obj_files/PiCamV3Driver.o
  .text.uart_writeStr
-                0x00003cac       0x44 build/obj_files/PiCamV3Driver.o
+                0x00003d40       0x44 build/obj_files/PiCamV3Driver.o
  .text.i2c_masterBusy
-                0x00003cf0        0xc build/obj_files/PiCamV3Driver.o
+                0x00003d84        0xc build/obj_files/PiCamV3Driver.o
  .text.i2c_masterStartBlocking
-                0x00003cfc       0x1c build/obj_files/PiCamV3Driver.o
+                0x00003d90       0x1c build/obj_files/PiCamV3Driver.o
  .text.i2c_masterStopWait
-                0x00003d18       0x2c build/obj_files/PiCamV3Driver.o
+                0x00003dac       0x2c build/obj_files/PiCamV3Driver.o
  .text.i2c_masterStopBlocking
-                0x00003d44       0x20 build/obj_files/PiCamV3Driver.o
+                0x00003dd8       0x20 build/obj_files/PiCamV3Driver.o
  .text.i2c_txAckWait
-                0x00003d64       0x10 build/obj_files/PiCamV3Driver.o
+                0x00003df8       0x10 build/obj_files/PiCamV3Driver.o
  .text.i2c_txNackBlocking
-                0x00003d74       0x20 build/obj_files/PiCamV3Driver.o
+                0x00003e08       0x20 build/obj_files/PiCamV3Driver.o
  .text.i2c_rxAck
-                0x00003d94       0x10 build/obj_files/PiCamV3Driver.o
+                0x00003e28       0x10 build/obj_files/PiCamV3Driver.o
  .text.PiCamV3_WriteRegData
-                0x00003da4       0xd0 build/obj_files/PiCamV3Driver.o
-                0x00003da4                PiCamV3_WriteRegData
+                0x00003e38       0xd0 build/obj_files/PiCamV3Driver.o
+                0x00003e38                PiCamV3_WriteRegData
  .text.PiCamV3_StartStreaming
-                0x00003e74       0x20 build/obj_files/PiCamV3Driver.o
-                0x00003e74                PiCamV3_StartStreaming
+                0x00003f08       0x20 build/obj_files/PiCamV3Driver.o
+                0x00003f08                PiCamV3_StartStreaming
  .text.PiCamV3_StopStreaming
-                0x00003e94       0x20 build/obj_files/PiCamV3Driver.o
-                0x00003e94                PiCamV3_StopStreaming
+                0x00003f28       0x20 build/obj_files/PiCamV3Driver.o
+                0x00003f28                PiCamV3_StopStreaming
  .text.PiCamV3_ConfigCommon
-                0x00003eb4       0x5c build/obj_files/PiCamV3Driver.o
-                0x00003eb4                PiCamV3_ConfigCommon
+                0x00003f48       0x5c build/obj_files/PiCamV3Driver.o
+                0x00003f48                PiCamV3_ConfigCommon
  .text.PiCamV3_ConfigFormat
-                0x00003f10       0xf0 build/obj_files/PiCamV3Driver.o
-                0x00003f10                PiCamV3_ConfigFormat
+                0x00003fa4       0xf0 build/obj_files/PiCamV3Driver.o
+                0x00003fa4                PiCamV3_ConfigFormat
  .text.PiCamV3_ConfigLinkFreq
-                0x00004000       0x58 build/obj_files/PiCamV3Driver.o
-                0x00004000                PiCamV3_ConfigLinkFreq
+                0x00004094       0x58 build/obj_files/PiCamV3Driver.o
+                0x00004094                PiCamV3_ConfigLinkFreq
  .text.PiCamV3_ConfigQuadBayerRemosaicAdjustment
-                0x00004058       0x44 build/obj_files/PiCamV3Driver.o
-                0x00004058                PiCamV3_ConfigQuadBayerRemosaicAdjustment
+                0x000040ec       0x44 build/obj_files/PiCamV3Driver.o
+                0x000040ec                PiCamV3_ConfigQuadBayerRemosaicAdjustment
  .text.PiCamV3_SetPdafGain
-                0x0000409c       0xa8 build/obj_files/PiCamV3Driver.o
-                0x0000409c                PiCamV3_SetPdafGain
+                0x00004130       0xa8 build/obj_files/PiCamV3Driver.o
+                0x00004130                PiCamV3_SetPdafGain
  .text.PiCamV3_OnActuator
-                0x00004144       0x80 build/obj_files/PiCamV3Driver.o
-                0x00004144                PiCamV3_OnActuator
+                0x000041d8       0x80 build/obj_files/PiCamV3Driver.o
+                0x000041d8                PiCamV3_OnActuator
  .text.PiCamV3_OffActuator
-                0x000041c4       0x80 build/obj_files/PiCamV3Driver.o
-                0x000041c4                PiCamV3_OffActuator
+                0x00004258       0x80 build/obj_files/PiCamV3Driver.o
+                0x00004258                PiCamV3_OffActuator
  .text.PiCamV3_SetFocusStep
-                0x00004244      0x12c build/obj_files/PiCamV3Driver.o
-                0x00004244                PiCamV3_SetFocusStep
+                0x000042d8      0x12c build/obj_files/PiCamV3Driver.o
+                0x000042d8                PiCamV3_SetFocusStep
  .text.PiCamV3_Init
-                0x00004370       0x7c build/obj_files/PiCamV3Driver.o
-                0x00004370                PiCamV3_Init
- .text          0x000043ec       0x90 build/obj_files/trap.o
-                0x000043ec                trap_entry
+                0x00004404       0x7c build/obj_files/PiCamV3Driver.o
+                0x00004404                PiCamV3_Init
+ .text          0x00004480       0x90 build/obj_files/trap.o
+                0x00004480                trap_entry
  *(.gnu.linkonce.t.*)
  *(.note.gnu.build-id)
 
-.rela.dyn       0x0000447c        0x0
+.rela.dyn       0x00004510        0x0
  .rela.text.uart_buffer_read
-                0x0000447c        0x0 build/obj_files/dma.o
+                0x00004510        0x0 build/obj_files/dma.o
  .rela.text.settings
-                0x0000447c        0x0 build/obj_files/dma.o
- .rela.init     0x0000447c        0x0 build/obj_files/dma.o
+                0x00004510        0x0 build/obj_files/dma.o
+ .rela.init     0x00004510        0x0 build/obj_files/dma.o
  .rela.text.__libc_init_array
-                0x0000447c        0x0 build/obj_files/dma.o
+                0x00004510        0x0 build/obj_files/dma.o
 
 .fini
  *(SORT_NONE(.fini))
                 [!provide]                        PROVIDE (__etext = .)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (etext = .)
-                0x0000447c                        . = ALIGN (0x4)
+                0x00004510                        . = ALIGN (0x4)
 
-.preinit_array  0x0000447c        0x0
-                0x0000447c                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x00004510        0x0
+                0x00004510                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x0000447c                        PROVIDE (__preinit_array_end = .)
+                0x00004510                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000447c        0x0
-                0x0000447c                        PROVIDE (__init_array_start = .)
+.init_array     0x00004510        0x0
+                0x00004510                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
-                0x0000447c                        PROVIDE (__init_array_end = .)
+                0x00004510                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000447c        0x0
+.fini_array     0x00004510        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -1298,166 +1302,166 @@ LOAD C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.lalign         0x0000447c        0x0
-                0x0000447c                        PROVIDE (_data_lma = .)
+.lalign         0x00004510        0x0
+                0x00004510                        PROVIDE (_data_lma = .)
 
-.dalign         0x0000447c        0x0
-                0x0000447c                        PROVIDE (_data = .)
+.dalign         0x00004510        0x0
+                0x00004510                        PROVIDE (_data = .)
 
-.data           0x00004480     0x13da
+.data           0x00004510     0x1462
  *(.rdata)
  *(.rodata .rodata.*)
  .rodata.bsp_printHex.str1.4
-                0x00004480      0x9df build/obj_files/dma.o
+                0x00004510      0xa4b build/obj_files/dma.o
                                  0x11 (size before relaxing)
  .rodata.bsp_printHex_lower.str1.4
-                0x00004e5f        0x0 build/obj_files/dma.o
+                0x00004f5b        0x0 build/obj_files/dma.o
                                  0x11 (size before relaxing)
  .rodata.bsp_printf.str1.4
-                0x00004e5f        0x0 build/obj_files/dma.o
+                0x00004f5b        0x0 build/obj_files/dma.o
                                  0x49 (size before relaxing)
- *fill*         0x00004e5f        0x1 
+ *fill*         0x00004f5b        0x1 
  .rodata.bsp_printf
-                0x00004e60       0x84 build/obj_files/dma.o
+                0x00004f5c       0x84 build/obj_files/dma.o
  .rodata.crash.str1.4
-                0x00004ee4        0x0 build/obj_files/dma.o
+                0x00004fe0        0x0 build/obj_files/dma.o
                                  0x10 (size before relaxing)
  .rodata.assert.str1.4
-                0x00004ee4        0x0 build/obj_files/common.o
+                0x00004fe0        0x0 build/obj_files/common.o
                                  0x10 (size before relaxing)
  .rodata.bsp_printHex.str1.4
-                0x00004ee4        0x0 build/obj_files/main.o
+                0x00004fe0        0x0 build/obj_files/main.o
                                  0x11 (size before relaxing)
  .rodata.bsp_printHex_lower.str1.4
-                0x00004ee4        0x0 build/obj_files/main.o
+                0x00004fe0        0x0 build/obj_files/main.o
                                  0x11 (size before relaxing)
  .rodata.Set_Gain
-                0x00004ee4       0x34 build/obj_files/main.o
+                0x00004fe0       0x34 build/obj_files/main.o
  .rodata.bsp_printf.str1.4
-                0x00004f18        0x0 build/obj_files/main.o
+                0x00005014        0x0 build/obj_files/main.o
                                  0x49 (size before relaxing)
  .rodata.bsp_printf
-                0x00004f18       0x84 build/obj_files/main.o
- .rodata.Read_Latency.str1.4
-                0x00004f9c        0x0 build/obj_files/main.o
+                0x00005014       0x84 build/obj_files/main.o
+ .rodata.Latency_Print.str1.4
+                0x00005098        0x0 build/obj_files/main.o
                                 0x3c6 (size before relaxing)
- .rodata.Read_Latency
-                0x00004f9c       0x30 build/obj_files/main.o
+ .rodata.Latency_Print
+                0x00005098       0x30 build/obj_files/main.o
  .rodata.settings.str1.4
-                0x00004fcc        0x0 build/obj_files/main.o
-                                0x120 (size before relaxing)
+                0x000050c8        0x0 build/obj_files/main.o
+                                0x133 (size before relaxing)
  .rodata.settings
-                0x00004fcc       0x58 build/obj_files/main.o
+                0x000050c8       0x74 build/obj_files/main.o
  .rodata.ispExample_menu.str1.4
-                0x00005024        0x0 build/obj_files/main.o
-                                0x331 (size before relaxing)
+                0x0000513c        0x0 build/obj_files/main.o
+                                0x389 (size before relaxing)
  .rodata.main.str1.4
-                0x00005024        0x0 build/obj_files/main.o
+                0x0000513c        0x0 build/obj_files/main.o
                                  0xb3 (size before relaxing)
  .rodata.bsp_printHex.str1.4
-                0x00005024        0x0 build/obj_files/camera.o
+                0x0000513c        0x0 build/obj_files/camera.o
                                  0x11 (size before relaxing)
  .rodata.bsp_printHex_lower.str1.4
-                0x00005024        0x0 build/obj_files/camera.o
+                0x0000513c        0x0 build/obj_files/camera.o
                                  0x11 (size before relaxing)
  .rodata.bsp_printf.str1.4
-                0x00005024        0x0 build/obj_files/camera.o
+                0x0000513c        0x0 build/obj_files/camera.o
                                  0x49 (size before relaxing)
  .rodata.bsp_printf
-                0x00005024       0x84 build/obj_files/camera.o
+                0x0000513c       0x84 build/obj_files/camera.o
  .rodata.camera_init.str1.4
-                0x000050a8        0x0 build/obj_files/camera.o
+                0x000051c0        0x0 build/obj_files/camera.o
                                  0x3e (size before relaxing)
  .rodata.str1.4
-                0x000050a8        0x0 build/obj_files/camera.o
+                0x000051c0        0x0 build/obj_files/camera.o
                                  0x26 (size before relaxing)
  .rodata.supportedCamera
-                0x000050a8       0x28 build/obj_files/camera.o
+                0x000051c0       0x28 build/obj_files/camera.o
  .rodata.PiCamV3_Init.str1.4
-                0x000050d0        0x0 build/obj_files/PiCamV3Driver.o
+                0x000051e8        0x0 build/obj_files/PiCamV3Driver.o
                                  0x13 (size before relaxing)
  .rodata.pdaf_gains
-                0x000050d0       0x12 build/obj_files/PiCamV3Driver.o
- *fill*         0x000050e2        0x2 
+                0x000051e8       0x12 build/obj_files/PiCamV3Driver.o
+ *fill*         0x000051fa        0x2 
  .rodata.mode_hdr_1920x1080_regs
-                0x000050e4      0x17c build/obj_files/PiCamV3Driver.o
+                0x000051fc      0x17c build/obj_files/PiCamV3Driver.o
  .rodata.mode_2x2binned_1920x1080_regs
-                0x00005260      0x16c build/obj_files/PiCamV3Driver.o
+                0x00005378      0x16c build/obj_files/PiCamV3Driver.o
  .rodata.mode_1920x1080_cropped_regs
-                0x000053cc      0x16c build/obj_files/PiCamV3Driver.o
+                0x000054e4      0x16c build/obj_files/PiCamV3Driver.o
  .rodata.mode_common_regs
-                0x00005538       0xc0 build/obj_files/PiCamV3Driver.o
+                0x00005650       0xc0 build/obj_files/PiCamV3Driver.o
  .rodata._ctype_
-                0x000055f8      0x101 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-ctype_.o)
-                0x000055f8                _ctype_
+                0x00005710      0x101 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-ctype_.o)
+                0x00005710                _ctype_
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
- *fill*         0x000056f9        0x7 
+ *fill*         0x00005811        0x7 
  .data._impure_data
-                0x00005700      0x140 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-impure.o)
-                0x00005700                _impure_data
+                0x00005818      0x140 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-impure.o)
+                0x00005818                _impure_data
  *(.gnu.linkonce.d.*)
-                0x00005840                        . = ALIGN (0x8)
-                0x00006030                        PROVIDE (__global_pointer$ = (. + 0x7f0))
+                0x00005958                        . = ALIGN (0x8)
+                0x00006148                        PROVIDE (__global_pointer$ = (. + 0x7f0))
  *(.sdata .sdata.*)
  .sdata._impure_ptr
-                0x00005840        0x4 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-impure.o)
-                0x00005840                _impure_ptr
+                0x00005958        0x4 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-impure.o)
+                0x00005958                _impure_ptr
  *(.gnu.linkonce.s.*)
-                0x00005848                        . = ALIGN (0x8)
- *fill*         0x00005844        0x4 
+                0x00005960                        . = ALIGN (0x8)
+ *fill*         0x0000595c        0x4 
  *(.srodata.cst16)
  *(.srodata.cst8)
  *(.srodata.cst4)
  *(.srodata.cst2)
  *(.srodata .srodata.*)
  .srodata.link_450Mhz_regs
-                0x00005848        0x8 build/obj_files/PiCamV3Driver.o
-                0x0000585a                        . = (. + 0xa)
- *fill*         0x00005850        0xa 
-                0x0000585c                        . = ALIGN (0x4)
-                0x0000585c                        PROVIDE (_edata = .)
+                0x00005960        0x8 build/obj_files/PiCamV3Driver.o
+                0x00005972                        . = (. + 0xa)
+ *fill*         0x00005968        0xa 
+                0x00005974                        . = ALIGN (0x4)
+                0x00005974                        PROVIDE (_edata = .)
                 [!provide]                        PROVIDE (edata = .)
                 [!provide]                        PROVIDE (_fbss = .)
-                0x0000585c                        PROVIDE (__bss_start = .)
+                0x00005974                        PROVIDE (__bss_start = .)
 
-.bss            0x0000585c      0x190
+.bss            0x00005974      0x190
  *(.sbss*)
  .sbss.uart_cmd_ready
-                0x0000585c        0x1 build/obj_files/main.o
-                0x0000585c                uart_cmd_ready
+                0x00005974        0x1 build/obj_files/main.o
+                0x00005974                uart_cmd_ready
  .sbss.uart_cmd_index
-                0x0000585d        0x1 build/obj_files/main.o
-                0x0000585d                uart_cmd_index
- *fill*         0x0000585e        0x2 
+                0x00005975        0x1 build/obj_files/main.o
+                0x00005975                uart_cmd_index
+ *fill*         0x00005976        0x2 
  .sbss.display_mm2s_active
-                0x00005860        0x4 build/obj_files/main.o
-                0x00005860                display_mm2s_active
+                0x00005978        0x4 build/obj_files/main.o
+                0x00005978                display_mm2s_active
  .sbss.select_demo_mode
-                0x00005864        0x4 build/obj_files/main.o
-                0x00005864                select_demo_mode
+                0x0000597c        0x4 build/obj_files/main.o
+                0x0000597c                select_demo_mode
  *(.gnu.linkonce.sb.*)
  *(.bss .bss.*)
- .bss.__sf      0x00005868      0x138 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-findfp.o)
-                0x00005868                __sf
+ .bss.__sf      0x00005980      0x138 C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-findfp.o)
+                0x00005980                __sf
  *(.gnu.linkonce.b.*)
  *(COMMON)
- COMMON         0x000059a0       0x4c build/obj_files/main.o
-                0x000059a0                char_data
-                0x000059a4                data
-                0x000059a8                var
-                0x000059ac                uart_cmd_buffer
-                0x000059ec                        . = ALIGN (0x4)
-                0x000059f0                        . = ALIGN (0x8)
-                0x000059f0                        PROVIDE (_end = .)
-                0x000059f0                        PROVIDE (end = .)
+ COMMON         0x00005ab8       0x4c build/obj_files/main.o
+                0x00005ab8                char_data
+                0x00005abc                data
+                0x00005ac0                var
+                0x00005ac4                uart_cmd_buffer
+                0x00005b04                        . = ALIGN (0x4)
+                0x00005b08                        . = ALIGN (0x8)
+                0x00005b08                        PROVIDE (_end = .)
+                0x00005b08                        PROVIDE (end = .)
 
-.stack          0x000059f0     0x1000
+.stack          0x00005b10     0x1000
                 [!provide]                        PROVIDE (_heap_end = .)
                 0x00001000                        . = __stack_size
- *fill*         0x000059f0     0x1000 
-                0x000069f0                        PROVIDE (_sp = .)
-                0x000069f0                        __freertos_irq_stack_top = .
+ *fill*         0x00005b10     0x1000 
+                0x00006b10                        PROVIDE (_sp = .)
+                0x00006b10                        __freertos_irq_stack_top = .
 LOAD C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libm.a
 LOAD C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/rv32im/ilp32\libgcc.a
 START GROUP
@@ -1471,15 +1475,15 @@ LOAD C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf
 END GROUP
 OUTPUT(build/evsoc_ispExample_demo.elf elf32-littleriscv)
 
-.debug_info     0x00000000     0x7f1e
+.debug_info     0x00000000     0x805e
  .debug_info    0x00000000      0x870 build/obj_files/dma.o
  .debug_info    0x00000870      0xa54 build/obj_files/common.o
- .debug_info    0x000012c4     0x2bb6 build/obj_files/main.o
- .debug_info    0x00003e7a     0x16aa build/obj_files/PiCamDriver.o
- .debug_info    0x00005524     0x10d1 build/obj_files/camera.o
- .debug_info    0x000065f5     0x18e0 build/obj_files/PiCamV3Driver.o
- .debug_info    0x00007ed5       0x24 build/obj_files/start.o
- .debug_info    0x00007ef9       0x25 build/obj_files/trap.o
+ .debug_info    0x000012c4     0x2cf6 build/obj_files/main.o
+ .debug_info    0x00003fba     0x16aa build/obj_files/PiCamDriver.o
+ .debug_info    0x00005664     0x10d1 build/obj_files/camera.o
+ .debug_info    0x00006735     0x18e0 build/obj_files/PiCamV3Driver.o
+ .debug_info    0x00008015       0x24 build/obj_files/start.o
+ .debug_info    0x00008039       0x25 build/obj_files/trap.o
 
 .debug_abbrev   0x00000000     0x131a
  .debug_abbrev  0x00000000      0x29c build/obj_files/dma.o
@@ -1492,52 +1496,52 @@ OUTPUT(build/evsoc_ispExample_demo.elf elf32-littleriscv)
  .debug_abbrev  0x00001306       0x14 build/obj_files/trap.o
 
 .debug_loclists
-                0x00000000     0x2efe
+                0x00000000     0x3229
  .debug_loclists
                 0x00000000      0x362 build/obj_files/dma.o
  .debug_loclists
                 0x00000362      0x4be build/obj_files/common.o
  .debug_loclists
-                0x00000820     0x13a8 build/obj_files/main.o
+                0x00000820     0x16d3 build/obj_files/main.o
  .debug_loclists
-                0x00001bc8      0x720 build/obj_files/PiCamDriver.o
+                0x00001ef3      0x720 build/obj_files/PiCamDriver.o
  .debug_loclists
-                0x000022e8      0x3b1 build/obj_files/camera.o
+                0x00002613      0x3b1 build/obj_files/camera.o
  .debug_loclists
-                0x00002699      0x865 build/obj_files/PiCamV3Driver.o
+                0x000029c4      0x865 build/obj_files/PiCamV3Driver.o
 
-.debug_aranges  0x00000000      0x590
+.debug_aranges  0x00000000      0x5a0
  .debug_aranges
                 0x00000000       0xa8 build/obj_files/dma.o
  .debug_aranges
                 0x000000a8       0xc0 build/obj_files/common.o
  .debug_aranges
-                0x00000168      0x178 build/obj_files/main.o
+                0x00000168      0x188 build/obj_files/main.o
  .debug_aranges
-                0x000002e0       0xc0 build/obj_files/PiCamDriver.o
+                0x000002f0       0xc0 build/obj_files/PiCamDriver.o
  .debug_aranges
-                0x000003a0       0xb8 build/obj_files/camera.o
+                0x000003b0       0xb8 build/obj_files/camera.o
  .debug_aranges
-                0x00000458       0xf8 build/obj_files/PiCamV3Driver.o
+                0x00000468       0xf8 build/obj_files/PiCamV3Driver.o
  .debug_aranges
-                0x00000550       0x20 build/obj_files/start.o
+                0x00000560       0x20 build/obj_files/start.o
  .debug_aranges
-                0x00000570       0x20 build/obj_files/trap.o
+                0x00000580       0x20 build/obj_files/trap.o
 
 .debug_rnglists
-                0x00000000      0x577
+                0x00000000      0x578
  .debug_rnglists
                 0x00000000       0x7c build/obj_files/dma.o
  .debug_rnglists
                 0x0000007c       0x8e build/obj_files/common.o
  .debug_rnglists
-                0x0000010a      0x287 build/obj_files/main.o
+                0x0000010a      0x288 build/obj_files/main.o
  .debug_rnglists
-                0x00000391       0x95 build/obj_files/PiCamDriver.o
+                0x00000392       0x95 build/obj_files/PiCamDriver.o
  .debug_rnglists
-                0x00000426       0x88 build/obj_files/camera.o
+                0x00000427       0x88 build/obj_files/camera.o
  .debug_rnglists
-                0x000004ae       0xc9 build/obj_files/PiCamV3Driver.o
+                0x000004af       0xc9 build/obj_files/PiCamV3Driver.o
 
 .debug_macro    0x00000000     0x3a0d
  .debug_macro   0x00000000      0x1fc build/obj_files/dma.o
@@ -1596,32 +1600,32 @@ OUTPUT(build/evsoc_ispExample_demo.elf elf32-littleriscv)
  .debug_macro   0x00003680      0x206 build/obj_files/PiCamV3Driver.o
  .debug_macro   0x00003886      0x187 build/obj_files/PiCamV3Driver.o
 
-.debug_line     0x00000000     0x66bc
+.debug_line     0x00000000     0x6831
  .debug_line    0x00000000      0x968 build/obj_files/dma.o
  .debug_line    0x00000968      0xa21 build/obj_files/common.o
- .debug_line    0x00001389     0x2db7 build/obj_files/main.o
- .debug_line    0x00004140      0xa37 build/obj_files/PiCamDriver.o
- .debug_line    0x00004b77      0x9c0 build/obj_files/camera.o
- .debug_line    0x00005537      0xfa7 build/obj_files/PiCamV3Driver.o
- .debug_line    0x000064de       0xc2 build/obj_files/start.o
- .debug_line    0x000065a0      0x11c build/obj_files/trap.o
+ .debug_line    0x00001389     0x2f2c build/obj_files/main.o
+ .debug_line    0x000042b5      0xa37 build/obj_files/PiCamDriver.o
+ .debug_line    0x00004cec      0x9c0 build/obj_files/camera.o
+ .debug_line    0x000056ac      0xfa7 build/obj_files/PiCamV3Driver.o
+ .debug_line    0x00006653       0xc2 build/obj_files/start.o
+ .debug_line    0x00006715      0x11c build/obj_files/trap.o
 
-.debug_str      0x00000000     0xd84d
- .debug_str     0x00000000     0xd84d build/obj_files/dma.o
+.debug_str      0x00000000     0xd865
+ .debug_str     0x00000000     0xd865 build/obj_files/dma.o
                                0x928d (size before relaxing)
- .debug_str     0x0000d84d        0x0 build/obj_files/common.o
+ .debug_str     0x0000d865        0x0 build/obj_files/common.o
                                0x97de (size before relaxing)
- .debug_str     0x0000d84d        0x0 build/obj_files/main.o
-                               0xabaf (size before relaxing)
- .debug_str     0x0000d84d        0x0 build/obj_files/PiCamDriver.o
+ .debug_str     0x0000d865        0x0 build/obj_files/main.o
+                               0xabcc (size before relaxing)
+ .debug_str     0x0000d865        0x0 build/obj_files/PiCamDriver.o
                                0xb8c0 (size before relaxing)
- .debug_str     0x0000d84d        0x0 build/obj_files/camera.o
+ .debug_str     0x0000d865        0x0 build/obj_files/camera.o
                                0xc6d5 (size before relaxing)
- .debug_str     0x0000d84d        0x0 build/obj_files/PiCamV3Driver.o
+ .debug_str     0x0000d865        0x0 build/obj_files/PiCamV3Driver.o
                                0x9fff (size before relaxing)
- .debug_str     0x0000d84d        0x0 build/obj_files/start.o
+ .debug_str     0x0000d865        0x0 build/obj_files/start.o
                                  0xcf (size before relaxing)
- .debug_str     0x0000d84d        0x0 build/obj_files/trap.o
+ .debug_str     0x0000d865        0x0 build/obj_files/trap.o
                                  0xce (size before relaxing)
 
 .debug_line_str
@@ -1712,10 +1716,10 @@ OUTPUT(build/evsoc_ispExample_demo.elf elf32-littleriscv)
  .riscv.attributes
                 0x000002f8       0x2a C:/Efinity/efinity-riscv-ide-2026.1/toolchain/bin/../lib/gcc/riscv-none-elf/13.4.0/../../../../riscv-none-elf/lib/rv32im/ilp32\libc.a(libc_a-findfp.o)
 
-.debug_frame    0x00000000     0x1150
+.debug_frame    0x00000000     0x1198
  .debug_frame   0x00000000      0x208 build/obj_files/dma.o
  .debug_frame   0x00000208      0x260 build/obj_files/common.o
- .debug_frame   0x00000468      0x458 build/obj_files/main.o
- .debug_frame   0x000008c0      0x2ac build/obj_files/PiCamDriver.o
- .debug_frame   0x00000b6c      0x270 build/obj_files/camera.o
- .debug_frame   0x00000ddc      0x374 build/obj_files/PiCamV3Driver.o
+ .debug_frame   0x00000468      0x4a0 build/obj_files/main.o
+ .debug_frame   0x00000908      0x2ac build/obj_files/PiCamDriver.o
+ .debug_frame   0x00000bb4      0x270 build/obj_files/camera.o
+ .debug_frame   0x00000e24      0x374 build/obj_files/PiCamV3Driver.o

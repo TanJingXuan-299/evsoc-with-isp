@@ -1,14 +1,14 @@
 
 Efinix FPGA Placement and Routing.
 Version: 2026.1.132.1.15 
-Date: Wed Sep 30 13:42:22 2026
+Date: Tue Oct  6 14:47:44 2026
 
 Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
  
 Family: Titanium 
 Device: Ti60F225
 Top-level Entity Name: edge_vision_soc
-Elapsed time for routing: 0 hours 0 minutes 38 seconds
+Elapsed time for routing: 0 hours 0 minutes 50 seconds
 
 
 ---------- GBUFCE Assignments (begin) ----------
@@ -38,4 +38,4 @@ Elapsed time for routing: 0 hours 0 minutes 38 seconds
 ----------- GBUFCE Assignments (end) ----------
 
 
-Elapsed time for Latest PnR Run: 0 hours 2 minutes 23 seconds
+Elapsed time for Latest PnR Run: 0 hours 4 minutes 8 seconds

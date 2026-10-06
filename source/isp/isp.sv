@@ -103,14 +103,19 @@ module isp
     .clk                                  (clk),
     .rst                                  (~rstn),
     .start                                (s_axis_tuser[0] && s_axis_tready && s_axis_tvalid),
-    //FIX (P1-1/P2): stop on the OUTPUT SOF handshake (tuser[0] && tvalid &&
-    //tready) instead of the raw EOF flag. Stopping on tuser[1] (EOF) measured
-    //input-SOF -> output-EOF, i.e. the full frame duration (~1,036,800 clocks
-    //for 1080p @ 2PPC) instead of the pipeline latency, and it was unqualified
-    //so a stalled-but-presented EOF beat stopped the timer before the transfer
-    //was accepted. SOF->SOF measures the true end-to-end latency (tens of
-    //cycles) and the handshake qualification makes the capture exact.
-    .stop                                 (m_axis_tuser[0] && m_axis_tvalid && m_axis_tready),
+    //FIX (P3-FRAME): stop on the OUTPUT EOF handshake (tuser[1] && tvalid &&
+    //tready) instead of the output SOF handshake. Stopping on the output SOF
+    //measured input-SOF -> output-SOF of the SAME frame, i.e. only the
+    //pipeline latency of the SOF beat (tens of cycles - "a beat's speed
+    //through the pipeline"), NOT the frame time. Stopping on the accepted
+    //output EOF beat instead measures the full frame duration: the first
+    //beat of frame N entering the ISP to the last beat of frame N leaving
+    //the ISP (~1,036,800 clocks for 1080p @ 2PPC + pipeline latency). The
+    //handshake qualification (tvalid && tready) is kept so a
+    //stalled-but-presented EOF beat cannot stop the timer before the final
+    //beat of the frame is actually accepted - the capture is exact even
+    //under backpressure.
+    .stop                                 (m_axis_tuser[1] && m_axis_tvalid && m_axis_tready),
     .min_ready                            (isp_info0[0]),
     .max_ready                            (isp_info0[1]),
     .min_valid                            (isp_info0[2]),
@@ -230,8 +235,10 @@ module isp
     .clk                                  (clk),
     .rst                                  (~rstn),
     .start                                (s_axis_tuser[0] && s_axis_tready && s_axis_tvalid),
-    //FIX (P1-1/P2): BLC stage latency = input SOF -> BLC output SOF handshake.
-    .stop                                 (blc_tuser[0] && blc_tvalid && blc_tready),
+    //FIX (P3-FRAME): BLC stage time = input SOF handshake -> BLC output EOF
+    //handshake: the full frame duration through BLC (frame beats + stage
+    //latency), not just the SOF-beat pipeline latency.
+    .stop                                 (blc_tuser[1] && blc_tvalid && blc_tready),
     .min_ready                            (isp_info1[0]),
     .max_ready                            (isp_info1[1]),
     .min_valid                            (isp_info1[2]),
@@ -286,9 +293,9 @@ module isp
     .clk                                  (clk),
     .rst                                  (~rstn),
     .start                                (blc_tuser[0] && blc_tready && blc_tvalid),
-    //FIX (P1-1/P2): colour gain latency = BLC output SOF -> colourgain output
-    //SOF handshake.
-    .stop                                 (colorgain_tuser[0] && colorgain_tvalid && colorgain_tready),
+    //FIX (P3-FRAME): colour gain time = BLC output SOF handshake -> colourgain
+    //output EOF handshake: full frame duration through the stage.
+    .stop                                 (colorgain_tuser[1] && colorgain_tvalid && colorgain_tready),
     .min_ready                            (isp_info2[0]),
     .max_ready                            (isp_info2[1]),
     .min_valid                            (isp_info2[2]),
@@ -366,9 +373,10 @@ module isp
     .clk                                  (clk),
     .rst                                  (~rstn),
     .start                                (skidbuffer1_tuser[0] && skidbuffer1_tready && skidbuffer1_tvalid),
-    //FIX (P1-1/P2): demosaic latency = skidbuffer1 output SOF -> demosaic
-    //output SOF handshake (includes linebuffer fill: ~2 lines + pipeline).
-    .stop                                 (demosaic_tuser[0] && demosaic_tvalid && demosaic_tready),
+    //FIX (P3-FRAME): demosaic time = skidbuffer1 output SOF handshake ->
+    //demosaic output EOF handshake: the full frame duration through the
+    //stage (frame beats + ~2-line linebuffer fill + pipeline).
+    .stop                                 (demosaic_tuser[1] && demosaic_tvalid && demosaic_tready),
     .min_ready                            (isp_info3[0]),
     .max_ready                            (isp_info3[1]),
     .min_valid                            (isp_info3[2]),
@@ -443,9 +451,9 @@ module isp
     .clk                                  (clk),
     .rst                                  (~rstn),
     .start                                (ccm_axis_tuser[0] && demosaic_tready && ccm_axis_tvalid),
-    //FIX (P1-1/P2): CCM latency = CCM input SOF handshake -> CCM output SOF
-    //handshake.
-    .stop                                 (ccm_tuser[0] && ccm_tvalid && ccm_tready),
+    //FIX (P3-FRAME): CCM time = CCM input SOF handshake -> CCM output EOF
+    //handshake: full frame duration through the stage.
+    .stop                                 (ccm_tuser[1] && ccm_tvalid && ccm_tready),
     .min_ready                            (isp_info4[0]),
     .max_ready                            (isp_info4[1]),
     .min_valid                            (isp_info4[2]),
@@ -524,9 +532,9 @@ module isp
     .clk                                  (clk),
     .rst                                  (~rstn),
     .start                                (skidbuffer2_tuser[0] && skidbuffer2_tready && skidbuffer2_tvalid),
-    //FIX (P1-1/P2): gamma latency = skidbuffer2 output SOF -> gamma output SOF
-    //handshake.
-    .stop                                 (gamma_tuser[0] && gamma_tvalid && gamma_tready),
+    //FIX (P3-FRAME): gamma time = skidbuffer2 output SOF handshake -> gamma
+    //output EOF handshake: full frame duration through the stage.
+    .stop                                 (gamma_tuser[1] && gamma_tvalid && gamma_tready),
     .min_ready                            (isp_info5[0]),
     .max_ready                            (isp_info5[1]),
     .min_valid                            (isp_info5[2]),

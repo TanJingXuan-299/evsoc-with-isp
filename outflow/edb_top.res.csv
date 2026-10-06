@@ -1,35 +1,23 @@
 sep=\t
 Module Resource Usage Distribution Estimates
-Generated at: Sep 30, 2026 13:39:38
+Generated at: Oct 06, 2026 14:41:33
 
 Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
 
-Module	        FFs	      SRLs	      ADDs	       LUTs	    COMB4s	      RAMs	 DSP/MULTs
-edb_top:edb_top                                             	   2724(0)	   396(0)	   142(0)	   3499(0)	     0(0)	    20(0)	     0(0)	
- +la0:edb_la_top_dd992241e178408eade159fd69402e46_renamed_due_excessive_length_1	2637(1526)	   396(0)	  142(37)	 3462(443)	     0(0)	    20(0)	     0(0)	
-  +axi_crc_i:edb_adbg_crc32_dd992241e178408eade159fd69402e46	    32(32)	     0(0)	     0(0)	    37(37)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[0].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[1].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[2].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[3].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[4].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[5].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[6].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[7].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[8].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[9].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[10].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[11].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01,PIPE=1)	      7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[12].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  289(289)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[13].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  290(290)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[14].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  295(295)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[15].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  295(295)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[16].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  295(295)	     0(0)	     0(0)	     0(0)	
-  +GEN_PROBE[17].genblk7.genblk3.trigger_cu:compare_unit_dd992241e178408eade159fd69402e46(WIDTH=11'b01000000,PIPE=1)	  131(131)	     0(0)	     0(0)	  297(297)	     0(0)	     0(0)	     0(0)	
-  +trigger_tu:trigger_unit_dd992241e178408eade159fd69402e46(WIDTH=32'b010010,PIPE=1)	      1(1)	     0(0)	     0(0)	    26(26)	     0(0)	     0(0)	     0(0)	
-  +trigger_skipper_n:trigger_skipper_dd992241e178408eade159fd69402e46	    65(65)	     0(0)	   63(63)	  208(208)	     0(0)	     0(0)	     0(0)	
-  +la_biu_inst:la_biu_dd992241e178408eade159fd69402e46(CAPTURE_WIDTH=32'b0110001100,DATA_DEPTH=512)	   143(96)	   396(0)	    42(0)	  903(422)	     0(0)	    20(0)	     0(0)	
-   +fifo_with_read_inst:fifo_with_read_dd992241e178408eade159fd69402e46(DATA_WIDTH=32'b0110001101,ADDR_WIDTH=9,PIPE=0)	    47(47)	 396(396)	   42(42)	   481(45)	     0(0)	    20(0)	     0(0)	
-    +transcode_write_addr:fifo_address_trancode_unit_dd992241e178408eade159fd69402e46(TOTAL_ADDR_WIDTH=9,CELL_ADDR_WIDTH=10,PIPE=0)	      0(0)	     0(0)	     0(0)	    40(40)	     0(0)	     0(0)	     0(0)	
-    +simple_dual_port_ram_inst:edb_simple_dual_port_ram_dd992241e178408eade159fd69402e46(DATA_WIDTH=32'b0110001101,RAM_INIT_FILE="")	      0(0)	     0(0)	     0(0)	  396(396)	     0(0)	   20(20)	     0(0)	
- +debug_hub_inst:debug_hub_dd992241e178408eade159fd69402e46 	    87(87)	     0(0)	     0(0)	    37(37)	     0(0)	     0(0)	     0(0)	
+Module	       FFs	      SRLs	      ADDs	       LUTs	    COMB4s	      RAMs	 DSP/MULTs
+edb_top:edb_top                                             	   663(0)	     6(0)	   163(0)	   1023(0)	     0(0)	     4(0)	     0(0)	
+ +la0:edb_la_top_4510ad0427554b979e97f9d0f41656ca(NUM_PROBES=6,DATA_DEPTH=4096,INPUT_PIPE_STAGES=1,UUID=128'b01100010000100011000001110110001001101100111011001000111000100011011011010010011000010101100100010001001001101010011001011111010,PROBE0_TYPE=1,PROBE1_TYPE=1,PROBE2_TYPE=1,PROBE3_TYPE=1,PROBE4_TYPE=1,PROBE5_TYPE=1)	 576(335)	     6(0)	  163(43)	  989(376)	     0(0)	     4(0)	     0(0)	
+  +axi_crc_i:edb_adbg_crc32_4510ad0427554b979e97f9d0f41656ca	   32(32)	     0(0)	     0(0)	    38(38)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[0].genblk7.genblk3.trigger_cu:compare_unit_4510ad0427554b979e97f9d0f41656ca(WIDTH=11'b01,PIPE=1)	     7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[1].genblk7.genblk3.trigger_cu:compare_unit_4510ad0427554b979e97f9d0f41656ca(WIDTH=11'b01,PIPE=1)	     7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[2].genblk7.genblk3.trigger_cu:compare_unit_4510ad0427554b979e97f9d0f41656ca(WIDTH=11'b01,PIPE=1)	     7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[3].genblk7.genblk3.trigger_cu:compare_unit_4510ad0427554b979e97f9d0f41656ca(WIDTH=11'b01,PIPE=1)	     7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[4].genblk7.genblk3.trigger_cu:compare_unit_4510ad0427554b979e97f9d0f41656ca(WIDTH=11'b01,PIPE=1)	     7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
+  +GEN_PROBE[5].genblk7.genblk3.trigger_cu:compare_unit_4510ad0427554b979e97f9d0f41656ca(WIDTH=11'b01,PIPE=1)	     7(7)	     0(0)	     0(0)	      7(7)	     0(0)	     0(0)	     0(0)	
+  +trigger_tu:trigger_unit_4510ad0427554b979e97f9d0f41656ca(WIDTH=32'b0110,PIPE=1)	     1(1)	     0(0)	     0(0)	    10(10)	     0(0)	     0(0)	     0(0)	
+  +trigger_skipper_n:trigger_skipper_4510ad0427554b979e97f9d0f41656ca	   65(65)	     0(0)	   63(63)	  232(232)	     0(0)	     0(0)	     0(0)	
+  +la_biu_inst:la_biu_4510ad0427554b979e97f9d0f41656ca(CAPTURE_WIDTH=32'b0110,DATA_DEPTH=4096)	  101(39)	     6(0)	    57(0)	  291(164)	     0(0)	     4(0)	     0(0)	
+   +fifo_with_read_inst:fifo_with_read_4510ad0427554b979e97f9d0f41656ca(DATA_WIDTH=32'b0111,ADDR_WIDTH=12,PIPE=0)	   62(62)	     6(6)	   57(57)	   127(89)	     0(0)	     4(0)	     0(0)	
+    +transcode_write_addr:fifo_address_trancode_unit_4510ad0427554b979e97f9d0f41656ca(TOTAL_ADDR_WIDTH=12,CELL_ADDR_WIDTH=13,PIPE=0)	     0(0)	     0(0)	     0(0)	    32(32)	     0(0)	     0(0)	     0(0)	
+    +simple_dual_port_ram_inst:edb_simple_dual_port_ram_4510ad0427554b979e97f9d0f41656ca(DATA_WIDTH=32'b0111,ADDR_WIDTH=12,RAM_INIT_FILE="")	     0(0)	     0(0)	     0(0)	      6(6)	     0(0)	     4(4)	     0(0)	
+ +debug_hub_inst:debug_hub_4510ad0427554b979e97f9d0f41656ca 	   87(87)	     0(0)	     0(0)	    34(34)	     0(0)	     0(0)	     0(0)	

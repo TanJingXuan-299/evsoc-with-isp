@@ -667,3 +667,24 @@
 // Sep 30, 2026 13:37:38
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Oct 01, 2026 15:07:07
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near ')' (VERI-1137) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:346)
+[EFX-0010 VERI-ERROR] 'remap_hi_data' is not a task (VERI-1126) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:346)
+[EFX-0010 VERI-ERROR] module 'cam_picam_v2' is ignored due to previous errors (VERI-1072) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v:928)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Oct 01, 2026 15:10:52
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Oct 06, 2026 14:39:24
+///////////////////////////////////
+

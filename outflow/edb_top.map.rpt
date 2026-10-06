@@ -1,6 +1,6 @@
 Efinity Synthesis report for project edb_top
 Version: 2026.1.132.1.15
-Generated at: Sep 30, 2026 13:39:38
+Generated at: Oct 06, 2026 14:41:33
 Copyright (C) 2013 - 2026  All rights reserved.
 
 Top-level Entity Name : edb_top
@@ -46,70 +46,46 @@ C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026
 
 ### ### Report Section Start ### ###
 
-"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:493)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:445)
 
 ### ### EFX_FF CE enables (begin) ### ### ###
 
-Total number of enable signals: 55
-Total number of FFs with enable signals: 1434
+Total number of enable signals: 31
+Total number of FFs with enable signals: 591
 +------------------------------------------------+------------------+
 |CE Signal                                       |Number of FF loads|
 +------------------------------------------------+------------------+
 |debug_hub_inst/n96                              |               82 |
-|la0/la_biu_inst/data_o_en                       |               65 |
-|la0/n13457                                      |               64 |
-|la0/n17492                                      |               64 |
-|la0/n16345                                      |               64 |
-|la0/n16147                                      |               64 |
-|la0/n17690                                      |               64 |
-|la0/n15000                                      |               64 |
-|la0/n18837                                      |               64 |
-|la0/n14802                                      |               64 |
-|la0/n19035                                      |               64 |
-|la0/n13655                                      |               64 |
-|la0/n20182                                      |               64 |
-|la0/n20380                                      |               64 |
-|la0/n1492                                       |               64 |
+|la0/n1631                                       |               64 |
 |la0/tu_trigger                                  |               64 |
 |ceg_net8                                        |               64 |
-|la0/n2009                                       |               64 |
+|la0/n1114                                       |               64 |
 |ceg_net19                                       |               32 |
-|la0/addr_ct_en                                  |               24 |
-|la0/n2142                                       |               22 |
-|la0/n29288                                      |               21 |
-|ceg_net24                                       |               20 |
+|la0/addr_ct_en                                  |               27 |
+|ceg_net26                                       |               26 |
+|la0/n1764                                       |               22 |
+|la0/n9890                                       |               21 |
 |la0/word_ct_en                                  |               16 |
-|la0/la_biu_inst/n745                            |               13 |
 |la0/regsel_ld_en                                |               13 |
-|la0/la_biu_inst/n3901                           |                9 |
-|la0/la_biu_inst/fifo_push                       |                9 |
-|la0/la_biu_inst/fifo_with_read_inst/is_last_data|                9 |
+|la0/la_biu_inst/n355                            |               13 |
+|la0/la_biu_inst/fifo_with_read_inst/is_last_data|               12 |
+|la0/la_biu_inst/n2089                           |               12 |
+|la0/la_biu_inst/fifo_push                       |               12 |
+|la0/la_biu_inst/data_o_en                       |                8 |
 |ceg_net2                                        |                6 |
 |la0/op_reg_en                                   |                4 |
 |debug_hub_inst/n267                             |                4 |
-|la0/n7163                                       |                3 |
-|la0/n7996                                       |                3 |
+|la0/n5952                                       |                3 |
 |ceg_net5                                        |                3 |
-|la0/n6330                                       |                3 |
-|la0/n10495                                      |                3 |
-|la0/n5497                                       |                3 |
-|la0/n11328                                      |                3 |
-|la0/n4664                                       |                3 |
-|la0/n3831                                       |                3 |
-|la0/n2998                                       |                3 |
-|la0/n9662                                       |                3 |
-|la0/n8829                                       |                3 |
-|la0/n17477                                      |                3 |
-|la0/n12161                                      |                3 |
-|la0/n13442                                      |                3 |
-|la0/n20167                                      |                3 |
-|la0/n14787                                      |                3 |
-|la0/n18822                                      |                3 |
-|la0/n16132                                      |                3 |
-|debug_hub_inst/n265                             |                1 |
+|la0/n2620                                       |                3 |
+|la0/n6785                                       |                3 |
+|la0/n4286                                       |                3 |
+|la0/n3453                                       |                3 |
+|la0/n5119                                       |                3 |
 |ceg_net27                                       |                1 |
 |la0/trigger_skipper_n/equal_6/n127              |                1 |
-|ceg_net14                                       |                1 |
+|ceg_net11                                       |                1 |
+|debug_hub_inst/n265                             |                1 |
 +------------------------------------------------+------------------+
 
 ### ### EFX_FF CE enables (end) ### ### ###
@@ -117,73 +93,112 @@ Total number of FFs with enable signals: 1434
 ### ### EFX_FF SR set/reset (begin) ### ### ###
 
 Total number of set/reset signals: 10
-Total number of FFs with set/reset signals: 1453
-+-----------------------------------------+------------------+
-|SR Signal                                |Number of FF loads|
-+-----------------------------------------+------------------+
-|edb_soft_reset                           |             1177 |
-|bscan_RESET                              |               83 |
-|la0/la_resetn                            |               77 |
-|la0/ts_resetn                            |               64 |
-|la0/la_biu_inst/fifo_with_read_inst/n2565|               28 |
-|la0/la_biu_inst/fifo_rstn                |               19 |
-|la0/n2985                                |                2 |
-|la0/la_biu_inst/n3915                    |                1 |
-|la0/trigger_skipper_n/n469               |                1 |
-|la0/n30071                               |                1 |
-+-----------------------------------------+------------------+
+Total number of FFs with set/reset signals: 610
++----------------------------------------+------------------+
+|SR Signal                               |Number of FF loads|
++----------------------------------------+------------------+
+|edb_soft_reset                          |              376 |
+|bscan_RESET                             |               83 |
+|la0/ts_resetn                           |               64 |
+|la0/la_biu_inst/fifo_with_read_inst/n756|               37 |
+|la0/la_biu_inst/fifo_rstn               |               25 |
+|la0/la_resetn                           |               20 |
+|la0/n2607                               |                2 |
+|la0/n10418                              |                1 |
+|la0/trigger_skipper_n/n469              |                1 |
+|la0/la_biu_inst/n2103                   |                1 |
++----------------------------------------+------------------+
 
 ### ### EFX_FF SR set/reset (end) ### ### ###
 
 ### ### Sequential Elements/Signals Trimming Report (begin) ### ### ### 
-'la0/GEN_PROBE[11].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[10].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[9].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[8].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[7].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[6].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[5].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[4].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[3].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[2].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[1].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
-'la0/GEN_PROBE[0].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5643) (merged to equivalence)
+'la0/data_from_biu[7]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[8]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[9]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[10]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[11]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[12]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[13]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[14]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[15]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[16]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[17]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[18]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[19]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[20]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[21]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[22]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[23]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[24]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[25]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[26]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[27]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[28]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[29]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[30]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[31]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[32]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[33]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[34]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[35]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[36]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[37]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[38]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[39]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[40]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[41]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[42]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[43]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[44]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[45]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[46]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[47]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[48]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[49]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[50]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[51]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[52]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[53]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[54]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[55]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[56]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[57]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[58]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[59]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[60]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[61]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[62]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/data_from_biu[63]' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:3455) (optimized to 0)
+'la0/GEN_PROBE[5].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5595) (merged to equivalence)
+'la0/GEN_PROBE[4].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5595) (merged to equivalence)
+'la0/GEN_PROBE[3].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5595) (merged to equivalence)
+'la0/GEN_PROBE[2].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5595) (merged to equivalence)
+'la0/GEN_PROBE[1].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5595) (merged to equivalence)
+'la0/GEN_PROBE[0].genblk7.genblk3.trigger_cu/genblk1.genblk1.exp2' (C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/work_dbg/debug_top.v:5595) (merged to equivalence)
 ### ### Sequential Elements Trimming Report (end) ### ### ### 
 
 ### ### Module Resource Usage Distribution Estimates (begin) ### ###
 
 **Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
 
-Module                                                              FFs      SRLs      ADDs       LUTs    COMB4s      RAMs DSP/MULTs
-------------------------------------------------------------        ---      ----      ----       ----      ----      ---- ---------
-edb_top:edb_top                                                 2724(0)    396(0)    142(0)    3499(0)      0(0)     20(0)      0(0)
- +la0:edb_la_top_dd992241e178408eade159fd69402e46_renamed... 2637(1526)    396(0)   142(37)  3462(443)      0(0)     20(0)      0(0)
-  +axi_crc_i:edb_adbg_crc32_dd992241e178408eade159fd69402e46     32(32)      0(0)      0(0)     37(37)      0(0)      0(0)      0(0)
-  +GEN_PROBE[0].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[1].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[2].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[3].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[4].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[5].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[6].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[7].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[8].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[9].genblk7.genblk3.trigger_cu:compare_unit_d...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[10].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[11].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[12].genblk7.genblk3.trigger_cu:compare_unit_...   131(131)      0(0)      0(0)   289(289)      0(0)      0(0)      0(0)
-  +GEN_PROBE[13].genblk7.genblk3.trigger_cu:compare_unit_...   131(131)      0(0)      0(0)   290(290)      0(0)      0(0)      0(0)
-  +GEN_PROBE[14].genblk7.genblk3.trigger_cu:compare_unit_...   131(131)      0(0)      0(0)   295(295)      0(0)      0(0)      0(0)
-  +GEN_PROBE[15].genblk7.genblk3.trigger_cu:compare_unit_...   131(131)      0(0)      0(0)   295(295)      0(0)      0(0)      0(0)
-  +GEN_PROBE[16].genblk7.genblk3.trigger_cu:compare_unit_...   131(131)      0(0)      0(0)   295(295)      0(0)      0(0)      0(0)
-  +GEN_PROBE[17].genblk7.genblk3.trigger_cu:compare_unit_...   131(131)      0(0)      0(0)   297(297)      0(0)      0(0)      0(0)
-  +trigger_tu:trigger_unit_dd992241e178408eade159fd69402e...       1(1)      0(0)      0(0)     26(26)      0(0)      0(0)      0(0)
-  +trigger_skipper_n:trigger_skipper_dd992241e178408eade1...     65(65)      0(0)    63(63)   208(208)      0(0)      0(0)      0(0)
-  +la_biu_inst:la_biu_dd992241e178408eade159fd69402e46(CA...    143(96)    396(0)     42(0)   903(422)      0(0)     20(0)      0(0)
-   +fifo_with_read_inst:fifo_with_read_dd992241e178408ead...     47(47)  396(396)    42(42)    481(45)      0(0)     20(0)      0(0)
-    +transcode_write_addr:fifo_address_trancode_unit_dd99...       0(0)      0(0)      0(0)     40(40)      0(0)      0(0)      0(0)
-    +simple_dual_port_ram_inst:edb_simple_dual_port_ram_d...       0(0)      0(0)      0(0)   396(396)      0(0)    20(20)      0(0)
- +debug_hub_inst:debug_hub_dd992241e178408eade159fd69402e46      87(87)      0(0)      0(0)     37(37)      0(0)      0(0)      0(0)
+Module                                                             FFs      SRLs      ADDs       LUTs    COMB4s      RAMs DSP/MULTs
+------------------------------------------------------------       ---      ----      ----       ----      ----      ---- ---------
+edb_top:edb_top                                                 663(0)      6(0)    163(0)    1023(0)      0(0)      4(0)      0(0)
+ +la0:edb_la_top_4510ad0427554b979e97f9d0f41656ca(NUM_PRO...  576(335)      6(0)   163(43)   989(376)      0(0)      4(0)      0(0)
+  +axi_crc_i:edb_adbg_crc32_4510ad0427554b979e97f9d0f41656ca    32(32)      0(0)      0(0)     38(38)      0(0)      0(0)      0(0)
+  +GEN_PROBE[0].genblk7.genblk3.trigger_cu:compare_unit_4...      7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[1].genblk7.genblk3.trigger_cu:compare_unit_4...      7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[2].genblk7.genblk3.trigger_cu:compare_unit_4...      7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[3].genblk7.genblk3.trigger_cu:compare_unit_4...      7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[4].genblk7.genblk3.trigger_cu:compare_unit_4...      7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[5].genblk7.genblk3.trigger_cu:compare_unit_4...      7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +trigger_tu:trigger_unit_4510ad0427554b979e97f9d0f41656...      1(1)      0(0)      0(0)     10(10)      0(0)      0(0)      0(0)
+  +trigger_skipper_n:trigger_skipper_4510ad0427554b979e97...    65(65)      0(0)    63(63)   232(232)      0(0)      0(0)      0(0)
+  +la_biu_inst:la_biu_4510ad0427554b979e97f9d0f41656ca(CA...   101(39)      6(0)     57(0)   291(164)      0(0)      4(0)      0(0)
+   +fifo_with_read_inst:fifo_with_read_4510ad0427554b979e...    62(62)      6(6)    57(57)    127(89)      0(0)      4(0)      0(0)
+    +transcode_write_addr:fifo_address_trancode_unit_4510...      0(0)      0(0)      0(0)     32(32)      0(0)      0(0)      0(0)
+    +simple_dual_port_ram_inst:edb_simple_dual_port_ram_4...      0(0)      0(0)      0(0)       6(6)      0(0)      4(4)      0(0)
+ +debug_hub_inst:debug_hub_4510ad0427554b979e97f9d0f41656ca     87(87)      0(0)      0(0)     34(34)      0(0)      0(0)      0(0)
 
 ### ### Module Resource Usage Distribution Estimates (end) ### ###
 
@@ -197,27 +212,27 @@ edb_top:edb_top                                                 2724(0)    396(0
 +---------+----------+----------+------------+----------------+
 |Clock    |Flip-Flops|Shift-Regs|Memory Ports|Multipliers/DSPs|
 +---------+----------+----------+------------+----------------+
-|bscan_TCK|     1264 |        0 |          0 |              0 |
-|la0_clk  |     1460 |      396 |         40 |              0 |
+|bscan_TCK|      463 |        0 |          0 |              0 |
+|la0_clk  |      200 |        6 |          8 |              0 |
 +---------+----------+----------+------------+----------------+
 
 ### ### Clock Load Distribution Report (end) ### ###
 
 ### ### Resource Summary (begin) ### ### ### 
 
-INPUT  PORTS    : 	407
+INPUT  PORTS    : 	17
 OUTPUT PORTS    : 	1
 
-EFX_ADD                 : 	142
-EFX_LUT4                : 	3499
-   1-2  Inputs          : 	1455
-   3    Inputs          : 	361
-   4    Inputs          : 	1683
-EFX_FF                  : 	2724
-EFX_SRL8                : 	396
-EFX_RAM10               : 	20
+EFX_ADD                 : 	163
+EFX_LUT4                : 	1023
+   1-2  Inputs          : 	194
+   3    Inputs          : 	225
+   4    Inputs          : 	604
+EFX_FF                  : 	663
+EFX_SRL8                : 	6
+EFX_RAM10               : 	4
 EFX_GBUFCE              : 	1
 ### ### Resource Summary (end) ### ### ###
 
-Plain synthesis (without verilog dump and post-map checks) time : 24s
-Elapsed synthesis time : 25s
+Plain synthesis (without verilog dump and post-map checks) time : 8s
+Elapsed synthesis time : 8s

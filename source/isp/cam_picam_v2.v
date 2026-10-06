@@ -138,7 +138,7 @@ wire                            isp_s_axis_tready;
 wire                            isp_m_axis_tvalid;
 wire [ISP_M_AXIS_WIDTH-1:0]     isp_m_axis_tdata;
 wire                            isp_m_axis_tlast;
-wire                            isp_m_axis_tuser;
+wire [1:0]                      isp_m_axis_tuser;
 
 reg  [ISP_LINE_CNT_BIT-1:0]     isp_s_line_count;
 reg                             isp_sof_pending;
@@ -343,7 +343,7 @@ begin
 
       if (remap_hi_arrive)
          remap_beat[(remap_count - (remap_beat_hs ? 4'd1 : 4'd0))
-                    + (remap_lo_arrive ? 4'd1 : 4'd0))] <= remap_hi_data;
+                    + (remap_lo_arrive ? 4'd1 : 4'd0)] <= remap_hi_data;
 
       // ---- occupancy bookkeeping ---------------------------------------
       remap_count   <= remap_count
@@ -357,40 +357,17 @@ begin
    end
 end
 
-//Adjusted vsync signal for 2PPC outputs
-localparam MIPI_FRAME_PIX_COUNT_2PPC    = MIPI_FRAME_HEIGHT*(MIPI_FRAME_WIDTH/2);
-localparam DELAY_VSYNC_2PPC             = 20;
-localparam PIX_COUNT_2PPC_BIT           = $clog2(MIPI_FRAME_PIX_COUNT_2PPC);
-localparam VSYNC_2PPC_COUNT_BIT         = $clog2(DELAY_VSYNC_2PPC);
-
-reg [PIX_COUNT_2PPC_BIT-1:0]   count_2PPC;
-reg                            vsync_2PPC_pre;
-reg                            delay_count_en;
-reg [VSYNC_2PPC_COUNT_BIT-1:0] delay_count;
-wire                           cam_vs_2PPC;
-wire                           end_of_frame;
-
-assign cam_vs_2PPC = delay_count_en && (delay_count==DELAY_VSYNC_2PPC-1);
-
-always @(posedge mipi_pclk)
-begin
-   if (~rst_n)
-   begin
-      count_2PPC     <= {PIX_COUNT_2PPC_BIT{1'b0}};
-      vsync_2PPC_pre <= 1'b0;
-      delay_count_en <= 1'b0;
-      delay_count    <= {VSYNC_2PPC_COUNT_BIT{1'b0}};
-   end else begin
-      //FIX (P1-2): frame-position counters advance only on accepted beats
-      //(tvalid && tready), so they can never drift from what the ISP actually
-      //consumed during a stall.
-      count_2PPC     <= (remap_beat_hs && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1)) ? {PIX_COUNT_2PPC_BIT{1'b0}} :
-                        (remap_beat_hs)                                             ? count_2PPC + 1'b1 : count_2PPC;
-      vsync_2PPC_pre <= remap_beat_hs && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1);
-      delay_count_en <= (cam_vs_2PPC) ? 1'b0                         : (vsync_2PPC_pre) ? 1'b1               : delay_count_en;
-      delay_count    <= (cam_vs_2PPC) ? {VSYNC_2PPC_COUNT_BIT{1'b0}} : (delay_count_en) ? delay_count + 1'b1 : delay_count;
-   end
-end
+//FIX (P2-SOF): the artificial delayed-"vsync" generator that used to live
+//here (count_2PPC counting accepted beats, vsync_2PPC_pre firing on the last
+//beat of a frame, then a 20-cycle delay_count before pulsing cam_vs_2PPC)
+//has been removed. arming the SOF flag from a pulse derived from the END of
+//the previous frame was wrong: the raw tuser[0] level went high "after a
+//frame completed" (during blanking) instead of at the start of the next
+//frame, and the 20-cycle window could let the next frame's first beat be
+//accepted unarmed, mis-attaching the SOF to a mid-frame beat. The SOF flag
+//is now armed directly by the accepted end-of-frame beat handshake (see the
+//isp_sof_pending logic below) - race-free by construction.
+wire end_of_frame;
 
 //------------------------------------------------------------------------
 // isp_top raw->RGB pipeline (replaces cam_line_buffer + cam_raw_to_rgb)
@@ -404,20 +381,26 @@ end
 //gain / CCM-matrix / black-level configuration ONLY when a tuser (SOF) beat
 //arrives, and their latched registers power up at ZERO. The AXI-Lite
 //register defaults (unity gain 0x0080 / identity CCM 0x1000) never reach
-//them without a SOF beat. isp_sof_pending used to reset to 0 and was only
-//armed by cam_vs_2PPC - a pulse that fires after a FULL frame has already
-//streamed through - so the first captured frame entered isp_top with no SOF
-//at all and every pixel was multiplied by gain 0 / matrix 0 (black frame).
-//Arm the SOF at reset so the very first captured frame is also framed;
-//subsequent frames keep being framed by the existing cam_vs_2PPC mechanism
-//(the pulse fires during the vertical blanking after each frame, so the
-//pending flag survives the inter-frame gap of both single-shot and
-//continuous capture).
+//them without a SOF beat. The SOF flag is armed at reset so the very first
+//captured frame is also framed.
+//
+//FIX (P2-SOF): SOF timing. The flag used to be armed by cam_vs_2PPC - a
+//synthetic pulse that fired ~20 cycles AFTER the last beat of the previous
+//frame was accepted. That was wrong: the SOF came high "after a frame
+//completed" (during the blanking gap) instead of at the start of the next
+//frame, and if the next frame's first beat arrived within those 20 cycles
+//the SOF missed it entirely and mis-attached to a later, mid-frame beat.
+//The flag is now armed by the accepted end-of-frame beat handshake itself
+//(remap_beat_hs && end_of_frame): it is set in the very cycle the previous
+//frame's last beat is accepted, so by construction it is armed before the
+//next frame's first beat can ever be accepted (beats leave the holding
+//buffer strictly in order). It then attaches to that first beat and is
+//cleared by the same handshake.
 always @(posedge mipi_pclk)
 begin
    if (~rst_n) begin
       isp_s_line_count <= {ISP_LINE_CNT_BIT{1'b0}};
-      isp_sof_pending  <= 1'b1;   //FIX: arm SOF for the first captured frame
+      isp_sof_pending  <= 1'b1;   //arm SOF for the first captured frame
       cam_y_count      <= {CAM_Y_COUNT_BIT{1'b0}};
    end else begin
       //FIX (P1-2): all framing counters below advance ONLY on accepted beats
@@ -426,7 +409,9 @@ begin
       //ahead of the pixel data the ISP actually consumed.
       isp_s_line_count <= (remap_beat_hs && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
                           (remap_beat_hs)                                                     ? isp_s_line_count + 1'b1 : isp_s_line_count;
-      isp_sof_pending  <= (cam_vs_2PPC)                                              ? 1'b1 :
+      //FIX (P2-SOF): arm on the accepted EOF beat (arm wins over the clear in
+      //the same cycle), clear on the first accepted beat of the next frame.
+      isp_sof_pending  <= (remap_beat_hs && end_of_frame)                          ? 1'b1 :
                           (remap_beat_hs)                                            ? 1'b0 : isp_sof_pending;
       cam_y_count      <= (remap_eol_hs && (cam_y_count == MIPI_FRAME_HEIGHT-1))     ? {CAM_Y_COUNT_BIT{1'b0}} :
                           (remap_eol_hs)                                             ? cam_y_count + 1'b1 : cam_y_count;
@@ -450,7 +435,13 @@ assign isp_s_axis_tdata  = {2'b00, remap_beat[0][19:10], //pixel 1 (odd)
                             2'b00, remap_beat[0][ 9: 0]}; //pixel 0 (even)
 assign isp_s_axis_tlast  = (remap_count != 4'd0) && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
 assign end_of_frame      = isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1);
-assign isp_s_axis_tuser  = {end_of_frame, isp_sof_pending};
+//FIX (P2-SOF): qualify the SOF with tvalid so the tuser[0] level rises
+//exactly when the new frame's first beat is presented (the frame START) and
+//stays low through the blanking gap after the previous frame completed.
+//AXI-Stream defines tuser per beat; all consumers (config latches, ISP
+//timers) already qualify with tvalid, so this changes no functional
+//handshake - it only makes the SOF signal mean what it says.
+assign isp_s_axis_tuser  = {end_of_frame, isp_sof_pending && isp_s_axis_tvalid};
 
 isp_top #(
    //working design. (0=BG, 1=GB, 2=GR, 3=RG)

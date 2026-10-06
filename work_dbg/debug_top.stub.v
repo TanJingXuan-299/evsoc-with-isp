@@ -2,10 +2,7 @@
 module edb_top (bscan_CAPTURE, bscan_DRCK, bscan_RESET, bscan_RUNTEST, 
             bscan_SEL, bscan_SHIFT, bscan_TCK, bscan_TDI, bscan_TMS, 
             bscan_UPDATE, bscan_TDO, la0_clk, la0_probe0, la0_probe1, 
-            la0_probe2, la0_probe3, la0_probe4, la0_probe5, la0_probe6, 
-            la0_probe7, la0_probe8, la0_probe9, la0_probe10, la0_probe11, 
-            la0_probe12, la0_probe13, la0_probe14, la0_probe15, la0_probe16, 
-            la0_probe17);
+            la0_probe2, la0_probe3, la0_probe4, la0_probe5);
     input bscan_CAPTURE;
     input bscan_DRCK;
     input bscan_RESET;
@@ -24,43 +21,8 @@ module edb_top (bscan_CAPTURE, bscan_DRCK, bscan_RESET, bscan_RUNTEST,
     input la0_probe3;
     input la0_probe4;
     input la0_probe5;
-    input la0_probe6;
-    input la0_probe7;
-    input la0_probe8;
-    input la0_probe9;
-    input la0_probe10;
-    input la0_probe11;
-    input [63:0]la0_probe12;
-    input [63:0]la0_probe13;
-    input [63:0]la0_probe14;
-    input [63:0]la0_probe15;
-    input [63:0]la0_probe16;
-    input [63:0]la0_probe17;
     
 endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

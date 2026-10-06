@@ -1,0 +1,512 @@
+diff --git a/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/apb3_cam.h b/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/apb3_cam.h
+index 8011584..e6192f5 100644
+--- a/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/apb3_cam.h
++++ b/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/apb3_cam.h
+@@ -144,6 +144,64 @@ static inline void Set_MipiRst(u8 rst)
+ 
+ #endif
+ 
++static inline void Latency_Print(int i, u32 raw)
++{
++	u32 counter_data = raw >> 1;
++	u32 overflow     = raw & 1;
++
++	switch(i)
++	{
++		case 0:
++			overflow == 0 ? bsp_printf("TOTAL ISP minimum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("TOTAL ISP minimum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 1:
++			overflow == 0 ? bsp_printf("BLC minimum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("BLC minimum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 2:
++			overflow == 0 ? bsp_printf("COLOUR GAIN minimum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("COLOUR GAIN minimum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 3:
++			overflow == 0 ? bsp_printf("DEMOSAIC minimum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("DEMOSAIC minimum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 4:
++			overflow == 0 ? bsp_printf("CCM minimum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("CCM minimum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 5:
++			overflow == 0 ? bsp_printf("GAMMA minimum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("GAMMA minimum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 6:
++			overflow == 0 ? bsp_printf("TOTAL ISP maximum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("TOTAL ISP maximum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 7:
++			overflow == 0 ? bsp_printf("BLC maximum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("BLC maximum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 8:
++			overflow == 0 ? bsp_printf("COLOUR GAIN maximum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("COLOUR GAIN maximum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 9:
++			overflow == 0 ? bsp_printf("DEMOSAIC maximum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("DEMOSAIC maximum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 10:
++			overflow == 0 ? bsp_printf("CCM maximum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("CCM maximum latency: OVERFLOW\n\r", counter_data);
++		break;
++		case 11:
++			overflow == 0 ? bsp_printf("GAMMA maximum latency: %d clock cycles\n\r", counter_data):
++						    bsp_printf("GAMMA maximum latency: OVERFLOW\n\r", counter_data);
++		break;
++	}
++}
++
+ static inline void Read_Latency()
+ {
+ 	u32 valid_status = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG40_OFFSET);
+@@ -151,63 +209,38 @@ static inline void Read_Latency()
+ 	{
+ 		if((valid_status & (1 << i)) != 0)
+ 		{
++			//FIX: read the value FIRST, while it is still the exact
++			//record that raised the valid flag.
++			u32 raw = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4);
++
++			//FIX: pulse the ready bit (set, let the handshake
++			//complete, clear) instead of leaving it stuck high.
+ 			write_u32(1 << i, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
+-			u32 raw          = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4);
+-			u32 counter_data = raw >> 1;
+-			u32 overflow     = raw & 1;
++			bsp_uDelay(DELAY_BUSY);
++			write_u32(0, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
+ 			bsp_uDelay(DELAY_BUSY);
+ 
+-			switch(i)
+-			{
+-				case 0:
+-					overflow == 0 ? bsp_printf("TOTAL ISP minimum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("TOTAL ISP minimum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 1:
+-					overflow == 0 ? bsp_printf("BLC minimum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("BLC minimum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 2:
+-					overflow == 0 ? bsp_printf("COLOUR GAIN minimum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("COLOUR GAIN minimum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 3:
+-					overflow == 0 ? bsp_printf("DEMOSAIC minimum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("DEMOSAIC minimum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 4:
+-					overflow == 0 ? bsp_printf("CCM minimum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("CCM minimum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 5:
+-					overflow == 0 ? bsp_printf("GAMMA minimum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("GAMMA minimum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 6:
+-					overflow == 0 ? bsp_printf("TOTAL ISP maximum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("TOTAL ISP maximum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 7:
+-					overflow == 0 ? bsp_printf("BLC maximum latency: %d clock cycles\n\r", counter_data):
+-					                bsp_printf("BLC maximum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 8:
+-					overflow == 0 ? bsp_printf("COLOUR GAIN maximum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("COLOUR GAIN maximum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 9:
+-					overflow == 0 ? bsp_printf("DEMOSAIC maximum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("DEMOSAIC maximum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 10:
+-					overflow == 0 ? bsp_printf("CCM maximum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("CCM maximum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-				case 11:
+-					overflow == 0 ? bsp_printf("GAMMA maximum latency: %d clock cycles\n\r", counter_data):
+-								    bsp_printf("GAMMA maximum latency: OVERFLOW\n\r", counter_data);
+-				break;
+-			}
++			Latency_Print(i, raw);
+ 		}
+ 	}
+ }
++
++//Unconditional full report of all 12 latched min/max values (valid or not).
++//Used by the 'L' command and the GUI latency-panel reset button: it always
++//repopulates the panel immediately, even when the values have converged and
++//no new records would ever trigger a print.
++static inline void Latency_Report()
++{
++	for(int i=0; i<12; i++)
++	{
++		u32 raw = read_u32(EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG28_OFFSET + i*4);
++
++		//clear any pending valid with a ready pulse so state stays clean
++		write_u32(1 << i, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
++		bsp_uDelay(DELAY_BUSY);
++		write_u32(0, EXAMPLE_APB3_SLV + EXAMPLE_APB3_SLV_REG18_OFFSET);
++		bsp_uDelay(DELAY_BUSY);
++
++		Latency_Print(i, raw);
++	}
++}
+diff --git a/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/main.c b/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/main.c
+index d77b2d2..334e365 100644
+--- a/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/main.c
++++ b/embedded_sw/SapphireSoc/software/standalone/evsoc_ispExample_demo/src/main.c
+@@ -220,9 +220,16 @@ void settings()
+             Set_Gain(0, 13, data);
+             break;
+ 
++            //FIX (GUI reset): 'L' prints the full ISP latency report on demand
++            //so the GUI latency-panel reset button can repopulate the panel
++            //immediately (also usable from any terminal).
++            case 'L':
++            Latency_Report();
++            break;
++
+             default:
+ 
+-            bsp_printf("Unknown command: %c (demo modes: D+a-g, gains: 0-9/A/B/C/E+value)\n\r", var);
++            bsp_printf("Unknown command: %c (demo modes: D+a-g, gains: 0-9/A/B/C/E+value, L: latency report)\n\r", var);
+             break;
+         }
+     }
+@@ -269,6 +276,7 @@ void ispExample_menu()
+     bsp_printf("'De' : Camera Capture + RGB2Grayscale & Sobel (HW) + HDMI Display                \n\r");
+     bsp_printf("'Df' : Camera Capture + RGB2Grayscale & Sobel & Dilation (HW) + HDMI Display     \n\r");
+     bsp_printf("'Dg' : Camera Capture + RGB2Grayscale & Sobel & Erosion  (HW) + HDMI Display     \n\r");
++    bsp_printf("'L'  : Print ISP latency report (min/max per pipeline stage)                        \n\r");
+ 
+     bsp_printf("================================================================================ \n\n\r");
+ }
+diff --git a/isp_gui_2.html b/isp_gui_2.html
+index 3e58cde..d118f5a 100644
+--- a/isp_gui_2.html
++++ b/isp_gui_2.html
+@@ -690,6 +690,15 @@ $('#btnLatClr').addEventListener('click', () => {
+   LAT_STAGES.forEach(s => lat[s.key] = {min:{v:null,ovf:false}, max:{v:null,ovf:false}});
+   lastLatTs = 0;
+   renderLat();
++  /* FIX: with the firmware's event-driven prints the panel would stay empty
++     after a reset once min/max converged (no new records -> no prints).
++     Ask the firmware for an immediate full report ('L' command) so the
++     panel repopulates right away when a board is connected. */
++  if(state.connected){
++    sendCmd('L');
++  }else{
++    logSys('latency panel cleared \u2014 connect the board and press reset again (or send \'L\') for a fresh report');
++  }
+ });
+ 
+ /* ---- simulation: exercises the exact same parser path as real UART ---- */
+@@ -699,14 +708,17 @@ function simEmit(name, kind, val){
+ }
+ function simTick(){
+   simRound++;
+-  const base = 1036800 + Math.floor(Math.random()*60);
++  /* post-fix expected readings: each timer now measures SOF->SOF pipeline
++     latency per stage (tens..thousands of cycles), NOT the ~1,036,800-cycle
++     frame duration they measured before. DEMOSAIC dominates (~2 linebuffer
++     lines @ 960 beats/line) and TOTAL is roughly the sum of the stages. */
+   const d = {
+-    'TOTAL ISP'  : [base+180,  base+228 ],
+-    'BLC'        : [base+4,    base+9   ],
+-    'COLOUR GAIN': [base+7,    base+13  ],
+-    'DEMOSAIC'   : [base+2080, base+2140],
+-    'CCM'        : [base+2096, base+2150],
+-    'GAMMA'      : [base+2108, base+2168]
++    'TOTAL ISP'  : [1948,     2012    ],
++    'BLC'        : [4,        9       ],
++    'COLOUR GAIN': [7,        13      ],
++    'DEMOSAIC'   : [1925,     1961    ],
++    'CCM'        : [8,        14      ],
++    'GAMMA'      : [10,       17      ]
+   };
+   const ovfName = (simRound % 6 === 0) ? 'CCM' : null;   /* once in a while: overflow */
+   for(const [name,[mn,mx]] of Object.entries(d)){
+diff --git a/source/isp/cam_picam_v2.v b/source/isp/cam_picam_v2.v
+index 3b67658..ac18beb 100644
+--- a/source/isp/cam_picam_v2.v
++++ b/source/isp/cam_picam_v2.v
+@@ -107,10 +107,20 @@ wire [39:0]                 cam_pixel_remap_fifo_rdata;
+ wire                        cam_pixel_remap_fifo_empty;
+ wire                        cam_pixel_remap_fifo_overflow;
+ wire                        cam_pixel_remap_fifo_underflow;
+-reg                         cam_pixel_remap_fifo_rvalid_r;
+-reg  [19:0]                 cam_pixel_remap_fifo_rdata_r;
+-wire                        cam_pixel_remap_2ppc_valid;
+-wire [19:0]                 cam_pixel_remap_2ppc_data;
++
++//FIX (P1-2): handshake-aware 2PPC output path. The old path presented beats
++//straight off the FIFO read port (rvalid/rvalid_r) and ignored
++//isp_s_axis_tready: any ISP stall (BLC/demosaic/skidbuffer/gamma CAN
++//de-assert tready) meant tdata/tlast/tuser advanced and the line/EOL/EOF
++//counters counted beats the ISP never accepted -> lost pixels / corrupted
++//frame markers. Now beats are presented from an 8-deep holding register (4
++//FIFO words) and are only removed on a real tvalid && tready handshake.
++reg  [19:0]                 remap_beat [0:7];   //compacted beat slots (head = index 0)
++reg  [ 3:0]                 remap_count;        //beats currently held in the buffer (0..8)
++reg  [ 2:0]                 remap_pending;      //beats popped from the FIFO but not yet landed (max 2 words in flight)
++reg                         remap_hi_pending;   //upper half of the word at the FIFO output is due next cycle
++reg  [19:0]                 remap_hi_data;      //captured upper half of that word
++integer                     remap_i;
+ 
+ localparam ISP_PPC              = 2;   //Matches existing 2PPC downstream (crop/scale/gray)
+ localparam ISP_PIXEL_BIT_WIDTH  = 12;  //12-bit internal pipeline
+@@ -238,20 +248,31 @@ begin
+    if (~rst_n)
+    begin
+       cam_alternate_clock           <= 1'b0;
+-      cam_pixel_remap_fifo_rvalid_r <= 1'b0;
+-      cam_pixel_remap_fifo_rdata_r  <= 20'd0;
+    end else begin
+       cam_alternate_clock           <= ~cam_alternate_clock;
+-      cam_pixel_remap_fifo_rvalid_r <= cam_pixel_remap_fifo_rvalid;
+-      cam_pixel_remap_fifo_rdata_r  <= cam_pixel_remap_fifo_rdata [39:20]; //Store most significant half word only
+    end
+ end
+ 
+ assign cam_pixel_remap_fifo_wvalid = capture_frame && cam_valid;
+ assign cam_pixel_remap_fifo_wdata  = cam_data;
+-assign cam_pixel_remap_fifo_re     = (~cam_pixel_remap_fifo_empty) && cam_alternate_clock;
+-assign cam_pixel_remap_2ppc_valid  = cam_pixel_remap_fifo_rvalid || cam_pixel_remap_fifo_rvalid_r;
+-assign cam_pixel_remap_2ppc_data   = (cam_pixel_remap_fifo_rvalid) ? cam_pixel_remap_fifo_rdata [19:0] : cam_pixel_remap_fifo_rdata_r;
++
++//FIX (P1-2): pop only when the popped word's 2 beats are guaranteed to fit in
++//the holding buffer: held beats + in-flight beats must stay <= 8, so a pop
++//requires (count + pending) <= 6. This keeps full throughput (1 beat/clk) at
++//full rate while never overrunning the 8-slot buffer, no matter how the ISP
++//stalls the stream.
++wire [4:0] remap_occ = {1'b0, remap_count} + {2'b0, remap_pending};
++assign cam_pixel_remap_fifo_re = (~cam_pixel_remap_fifo_empty) && cam_alternate_clock && (remap_occ <= 5'd6);
++
++//Beat arrival indications: the FIFO presents the popped 40-bit word with
++//rvalid (lower 20 bits = beat 0 of the word) one or more cycles after rd_en;
++//the upper 20 bits (beat 1 of the word) arrive the following cycle and are
++//tracked locally with remap_hi_pending/remap_hi_data.
++wire remap_lo_arrive = cam_pixel_remap_fifo_rvalid;
++wire remap_hi_arrive = remap_hi_pending;
++
++//Output handshake: a beat leaves the buffer only when the ISP accepts it.
++wire remap_beat_hs = (remap_count != 4'd0) && isp_s_axis_tready;
+ 
+ cam_pixel_remap_fifo u_cam_pixel_remap_fifo (
+    .almost_full_o  (                              ),
+@@ -271,6 +292,71 @@ cam_pixel_remap_fifo u_cam_pixel_remap_fifo (
+    .datacount_o    (                              )
+ );
+ 
++//FIX (P1-2): 8-beat holding buffer. Compacted register file: valid beats live
++//in slots [0..remap_count-1], head is slot 0. On an output handshake the beats
++//shift down one slot; arriving beats (FIFO lower/upper halves) are appended at
++//the (post-shift) tail. The pop gating above guarantees
++//remap_count + remap_pending <= 8 at all times, so appends never index past
++//slot 7:
++//   - an arrival requires pending > 0, i.e. count <= 7 (sum <= 8)
++//   - two arrivals in one cycle (lower + upper) require pending >= 2,
++//     i.e. count <= 6, so the upper lands at index <= 7.
++always @(posedge mipi_pclk)
++begin
++   if (~rst_n)
++   begin
++      remap_count      <= 4'd0;
++      remap_pending    <= 3'd0;
++      remap_hi_pending <= 1'b0;
++      remap_hi_data    <= 20'd0;
++      for (remap_i = 0; remap_i < 8; remap_i = remap_i + 1)
++         remap_beat[remap_i] <= 20'd0;
++   end
++   else
++   begin
++      // ---- FIFO word halves in flight ----------------------------------
++      // Lower half of a popped word arrives with rvalid: land it (below) and
++      // remember the upper half for the next cycle. If the previous word's
++      // upper half is due in the same cycle it lands first (below), and the
++      // new capture wins here.
++      if (remap_lo_arrive)
++      begin
++         remap_hi_data    <= cam_pixel_remap_fifo_rdata[39:20];
++         remap_hi_pending <= 1'b1;
++      end
++      else if (remap_hi_arrive)
++      begin
++         remap_hi_pending <= 1'b0;
++      end
++
++      // ---- compact on accepted handshake -------------------------------
++      if (remap_beat_hs)
++      begin
++         for (remap_i = 0; remap_i < 7; remap_i = remap_i + 1)
++            remap_beat[remap_i] <= remap_beat[remap_i+1];
++         remap_beat[7] <= 20'd0;
++      end
++
++      // ---- append arriving beats (later assignment wins over shift) ----
++      if (remap_lo_arrive)
++         remap_beat[(remap_count - (remap_beat_hs ? 4'd1 : 4'd0))] <= cam_pixel_remap_fifo_rdata[19:0];
++
++      if (remap_hi_arrive)
++         remap_beat[(remap_count - (remap_beat_hs ? 4'd1 : 4'd0))
++                    + (remap_lo_arrive ? 4'd1 : 4'd0))] <= remap_hi_data;
++
++      // ---- occupancy bookkeeping ---------------------------------------
++      remap_count   <= remap_count
++                      + (remap_lo_arrive ? 4'd1 : 4'd0)
++                      + (remap_hi_arrive ? 4'd1 : 4'd0)
++                      - (remap_beat_hs  ? 4'd1 : 4'd0);
++      remap_pending <= remap_pending
++                      + (cam_pixel_remap_fifo_re ? 3'd2 : 3'd0)
++                      - (remap_lo_arrive         ? 3'd1 : 3'd0)
++                      - (remap_hi_arrive         ? 3'd1 : 3'd0);
++   end
++end
++
+ //Adjusted vsync signal for 2PPC outputs
+ localparam MIPI_FRAME_PIX_COUNT_2PPC    = MIPI_FRAME_HEIGHT*(MIPI_FRAME_WIDTH/2);
+ localparam DELAY_VSYNC_2PPC             = 20;
+@@ -295,9 +381,12 @@ begin
+       delay_count_en <= 1'b0;
+       delay_count    <= {VSYNC_2PPC_COUNT_BIT{1'b0}};
+    end else begin
+-      count_2PPC     <= (cam_pixel_remap_2ppc_valid && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1)) ? {PIX_COUNT_2PPC_BIT{1'b0}} :
+-                        (cam_pixel_remap_2ppc_valid) ? count_2PPC + 1'b1 : count_2PPC;
+-      vsync_2PPC_pre <= cam_pixel_remap_2ppc_valid && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1);
++      //FIX (P1-2): frame-position counters advance only on accepted beats
++      //(tvalid && tready), so they can never drift from what the ISP actually
++      //consumed during a stall.
++      count_2PPC     <= (remap_beat_hs && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1)) ? {PIX_COUNT_2PPC_BIT{1'b0}} :
++                        (remap_beat_hs)                                             ? count_2PPC + 1'b1 : count_2PPC;
++      vsync_2PPC_pre <= remap_beat_hs && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1);
+       delay_count_en <= (cam_vs_2PPC) ? 1'b0                         : (vsync_2PPC_pre) ? 1'b1               : delay_count_en;
+       delay_count    <= (cam_vs_2PPC) ? {VSYNC_2PPC_COUNT_BIT{1'b0}} : (delay_count_en) ? delay_count + 1'b1 : delay_count;
+    end
+@@ -331,23 +420,35 @@ begin
+       isp_sof_pending  <= 1'b1;   //FIX: arm SOF for the first captured frame
+       cam_y_count      <= {CAM_Y_COUNT_BIT{1'b0}};
+    end else begin
+-      isp_s_line_count <= (cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
+-                          (cam_pixel_remap_2ppc_valid)                                                     ? isp_s_line_count + 1'b1 : isp_s_line_count;
++      //FIX (P1-2): all framing counters below advance ONLY on accepted beats
++      //(remap_beat_hs = tvalid && tready). The old code advanced them on the
++      //free-running 2PPC valid, so an ISP stall made tlast/tuser markers run
++      //ahead of the pixel data the ISP actually consumed.
++      isp_s_line_count <= (remap_beat_hs && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
++                          (remap_beat_hs)                                                     ? isp_s_line_count + 1'b1 : isp_s_line_count;
+       isp_sof_pending  <= (cam_vs_2PPC)                                              ? 1'b1 :
+-                          (cam_pixel_remap_2ppc_valid && isp_s_axis_tready)          ? 1'b0 : isp_sof_pending;
+-      cam_y_count      <= (isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1)) ? {CAM_Y_COUNT_BIT{1'b0}} :
+-                          (isp_s_axis_tlast)                                         ? cam_y_count + 1'b1 : cam_y_count;
++                          (remap_beat_hs)                                            ? 1'b0 : isp_sof_pending;
++      cam_y_count      <= (remap_eol_hs && (cam_y_count == MIPI_FRAME_HEIGHT-1))     ? {CAM_Y_COUNT_BIT{1'b0}} :
++                          (remap_eol_hs)                                             ? cam_y_count + 1'b1 : cam_y_count;
+    end
+ end
+ 
+-assign isp_s_axis_tvalid = cam_pixel_remap_2ppc_valid;
++//FIX (P1-2): tvalid comes from the holding buffer, so a beat stays presented
++//(tdata/tlast/tuser stable per AXI-Stream) until the ISP accepts it. tdata is
++//the head beat; tlast marks the last beat of a line; end_of_frame is the EOF
++//flag of the presented beat (cam_y_count is handshake-advanced, so a stalled
++//EOF beat keeps presenting EOF until it is accepted). remap_eol_hs qualifies
++//the end-of-line beat transfer for cam_y_count above.
++wire remap_eol_hs = remap_beat_hs && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
++
++assign isp_s_axis_tvalid = (remap_count != 4'd0);
+ //FIX (Bug #4): pack the two 8-bit RAW pixels as 12-bit values ({px, 4'b0})
+ //so they span the full input range of the ISP's 4096-entry gamma LUT.
+ //pixel 0 (left/even pixel) occupies tdata[11:0], pixel 1 (right/odd pixel)
+ //tdata[23:12] - this is the packing colorgain.sv expects (pixel_0 = LSB).
+-assign isp_s_axis_tdata  = {2'b00, cam_pixel_remap_2ppc_data[19:10],    //pixel 1 (odd)
+-                            2'b00,cam_pixel_remap_2ppc_data[9:0]};  //pixel 0 (even)
+-assign isp_s_axis_tlast  = cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
++assign isp_s_axis_tdata  = {2'b00, remap_beat[0][19:10], //pixel 1 (odd)
++                            2'b00, remap_beat[0][ 9: 0]}; //pixel 0 (even)
++assign isp_s_axis_tlast  = (remap_count != 4'd0) && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
+ assign end_of_frame      = isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1);
+ assign isp_s_axis_tuser  = {end_of_frame, isp_sof_pending};
+ 
+diff --git a/source/isp/isp.sv b/source/isp/isp.sv
+index a909c5a..f5e19b7 100644
+--- a/source/isp/isp.sv
++++ b/source/isp/isp.sv
+@@ -103,7 +103,14 @@ module isp
+     .clk                                  (clk),
+     .rst                                  (~rstn),
+     .start                                (s_axis_tuser[0] && s_axis_tready && s_axis_tvalid),
+-    .stop                                 (m_axis_tuser[1]),
++    //FIX (P1-1/P2): stop on the OUTPUT SOF handshake (tuser[0] && tvalid &&
++    //tready) instead of the raw EOF flag. Stopping on tuser[1] (EOF) measured
++    //input-SOF -> output-EOF, i.e. the full frame duration (~1,036,800 clocks
++    //for 1080p @ 2PPC) instead of the pipeline latency, and it was unqualified
++    //so a stalled-but-presented EOF beat stopped the timer before the transfer
++    //was accepted. SOF->SOF measures the true end-to-end latency (tens of
++    //cycles) and the handshake qualification makes the capture exact.
++    .stop                                 (m_axis_tuser[0] && m_axis_tvalid && m_axis_tready),
+     .min_ready                            (isp_info0[0]),
+     .max_ready                            (isp_info0[1]),
+     .min_valid                            (isp_info0[2]),
+@@ -223,7 +230,8 @@ module isp
+     .clk                                  (clk),
+     .rst                                  (~rstn),
+     .start                                (s_axis_tuser[0] && s_axis_tready && s_axis_tvalid),
+-    .stop                                 (blc_tuser[1]),
++    //FIX (P1-1/P2): BLC stage latency = input SOF -> BLC output SOF handshake.
++    .stop                                 (blc_tuser[0] && blc_tvalid && blc_tready),
+     .min_ready                            (isp_info1[0]),
+     .max_ready                            (isp_info1[1]),
+     .min_valid                            (isp_info1[2]),
+@@ -278,7 +286,9 @@ module isp
+     .clk                                  (clk),
+     .rst                                  (~rstn),
+     .start                                (blc_tuser[0] && blc_tready && blc_tvalid),
+-    .stop                                 (colorgain_tuser[1]),
++    //FIX (P1-1/P2): colour gain latency = BLC output SOF -> colourgain output
++    //SOF handshake.
++    .stop                                 (colorgain_tuser[0] && colorgain_tvalid && colorgain_tready),
+     .min_ready                            (isp_info2[0]),
+     .max_ready                            (isp_info2[1]),
+     .min_valid                            (isp_info2[2]),
+@@ -356,7 +366,9 @@ module isp
+     .clk                                  (clk),
+     .rst                                  (~rstn),
+     .start                                (skidbuffer1_tuser[0] && skidbuffer1_tready && skidbuffer1_tvalid),
+-    .stop                                 (demosaic_tuser[1]),
++    //FIX (P1-1/P2): demosaic latency = skidbuffer1 output SOF -> demosaic
++    //output SOF handshake (includes linebuffer fill: ~2 lines + pipeline).
++    .stop                                 (demosaic_tuser[0] && demosaic_tvalid && demosaic_tready),
+     .min_ready                            (isp_info3[0]),
+     .max_ready                            (isp_info3[1]),
+     .min_valid                            (isp_info3[2]),
+@@ -431,7 +443,9 @@ module isp
+     .clk                                  (clk),
+     .rst                                  (~rstn),
+     .start                                (ccm_axis_tuser[0] && demosaic_tready && ccm_axis_tvalid),
+-    .stop                                 (ccm_tuser[1]),
++    //FIX (P1-1/P2): CCM latency = CCM input SOF handshake -> CCM output SOF
++    //handshake.
++    .stop                                 (ccm_tuser[0] && ccm_tvalid && ccm_tready),
+     .min_ready                            (isp_info4[0]),
+     .max_ready                            (isp_info4[1]),
+     .min_valid                            (isp_info4[2]),
+@@ -510,7 +524,9 @@ module isp
+     .clk                                  (clk),
+     .rst                                  (~rstn),
+     .start                                (skidbuffer2_tuser[0] && skidbuffer2_tready && skidbuffer2_tvalid),
+-    .stop                                 (gamma_tuser[1]),
++    //FIX (P1-1/P2): gamma latency = skidbuffer2 output SOF -> gamma output SOF
++    //handshake.
++    .stop                                 (gamma_tuser[0] && gamma_tvalid && gamma_tready),
+     .min_ready                            (isp_info5[0]),
+     .max_ready                            (isp_info5[1]),
+     .min_valid                            (isp_info5[2]),

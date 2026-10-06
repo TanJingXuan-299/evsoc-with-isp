@@ -101,17 +101,17 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/histogram_stretch.sv(14): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp_top.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv' [VERI-1482]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(307): undeclared symbol 'demosaic_tready', assumed default net type 'wire' [VERI-2561]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(330): undeclared symbol 'demosaic_tready', assumed default net type 'wire' [VERI-2561]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(20): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(23): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(24): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(181): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(231): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(313): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(364): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(365): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(467): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(468): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(199): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(252): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(336): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(390): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(391): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(495): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(496): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv' [VERI-1482]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/linebuffer.sv(16): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/lut.sv' [VERI-1482]
@@ -160,12 +160,12 @@ INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efin
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\hw_accel_dma_out_fifo\hw_accel_dma_out_fifo.sv' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\hw_accel\hw_accel_apb3.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v' [VERI-1482]
-INFO     : Analysis took 1.3320667 seconds [FlowMsg::StageDuration]
-INFO     :     Analysis took 1.203125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Analysis virtual memory usage: begin = 59.568 MB, end = 81.184 MB, delta = 21.616 MB [FlowMsg::VMUsage]
-INFO     :     Analysis peak virtual memory usage = 81.184 MB [FlowMsg::VMUsage::Peak]
-INFO     : Analysis resident set memory usage: begin = 63.788 MB, end = 89.828 MB, delta = 26.04 MB [FlowMsg::RSSUsage]
-INFO     :     Analysis peak resident set memory usage = 89.828 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Analysis took 2.9888911 seconds [FlowMsg::StageDuration]
+INFO     :     Analysis took 1.453125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Analysis virtual memory usage: begin = 59.556 MB, end = 81.172 MB, delta = 21.616 MB [FlowMsg::VMUsage]
+INFO     :     Analysis peak virtual memory usage = 81.172 MB [FlowMsg::VMUsage::Peak]
+INFO     : Analysis resident set memory usage: begin = 74.328 MB, end = 100.316 MB, delta = 25.988 MB [FlowMsg::RSSUsage]
+INFO     :     Analysis peak resident set memory usage = 100.316 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Analysis ... *****
 INFO     : ***** Beginning Elaboration ... *****
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1329): port 'system_spi_0_io_data_2_read' is not connected on this instance [VERI-2435]
@@ -232,8 +232,8 @@ INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv(8121): compiling module 'efx_fifo_gray2bin_f123b49f0f574f64a9a2982368753f7b(WIDTH=4)' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv(8121): compiling module 'efx_fifo_gray2bin_f123b49f0f574f64a9a2982368753f7b(WIDTH=3)' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv(8121): compiling module 'efx_fifo_gray2bin_f123b49f0f574f64a9a2982368753f7b(WIDTH=2)' [VERI-1018]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(272): port 'rst_busy' remains unconnected for this instance [VERI-1927]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(772): port 'rst_busy' remains unconnected for this instance [VERI-1927]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(293): port 'rst_busy' remains unconnected for this instance [VERI-1927]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(864): port 'rst_busy' remains unconnected for this instance [VERI-1927]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(6): compiling module 'cam_picam_v2(MIPI_FRAME_WIDTH=1920,MIPI_FRAME_HEIGHT=1080,FRAME_WIDTH=540,FRAME_HEIGHT=540,DMA_TRANSFER_LENGTH=145800)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(110): port 'a_wr_rst_i' remains unconnected for this instance [VERI-1927]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\cam_pixel_remap_fifo\cam_pixel_remap_fifo.sv(49): compiling module 'cam_pixel_remap_fifo' [VERI-1018]
@@ -248,21 +248,21 @@ INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(20): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(23): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(24): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(181): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(231): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(313): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(364): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(365): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(467): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(468): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(199): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(252): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(336): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(390): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(391): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(495): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(496): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(6): compiling module 'isp(PIXEL_BIT_WIDTH=12,S_AXI_WSTRB_WIDTH=4,S_AXIS_DATA_WIDTH=24,M_AXIS_DATA_WIDTH=48,TUSER_WIDTH=2,DECOMPANDING_XLUT_FILE="decompanding_xlut.mem",DECOMPANDING_YLUT_FILE="decompanding_ylut_12_bit.mem",DECOMPANDING_FLUT_FILE="decompanding_flut_12_bit.mem",GAMMA_LUT_FILE="lut.mem")' [VERI-1018]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(181): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(231): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(313): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(364): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(365): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(467): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(468): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(199): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(252): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(336): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(390): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(391): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(495): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/isp.sv(496): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/min_max_timer.v(1): compiling module 'min_max_timer(TIMER_WIDTH=30)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/axi_lite_register.sv(10): illegal integral type argument in math function 'floor()'; expected real type [VERI-2792]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/axi_lite_register.sv(6): compiling module 'axi_lite_register(S_AXI_WSTRB_WIDTH=4)' [VERI-1018]
@@ -384,8 +384,7 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(119): input port 's_axis_tlast' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/gamma.sv(143): input port 's_axis_tlast' remains unconnected for this instance [VDB-1053]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/isp/skidbuffer.sv(6): compiling module 'skidbuffer(DATA_WIDTH=48,TUSER_WIDTH=2)' [VERI-1018]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(396): actual bit length 1 differs from formal bit length 2 for port 'm_axis_tuser' [VERI-1330]
-WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(524): expression size 7 truncated to fit in target size 6 [VERI-1209]
+WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v(616): expression size 7 truncated to fit in target size 6 [VERI-1209]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/cam/cam_crop.v(6): compiling module 'cam_crop(P_DEPTH=16,X_START=210,X_WIN=540,Y_WIN=1080)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/cam/cam_crop.v(82): expression size 32 truncated to fit in target size 11 [VERI-1209]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/cam/scale_down_2x_nn.v(6): compiling module 'scale_down_2x_nn' [VERI-1018]
@@ -705,9 +704,9 @@ INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\hw_accel\hw_accel_apb3.v(37): extracting RAM for identifier 'slaveReg' [VERI-2571]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\hw_accel\hw_accel_apb3.v(38): net 'slaveRegOut[31]' does not have a driver [VDB-1002]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(49): compiling module 'dma' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(239): compiling module 'EfxDMA_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4319): compiling module 'EfxDMA_Core_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13029): compiling module 'EfxDMA_DmaMemoryCore_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(239): compiling module 'EfxDMA_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4319): compiling module 'EfxDMA_Core_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13029): compiling module 'EfxDMA_DmaMemoryCore_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13408): extracting RAM for identifier 'banks_0_ram' [VERI-2571]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13409): extracting RAM for identifier 'banks_1_ram' [VERI-2571]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13454): system function call 'urandom' is not supported [VERI-1141]
@@ -715,46 +714,46 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13456): system function call 'urandom' is not supported [VERI-1141]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13457): system function call 'urandom' is not supported [VERI-1141]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(13458): system function call 'urandom' is not supported [VERI-1141]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9654): compiling module 'EfxDMA_Aggregator_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4124): compiling module 'EfxDMA_Apb3CC_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9583): compiling module 'EfxDMA_FlowCCUnsafeByToggle_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14625): compiling module 'EfxDMA_BufferCC_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9507): compiling module 'EfxDMA_FlowCCUnsafeByToggle_1_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14601): compiling module 'EfxDMA_BufferCC_1_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4105): compiling module 'EfxDMA_BufferCC_12_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4046): compiling module 'EfxDMA_BmbSourceRemover_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3940): compiling module 'EfxDMA_BmbToAxi4ReadOnlyBridge_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9308): compiling module 'EfxDMA_BmbContextRemover_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14419): compiling module 'EfxDMA_StreamFifo_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9654): compiling module 'EfxDMA_Aggregator_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4124): compiling module 'EfxDMA_Apb3CC_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9583): compiling module 'EfxDMA_FlowCCUnsafeByToggle_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14625): compiling module 'EfxDMA_BufferCC_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9507): compiling module 'EfxDMA_FlowCCUnsafeByToggle_1_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14601): compiling module 'EfxDMA_BufferCC_1_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4105): compiling module 'EfxDMA_BufferCC_12_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(4046): compiling module 'EfxDMA_BmbSourceRemover_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3940): compiling module 'EfxDMA_BmbToAxi4ReadOnlyBridge_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9308): compiling module 'EfxDMA_BmbContextRemover_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14419): compiling module 'EfxDMA_StreamFifo_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14476): extracting RAM for identifier 'logic_ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3764): compiling module 'EfxDMA_StreamFifo_3_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3764): compiling module 'EfxDMA_StreamFifo_3_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3824): extracting RAM for identifier 'logic_ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3702): compiling module 'EfxDMA_BmbSourceRemover_1_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3496): compiling module 'EfxDMA_BmbWriteRetainer_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9094): compiling module 'EfxDMA_StreamFifo_1_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3702): compiling module 'EfxDMA_BmbSourceRemover_1_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3496): compiling module 'EfxDMA_BmbWriteRetainer_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9094): compiling module 'EfxDMA_StreamFifo_1_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(9175): extracting RAM for identifier 'logic_ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3272): compiling module 'EfxDMA_BmbToAxi4WriteOnlyBridge_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8880): compiling module 'EfxDMA_BmbContextRemover_1_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14237): compiling module 'EfxDMA_StreamFifo_2_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3272): compiling module 'EfxDMA_BmbToAxi4WriteOnlyBridge_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8880): compiling module 'EfxDMA_BmbContextRemover_1_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14237): compiling module 'EfxDMA_StreamFifo_2_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(14294): extracting RAM for identifier 'logic_ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3060): compiling module 'EfxDMA_StreamFifoCC_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3060): compiling module 'EfxDMA_StreamFifoCC_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(3136): extracting RAM for identifier 'ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8856): compiling module 'EfxDMA_BufferCC_2_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8832): compiling module 'EfxDMA_BufferCC_3_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2975): compiling module 'EfxDMA_BsbUpSizerDense_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2763): compiling module 'EfxDMA_StreamFifoCC_1_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8856): compiling module 'EfxDMA_BufferCC_2_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8832): compiling module 'EfxDMA_BufferCC_3_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2975): compiling module 'EfxDMA_BsbUpSizerDense_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2763): compiling module 'EfxDMA_StreamFifoCC_1_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2839): extracting RAM for identifier 'ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8808): compiling module 'EfxDMA_BufferCC_4_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2551): compiling module 'EfxDMA_StreamFifoCC_2_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8808): compiling module 'EfxDMA_BufferCC_4_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2551): compiling module 'EfxDMA_StreamFifoCC_2_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2627): extracting RAM for identifier 'ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8780): compiling module 'EfxDMA_BufferCC_7_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2339): compiling module 'EfxDMA_StreamFifoCC_3_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8780): compiling module 'EfxDMA_BufferCC_7_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2339): compiling module 'EfxDMA_StreamFifoCC_3_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2415): extracting RAM for identifier 'ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8754): compiling module 'EfxDMA_BufferCC_9_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2127): compiling module 'EfxDMA_StreamFifoCC_4_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8754): compiling module 'EfxDMA_BufferCC_9_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2127): compiling module 'EfxDMA_StreamFifoCC_4_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2203): extracting RAM for identifier 'ram' [VERI-2571]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8728): compiling module 'EfxDMA_BufferCC_11_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
-INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2070): compiling module 'EfxDMA_BsbDownSizerSparse_b96567f0242d4e849ec17cbf5402d695' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(8728): compiling module 'EfxDMA_BufferCC_11_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
+INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v(2070): compiling module 'EfxDMA_BsbDownSizerSparse_95902b8133b24d66a878fc45c6fe3819' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1392): actual bit length 16 differs from formal bit length 14 for port 'ctrl_PADDR' [VERI-1330]
 INFO     : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/axi/axi_interconnect.v(25): compiling module 'axi_interconnect(S_COUNT=2,DATA_WIDTH=128)' [VERI-1018]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source/axi/axi_interconnect.v(220): system task 'display' is ignored for synthesis [VERI-1142]
@@ -775,21 +774,21 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1228): input port 'system_spi_0_io_data_2_read' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1387): input port 'dat1_o_tready' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1525): input port 's_axi_awuser[1]' remains unconnected for this instance [VDB-1053]
-INFO     : Elaboration took 1.8120339 seconds [FlowMsg::StageDuration]
-INFO     :     Elaboration took 1.5625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Elaboration virtual memory usage: begin = 81.184 MB, end = 279.232 MB, delta = 198.048 MB [FlowMsg::VMUsage]
-INFO     :     Elaboration peak virtual memory usage = 279.232 MB [FlowMsg::VMUsage::Peak]
-INFO     : Elaboration resident set memory usage: begin = 89.872 MB, end = 289.696 MB, delta = 199.824 MB [FlowMsg::RSSUsage]
-INFO     :     Elaboration peak resident set memory usage = 289.696 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Elaboration took 2.222958 seconds [FlowMsg::StageDuration]
+INFO     :     Elaboration took 1.765625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Elaboration virtual memory usage: begin = 81.172 MB, end = 281.276 MB, delta = 200.104 MB [FlowMsg::VMUsage]
+INFO     :     Elaboration peak virtual memory usage = 281.276 MB [FlowMsg::VMUsage::Peak]
+INFO     : Elaboration resident set memory usage: begin = 100.36 MB, end = 302.436 MB, delta = 202.076 MB [FlowMsg::RSSUsage]
+INFO     :     Elaboration peak resident set memory usage = 302.436 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Elaboration ... *****
 INFO     : ... Setting Synthesis Option: mode=speed
 INFO     : ***** Beginning Reading Mapping Library ... *****
-INFO     : Reading Mapping Library took 0.091555 seconds [FlowMsg::StageDuration]
+INFO     : Reading Mapping Library took 0.0481145 seconds [FlowMsg::StageDuration]
 INFO     :     Reading Mapping Library took 0.03125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Reading Mapping Library virtual memory usage: begin = 307.96 MB, end = 307.96 MB, delta = 0 MB [FlowMsg::VMUsage]
-INFO     :     Reading Mapping Library peak virtual memory usage = 307.96 MB [FlowMsg::VMUsage::Peak]
-INFO     : Reading Mapping Library resident set memory usage: begin = 320.168 MB, end = 320.168 MB, delta = 0 MB [FlowMsg::RSSUsage]
-INFO     :     Reading Mapping Library peak resident set memory usage = 320.168 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Reading Mapping Library virtual memory usage: begin = 314.108 MB, end = 314.108 MB, delta = 0 MB [FlowMsg::VMUsage]
+INFO     :     Reading Mapping Library peak virtual memory usage = 314.108 MB [FlowMsg::VMUsage::Peak]
+INFO     : Reading Mapping Library resident set memory usage: begin = 334.216 MB, end = 334.216 MB, delta = 0 MB [FlowMsg::RSSUsage]
+INFO     :     Reading Mapping Library peak resident set memory usage = 334.216 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Reading Mapping Library ... *****
 INFO     : ... Pre-synthesis checks begin
 WARNING  : Removing redundant signal : Rx_HS_D_2[7:0]. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv:6307) [EFX-0200]
@@ -998,7 +997,7 @@ INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents.
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2627) [EFX-0677]
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2415) [EFX-0677]
 INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2203) [EFX-0677]
-INFO     : ... Pre-synthesis checks end (Real time : 0s)
+INFO     : ... Pre-synthesis checks end (Real time : 1s)
 INFO     : ... NameSpace init begin
 INFO     : ... NameSpace init end (Real time : 0s)
 INFO     : ... Mapping design "edge_vision_soc"
@@ -1019,7 +1018,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a29823
 INFO     : ... Hierarchical pre-synthesis "dphy_rx_deskew_cal_f123b49f0f574f64a9a2982368753f7b" begin
 INFO     : ... Hierarchical pre-synthesis "dphy_rx_deskew_cal_f123b49f0f574f64a9a2982368753f7b" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_dphy_rx_f123b49f0f574f64a9a2982368753f7b(HS_BYTECLK_MHZ=113,NUM_DATA_LANE=2,ENABLE_USER_DESKEWCAL=1'b0,DPHY_CLOCK_MODE="Discontinuous")" begin
-INFO     : ... Hierarchical pre-synthesis "efx_dphy_rx_f123b49f0f574f64a9a2982368753f7b(HS_BYTECLK_MHZ=113,NUM_DATA_LANE=2,ENABLE_USER_DESKEWCAL=1'b0,DPHY_CLOCK_MODE="Discontinuous")" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "efx_dphy_rx_f123b49f0f574f64a9a2982368753f7b(HS_BYTECLK_MHZ=113,NUM_DATA_LANE=2,ENABLE_USER_DESKEWCAL=1'b0,DPHY_CLOCK_MODE="Discontinuous")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a2982368753f7b(WIDTH=2)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a2982368753f7b(WIDTH=2)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a2982368753f7b" begin
@@ -1089,11 +1088,11 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f123b49f0f574f64a9a29823
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_byte2pixel_f123b49f0f574f64a9a2982368753f7b(PIXEL_FIFO_DEPTH=2048,ENABLE_VCX=1'b0,PACK_TYPE=15)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_byte2pixel_f123b49f0f574f64a9a2982368753f7b(PIXEL_FIFO_DEPTH=2048,ENABLE_VCX=1'b0,PACK_TYPE=15)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" begin
-INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_077823fa68f649b1a7074c944568f3e4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_077823fa68f649b1a7074c944568f3e4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_resetsync_077823fa68f649b1a7074c944568f3e4(ACTIVE_LOW=0)" begin
@@ -1107,7 +1106,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_077823fa68f649b1a7074c94
 INFO     : ... Hierarchical pre-synthesis "cam_pixel_remap_fifo" begin
 INFO     : ... Hierarchical pre-synthesis "cam_pixel_remap_fifo" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "min_max_timer(TIMER_WIDTH=30)" begin
-INFO     : ... Hierarchical pre-synthesis "min_max_timer(TIMER_WIDTH=30)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "min_max_timer(TIMER_WIDTH=30)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "axi_lite_register(S_AXI_WSTRB_WIDTH=4)" begin
 INFO     : ... Hierarchical pre-synthesis "axi_lite_register(S_AXI_WSTRB_WIDTH=4)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "blc(PIXEL_PER_CYCLE=2,PIXEL_BIT_WIDTH=12,TUSER_WIDTH=2)" begin
@@ -1191,7 +1190,7 @@ INFO     : ... Hierarchical pre-synthesis "common_true_dual_port_ram(DATA_WIDTH=
 INFO     : ... Hierarchical pre-synthesis "panel_config(INITIAL_CODE="source/display/dsi/dsi_panel_1080p_reg.mem")" begin
 INFO     : ... Hierarchical pre-synthesis "panel_config(INITIAL_CODE="source/display/dsi/dsi_panel_1080p_reg.mem")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" begin
-INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "common_simple_dual_port_ram(DATA_WIDTH=48,OUTPUT_REG="FALSE")" begin
 INFO     : ... Hierarchical pre-synthesis "common_simple_dual_port_ram(DATA_WIDTH=48,OUTPUT_REG="FALSE")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "scale_up_2x_nn" begin
@@ -1209,7 +1208,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_0ebd061cc55a4cdb9867e4fd
 INFO     : ... Hierarchical pre-synthesis "display_dma_fifo" begin
 INFO     : ... Hierarchical pre-synthesis "display_dma_fifo" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "display_dsi(FRAME_WIDTH=540,FRAME_HEIGHT=540)" begin
-INFO     : ... Hierarchical pre-synthesis "display_dsi(FRAME_WIDTH=540,FRAME_HEIGHT=540)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "display_dsi(FRAME_WIDTH=540,FRAME_HEIGHT=540)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_98c52b03a74a4ce095debab75db1d287" begin
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_98c52b03a74a4ce095debab75db1d287" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_98c52b03a74a4ce095debab75db1d287(WIDTH=1)" begin
@@ -1323,11 +1322,11 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_98c52b03a74a4ce095debab7
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DATA_WIDTH=36,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE       ",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DATA_WIDTH=36,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE       ",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_64b_packetizer_4lane_98c52b03a74a4ce095debab75db1d287(ENABLE_EOTP=1'b0,HS_LANE_FIFO_DEPTH=512)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_dsi_64b_packetizer_4lane_98c52b03a74a4ce095debab75db1d287(ENABLE_EOTP=1'b0,HS_LANE_FIFO_DEPTH=512)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_dsi_64b_packetizer_4lane_98c52b03a74a4ce095debab75db1d287(ENABLE_EOTP=1'b0,HS_LANE_FIFO_DEPTH=512)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_top_98c52b03a74a4ce095debab75db1d287(tINIT_NS=100000,ENABLE_INIT_SKEWCAL=0,ENABLE_EOTP=1'b0,HS_BYTECLK_MHZ=125,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,HS_DATA_WIDTH=8)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_top_98c52b03a74a4ce095debab75db1d287(tINIT_NS=100000,ENABLE_INIT_SKEWCAL=0,ENABLE_EOTP=1'b0,HS_BYTECLK_MHZ=125,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,HS_DATA_WIDTH=8)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_98c52b03a74a4ce095debab75db1d287(tLPX_NS=60,tCLK_ZERO_NS=280,tCLK_TRAIL_NS=100,tCLK_POST_NS=100,tCLK_PREPARE_NS=50,tHS_PREPARE_NS=50,tHS_EXIT_NS=120,tHS_ZERO_NS=200,tHS_TRAIL_NS=65,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,ENABLE_BIDIR=1'b1,ENABLE_EOTP=1'b0)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_98c52b03a74a4ce095debab75db1d287(tLPX_NS=60,tCLK_ZERO_NS=280,tCLK_TRAIL_NS=100,tCLK_POST_NS=100,tCLK_PREPARE_NS=50,tHS_PREPARE_NS=50,tHS_EXIT_NS=120,tHS_ZERO_NS=200,tHS_TRAIL_NS=65,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,ENABLE_BIDIR=1'b1,ENABLE_EOTP=1'b0)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_98c52b03a74a4ce095debab75db1d287(tLPX_NS=60,tCLK_ZERO_NS=280,tCLK_TRAIL_NS=100,tCLK_POST_NS=100,tCLK_PREPARE_NS=50,tHS_PREPARE_NS=50,tHS_EXIT_NS=120,tHS_ZERO_NS=200,tHS_TRAIL_NS=65,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,ENABLE_BIDIR=1'b1,ENABLE_EOTP=1'b0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "dsi_tx_display" begin
 INFO     : ... Hierarchical pre-synthesis "dsi_tx_display" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "common_apb3" begin
@@ -1357,7 +1356,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_b64bd53245f74d6a99e
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_b64bd53245f74d6a99e917bfa5663d9f(SYNC_CLK=0,WR_DEPTH=16,WADDR_WIDTH=4,RADDR_WIDTH=4,PROG_FULL_ASSERT=27,PROG_FULL_NEGATE=23,PROG_EMPTY_ASSERT=5,PROG_EMPTY_NEGATE=7,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_b64bd53245f74d6a99e917bfa5663d9f(SYNC_CLK=0,WR_DEPTH=16,WADDR_WIDTH=4,RADDR_WIDTH=4,PROG_FULL_ASSERT=27,PROG_FULL_NEGATE=23,PROG_EMPTY_ASSERT=5,PROG_EMPTY_NEGATE=7,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_b64bd53245f74d6a99e917bfa5663d9f(FAMILY="TITANIUM",DEPTH=16,DATA_WIDTH=54,PROGRAMMABLE_FULL="NONE",PROGRAMMABLE_EMPTY="NONE")" begin
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_b64bd53245f74d6a99e917bfa5663d9f(FAMILY="TITANIUM",DEPTH=16,DATA_WIDTH=54,PROGRAMMABLE_FULL="NONE",PROGRAMMABLE_EMPTY="NONE")" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_b64bd53245f74d6a99e917bfa5663d9f(FAMILY="TITANIUM",DEPTH=16,DATA_WIDTH=54,PROGRAMMABLE_FULL="NONE",PROGRAMMABLE_EMPTY="NONE")" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_b64bd53245f74d6a99e917bfa5663d9f(FAMILY="TITANIUM",WR_DEPTH=256,RD_DEPTH=1024,WDATA_WIDTH=160,RDATA_WIDTH=40,WADDR_WIDTH=8,RADDR_WIDTH=10,OUTPUT_REG=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_b64bd53245f74d6a99e917bfa5663d9f(FAMILY="TITANIUM",WR_DEPTH=256,RD_DEPTH=1024,WDATA_WIDTH=160,RDATA_WIDTH=40,WADDR_WIDTH=8,RADDR_WIDTH=10,OUTPUT_REG=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=11)" begin
@@ -1429,7 +1428,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_b64bd53245f74d6a99e917bf
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_b64bd53245f74d6a99e917bfa5663d9f(DEPTH=16,PROGRAMMABLE_FULL="NONE",PROGRAMMABLE_EMPTY="NONE",UNDERFLOW_PROTECT=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_b64bd53245f74d6a99e917bfa5663d9f(DEPTH=16,PROGRAMMABLE_FULL="NONE",PROGRAMMABLE_EMPTY="NONE",UNDERFLOW_PROTECT=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hbram_cal_ctrl_b64bd53245f74d6a99e917bfa5663d9f(CAL_MODE=2,RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CFG_CR1=16'b1111111111000001,CR0W_CA=48'b010000000001100000,CR1W_CA=48'b010000000000000000000000010000000001100000,TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0)" begin
-INFO     : ... Hierarchical pre-synthesis "hbram_cal_ctrl_b64bd53245f74d6a99e917bfa5663d9f(CAL_MODE=2,RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CFG_CR1=16'b1111111111000001,CR0W_CA=48'b010000000001100000,CR1W_CA=48'b010000000000000000000000010000000001100000,TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "hbram_cal_ctrl_b64bd53245f74d6a99e917bfa5663d9f(CAL_MODE=2,RAM_DBW=16,RAM_ABW=25,CFG_CR0=16'b1000111100101111,CFG_CR1=16'b1111111111000001,CR0W_CA=48'b010000000001100000,CR1W_CA=48'b010000000000000000000000010000000001100000,TCYC=5000,DUAL_RAM=0,INDIVI_DUAL_CAL=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hbram_cal_mst_b64bd53245f74d6a99e917bfa5663d9f(RAM_DBW=16,ONE_SEC=200000000,ONE_DAY=24,RECAL_DAYS=7,CAL_BYTES=100,DUAL_RAM=0)" begin
 INFO     : ... Hierarchical pre-synthesis "hbram_cal_mst_b64bd53245f74d6a99e917bfa5663d9f(RAM_DBW=16,ONE_SEC=200000000,ONE_DAY=24,RECAL_DAYS=7,CAL_BYTES=100,DUAL_RAM=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hbram_cal_slv_b64bd53245f74d6a99e917bfa5663d9f(CAL_BYTES=100,RAM_DBW=16,RAM_ABW=25,DUAL_RAM=0,INDIVI_DUAL_CAL=0)" begin
@@ -1441,7 +1440,7 @@ INFO     : ... Hierarchical pre-synthesis "hbram_cal_axi_top_b64bd53245f74d6a99e
 INFO     : ... Hierarchical pre-synthesis "hbram_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_ABW=25,CR0_ODS=0,CR0_ILC=2,CR0_WBL=3,CR1_HSE=1'b0,CR1_PAR=0,AXI_IF=1'b1,AXI_SBW=16,DDIN_MODE=1'b0,CAL_CLK_CH=4,CAL_CLK_CH_LO=4,CAL_CLK_CH_HI=8,CAL_BYTES=100,RECAL_DAYS=7)" begin
 INFO     : ... Hierarchical pre-synthesis "hbram_top_b64bd53245f74d6a99e917bfa5663d9f(RAM_ABW=25,CR0_ODS=0,CR0_ILC=2,CR0_WBL=3,CR1_HSE=1'b0,CR1_PAR=0,AXI_IF=1'b1,AXI_SBW=16,DDIN_MODE=1'b0,CAL_CLK_CH=4,CAL_CLK_CH_LO=4,CAL_CLK_CH_HI=8,CAL_BYTES=100,RECAL_DAYS=7)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hbram" begin
-INFO     : ... Hierarchical pre-synthesis "hbram" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "hbram" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "InstructionCache_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "InstructionCache_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "DataCache_de18e2be3a6c48b791003184013cbc81" begin
@@ -1453,7 +1452,7 @@ INFO     : ... Hierarchical pre-synthesis "EfxCPUSp1_de18e2be3a6c48b791003184013
 INFO     : ... Hierarchical pre-synthesis "EfxCPUSp2_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "EfxCPUSp2_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "VexRiscv_de18e2be3a6c48b791003184013cbc81" begin
-INFO     : ... Hierarchical pre-synthesis "VexRiscv_de18e2be3a6c48b791003184013cbc81" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "VexRiscv_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "DebugModule_de18e2be3a6c48b791003184013cbc81" begin
 WARNING  : Mapping into logic memory block 'logic_progbufX_mem' (64 bits) (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\SapphireSoc\SapphireSoc.v:12001) because size is too small (<=64) [EFX-0657]
 INFO     : ... Hierarchical pre-synthesis "DebugModule_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
@@ -1508,7 +1507,7 @@ INFO     : ... Hierarchical pre-synthesis "BufferCC_9_de18e2be3a6c48b79100318401
 INFO     : ... Hierarchical pre-synthesis "StreamFifoCC_1_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "StreamFifoCC_1_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "BmbCcFifo_de18e2be3a6c48b791003184013cbc81" begin
-INFO     : ... Hierarchical pre-synthesis "BmbCcFifo_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "BmbCcFifo_de18e2be3a6c48b791003184013cbc81" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "StreamArbiter_1_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "StreamArbiter_1_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "StreamFifo_2_de18e2be3a6c48b791003184013cbc81" begin
@@ -1551,7 +1550,7 @@ INFO     : ... Hierarchical pre-synthesis "BmbDecoder_2_de18e2be3a6c48b791003184
 INFO     : ... Hierarchical pre-synthesis "BmbClint_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "BmbClint_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "UartCtrlTx_de18e2be3a6c48b791003184013cbc81" begin
-INFO     : ... Hierarchical pre-synthesis "UartCtrlTx_de18e2be3a6c48b791003184013cbc81" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "UartCtrlTx_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "UartCtrlRx_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "UartCtrlRx_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "UartCtrl_de18e2be3a6c48b791003184013cbc81" begin
@@ -1585,79 +1584,79 @@ INFO     : ... Hierarchical pre-synthesis "StreamCCByToggle_2_de18e2be3a6c48b791
 INFO     : ... Hierarchical pre-synthesis "EfxSapphireSoc_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "EfxSapphireSoc_de18e2be3a6c48b791003184013cbc81" end (Real time : 2s)
 INFO     : ... Hierarchical pre-synthesis "SapphireSoc" begin
-INFO     : ... Hierarchical pre-synthesis "SapphireSoc" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "SapphireSoc" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hw_accel_apb3" begin
 INFO     : ... Hierarchical pre-synthesis "hw_accel_apb3" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_b96567f0242d4e849ec17cbf5402d695" end (Real time : 1s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_b96567f0242d4e849ec17cbf5402d695" end (Real time : 1s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_1_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_1_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_1_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_1_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Apb3CC_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_Apb3CC_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_12_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_12_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4ReadOnlyBridge_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4ReadOnlyBridge_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_3_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_3_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_1_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_1_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_1_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_1_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbWriteRetainer_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbWriteRetainer_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_2_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_2_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_1_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_1_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4WriteOnlyBridge_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4WriteOnlyBridge_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_2_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_2_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_3_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_3_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbUpSizerDense_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbUpSizerDense_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_4_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_4_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_1_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_1_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_7_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_7_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_2_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_2_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_9_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_9_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_3_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_3_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_11_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_11_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_4_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_4_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbDownSizerSparse_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbDownSizerSparse_b96567f0242d4e849ec17cbf5402d695" end (Real time : 0s)
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_b96567f0242d4e849ec17cbf5402d695" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_b96567f0242d4e849ec17cbf5402d695" end (Real time : 2s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_95902b8133b24d66a878fc45c6fe3819" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_95902b8133b24d66a878fc45c6fe3819" end (Real time : 2s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_1_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_1_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_1_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_FlowCCUnsafeByToggle_1_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Apb3CC_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_Apb3CC_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_12_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_12_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4ReadOnlyBridge_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4ReadOnlyBridge_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_3_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_3_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_1_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbSourceRemover_1_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_1_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_1_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbWriteRetainer_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbWriteRetainer_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_2_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifo_2_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_1_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbContextRemover_1_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4WriteOnlyBridge_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BmbToAxi4WriteOnlyBridge_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_2_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_2_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_3_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_3_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbUpSizerDense_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbUpSizerDense_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_4_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_4_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_1_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_1_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_7_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_7_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_2_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_2_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_9_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_9_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_3_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_3_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_11_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BufferCC_11_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_4_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_StreamFifoCC_4_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbDownSizerSparse_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbDownSizerSparse_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_95902b8133b24d66a878fc45c6fe3819" begin
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_95902b8133b24d66a878fc45c6fe3819" end (Real time : 2s)
 INFO     : ... Hierarchical pre-synthesis "dma" begin
-INFO     : ... Hierarchical pre-synthesis "dma" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "dma" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "priority_encoder(WIDTH=2,LSB_PRIORITY="HIGH")" begin
 INFO     : ... Hierarchical pre-synthesis "priority_encoder(WIDTH=2,LSB_PRIORITY="HIGH")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "priority_encoder(LSB_PRIORITY="HIGH")" begin
@@ -1669,8 +1668,8 @@ INFO     : ... Hierarchical pre-synthesis "axi_interconnect(S_COUNT=2,DATA_WIDTH
 INFO     : ... Hierarchical pre-synthesis "axi_full_to_half_duplex(DATA_WIDTH=128)" begin
 INFO     : ... Hierarchical pre-synthesis "axi_full_to_half_duplex(DATA_WIDTH=128)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" begin
-INFO     : ... Clock Enable Synthesis Performed on 3445 flops.
-INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" end (Real time : 18s)
+INFO     : ... Clock Enable Synthesis Performed on 3606 flops.
+INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" end (Real time : 20s)
 INFO     : ... Flat optimizations begin
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$c1'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2839) [EFX-0656]
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$b12'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2839) [EFX-0656]
@@ -1678,16 +1677,16 @@ WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$2'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2839) [EFX-0656]
 INFO     : ... Flat optimizations end (Real time : 0s)
 INFO     : ... Flat synthesis begin
-INFO     : ... Flat synthesis end (Real time : 0s)
+INFO     : ... Flat synthesis end (Real time : 1s)
 INFO     : ... Flat optimizations begin
-INFO     : ... Flat optimizations end (Real time : 1s)
+INFO     : ... Flat optimizations end (Real time : 0s)
 INFO     : ... Check and break combinational loops begin
 INFO     : ... Check and break combinational loops end (Real time : 0s)
 INFO     : ... Setup for logic synthesis begin
 INFO     : ... Setup for logic synthesis end (Real time : 1s)
 INFO     : ... LUT mapping begin
-INFO     : ... LS, strategy: 3, nd: 23228, ed: 76063, lv: 10, pw: 48276.38
-INFO     : ... LUT mapping end (Real time : 63s)
+INFO     : ... LS, strategy: 3, nd: 23285, ed: 76403, lv: 11, pw: 48432.83
+INFO     : ... LUT mapping end (Real time : 66s)
 INFO     : ... Post-synthesis Verific netlist creation begin
 INFO     : ... Post-synthesis Verific netlist creation end (Real time : 1s)
 INFO     : ***** Beginning VDB Netlist Checker ... *****
@@ -1773,28 +1772,28 @@ WARNING  : Net u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/popCC_popPtrPlus[0
 WARNING  : Net u_dma/u_EfxDMA/outputsAdapter_1_crossclock_fifo/popCC_popPtrPlus[0] is dangling. [VDB-8009]
 WARNING  : Net u_dma/u_EfxDMA/inputsAdapter_0_crossclock_fifo/popCC_popPtrPlus[0] is dangling. [VDB-8009]
 WARNING  : Found 123 warnings in the post-synthesis netlist.
-INFO     : VDB Netlist Checker took 0.1513771 seconds [FlowMsg::StageDuration]
-INFO     :     VDB Netlist Checker took 0.28125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : VDB Netlist Checker virtual memory usage: begin = 371.912 MB, end = 372.044 MB, delta = 0.132 MB [FlowMsg::VMUsage]
-INFO     :     VDB Netlist Checker peak virtual memory usage = 422.504 MB [FlowMsg::VMUsage::Peak]
-INFO     : VDB Netlist Checker resident set memory usage: begin = 390.368 MB, end = 390.572 MB, delta = 0.204 MB [FlowMsg::RSSUsage]
-INFO     :     VDB Netlist Checker peak resident set memory usage = 431.708 MB [FlowMsg::RSSUsage::Peak]
+INFO     : VDB Netlist Checker took 0.1950369 seconds [FlowMsg::StageDuration]
+INFO     :     VDB Netlist Checker took 0.359375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : VDB Netlist Checker virtual memory usage: begin = 374.116 MB, end = 374.22 MB, delta = 0.104 MB [FlowMsg::VMUsage]
+INFO     :     VDB Netlist Checker peak virtual memory usage = 430.508 MB [FlowMsg::VMUsage::Peak]
+INFO     : VDB Netlist Checker resident set memory usage: begin = 399.248 MB, end = 399.424 MB, delta = 0.176 MB [FlowMsg::RSSUsage]
+INFO     :     VDB Netlist Checker peak resident set memory usage = 449.616 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending VDB Netlist Checker ... *****
 INFO     : Resource Summary 
 INFO     : ======================================= 
-INFO     : EFX_ADD                 : 	3995
-INFO     : EFX_LUT4                : 	22790
+INFO     : EFX_ADD                 : 	3998
+INFO     : EFX_LUT4                : 	23018
 INFO     : EFX_DSP48               : 	15
-INFO     : EFX_FF                  : 	21946
+INFO     : EFX_FF                  : 	22104
 INFO     : EFX_SRL8                : 	10
-INFO     : EFX_RAM10               : 	196
+INFO     : EFX_RAM10               : 	210
 INFO     : ======================================= 
 INFO     : ... Post-Map Verilog Writer begin
 INFO     : Writing netlist 'edge_vision_soc' to Verilog file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.map.v' [VDB-1030]
 INFO     : ... Post-Map Verilog Writer end (Real time : 1s)
-INFO     : The entire flow of EFX_MAP took 119.2620532 seconds [FlowMsg::StageDuration]
-INFO     :     The entire flow of EFX_MAP took 140.0625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.032 MB, end = 459.952 MB, delta = 440.92 MB [FlowMsg::VMUsage]
-INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 459.952 MB [FlowMsg::VMUsage::Peak]
-INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.696 MB, end = 472.476 MB, delta = 452.78 MB [FlowMsg::RSSUsage]
-INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 472.476 MB [FlowMsg::RSSUsage::Peak]
+INFO     : The entire flow of EFX_MAP took 128.6068362 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_MAP took 153.34375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.012 MB, end = 454.252 MB, delta = 435.24 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 454.916 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.668 MB, end = 473.688 MB, delta = 454.02 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 474.348 MB [FlowMsg::RSSUsage::Peak]
