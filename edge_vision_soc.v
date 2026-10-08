@@ -1356,27 +1356,27 @@ module edge_vision_soc #(
   // Hardware Accelerator - Processing Wrapper
   ///////////////////////////////////////////////////////////////////////////////
 
-  // hw_accel_wrapper #(
-  //     .FRAME_WIDTH        (FRAME_WIDTH),
-  //     .FRAME_HEIGHT       (FRAME_HEIGHT),
-  //     .DMA_TRANSFER_LENGTH(FRAME_WIDTH * FRAME_HEIGHT)  //S2MM DMA transfer
-  // ) u_hw_accel_wrapper (
-  //     .clk                (i_systemClk),
-  //     .rst                (io_systemReset),
-  //     .apb_slave_clk      (peripheralClk),
-  //     .apb_slave_rst      (peripheralReset),
-  //     .i_sobel_thresh_var (sobel_thresh_var),
-  //     .i_hw_accel_mode    (hw_accel_mode),
-  //     .i_dma_wr_init_done (dma_wr_init_done),
-  //     .dma_rready         (hw_accel_dma_rready),
-  //     .dma_rvalid         (hw_accel_dma_rvalid),
-  //     .dma_rdata          (hw_accel_dma_rdata),
-  //     .dma_rkeep          (hw_accel_dma_rkeep),
-  //     .dma_wready         (hw_accel_dma_wready),
-  //     .dma_wvalid         (hw_accel_dma_wvalid),
-  //     .dma_wlast          (hw_accel_dma_wlast),
-  //     .dma_wdata          (hw_accel_dma_wdata)
-  // );
+  hw_accel_wrapper #(
+      .FRAME_WIDTH        (FRAME_WIDTH),
+      .FRAME_HEIGHT       (FRAME_HEIGHT),
+      .DMA_TRANSFER_LENGTH(FRAME_WIDTH * FRAME_HEIGHT)  //S2MM DMA transfer
+  ) u_hw_accel_wrapper (
+      .clk                (i_systemClk),
+      .rst                (io_systemReset),
+      .apb_slave_clk      (peripheralClk),
+      .apb_slave_rst      (peripheralReset),
+      .i_sobel_thresh_var (sobel_thresh_var),
+      .i_hw_accel_mode    (hw_accel_mode),
+      .i_dma_wr_init_done (dma_wr_init_done),
+      .dma_rready         (hw_accel_dma_rready),
+      .dma_rvalid         (hw_accel_dma_rvalid),
+      .dma_rdata          (hw_accel_dma_rdata),
+      .dma_rkeep          (hw_accel_dma_rkeep),
+      .dma_wready         (hw_accel_dma_wready),
+      .dma_wvalid         (hw_accel_dma_wvalid),
+      .dma_wlast          (hw_accel_dma_wlast),
+      .dma_wdata          (hw_accel_dma_wdata)
+  );
 
   ///////////////////////////////////////////////////////////////////////////////
   // DMA Controller

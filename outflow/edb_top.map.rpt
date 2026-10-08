@@ -1,6 +1,6 @@
 Efinity Synthesis report for project edb_top
 Version: 2026.1.132.1.15
-Generated at: Oct 08, 2026 14:19:03
+Generated at: Oct 08, 2026 18:54:12
 Copyright (C) 2013 - 2026  All rights reserved.
 
 Top-level Entity Name : edb_top
@@ -58,65 +58,65 @@ Total number of FFs with enable signals: 1102
 |debug_hub_inst/n96                              |               82 |
 |la0/la_biu_inst/data_o_en                       |               65 |
 |la0/tu_trigger                                  |               64 |
-|la0/n1311                                       |               64 |
 |la0/n1828                                       |               64 |
 |ceg_net8                                        |               64 |
+|la0/n1311                                       |               64 |
 |ceg_net19                                       |               32 |
-|la0/n9904                                       |               30 |
-|la0/n11852                                      |               30 |
-|la0/n19236                                      |               30 |
-|la0/n10977                                      |               30 |
 |la0/n10779                                      |               30 |
-|la0/n13123                                      |               30 |
-|la0/n9706                                       |               30 |
-|la0/n18361                                      |               30 |
 |la0/n12925                                      |               30 |
+|la0/n13123                                      |               30 |
 |la0/n12050                                      |               30 |
-|la0/n18163                                      |               30 |
+|la0/n11852                                      |               30 |
+|la0/n10977                                      |               30 |
+|la0/n9706                                       |               30 |
+|la0/n9904                                       |               30 |
 |la0/n19434                                      |               30 |
+|la0/n19236                                      |               30 |
+|la0/n18163                                      |               30 |
+|la0/n18361                                      |               30 |
 |la0/addr_ct_en                                  |               26 |
-|la0/n20465                                      |               24 |
-|la0/n20267                                      |               24 |
 |ceg_net26                                       |               24 |
+|la0/n20267                                      |               24 |
+|la0/n20465                                      |               24 |
 |la0/n1961                                       |               22 |
 |la0/n31941                                      |               21 |
 |la0/word_ct_en                                  |               16 |
 |la0/la_biu_inst/n569                            |               14 |
 |la0/regsel_ld_en                                |               13 |
-|la0/la_biu_inst/fifo_with_read_inst/is_last_data|               11 |
 |la0/la_biu_inst/fifo_push                       |               11 |
 |la0/la_biu_inst/n2978                           |               11 |
+|la0/la_biu_inst/fifo_with_read_inst/is_last_data|               11 |
 |ceg_net2                                        |                6 |
-|debug_hub_inst/n267                             |                4 |
 |la0/op_reg_en                                   |                4 |
-|la0/n21109                                      |                3 |
+|debug_hub_inst/n267                             |                4 |
+|la0/n13773                                      |                3 |
+|ceg_net5                                        |                3 |
+|la0/n14606                                      |                3 |
+|la0/n9691                                       |                3 |
+|la0/n10764                                      |                3 |
+|la0/n2817                                       |                3 |
+|la0/n16272                                      |                3 |
+|la0/n11837                                      |                3 |
 |la0/n22775                                      |                3 |
 |la0/n21942                                      |                3 |
-|la0/n20252                                      |                3 |
-|la0/n2817                                       |                3 |
-|la0/n8648                                       |                3 |
-|la0/n9691                                       |                3 |
-|la0/n13773                                      |                3 |
-|la0/n14606                                      |                3 |
-|la0/n15439                                      |                3 |
-|la0/n12910                                      |                3 |
+|la0/n21109                                      |                3 |
 |la0/n19221                                      |                3 |
-|la0/n16272                                      |                3 |
 |la0/n18148                                      |                3 |
-|la0/n11837                                      |                3 |
-|la0/n3650                                       |                3 |
-|la0/n4483                                       |                3 |
-|la0/n5316                                       |                3 |
-|la0/n6149                                       |                3 |
+|la0/n20252                                      |                3 |
 |la0/n6982                                       |                3 |
-|la0/n7815                                       |                3 |
+|la0/n3650                                       |                3 |
+|la0/n5316                                       |                3 |
+|la0/n4483                                       |                3 |
+|la0/n6149                                       |                3 |
+|la0/n15439                                      |                3 |
 |la0/n17105                                      |                3 |
-|la0/n10764                                      |                3 |
-|ceg_net5                                        |                3 |
-|debug_hub_inst/n265                             |                1 |
-|ceg_net14                                       |                1 |
+|la0/n7815                                       |                3 |
+|la0/n8648                                       |                3 |
+|la0/n12910                                      |                3 |
 |ceg_net27                                       |                1 |
 |la0/trigger_skipper_n/equal_6/n127              |                1 |
+|ceg_net14                                       |                1 |
+|debug_hub_inst/n265                             |                1 |
 +------------------------------------------------+------------------+
 
 ### ### EFX_FF CE enables (end) ### ### ###
@@ -135,9 +135,9 @@ Total number of FFs with set/reset signals: 1121
 |la0/la_biu_inst/fifo_with_read_inst/n1779|               34 |
 |la0/la_biu_inst/fifo_rstn                |               23 |
 |la0/n2804                                |                2 |
-|la0/trigger_skipper_n/n469               |                1 |
-|la0/n32850                               |                1 |
 |la0/la_biu_inst/n2992                    |                1 |
+|la0/trigger_skipper_n/n469               |                1 |
+|la0/n32853                               |                1 |
 +-----------------------------------------+------------------+
 
 ### ### EFX_FF SR set/reset (end) ### ### ###
@@ -167,39 +167,39 @@ Total number of FFs with set/reset signals: 1121
 
 Module                                                              FFs      SRLs      ADDs       LUTs    COMB4s      RAMs DSP/MULTs
 ------------------------------------------------------------        ---      ----      ----       ----      ----      ---- ---------
-edb_top:edb_top                                                 1887(0)    220(0)    156(0)    2491(0)      0(0)     45(0)      0(0)
- +la0:edb_la_top_746783ef452b46fdaeb1fe9c8caf68d8_renamed... 1800(1007)    220(0)   156(41)  2460(488)      0(0)     45(0)      0(0)
-  +axi_crc_i:edb_adbg_crc32_746783ef452b46fdaeb1fe9c8caf68d8     32(32)      0(0)      0(0)     36(36)      0(0)      0(0)      0(0)
-  +GEN_PROBE[0].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[1].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[2].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[3].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[4].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[5].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[6].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[7].genblk7.genblk3.trigger_cu:compare_unit_7...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[8].genblk7.genblk3.trigger_cu:compare_unit_7...     63(63)      0(0)      0(0)   142(142)      0(0)      0(0)      0(0)
-  +GEN_PROBE[9].genblk7.genblk3.trigger_cu:compare_unit_7...     63(63)      0(0)      0(0)   143(143)      0(0)      0(0)      0(0)
-  +GEN_PROBE[10].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   144(144)      0(0)      0(0)      0(0)
-  +GEN_PROBE[11].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   148(148)      0(0)      0(0)      0(0)
+edb_top:edb_top                                                 1887(0)    220(0)    156(0)    2469(0)      0(0)     45(0)      0(0)
+ +la0:edb_la_top_fa057f12fb634a4c9838ea033b743904_renamed... 1800(1007)    220(0)   156(41)  2438(462)      0(0)     45(0)      0(0)
+  +axi_crc_i:edb_adbg_crc32_fa057f12fb634a4c9838ea033b743904     32(32)      0(0)      0(0)     40(40)      0(0)      0(0)      0(0)
+  +GEN_PROBE[0].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[1].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[2].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[3].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[4].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[5].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[6].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[7].genblk7.genblk3.trigger_cu:compare_unit_f...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
+  +GEN_PROBE[8].genblk7.genblk3.trigger_cu:compare_unit_f...     63(63)      0(0)      0(0)   143(143)      0(0)      0(0)      0(0)
+  +GEN_PROBE[9].genblk7.genblk3.trigger_cu:compare_unit_f...     63(63)      0(0)      0(0)   140(140)      0(0)      0(0)      0(0)
+  +GEN_PROBE[10].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   140(140)      0(0)      0(0)      0(0)
+  +GEN_PROBE[11].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   140(140)      0(0)      0(0)      0(0)
   +GEN_PROBE[12].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
   +GEN_PROBE[13].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
   +GEN_PROBE[14].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
   +GEN_PROBE[15].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
   +GEN_PROBE[16].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +GEN_PROBE[17].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   139(139)      0(0)      0(0)      0(0)
-  +GEN_PROBE[18].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   147(147)      0(0)      0(0)      0(0)
-  +GEN_PROBE[19].genblk7.genblk3.trigger_cu:compare_unit_...     51(51)      0(0)      0(0)   113(113)      0(0)      0(0)      0(0)
+  +GEN_PROBE[17].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   141(141)      0(0)      0(0)      0(0)
+  +GEN_PROBE[18].genblk7.genblk3.trigger_cu:compare_unit_...     63(63)      0(0)      0(0)   144(144)      0(0)      0(0)      0(0)
+  +GEN_PROBE[19].genblk7.genblk3.trigger_cu:compare_unit_...     51(51)      0(0)      0(0)   112(112)      0(0)      0(0)      0(0)
   +GEN_PROBE[20].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
   +GEN_PROBE[21].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
   +GEN_PROBE[22].genblk7.genblk3.trigger_cu:compare_unit_...       7(7)      0(0)      0(0)       7(7)      0(0)      0(0)      0(0)
-  +trigger_tu:trigger_unit_746783ef452b46fdaeb1fe9c8caf68...       1(1)      0(0)      0(0)     34(34)      0(0)      0(0)      0(0)
-  +trigger_skipper_n:trigger_skipper_746783ef452b46fdaeb1...     65(65)      0(0)    63(63)   226(226)      0(0)      0(0)      0(0)
-  +la_biu_inst:la_biu_746783ef452b46fdaeb1fe9c8caf68d8(CA...    154(97)    220(0)     52(0)   588(265)      0(0)     45(0)      0(0)
-   +fifo_with_read_inst:fifo_with_read_746783ef452b46fdae...     57(57)  220(220)    52(52)    323(60)      0(0)     45(0)      0(0)
-    +transcode_write_addr:fifo_address_trancode_unit_7467...       0(0)      0(0)      0(0)     43(43)      0(0)      0(0)      0(0)
-    +simple_dual_port_ram_inst:edb_simple_dual_port_ram_7...       0(0)      0(0)      0(0)   220(220)      0(0)    45(45)      0(0)
- +debug_hub_inst:debug_hub_746783ef452b46fdaeb1fe9c8caf68d8      87(87)      0(0)      0(0)     31(31)      0(0)      0(0)      0(0)
+  +trigger_tu:trigger_unit_fa057f12fb634a4c9838ea033b7439...       1(1)      0(0)      0(0)     33(33)      0(0)      0(0)      0(0)
+  +trigger_skipper_n:trigger_skipper_fa057f12fb634a4c9838...     65(65)      0(0)    63(63)   237(237)      0(0)      0(0)      0(0)
+  +la_biu_inst:la_biu_fa057f12fb634a4c9838ea033b743904(CA...    154(97)    220(0)     52(0)   594(273)      0(0)     45(0)      0(0)
+   +fifo_with_read_inst:fifo_with_read_fa057f12fb634a4c98...     57(57)  220(220)    52(52)    321(46)      0(0)     45(0)      0(0)
+    +transcode_write_addr:fifo_address_trancode_unit_fa05...       0(0)      0(0)      0(0)     55(55)      0(0)      0(0)      0(0)
+    +simple_dual_port_ram_inst:edb_simple_dual_port_ram_f...       0(0)      0(0)      0(0)   220(220)      0(0)    45(45)      0(0)
+ +debug_hub_inst:debug_hub_fa057f12fb634a4c9838ea033b743904      87(87)      0(0)      0(0)     31(31)      0(0)      0(0)      0(0)
 
 ### ### Module Resource Usage Distribution Estimates (end) ### ###
 
@@ -225,15 +225,15 @@ INPUT  PORTS    : 	231
 OUTPUT PORTS    : 	1
 
 EFX_ADD                 : 	156
-EFX_LUT4                : 	2491
-   1-2  Inputs          : 	905
-   3    Inputs          : 	416
-   4    Inputs          : 	1170
+EFX_LUT4                : 	2469
+   1-2  Inputs          : 	889
+   3    Inputs          : 	367
+   4    Inputs          : 	1213
 EFX_FF                  : 	1887
 EFX_SRL8                : 	220
 EFX_RAM10               : 	45
 EFX_GBUFCE              : 	1
 ### ### Resource Summary (end) ### ### ###
 
-Plain synthesis (without verilog dump and post-map checks) time : 15s
-Elapsed synthesis time : 16s
+Plain synthesis (without verilog dump and post-map checks) time : 16s
+Elapsed synthesis time : 17s

@@ -302,25 +302,12 @@ end
 //always exactly MIPI_FRAME_WIDTH/ISP_PPC = 960 beats on this side because
 //the remap FIFO delivers the MIPI pixel stream 1:1), tuser marks the first
 //2PPC beat of a new frame (SOF).
-//
-//FIX (Bug #1 - black screen): colorgain.sv / ccm.sv / blc.sv latch their
-//gain / CCM-matrix / black-level configuration ONLY when a tuser (SOF) beat
-//arrives, and their latched registers power up at ZERO. The AXI-Lite
-//register defaults (unity gain 0x0080 / identity CCM 0x1000) never reach
-//them without a SOF beat. isp_sof_pending used to reset to 0 and was only
-//armed by cam_vs_2PPC - a pulse that fires after a FULL frame has already
-//streamed through - so the first captured frame entered isp_top with no SOF
-//at all and every pixel was multiplied by gain 0 / matrix 0 (black frame).
-//Arm the SOF at reset so the very first captured frame is also framed;
-//subsequent frames keep being framed by the existing cam_vs_2PPC mechanism
-//(the pulse fires during the vertical blanking after each frame, so the
-//pending flag survives the inter-frame gap of both single-shot and
-//continuous capture).
+
 always @(posedge mipi_pclk)
 begin
    if (~rst_n) begin
       isp_s_line_count <= {ISP_LINE_CNT_BIT{1'b0}};
-      isp_sof_pending  <= 1'b1;   //FIX: arm SOF for the first captured frame
+      isp_sof_pending  <= 1'b1;
       cam_y_count      <= {CAM_Y_COUNT_BIT{1'b0}};
    end else begin
       isp_s_line_count <= (cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
@@ -333,12 +320,8 @@ begin
 end
 
 assign isp_s_axis_tvalid = cam_pixel_remap_2ppc_valid;
-//FIX (Bug #4): pack the two 8-bit RAW pixels as 12-bit values ({px, 4'b0})
-//so they span the full input range of the ISP's 4096-entry gamma LUT.
-//pixel 0 (left/even pixel) occupies tdata[11:0], pixel 1 (right/odd pixel)
-//tdata[23:12] - this is the packing colorgain.sv expects (pixel_0 = LSB).
 assign isp_s_axis_tdata  = {2'b00, cam_pixel_remap_2ppc_data[19:10],    //pixel 1 (odd)
-                            2'b00,cam_pixel_remap_2ppc_data[9:0]};  //pixel 0 (even)
+                            2'b00,cam_pixel_remap_2ppc_data[9:0]};      //pixel 0 (even)
 assign isp_s_axis_tlast  = cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
 assign end_of_frame      = isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1);
 assign isp_s_axis_tuser  = {end_of_frame, isp_sof_pending};
@@ -576,30 +559,7 @@ reg [10:0] mipi_y_count;
 reg [10:0] crop_x_count;
 reg [10:0] crop_y_count;
 
-//FIX (Bug #2 - crop window drift / DMA framing): the AMD ISP is NOT 1:1
-//with the 2PPC pixel stream the way the old cam_line_buffer +
-//cam_raw_to_rgb pipeline was:
-//   - demosaic.sv flushes its 3-deep horizontal window pipeline at every
-//     EOL, so every 960-beat input line produces only 958 output beats
-//     (the first and last beat of each line are consumed as window
-//     context), and
-//   - (after the linebuffer.sv fix) every input line still yields exactly
-//     one output line, so a frame is 1080 lines x 958 beats.
-//The old free-running mod-(MIPI_FRAME_WIDTH/2) / mod-(MIPI_FRAME_HEIGHT)
-//counters therefore drifted: the x wrap point slid 2 beats per line and y
-//never completed a frame, so cam_crop's start-corner condition
-//(in_y == Y_START && in_x == X_START) landed at arbitrary positions - the
-//crop window slid through the image and the DMA never received exactly
-//145,800 beats per frame (frame buffer rolls/tears, firmware can hang on
-//dmasg_busy in single-shot capture).
-//Instead, lock the counters to the ISP's actual output framing:
-//   - x resets on every isp_m_axis_tlast (EOL of a 958-beat output line),
-//   - y increments on EOL and wraps at MIPI_FRAME_HEIGHT (exactly 1080
-//     EOLs occur per captured frame), so y = 0 at the first output line of
-//     every frame and the crop start corner hits precisely once per frame.
-//The 540-beat crop window (X_START=210..749) still fits inside the 958-beat
-//line, so the crop/scale/DMA path again delivers exactly 145,800 beats per
-//frame as the firmware DMA descriptor expects.
+
 always @(posedge mipi_pclk)
 begin
    if (~rst_n)

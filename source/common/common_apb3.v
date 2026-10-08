@@ -184,19 +184,20 @@ integer              byteIndex;
                'd37  : slaveRegOut <= isp_info3[63:33];
                'd38  : slaveRegOut <= isp_info4[63:33];
                'd39  : slaveRegOut <= isp_info5[63:33];
-               'd40  : slaveRegOut <= {{20{1'b0}},
-                                       isp_info5[32],
-                                       isp_info4[32],
-                                       isp_info3[32],
-                                       isp_info2[32],
-                                       isp_info1[32],
-                                       isp_info0[32],
-                                       isp_info5[ 0],
-                                       isp_info4[ 0],
-                                       isp_info3[ 0],
-                                       isp_info2[ 0],
-                                       isp_info1[ 0],
-                                       isp_info0[ 0]};
+               // 'd40  : slaveRegOut <= {{20{1'b0}},
+               //                         isp_info5[32],
+               //                         isp_info4[32],
+               //                         isp_info3[32],
+               //                         isp_info2[32],
+               //                         isp_info1[32],
+               //                         isp_info0[32],
+               //                         isp_info5[ 0],
+               //                         isp_info4[ 0],
+               //                         isp_info3[ 0],
+               //                         isp_info2[ 0],
+               //                         isp_info1[ 0],
+               //                         isp_info0[ 0]};
+               'd40  : slaveRegOut <= {{20'b0},{12{1'b1}}}; //tied all signals to 1 for continuous read
                default: begin slaveRegOut <= slaveRegOut; end
             endcase
          end
