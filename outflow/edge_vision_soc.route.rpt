@@ -1,7 +1,7 @@
 
 Efinix FPGA Placement and Routing.
 Version: 2026.1.132.1.15 
-Date: Thu Oct  8 09:43:08 2026
+Date: Thu Oct  8 14:25:28 2026
 
 Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
  
@@ -38,4 +38,4 @@ Elapsed time for routing: 0 hours 0 minutes 56 seconds
 ----------- GBUFCE Assignments (end) ----------
 
 
-Elapsed time for Latest PnR Run: 0 hours 3 minutes 17 seconds
+Elapsed time for Latest PnR Run: 0 hours 4 minutes 3 seconds

@@ -13,160 +13,160 @@ WARNING  : Found 126 warnings in the post-synthesis netlist.
 INFO     : Reading core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
 INFO     : Successfully read core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
 INFO     : Creating interface clock pin i_hbramClk_fb [DBMsg::NetlistInterfaceClockPinCreated]
-WARNING  : logical_block LUT__136912 #22599 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136913 #22600 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136914 #22601 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136915 #22602 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136916 #22603 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136917 #22604 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[0]~FF #23662 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[1]~FF #23663 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[2]~FF #23664 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[3]~FF #23665 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[0]~FF #23666 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[1]~FF #23667 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[2]~FF #23668 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[3]~FF #23669 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_addr[31]~FF #29751 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[0]~FF #29761 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[1]~FF #29762 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[2]~FF #29763 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[3]~FF #29764 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_lock~FF #29781 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_prot[0]~FF #29782 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_prot[1]~FF #29783 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_prot[2]~FF #29784 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[0]~FF #29785 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[1]~FF #29786 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[2]~FF #29787 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[3]~FF #29788 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[0]~FF #29789 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[1]~FF #29790 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[2]~FF #29791 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[3]~FF #29792 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[0]~FF #29798 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[1]~FF #29799 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[2]~FF #29800 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[3]~FF #29801 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[4]~FF #29802 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[5]~FF #29803 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[6]~FF #29804 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[7]~FF #29805 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[0]~FF #46493 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[10]~FF #46494 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[11]~FF #46495 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[12]~FF #46496 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[13]~FF #46497 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[14]~FF #46498 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[15]~FF #46499 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[1]~FF #46500 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[2]~FF #46501 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[3]~FF #46502 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[4]~FF #46503 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[5]~FF #46504 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[6]~FF #46505 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[7]~FF #46506 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[8]~FF #46507 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[9]~FF #46508 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[0]~FF #47636 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[1]~FF #47637 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[2]~FF #47638 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[3]~FF #47639 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[4]~FF #47640 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[5]~FF #47641 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[6]~FF #47642 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[7]~FF #47643 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #49858 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #49859 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #49860 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #49861 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #49862 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #49863 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136912 #22599 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136913 #22600 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136914 #22601 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136915 #22602 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136916 #22603 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block LUT__136917 #22604 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[0]~FF #23662 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[1]~FF #23663 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[2]~FF #23664 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_arregion[3]~FF #23665 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[0]~FF #23666 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[1]~FF #23667 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[2]~FF #23668 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block dma_awregion[3]~FF #23669 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_addr[31]~FF #29751 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[0]~FF #29761 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[1]~FF #29762 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[2]~FF #29763 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_cache[3]~FF #29764 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_lock~FF #29781 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_prot[0]~FF #29782 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_prot[1]~FF #29783 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_prot[2]~FF #29784 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[0]~FF #29785 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[1]~FF #29786 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[2]~FF #29787 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_qos[3]~FF #29788 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[0]~FF #29789 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[1]~FF #29790 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[2]~FF #29791 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_arw_payload_region[3]~FF #29792 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[0]~FF #29798 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[1]~FF #29799 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[2]~FF #29800 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[3]~FF #29801 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[4]~FF #29802 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[5]~FF #29803 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[6]~FF #29804 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block soc_io_w_payload_id[7]~FF #29805 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[0]~FF #46493 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[10]~FF #46494 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[11]~FF #46495 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[12]~FF #46496 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[13]~FF #46497 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[14]~FF #46498 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[15]~FF #46499 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[1]~FF #46500 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[2]~FF #46501 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[3]~FF #46502 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[4]~FF #46503 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[5]~FF #46504 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[6]~FF #46505 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[7]~FF #46506 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[8]~FF #46507 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[9]~FF #46508 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[0]~FF #47636 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[1]~FF #47637 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[2]~FF #47638 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[3]~FF #47639 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[4]~FF #47640 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[5]~FF #47641 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[6]~FF #47642 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[7]~FF #47643 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #49858 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #49859 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #49860 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #49861 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #49862 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
-WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #49863 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137695 #22950 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137696 #22951 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137697 #22952 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137698 #22953 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137699 #22954 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137700 #22955 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[0]~FF #24013 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[1]~FF #24014 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[2]~FF #24015 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[3]~FF #24016 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[0]~FF #24017 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[1]~FF #24018 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[2]~FF #24019 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[3]~FF #24020 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_addr[31]~FF #30102 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[0]~FF #30112 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[1]~FF #30113 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[2]~FF #30114 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[3]~FF #30115 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_lock~FF #30132 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_prot[0]~FF #30133 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_prot[1]~FF #30134 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_prot[2]~FF #30135 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[0]~FF #30136 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[1]~FF #30137 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[2]~FF #30138 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[3]~FF #30139 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[0]~FF #30140 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[1]~FF #30141 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[2]~FF #30142 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[3]~FF #30143 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[0]~FF #30149 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[1]~FF #30150 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[2]~FF #30151 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[3]~FF #30152 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[4]~FF #30153 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[5]~FF #30154 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[6]~FF #30155 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[7]~FF #30156 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[0]~FF #46928 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[10]~FF #46929 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[11]~FF #46930 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[12]~FF #46931 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[13]~FF #46932 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[14]~FF #46933 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[15]~FF #46934 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[1]~FF #46935 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[2]~FF #46936 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[3]~FF #46937 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[4]~FF #46938 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[5]~FF #46939 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[6]~FF #46940 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[7]~FF #46941 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[8]~FF #46942 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[9]~FF #46943 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[0]~FF #48071 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[1]~FF #48072 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[2]~FF #48073 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[3]~FF #48074 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[4]~FF #48075 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[5]~FF #48076 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[6]~FF #48077 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[7]~FF #48078 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #50293 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #50294 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #50295 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #50296 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #50297 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #50298 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137695 #22950 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137696 #22951 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137697 #22952 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137698 #22953 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137699 #22954 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block LUT__137700 #22955 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[0]~FF #24013 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[1]~FF #24014 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[2]~FF #24015 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_arregion[3]~FF #24016 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[0]~FF #24017 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[1]~FF #24018 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[2]~FF #24019 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block dma_awregion[3]~FF #24020 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_addr[31]~FF #30102 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[0]~FF #30112 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[1]~FF #30113 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[2]~FF #30114 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_cache[3]~FF #30115 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_lock~FF #30132 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_prot[0]~FF #30133 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_prot[1]~FF #30134 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_prot[2]~FF #30135 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[0]~FF #30136 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[1]~FF #30137 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[2]~FF #30138 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_qos[3]~FF #30139 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[0]~FF #30140 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[1]~FF #30141 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[2]~FF #30142 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_arw_payload_region[3]~FF #30143 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[0]~FF #30149 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[1]~FF #30150 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[2]~FF #30151 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[3]~FF #30152 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[4]~FF #30153 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[5]~FF #30154 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[6]~FF #30155 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block soc_io_w_payload_id[7]~FF #30156 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[0]~FF #46928 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[10]~FF #46929 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[11]~FF #46930 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[12]~FF #46931 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[13]~FF #46932 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[14]~FF #46933 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[15]~FF #46934 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[1]~FF #46935 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[2]~FF #46936 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[3]~FF #46937 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[4]~FF #46938 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[5]~FF #46939 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[6]~FF #46940 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[7]~FF #46941 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[8]~FF #46942 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_hbram/u_hbram_top/hbc_dq_OE_2[9]~FF #46943 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[0]~FF #48071 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[1]~FF #48072 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[2]~FF #48073 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[3]~FF #48074 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[4]~FF #48075 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[5]~FF #48076 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[6]~FF #48077 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/io_ddrA_r_rData_id[7]~FF #48078 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #50293 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #50294 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #50295 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #50296 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #50297 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
+WARNING  : logical_block u_risc_v/u_EfxSapphireSoc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #50298 has no fanout [DBMsg::NetlistLogicalBlockNoFanout]
 INFO     : Reading core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
 INFO     : Successfully read core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
 WARNING  : Clock source "jtag_inst1_TCK" does not use a dedicated clock pad, extra clock insertion delay will been added
 WARNING  : Clock source "jtag_inst2_autodbg_TCK__" does not use a dedicated clock pad, extra clock insertion delay will been added
 INFO     : Counting 2 clocks that are not assigned to clock resources as global clocks.
-INFO     : XLR count after merging: 42282
-INFO     : Netlist has 25094 luts, 23895 ffs and 4173 adders [PackerMsg::NetlistStatistics]
-INFO     : Packed into 42282 clusters with 2.4399981(1.0439194) inputs(outputs) per cluster for a total of 103168(44139) inputs(outputs) [PackerMsg::ClusterPackingStatistics]
-INFO     : Packed into 42282 xlrs with 2.4399981(1.0439194) inputs(outputs) per xlr for a total of 103168(44139) inputs(outputs) [PackerMsg::XLRPackingStatistics]
+INFO     : XLR count after merging: 42666
+INFO     : Netlist has 25445 luts, 23883 ffs and 4269 adders [PackerMsg::NetlistStatistics]
+INFO     : Packed into 42666 clusters with 2.4464211(1.0432194) inputs(outputs) per cluster for a total of 104379(44510) inputs(outputs) [PackerMsg::ClusterPackingStatistics]
+INFO     : Packed into 42666 xlrs with 2.4464211(1.0432194) inputs(outputs) per xlr for a total of 104379(44510) inputs(outputs) [PackerMsg::XLRPackingStatistics]
 INFO     : Packed 0 fracturable DSPs into 0 clusters [PackerMsg::DSPPackingStatistics]
-INFO     : Packing took 9.3538417 seconds [FlowMsg::StageDuration]
-INFO     :     Packing took 21.421875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Packing virtual memory usage: begin = 60.564 MB, end = 406.088 MB, delta = 345.524 MB [FlowMsg::VMUsage]
-INFO     :     Packing peak virtual memory usage = 406.088 MB [FlowMsg::VMUsage::Peak]
-INFO     : Packing resident set memory usage: begin = 66.984 MB, end = 415.344 MB, delta = 348.36 MB [FlowMsg::RSSUsage]
-INFO     :     Packing peak resident set memory usage = 415.344 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Packing took 11.0336398 seconds [FlowMsg::StageDuration]
+INFO     :     Packing took 23.8125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Packing virtual memory usage: begin = 60.612 MB, end = 376.452 MB, delta = 315.84 MB [FlowMsg::VMUsage]
+INFO     :     Packing peak virtual memory usage = 395.54 MB [FlowMsg::VMUsage::Peak]
+INFO     : Packing resident set memory usage: begin = 64.544 MB, end = 385.428 MB, delta = 320.884 MB [FlowMsg::RSSUsage]
+INFO     :     Packing peak resident set memory usage = 389.06 MB [FlowMsg::RSSUsage::Peak]
 WARNING  : No ports matched 'jtag_inst1_DRCK'
 WARNING  : [SDC C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/edge_vision_soc.sdc:65] set_input_delay: No valid input port(s) found
 WARNING  : [SDC C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/edge_vision_soc.sdc:65] Unable to run 'set_input_delay' constraint due to warnings found
@@ -177,229 +177,229 @@ INFO     : SDC file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.13
 INFO     : Reading core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
 INFO     : Successfully read core interface constraints file "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
 INFO     : Counting 2 clocks that are not assigned to clock resources as global clocks.
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[23]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[2]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[2]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_bridge_bmb_crossClock/io_output_rsp_ccToggle/system_bridge_bmb_crossClock_toplevel_peripheralCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[16]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[0]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[0]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_riscvJtag_hard_noTap_tunnel/logic_systemLogic_bus_rsp_ccToggle/system_riscvJtag_hard_noTap_tunnel_toplevel_debugCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][12]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_riscvJtag_hard_noTap_tunnel/logic_systemLogic_bus_rsp_ccToggle_io_output_payload_error~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[28]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[7]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[7]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PSLVERROR~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[20]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[14]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[6]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[2]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][2]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/addr_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[13]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_i2c_0_io_logic/i2cCtrl/io_i2c_sda_read_buffercc/buffers_0~FF is driven by a non-sequential source mipi_i2c_0_io_sda_read:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_cam/u_cam_dma_fifo/u_efx_fifo_top/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[25]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[4]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[4]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_bridge_bmb_crossClock/io_input_cmd_ccToggle/system_bridge_bmb_crossClock_toplevel_systemCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[4]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/fifo_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[8]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_uart_0_io_logic/uartCtrl_1/rx/io_rxd_buffercc/buffers_0~FF is driven by a non-sequential source system_uart_0_io_rxd:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[18]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[11]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[3]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/axi_rst_syncronizer/active_low.efx_resetsync_active_low/async_reg[0][0]~FF is driven by a non-sequential source VCC:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rd_counter_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_P_IN_0_1P[0]~FF is driven by a non-sequential source i_cam_d0_LP_P_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][14]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/genblk6.packetizer_inst/fifo_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[9]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[1]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/wr_response_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/ramcal_rst_syncronizer/active_low.efx_resetsync_active_low/async_reg[0][0]~FF is driven by a non-sequential source VCC:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[10]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/tx_csr_inst/lp_dcs_wfifo_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[22]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_cam/u_cam_pixel_remap_fifo/u_efx_fifo_top/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/video_iface_inst/delay_sync_inst/delaysyncfifo/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rd_data_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[1]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[1]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rst_busy_sync/async_reg[0][0]~FF is driven by a non-sequential source LUT__135302:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[4]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/wr_cntr_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_riscvJtag_debug_systemReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[5]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[2]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/genblk2.wr_data_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk3.byte2pixel_inst/u1_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[15]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_N_IN_0_1P[1]~FF is driven by a non-sequential source i_cam_d1_LP_N_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[6]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[6]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[27]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_display/u_display_dma_fifo/u_efx_fifo_top/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][9]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/video_iface_inst/asyncreg_3/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk2.lane_aligner_inst/genblk1[0].u1_inst/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[13]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[5]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/addr_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[31]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[12]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/tx_csr_inst/hs_dcs_wfifo_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/calibration_block.hbram_cal_top_inst/hbram_cal_ctrl_inst/fifo_rden_block.genblk1.rd_data_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[24]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[3]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[3]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][6]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/fifo_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[7]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[4]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[17]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[10]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[2]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rd_counter_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][13]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[29]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/genblk6.packetizer_inst/fifo_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[8]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[0]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/userInterruptA_buffercc/i7_2 is driven by a non-sequential source LUT__119321:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk2.lane_aligner_inst/genblk1[1].u1_inst/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/ram_rst_syncronizer/active_low.efx_resetsync_active_low/async_reg[0][0]~FF is driven by a non-sequential source VCC:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_ddr_ddrLogic_cc_fifo/io_input_cmd_queue/system_ddr_ddrLogic_cc_fifo_toplevel_systemCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[21]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[15]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[7]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/wr_cntr_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/genblk2.wr_data_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[14]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk3.byte2pixel_inst/u1_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/debugCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_N_IN_0_1P[0]~FF is driven by a non-sequential source i_cam_d0_LP_N_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[26]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[5]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[5]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/peripheralCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][8]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[9]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[19]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[12]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[4]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_P_IN_0_1P[1]~FF is driven by a non-sequential source i_cam_d1_LP_P_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][15]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/ddrCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[6]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[30]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/wr_response_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/tx_csr_inst/hs_dcs_wfifo_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[11]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_i2c_0_io_logic/i2cCtrl/io_i2c_scl_read_buffercc/buffers_0~FF is driven by a non-sequential source mipi_i2c_0_io_scl_read:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[16]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[0]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[0]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/tx_csr_inst/lp_dcs_wfifo_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/io_asyncReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/calibration_block.hbram_cal_top_inst/hbram_cal_ctrl_inst/fifo_rden_block.genblk1.rd_data_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rd_data_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[28]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[7]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[7]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[23]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[2]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[2]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[2]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_ddr_ddrLogic_cc_fifo/io_output_rsp_queue/system_ddr_ddrLogic_cc_fifo_toplevel_ddrCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PSLVERROR~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_bridge_bmb_crossClock/io_output_rsp_ccToggle/system_bridge_bmb_crossClock_toplevel_peripheralCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[20]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[14]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[6]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_riscvJtag_hard_noTap_tunnel/logic_systemLogic_bus_rsp_ccToggle/system_riscvJtag_hard_noTap_tunnel_toplevel_debugCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][12]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_riscvJtag_hard_noTap_tunnel/logic_systemLogic_bus_rsp_ccToggle_io_output_payload_error~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[13]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_cam/u_cam_dma_fifo/u_efx_fifo_top/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[25]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[4]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[4]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[2]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][2]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/addr_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[8]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_i2c_0_io_logic/i2cCtrl/io_i2c_sda_read_buffercc/buffers_0~FF is driven by a non-sequential source mipi_i2c_0_io_sda_read:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[18]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[11]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[3]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_P_IN_0_1P[0]~FF is driven by a non-sequential source i_cam_d0_LP_P_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_bridge_bmb_crossClock/io_input_cmd_ccToggle/system_bridge_bmb_crossClock_toplevel_systemCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[9]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[1]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[4]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[10]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/fifo_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_uart_0_io_logic/uartCtrl_1/rx/io_rxd_buffercc/buffers_0~FF is driven by a non-sequential source system_uart_0_io_rxd:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[22]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_cam/u_cam_pixel_remap_fifo/u_efx_fifo_top/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/axi_rst_syncronizer/active_low.efx_resetsync_active_low/async_reg[0][0]~FF is driven by a non-sequential source VCC:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[1]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[1]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rd_counter_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][14]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/genblk6.packetizer_inst/fifo_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[5]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/wr_response_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/ramcal_rst_syncronizer/active_low.efx_resetsync_active_low/async_reg[0][0]~FF is driven by a non-sequential source VCC:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/tx_csr_inst/lp_dcs_wfifo_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[15]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_N_IN_0_1P[1]~FF is driven by a non-sequential source i_cam_d1_LP_N_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/video_iface_inst/delay_sync_inst/delaysyncfifo/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rd_data_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rst_busy_sync/async_reg[0][0]~FF is driven by a non-sequential source LUT__134526:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[6]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[6]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[27]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[4]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_riscvJtag_debug_systemReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/wr_cntr_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[2]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/genblk2.wr_data_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk3.byte2pixel_inst/u1_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[13]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[5]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[31]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_display/u_display_dma_fifo/u_efx_fifo_top/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][9]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/video_iface_inst/asyncreg_3/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[12]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk2.lane_aligner_inst/genblk1[0].u1_inst/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[24]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[3]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[3]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/addr_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[7]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/tx_csr_inst/hs_dcs_wfifo_inst/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[17]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[10]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[2]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/calibration_block.hbram_cal_top_inst/hbram_cal_ctrl_inst/fifo_rden_block.genblk1.rd_data_fifo/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[29]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[8]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[0]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][6]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/fifo_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[4]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[21]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/rd_counter_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[15]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[7]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][13]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/genblk6.packetizer_inst/fifo_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/userInterruptA_buffercc/i7_2 is driven by a non-sequential source LUT__118890:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk2.lane_aligner_inst/genblk1[1].u1_inst/genblk2.efx_resetsync_a_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/ram_rst_syncronizer/active_low.efx_resetsync_active_low/async_reg[0][0]~FF is driven by a non-sequential source VCC:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[14]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_N_IN_0_1P[0]~FF is driven by a non-sequential source i_cam_d0_LP_N_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/system_ddr_ddrLogic_cc_fifo/io_input_cmd_queue/system_ddr_ddrLogic_cc_fifo_toplevel_systemCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[26]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[5]~FF is driven by a non-sequential source i_cam_d0_HS_IN_0[5]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/pushToPopGray_buffercc/buffers_0[3]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_0_crossclock_fifo/popToPushGray_buffercc/buffers_0[0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/wr_cntr_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[9]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dma/u_EfxDMA/outputsAdapter_2_crossclock_fifo/popToPushGray_buffercc/buffers_0[1]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_hbram/u_hbram_top/hard_cal_block.hbram_cal_axi_top_inst/interface_block1.hbram_axi_wrapper_inst/xefx_axi_amux_top/genblk2.wr_data_fifo/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_csi2_rx_cam/u_efx_csi2_rx/csi2_rx_top_inst/genblk3.byte2pixel_inst/u1_inst/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/debugCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[19]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_HS_IN_0_1P[12]~FF is driven by a non-sequential source i_cam_d1_HS_IN_0[4]:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell r_mipi_rx_data_LP_P_IN_0_1P[1]~FF is driven by a non-sequential source i_cam_d1_LP_P_IN:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[30]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_risc_v/u_EfxSapphireSoc/peripheralCd_logic_outputReset_asyncAssertSyncDeassert_buffercc/buffers_0~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell u_dsi_tx_display/u_efx_dsi_tx/efx_dsi_tx_top_inst/pixel2byte_inst/syncreg_0/async_reg[0][8]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
-WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[11]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell io_apbSlave_1_PRDATA[6]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
 INFO     : Starting Global Placer with 4 threads ...
             ----------     -------  --------------     -------
              Iteration       WHPWL Worst Slack (ps) Convergence
             ----------     -------  --------------     -------
-INFO     :           1    16147075             621         1.7%
-INFO     :           2    11531710             554         2.6%
-INFO     :           3     8914690             471         4.1%
-INFO     :           4     6822331             385         6.4%
-INFO     :           5     5150947             479         9.6%
-INFO     :           6     3463242             270        18.7%
-INFO     :           7     2743253            -289        29.2%
-INFO     :           8     2438555            -456        35.8%
-INFO     :           9     2248578            -705        43.2%
-INFO     :          10     2163658            -570        46.9%
-INFO     :          11     2073134            -591        50.7%
-INFO     :          12     2003205            -743        53.5%
-INFO     :          13     1991173            -654        54.1%
-INFO     :          14     2010622            -624        54.1%
-INFO     :          15     1949593            -834        57.5%
-INFO     :          16     1957703            -754        57.5%
-INFO     :          17     1913659            -719        59.9%
-INFO     :          18     1928904            -801        60.1%
-INFO     :          19     1888334            -915        62.8%
-INFO     :          20     1874742            -877        64.7%
-INFO     :          21     1868470            -717        65.8%
-INFO     :          22     1900922            -908        65.8%
-INFO     :          23     1868293            -837        69.0%
-INFO     :          24     1863405            -592        69.0%
-INFO     :          25     1855413            -610        70.4%
-INFO     :          26     1845488            -707        71.0%
-INFO     :          27     1839824            -709        72.2%
-INFO     :          28     1840705            -692        72.7%
-INFO     :          29     1835120            -742        74.4%
-INFO     :          30     1828073            -533        75.8%
-INFO     :          31     1827101            -662        77.9%
-INFO     :          32     1879947            -695        77.9%
-INFO     :          33     1837379            -620        80.3%
-INFO     :          34     1811509            -968        82.4%
-INFO     :          35     1802780            -669        83.5%
-INFO     :          36     1797564            -677        84.7%
-INFO     :          37     1798497            -717        85.9%
-INFO     :          38     1793637            -757        87.1%
-INFO     :          39     1807814            -921        87.1%
-INFO     :          40     1818656            -691        87.6%
-INFO     :          41     1812794            -762        89.3%
-INFO     :          42     1815730            -845        89.3%
-INFO     :          43     1817908           -1073        89.7%
-INFO     :          44     1818189            -640        90.1%
-INFO     :          45     1820817            -808        90.8%
-INFO     :          46     1828635            -784        91.3%
-INFO     :          47     1838510            -724        91.9%
-INFO     :          48     1841615            -934        92.7%
-INFO     :          49     1856562            -824        93.3%
-INFO     :          50     1863588            -784        94.2%
-INFO     :          51     1789292            -944        94.2%
-INFO     :          52     1820378            -839        94.2%
-INFO     :          53     1823212           -1057        96.9%
-INFO     :          54     1828690            -972        97.7%
-INFO     :          55     1834614            -975        97.8%
-INFO     :          56     1840496            -974        98.3%
-INFO     :          57     1846663            -881        98.3%
-INFO     : GP: best_placement: wpd: 3365.38
+INFO     :           1    15957122             710         1.7%
+INFO     :           2    11540511             728         2.7%
+INFO     :           3     8634358             650         4.3%
+INFO     :           4     7283518             467         6.0%
+INFO     :           5     5493167             402         9.7%
+INFO     :           6     3707774             589        19.6%
+INFO     :           7     2828994             241        34.0%
+INFO     :           8     2500527            -137        41.2%
+INFO     :           9     2278436            -491        50.1%
+INFO     :          10     2164987            -778        56.5%
+INFO     :          11     2197067            -542        56.5%
+INFO     :          12     2063178            -460        63.5%
+INFO     :          13     2008424            -503        65.5%
+INFO     :          14     1999479            -647        66.0%
+INFO     :          15     2004956            -662        67.0%
+INFO     :          16     1970022            -607        69.1%
+INFO     :          17     1951305            -624        69.6%
+INFO     :          18     1963773            -371        69.6%
+INFO     :          19     1961417            -463        72.0%
+INFO     :          20     1938711            -441        72.0%
+INFO     :          21     1918453            -334        73.8%
+INFO     :          22     1948264            -446        73.8%
+INFO     :          23     1913239            -304        76.1%
+INFO     :          24     1933648            -385        76.1%
+INFO     :          25     1941895            -540        76.1%
+INFO     :          26     1967297            -369        76.1%
+INFO     :          27     1926194            -407        78.4%
+INFO     :          28     1939800            -450        78.4%
+INFO     :          29     1917704            -397        79.6%
+INFO     :          30     1884188            -549        81.0%
+INFO     :          31     1932609            -437        81.0%
+INFO     :          32     1934244            -516        81.0%
+INFO     :          33     1954871            -494        81.0%
+INFO     :          34     1921459            -394        81.5%
+INFO     :          35     1893970            -452        83.2%
+INFO     :          36     1899253            -490        83.4%
+INFO     :          37     1927472            -317        83.4%
+INFO     :          38     1883602            -420        85.4%
+INFO     :          39     1937968            -714        85.4%
+INFO     :          40     1935911            -404        85.4%
+INFO     :          41     1932280            -355        86.7%
+INFO     :          42     1940280            -557        86.7%
+INFO     :          43     1938778            -562        87.7%
+INFO     :          44     1948513            -493        87.7%
+INFO     :          45     1940800            -592        89.3%
+INFO     :          46     1939515            -599        90.0%
+INFO     :          47     1993336            -495        90.0%
+INFO     :          48     1953384            -352        93.0%
+INFO     :          49     2014781            -574        93.0%
+INFO     :          50     1979145            -481        93.9%
+INFO     :          51     1895378            -709        93.9%
+INFO     :          52     2025756            -584        93.9%
+INFO     :          53     2031450            -628        94.2%
+INFO     :          54     2133903            -577        94.2%
+INFO     :          55     2183703            -636        94.2%
+INFO     :          56     2203431            -716        94.6%
+INFO     :          57     2207712            -582        96.3%
+INFO     : GP: best_placement: wpd: 3072.64
 INFO     : Starting Annealer
             ----------     -------  --------------     -------
              Iteration       WHPWL  Delay Max (ps)     R Limit
             ----------     -------  --------------     -------
-INFO     :           0     1053968            4460        30.0
-INFO     :           1     1241682            3677        28.9
-INFO     :           2     1189915            3683        27.1
-INFO     :           3     1119335            3295        25.0
-INFO     :           4     1068174            3218        22.9
-INFO     :           5     1026140            3203        20.9
-INFO     :           6     1000348            3203        19.0
-INFO     :           7      977875            3203        17.2
-INFO     :           8      963249            3237        15.5
-INFO     :           9      948883            3203        14.0
-INFO     :          10      937053            3159        12.6
-INFO     :          11      926588            2797        11.3
-INFO     :          12      917465            2797        10.2
-INFO     :          13      910643            2908         9.1
-INFO     :          14      904138            2833         8.2
-INFO     :          15      897111            2859         7.4
-INFO     :          16      891614            2832         6.6
-INFO     :          17      887693            2808         5.9
-INFO     : DP: best_placement: wpd: 115.827
-INFO     : Placement successful: 42552 cells are placed
-INFO     : Peak congestion smeared over 4x4 of the chip is 1.46458 at 201,180
-INFO     : Peak congestion smeared over 1/16 of the chip is 1.03898 at 64,154
-INFO     : Peak congestion smeared over 1/4 of the chip is 0.673323 at 105,323
-INFO     : Congestion-weighted HPWL per net: 28.9215
+INFO     :           0     1112122            3958        30.0
+INFO     :           1     1339653            3547        90.0
+INFO     :           2     1294721            3421        27.0
+INFO     :           3     1209718            3331        25.0
+INFO     :           4     1153835            3207        23.0
+INFO     :           5     1106485            3189        21.0
+INFO     :           6     1070136            3050        19.1
+INFO     :           7     1042236            3096        17.3
+INFO     :           8     1018837            3053        15.6
+INFO     :           9     1002406            2960        14.1
+INFO     :          10      987388            2916        12.7
+INFO     :          11      974426            2753        11.4
+INFO     :          12      962399            2752        10.3
+INFO     :          13      952496            2701         9.2
+INFO     :          14      944880            2725         8.3
+INFO     :          15      937274            2778         7.4
+INFO     :          16      930457            2754         6.7
+INFO     :          17      924716            2840         5.9
+INFO     : DP: best_placement: wpd: 119.333
+INFO     : Placement successful: 42936 cells are placed
+INFO     : Peak congestion smeared over 4x4 of the chip is 1.48724 at 49,154
+INFO     : Peak congestion smeared over 1/16 of the chip is 1.2234 at 46,162
+INFO     : Peak congestion smeared over 1/4 of the chip is 0.670764 at 2,134
+INFO     : Congestion-weighted HPWL per net: 29.8789
 INFO     : Post-placement cluster-level checks is successful
 INFO     : Post-placement primitive-level checks is successful
-INFO     : Placement took 114.4626089 seconds [FlowMsg::StageDuration]
-INFO     :     Placement took 356.640625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Placement virtual memory usage: begin = 87.608 MB, end = 287.332 MB, delta = 199.724 MB [FlowMsg::VMUsage]
-INFO     :     Placement peak virtual memory usage = 406.784 MB [FlowMsg::VMUsage::Peak]
-INFO     : Placement resident set memory usage: begin = 103.384 MB, end = 301.192 MB, delta = 197.808 MB [FlowMsg::RSSUsage]
-INFO     :     Placement peak resident set memory usage = 426.84 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Placement took 157.4890263 seconds [FlowMsg::StageDuration]
+INFO     :     Placement took 426.703125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Placement virtual memory usage: begin = 85.684 MB, end = 287.532 MB, delta = 201.848 MB [FlowMsg::VMUsage]
+INFO     :     Placement peak virtual memory usage = 435.828 MB [FlowMsg::VMUsage::Peak]
+INFO     : Placement resident set memory usage: begin = 98.9 MB, end = 296.696 MB, delta = 197.796 MB [FlowMsg::RSSUsage]
+INFO     :     Placement peak resident set memory usage = 453.388 MB [FlowMsg::RSSUsage::Peak]
 WARNING  : No ports matched 'jtag_inst1_DRCK'
 WARNING  : [SDC C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/edge_vision_soc.sdc:65] set_input_delay: No valid input port(s) found
 WARNING  : [SDC C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/edge_vision_soc.sdc:65] Unable to run 'set_input_delay' constraint due to warnings found
@@ -409,63 +409,63 @@ WARNING  : [SDC C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evs
 INFO     : SDC file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/edge_vision_soc.sdc' parsed successfully.
 Maximum possible analyzed clocks frequency
    Clock Name     Period (ns)  Frequency (MHz)     Edge
-i_fb_clk             3.289        304.044         (R-R)
-i_systemClk          2.918        342.700         (R-R)
-i_sysclk_div_2       4.245        235.571         (R-R)
-i_mipi_rx_pclk       4.739        211.015         (R-R)
-i_mipi_clk           3.856        259.336         (R-R)
-i_mipi_tx_pclk       4.320        231.481         (R-R)
-i_hbramClk_cal       1.741        574.383         (R-R)
-i_hbramClk           3.764        265.675         (R-R)
-jtag_inst1_TCK       4.405        227.015         (R-R)
-i_cam_ck_CLKOUT_0    4.001        249.938         (R-R)
+i_fb_clk             3.509        284.981         (R-R)
+i_systemClk          2.950        338.983         (R-R)
+i_sysclk_div_2       3.998        250.125         (R-R)
+i_mipi_rx_pclk       5.048        198.098         (R-R)
+i_mipi_clk           3.775        264.901         (R-R)
+i_mipi_tx_pclk       4.436        225.428         (R-R)
+i_hbramClk_cal       1.852        539.957         (R-R)
+i_hbramClk           3.976        251.509         (R-R)
+jtag_inst1_TCK       4.141        241.488         (R-R)
+i_cam_ck_CLKOUT_0    3.352        298.329         (R-R)
 
-Geomean max period: 3.606
+Geomean max period: 3.592
 
 Setup (Max) Clock Relationship
   Launch Clock      Capture Clock   Constraint (ns)     Slack (ns)          Edge
-i_fb_clk          i_fb_clk               40.000           36.711           (R-R)
-i_systemClk       i_systemClk             3.333            0.415           (R-R)
-i_sysclk_div_2    i_sysclk_div_2         16.000           11.755           (R-R)
-i_mipi_rx_pclk    i_mipi_rx_pclk         10.000            5.261           (R-R)
-i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       2.000            1.576           (R-R)
-i_mipi_clk        i_mipi_clk             10.000            6.144           (R-R)
-i_mipi_clk        i_cam_ck_CLKOUT_0       2.000            1.344           (R-R)
-i_mipi_tx_pclk    i_mipi_tx_pclk          8.000            3.680           (R-R)
-i_hbramClk_cal    i_hbramClk_cal          5.000            3.259           (R-R)
+i_fb_clk          i_fb_clk               40.000           36.491           (R-R)
+i_systemClk       i_systemClk             3.333            0.383           (R-R)
+i_sysclk_div_2    i_sysclk_div_2         16.000           12.002           (R-R)
+i_mipi_rx_pclk    i_mipi_rx_pclk         10.000            4.952           (R-R)
+i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       2.000            0.702           (R-R)
+i_mipi_clk        i_mipi_clk             10.000            6.225           (R-R)
+i_mipi_clk        i_cam_ck_CLKOUT_0       2.000            1.426           (R-R)
+i_mipi_tx_pclk    i_mipi_tx_pclk          8.000            3.564           (R-R)
+i_hbramClk_cal    i_hbramClk_cal          5.000            3.148           (R-R)
 i_hbramClk_cal    i_hbramClk              5.000            4.580           (R-R)
-i_hbramClk        i_hbramClk90            3.750            2.809           (R-F)
-i_hbramClk        i_hbramClk_cal          5.000            3.862           (R-R)
-i_hbramClk        i_hbramClk              5.000            1.236           (R-R)
-i_hbramClk        i_hbramClk              2.500            1.299           (R-F)
-jtag_inst1_TCK    jtag_inst1_TCK        100.000           95.595           (R-R)
-jtag_inst1_TCK    jtag_inst1_TCK         50.000           49.578           (F-R)
-i_cam_ck_CLKOUT_0 i_mipi_rx_pclk          2.000            0.975           (R-R)
-i_cam_ck_CLKOUT_0 i_mipi_clk              2.000            1.436           (R-R)
-i_cam_ck_CLKOUT_0 i_cam_ck_CLKOUT_0       8.000            3.999           (R-R)
+i_hbramClk        i_hbramClk90            3.750            2.818           (R-F)
+i_hbramClk        i_hbramClk_cal          5.000            3.586           (R-R)
+i_hbramClk        i_hbramClk              5.000            1.024           (R-R)
+i_hbramClk        i_hbramClk              2.500            1.362           (R-F)
+jtag_inst1_TCK    jtag_inst1_TCK        100.000           95.859           (R-R)
+jtag_inst1_TCK    jtag_inst1_TCK         50.000           49.975           (F-R)
+i_cam_ck_CLKOUT_0 i_mipi_rx_pclk          2.000            0.996           (R-R)
+i_cam_ck_CLKOUT_0 i_mipi_clk              2.000            1.395           (R-R)
+i_cam_ck_CLKOUT_0 i_cam_ck_CLKOUT_0       8.000            4.648           (R-R)
 
 Hold (Min) Clock Relationship
   Launch Clock      Capture Clock   Constraint (ns)     Slack (ns)          Edge
 i_fb_clk          i_fb_clk                0.000            0.161           (R-R)
-i_systemClk       i_systemClk             0.000           -0.795           (R-R)
+i_systemClk       i_systemClk             0.000           -0.805           (R-R)
 i_sysclk_div_2    i_sysclk_div_2          0.000            0.161           (R-R)
-i_mipi_rx_pclk    i_mipi_rx_pclk          0.000            0.128           (R-R)
-i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       0.000           -0.026           (R-R)
+i_mipi_rx_pclk    i_mipi_rx_pclk          0.000            0.131           (R-R)
+i_mipi_rx_pclk    i_cam_ck_CLKOUT_0       0.000            0.175           (R-R)
 i_mipi_clk        i_mipi_clk              0.000            0.161           (R-R)
-i_mipi_clk        i_cam_ck_CLKOUT_0       0.000            0.180           (R-R)
-i_mipi_tx_pclk    i_mipi_tx_pclk          0.000            0.036           (R-R)
+i_mipi_clk        i_cam_ck_CLKOUT_0       0.000            0.175           (R-R)
+i_mipi_tx_pclk    i_mipi_tx_pclk          0.000            0.035           (R-R)
 i_hbramClk_cal    i_hbramClk_cal          0.000            0.161           (R-R)
 i_hbramClk_cal    i_hbramClk              0.000            0.175           (R-R)
-i_hbramClk        i_hbramClk90           -1.250            1.563           (R-F)
+i_hbramClk        i_hbramClk90           -1.250            1.555           (R-F)
 i_hbramClk        i_hbramClk_cal          0.000            0.175           (R-R)
-i_hbramClk        i_hbramClk              0.000            0.122           (R-R)
-i_hbramClk        i_hbramClk             -2.500            2.558           (R-F)
+i_hbramClk        i_hbramClk              0.000           -0.215           (R-R)
+i_hbramClk        i_hbramClk             -2.500            2.521           (R-F)
 jtag_inst1_TCK    jtag_inst1_TCK          0.000            0.161           (R-R)
-jtag_inst1_TCK    jtag_inst1_TCK        -50.000           48.343           (F-R)
+jtag_inst1_TCK    jtag_inst1_TCK        -50.000           48.285           (F-R)
 i_cam_ck_CLKOUT_0 i_mipi_rx_pclk          0.000            0.175           (R-R)
 i_cam_ck_CLKOUT_0 i_mipi_clk              0.000            0.212           (R-R)
 i_cam_ck_CLKOUT_0 i_cam_ck_CLKOUT_0       0.000            0.161           (R-R)
 
-WARNING  : Clock domain between i_systemClk (rising) and i_systemClk (rising) may not meet (slack: -0.795 ns) the hold (min) timing requirement
-WARNING  : Clock domain between i_mipi_rx_pclk (rising) and i_cam_ck_CLKOUT_0 (rising) may not meet (slack: -0.026 ns) the hold (min) timing requirement
+WARNING  : Clock domain between i_systemClk (rising) and i_systemClk (rising) may not meet (slack: -0.805 ns) the hold (min) timing requirement
+WARNING  : Clock domain between i_hbramClk (rising) and i_hbramClk (rising) may not meet (slack: -0.215 ns) the hold (min) timing requirement
 INFO     : Write Timing Report to "C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.place.timing.rpt" ...

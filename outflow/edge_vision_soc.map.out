@@ -160,12 +160,12 @@ INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efin
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\hw_accel_dma_out_fifo\hw_accel_dma_out_fifo.sv' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\hw_accel\hw_accel_apb3.v' [VERI-1482]
 INFO     : Analyzing Verilog file 'C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\source\isp\cam_picam_v2.v' [VERI-1482]
-INFO     : Analysis took 1.5648353 seconds [FlowMsg::StageDuration]
-INFO     :     Analysis took 1.296875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Analysis virtual memory usage: begin = 59.572 MB, end = 81.192 MB, delta = 21.62 MB [FlowMsg::VMUsage]
-INFO     :     Analysis peak virtual memory usage = 81.192 MB [FlowMsg::VMUsage::Peak]
-INFO     : Analysis resident set memory usage: begin = 63.728 MB, end = 89.712 MB, delta = 25.984 MB [FlowMsg::RSSUsage]
-INFO     :     Analysis peak resident set memory usage = 89.712 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Analysis took 2.7201169 seconds [FlowMsg::StageDuration]
+INFO     :     Analysis took 1.5 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Analysis virtual memory usage: begin = 59.592 MB, end = 81.2 MB, delta = 21.608 MB [FlowMsg::VMUsage]
+INFO     :     Analysis peak virtual memory usage = 81.2 MB [FlowMsg::VMUsage::Peak]
+INFO     : Analysis resident set memory usage: begin = 63.832 MB, end = 90.024 MB, delta = 26.192 MB [FlowMsg::RSSUsage]
+INFO     :     Analysis peak resident set memory usage = 90.024 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Analysis ... *****
 INFO     : ***** Beginning Elaboration ... *****
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1329): port 'system_spi_0_io_data_2_read' is not connected on this instance [VERI-2435]
@@ -774,21 +774,21 @@ WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-ef
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1228): input port 'system_spi_0_io_data_2_read' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1387): input port 'dat1_o_tready' remains unconnected for this instance [VDB-1053]
 WARNING  : C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\edge_vision_soc.v(1525): input port 's_axi_awuser[1]' remains unconnected for this instance [VDB-1053]
-INFO     : Elaboration took 2.2097813 seconds [FlowMsg::StageDuration]
-INFO     :     Elaboration took 2.046875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Elaboration virtual memory usage: begin = 81.192 MB, end = 279.24 MB, delta = 198.048 MB [FlowMsg::VMUsage]
-INFO     :     Elaboration peak virtual memory usage = 279.24 MB [FlowMsg::VMUsage::Peak]
-INFO     : Elaboration resident set memory usage: begin = 89.756 MB, end = 289.876 MB, delta = 200.12 MB [FlowMsg::RSSUsage]
-INFO     :     Elaboration peak resident set memory usage = 289.876 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Elaboration took 2.1826416 seconds [FlowMsg::StageDuration]
+INFO     :     Elaboration took 1.96875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Elaboration virtual memory usage: begin = 81.2 MB, end = 279.252 MB, delta = 198.052 MB [FlowMsg::VMUsage]
+INFO     :     Elaboration peak virtual memory usage = 279.252 MB [FlowMsg::VMUsage::Peak]
+INFO     : Elaboration resident set memory usage: begin = 90.068 MB, end = 290.004 MB, delta = 199.936 MB [FlowMsg::RSSUsage]
+INFO     :     Elaboration peak resident set memory usage = 290.004 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Elaboration ... *****
 INFO     : ... Setting Synthesis Option: mode=speed
 INFO     : ***** Beginning Reading Mapping Library ... *****
-INFO     : Reading Mapping Library took 0.0321603 seconds [FlowMsg::StageDuration]
+INFO     : Reading Mapping Library took 0.0318187 seconds [FlowMsg::StageDuration]
 INFO     :     Reading Mapping Library took 0.03125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : Reading Mapping Library virtual memory usage: begin = 312.072 MB, end = 312.072 MB, delta = 0 MB [FlowMsg::VMUsage]
-INFO     :     Reading Mapping Library peak virtual memory usage = 312.072 MB [FlowMsg::VMUsage::Peak]
-INFO     : Reading Mapping Library resident set memory usage: begin = 322.604 MB, end = 322.604 MB, delta = 0 MB [FlowMsg::RSSUsage]
-INFO     :     Reading Mapping Library peak resident set memory usage = 322.604 MB [FlowMsg::RSSUsage::Peak]
+INFO     : Reading Mapping Library virtual memory usage: begin = 312.088 MB, end = 312.088 MB, delta = 0 MB [FlowMsg::VMUsage]
+INFO     :     Reading Mapping Library peak virtual memory usage = 312.088 MB [FlowMsg::VMUsage::Peak]
+INFO     : Reading Mapping Library resident set memory usage: begin = 324.8 MB, end = 324.8 MB, delta = 0 MB [FlowMsg::RSSUsage]
+INFO     :     Reading Mapping Library peak resident set memory usage = 324.8 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending Reading Mapping Library ... *****
 INFO     : ... Pre-synthesis checks begin
 WARNING  : Removing redundant signal : Rx_HS_D_2[7:0]. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\csi2_rx_cam\csi2_rx_cam.sv:6307) [EFX-0200]
@@ -1024,7 +1024,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a29823
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a2982368753f7b" begin
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a2982368753f7b" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_csr_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_csr_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_csr_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_ecc_check_f123b49f0f574f64a9a2982368753f7b" begin
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_ecc_check_f123b49f0f574f64a9a2982368753f7b" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_crc16_d16_gen_f123b49f0f574f64a9a2982368753f7b" begin
@@ -1042,7 +1042,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_f123b49f0f574f64a9a29823
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f123b49f0f574f64a9a2982368753f7b(SYNC_CLK=1,MODE="FWFT",DEPTH=16,DATA_WIDTH=8,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f123b49f0f574f64a9a2982368753f7b(SYNC_CLK=1,MODE="FWFT",DEPTH=16,DATA_WIDTH=8,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_lane_aligner_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_csi2_lane_aligner_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_csi2_lane_aligner_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a2982368753f7b(WIDTH=16)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f123b49f0f574f64a9a2982368753f7b(WIDTH=16)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_depack40bit_f123b49f0f574f64a9a2982368753f7b" begin
@@ -1088,11 +1088,11 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f123b49f0f574f64a9a29823
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_byte2pixel_f123b49f0f574f64a9a2982368753f7b(PIXEL_FIFO_DEPTH=2048,ENABLE_VCX=1'b0,PACK_TYPE=15)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_byte2pixel_f123b49f0f574f64a9a2982368753f7b(PIXEL_FIFO_DEPTH=2048,ENABLE_VCX=1'b0,PACK_TYPE=15)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_top_f123b49f0f574f64a9a2982368753f7b(HS_DATA_WIDTH=8,tINIT_NS=100000,NUM_DATA_LANE=2,PACK_TYPE=15,ENABLE_VCX=1'b0,PIXEL_FIFO_DEPTH=2048)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "efx_csi2_rx_f123b49f0f574f64a9a2982368753f7b(NUM_DATA_LANE=2,HS_BYTECLK_MHZ=113,DPHY_CLOCK_MODE="Discontinuous",PIXEL_FIFO_DEPTH=2048,ENABLE_USER_DESKEWCAL=1'b0,ENABLE_VCX=1'b0,PACK_TYPE=15)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" begin
-INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "csi2_rx_cam" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_077823fa68f649b1a7074c944568f3e4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_077823fa68f649b1a7074c944568f3e4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_resetsync_077823fa68f649b1a7074c944568f3e4(ACTIVE_LOW=0)" begin
@@ -1190,7 +1190,7 @@ INFO     : ... Hierarchical pre-synthesis "common_true_dual_port_ram(DATA_WIDTH=
 INFO     : ... Hierarchical pre-synthesis "panel_config(INITIAL_CODE="source/display/dsi/dsi_panel_1080p_reg.mem")" begin
 INFO     : ... Hierarchical pre-synthesis "panel_config(INITIAL_CODE="source/display/dsi/dsi_panel_1080p_reg.mem")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" begin
-INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "vga_gen(H_SyncPulse=32'b0110010,H_BackPorch=32'b0110010,H_ActivePix=32'b01000011100,H_FrontPorch=32'b01100100,V_SyncPulse=10'b011,V_BackPorch=10'b0101,V_ActivePix=12'b011110000000,V_FrontPorch=10'b0110)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "common_simple_dual_port_ram(DATA_WIDTH=48,OUTPUT_REG="FALSE")" begin
 INFO     : ... Hierarchical pre-synthesis "common_simple_dual_port_ram(DATA_WIDTH=48,OUTPUT_REG="FALSE")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "scale_up_2x_nn" begin
@@ -1288,13 +1288,13 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_98c52b03a74a4ce095debab7
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=16,PROG_FULL_NEGATE=16,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_csr_98c52b03a74a4ce095debab75db1d287(HS_DATA_WIDTH=8,ENABLE_V_LPM_BTA=1'b0)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_csr_98c52b03a74a4ce095debab75db1d287(HS_DATA_WIDTH=8,ENABLE_V_LPM_BTA=1'b0)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_csr_98c52b03a74a4ce095debab75db1d287(HS_DATA_WIDTH=8,ENABLE_V_LPM_BTA=1'b0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_pack48bto64b_98c52b03a74a4ce095debab75db1d287" begin
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_pack48bto64b_98c52b03a74a4ce095debab75db1d287" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_98c52b03a74a4ce095debab75db1d287(WR_DEPTH=2048,RD_DEPTH=2048,WDATA_WIDTH=64,RDATA_WIDTH=64,WADDR_WIDTH=11,RADDR_WIDTH=11,OUTPUT_REG=0,RAM_MUX_RATIO=1)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_98c52b03a74a4ce095debab75db1d287(WR_DEPTH=2048,RD_DEPTH=2048,WDATA_WIDTH=64,RDATA_WIDTH=64,WADDR_WIDTH=11,RADDR_WIDTH=11,OUTPUT_REG=0,RAM_MUX_RATIO=1)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_98c52b03a74a4ce095debab75db1d287(SYNC_CLK=0,MODE="FWFT",WR_DEPTH=2048,WADDR_WIDTH=11,RADDR_WIDTH=11,ALMOST_FLAG=0,PROGRAMMABLE_FULL="STATIC_DUAL",PROG_FULL_ASSERT=404,PROG_FULL_NEGATE=404,HANDSHAKE_FLAG=0,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_98c52b03a74a4ce095debab75db1d287(SYNC_CLK=0,MODE="FWFT",WR_DEPTH=2048,WADDR_WIDTH=11,RADDR_WIDTH=11,ALMOST_FLAG=0,PROGRAMMABLE_FULL="STATIC_DUAL",PROG_FULL_ASSERT=404,PROG_FULL_NEGATE=404,HANDSHAKE_FLAG=0,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_98c52b03a74a4ce095debab75db1d287(SYNC_CLK=0,MODE="FWFT",WR_DEPTH=2048,WADDR_WIDTH=11,RADDR_WIDTH=11,ALMOST_FLAG=0,PROGRAMMABLE_FULL="STATIC_DUAL",PROG_FULL_ASSERT=404,PROG_FULL_NEGATE=404,HANDSHAKE_FLAG=0,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DEPTH=2048,DATA_WIDTH=64,OPTIONAL_FLAGS=0,PROG_FULL_ASSERT=404,PROG_FULL_NEGATE=404,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_98c52b03a74a4ce095debab75db1d287(MODE="FWFT",DEPTH=2048,DATA_WIDTH=64,OPTIONAL_FLAGS=0,PROG_FULL_ASSERT=404,PROG_FULL_NEGATE=404,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_pixel2byte_98c52b03a74a4ce095debab75db1d287(MAX_HRES=1080,PACK_TYPE=1,PIXEL_FIFO_DEPTH=2048)" begin
@@ -1326,9 +1326,9 @@ INFO     : ... Hierarchical pre-synthesis "efx_dsi_64b_packetizer_4lane_98c52b03
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_top_98c52b03a74a4ce095debab75db1d287(tINIT_NS=100000,ENABLE_INIT_SKEWCAL=0,ENABLE_EOTP=1'b0,HS_BYTECLK_MHZ=125,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,HS_DATA_WIDTH=8)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_top_98c52b03a74a4ce095debab75db1d287(tINIT_NS=100000,ENABLE_INIT_SKEWCAL=0,ENABLE_EOTP=1'b0,HS_BYTECLK_MHZ=125,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,HS_DATA_WIDTH=8)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_98c52b03a74a4ce095debab75db1d287(tLPX_NS=60,tCLK_ZERO_NS=280,tCLK_TRAIL_NS=100,tCLK_POST_NS=100,tCLK_PREPARE_NS=50,tHS_PREPARE_NS=50,tHS_EXIT_NS=120,tHS_ZERO_NS=200,tHS_TRAIL_NS=65,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,ENABLE_BIDIR=1'b1,ENABLE_EOTP=1'b0)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_98c52b03a74a4ce095debab75db1d287(tLPX_NS=60,tCLK_ZERO_NS=280,tCLK_TRAIL_NS=100,tCLK_POST_NS=100,tCLK_PREPARE_NS=50,tHS_PREPARE_NS=50,tHS_EXIT_NS=120,tHS_ZERO_NS=200,tHS_TRAIL_NS=65,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,ENABLE_BIDIR=1'b1,ENABLE_EOTP=1'b0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_dsi_tx_98c52b03a74a4ce095debab75db1d287(tLPX_NS=60,tCLK_ZERO_NS=280,tCLK_TRAIL_NS=100,tCLK_POST_NS=100,tCLK_PREPARE_NS=50,tHS_PREPARE_NS=50,tHS_EXIT_NS=120,tHS_ZERO_NS=200,tHS_TRAIL_NS=65,PACK_TYPE=1,ENABLE_V_LPM_BTA=1'b0,HS_CMD_WDATAFIFO_DEPTH=512,LP_CMD_WDATAFIFO_DEPTH=512,LP_CMD_RDATAFIFO_DEPTH=2048,ENABLE_BIDIR=1'b1,ENABLE_EOTP=1'b0)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "dsi_tx_display" begin
-INFO     : ... Hierarchical pre-synthesis "dsi_tx_display" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "dsi_tx_display" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "common_apb3" begin
 INFO     : ... Hierarchical pre-synthesis "common_apb3" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=1)" begin
@@ -1344,7 +1344,7 @@ INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_b64bd53245f74d6a99e917bf
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_b64bd53245f74d6a99e917bfa5663d9f" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_b64bd53245f74d6a99e917bfa5663d9f" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=5,ACTIVE_LOW=0,OFF_ASSERTION=1)" begin
-INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=5,ACTIVE_LOW=0,OFF_ASSERTION=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=5,ACTIVE_LOW=0,OFF_ASSERTION=1)" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=2)" begin
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=2)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_b64bd53245f74d6a99e917bfa5663d9f(WIDTH=3)" begin
@@ -1574,7 +1574,7 @@ INFO     : ... Hierarchical pre-synthesis "I2cSlave_de18e2be3a6c48b791003184013c
 INFO     : ... Hierarchical pre-synthesis "BmbI2cCtrl_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Wide MUX mapping to ram-net, output: 'bridge_masterLogic_fsm_stateReg_string' select size : 4 output width: 56
 INFO     : ... Wide MUX mapping to ram-net, output: 'bridge_masterLogic_fsm_stateNext_string' select size : 4 output width: 56
-INFO     : ... Hierarchical pre-synthesis "BmbI2cCtrl_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "BmbI2cCtrl_de18e2be3a6c48b791003184013cbc81" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "BmbToApb3Bridge_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "BmbToApb3Bridge_de18e2be3a6c48b791003184013cbc81" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "BufferCC_20_de18e2be3a6c48b791003184013cbc81" begin
@@ -1584,11 +1584,11 @@ INFO     : ... Hierarchical pre-synthesis "StreamCCByToggle_2_de18e2be3a6c48b791
 INFO     : ... Hierarchical pre-synthesis "EfxSapphireSoc_de18e2be3a6c48b791003184013cbc81" begin
 INFO     : ... Hierarchical pre-synthesis "EfxSapphireSoc_de18e2be3a6c48b791003184013cbc81" end (Real time : 2s)
 INFO     : ... Hierarchical pre-synthesis "SapphireSoc" begin
-INFO     : ... Hierarchical pre-synthesis "SapphireSoc" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "SapphireSoc" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "hw_accel_apb3" begin
 INFO     : ... Hierarchical pre-synthesis "hw_accel_apb3" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_95902b8133b24d66a878fc45c6fe3819" begin
-INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "EfxDMA_DmaMemoryCore_95902b8133b24d66a878fc45c6fe3819" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_95902b8133b24d66a878fc45c6fe3819" begin
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_Aggregator_95902b8133b24d66a878fc45c6fe3819" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_Core_95902b8133b24d66a878fc45c6fe3819" begin
@@ -1656,7 +1656,7 @@ INFO     : ... Hierarchical pre-synthesis "EfxDMA_BsbDownSizerSparse_95902b8133b
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_95902b8133b24d66a878fc45c6fe3819" begin
 INFO     : ... Hierarchical pre-synthesis "EfxDMA_95902b8133b24d66a878fc45c6fe3819" end (Real time : 2s)
 INFO     : ... Hierarchical pre-synthesis "dma" begin
-INFO     : ... Hierarchical pre-synthesis "dma" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dma" end (Real time : 1s)
 INFO     : ... Hierarchical pre-synthesis "priority_encoder(WIDTH=2,LSB_PRIORITY="HIGH")" begin
 INFO     : ... Hierarchical pre-synthesis "priority_encoder(WIDTH=2,LSB_PRIORITY="HIGH")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "priority_encoder(LSB_PRIORITY="HIGH")" begin
@@ -1664,18 +1664,18 @@ INFO     : ... Hierarchical pre-synthesis "priority_encoder(LSB_PRIORITY="HIGH")
 INFO     : ... Hierarchical pre-synthesis "arbiter(TYPE="ROUND_ROBIN",BLOCK="ACKNOWLEDGE",LSB_PRIORITY="HIGH")" begin
 INFO     : ... Hierarchical pre-synthesis "arbiter(TYPE="ROUND_ROBIN",BLOCK="ACKNOWLEDGE",LSB_PRIORITY="HIGH")" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "axi_interconnect(S_COUNT=2,DATA_WIDTH=128)" begin
-INFO     : ... Hierarchical pre-synthesis "axi_interconnect(S_COUNT=2,DATA_WIDTH=128)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "axi_interconnect(S_COUNT=2,DATA_WIDTH=128)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "axi_full_to_half_duplex(DATA_WIDTH=128)" begin
 INFO     : ... Hierarchical pre-synthesis "axi_full_to_half_duplex(DATA_WIDTH=128)" end (Real time : 0s)
 INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" begin
-INFO     : ... Clock Enable Synthesis Performed on 3446 flops.
-INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" end (Real time : 19s)
+INFO     : ... Clock Enable Synthesis Performed on 3542 flops.
+INFO     : ... Hierarchical pre-synthesis "edge_vision_soc" end (Real time : 27s)
 INFO     : ... Flat optimizations begin
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$c1'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2839) [EFX-0656]
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$b12'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2839) [EFX-0656]
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$12'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2839) [EFX-0656]
 WARNING  : Optimizing into logic zero initialized read-only memory block 'u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/ram__D$2'. (C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\ip\dma\dma.v:2839) [EFX-0656]
-INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Flat optimizations end (Real time : 1s)
 INFO     : ... Flat synthesis begin
 INFO     : ... Flat synthesis end (Real time : 0s)
 INFO     : ... Flat optimizations begin
@@ -1683,10 +1683,10 @@ INFO     : ... Flat optimizations end (Real time : 0s)
 INFO     : ... Check and break combinational loops begin
 INFO     : ... Check and break combinational loops end (Real time : 0s)
 INFO     : ... Setup for logic synthesis begin
-INFO     : ... Setup for logic synthesis end (Real time : 1s)
+INFO     : ... Setup for logic synthesis end (Real time : 2s)
 INFO     : ... LUT mapping begin
-INFO     : ... LS, strategy: 3, nd: 22916, ed: 75111, lv: 11, pw: 48068.16
-INFO     : ... LUT mapping end (Real time : 62s)
+INFO     : ... LS, strategy: 3, nd: 23130, ed: 75671, lv: 11, pw: 48240.67
+INFO     : ... LUT mapping end (Real time : 95s)
 INFO     : ... Post-synthesis Verific netlist creation begin
 INFO     : ... Post-synthesis Verific netlist creation end (Real time : 1s)
 INFO     : ***** Beginning VDB Netlist Checker ... *****
@@ -1772,28 +1772,28 @@ WARNING  : Net u_dma/u_EfxDMA/inputsAdapter_1_crossclock_fifo/popCC_popPtrPlus[0
 WARNING  : Net u_dma/u_EfxDMA/outputsAdapter_1_crossclock_fifo/popCC_popPtrPlus[0] is dangling. [VDB-8009]
 WARNING  : Net u_dma/u_EfxDMA/inputsAdapter_0_crossclock_fifo/popCC_popPtrPlus[0] is dangling. [VDB-8009]
 WARNING  : Found 123 warnings in the post-synthesis netlist.
-INFO     : VDB Netlist Checker took 0.1341954 seconds [FlowMsg::StageDuration]
-INFO     :     VDB Netlist Checker took 0.265625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : VDB Netlist Checker virtual memory usage: begin = 370.068 MB, end = 370.172 MB, delta = 0.104 MB [FlowMsg::VMUsage]
-INFO     :     VDB Netlist Checker peak virtual memory usage = 427.956 MB [FlowMsg::VMUsage::Peak]
-INFO     : VDB Netlist Checker resident set memory usage: begin = 388.424 MB, end = 388.6 MB, delta = 0.176 MB [FlowMsg::RSSUsage]
-INFO     :     VDB Netlist Checker peak resident set memory usage = 438.04 MB [FlowMsg::RSSUsage::Peak]
+INFO     : VDB Netlist Checker took 0.1903519 seconds [FlowMsg::StageDuration]
+INFO     :     VDB Netlist Checker took 0.34375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : VDB Netlist Checker virtual memory usage: begin = 376.736 MB, end = 376.864 MB, delta = 0.128 MB [FlowMsg::VMUsage]
+INFO     :     VDB Netlist Checker peak virtual memory usage = 431.176 MB [FlowMsg::VMUsage::Peak]
+INFO     : VDB Netlist Checker resident set memory usage: begin = 359.22 MB, end = 359.472 MB, delta = 0.252 MB [FlowMsg::RSSUsage]
+INFO     :     VDB Netlist Checker peak resident set memory usage = 450.264 MB [FlowMsg::RSSUsage::Peak]
 INFO     : ***** Ending VDB Netlist Checker ... *****
 INFO     : Resource Summary 
 INFO     : ======================================= 
-INFO     : EFX_ADD                 : 	4017
-INFO     : EFX_LUT4                : 	22666
+INFO     : EFX_ADD                 : 	4113
+INFO     : EFX_LUT4                : 	22856
 INFO     : EFX_DSP48               : 	15
-INFO     : EFX_FF                  : 	21958
+INFO     : EFX_FF                  : 	22006
 INFO     : EFX_SRL8                : 	10
 INFO     : EFX_RAM10               : 	210
 INFO     : ======================================= 
 INFO     : ... Post-Map Verilog Writer begin
 INFO     : Writing netlist 'edge_vision_soc' to Verilog file 'C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/outflow/edge_vision_soc.map.v' [VDB-1030]
 INFO     : ... Post-Map Verilog Writer end (Real time : 1s)
-INFO     : The entire flow of EFX_MAP took 121.1998708 seconds [FlowMsg::StageDuration]
-INFO     :     The entire flow of EFX_MAP took 147.796875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
-INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.04 MB, end = 461.892 MB, delta = 442.852 MB [FlowMsg::VMUsage]
-INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 462.1 MB [FlowMsg::VMUsage::Peak]
-INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.576 MB, end = 476.42 MB, delta = 456.844 MB [FlowMsg::RSSUsage]
-INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 476.616 MB [FlowMsg::RSSUsage::Peak]
+INFO     : The entire flow of EFX_MAP took 173.9202497 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_MAP took 200.03125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.052 MB, end = 461.38 MB, delta = 442.328 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 461.868 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.672 MB, end = 468.148 MB, delta = 448.476 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 468.148 MB [FlowMsg::RSSUsage::Peak]
