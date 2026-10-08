@@ -98,7 +98,7 @@ wire                        cam_hs_fall_edge;
 reg  [CAM_X_COUNT_BIT-1:0]  cam_x_count;
 reg  [CAM_Y_COUNT_BIT-1:0]  cam_y_count;
 
-reg                         cam_alternate_clock; 
+reg                         cam_alternate_clock;
 wire                        cam_pixel_remap_fifo_wvalid;
 wire [39:0]                 cam_pixel_remap_fifo_wdata;
 wire                        cam_pixel_remap_fifo_re;
@@ -107,20 +107,10 @@ wire [39:0]                 cam_pixel_remap_fifo_rdata;
 wire                        cam_pixel_remap_fifo_empty;
 wire                        cam_pixel_remap_fifo_overflow;
 wire                        cam_pixel_remap_fifo_underflow;
-
-//FIX (P1-2): handshake-aware 2PPC output path. The old path presented beats
-//straight off the FIFO read port (rvalid/rvalid_r) and ignored
-//isp_s_axis_tready: any ISP stall (BLC/demosaic/skidbuffer/gamma CAN
-//de-assert tready) meant tdata/tlast/tuser advanced and the line/EOL/EOF
-//counters counted beats the ISP never accepted -> lost pixels / corrupted
-//frame markers. Now beats are presented from an 8-deep holding register (4
-//FIFO words) and are only removed on a real tvalid && tready handshake.
-reg  [19:0]                 remap_beat [0:7];   //compacted beat slots (head = index 0)
-reg  [ 3:0]                 remap_count;        //beats currently held in the buffer (0..8)
-reg  [ 2:0]                 remap_pending;      //beats popped from the FIFO but not yet landed (max 2 words in flight)
-reg                         remap_hi_pending;   //upper half of the word at the FIFO output is due next cycle
-reg  [19:0]                 remap_hi_data;      //captured upper half of that word
-integer                     remap_i;
+reg                         cam_pixel_remap_fifo_rvalid_r;
+reg  [19:0]                 cam_pixel_remap_fifo_rdata_r;
+wire                        cam_pixel_remap_2ppc_valid;
+wire [19:0]                 cam_pixel_remap_2ppc_data;
 
 localparam ISP_PPC              = 2;   //Matches existing 2PPC downstream (crop/scale/gray)
 localparam ISP_PIXEL_BIT_WIDTH  = 12;  //12-bit internal pipeline
@@ -248,31 +238,20 @@ begin
    if (~rst_n)
    begin
       cam_alternate_clock           <= 1'b0;
+      cam_pixel_remap_fifo_rvalid_r <= 1'b0;
+      cam_pixel_remap_fifo_rdata_r  <= 20'd0;
    end else begin
       cam_alternate_clock           <= ~cam_alternate_clock;
+      cam_pixel_remap_fifo_rvalid_r <= cam_pixel_remap_fifo_rvalid;
+      cam_pixel_remap_fifo_rdata_r  <= cam_pixel_remap_fifo_rdata [39:20]; //Store most significant half word only
    end
 end
 
 assign cam_pixel_remap_fifo_wvalid = capture_frame && cam_valid;
 assign cam_pixel_remap_fifo_wdata  = cam_data;
-
-//FIX (P1-2): pop only when the popped word's 2 beats are guaranteed to fit in
-//the holding buffer: held beats + in-flight beats must stay <= 8, so a pop
-//requires (count + pending) <= 6. This keeps full throughput (1 beat/clk) at
-//full rate while never overrunning the 8-slot buffer, no matter how the ISP
-//stalls the stream.
-wire [4:0] remap_occ = {1'b0, remap_count} + {2'b0, remap_pending};
-assign cam_pixel_remap_fifo_re = (~cam_pixel_remap_fifo_empty) && cam_alternate_clock && (remap_occ <= 5'd6);
-
-//Beat arrival indications: the FIFO presents the popped 40-bit word with
-//rvalid (lower 20 bits = beat 0 of the word) one or more cycles after rd_en;
-//the upper 20 bits (beat 1 of the word) arrive the following cycle and are
-//tracked locally with remap_hi_pending/remap_hi_data.
-wire remap_lo_arrive = cam_pixel_remap_fifo_rvalid;
-wire remap_hi_arrive = remap_hi_pending;
-
-//Output handshake: a beat leaves the buffer only when the ISP accepts it.
-wire remap_beat_hs = (remap_count != 4'd0) && isp_s_axis_tready;
+assign cam_pixel_remap_fifo_re     = (~cam_pixel_remap_fifo_empty) && cam_alternate_clock;
+assign cam_pixel_remap_2ppc_valid  = cam_pixel_remap_fifo_rvalid || cam_pixel_remap_fifo_rvalid_r;
+assign cam_pixel_remap_2ppc_data   = (cam_pixel_remap_fifo_rvalid) ? cam_pixel_remap_fifo_rdata [19:0] : cam_pixel_remap_fifo_rdata_r;
 
 cam_pixel_remap_fifo u_cam_pixel_remap_fifo (
    .almost_full_o  (                              ),
@@ -292,82 +271,29 @@ cam_pixel_remap_fifo u_cam_pixel_remap_fifo (
    .datacount_o    (                              )
 );
 
-//FIX (P1-2): 8-beat holding buffer. Compacted register file: valid beats live
-//in slots [0..remap_count-1], head is slot 0. On an output handshake the beats
-//shift down one slot; arriving beats (FIFO lower/upper halves) are appended at
-//the (post-shift) tail. The pop gating above guarantees
-//remap_count + remap_pending <= 8 at all times, so appends never index past
-//slot 7:
-//   - an arrival requires pending > 0, i.e. count <= 7 (sum <= 8)
-//   - two arrivals in one cycle (lower + upper) require pending >= 2,
-//     i.e. count <= 6, so the upper lands at index <= 7.
+//Adjusted vsync signal for 2PPC outputs
+localparam MIPI_FRAME_PIX_COUNT_2PPC    = MIPI_FRAME_HEIGHT*(MIPI_FRAME_WIDTH/2);
+localparam PIX_COUNT_2PPC_BIT           = $clog2(MIPI_FRAME_PIX_COUNT_2PPC);
+
+reg [PIX_COUNT_2PPC_BIT-1:0]   count_2PPC;
+reg                            vsync_2PPC_pre;
+wire                           cam_vs_2PPC;
+wire                           end_of_frame;
+
+assign cam_vs_2PPC = vsync_2PPC_pre;
+
 always @(posedge mipi_pclk)
 begin
    if (~rst_n)
    begin
-      remap_count      <= 4'd0;
-      remap_pending    <= 3'd0;
-      remap_hi_pending <= 1'b0;
-      remap_hi_data    <= 20'd0;
-      for (remap_i = 0; remap_i < 8; remap_i = remap_i + 1)
-         remap_beat[remap_i] <= 20'd0;
-   end
-   else
-   begin
-      // ---- FIFO word halves in flight ----------------------------------
-      // Lower half of a popped word arrives with rvalid: land it (below) and
-      // remember the upper half for the next cycle. If the previous word's
-      // upper half is due in the same cycle it lands first (below), and the
-      // new capture wins here.
-      if (remap_lo_arrive)
-      begin
-         remap_hi_data    <= cam_pixel_remap_fifo_rdata[39:20];
-         remap_hi_pending <= 1'b1;
-      end
-      else if (remap_hi_arrive)
-      begin
-         remap_hi_pending <= 1'b0;
-      end
-
-      // ---- compact on accepted handshake -------------------------------
-      if (remap_beat_hs)
-      begin
-         for (remap_i = 0; remap_i < 7; remap_i = remap_i + 1)
-            remap_beat[remap_i] <= remap_beat[remap_i+1];
-         remap_beat[7] <= 20'd0;
-      end
-
-      // ---- append arriving beats (later assignment wins over shift) ----
-      if (remap_lo_arrive)
-         remap_beat[(remap_count - (remap_beat_hs ? 4'd1 : 4'd0))] <= cam_pixel_remap_fifo_rdata[19:0];
-
-      if (remap_hi_arrive)
-         remap_beat[(remap_count - (remap_beat_hs ? 4'd1 : 4'd0))
-                    + (remap_lo_arrive ? 4'd1 : 4'd0)] <= remap_hi_data;
-
-      // ---- occupancy bookkeeping ---------------------------------------
-      remap_count   <= remap_count
-                      + (remap_lo_arrive ? 4'd1 : 4'd0)
-                      + (remap_hi_arrive ? 4'd1 : 4'd0)
-                      - (remap_beat_hs  ? 4'd1 : 4'd0);
-      remap_pending <= remap_pending
-                      + (cam_pixel_remap_fifo_re ? 3'd2 : 3'd0)
-                      - (remap_lo_arrive         ? 3'd1 : 3'd0)
-                      - (remap_hi_arrive         ? 3'd1 : 3'd0);
+      count_2PPC     <= {PIX_COUNT_2PPC_BIT{1'b0}};
+      vsync_2PPC_pre <= 1'b0;
+   end else begin
+      count_2PPC     <= (cam_pixel_remap_2ppc_valid && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1)) ? {PIX_COUNT_2PPC_BIT{1'b0}} :
+                        (cam_pixel_remap_2ppc_valid) ? count_2PPC + 1'b1 : count_2PPC;
+      vsync_2PPC_pre <= cam_pixel_remap_2ppc_valid && (count_2PPC == MIPI_FRAME_PIX_COUNT_2PPC-1);
    end
 end
-
-//FIX (P2-SOF): the artificial delayed-"vsync" generator that used to live
-//here (count_2PPC counting accepted beats, vsync_2PPC_pre firing on the last
-//beat of a frame, then a 20-cycle delay_count before pulsing cam_vs_2PPC)
-//has been removed. arming the SOF flag from a pulse derived from the END of
-//the previous frame was wrong: the raw tuser[0] level went high "after a
-//frame completed" (during blanking) instead of at the start of the next
-//frame, and the 20-cycle window could let the next frame's first beat be
-//accepted unarmed, mis-attaching the SOF to a mid-frame beat. The SOF flag
-//is now armed directly by the accepted end-of-frame beat handshake (see the
-//isp_sof_pending logic below) - race-free by construction.
-wire end_of_frame;
 
 //------------------------------------------------------------------------
 // isp_top raw->RGB pipeline (replaces cam_line_buffer + cam_raw_to_rgb)
@@ -381,67 +307,41 @@ wire end_of_frame;
 //gain / CCM-matrix / black-level configuration ONLY when a tuser (SOF) beat
 //arrives, and their latched registers power up at ZERO. The AXI-Lite
 //register defaults (unity gain 0x0080 / identity CCM 0x1000) never reach
-//them without a SOF beat. The SOF flag is armed at reset so the very first
-//captured frame is also framed.
-//
-//FIX (P2-SOF): SOF timing. The flag used to be armed by cam_vs_2PPC - a
-//synthetic pulse that fired ~20 cycles AFTER the last beat of the previous
-//frame was accepted. That was wrong: the SOF came high "after a frame
-//completed" (during the blanking gap) instead of at the start of the next
-//frame, and if the next frame's first beat arrived within those 20 cycles
-//the SOF missed it entirely and mis-attached to a later, mid-frame beat.
-//The flag is now armed by the accepted end-of-frame beat handshake itself
-//(remap_beat_hs && end_of_frame): it is set in the very cycle the previous
-//frame's last beat is accepted, so by construction it is armed before the
-//next frame's first beat can ever be accepted (beats leave the holding
-//buffer strictly in order). It then attaches to that first beat and is
-//cleared by the same handshake.
+//them without a SOF beat. isp_sof_pending used to reset to 0 and was only
+//armed by cam_vs_2PPC - a pulse that fires after a FULL frame has already
+//streamed through - so the first captured frame entered isp_top with no SOF
+//at all and every pixel was multiplied by gain 0 / matrix 0 (black frame).
+//Arm the SOF at reset so the very first captured frame is also framed;
+//subsequent frames keep being framed by the existing cam_vs_2PPC mechanism
+//(the pulse fires during the vertical blanking after each frame, so the
+//pending flag survives the inter-frame gap of both single-shot and
+//continuous capture).
 always @(posedge mipi_pclk)
 begin
    if (~rst_n) begin
       isp_s_line_count <= {ISP_LINE_CNT_BIT{1'b0}};
-      isp_sof_pending  <= 1'b1;   //arm SOF for the first captured frame
+      isp_sof_pending  <= 1'b1;   //FIX: arm SOF for the first captured frame
       cam_y_count      <= {CAM_Y_COUNT_BIT{1'b0}};
    end else begin
-      //FIX (P1-2): all framing counters below advance ONLY on accepted beats
-      //(remap_beat_hs = tvalid && tready). The old code advanced them on the
-      //free-running 2PPC valid, so an ISP stall made tlast/tuser markers run
-      //ahead of the pixel data the ISP actually consumed.
-      isp_s_line_count <= (remap_beat_hs && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
-                          (remap_beat_hs)                                                     ? isp_s_line_count + 1'b1 : isp_s_line_count;
-      //FIX (P2-SOF): arm on the accepted EOF beat (arm wins over the clear in
-      //the same cycle), clear on the first accepted beat of the next frame.
-      isp_sof_pending  <= (remap_beat_hs && end_of_frame)                          ? 1'b1 :
-                          (remap_beat_hs)                                            ? 1'b0 : isp_sof_pending;
-      cam_y_count      <= (remap_eol_hs && (cam_y_count == MIPI_FRAME_HEIGHT-1))     ? {CAM_Y_COUNT_BIT{1'b0}} :
-                          (remap_eol_hs)                                             ? cam_y_count + 1'b1 : cam_y_count;
+      isp_s_line_count <= (cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1)) ? {ISP_LINE_CNT_BIT{1'b0}} :
+                          (cam_pixel_remap_2ppc_valid)                                                     ? isp_s_line_count + 1'b1 : isp_s_line_count;
+      isp_sof_pending  <= (cam_vs_2PPC)                                              ? 1'b1 :
+                          (cam_pixel_remap_2ppc_valid && isp_s_axis_tready)          ? 1'b0 : isp_sof_pending;
+      cam_y_count      <= (isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1)) ? {CAM_Y_COUNT_BIT{1'b0}} :
+                          (isp_s_axis_tlast)                                         ? cam_y_count + 1'b1 : cam_y_count;
    end
 end
 
-//FIX (P1-2): tvalid comes from the holding buffer, so a beat stays presented
-//(tdata/tlast/tuser stable per AXI-Stream) until the ISP accepts it. tdata is
-//the head beat; tlast marks the last beat of a line; end_of_frame is the EOF
-//flag of the presented beat (cam_y_count is handshake-advanced, so a stalled
-//EOF beat keeps presenting EOF until it is accepted). remap_eol_hs qualifies
-//the end-of-line beat transfer for cam_y_count above.
-wire remap_eol_hs = remap_beat_hs && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
-
-assign isp_s_axis_tvalid = (remap_count != 4'd0);
+assign isp_s_axis_tvalid = cam_pixel_remap_2ppc_valid;
 //FIX (Bug #4): pack the two 8-bit RAW pixels as 12-bit values ({px, 4'b0})
 //so they span the full input range of the ISP's 4096-entry gamma LUT.
 //pixel 0 (left/even pixel) occupies tdata[11:0], pixel 1 (right/odd pixel)
 //tdata[23:12] - this is the packing colorgain.sv expects (pixel_0 = LSB).
-assign isp_s_axis_tdata  = {2'b00, remap_beat[0][19:10], //pixel 1 (odd)
-                            2'b00, remap_beat[0][ 9: 0]}; //pixel 0 (even)
-assign isp_s_axis_tlast  = (remap_count != 4'd0) && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
+assign isp_s_axis_tdata  = {2'b00, cam_pixel_remap_2ppc_data[19:10],    //pixel 1 (odd)
+                            2'b00,cam_pixel_remap_2ppc_data[9:0]};  //pixel 0 (even)
+assign isp_s_axis_tlast  = cam_pixel_remap_2ppc_valid && (isp_s_line_count == MIPI_FRAME_WIDTH/ISP_PPC-1);
 assign end_of_frame      = isp_s_axis_tlast && (cam_y_count == MIPI_FRAME_HEIGHT-1);
-//FIX (P2-SOF): qualify the SOF with tvalid so the tuser[0] level rises
-//exactly when the new frame's first beat is presented (the frame START) and
-//stays low through the blanking gap after the previous frame completed.
-//AXI-Stream defines tuser per beat; all consumers (config latches, ISP
-//timers) already qualify with tvalid, so this changes no functional
-//handshake - it only makes the SOF signal mean what it says.
-assign isp_s_axis_tuser  = {end_of_frame, isp_sof_pending && isp_s_axis_tvalid};
+assign isp_s_axis_tuser  = {end_of_frame, isp_sof_pending};
 
 isp_top #(
    //working design. (0=BG, 1=GB, 2=GR, 3=RG)

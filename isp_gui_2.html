@@ -316,10 +316,7 @@ footer b{color:var(--dim);font-weight:600}
     Every line the firmware prints — e.g. <code>CCM minimum latency: 1234 clock cycles</code> or
     <code>GAMMA maximum latency: OVERFLOW</code> — is parsed and routed here.
     A bypassed stage is automatically <b>ignored</b> (dimmed); a timer overflow replaces the value with the word
-    <b>overflow</b>. Each value is the <b>full frame duration</b> through that point of the pipeline —
-    first beat of the frame (tuser&nbsp;SOF) entering the stage to the last beat (tuser&nbsp;EOF) leaving it —
-    in mipi_pclk cycles (~1.04M for 1920×1080&nbsp;@&nbsp;2PPC). Total = SOF&nbsp;→&nbsp;EOF through the whole
-    ISP (timer&nbsp;0).
+    <b>overflow</b>. Total = tuser&nbsp;SOF&nbsp;→&nbsp;EOF through the whole ISP (timer&nbsp;0).
   </div>
 </section>
 
@@ -711,20 +708,17 @@ function simEmit(name, kind, val){
 }
 function simTick(){
   simRound++;
-  /* expected readings (frame-duration semantics): each timer measures the
-     FULL FRAME DURATION through its point of the pipeline - first beat of
-     the frame (SOF) entering the stage to the last beat (EOF) leaving it.
-     For 1920x1080 @ 2PPC that is 960*1080 = 1,036,800 beats, so every
-     counter reads ~1.04M cycles (write pacing + a few hundred cycles of
-     stage latency on top), NOT the tens-of-cycles pipeline latency the
-     old SOF->SOF wiring produced. */
+  /* post-fix expected readings: each timer now measures SOF->SOF pipeline
+     latency per stage (tens..thousands of cycles), NOT the ~1,036,800-cycle
+     frame duration they measured before. DEMOSAIC dominates (~2 linebuffer
+     lines @ 960 beats/line) and TOTAL is roughly the sum of the stages. */
   const d = {
-    'TOTAL ISP'  : [1036829,  1047615 ],
-    'BLC'        : [1036805,  1047591 ],
-    'COLOUR GAIN': [1036806,  1047592 ],
-    'DEMOSAIC'   : [1036810,  1047596 ],
-    'CCM'        : [1036805,  1047591 ],
-    'GAMMA'      : [1036804,  1047590 ]
+    'TOTAL ISP'  : [1948,     2012    ],
+    'BLC'        : [4,        9       ],
+    'COLOUR GAIN': [7,        13      ],
+    'DEMOSAIC'   : [1925,     1961    ],
+    'CCM'        : [8,        14      ],
+    'GAMMA'      : [10,       17      ]
   };
   const ovfName = (simRound % 6 === 0) ? 'CCM' : null;   /* once in a while: overflow */
   for(const [name,[mn,mx]] of Object.entries(d)){

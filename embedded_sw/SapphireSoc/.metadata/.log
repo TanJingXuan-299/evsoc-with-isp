@@ -4047,3 +4047,196 @@ For more details, see the openocd.exe console.
 !MESSAGE OpenOCD failed with code (1).
 
 For more details, see the openocd.exe console.
+!SESSION 2026-10-06 18:50:01.009 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-10-06 18:50:05.773
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-06 18:50:53.896
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../openocd/bin/openocd.exe -c gdb_port 3334 -c telnet_port 4445 -c tcl_port 6667 -c set bsp_loc {C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc} -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/ftdi_ti.cfg -f C:\Users\Jing-XuanTan(i)\Downloads\evsoc-efinity-v2026.1.132\evsoc-efinity-v2026.1.132\cam_single\Ti60F225_dsi\embedded_sw\SapphireSoc/bsp/efinix/EfxSapphireSoc/openocd/debug_ti.cfg -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-06 18:50:54.914
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1\Efinity-RISCV-IDE\/../toolchain/bin/riscv-none-elf-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-06 19:11:34.058
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 5012 2026-10-06 19:11:49.007
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:453)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:178)
+	at org.eclipse.embedcdt.debug.gdbjtag.openocd.core.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:154)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launchChild(GroupLaunchConfigurationDelegate.java:167)
+	at org.eclipse.debug.internal.core.groups.GroupLaunchConfigurationDelegate.launch(GroupLaunchConfigurationDelegate.java:129)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2026-10-06 19:11:49.009
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2026-10-06 19:11:49.009
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3334
+Error message from debugger back end:
+could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+!STACK 0
+java.lang.Exception: could not connect (error 138): The system tried to join a drive to a directory on a joined drive.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-10-06 19:12:26.015
+!MESSAGE Indexed 'evsoc_ispExample_demo' (8 sources, 146 headers) in 3.1 sec: 5,628 declarations; 11,406 references; 4 unresolved inclusions; 10 syntax errors; 1,120 unresolved names (6.2%)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-06 19:12:35.078
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 0 2026-10-07 09:47:13.869
+!MESSAGE Debug session 'co_debug_evsoc_ispExample_demo_attach' already started. Terminate the first one before restarting.
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-07 09:48:14.119
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-07 10:01:36.992
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+!SESSION 2026-10-07 15:43:20.391 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-10-07 15:43:22.960
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2026-10-07 15:43:35.109
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-07 15:44:03.273
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.269
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1cf960a1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "CSR" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.269
+!MESSAGE The group name "CSR" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.271
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5ac408a8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "General Purpose Registers" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.272
+!MESSAGE The group name "General Purpose Registers" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.288
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@650931ab): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "CSR" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.288
+!MESSAGE The group name "CSR" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.290
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4bdbd558): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "General Purpose Registers" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.290
+!MESSAGE The group name "General Purpose Registers" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.337
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@6a9307e7): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "CSR" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.337
+!MESSAGE The group name "CSR" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.340
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@6b03052f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "General Purpose Registers" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.340
+!MESSAGE The group name "General Purpose Registers" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.344
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7ff8cc7a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "CSR" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.345
+!MESSAGE The group name "CSR" is already in use
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-10-07 19:00:37.346
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@77d4f4a1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 The group name "General Purpose Registers" is already in use' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2026-10-07 19:00:37.347
+!MESSAGE The group name "General Purpose Registers" is already in use
+
+!ENTRY org.eclipse.ui 4 4 2026-10-07 19:00:38.523
+!MESSAGE An internal error has occurred.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:447)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:366)
+	at org.eclipse.swt.widgets.Control.setRedraw(Control.java:3664)
+	at org.eclipse.debug.internal.ui.views.variables.details.DetailPaneProxy.setupPane(DetailPaneProxy.java:250)
+	at org.eclipse.debug.internal.ui.views.variables.details.DetailPaneProxy.display(DetailPaneProxy.java:127)
+	at org.eclipse.debug.internal.ui.views.variables.VariablesView.refreshDetailPaneContents(VariablesView.java:1174)
+	at org.eclipse.debug.internal.ui.views.variables.VariablesView$1.runInUIThread(VariablesView.java:383)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-07 19:01:14.725
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-07 19:20:58.422
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-07 19:53:13.492
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-10-08 09:46:05.827
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2026-10-08 09:46:06.447 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/Jing-XuanTan(i)/Downloads/evsoc-efinity-v2026.1.132/evsoc-efinity-v2026.1.132/cam_single/Ti60F225_dsi/embedded_sw/SapphireSoc
+
+!ENTRY org.eclipse.ui 4 4 2026-10-08 09:46:23.598
+!MESSAGE MenuAdditionCacheEntry.mergeIntoModel: Invalid menu URI: com.ashling.riscfree.efinix.newproject.wizard.CreateNewEfinixProject
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.openocd.core 4 1 2026-10-08 09:46:50.438
+!MESSAGE C:\Efinity\efinity-riscv-ide-2026.1/toolchain/bin/riscv-none-elf-gdb --interpreter=mi2 --nx

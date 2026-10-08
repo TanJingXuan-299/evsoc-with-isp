@@ -22,7 +22,7 @@ module isp_top #(
     parameter S_AXI_BRESP_WIDTH                   = 2,
     parameter S_AXIS_DATA_WIDTH                   = 48,
     parameter M_AXIS_DATA_WIDTH                   = 96,
-    parameter TUSER_WIDTH                         = 1,
+    parameter TUSER_WIDTH                         = 2,
     parameter DECOMPANDING_XLUT_FILE              = "decompanding_xlut.mem",
     parameter DECOMPANDING_YLUT_FILE              = "decompanding_ylut_12_bit.mem",
     parameter DECOMPANDING_FLUT_FILE              = "decompanding_flut_12_bit.mem",

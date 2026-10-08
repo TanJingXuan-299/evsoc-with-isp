@@ -3,41 +3,126 @@
         {
             "name": "la0",
             "type": "la",
-            "uuid": "621183b136764711b6930ac8893532fa",
+            "uuid": "d87d4b8eb7ba4320bf61ad7c9e2fb79f",
             "trigin_en": false,
             "trigout_en": false,
             "auto_inserted": true,
             "capture_control": false,
-            "data_depth": 4096,
+            "data_depth": 2048,
             "input_pipeline": 1,
             "probes": [
                 {
-                    "name": "u_cam/u_isp_top/isp_int/blc_tuser[0]",
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/start_pulse",
                     "width": 1,
                     "probe_type": 1
                 },
                 {
-                    "name": "u_cam/u_isp_top/isp_int/s_axis_tuser[0]",
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/start_pulse",
                     "width": 1,
                     "probe_type": 1
                 },
                 {
-                    "name": "u_cam/u_isp_top/isp_int/blc_tvalid",
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/stop_pulse",
                     "width": 1,
                     "probe_type": 1
                 },
                 {
-                    "name": "u_cam/u_isp_top/isp_int/blc_tready",
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/stop_pulse",
                     "width": 1,
                     "probe_type": 1
                 },
                 {
-                    "name": "u_cam/u_isp_top/isp_int/blc_inst/s_axis_tready",
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/min_valid",
                     "width": 1,
                     "probe_type": 1
                 },
                 {
-                    "name": "u_cam/u_isp_top/isp_int/s_axis_tvalid",
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/min_valid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/max_valid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/max_valid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/max_time_consumed",
+                    "width": 30,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/max_time_consumed",
+                    "width": 30,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/min_time_consumed",
+                    "width": 30,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/min_time_consumed",
+                    "width": 30,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/timer_overflow",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/timer_overflow",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/isp_s_axis_tuser[1]",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/isp_s_axis_tuser[0]",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/blc_tuser[1]",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst1/time_consumed",
+                    "width": 30,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/u_isp_top/isp_int/min_max_timer_inst0/time_consumed",
+                    "width": 30,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/isp_s_axis_tdata",
+                    "width": 24,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/isp_s_axis_tlast",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/isp_s_axis_tready",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_cam/isp_s_axis_tvalid",
                     "width": 1,
                     "probe_type": 1
                 }
@@ -172,57 +257,2114 @@
                     },
                     {
                         "name": "la0_probe0",
-                        "net": "blc_tuser[0]",
-                        "path": [
-                            "u_cam",
-                            "u_isp_top",
-                            "isp_int"
-                        ]
-                    },
-                    {
-                        "name": "la0_probe1",
-                        "net": "s_axis_tuser[0]",
-                        "path": [
-                            "u_cam",
-                            "u_isp_top",
-                            "isp_int"
-                        ]
-                    },
-                    {
-                        "name": "la0_probe2",
-                        "net": "blc_tvalid",
-                        "path": [
-                            "u_cam",
-                            "u_isp_top",
-                            "isp_int"
-                        ]
-                    },
-                    {
-                        "name": "la0_probe3",
-                        "net": "blc_tready",
-                        "path": [
-                            "u_cam",
-                            "u_isp_top",
-                            "isp_int"
-                        ]
-                    },
-                    {
-                        "name": "la0_probe4",
-                        "net": "s_axis_tready",
+                        "net": "start_pulse",
                         "path": [
                             "u_cam",
                             "u_isp_top",
                             "isp_int",
-                            "blc_inst"
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe1",
+                        "net": "start_pulse",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe2",
+                        "net": "stop_pulse",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe3",
+                        "net": "stop_pulse",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4",
+                        "net": "min_valid",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
                         ]
                     },
                     {
                         "name": "la0_probe5",
-                        "net": "s_axis_tvalid",
+                        "net": "min_valid",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe6",
+                        "net": "max_valid",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe7",
+                        "net": "max_valid",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[0]",
+                        "net": "max_time_consumed[0]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[1]",
+                        "net": "max_time_consumed[1]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[2]",
+                        "net": "max_time_consumed[2]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[3]",
+                        "net": "max_time_consumed[3]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[4]",
+                        "net": "max_time_consumed[4]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[5]",
+                        "net": "max_time_consumed[5]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[6]",
+                        "net": "max_time_consumed[6]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[7]",
+                        "net": "max_time_consumed[7]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[8]",
+                        "net": "max_time_consumed[8]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[9]",
+                        "net": "max_time_consumed[9]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[10]",
+                        "net": "max_time_consumed[10]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[11]",
+                        "net": "max_time_consumed[11]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[12]",
+                        "net": "max_time_consumed[12]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[13]",
+                        "net": "max_time_consumed[13]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[14]",
+                        "net": "max_time_consumed[14]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[15]",
+                        "net": "max_time_consumed[15]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[16]",
+                        "net": "max_time_consumed[16]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[17]",
+                        "net": "max_time_consumed[17]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[18]",
+                        "net": "max_time_consumed[18]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[19]",
+                        "net": "max_time_consumed[19]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[20]",
+                        "net": "max_time_consumed[20]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[21]",
+                        "net": "max_time_consumed[21]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[22]",
+                        "net": "max_time_consumed[22]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[23]",
+                        "net": "max_time_consumed[23]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[24]",
+                        "net": "max_time_consumed[24]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[25]",
+                        "net": "max_time_consumed[25]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[26]",
+                        "net": "max_time_consumed[26]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[27]",
+                        "net": "max_time_consumed[27]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[28]",
+                        "net": "max_time_consumed[28]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe8[29]",
+                        "net": "max_time_consumed[29]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[0]",
+                        "net": "max_time_consumed[0]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[1]",
+                        "net": "max_time_consumed[1]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[2]",
+                        "net": "max_time_consumed[2]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[3]",
+                        "net": "max_time_consumed[3]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[4]",
+                        "net": "max_time_consumed[4]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[5]",
+                        "net": "max_time_consumed[5]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[6]",
+                        "net": "max_time_consumed[6]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[7]",
+                        "net": "max_time_consumed[7]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[8]",
+                        "net": "max_time_consumed[8]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[9]",
+                        "net": "max_time_consumed[9]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[10]",
+                        "net": "max_time_consumed[10]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[11]",
+                        "net": "max_time_consumed[11]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[12]",
+                        "net": "max_time_consumed[12]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[13]",
+                        "net": "max_time_consumed[13]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[14]",
+                        "net": "max_time_consumed[14]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[15]",
+                        "net": "max_time_consumed[15]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[16]",
+                        "net": "max_time_consumed[16]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[17]",
+                        "net": "max_time_consumed[17]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[18]",
+                        "net": "max_time_consumed[18]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[19]",
+                        "net": "max_time_consumed[19]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[20]",
+                        "net": "max_time_consumed[20]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[21]",
+                        "net": "max_time_consumed[21]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[22]",
+                        "net": "max_time_consumed[22]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[23]",
+                        "net": "max_time_consumed[23]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[24]",
+                        "net": "max_time_consumed[24]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[25]",
+                        "net": "max_time_consumed[25]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[26]",
+                        "net": "max_time_consumed[26]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[27]",
+                        "net": "max_time_consumed[27]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[28]",
+                        "net": "max_time_consumed[28]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe9[29]",
+                        "net": "max_time_consumed[29]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[0]",
+                        "net": "min_time_consumed[0]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[1]",
+                        "net": "min_time_consumed[1]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[2]",
+                        "net": "min_time_consumed[2]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[3]",
+                        "net": "min_time_consumed[3]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[4]",
+                        "net": "min_time_consumed[4]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[5]",
+                        "net": "min_time_consumed[5]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[6]",
+                        "net": "min_time_consumed[6]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[7]",
+                        "net": "min_time_consumed[7]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[8]",
+                        "net": "min_time_consumed[8]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[9]",
+                        "net": "min_time_consumed[9]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[10]",
+                        "net": "min_time_consumed[10]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[11]",
+                        "net": "min_time_consumed[11]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[12]",
+                        "net": "min_time_consumed[12]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[13]",
+                        "net": "min_time_consumed[13]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[14]",
+                        "net": "min_time_consumed[14]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[15]",
+                        "net": "min_time_consumed[15]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[16]",
+                        "net": "min_time_consumed[16]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[17]",
+                        "net": "min_time_consumed[17]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[18]",
+                        "net": "min_time_consumed[18]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[19]",
+                        "net": "min_time_consumed[19]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[20]",
+                        "net": "min_time_consumed[20]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[21]",
+                        "net": "min_time_consumed[21]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[22]",
+                        "net": "min_time_consumed[22]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[23]",
+                        "net": "min_time_consumed[23]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[24]",
+                        "net": "min_time_consumed[24]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[25]",
+                        "net": "min_time_consumed[25]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[26]",
+                        "net": "min_time_consumed[26]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[27]",
+                        "net": "min_time_consumed[27]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[28]",
+                        "net": "min_time_consumed[28]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe10[29]",
+                        "net": "min_time_consumed[29]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[0]",
+                        "net": "min_time_consumed[0]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[1]",
+                        "net": "min_time_consumed[1]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[2]",
+                        "net": "min_time_consumed[2]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[3]",
+                        "net": "min_time_consumed[3]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[4]",
+                        "net": "min_time_consumed[4]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[5]",
+                        "net": "min_time_consumed[5]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[6]",
+                        "net": "min_time_consumed[6]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[7]",
+                        "net": "min_time_consumed[7]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[8]",
+                        "net": "min_time_consumed[8]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[9]",
+                        "net": "min_time_consumed[9]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[10]",
+                        "net": "min_time_consumed[10]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[11]",
+                        "net": "min_time_consumed[11]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[12]",
+                        "net": "min_time_consumed[12]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[13]",
+                        "net": "min_time_consumed[13]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[14]",
+                        "net": "min_time_consumed[14]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[15]",
+                        "net": "min_time_consumed[15]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[16]",
+                        "net": "min_time_consumed[16]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[17]",
+                        "net": "min_time_consumed[17]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[18]",
+                        "net": "min_time_consumed[18]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[19]",
+                        "net": "min_time_consumed[19]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[20]",
+                        "net": "min_time_consumed[20]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[21]",
+                        "net": "min_time_consumed[21]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[22]",
+                        "net": "min_time_consumed[22]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[23]",
+                        "net": "min_time_consumed[23]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[24]",
+                        "net": "min_time_consumed[24]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[25]",
+                        "net": "min_time_consumed[25]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[26]",
+                        "net": "min_time_consumed[26]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[27]",
+                        "net": "min_time_consumed[27]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[28]",
+                        "net": "min_time_consumed[28]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe11[29]",
+                        "net": "min_time_consumed[29]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe12",
+                        "net": "timer_overflow",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe13",
+                        "net": "timer_overflow",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe14",
+                        "net": "isp_s_axis_tuser[1]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe15",
+                        "net": "isp_s_axis_tuser[0]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe16",
+                        "net": "blc_tuser[1]",
                         "path": [
                             "u_cam",
                             "u_isp_top",
                             "isp_int"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[0]",
+                        "net": "time_consumed[0]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[1]",
+                        "net": "time_consumed[1]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[2]",
+                        "net": "time_consumed[2]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[3]",
+                        "net": "time_consumed[3]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[4]",
+                        "net": "time_consumed[4]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[5]",
+                        "net": "time_consumed[5]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[6]",
+                        "net": "time_consumed[6]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[7]",
+                        "net": "time_consumed[7]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[8]",
+                        "net": "time_consumed[8]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[9]",
+                        "net": "time_consumed[9]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[10]",
+                        "net": "time_consumed[10]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[11]",
+                        "net": "time_consumed[11]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[12]",
+                        "net": "time_consumed[12]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[13]",
+                        "net": "time_consumed[13]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[14]",
+                        "net": "time_consumed[14]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[15]",
+                        "net": "time_consumed[15]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[16]",
+                        "net": "time_consumed[16]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[17]",
+                        "net": "time_consumed[17]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[18]",
+                        "net": "time_consumed[18]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[19]",
+                        "net": "time_consumed[19]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[20]",
+                        "net": "time_consumed[20]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[21]",
+                        "net": "time_consumed[21]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[22]",
+                        "net": "time_consumed[22]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[23]",
+                        "net": "time_consumed[23]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[24]",
+                        "net": "time_consumed[24]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[25]",
+                        "net": "time_consumed[25]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[26]",
+                        "net": "time_consumed[26]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[27]",
+                        "net": "time_consumed[27]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[28]",
+                        "net": "time_consumed[28]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe17[29]",
+                        "net": "time_consumed[29]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst1"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[0]",
+                        "net": "time_consumed[0]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[1]",
+                        "net": "time_consumed[1]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[2]",
+                        "net": "time_consumed[2]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[3]",
+                        "net": "time_consumed[3]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[4]",
+                        "net": "time_consumed[4]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[5]",
+                        "net": "time_consumed[5]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[6]",
+                        "net": "time_consumed[6]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[7]",
+                        "net": "time_consumed[7]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[8]",
+                        "net": "time_consumed[8]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[9]",
+                        "net": "time_consumed[9]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[10]",
+                        "net": "time_consumed[10]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[11]",
+                        "net": "time_consumed[11]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[12]",
+                        "net": "time_consumed[12]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[13]",
+                        "net": "time_consumed[13]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[14]",
+                        "net": "time_consumed[14]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[15]",
+                        "net": "time_consumed[15]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[16]",
+                        "net": "time_consumed[16]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[17]",
+                        "net": "time_consumed[17]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[18]",
+                        "net": "time_consumed[18]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[19]",
+                        "net": "time_consumed[19]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[20]",
+                        "net": "time_consumed[20]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[21]",
+                        "net": "time_consumed[21]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[22]",
+                        "net": "time_consumed[22]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[23]",
+                        "net": "time_consumed[23]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[24]",
+                        "net": "time_consumed[24]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[25]",
+                        "net": "time_consumed[25]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[26]",
+                        "net": "time_consumed[26]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[27]",
+                        "net": "time_consumed[27]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[28]",
+                        "net": "time_consumed[28]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe18[29]",
+                        "net": "time_consumed[29]",
+                        "path": [
+                            "u_cam",
+                            "u_isp_top",
+                            "isp_int",
+                            "min_max_timer_inst0"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[0]",
+                        "net": "isp_s_axis_tdata[0]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[1]",
+                        "net": "isp_s_axis_tdata[1]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[2]",
+                        "net": "isp_s_axis_tdata[2]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[3]",
+                        "net": "isp_s_axis_tdata[3]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[4]",
+                        "net": "isp_s_axis_tdata[4]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[5]",
+                        "net": "isp_s_axis_tdata[5]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[6]",
+                        "net": "isp_s_axis_tdata[6]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[7]",
+                        "net": "isp_s_axis_tdata[7]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[8]",
+                        "net": "isp_s_axis_tdata[8]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[9]",
+                        "net": "isp_s_axis_tdata[9]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[10]",
+                        "net": "isp_s_axis_tdata[10]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[11]",
+                        "net": "isp_s_axis_tdata[11]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[12]",
+                        "net": "isp_s_axis_tdata[12]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[13]",
+                        "net": "isp_s_axis_tdata[13]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[14]",
+                        "net": "isp_s_axis_tdata[14]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[15]",
+                        "net": "isp_s_axis_tdata[15]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[16]",
+                        "net": "isp_s_axis_tdata[16]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[17]",
+                        "net": "isp_s_axis_tdata[17]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[18]",
+                        "net": "isp_s_axis_tdata[18]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[19]",
+                        "net": "isp_s_axis_tdata[19]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[20]",
+                        "net": "isp_s_axis_tdata[20]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[21]",
+                        "net": "isp_s_axis_tdata[21]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[22]",
+                        "net": "isp_s_axis_tdata[22]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe19[23]",
+                        "net": "isp_s_axis_tdata[23]",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe20",
+                        "net": "isp_s_axis_tlast",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe21",
+                        "net": "isp_s_axis_tready",
+                        "path": [
+                            "u_cam"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe22",
+                        "net": "isp_s_axis_tvalid",
+                        "path": [
+                            "u_cam"
                         ]
                     }
                 ]
@@ -237,59 +2379,11 @@
     ],
     "session": {
         "wizard": {
-            "data_depth": 4096,
+            "data_depth": 2048,
             "capture_control": false,
             "selected_nets": [
                 {
-                    "name": "blc_tuser[0]",
-                    "width": 1,
-                    "clk_domain": "i_mipi_rx_pclk",
-                    "selected_probe_type": "DATA AND TRIGGER",
-                    "child": [],
-                    "path": [
-                        "u_cam",
-                        "u_isp_top",
-                        "isp_int"
-                    ]
-                },
-                {
-                    "name": "s_axis_tuser[0]",
-                    "width": 1,
-                    "clk_domain": "i_mipi_rx_pclk",
-                    "selected_probe_type": "DATA AND TRIGGER",
-                    "child": [],
-                    "path": [
-                        "u_cam",
-                        "u_isp_top",
-                        "isp_int"
-                    ]
-                },
-                {
-                    "name": "blc_tvalid",
-                    "width": 1,
-                    "clk_domain": "i_mipi_rx_pclk",
-                    "selected_probe_type": "DATA AND TRIGGER",
-                    "child": [],
-                    "path": [
-                        "u_cam",
-                        "u_isp_top",
-                        "isp_int"
-                    ]
-                },
-                {
-                    "name": "blc_tready",
-                    "width": 1,
-                    "clk_domain": "i_mipi_rx_pclk",
-                    "selected_probe_type": "DATA AND TRIGGER",
-                    "child": [],
-                    "path": [
-                        "u_cam",
-                        "u_isp_top",
-                        "isp_int"
-                    ]
-                },
-                {
-                    "name": "s_axis_tready",
+                    "name": "start_pulse",
                     "width": 1,
                     "clk_domain": "i_mipi_rx_pclk",
                     "selected_probe_type": "DATA AND TRIGGER",
@@ -298,11 +2392,208 @@
                         "u_cam",
                         "u_isp_top",
                         "isp_int",
-                        "blc_inst"
+                        "min_max_timer_inst0"
                     ]
                 },
                 {
-                    "name": "s_axis_tvalid",
+                    "name": "start_pulse",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ]
+                },
+                {
+                    "name": "stop_pulse",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ]
+                },
+                {
+                    "name": "stop_pulse",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst0"
+                    ]
+                },
+                {
+                    "name": "min_valid",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ]
+                },
+                {
+                    "name": "min_valid",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst0"
+                    ]
+                },
+                {
+                    "name": "max_valid",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ]
+                },
+                {
+                    "name": "max_valid",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst0"
+                    ]
+                },
+                {
+                    "name": "max_time_consumed",
+                    "width": 30,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ],
+                    "net_idx_left": 29,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "max_time_consumed",
+                    "width": 30,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst0"
+                    ],
+                    "net_idx_left": 29,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "min_time_consumed",
+                    "width": 30,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ],
+                    "net_idx_left": 29,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "min_time_consumed",
+                    "width": 30,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst0"
+                    ],
+                    "net_idx_left": 29,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "timer_overflow",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst0"
+                    ]
+                },
+                {
+                    "name": "timer_overflow",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ]
+                },
+                {
+                    "name": "isp_s_axis_tuser[1]",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam"
+                    ]
+                },
+                {
+                    "name": "isp_s_axis_tuser[0]",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam"
+                    ]
+                },
+                {
+                    "name": "blc_tuser[1]",
                     "width": 1,
                     "clk_domain": "i_mipi_rx_pclk",
                     "selected_probe_type": "DATA AND TRIGGER",
@@ -311,6 +2602,78 @@
                         "u_cam",
                         "u_isp_top",
                         "isp_int"
+                    ]
+                },
+                {
+                    "name": "time_consumed",
+                    "width": 30,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst1"
+                    ],
+                    "net_idx_left": 29,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "time_consumed",
+                    "width": 30,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam",
+                        "u_isp_top",
+                        "isp_int",
+                        "min_max_timer_inst0"
+                    ],
+                    "net_idx_left": 29,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "isp_s_axis_tdata",
+                    "width": 24,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam"
+                    ],
+                    "net_idx_left": 23,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "isp_s_axis_tlast",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam"
+                    ]
+                },
+                {
+                    "name": "isp_s_axis_tready",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam"
+                    ]
+                },
+                {
+                    "name": "isp_s_axis_tvalid",
+                    "width": 1,
+                    "clk_domain": "i_mipi_rx_pclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_cam"
                     ]
                 }
             ],
